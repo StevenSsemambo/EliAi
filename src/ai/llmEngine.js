@@ -19,30 +19,30 @@ const WEBLLM_CDN = 'https://esm.run/@mlc-ai/web-llm'
 export const MODELS = {
   // Best quality — needs WebGPU + ~2GB RAM
   GEMMA_2B: {
-    id: 'gemma-2-2b-it-q4f32_1-MLC',
+    id: 'gemma-2-2b-it-q4f16_1-MLC',
     name: 'Gemma 2B',
     maker: 'Google',
     size: '1.5 GB',
     tier: 1,
-    minVRAM: 2000,   // MB
+    minVRAM: 2000,
     description: 'Best quality answers, advanced reasoning',
   },
   // Good quality — works on most mid-range phones
   PHI_15: {
-    id: 'Phi-1_5-q4f32_1-MLC',
-    name: 'Phi-1.5',
+    id: 'Phi-3.5-mini-instruct-q4f16_1-MLC',
+    name: 'Phi-3.5 Mini',
     maker: 'Microsoft',
-    size: '900 MB',
+    size: '2.2 GB',
     tier: 1,
     minVRAM: 1200,
     description: 'Great for maths and science explanations',
   },
   // Lightweight — works on low-end devices
   TINYLLAMA: {
-    id: 'TinyLlama-1.1B-Chat-v1.0-q4f32_1-MLC',
-    name: 'TinyLlama 1.1B',
-    maker: 'Community',
-    size: '600 MB',
+    id: 'Llama-3.2-1B-Instruct-q4f16_1-MLC',
+    name: 'Llama 3.2 1B',
+    maker: 'Meta',
+    size: '800 MB',
     tier: 2,
     minVRAM: 800,
     description: 'Fast, works on most Android phones',
@@ -184,12 +184,7 @@ export async function initEngine(modelOverride = null) {
     try {
       webllm = await import(/* @vite-ignore */ WEBLLM_CDN)
     } catch (e) {
-      // Try local package if CDN fails
-      try {
-        webllm = await import('@mlc-ai/web-llm')
-      } catch {
-        throw new Error('WebLLM library could not be loaded. Check internet connection for first-time setup.')
-      }
+      throw new Error('WebLLM library could not be loaded. Check internet connection for first-time setup.')
     }
 
     // Create engine
