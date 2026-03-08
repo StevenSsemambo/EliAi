@@ -1024,17 +1024,29 @@ export const QUICK_TOPICS = [
 // ═══════════════════════════════════════════════════════════════════
 
 // Cached profile — refreshed when chatbot opens
+// Cache lives for 5 minutes OR until invalidated (e.g. after quiz completion)
 let cachedProfile = null
 let profileStudentId = null
+let profileCachedAt = 0
+const CACHE_TTL_MS = 5 * 60 * 1000  // 5 minutes
 
 export async function loadStudentProfile(studentId) {
   if (!studentId) return null
-  if (profileStudentId === studentId && cachedProfile) return cachedProfile
+  const now = Date.now()
+  const isStale = (now - profileCachedAt) > CACHE_TTL_MS
+  if (profileStudentId === studentId && cachedProfile && !isStale) return cachedProfile
   try {
     cachedProfile = await analyseStudent(studentId)
     profileStudentId = studentId
+    profileCachedAt = now
     return cachedProfile
   } catch { return null }
+}
+
+// Call this after quiz completion so next chatbot open gets fresh data
+export function invalidateProfileCache() {
+  cachedProfile = null
+  profileCachedAt = 0
 }
 
 export function getCachedProfile() { return cachedProfile }
