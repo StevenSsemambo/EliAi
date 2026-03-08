@@ -324,7 +324,7 @@ export default function GameHub() {
         <UnlockCelebration
           game={celebration.game}
           level={celebration.level}
-          onClose={() => SoundEngine.unlockSound(); setCelebration(null)}
+          onClose={() => { SoundEngine.unlockSound(); setCelebration(null) }}
         />
       )}
 
