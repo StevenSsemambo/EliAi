@@ -17,28 +17,84 @@ const SUBJECTS = ['mathematics', 'physics', 'biology', 'chemistry']
 
 // UNEB exam topic weight map (rule-based: past paper frequency analysis)
 // Higher = more likely to appear in national exams
+// UNEB exam topic weight map — covers ALL curriculum files
+// Values 0.0–1.0: higher = more frequently examined in UNEB past papers
 const UNEB_WEIGHTS = {
   mathematics: {
-    algebra: 0.92, linear_equations: 0.88, quadratic_equations: 0.85,
-    geometry: 0.80, trigonometry: 0.78, statistics: 0.75,
-    mensuration: 0.72, number_theory: 0.68, matrices: 0.82,
-    calculus: 0.88, vectors: 0.76, probability: 0.70,
+    // S1–S2 core
+    algebra: 0.92, linear_equations: 0.88, quadratic: 0.85, quadratic_equations: 0.85,
+    geometry: 0.80, trigonometry: 0.78, statistics: 0.75, statistics_intro: 0.65,
+    mensuration: 0.72, number_theory: 0.68, numbers: 0.60, ratio_indices: 0.65,
+    sets: 0.70,
+    // S2–S3
+    simultaneous: 0.82, logarithms: 0.80, coordinate_geometry: 0.75,
+    vectors_intro: 0.68, vectors_2d: 0.65,
+    // S3
+    matrices_probability: 0.80, differentiation: 0.85, integration: 0.83,
+    functions: 0.72, coordinate_sequences: 0.70,
+    // S4
+    calculus: 0.88, vectors: 0.76, trigonometry_advanced: 0.80,
+    permcomb: 0.75, financial_maths: 0.65, loci_construction: 0.60,
+    // S5–S6
+    probability_advanced: 0.78, further_calculus: 0.82, mechanics: 0.76,
+    complex_numbers: 0.72, differential_equations: 0.70, numerical_methods: 0.65,
+    statistics_probability: 0.80, pure_mathematics: 0.85, further_pure: 0.75,
+    applied_mathematics: 0.70,
   },
   physics: {
-    forces: 0.90, electricity: 0.92, waves: 0.85, optics: 0.80,
-    thermodynamics: 0.78, mechanics: 0.88, magnetism: 0.82,
-    nuclear_physics: 0.72, motion: 0.90, energy: 0.85,
+    // S1
+    forces: 0.90, energy: 0.85, light: 0.80, measurement: 0.75,
+    properties_matter: 0.72, density_flotation: 0.78,
+    // S2
+    waves_electricity: 0.88, current_electricity: 0.92, magnetism_heat: 0.82,
+    sound: 0.70, electronics: 0.72,
+    // S3
+    motion_kinematics: 0.90, kinematics: 0.88, radioactivity: 0.80,
+    electromagnetic: 0.82, pressure_fluids: 0.75,
+    // S4
+    electricity_detail: 0.88, optics_full: 0.80, circular_gravitation: 0.76,
+    // S5
+    thermal_physics: 0.82, waves_optics: 0.80, mechanics_advanced: 0.78,
+    nuclear_physics: 0.75,
+    // S6
+    modern_physics: 0.72, relativity: 0.65, astrophysics: 0.60,
+    particle_physics: 0.65, quantum_mechanics: 0.68,
   },
   biology: {
-    cells: 0.92, genetics: 0.88, ecology: 0.80, photosynthesis: 0.85,
-    respiration: 0.82, reproduction: 0.78, nutrition: 0.75,
-    transport: 0.80, nervous_system: 0.76, classification: 0.70,
+    // S1
+    cells: 0.92, photosynthesis_respiration: 0.88, diffusion_osmosis: 0.85,
+    classification: 0.72,
+    // S2
+    digestion_ecology: 0.80, nutrition: 0.78, transport: 0.82,
+    reproduction: 0.78, nervous_system: 0.76,
+    // S3
+    genetics: 0.90, ecology: 0.82, excretion: 0.75,
+    hormones_homeostasis: 0.78,
+    // S4
+    cell_division: 0.82, evolution_immunity: 0.80, disease_health: 0.78,
+    coordination: 0.72,
+    // S5
+    biochemistry: 0.80, genetics_advanced: 0.85, cell_biology_advanced: 0.75,
+    microbiology: 0.70, ecology_advanced: 0.72,
+    // S6
+    molecular_biology: 0.82, immunology: 0.78, developmental_biology: 0.68,
   },
   chemistry: {
-    atomic_structure: 0.90, bonding: 0.88, reactions: 0.85,
-    acids_bases: 0.82, organic_chemistry: 0.88, electrolysis: 0.78,
-    rates: 0.75, equilibrium: 0.72, periodic_table: 0.80,
-    stoichiometry: 0.85,
+    // S1
+    atoms: 0.90, bonding: 0.88, matter: 0.80, water: 0.72,
+    // S2
+    mole_calculations: 0.92, reactions_metals: 0.85, acids_periodic: 0.88,
+    gases_solutions: 0.78, energy_changes: 0.80,
+    // S3
+    stoichiometry: 0.88, organic_rates: 0.82, electrochemistry: 0.80, gases: 0.72,
+    // S4
+    organic_chemistry: 0.88, thermochemistry: 0.78, chemical_analysis: 0.75,
+    // S5
+    equilibria: 0.82, advanced_organic: 0.80, transition_metals: 0.72,
+    spectroscopy: 0.68, equilibrium: 0.80,
+    // S6
+    industrial_chemistry: 0.75, polymers: 0.72,
+    green_chemistry: 0.65, pharmaceuticals: 0.65,
   },
 }
 
