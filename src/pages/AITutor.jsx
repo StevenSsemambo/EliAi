@@ -49,14 +49,18 @@ export default function AITutor() {
   const [loading, setLoading]   = useState(true)
 
   useEffect(() => {
-    if (!student) return
-    analyseStudent(student.id).then(a => {
-      setAnalysis(a)
-      setRecs(getSmartRecommendations(a, 8))
-      setMission(generateDailyMission(a))
-      setMissionDone(getMissionProgress(student.id))
-      setLoading(false)
-    })
+    if (!student) { setLoading(false); return }
+    const timeout = setTimeout(() => setLoading(false), 5000)
+    analyseStudent(student.id)
+      .then(a => {
+        clearTimeout(timeout)
+        setAnalysis(a)
+        setRecs(getSmartRecommendations(a, 8))
+        setMission(generateDailyMission(a))
+        setMissionDone(getMissionProgress(student.id))
+        setLoading(false)
+      })
+      .catch(() => { clearTimeout(timeout); setLoading(false) })
   }, [student])
 
   async function completeTask(task) {
