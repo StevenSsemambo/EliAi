@@ -219,21 +219,22 @@ export default function ElimuChatbot() {
 
   // Track LLM engine status
   useEffect(() => {
+    // Sync with current engine state immediately
+    const current = getEngineStatus()
+    setLlmStatus(current)
+
     const unsub = onProgress((pct, label) => {
       setLlmProgress(pct)
       setLlmStatus(getEngineStatus())
     })
-    const current = getEngineStatus()
-    if (current === 'ready') {
-      setLlmStatus('ready')
-    } else if (current === 'idle') {
-      const pref = localStorage.getItem('elimu_ai_model_preference')
-      if (pref) {
-        // Desktop user previously downloaded a model — auto-load it
-        setLlmStatus('loading')
-        initEngine().then(() => setLlmStatus(getEngineStatus()))
-      }
+
+    // Only auto-init on desktop if model was previously downloaded
+    const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)
+    const pref = localStorage.getItem('elimu_ai_model_preference')
+    if (!isMobile && pref && current === 'idle') {
+      initEngine().then(() => setLlmStatus(getEngineStatus()))
     }
+
     return unsub
   }, [])
 
