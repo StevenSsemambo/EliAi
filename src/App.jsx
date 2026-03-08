@@ -3,38 +3,34 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { UserProvider, useUser } from './context/UserContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { SubjectThemeProvider } from './context/SubjectThemeContext.jsx'
-import SplashScreen from './components/SplashScreen.jsx'
-import OfflineIndicator from './components/OfflineIndicator.jsx'
-import Welcome from './pages/Welcome.jsx'
-import Dashboard from './pages/Dashboard.jsx'
-import SubjectHome from './pages/SubjectHome.jsx'
-import TopicList from './pages/TopicList.jsx'
-import Lesson from './pages/Lesson.jsx'
-import Quiz from './pages/Quiz.jsx'
-import Results from './pages/Results.jsx'
-import Progress from './pages/Progress.jsx'
-import Settings from './pages/Settings.jsx'
-import Search from './pages/Search.jsx'
-import Bookmarks from './pages/Bookmarks.jsx'
-import Achievements from './pages/Achievements.jsx'
-import QuickQuiz from './pages/QuickQuiz.jsx'
-import FocusTimer from './pages/FocusTimer.jsx'
-import Leaderboard from './pages/Leaderboard.jsx'
-import ExamCenter from './pages/ExamCenter.jsx'
-import GameHub from './pages/GameHub.jsx'
-import GamePlayer from './pages/GamePlayer.jsx'
-import ProgressReport from './pages/ProgressReport.jsx'
-import AITutor from './pages/AITutor.jsx'
-import ForgettingCurve from './pages/ForgettingCurve.jsx'
-import StudyInsights from './pages/StudyInsights.jsx'
-import ElimuChatbot from './components/ElimuChatbot.jsx'
+import SplashScreen          from './components/SplashScreen.jsx'
+import OfflineIndicator      from './components/OfflineIndicator.jsx'
+import ElimuChatbot          from './components/ElimuChatbot.jsx'
+import Welcome               from './pages/Welcome.jsx'
+import Dashboard             from './pages/Dashboard.jsx'
+import SubjectHome           from './pages/SubjectHome.jsx'
+import TopicList             from './pages/TopicList.jsx'
+import Lesson                from './pages/Lesson.jsx'
+import Quiz                  from './pages/Quiz.jsx'
+import Results               from './pages/Results.jsx'
+import Progress              from './pages/Progress.jsx'
+import Settings              from './pages/Settings.jsx'
+import Search                from './pages/Search.jsx'
+import Bookmarks             from './pages/Bookmarks.jsx'
+import Achievements          from './pages/Achievements.jsx'
+import QuickQuiz             from './pages/QuickQuiz.jsx'
+import FocusTimer            from './pages/FocusTimer.jsx'
+import Leaderboard           from './pages/Leaderboard.jsx'
+import ExamCenter            from './pages/ExamCenter.jsx'
+import GameHub               from './pages/GameHub.jsx'
+import GamePlayer            from './pages/GamePlayer.jsx'
+import ProgressReport        from './pages/ProgressReport.jsx'
+import AITutor               from './pages/AITutor.jsx'
 import AISetup               from './pages/AISetup.jsx'
-import NotificationSettings from './pages/NotificationSettings.jsx'
-import Flashcards from './pages/Flashcards.jsx'
-import AITutor from './pages/AITutor.jsx'
-import ForgettingCurve from './pages/ForgettingCurve.jsx'
-import StudyInsights from './pages/StudyInsights.jsx'
-import Flashcards from './pages/Flashcards.jsx'
+import ForgettingCurve       from './pages/ForgettingCurve.jsx'
+import StudyInsights         from './pages/StudyInsights.jsx'
+import Flashcards            from './pages/Flashcards.jsx'
+import NotificationSettings  from './pages/NotificationSettings.jsx'
 
 function AppRoutes() {
   const { student, loading } = useUser()
@@ -72,20 +68,14 @@ function AppRoutes() {
         <Route path="/leaderboard"                     element={guard(<Leaderboard />)} />
         <Route path="/exam-center"                     element={guard(<ExamCenter />)} />
         <Route path="/games"                           element={guard(<GameHub />)} />
-        <Route path="/notifications"                    element={guard(<NotificationSettings />)} />
-        <Route path="/ai-setup"                          element={guard(<AISetup />)} />
-        <Route path="/forgetting-curve"               element={guard(<ForgettingCurve />)} />
-        <Route path="/study-insights"                element={guard(<StudyInsights />)} />
-        <Route path="/ai-tutor"                         element={guard(<AITutor />)} />
-        <Route path="/flashcards"                      element={guard(<Flashcards />)} />
-        <Route path="/report"                          element={guard(<ProgressReport />)} />
-        <Route path="/notifications"                    element={guard(<NotificationSettings />)} />
-        <Route path="/ai-setup"                          element={guard(<AISetup />)} />
-        <Route path="/forgetting-curve"               element={guard(<ForgettingCurve />)} />
-        <Route path="/study-insights"                element={guard(<StudyInsights />)} />
-        <Route path="/ai-tutor"                       element={guard(<AITutor />)} />
-        <Route path="/flashcards"                      element={guard(<Flashcards />)} />
         <Route path="/games/:gameId/:levelNum"         element={guard(<GamePlayer />)} />
+        <Route path="/ai-tutor"                        element={guard(<AITutor />)} />
+        <Route path="/ai-setup"                        element={guard(<AISetup />)} />
+        <Route path="/flashcards"                      element={guard(<Flashcards />)} />
+        <Route path="/forgetting-curve"                element={guard(<ForgettingCurve />)} />
+        <Route path="/study-insights"                  element={guard(<StudyInsights />)} />
+        <Route path="/notifications"                   element={guard(<NotificationSettings />)} />
+        <Route path="/report"                          element={guard(<ProgressReport />)} />
         <Route path="*"                                element={<Navigate to="/" replace />} />
       </Routes>
       <ElimuChatbot />
