@@ -10,6 +10,11 @@ export default defineConfig({
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['@mlc-ai/web-llm'],
+    },
+  },
   plugins: [
     react(),
     VitePWA({
