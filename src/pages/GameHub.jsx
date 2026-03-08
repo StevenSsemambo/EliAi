@@ -190,18 +190,21 @@ function UnlockCelebration({ game, level, onClose }) {
 }
 
 // ── Main Game Hub ────────────────────────────────────────────────
+const DEFAULT_UNLOCKS = {
+  status: Object.fromEntries((GAMES || []).map(g => [g.id, { unlockedLevels:[1], highScores:{} }])),
+  lessonsCompleted: 0, avgScore: 0, examsCompleted: 0
+}
+
 export default function GameHub() {
   const { student } = useUser()
   const navigate = useNavigate()
-  const defaultUnlocks = { status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }
-  const [unlockData, setUnlockData] = useState(defaultUnlocks)
+  const [unlockData, setUnlockData] = useState(DEFAULT_UNLOCKS)
   const [celebration, setCelebration] = useState(null)
-  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     if (!student) return
     getUnlockStatus(student.id)
-      .then(data => setUnlockData(data))
+      .then(data => { if (data && data.status) setUnlockData(data) })
       .catch(() => {})
   }, [student])
 
@@ -290,27 +293,20 @@ export default function GameHub() {
 
         {/* Games */}
         <div className="px-5">
-          {loading ? (
-            <div className="text-center py-12">
-              <div className="text-4xl mb-3" style={{ animation: 'float 2s ease-in-out infinite' }}>🌌</div>
-              <p className="text-slate-500 text-sm">Scanning the cosmos...</p>
-            </div>
-          ) : (
-            GAMES.map(game => (
-              <GameCard
-                key={game.id}
-                game={game}
-                unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || []}
-                highScores={unlockData?.status[game.id]?.highScores || {}}
-                stats={stats}
-                onPlay={handlePlay}
-              />
-            ))
-          )}
+          {(GAMES || []).map(game => (
+            <GameCard
+              key={game.id}
+              game={game}
+              unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
+              highScores={unlockData?.status[game.id]?.highScores || {}}
+              stats={stats}
+              onPlay={handlePlay}
+            />
+          ))}
         </div>
 
         {/* Motivation footer */}
-        {!loading && stats.lessonsCompleted < 3 && (
+        {stats.lessonsCompleted < 3 && (
           <div className="mx-5 mt-2 mb-4 rounded-2xl p-4 text-center" style={{ background: '#0F1629', border: '1px solid #1A2035' }}>
             <div className="text-2xl mb-2">🌠</div>
             <p className="text-sm font-bold text-white mb-1">Your journey begins!</p>
