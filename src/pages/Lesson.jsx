@@ -4,6 +4,8 @@ import { useUser } from '../context/UserContext.jsx'
 import { progressDB, bookmarkDB, notesDB } from '../db/progressDB.js'
 import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
 import { SoundEngine } from '../utils/soundEngine.js'
+import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
+import { invalidateProfileCache } from '../ai/chatbot.js'
 
 export default function Lesson(){
   const {lessonId}=useParams()
@@ -41,7 +43,16 @@ export default function Lesson(){
       const pct=(el.scrollTop/(el.scrollHeight-el.clientHeight))*100
       const clamped=Math.min(100,Math.round(pct))
       setScrollPct(clamped)
-      if(clamped>=98&&!progressDone)setProgressDone(true)
+      if(clamped>=98&&!progressDone){
+        setProgressDone(true)
+        // Record to forgetting curve and study activity
+        if(student&&lesson&&subject&&topicId){
+          const timeSpentMin = Math.round((Date.now()-startTime.current)/60000)
+          recordLessonLearned(student.id, lesson.id, topicId, subject, 100).catch(()=>{})
+          recordStudySession(student.id, 100, timeSpentMin).catch(()=>{})
+          invalidateProfileCache()  // chatbot gets fresh data next time it opens
+        }
+      }
     }
     window.addEventListener('scroll',onScroll)
     return()=>window.removeEventListener('scroll',onScroll)
