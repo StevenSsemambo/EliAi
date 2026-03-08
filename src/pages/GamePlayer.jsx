@@ -28,7 +28,7 @@ const CATEGORY_COLORS = {
   Arithmetic:'#F59E0B', Logic:'#06B6D4',
 }
 
-export default function trackGameAchievements(gameId, level) {
+function trackGameAchievements(gameId, level) {
   // Track for achievements
   localStorage.setItem('elimu_game_first', '1')
   const maxLevel = parseInt(localStorage.getItem('elimu_game_max_level') || '0')
@@ -40,7 +40,7 @@ export default function trackGameAchievements(gameId, level) {
   }
 }
 
-function GamePlayer() {
+export default function GamePlayer() {
   const { gameId, levelNum } = useParams()
   const lv = parseInt(levelNum) || 1
   const { state } = useLocation()
