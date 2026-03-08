@@ -169,7 +169,7 @@ export default function Dashboard(){
   if(!student)return null
 
   return(
-    <div className="min-h-screen pb-24" style={{background:theme.bg,...background.style}}>
+    <div className="min-h-screen pb-24" style={{background:theme.bg}}>
       <ParticleBurst active={burst}/>
 
       {/* Badge overlay */}
