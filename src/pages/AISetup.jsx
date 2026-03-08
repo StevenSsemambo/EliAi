@@ -198,7 +198,10 @@ export default function AISetup() {
     resetEngine()
     const success = await initEngine(model)
 
-    if (!success) {
+    if (success) {
+      // Save preference so chatbot auto-inits on next visit
+      localStorage.setItem('elimu_ai_model_preference', selectedKey)
+    } else {
       setError('Download failed. Check your connection and try again.')
       setStep('choose')
     }
