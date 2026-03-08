@@ -190,22 +190,28 @@ function UnlockCelebration({ game, level, onClose }) {
 }
 
 // ── Main Game Hub ────────────────────────────────────────────────
-const DEFAULT_UNLOCKS = {
-  status: Object.fromEntries((GAMES || []).map(g => [g.id, { unlockedLevels:[1], highScores:{} }])),
-  lessonsCompleted: 0, avgScore: 0, examsCompleted: 0
-}
-
 export default function GameHub() {
   const { student } = useUser()
   const navigate = useNavigate()
-  const [unlockData, setUnlockData] = useState(DEFAULT_UNLOCKS)
+  const [unlockData, setUnlockData] = useState(null)
   const [celebration, setCelebration] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (!student) return
+    let cancelled = false
+    const fallback = setTimeout(() => {
+      if (!cancelled) {
+        const def = { status: {}, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
+        try { def.status = Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])) } catch(e) {}
+        setUnlockData(def)
+        setLoading(false)
+      }
+    }, 3000)
+    if (!student) { clearTimeout(fallback); setLoading(false); return }
     getUnlockStatus(student.id)
-      .then(data => { if (data && data.status) setUnlockData(data) })
-      .catch(() => {})
+      .then(data => { if (!cancelled) { clearTimeout(fallback); setUnlockData(data); setLoading(false) } })
+      .catch(() => { if (!cancelled) { clearTimeout(fallback); setLoading(false) } })
+    return () => { cancelled = true; clearTimeout(fallback) }
   }, [student])
 
   function handlePlay(game, level) {
@@ -293,20 +299,27 @@ export default function GameHub() {
 
         {/* Games */}
         <div className="px-5">
-          {(GAMES || []).map(game => (
-            <GameCard
-              key={game.id}
-              game={game}
-              unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
-              highScores={unlockData?.status[game.id]?.highScores || {}}
-              stats={stats}
-              onPlay={handlePlay}
-            />
-          ))}
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="text-4xl mb-3" style={{ animation: 'float 2s ease-in-out infinite' }}>🌌</div>
+              <p className="text-slate-500 text-sm">Scanning the cosmos...</p>
+            </div>
+          ) : (
+            GAMES.map(game => (
+              <GameCard
+                key={game.id}
+                game={game}
+                unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
+                highScores={unlockData?.status[game.id]?.highScores || {}}
+                stats={stats}
+                onPlay={handlePlay}
+              />
+            ))
+          )}
         </div>
 
         {/* Motivation footer */}
-        {stats.lessonsCompleted < 3 && (
+        {!loading && stats.lessonsCompleted < 3 && (
           <div className="mx-5 mt-2 mb-4 rounded-2xl p-4 text-center" style={{ background: '#0F1629', border: '1px solid #1A2035' }}>
             <div className="text-2xl mb-2">🌠</div>
             <p className="text-sm font-bold text-white mb-1">Your journey begins!</p>
