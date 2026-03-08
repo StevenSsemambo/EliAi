@@ -198,12 +198,15 @@ export default function GameHub() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    if (student) {
-      getUnlockStatus(student.id).then(data => {
-        setUnlockData(data)
-        setLoading(false)
-      })
-    }
+    if (!student) { setLoading(false); return }
+    // Timeout fallback — never stay stuck on loading screen
+    const timeout = setTimeout(() => {
+      setUnlockData({ status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 })
+      setLoading(false)
+    }, 4000)
+    getUnlockStatus(student.id)
+      .then(data => { clearTimeout(timeout); setUnlockData(data); setLoading(false) })
+      .catch(() => { clearTimeout(timeout); setUnlockData({ status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }); setLoading(false) })
   }, [student])
 
   function handlePlay(game, level) {
