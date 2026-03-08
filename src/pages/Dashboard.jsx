@@ -132,6 +132,7 @@ function GoalWidget({student}){
 export default function Dashboard(){
   const {student}=useUser()
   const navigate=useNavigate()
+  const {theme}=useTheme()
   const {clearSubject}=useSubjectTheme()
   const [stats,setStats]=useState({completed:0,avgScore:0})
   const [cont,setCont]=useState(null)
