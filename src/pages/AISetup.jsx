@@ -67,7 +67,7 @@ export default function AISetup() {
       {/* Header */}
       <div className="px-5 pt-12 pb-5 relative text-center"
         style={{ background: theme.surface, borderBottom: `1px solid ${theme.border}` }}>
-        <button onClick={() => navigate('/settings')} className="absolute left-5 top-12 text-sm" style={{ color: theme.muted }}>← Back</button>
+        <button onClick={() => navigate(-1)} className="absolute left-5 top-12 text-sm" style={{ color: theme.muted }}>← Back</button>
         <div className="text-5xl mb-2" style={{ animation: 'float 3s ease-in-out infinite' }}>🧠</div>
         <h1 className="text-2xl font-black" style={{ color: theme.text }}>AI Engine</h1>
         <p className="text-sm mt-1" style={{ color: theme.muted }}>On-device AI · No internet needed after download</p>
