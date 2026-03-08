@@ -533,7 +533,7 @@ function generateHint(q, qLow, concept, answer, explanation) {
 
 function generateConceptHint(concept, answer) {
   if (concept.includes('cell'))     return 'cells are the basic unit of life — think about what they do'
-  if (concept.includes('force'))    return 'force causes a change in motion — think Newton's laws'
+  if (concept.includes('force'))    return "force causes a change in motion — think Newton's laws"
   if (concept.includes('acid'))     return 'acids have a pH below 7 and turn litmus red'
   if (concept.includes('algebra'))  return 'algebra uses letters to represent unknown numbers'
   if (concept.includes('energy'))   return 'energy can neither be created nor destroyed — only transferred'
