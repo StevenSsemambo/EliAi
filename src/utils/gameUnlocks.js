@@ -180,7 +180,6 @@ export const GAMES = [
     ], l => gradual(l, { minL:0, maxL:0, minS:40, maxS:80, minE:0, maxE:0 })),
   },
 ]
-]
 
 export async function getUnlockStatus(studentId) {
   if (!studentId) return { status:{}, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
