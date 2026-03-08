@@ -219,17 +219,27 @@ export default function ElimuChatbot() {
 
   // Track LLM engine status
   useEffect(() => {
+    // Subscribe to progress events during loading
     const unsub = onProgress((pct, label) => {
       setLlmProgress(pct)
       setLlmStatus(getEngineStatus())
     })
+    // Poll every 2s to catch status changes (e.g. engine finished on AISetup page)
+    const poll = setInterval(() => {
+      const s = getEngineStatus()
+      setLlmStatus(s)
+      if (s === 'ready') clearInterval(poll)
+    }, 2000)
     // Try to init engine silently if previously set up
     const pref = localStorage.getItem('elimu_ai_model_preference')
-    if (pref && getEngineStatus() === 'idle') {
+    const current = getEngineStatus()
+    if (current === 'ready') {
+      setLlmStatus('ready')
+    } else if (pref && current === 'idle') {
       setLlmStatus('loading')
-      initEngine().then(ok => setLlmStatus(getEngineStatus()))
+      initEngine().then(() => setLlmStatus(getEngineStatus()))
     }
-    return unsub
+    return () => { unsub(); clearInterval(poll) }
   }, [])
 
   useEffect(() => {
