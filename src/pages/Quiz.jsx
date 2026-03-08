@@ -9,6 +9,7 @@ import {
   generateExplanation, getSocraticPrompt,
   buildRetryQuiz, recordLessonLearned, recordStudySession,
 } from '../ai/learning.js'
+import { invalidateProfileCache } from '../ai/chatbot.js'
 import { calculateScore } from '../utils/scoring.js'
 import { SoundEngine, Haptics } from '../utils/soundEngine.js'
 
@@ -219,7 +220,8 @@ export default function Quiz() {
           await saveCognitiveLoadSession(student.id, lessonId, newCog)
           await recordLessonLearned(student.id, lessonId, topicId, subject, score)
           await recordStudyActivity()
-      recordStudySession(student.id, score, Math.round(timeTaken / 60))
+          recordStudySession(student.id, score, Math.round(timeTaken / 60))
+          invalidateProfileCache()  // chatbot gets fresh analysis next open
           refreshStudent()
         }
         if (score < 60) {
