@@ -90,6 +90,13 @@ export default function Results(){
           <button onClick={share} className="w-full py-3 rounded-2xl font-semibold text-sm glass active:scale-95 transition-all" style={{color:'#F59E0B'}}>
             📤 Share with Parent / Guardian
           </button>
+          {!passed && (
+            <button onClick={()=>navigate('/ai-tutor')}
+              className="w-full py-3 rounded-2xl font-bold transition-all active:scale-95"
+              style={{background:'rgba(124,58,237,0.12)',border:'1px solid rgba(124,58,237,0.35)',color:'#A78BFA'}}>
+              🧠 Ask AI to explain what I got wrong
+            </button>
+          )}
           <button onClick={()=>navigate(`/quiz/${lesson.id}`,{state:{lesson,subject,topicId}})}
             className="w-full py-3 rounded-2xl font-bold transition-all active:scale-95"
             style={{background:'#1A2035',border:'1px solid #252D45',color:'#14B8A6'}}>
