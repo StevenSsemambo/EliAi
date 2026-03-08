@@ -1,0 +1,1783 @@
+{
+  "subject": "physics",
+  "level": "s1",
+  "lessons": [
+    {
+      "id": "s1_phy_den_l1",
+      "title": "Density and Relative Density",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Density: ρ = m/V\nρ = density (kg/m³ or g/cm³)\nm = mass (kg or g)\nV = volume (m³ or cm³)\n\nDensity of water = 1000 kg/m³ = 1 g/cm³\nDensity of air ≈ 1.2 kg/m³\n\nRelative density (RD) = density of substance / density of water\nRD has no units\nRD > 1: substance sinks in water\nRD < 1: substance floats in water"
+        },
+        {
+          "type": "example",
+          "title": "Finding Volume by Displacement",
+          "body": "Irregularly shaped object:\n1. Fill measuring cylinder with water, record volume V₁\n2. Submerge object, record new volume V₂\n3. Volume of object = V₂ - V₁\n\nExample: mass=80g, V₁=50cm³, V₂=70cm³\nVolume = 20cm³\nDensity = 80/20 = 4 g/cm³"
+        },
+        {
+          "type": "example",
+          "title": "Density Examples",
+          "body": "Aluminium: 2700 kg/m³ (2.7 g/cm³)\nIce: 917 kg/m³ (less than water → floats)\nOil: ~900 kg/m³ (floats on water)\nLead: 11,340 kg/m³ (sinks fast)\nGold: 19,300 kg/m³"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Density formula is",
+            "options": [
+              "ρ=mV",
+              "ρ=V/m",
+              "ρ=m/V",
+              "ρ=m+V"
+            ],
+            "answer": "ρ=m/V",
+            "explanation": "Density = mass ÷ volume"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Mass 200g, volume 40cm³. Density =",
+            "options": [
+              "8g/cm³",
+              "5g/cm³",
+              "160g/cm³",
+              "0.2g/cm³"
+            ],
+            "answer": "5g/cm³",
+            "explanation": "ρ=200/40=5g/cm³"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Object with RD=0.8 will",
+            "options": [
+              "sink in water",
+              "float in water",
+              "dissolve",
+              "have no effect"
+            ],
+            "answer": "float in water",
+            "explanation": "RD<1 means less dense than water → object floats"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Density of water is",
+            "options": [
+              "10 kg/m³",
+              "100 kg/m³",
+              "1000 kg/m³",
+              "10000 kg/m³"
+            ],
+            "answer": "1000 kg/m³",
+            "explanation": "Water density = 1000 kg/m³ = 1 g/cm³ at 4°C"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Ice floats on water because",
+            "options": [
+              "ice is cold",
+              "ice density (917 kg/m³) is less than water (1000 kg/m³)",
+              "ice is white",
+              "ice is smooth"
+            ],
+            "answer": "ice density (917 kg/m³) is less than water (1000 kg/m³)",
+            "explanation": "Ice is ~9% less dense than liquid water — key to aquatic life surviving winter"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Volume of object: water rises from 25cm³ to 37cm³ when object submerged. Volume =",
+            "options": [
+              "62cm³",
+              "12cm³",
+              "37cm³",
+              "25cm³"
+            ],
+            "answer": "12cm³",
+            "explanation": "Volume = 37-25 = 12cm³ (Archimedes' displacement method)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Object mass 150g, volume 50cm³. Will it float in water?",
+            "options": [
+              "Yes (ρ=3g/cm³ > water)",
+              "No (ρ=3g/cm³ > water)",
+              "Yes (density doesn't matter)",
+              "Cannot tell"
+            ],
+            "answer": "No (ρ=3g/cm³ > water)",
+            "explanation": "ρ=3g/cm³ > 1g/cm³ (water) → sinks"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Units of density in SI system",
+            "options": [
+              "g/cm³",
+              "kg/m³",
+              "kg/cm³",
+              "g/m³"
+            ],
+            "answer": "kg/m³",
+            "explanation": "SI unit of density is kg/m³ (though g/cm³ is commonly used in chemistry/everyday)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Oil floats on water because",
+            "options": [
+              "it is lighter",
+              "oil density (~900 kg/m³) is less than water (1000 kg/m³)",
+              "it repels water",
+              "it is a liquid"
+            ],
+            "answer": "oil density (~900 kg/m³) is less than water (1000 kg/m³)",
+            "explanation": "Less dense liquid floats on more dense liquid — immiscible layers separate by density"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Density 2.5 g/cm³, volume 8cm³. Mass =",
+            "options": [
+              "3.2g",
+              "0.31g",
+              "20g",
+              "6g"
+            ],
+            "answer": "20g",
+            "explanation": "m=ρV=2.5×8=20g"
+          },
+          {
+            "id": "density_flotation_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1_phy_den_l2",
+      "title": "Archimedes Principle and Flotation",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Archimedes' Principle:\nUpthrust (buoyant force) = weight of fluid displaced\nU = ρ_fluid × g × V_submerged\n\nLaw of Flotation:\nFloating object: weight = upthrust\nmg = ρ_fluid × g × V_displaced\n∴ V_displaced/V_object = ρ_object/ρ_fluid\n\nApparent weight = actual weight - upthrust"
+        },
+        {
+          "type": "example",
+          "title": "Archimedes Examples",
+          "body": "Object weighs 50N in air. In water it weighs 32N.\nUpthrust = 50-32 = 18N\nVolume of water displaced = 18N/(1000×10) = 0.0018m³ = 1800cm³\n\nShip: steel is denser than water, but hollow hull displaces enough water to float (weight=upthrust)"
+        },
+        {
+          "type": "example",
+          "title": "Hydrometer",
+          "body": "Measures relative density of liquids\nFloats lower in less dense liquid (sinks more, displaces more)\nFloats higher in denser liquid (displaces less)\nUsed to check car battery acid, brewing beer, measuring milk quality"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Archimedes principle: upthrust equals",
+            "options": [
+              "volume of object",
+              "weight of fluid displaced",
+              "mass of fluid",
+              "weight of object"
+            ],
+            "answer": "weight of fluid displaced",
+            "explanation": "Upthrust = weight of fluid DISPLACED by the submerged object"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Object weighs 30N in air, 22N in water. Upthrust =",
+            "options": [
+              "52N",
+              "8N",
+              "22N",
+              "30N"
+            ],
+            "answer": "8N",
+            "explanation": "Upthrust = weight in air - weight in liquid = 30-22 = 8N"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A floating ship satisfies which condition",
+            "options": [
+              "weight > upthrust",
+              "weight < upthrust",
+              "weight = upthrust",
+              "weight and upthrust unrelated"
+            ],
+            "answer": "weight = upthrust",
+            "explanation": "For flotation: weight of ship = weight of water displaced (Archimedes)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Steel is denser than water yet ships float because",
+            "options": [
+              "steel is light",
+              "hollow hull displaces water equal to ship's weight",
+              "steel repels water",
+              "ships are small"
+            ],
+            "answer": "hollow hull displaces water equal to ship's weight",
+            "explanation": "Large hollow hull → huge volume of water displaced → large upthrust = ship's total weight"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Apparent weight = actual weight MINUS upthrust. Object feels lighter in water because",
+            "options": [
+              "gravity decreases",
+              "upthrust acts upward, partially supporting the object",
+              "water is cold",
+              "pressure decreases"
+            ],
+            "answer": "upthrust acts upward, partially supporting the object",
+            "explanation": "Upthrust reduces net downward force → object feels lighter in fluid"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Hydrometer sinks deeper in",
+            "options": [
+              "dense liquid",
+              "less dense liquid",
+              "salt water",
+              "alcohol"
+            ],
+            "answer": "less dense liquid",
+            "explanation": "Less dense liquid: less upthrust per unit volume → hydrometer must displace more liquid → sinks deeper"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Object density = 600 kg/m³ floating in water (1000 kg/m³). Fraction submerged =",
+            "options": [
+              "0.6",
+              "0.4",
+              "1.0",
+              "0.5"
+            ],
+            "answer": "0.6",
+            "explanation": "V_submerged/V_total = ρ_object/ρ_fluid = 600/1000 = 0.6"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Submarines dive by",
+            "options": [
+              "using engines",
+              "flooding ballast tanks to increase total density beyond seawater",
+              "changing shape",
+              "reversing propeller"
+            ],
+            "answer": "flooding ballast tanks to increase total density beyond seawater",
+            "explanation": "Ballast tanks: fill with water → density exceeds seawater → net downward force → dive. Blow out water → surface"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Upthrust on fully submerged object in fresh water vs salt water",
+            "options": [
+              "same",
+              "greater in fresh water",
+              "greater in salt water (denser)",
+              "depends on depth"
+            ],
+            "answer": "greater in salt water (denser)",
+            "explanation": "Upthrust = ρ_fluid×g×V. Salt water is denser → greater upthrust for same submerged volume"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Hot air balloon rises because",
+            "options": [
+              "fire pushes it",
+              "hot air inside is less dense than surrounding cool air",
+              "it is streamlined",
+              "it has less mass"
+            ],
+            "answer": "hot air inside is less dense than surrounding cool air",
+            "explanation": "Heated air expands → less dense → balloon + air less dense than surrounding air → net upthrust > weight → rises"
+          },
+          {
+            "id": "density_flotation_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1_phy_df_l3",
+      "title": "Archimedes' Principle and Upthrust",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Upthrust = Weight of fluid displaced\nUpthrust = ρ_fluid × V_submerged × g\n\nArchimedes' Principle:\nA body immersed in fluid experiences upthrust equal to weight of fluid displaced"
+        },
+        {
+          "type": "example",
+          "title": "Worked: Steel in Water",
+          "body": "Steel block 200cm³ submerged in water (ρ=1000kg/m³)\nUpthrust = 1000 × 0.0002 × 10 = 2 N\nIf block weighs 15N, apparent weight = 15-2 = 13N"
+        },
+        {
+          "type": "text",
+          "body": "An object floats when upthrust equals weight. If upthrust < weight, the object sinks. If upthrust > weight, the object rises until it floats partially submerged."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Upthrust on a body equals",
+            "options": [
+              "Weight of body",
+              "Weight of fluid displaced",
+              "Density of body",
+              "Volume of body"
+            ],
+            "answer": "Weight of fluid displaced",
+            "explanation": "Archimedes' Principle: upthrust = weight of fluid displaced by the body."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 500cm³ object submerged in water (ρ=1000kg/m³, g=10). Upthrust =",
+            "options": [
+              "5N",
+              "0.5N",
+              "50N",
+              "500N"
+            ],
+            "answer": "5N",
+            "explanation": "U = 1000 × 0.0005 × 10 = 5N"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "An object floats when",
+            "options": [
+              "Weight > Upthrust",
+              "Weight = Upthrust",
+              "Weight < Upthrust",
+              "Density > 1000"
+            ],
+            "answer": "Weight = Upthrust",
+            "explanation": "Floating condition: weight exactly equals upthrust from displaced fluid."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Apparent weight = ",
+            "options": [
+              "Real weight + Upthrust",
+              "Real weight − Upthrust",
+              "Upthrust − Weight",
+              "Real weight × Upthrust"
+            ],
+            "answer": "Real weight − Upthrust",
+            "explanation": "When submerged, apparent weight = real weight minus upthrust."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "An iron ball weighs 10N in air and 7N in water. Upthrust =",
+            "options": [
+              "10N",
+              "7N",
+              "3N",
+              "17N"
+            ],
+            "answer": "3N",
+            "explanation": "Upthrust = 10 − 7 = 3N"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Wood floats because",
+            "options": [
+              "It is light",
+              "Its density < water density",
+              "It contains air only",
+              "Archimedes said so"
+            ],
+            "answer": "Its density < water density",
+            "explanation": "Objects float when their average density is less than fluid density."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Volume of water displaced by floating object equals",
+            "options": [
+              "Total volume",
+              "Volume above surface",
+              "Volume submerged",
+              "Zero"
+            ],
+            "answer": "Volume submerged",
+            "explanation": "Only the submerged portion displaces fluid."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A ship floats in sea water (ρ=1025 kg/m³). If it moves to fresh water (ρ=1000), it",
+            "options": [
+              "Sinks lower",
+              "Rises higher",
+              "Stays same",
+              "Capsizes"
+            ],
+            "answer": "Sinks lower",
+            "explanation": "Less dense fresh water gives less upthrust per volume, so ship sinks lower."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Hydrometer measures",
+            "options": [
+              "Temperature",
+              "Pressure",
+              "Density of liquids",
+              "Viscosity"
+            ],
+            "answer": "Density of liquids",
+            "explanation": "Hydrometer floats at different levels in liquids of different density."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Submarines control depth by",
+            "options": [
+              "Changing speed only",
+              "Adjusting ballast tanks",
+              "Reducing weight",
+              "Swimming fins"
+            ],
+            "answer": "Adjusting ballast tanks",
+            "explanation": "Ballast tanks fill with water to sink or blow water out to rise."
+          },
+          {
+            "id": "density_flotation_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s1_phy_df_l4",
+      "title": "Applications of Flotation",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Flotation principles are applied in many technologies: ships, submarines, hot air balloons, hydrometers, and life jackets. Understanding density and upthrust helps us design safer, more efficient vessels."
+        },
+        {
+          "type": "formula",
+          "body": "Relative Density (RD) = Density of substance / Density of water\nRD = Weight in air / (Weight in air − Weight in water)\nRD has no units"
+        },
+        {
+          "type": "example",
+          "title": "Relative Density Calculation",
+          "body": "Object weighs 50N in air, 30N in water.\nRD = 50 / (50−30) = 50/20 = 2.5\nDensity = 2.5 × 1000 = 2500 kg/m³"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Relative density has",
+            "options": [
+              "Units of kg/m³",
+              "Units of g/cm³",
+              "No units",
+              "Units of N"
+            ],
+            "answer": "No units",
+            "explanation": "Relative density is a ratio - no units."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "RD = Weight in air / Loss of weight in water. Loss of weight =",
+            "options": [
+              "Weight in air",
+              "Weight in water",
+              "Weight in air − Weight in water",
+              "Weight in air + Weight in water"
+            ],
+            "answer": "Weight in air − Weight in water",
+            "explanation": "Loss of weight = upthrust = W_air − W_water."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Object: 80N in air, 50N in water. RD =",
+            "options": [
+              "0.625",
+              "1.6",
+              "2.67",
+              "30"
+            ],
+            "answer": "2.67",
+            "explanation": "RD = 80/(80-50) = 80/30 = 2.67"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Hot air balloons rise because",
+            "options": [
+              "Hot air is lighter",
+              "Engine pushes up",
+              "They have wings",
+              "Balloon is hollow"
+            ],
+            "answer": "Hot air is lighter",
+            "explanation": "Heated air expands, becomes less dense than surrounding cool air, providing net upthrust."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Life jackets work by",
+            "options": [
+              "Pushing wearer up",
+              "Increasing average density of wearer",
+              "Decreasing average density of wearer",
+              "Waterproofing"
+            ],
+            "answer": "Decreasing average density of wearer",
+            "explanation": "Air-filled life jacket reduces wearer's average density below water density."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Ships are made of steel yet float because",
+            "options": [
+              "Steel is magnetic",
+              "Ship hull shape traps air making average density < water",
+              "Steel repels water",
+              "Sea water is denser than steel"
+            ],
+            "answer": "Ship hull shape traps air making average density < water",
+            "explanation": "Hollow hull includes large air volume, reducing overall average density."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "RD of 0.8 means the substance",
+            "options": [
+              "Sinks in water",
+              "Floats in water",
+              "Has density 800 kg/m³",
+              "Both B and C"
+            ],
+            "answer": "Both B and C",
+            "explanation": "RD 0.8 < 1 means density = 800 kg/m³ < 1000 kg/m³, so it floats."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Plimsoll line on ships indicates",
+            "options": [
+              "Speed limit",
+              "Maximum safe load level",
+              "Fuel level",
+              "Water temperature"
+            ],
+            "answer": "Maximum safe load level",
+            "explanation": "Plimsoll line marks the maximum safe loading depth of a ship."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Fish control buoyancy using",
+            "options": [
+              "Fins",
+              "Gills",
+              "Swim bladder",
+              "Scales"
+            ],
+            "answer": "Swim bladder",
+            "explanation": "Fish inflate/deflate their swim bladder to change average density and depth."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Density of object = RD ×",
+            "options": [
+              "10",
+              "1000 kg/m³",
+              "g",
+              "100"
+            ],
+            "answer": "1000 kg/m³",
+            "explanation": "Density = RD × density of water = RD × 1000 kg/m³"
+          },
+          {
+            "id": "density_flotation_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "density_flotation_l5",
+      "title": "Density Flotation — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Density Flotation. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Density Flotation concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Density Flotation builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Density Flotation. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Density Flotation. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Density Flotation include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Density Flotation. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "density_flotation_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "density_flotation_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "density_flotation_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "density_flotation_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "density_flotation_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "density_flotation_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "density_flotation_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "density_flotation_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "density_flotation_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "density_flotation_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "density_flotation_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "density_flotation_l6",
+      "title": "Density Flotation — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Density Flotation. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Density Flotation concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Density Flotation builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Density Flotation. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Density Flotation. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Density Flotation include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Density Flotation. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "density_flotation_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "density_flotation_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "density_flotation_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "density_flotation_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "density_flotation_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "density_flotation_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "density_flotation_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "density_flotation_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "density_flotation_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "density_flotation_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "density_flotation_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "density_flotation_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "density_flotation_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "density_flotation_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "density_flotation_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "density_flotation_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "density_flotation_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "density_flotation_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "density_flotation_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "density_flotation_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "density_flotation"
+}

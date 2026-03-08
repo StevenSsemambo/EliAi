@@ -1,0 +1,121 @@
+import { useState } from 'react'
+import { useParams, useLocation, useNavigate } from 'react-router-dom'
+import { useUser } from '../context/UserContext.jsx'
+import { GAMES } from '../utils/gameUnlocks.js'
+
+import NebulaMemory   from './games/NebulaMemory.jsx'
+import ChemLabGame    from './games/ChemLabGame.jsx'
+import PhysicsForcesGame from './games/PhysicsForcesGame.jsx'
+import BiologyCellGame from './games/BiologyCellGame.jsx'
+import MathsSpeedGame  from './games/MathsSpeedGame.jsx'
+import CosmosPuzzle   from './games/CosmosPuzzle.jsx'
+import QuasarChain    from './games/QuasarChain.jsx'
+import NumberWarp     from './games/NumberWarp.jsx'
+import SequenceMemory from './games/SequenceMemory.jsx'
+import LogicGrid      from './games/LogicGrid.jsx'
+
+const GAME_COMPONENTS = {
+  memory:     NebulaMemory,
+  sliding:    CosmosPuzzle,
+  chain:      QuasarChain,
+  arithmetic: NumberWarp,
+  sequence:   SequenceMemory,
+  logic:      LogicGrid,
+}
+
+const CATEGORY_COLORS = {
+  Memory:'#7C3AED', Spatial:'#0891B2', Pattern:'#059669',
+  Arithmetic:'#F59E0B', Logic:'#06B6D4',
+}
+
+export default function trackGameAchievements(gameId, level) {
+  // Track for achievements
+  localStorage.setItem('elimu_game_first', '1')
+  const maxLevel = parseInt(localStorage.getItem('elimu_game_max_level') || '0')
+  if (level > maxLevel) localStorage.setItem('elimu_game_max_level', String(level))
+  const played = JSON.parse(localStorage.getItem('elimu_games_played') || '[]')
+  if (!played.includes(gameId)) {
+    played.push(gameId)
+    localStorage.setItem('elimu_games_played', JSON.stringify(played))
+  }
+}
+
+function GamePlayer() {
+  const { gameId, levelNum } = useParams()
+  const lv = parseInt(levelNum) || 1
+  const { state } = useLocation()
+  const navigate  = useNavigate()
+  const { student } = useUser()
+  const [key, setKey] = useState(0)
+
+  const game = GAMES.find(g => g.id === gameId) || state?.game
+  const levelData = game?.levels.find(l => l.level === parseInt(levelNum)) || state?.level
+  const GameComponent = game ? GAME_COMPONENTS[game.type] : null
+
+  if (!game || !levelData || !GameComponent) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ background:'#050810' }}>
+        <div className="text-center px-6">
+          <div className="text-5xl mb-4">🌌</div>
+          <p className="text-slate-400 mb-2">Game not found</p>
+          <button onClick={() => navigate('/games')} className="text-teal-400 font-semibold">← Back to Hub</button>
+        </div>
+      </div>
+    )
+  }
+
+  const catColor = CATEGORY_COLORS[game.category] || game.color
+
+  return (
+    <div className="min-h-screen flex flex-col" style={{ background:'#050810' }}>
+      <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}`}</style>
+
+      {/* Header */}
+      <div className="px-5 pt-10 pb-3 flex-shrink-0"
+        style={{ background:'linear-gradient(180deg,#0A0D1A 0%,#050810 100%)', borderBottom:`1px solid ${game.color}33` }}>
+        <div className="flex items-center justify-between max-w-lg mx-auto">
+          <button onClick={() => navigate('/games')} className="text-slate-500 text-sm font-semibold active:opacity-70">← Hub</button>
+          <div className="text-center flex-1 mx-4">
+            <div className="flex items-center gap-2 justify-center mb-0.5">
+              <span className="text-xl" style={{ animation:'float 3s ease-in-out infinite' }}>{game.icon}</span>
+              <span className="font-black text-white text-base">{game.name}</span>
+            </div>
+            <div className="flex items-center gap-2 justify-center">
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ background:`${game.color}22`, color:game.color }}>
+                Level {levelData.level}
+              </span>
+              <span className="text-xs text-slate-500">{levelData.name}</span>
+            </div>
+          </div>
+          <button onClick={() => setKey(k=>k+1)} className="text-xs px-3 py-1.5 rounded-xl font-bold active:scale-90"
+            style={{ background:`${game.color}22`, color:game.color, border:`1px solid ${game.color}44` }}>↺ New</button>
+        </div>
+        <div className="flex justify-center mt-2">
+          <span className="text-xs px-3 py-1 rounded-full font-semibold"
+            style={{ background:`${catColor}15`, color:catColor, border:`1px solid ${catColor}30` }}>
+            🧠 {game.cogSkill}
+          </span>
+        </div>
+      </div>
+
+      {/* Level progress strip */}
+      <div className="px-5 py-2 flex-shrink-0" style={{ background:'#070A14' }}>
+        <div className="flex gap-1 max-w-lg mx-auto overflow-x-auto pb-1">
+          {game.levels.map(lvl => (
+            <div key={lvl.level} className="flex-shrink-0 rounded-full transition-all" style={{
+              width: lvl.level===levelData.level ? 24 : 8, height:8,
+              background: lvl.level===levelData.level ? game.color : lvl.level<levelData.level ? `${game.color}66` : '#1A2035',
+              boxShadow: lvl.level===levelData.level ? `0 0 8px ${game.glow}` : 'none',
+            }} />
+          ))}
+        </div>
+        <p className="text-center text-xs mt-1" style={{ color:'#2A3555' }}>Level {levelData.level} of {game.levels.length}</p>
+      </div>
+
+      {/* Game */}
+      <div className="flex-1 px-4 pt-4 pb-6 overflow-auto max-w-lg mx-auto w-full">
+        <GameComponent key={key} game={game} levelData={levelData} studentId={student?.id} onFinish={() => navigate('/games')} />
+      </div>
+    </div>
+  )
+}

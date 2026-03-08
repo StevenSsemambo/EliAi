@@ -1,0 +1,1848 @@
+{
+  "topic_id": "algebra",
+  "topic_title": "Algebra Basics",
+  "subject": "mathematics",
+  "class_level": "S1",
+  "lessons": [
+    {
+      "id": "algebra_l1",
+      "title": "Introduction to Algebra",
+      "duration_minutes": 20,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Algebra is a branch of mathematics that uses letters and symbols to represent numbers and quantities in formulas and equations. Instead of writing specific numbers, we use variables (usually letters like x, y, or n) to stand for unknown values."
+        },
+        {
+          "type": "example",
+          "title": "What is a Variable?",
+          "body": "If you have 3 apples and someone gives you some more apples, you might write: 3 + x = total apples. Here, x is the variable — it represents the unknown number of apples given to you."
+        },
+        {
+          "type": "formula",
+          "body": "Expression: a combination of variables, numbers, and operations. Example: 3x + 5"
+        },
+        {
+          "type": "formula",
+          "body": "Equation: two expressions connected by an equals sign. Example: 3x + 5 = 20"
+        },
+        {
+          "type": "text",
+          "body": "In algebra, we follow the same rules as arithmetic. The operations are addition (+), subtraction (−), multiplication (×), and division (÷). When we write 3x, it means 3 multiplied by x."
+        },
+        {
+          "type": "example",
+          "title": "Evaluating Expressions",
+          "body": "If x = 4, find the value of 3x + 5.\nSolution: Replace x with 4.\n3(4) + 5 = 12 + 5 = 17\nAnswer: 17"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What does a variable represent in algebra?",
+            "options": [
+              "A specific fixed number",
+              "An unknown or changing value",
+              "A type of operation",
+              "A fraction"
+            ],
+            "answer": "An unknown or changing value",
+            "explanation": "A variable is a letter that stands for an unknown or changing number."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If x = 3, what is the value of 4x + 2?",
+            "options": [
+              "9",
+              "14",
+              "12",
+              "10"
+            ],
+            "answer": "14",
+            "explanation": "4(3) + 2 = 12 + 2 = 14"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which of the following is an equation?",
+            "options": [
+              "5x + 3",
+              "2y − 7",
+              "x + 4 = 10",
+              "3a"
+            ],
+            "answer": "x + 4 = 10",
+            "explanation": "An equation has an equals sign (=). x + 4 = 10 has an equals sign."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What does 5n mean in algebra?",
+            "options": [
+              "5 plus n",
+              "5 minus n",
+              "5 multiplied by n",
+              "5 divided by n"
+            ],
+            "answer": "5 multiplied by n",
+            "explanation": "When a number is written next to a variable, it means multiplication. 5n = 5 × n."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "If y = 6, what is the value of 2y − 3?",
+            "options": [
+              "15",
+              "9",
+              "11",
+              "6"
+            ],
+            "answer": "9",
+            "explanation": "2(6) − 3 = 12 − 3 = 9"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which of these is an algebraic expression?",
+            "options": [
+              "25",
+              "7 + 3 = 10",
+              "4x − 1",
+              "100%"
+            ],
+            "answer": "4x − 1",
+            "explanation": "An algebraic expression contains at least one variable. 4x − 1 has the variable x."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "If a = 2 and b = 5, what is a + 3b?",
+            "options": [
+              "17",
+              "15",
+              "10",
+              "21"
+            ],
+            "answer": "17",
+            "explanation": "a + 3b = 2 + 3(5) = 2 + 15 = 17"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What is the coefficient of x in the expression 7x + 4?",
+            "options": [
+              "4",
+              "7",
+              "11",
+              "x"
+            ],
+            "answer": "7",
+            "explanation": "The coefficient is the number multiplying the variable. In 7x, the coefficient is 7."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "If p = 10, find 3p − 8.",
+            "options": [
+              "22",
+              "38",
+              "18",
+              "30"
+            ],
+            "answer": "22",
+            "explanation": "3(10) − 8 = 30 − 8 = 22"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Which statement about algebra is TRUE?",
+            "options": [
+              "Variables can only be the letter x",
+              "An expression always has an equals sign",
+              "Variables represent unknown values",
+              "Algebra only uses addition"
+            ],
+            "answer": "Variables represent unknown values",
+            "explanation": "Variables (any letter) represent unknown or changing values in algebra."
+          },
+          {
+            "id": "algebra_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "algebra_l2",
+      "title": "Linear Equations — Solving for x",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "A linear equation is an equation where the variable appears with a power of 1 (no x², no x³). Our goal when solving a linear equation is to find the value of the unknown variable that makes the equation true."
+        },
+        {
+          "type": "formula",
+          "body": "Golden Rule: Whatever you do to one side of the equation, you MUST do the same to the other side."
+        },
+        {
+          "type": "example",
+          "title": "Solving a Simple Equation",
+          "body": "Solve: x + 7 = 12\nStep 1: Subtract 7 from both sides.\nx + 7 − 7 = 12 − 7\nx = 5\nCheck: 5 + 7 = 12 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Solving with Multiplication",
+          "body": "Solve: 3x = 18\nStep 1: Divide both sides by 3.\n3x ÷ 3 = 18 ÷ 3\nx = 6\nCheck: 3(6) = 18 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Two-Step Equations",
+          "body": "Solve: 2x + 5 = 13\nStep 1: Subtract 5 from both sides.\n2x = 8\nStep 2: Divide both sides by 2.\nx = 4\nCheck: 2(4) + 5 = 8 + 5 = 13 ✓"
+        },
+        {
+          "type": "text",
+          "body": "Always check your answer by substituting it back into the original equation. If both sides are equal, your answer is correct!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Solve: x + 9 = 15",
+            "options": [
+              "x = 6",
+              "x = 24",
+              "x = 5",
+              "x = 7"
+            ],
+            "answer": "x = 6",
+            "explanation": "Subtract 9 from both sides: x = 15 − 9 = 6"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve: 4x = 20",
+            "options": [
+              "x = 16",
+              "x = 80",
+              "x = 5",
+              "x = 24"
+            ],
+            "answer": "x = 5",
+            "explanation": "Divide both sides by 4: x = 20 ÷ 4 = 5"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Solve: 2x + 3 = 11",
+            "options": [
+              "x = 4",
+              "x = 7",
+              "x = 8",
+              "x = 3"
+            ],
+            "answer": "x = 4",
+            "explanation": "2x = 11 − 3 = 8, then x = 8 ÷ 2 = 4"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Solve: x − 5 = 8",
+            "options": [
+              "x = 3",
+              "x = 13",
+              "x = 40",
+              "x = 14"
+            ],
+            "answer": "x = 13",
+            "explanation": "Add 5 to both sides: x = 8 + 5 = 13"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Solve: 5x − 10 = 20",
+            "options": [
+              "x = 2",
+              "x = 6",
+              "x = 30",
+              "x = 10"
+            ],
+            "answer": "x = 6",
+            "explanation": "5x = 20 + 10 = 30, then x = 30 ÷ 5 = 6"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which operation isolates x in: x + 12 = 20?",
+            "options": [
+              "Add 12 to both sides",
+              "Subtract 12 from both sides",
+              "Multiply both sides by 12",
+              "Divide both sides by 12"
+            ],
+            "answer": "Subtract 12 from both sides",
+            "explanation": "To remove +12 from the left side, subtract 12 from both sides."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Solve: 3x + 6 = 21",
+            "options": [
+              "x = 5",
+              "x = 9",
+              "x = 3",
+              "x = 7"
+            ],
+            "answer": "x = 5",
+            "explanation": "3x = 21 − 6 = 15, then x = 15 ÷ 3 = 5"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "If 2x = 14, what is x?",
+            "options": [
+              "x = 28",
+              "x = 12",
+              "x = 7",
+              "x = 16"
+            ],
+            "answer": "x = 7",
+            "explanation": "Divide both sides by 2: x = 14 ÷ 2 = 7"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Solve: x/4 = 5",
+            "options": [
+              "x = 1",
+              "x = 20",
+              "x = 9",
+              "x = 1.25"
+            ],
+            "answer": "x = 20",
+            "explanation": "Multiply both sides by 4: x = 5 × 4 = 20"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Solve: 6x − 4 = 32",
+            "options": [
+              "x = 4",
+              "x = 6",
+              "x = 8",
+              "x = 7"
+            ],
+            "answer": "x = 6",
+            "explanation": "6x = 32 + 4 = 36, then x = 36 ÷ 6 = 6"
+          },
+          {
+            "id": "algebra_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "algebra_l3",
+      "title": "Like Terms & Simplification",
+      "duration_minutes": 20,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Like terms are terms that have exactly the same variable raised to the same power. Only like terms can be added or subtracted. Numbers without variables (called constants) are also like terms with each other."
+        },
+        {
+          "type": "example",
+          "title": "Identifying Like Terms",
+          "body": "Like terms: 3x and 5x (both have x)\nLike terms: 4y² and 7y² (both have y²)\nLike terms: 8 and 3 (both are constants)\nNOT like terms: 3x and 3y (different variables)\nNOT like terms: 5x and 5x² (different powers)"
+        },
+        {
+          "type": "example",
+          "title": "Collecting Like Terms",
+          "body": "Simplify: 5x + 3y + 2x + 4y\nStep 1: Group the x terms: 5x + 2x = 7x\nStep 2: Group the y terms: 3y + 4y = 7y\nAnswer: 7x + 7y"
+        },
+        {
+          "type": "formula",
+          "body": "Remember: You CANNOT simplify 7x + 7y any further because x and y are different variables."
+        },
+        {
+          "type": "example",
+          "title": "Mixed Simplification",
+          "body": "Simplify: 4a + 2b − a + 5b − 3\nGroup: (4a − a) + (2b + 5b) + (−3)\nSimplify: 3a + 7b − 3"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which pair are like terms?",
+            "options": [
+              "3x and 3y",
+              "4x and 7x",
+              "2x² and 2x",
+              "5y and 5y²"
+            ],
+            "answer": "4x and 7x",
+            "explanation": "4x and 7x both have the same variable x with power 1."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Simplify: 6x + 3x",
+            "options": [
+              "9x²",
+              "18x",
+              "9x",
+              "63x"
+            ],
+            "answer": "9x",
+            "explanation": "6x + 3x = (6+3)x = 9x"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Simplify: 8y − 3y + 2y",
+            "options": [
+              "7y",
+              "13y",
+              "3y",
+              "7y²"
+            ],
+            "answer": "7y",
+            "explanation": "8y − 3y + 2y = (8−3+2)y = 7y"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Simplify: 3a + 4b + 2a + b",
+            "options": [
+              "10ab",
+              "5a + 5b",
+              "5a + 4b",
+              "6a + 4b"
+            ],
+            "answer": "5a + 5b",
+            "explanation": "3a + 2a = 5a and 4b + b = 5b, so answer is 5a + 5b"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Can 5x + 3y be simplified further?",
+            "options": [
+              "Yes, it equals 8xy",
+              "Yes, it equals 8x",
+              "No, they are not like terms",
+              "Yes, it equals 8y"
+            ],
+            "answer": "No, they are not like terms",
+            "explanation": "5x and 3y have different variables, so they cannot be combined."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Simplify: 10m − 4m + 2",
+            "options": [
+              "8m",
+              "6m + 2",
+              "8m + 2",
+              "6m"
+            ],
+            "answer": "6m + 2",
+            "explanation": "10m − 4m = 6m. The constant +2 stays. Answer: 6m + 2"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Simplify: 4p + 2q − p + 3q",
+            "options": [
+              "3p + 5q",
+              "8pq",
+              "5p + 5q",
+              "3p + q"
+            ],
+            "answer": "3p + 5q",
+            "explanation": "4p − p = 3p and 2q + 3q = 5q. Answer: 3p + 5q"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which of these cannot be simplified?",
+            "options": [
+              "3x + 5x",
+              "4y − y",
+              "7a + 3b",
+              "9n − 4n"
+            ],
+            "answer": "7a + 3b",
+            "explanation": "7a and 3b have different variables, so they are not like terms and cannot be combined."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Simplify: 5x + 3 + 2x − 1",
+            "options": [
+              "10x",
+              "7x + 2",
+              "7x − 2",
+              "10x + 2"
+            ],
+            "answer": "7x + 2",
+            "explanation": "5x + 2x = 7x and 3 − 1 = 2. Answer: 7x + 2"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Simplify: 6a − 2a + 4b − b",
+            "options": [
+              "4a + 3b",
+              "7ab",
+              "8a + 3b",
+              "4a − 3b"
+            ],
+            "answer": "4a + 3b",
+            "explanation": "6a − 2a = 4a and 4b − b = 3b. Answer: 4a + 3b"
+          },
+          {
+            "id": "algebra_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "algebra_l4",
+      "title": "Algebra Basics — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Algebra Basics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Algebra Basics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Algebra Basics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Algebra Basics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Algebra Basics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Algebra Basics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Algebra Basics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "algebra_l4_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l4_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l4_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l4_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l4_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l4_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l4_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l4_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "algebra_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "algebra_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "algebra_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "algebra_l4_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "algebra_l4_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "algebra_l4_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "algebra_l4_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "algebra_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "algebra_l4_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "algebra_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "algebra_l5",
+      "title": "Algebra Basics — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Algebra Basics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Algebra Basics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Algebra Basics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Algebra Basics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Algebra Basics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Algebra Basics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Algebra Basics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "algebra_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "algebra_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "algebra_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "algebra_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "algebra_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "algebra_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "algebra_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "algebra_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "algebra_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "algebra_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "algebra_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "algebra_l6",
+      "title": "Algebra Basics — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Algebra Basics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Algebra Basics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Algebra Basics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Algebra Basics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Algebra Basics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Algebra Basics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Algebra Basics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "algebra_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "algebra_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "algebra_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "algebra_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "algebra_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "algebra_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "algebra_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "algebra_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "algebra_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "algebra_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "algebra_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "algebra_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "algebra_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "algebra_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "algebra_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "algebra_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "algebra_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "algebra_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "algebra_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "algebra_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

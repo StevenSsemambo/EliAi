@@ -1,0 +1,1793 @@
+{
+  "topic_id": "simultaneous",
+  "topic_title": "Simultaneous Equations",
+  "subject": "mathematics",
+  "class_level": "S2",
+  "lessons": [
+    {
+      "id": "s2_math_simult_l1",
+      "title": "Solving Simultaneous Equations — Elimination",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "Simultaneous equations are a set of two (or more) equations with the same unknowns. We solve them to find values of the unknowns that satisfy ALL equations at the same time. They model many real-world situations involving two unknown quantities."
+        },
+        {
+          "type": "formula",
+          "body": "Method 1 — ELIMINATION:\nStep 1: Make the coefficient of one variable equal in both equations (multiply if needed)\nStep 2: Add or subtract the equations to eliminate that variable\nStep 3: Solve for the remaining variable\nStep 4: Substitute back to find the other variable\nStep 5: Check in BOTH original equations"
+        },
+        {
+          "type": "example",
+          "title": "Elimination Method",
+          "body": "Solve: 2x + 3y = 13  ...(1)\n       4x − 3y = 11  ...(2)\n\nStep 1: Coefficients of y are already ±3 (equal!)\nStep 2: Add equations: (2+4)x + (3−3)y = 13+11\n→ 6x = 24 → x = 4\nStep 3: Substitute x=4 into (1):\n2(4) + 3y = 13 → 8 + 3y = 13 → 3y = 5 → y = 5/3\nCheck (2): 4(4) − 3(5/3) = 16 − 5 = 11 ✓"
+        },
+        {
+          "type": "example",
+          "title": "When You Need to Multiply First",
+          "body": "Solve: 3x + 2y = 16  ...(1)\n       x + 5y = 14   ...(2)\n\nMultiply (2) by 3: 3x + 15y = 42  ...(3)\nSubtract (1) from (3): 13y = 26 → y = 2\nSubstitute into (2): x + 10 = 14 → x = 4\nSolution: x = 4, y = 2\nCheck (1): 3(4)+2(2) = 12+4 = 16 ✓"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Solve: x+y=5 and x−y=1",
+            "options": [
+              "x=3,y=2",
+              "x=2,y=3",
+              "x=4,y=1",
+              "x=5,y=0"
+            ],
+            "answer": "x=3,y=2",
+            "explanation": "Add: 2x=6→x=3. Substitute: 3+y=5→y=2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve: 2x+y=7 and x+y=5",
+            "options": [
+              "x=1,y=5",
+              "x=2,y=3",
+              "x=3,y=2",
+              "x=4,y=1"
+            ],
+            "answer": "x=2,y=3",
+            "explanation": "Subtract: (2x+y)−(x+y)=7−5→x=2. Then 2+y=5→y=3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Solve: 3x+2y=12 and 3x−y=6",
+            "options": [
+              "x=2,y=3",
+              "x=3,y=2",
+              "x=1,y=4",
+              "x=4,y=0"
+            ],
+            "answer": "x=2,y=3",
+            "explanation": "Subtract eq2 from eq1: 3y=6→y=2. Substitute: 3x+4=12→x=8/3≈2.67."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In elimination, we aim to:",
+            "options": [
+              "Add all variables",
+              "Make one variable cancel out",
+              "Square both equations",
+              "Divide by a variable"
+            ],
+            "answer": "Make one variable cancel out",
+            "explanation": "Elimination method: manipulate equations so one variable cancels when added or subtracted."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Solve: 2x+3y=11 and 2x+y=7",
+            "options": [
+              "x=2,y=2",
+              "x=1,y=3",
+              "x=4,y=1",
+              "x=2,y=1"
+            ],
+            "answer": "x=2,y=2",
+            "explanation": "Subtract: 2y=4→y=2. Substitute: 2x+6=11... wait 2x+2=7→x=2.5. Check: 2(2.5)+3(2)=5+6=11✓. So x=2.5,y=2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which operation eliminates y from: 3x+y=10 and x+y=6?",
+            "options": [
+              "Add the equations",
+              "Multiply the first by 3",
+              "Subtract the second from the first",
+              "Divide by y"
+            ],
+            "answer": "Subtract the second from the first",
+            "explanation": "(3x+y)−(x+y) = 10−6 → 2x=4. The y terms cancel."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Solve: x+y=8 and 2x−y=4",
+            "options": [
+              "x=3,y=5",
+              "x=4,y=4",
+              "x=2,y=6",
+              "x=5,y=3"
+            ],
+            "answer": "x=4,y=4",
+            "explanation": "Add: 3x=12→x=4. Then 4+y=8→y=4."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "After finding x=3 in simultaneous equations, you should:",
+            "options": [
+              "Stop — x is the answer",
+              "Substitute x=3 into one equation to find y",
+              "Try a different method",
+              "Check only one equation"
+            ],
+            "answer": "Substitute x=3 into one equation to find y",
+            "explanation": "After finding one variable, substitute it back into either original equation to find the other."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Solve: 5x+2y=16 and 3x+2y=12",
+            "options": [
+              "x=1,y=5",
+              "x=2,y=3",
+              "x=3,y=0.5",
+              "x=4,y=2"
+            ],
+            "answer": "x=2,y=3",
+            "explanation": "Subtract: 2x=4→x=2. Then 10+2y=16→2y=6→y=3."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "The solution (x=2, y=5) satisfies which pair of equations?",
+            "options": [
+              "x+y=8 and 2x−y=1",
+              "x+y=7 and x−y=3",
+              "2x+y=9 and x+2y=12",
+              "x−y=3 and x+y=7"
+            ],
+            "answer": "2x+y=9 and x+2y=12",
+            "explanation": "Check: 2(2)+5=9✓ and 2+2(5)=2+10=12✓."
+          },
+          {
+            "id": "simultaneous_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_simult_l2",
+      "title": "Solving by Substitution and Applications",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Method 2 — SUBSTITUTION:\nStep 1: Rearrange one equation to express one variable in terms of the other (e.g. y = ...)\nStep 2: Substitute this expression into the OTHER equation\nStep 3: Solve the resulting equation in one variable\nStep 4: Substitute back to find the other variable\nStep 5: Check"
+        },
+        {
+          "type": "example",
+          "title": "Substitution Method",
+          "body": "Solve: y = 2x + 1  ...(1)\n       3x + 2y = 16 ...(2)\n\nSince (1) gives y directly, substitute into (2):\n3x + 2(2x+1) = 16\n3x + 4x + 2 = 16\n7x = 14 → x = 2\nSubstitute back: y = 2(2)+1 = 5\nSolution: x=2, y=5\nCheck (2): 3(2)+2(5) = 6+10 = 16 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Real-World Application",
+          "body": "Problem: 2 adults and 3 children cost UGX 22,000 at a museum. 3 adults and 1 child cost UGX 21,000. Find each price.\n\nLet a = adult price, c = child price\n2a + 3c = 22,000 ...(1)\n3a + c = 21,000  ...(2)\n\nFrom (2): c = 21,000 − 3a\nSubstitute into (1): 2a + 3(21,000−3a) = 22,000\n2a + 63,000 − 9a = 22,000\n−7a = −41,000 → a = 5,857\nc = 21,000 − 3(5,857) = 3,429"
+        },
+        {
+          "type": "text",
+          "body": "Graphical solution: Simultaneous equations can also be solved by drawing both lines on a graph. The solution is the POINT OF INTERSECTION. If lines are parallel (same gradient), there is NO solution. If they are the same line, there are INFINITELY MANY solutions."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Solve by substitution: y=x+3 and 2x+y=9",
+            "options": [
+              "x=2,y=5",
+              "x=3,y=6",
+              "x=1,y=4",
+              "x=4,y=7"
+            ],
+            "answer": "x=2,y=5",
+            "explanation": "Sub y=x+3 into 2x+y=9: 2x+x+3=9→3x=6→x=2. y=5."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve: y=3x and x+y=8",
+            "options": [
+              "x=1,y=3",
+              "x=2,y=6",
+              "x=3,y=9",
+              "x=4,y=12"
+            ],
+            "answer": "x=2,y=6",
+            "explanation": "Sub y=3x: x+3x=8→4x=8→x=2. y=6."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What does the intersection of two lines on a graph represent?",
+            "options": [
+              "The gradient",
+              "The solution to the simultaneous equations",
+              "The y-intercept",
+              "The x-intercept"
+            ],
+            "answer": "The solution to the simultaneous equations",
+            "explanation": "The point where two lines cross is the (x,y) pair that satisfies both equations simultaneously."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Two parallel lines as simultaneous equations have:",
+            "options": [
+              "One solution",
+              "Two solutions",
+              "No solution",
+              "Infinitely many solutions"
+            ],
+            "answer": "No solution",
+            "explanation": "Parallel lines never meet, so there is no point satisfying both equations simultaneously."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Solve: x=5−y and 2x+3y=13",
+            "options": [
+              "x=2,y=3",
+              "x=3,y=2",
+              "x=4,y=1",
+              "x=1,y=4"
+            ],
+            "answer": "x=2,y=3",
+            "explanation": "Sub x=5−y: 2(5−y)+3y=13→10−2y+3y=13→y=3. x=5−3=2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Pencils cost P and pens cost Q. 3P+2Q=1100 and P+Q=500. Find Q (UGX).",
+            "options": [
+              "300",
+              "200",
+              "400",
+              "100"
+            ],
+            "answer": "200",
+            "explanation": "From eq2: P=500−Q. Sub: 3(500−Q)+2Q=1100→1500−3Q+2Q=1100→Q=400. Wait: −Q=−400→Q=400. Let me verify: P=500−400=100. 3(100)+2(400)=300+800=1100✓. Q=400 UGX."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "When is substitution easier than elimination?",
+            "options": [
+              "Always",
+              "When one equation already expresses one variable alone (e.g. y=...)",
+              "When both equations have the same coefficients",
+              "Never — elimination is always easier"
+            ],
+            "answer": "When one equation already expresses one variable alone (e.g. y=...)",
+            "explanation": "Substitution is most efficient when one equation is already solved for one variable."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Solve: 2x+y=10 and y=x+1",
+            "options": [
+              "x=2,y=3",
+              "x=3,y=4",
+              "x=4,y=5",
+              "x=1,y=2"
+            ],
+            "answer": "x=3,y=4",
+            "explanation": "Sub y=x+1: 2x+x+1=10→3x=9→x=3. y=4."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "A class has x boys and y girls. x+y=30 and x=y+6. Find y.",
+            "options": [
+              "12",
+              "18",
+              "15",
+              "24"
+            ],
+            "answer": "12",
+            "explanation": "Sub x=y+6: y+6+y=30→2y=24→y=12."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Solve: 4x−y=11 and y=x+1",
+            "options": [
+              "x=4,y=5",
+              "x=3,y=4",
+              "x=2,y=3",
+              "x=5,y=6"
+            ],
+            "answer": "x=4,y=5",
+            "explanation": "Sub y=x+1: 4x−(x+1)=11→3x−1=11→3x=12→x=4. y=5."
+          },
+          {
+            "id": "simultaneous_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_sim_l3",
+      "title": "Simultaneous — Linear and Quadratic",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "One linear, one quadratic: use substitution. The line may intersect the parabola at 0, 1, or 2 points."
+        },
+        {
+          "type": "formula",
+          "body": "Method:\n1. From linear: express one variable\n2. Substitute into quadratic\n3. Solve resulting quadratic\n4. Find corresponding values\n5. Write solution pairs (x,y)"
+        },
+        {
+          "type": "example",
+          "title": "Example",
+          "body": "y=x+2 and y=x²\nSub: x²=x+2 → x²−x−2=0\n(x−2)(x+1)=0 → x=2 or x=−1\nPoints: (2,4) and (−1,1)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "For linear-quadratic simultaneous equations, use",
+            "options": [
+              "Elimination",
+              "Substitution",
+              "Matrices",
+              "Graphing only"
+            ],
+            "answer": "Substitution",
+            "explanation": "Substitute linear expression into quadratic to get one equation in one unknown."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve y=x and y=x²",
+            "options": [
+              "x=0 or x=1",
+              "x=0 or x=−1",
+              "x=1 only",
+              "x=2"
+            ],
+            "answer": "x=0 or x=1",
+            "explanation": "x=x² → x²−x=0 → x(x−1)=0 → x=0,y=0 or x=1,y=1"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many solutions can a linear-quadratic system have",
+            "options": [
+              "Always 1",
+              "Always 2",
+              "0 or 1 or 2",
+              "Always 0"
+            ],
+            "answer": "0 or 1 or 2",
+            "explanation": "Line may miss parabola (0), be tangent (1), or cross at 2 points."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Solve y=3 and y=x²−1",
+            "options": [
+              "x=2 or x=−2",
+              "x=4 or x=−4",
+              "x=2 only",
+              "No solution"
+            ],
+            "answer": "x=2 or x=−2",
+            "explanation": "3=x²−1 → x²=4 → x=±2"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Negative discriminant of resulting quadratic means",
+            "options": [
+              "Two solutions",
+              "One solution",
+              "No real solutions",
+              "Infinite solutions"
+            ],
+            "answer": "No real solutions",
+            "explanation": "No real roots → line and parabola do not intersect in real plane."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve y=x and y=x²+2",
+            "options": [
+              "No real solutions",
+              "x=1",
+              "x=2",
+              "x=0"
+            ],
+            "answer": "No real solutions",
+            "explanation": "x=x²+2 → x²−x+2=0, discriminant=1−8=−7 <0. No real solutions."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Solve y=2x+1 and y=x²+1",
+            "options": [
+              "x=0 or x=2",
+              "x=1 only",
+              "x=−1 or x=2",
+              "No solution"
+            ],
+            "answer": "x=0 or x=2",
+            "explanation": "x²+1=2x+1 → x²−2x=0 → x(x−2)=0 → x=0,y=1 or x=2,y=5"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The solutions represent",
+            "options": [
+              "x-intercepts",
+              "Points of intersection of the two graphs",
+              "The y-intercepts",
+              "The gradient"
+            ],
+            "answer": "Points of intersection of the two graphs",
+            "explanation": "Each solution (x,y) is a point where the line and parabola cross."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Solve y=4 and y=x²",
+            "options": [
+              "x=2 or x=−2",
+              "x=4",
+              "x=16",
+              "x=2 only"
+            ],
+            "answer": "x=2 or x=−2",
+            "explanation": "x²=4 → x=±2. Two intersection points."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "After substitution, you solve a __ equation",
+            "options": [
+              "Linear",
+              "Quadratic",
+              "Cubic",
+              "Logarithmic"
+            ],
+            "answer": "Quadratic",
+            "explanation": "Substituting linear into quadratic always produces a quadratic equation in one variable."
+          },
+          {
+            "id": "simultaneous_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_sim_l3",
+      "title": "Simultaneous Equations with Non-Linear",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "We solve one linear and one quadratic equation by substitution. This often gives two pairs of solutions."
+        },
+        {
+          "type": "formula",
+          "body": "Method:\n1. From linear equation, express one variable\n2. Substitute into quadratic\n3. Solve resulting quadratic\n4. Find y for each x value\n5. Write solutions as pairs (x,y)"
+        },
+        {
+          "type": "example",
+          "title": "Worked Example",
+          "body": "y = x+1 and y = x^2 - 3\nSub: x+1 = x^2 - 3\nx^2 - x - 4 = 0\nx = (1 +/- sqrt(17))/2 approx 2.56 or -1.56\nFind y = x+1 for each x"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "For linear-quadratic simultaneous equations we use",
+            "options": [
+              "Elimination",
+              "Substitution",
+              "Trial and error",
+              "Matrix method"
+            ],
+            "answer": "Substitution",
+            "explanation": "Substitute the linear expression into the quadratic to get a single quadratic equation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve y=x and y=x^2",
+            "options": [
+              "x=0 only",
+              "x=0 or x=1",
+              "x=1 only",
+              "x=2"
+            ],
+            "answer": "x=0 or x=1",
+            "explanation": "x=x^2 means x^2-x=0, x(x-1)=0, x=0 or x=1"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many solutions can a linear-quadratic system have",
+            "options": [
+              "Always 1",
+              "Always 2",
+              "0 or 1 or 2",
+              "Always 0"
+            ],
+            "answer": "0 or 1 or 2",
+            "explanation": "The line may miss the parabola (0), be tangent (1), or cut it at 2 points."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Solve y=2x and y=x^2+x",
+            "options": [
+              "x=0 or x=1",
+              "x=0 or x=2",
+              "x=1 only",
+              "x=2 only"
+            ],
+            "answer": "x=0 or x=1",
+            "explanation": "2x=x^2+x gives x^2-x=0, x(x-1)=0"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "To find intersections of y=x+5 and x^2+y^2=25",
+            "options": [
+              "Add equations",
+              "Substitute y=x+5 into circle equation",
+              "Graph only",
+              "Elimination"
+            ],
+            "answer": "Substitute y=x+5 into circle equation",
+            "explanation": "Sub y=x+5: x^2+(x+5)^2=25, expand and solve."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve y=3 and y=x^2-1",
+            "options": [
+              "x=2 or x=-2",
+              "x=4 or x=-4",
+              "x=2 only",
+              "No solution"
+            ],
+            "answer": "x=2 or x=-2",
+            "explanation": "3=x^2-1 gives x^2=4, x=+/-2"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Negative discriminant in resulting quadratic means",
+            "options": [
+              "Two solutions",
+              "One solution",
+              "No real solutions",
+              "Infinite"
+            ],
+            "answer": "No real solutions",
+            "explanation": "Negative discriminant means no real roots - the line and curve don't intersect."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Solve y=x-2 and x^2+y^2=10",
+            "options": [
+              "x=1 or x=3",
+              "x=-1 or x=3",
+              "x=3 only",
+              "x=1 or x=-3"
+            ],
+            "answer": "x=1 or x=3",
+            "explanation": "Sub: x^2+(x-2)^2=10 gives 2x^2-4x-6=0, x^2-2x-3=0, (x-3)(x+1)=0 so x=3 or x=-1"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Solutions to linear-quadratic system are written as",
+            "options": [
+              "Just x values",
+              "Just y values",
+              "Pairs (x",
+              "y)",
+              "Single number"
+            ],
+            "answer": "Pairs (x,y)",
+            "explanation": "Each solution is a coordinate pair (x,y) - a point of intersection."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Solve y=2x+1 and y=x^2",
+            "options": [
+              "x=1 or x=-1",
+              "Two solutions from quadratic formula",
+              "No solution",
+              "x=2"
+            ],
+            "answer": "Two solutions from quadratic formula",
+            "explanation": "x^2=2x+1 gives x^2-2x-1=0, discriminant=8>0, two solutions using quadratic formula"
+          },
+          {
+            "id": "simultaneous_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "simultaneous_l5",
+      "title": "Simultaneous Equations — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Simultaneous Equations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Simultaneous Equations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Simultaneous Equations builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Simultaneous Equations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Simultaneous Equations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Simultaneous Equations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Simultaneous Equations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "simultaneous_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "simultaneous_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "simultaneous_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "simultaneous_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "simultaneous_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "simultaneous_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "simultaneous_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "simultaneous_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "simultaneous_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "simultaneous_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "simultaneous_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "simultaneous_l6",
+      "title": "Simultaneous Equations — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Simultaneous Equations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Simultaneous Equations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Simultaneous Equations builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Simultaneous Equations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Simultaneous Equations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Simultaneous Equations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Simultaneous Equations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "simultaneous_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "simultaneous_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "simultaneous_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "simultaneous_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "simultaneous_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "simultaneous_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "simultaneous_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "simultaneous_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "simultaneous_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "simultaneous_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "simultaneous_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "simultaneous_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "simultaneous_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "simultaneous_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "simultaneous_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "simultaneous_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "simultaneous_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "simultaneous_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "simultaneous_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "simultaneous_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

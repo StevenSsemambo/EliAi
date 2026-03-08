@@ -1,0 +1,1799 @@
+{
+  "topic_id": "electromagnetic",
+  "topic_title": "Electromagnetic Induction",
+  "subject": "physics",
+  "class_level": "S3",
+  "lessons": [
+    {
+      "id": "electromagnetic_l1",
+      "title": "Electromagnetic Induction and Generators",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Electromagnetic induction is one of the most important discoveries in physics. Michael Faraday (1831) discovered that moving a magnet near a wire coil generates electricity. This principle underlies all electrical generators — turbines that power our cities."
+        },
+        {
+          "type": "formula",
+          "body": "Faraday's Law:\nAn EMF (electromotive force) is induced in a conductor when:\n• The conductor moves through a magnetic field\n• The magnetic field through the conductor changes\n\nThe size of the induced EMF increases when:\n• Speed of movement increases\n• Field strength increases\n• More turns on the coil\n• Using a stronger magnet"
+        },
+        {
+          "type": "formula",
+          "body": "Lenz's Law:\nThe induced current creates a magnetic field that OPPOSES the change that caused it.\n\nSimple rule: the induced current always tries to prevent the change in flux.\nThis is consistent with conservation of energy — you must do work against this opposition."
+        },
+        {
+          "type": "example",
+          "title": "AC Generator (Dynamo)",
+          "body": "A coil rotates in a magnetic field:\n• As coil rotates, flux through it changes → EMF is induced\n• Direction of induced current reverses every half turn → AC (alternating current)\n• Frequency of AC = speed of rotation (Uganda/UK mains: 50 Hz)\n• Slip rings and brushes connect rotating coil to external circuit\n\nOutput: sinusoidal wave (alternating between positive and negative)"
+        },
+        {
+          "type": "example",
+          "title": "Transformers",
+          "body": "A transformer changes voltage using electromagnetic induction:\n\nTransformer equation:\nVs/Vp = Ns/Np\n\nVp = primary voltage, Vs = secondary voltage\nNp = primary turns, Ns = secondary turns\n\nStep-UP transformer: Ns > Np → increases voltage\nStep-DOWN transformer: Ns < Np → decreases voltage\n\nIdeal transformer: Vp×Ip = Vs×Is (power is conserved)\n\nApplication: National Grid uses step-up transformers (to reduce energy loss in transmission at high voltage, low current), then step-down to household voltage."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Electromagnetic induction is used in:",
+            "options": [
+              "Solar panels",
+              "Generators",
+              "Batteries",
+              "Resistors"
+            ],
+            "answer": "Generators",
+            "explanation": "Generators convert kinetic energy to electrical energy using electromagnetic induction."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The induced EMF increases if you:",
+            "options": [
+              "Move the magnet slower",
+              "Use a weaker magnet",
+              "Increase the number of coil turns",
+              "Decrease the field strength"
+            ],
+            "answer": "Increase the number of coil turns",
+            "explanation": "More turns in the coil means more conductors cutting field lines → greater induced EMF."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Lenz's Law states that the induced current:",
+            "options": [
+              "Adds to the change causing it",
+              "Has no relationship to the causing change",
+              "Opposes the change that caused it",
+              "Always flows clockwise"
+            ],
+            "answer": "Opposes the change that caused it",
+            "explanation": "Lenz's Law: the induced EMF creates a current that opposes the change in magnetic flux that caused it."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An AC generator uses slip rings (not a split-ring commutator) to produce:",
+            "options": [
+              "Direct current",
+              "Alternating current",
+              "Constant voltage",
+              "Pulsed DC"
+            ],
+            "answer": "Alternating current",
+            "explanation": "Slip rings allow continuous rotation and the output alternates direction — producing AC."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Transformer: Vp=240V, Np=1000, Ns=100. Find Vs.",
+            "options": [
+              "2400V",
+              "24V",
+              "100V",
+              "0.24V"
+            ],
+            "answer": "24V",
+            "explanation": "Vs/Vp = Ns/Np → Vs = 240 × (100/1000) = 24V. Step-DOWN transformer."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A step-up transformer:",
+            "options": [
+              "Increases current, decreases voltage",
+              "Decreases voltage",
+              "Increases voltage and decreases current",
+              "Is used in homes only"
+            ],
+            "answer": "Increases voltage and decreases current",
+            "explanation": "Step-up: Ns>Np → voltage increases. Since power is conserved (IV=const), current decreases."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why does the National Grid transmit electricity at high voltage?",
+            "options": [
+              "To make it more dangerous",
+              "To reduce power losses in cables (P=I²R, less current = less loss)",
+              "To increase current",
+              "High voltage is safer"
+            ],
+            "answer": "To reduce power losses in cables (P=I²R, less current = less loss)",
+            "explanation": "P_lost = I²R. High voltage means low current (for same power), dramatically reducing energy lost as heat in transmission cables."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Uganda's mains frequency is 50 Hz. This means current reverses direction:",
+            "options": [
+              "50 times per second",
+              "100 times per second",
+              "25 times per second",
+              "Once per second"
+            ],
+            "answer": "100 times per second",
+            "explanation": "At 50 Hz, current completes 50 full cycles per second — reversing direction 100 times per second (twice per cycle)."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Transformer: Vp=12V, Ip=5A. Vs=120V (ideal). Find Is.",
+            "options": [
+              "50A",
+              "0.5A",
+              "5A",
+              "12A"
+            ],
+            "answer": "0.5A",
+            "explanation": "Ideal: VpIp = VsIs → 12×5 = 120×Is → Is = 60/120 = 0.5A."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Faraday's discovery (1831) showed that:",
+            "options": [
+              "Magnets attract iron",
+              "Current-carrying wires create magnetic fields",
+              "Changing magnetic field induces EMF in a conductor",
+              "Like charges repel"
+            ],
+            "answer": "Changing magnetic field induces EMF in a conductor",
+            "explanation": "Faraday discovered electromagnetic induction — a changing magnetic flux through a conductor induces an EMF."
+          },
+          {
+            "id": "electromagnetic_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electromagnetic_l2",
+      "title": "Electromagnetic Induction in Depth",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Building on S2, we now explore the mathematical treatment of electromagnetic induction including Faraday's and Lenz's laws and AC generation."
+        },
+        {
+          "type": "formula",
+          "body": "Magnetic flux:\nΦ = BA cosθ\nB = magnetic field strength (T), A = area (m²), θ = angle between field and normal to area\n\nFaraday's Law:\nEMF = −N dΦ/dt\n\nFor a rotating coil (AC generator):\nEMF = NBAω sin(ωt)\nPeak EMF = NBAω\nω = angular velocity (rad/s)"
+        },
+        {
+          "type": "example",
+          "title": "AC Generator",
+          "body": "A rectangular coil rotates in a uniform magnetic field.\nAt θ=0° (coil perpendicular to field): max EMF\nAt θ=90° (coil parallel to field): zero EMF\nOutput is sinusoidal: E = E₀ sin(ωt)\n\nTo get DC: add commutator to AC generator\nSlip rings → AC output; Commutator → DC output"
+        },
+        {
+          "type": "formula",
+          "body": "RMS values for AC:\nV_rms = V₀/√2 = 0.707 V₀\nI_rms = I₀/√2 = 0.707 I₀\nPower = V_rms × I_rms\n\nMains electricity: 240V (rms), 50 Hz"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Magnetic flux Φ = BA cosθ is maximum when θ = ",
+            "options": [
+              "90°",
+              "45°",
+              "0°",
+              "180°"
+            ],
+            "answer": "0°",
+            "explanation": "Maximum flux when field is perpendicular to coil plane (θ=0, cos0=1). Coil fully 'cuts' field lines."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Faraday's law: EMF = −N dΦ/dt means...",
+            "options": [
+              "EMF depends on static flux",
+              "Larger N and faster flux change → greater EMF",
+              "Minus sign means no EMF",
+              "EMF is always negative"
+            ],
+            "answer": "Larger N and faster flux change → greater EMF",
+            "explanation": "Greater N (turns) and faster rate of flux change both increase induced EMF."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In an AC generator, maximum EMF occurs when...",
+            "options": [
+              "Coil is parallel to field (flux changes fastest)",
+              "Coil is perpendicular to field",
+              "Coil is stationary",
+              "Field is switched off"
+            ],
+            "answer": "Coil is parallel to field (flux changes fastest)",
+            "explanation": "When coil plane is parallel to field, field lines cut through at maximum rate → peak EMF."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Peak EMF for rotating coil = ",
+            "options": [
+              "NBAω",
+              "NBA",
+              "NAω",
+              "NBAω²"
+            ],
+            "answer": "NBAω",
+            "explanation": "Peak EMF = NBAω where N=turns, B=field, A=area, ω=angular velocity."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "V_rms relates to peak voltage by...",
+            "options": [
+              "V_rms = V₀",
+              "V_rms = 2V₀",
+              "V_rms = V₀/√2",
+              "V_rms = √2×V₀"
+            ],
+            "answer": "V_rms = V₀/√2",
+            "explanation": "RMS (root mean square) voltage = peak voltage / √2 ≈ 0.707 × V₀"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "UK mains electricity is...",
+            "options": [
+              "120V",
+              " 60 Hz",
+              "240V",
+              " 50 Hz",
+              "110V",
+              " 50 Hz",
+              "240V",
+              " 60 Hz"
+            ],
+            "answer": "240V, 50 Hz",
+            "explanation": "UK mains supply is nominally 230-240V rms at 50 Hz frequency."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The difference between AC and DC generators is...",
+            "options": [
+              "AC uses magnets",
+              "DC uses commutator instead of slip rings",
+              "DC runs at higher voltage",
+              "AC has more turns"
+            ],
+            "answer": "DC uses commutator instead of slip rings",
+            "explanation": "Slip rings maintain contact with rotating coil → AC output. Commutator reverses connections each half-turn → DC output."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Lenz's law is a consequence of...",
+            "options": [
+              "Ohm's law",
+              "Conservation of energy",
+              "Newton's third law",
+              "Faraday's law alone"
+            ],
+            "answer": "Conservation of energy",
+            "explanation": "Lenz's law (opposition to flux change) is required by energy conservation — induced current cannot add energy spontaneously."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Eddy currents in transformer cores are reduced by...",
+            "options": [
+              "Making core from solid metal",
+              "Laminating the core with insulated layers",
+              "Adding more turns",
+              "Using DC only"
+            ],
+            "answer": "Laminating the core with insulated layers",
+            "explanation": "Thin insulated laminations break up paths for eddy currents, reducing energy loss as heat."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A coil has 100 turns, B=0.5T, A=0.02m², ω=100 rad/s. Peak EMF = ",
+            "options": [
+              "1V",
+              "100V",
+              "1000V",
+              "50V"
+            ],
+            "answer": "100V",
+            "explanation": "Peak EMF = NBAω = 100×0.5×0.02×100 = 100V"
+          },
+          {
+            "id": "electromagnetic_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electromagnetic_l3",
+      "title": "AC Generators and Transformers",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "AC Generator:\nEMF = NBAω sin(ωt)\nE_max = NBAω\nω = 2πf\n\nTransformer:\nVs/Vp = Ns/Np\nVp×Ip = Vs×Is (ideal)\nStep-up: Ns > Np → Vs > Vp\nStep-down: Ns < Np → Vs < Vp"
+        },
+        {
+          "type": "example",
+          "title": "Transformer Calculation",
+          "body": "Primary: 240V, 1000 turns. Secondary: 50 turns.\nVs = 240 × (50/1000) = 12V (step-down)\nIf Ip = 0.1A: Is = 240×0.1/12 = 2A"
+        },
+        {
+          "type": "text",
+          "body": "Transformers work only with AC because they need a changing magnetic field to induce EMF. National grid uses high voltage (low current) for efficient transmission, then step-down transformers at homes."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "AC generator produces EMF using",
+            "options": [
+              "Chemical reaction",
+              "Rotating coil in magnetic field",
+              "Solar cells",
+              "Thermoelectric effect"
+            ],
+            "answer": "Rotating coil in magnetic field",
+            "explanation": "Generator converts kinetic energy to electrical energy via electromagnetic induction."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "EMF of generator is maximum when coil is",
+            "options": [
+              "Parallel to field",
+              "Perpendicular to field",
+              "Stationary",
+              "Horizontal"
+            ],
+            "answer": "Parallel to field",
+            "explanation": "EMF = NBAω sin(ωt): maximum when sin=1, i.e., coil parallel to field, cutting field lines most rapidly."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Transformer works with",
+            "options": [
+              "DC only",
+              "AC only",
+              "Both AC and DC",
+              "Neither"
+            ],
+            "answer": "AC only",
+            "explanation": "Changing current needed to create changing flux needed for induction. DC gives constant flux."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Step-up transformer has",
+            "options": [
+              "More secondary turns",
+              "Fewer secondary turns",
+              "Equal turns",
+              "No core"
+            ],
+            "answer": "More secondary turns",
+            "explanation": "Step-up: Ns > Np → Vs > Vp (voltage increases)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Primary 100V, 500 turns. Secondary 2000 turns. Vs =",
+            "options": [
+              "400V",
+              "25V",
+              "200V",
+              "2000V"
+            ],
+            "answer": "400V",
+            "explanation": "Vs = 100 × (2000/500) = 400V"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In ideal transformer, if voltage doubles, current",
+            "options": [
+              "Doubles",
+              "Halves",
+              "Stays same",
+              "Quadruples"
+            ],
+            "answer": "Halves",
+            "explanation": "Power conserved: P=IV. If V doubles, I must halve."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "National grid uses high voltage to",
+            "options": [
+              "Increase power",
+              "Reduce power loss in cables",
+              "Step up current",
+              "Increase resistance"
+            ],
+            "answer": "Reduce power loss in cables",
+            "explanation": "P_loss = I²R. High V → low I → much less power lost in cables."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Slip rings in AC generator allow",
+            "options": [
+              "Coil to spin freely while maintaining electrical contact",
+              "Magnetic field to form",
+              "Speed control",
+              "Step-up of voltage"
+            ],
+            "answer": "Coil to spin freely while maintaining electrical contact",
+            "explanation": "Slip rings allow the rotating coil to connect to external circuit without twisting wires."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Frequency of AC generator depends on",
+            "options": [
+              "Number of turns",
+              "Magnetic field strength",
+              "Speed of rotation",
+              "Wire resistance"
+            ],
+            "answer": "Speed of rotation",
+            "explanation": "f = rotations per second. Faster rotation = higher frequency AC."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Transformer core is laminated to",
+            "options": [
+              "Increase efficiency",
+              "Reduce eddy current losses",
+              "Increase magnetic field",
+              "Reduce weight"
+            ],
+            "answer": "Reduce eddy current losses",
+            "explanation": "Laminated (layered) core reduces eddy currents (wasteful induced currents in core)."
+          },
+          {
+            "id": "electromagnetic_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electromagnetic_l4",
+      "title": "Motors and Practical Electromagnetism",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "DC Motor:\n- Current-carrying conductor in B field experiences force\n- F = BIL (force on conductor)\n- Commutator reverses current every half-turn to maintain rotation\n\nElectromagnet strength:\n- More turns of coil\n- Larger current\n- Soft iron core"
+        },
+        {
+          "type": "example",
+          "title": "Force on Wire",
+          "body": "Wire of length 0.5m carrying 4A in field of 0.3T.\nF = BIL = 0.3 × 4 × 0.5 = 0.6N\nDirection: Fleming's Left Hand Rule"
+        },
+        {
+          "type": "text",
+          "body": "Fleming's Left Hand Rule: Point left hand so First finger = Field, seCond finger = Current, thuMb = Motion (force). Used for motors."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Force on current-carrying conductor in magnetic field: F =",
+            "options": [
+              "BIL",
+              "B+I+L",
+              "B/IL",
+              "IL/B"
+            ],
+            "answer": "BIL",
+            "explanation": "F = BIL: magnetic field strength × current × length of conductor."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Fleming's Left Hand Rule is for",
+            "options": [
+              "Generators",
+              "Motors",
+              "Transformers",
+              "Batteries"
+            ],
+            "answer": "Motors",
+            "explanation": "Left hand rule gives force direction on conductor (motors). Right hand rule for generators."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "DC motor uses commutator to",
+            "options": [
+              "Increase speed",
+              "Reverse current direction every half rotation",
+              "Store energy",
+              "Reduce friction"
+            ],
+            "answer": "Reverse current direction every half rotation",
+            "explanation": "Commutator ensures coil always rotates same way by reversing current direction."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "To increase force on motor coil",
+            "options": [
+              "Decrease current",
+              "Increase resistance",
+              "Use stronger magnet",
+              "Reduce turns"
+            ],
+            "answer": "Use stronger magnet",
+            "explanation": "F = NBIL - increasing B (stronger magnet) increases force."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Electromagnet is stronger with",
+            "options": [
+              "Fewer turns",
+              "Less current",
+              "Soft iron core",
+              "Air core"
+            ],
+            "answer": "Soft iron core",
+            "explanation": "Soft iron core concentrates and amplifies magnetic field. Soft iron is easily magnetised and demagnetised."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Soft iron vs steel for electromagnet core",
+            "options": [
+              "Steel is better",
+              "Soft iron is better",
+              "Same",
+              "Neither works"
+            ],
+            "answer": "Soft iron is better",
+            "explanation": "Soft iron magnetises/demagnetises easily (temporary magnet) - needed to turn electromagnet on/off."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Electric bell uses",
+            "options": [
+              "Permanent magnet",
+              "Electromagnet that repeatedly makes and breaks circuit",
+              "Solenoid only",
+              "Battery only"
+            ],
+            "answer": "Electromagnet that repeatedly makes and breaks circuit",
+            "explanation": "Bell: electromagnet attracts hammer (rings bell), breaking circuit, demagnetising, spring returns, cycle repeats."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A loudspeaker converts",
+            "options": [
+              "Sound to electricity",
+              "Electrical signal to sound",
+              "Light to sound",
+              "Heat to sound"
+            ],
+            "answer": "Electrical signal to sound",
+            "explanation": "Loudspeaker: varying current in coil (in permanent magnet field) causes cone to vibrate, producing sound."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Relay is an electromagnetic",
+            "options": [
+              "Motor",
+              "Switch operated by electromagnet",
+              "Generator",
+              "Transformer"
+            ],
+            "answer": "Switch operated by electromagnet",
+            "explanation": "Relay: small current energises electromagnet which attracts armature to close high-current contacts."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Magnetic field inside a solenoid is",
+            "options": [
+              "Zero",
+              "Non-uniform",
+              "Uniform and parallel to axis",
+              "Perpendicular to axis"
+            ],
+            "answer": "Uniform and parallel to axis",
+            "explanation": "Inside solenoid, field lines are parallel to axis and uniform (similar to bar magnet)."
+          },
+          {
+            "id": "electromagnetic_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electromagnetic_l5",
+      "title": "Electromagnetic Induction — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Electromagnetic Induction. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Electromagnetic Induction concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Electromagnetic Induction builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Electromagnetic Induction. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Electromagnetic Induction. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Electromagnetic Induction include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Electromagnetic Induction. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "electromagnetic_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "electromagnetic_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "electromagnetic_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "electromagnetic_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "electromagnetic_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "electromagnetic_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "electromagnetic_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "electromagnetic_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "electromagnetic_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "electromagnetic_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "electromagnetic_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electromagnetic_l6",
+      "title": "Electromagnetic Induction — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Electromagnetic Induction. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Electromagnetic Induction concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Electromagnetic Induction builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Electromagnetic Induction. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Electromagnetic Induction. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Electromagnetic Induction include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Electromagnetic Induction. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "electromagnetic_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electromagnetic_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electromagnetic_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electromagnetic_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electromagnetic_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electromagnetic_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electromagnetic_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electromagnetic_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electromagnetic_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electromagnetic_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "electromagnetic_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "electromagnetic_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "electromagnetic_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "electromagnetic_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "electromagnetic_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "electromagnetic_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "electromagnetic_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "electromagnetic_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "electromagnetic_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "electromagnetic_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

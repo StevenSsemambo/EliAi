@@ -1,0 +1,1787 @@
+{
+  "subject": "physics",
+  "level": "s3",
+  "lessons": [
+    {
+      "id": "s3_phy_mot_l1",
+      "title": "Motion, Speed, Velocity and Acceleration",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Scalar: magnitude only (speed, distance, mass, temperature)\nVector: magnitude + direction (velocity, displacement, force, acceleration)\n\nSpeed = distance/time\nVelocity = displacement/time (vector)\nAcceleration = change in velocity/time = (v-u)/t\n\nSUVAT equations (constant acceleration):\nv = u + at\ns = ut + ½at²\nv² = u² + 2as\ns = (u+v)t/2\ns=displacement, u=initial velocity, v=final velocity, a=acceleration, t=time"
+        },
+        {
+          "type": "example",
+          "title": "SUVAT Examples",
+          "body": "Ball thrown upward at 20 m/s, find max height:\nAt top: v=0, u=20, a=-10 m/s²\nv² = u² + 2as\n0 = 400 - 20s\ns = 20 m\n\nCar accelerates from rest at 3m/s² for 5s:\nv = 0 + 3×5 = 15 m/s\ns = 0 + ½×3×25 = 37.5 m"
+        },
+        {
+          "type": "example",
+          "title": "Motion Graphs",
+          "body": "Displacement-time: gradient = velocity\nFlat line = stationary\nSteep slope = fast\n\nVelocity-time: gradient = acceleration\nArea under graph = displacement\nFlat line = constant velocity\nStraight line slope = uniform acceleration"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Speed is a scalar and velocity is a vector. This means velocity includes",
+            "options": [
+              "magnitude only",
+              "direction as well as magnitude",
+              "mass",
+              "energy"
+            ],
+            "answer": "direction as well as magnitude",
+            "explanation": "Vectors have both magnitude and direction. Speed=how fast; Velocity=how fast in which direction."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Acceleration = ",
+            "options": [
+              "v×t",
+              "v-u",
+              "( v-u)/t",
+              "s/t"
+            ],
+            "answer": "(v-u)/t",
+            "explanation": "Acceleration = rate of change of velocity = (final velocity - initial velocity) / time"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "SUVAT: v = u + at. Find v when u=5, a=2, t=4",
+            "options": [
+              "13",
+              "13",
+              "8",
+              "40"
+            ],
+            "answer": "13",
+            "explanation": "v = 5 + 2×4 = 13 m/s"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Distance covered: u=0, a=4 m/s², t=5s",
+            "options": [
+              "50m",
+              "100m",
+              "20m",
+              "10m"
+            ],
+            "answer": "50m",
+            "explanation": "s = ut + ½at² = 0 + ½×4×25 = 50m"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "On a velocity-time graph, the area underneath represents",
+            "options": [
+              "speed",
+              "acceleration",
+              "displacement",
+              "force"
+            ],
+            "answer": "displacement",
+            "explanation": "Area under v-t graph = distance/displacement. Area = average velocity × time."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Gradient of displacement-time graph gives",
+            "options": [
+              "acceleration",
+              "velocity",
+              "distance",
+              "force"
+            ],
+            "answer": "velocity",
+            "explanation": "The slope (gradient) of a displacement-time graph = rate of change of displacement = velocity."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A horizontal line on a velocity-time graph means",
+            "options": [
+              "accelerating",
+              "decelerating",
+              "constant velocity",
+              "stationary"
+            ],
+            "answer": "constant velocity",
+            "explanation": "Horizontal v-t line: velocity not changing → zero acceleration → constant velocity."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Car at 30m/s brakes to rest over 150m. Deceleration =",
+            "options": [
+              "3 m/s²",
+              "6 m/s²",
+              "2 m/s²",
+              "4.5 m/s²"
+            ],
+            "answer": "3 m/s²",
+            "explanation": "v²=u²+2as: 0=900+2a×150, 2a×150=-900, a=-3 m/s²"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "An object with zero acceleration",
+            "options": [
+              "must be stationary",
+              "moves at constant velocity (including zero)",
+              "accelerates downward",
+              "is weightless"
+            ],
+            "answer": "moves at constant velocity (including zero)",
+            "explanation": "Zero acceleration means velocity isn't changing — could be stationary (v=0) or moving at constant speed in straight line."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Projectile motion: horizontal velocity",
+            "options": [
+              "increases due to gravity",
+              "decreases",
+              "remains constant (no horizontal force)",
+              "equals vertical velocity"
+            ],
+            "answer": "remains constant (no horizontal force)",
+            "explanation": "In ideal projectile motion, gravity only acts vertically. Horizontal velocity is unchanged (no air resistance)."
+          },
+          {
+            "id": "motion_kinematics_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_phy_mot_l2",
+      "title": "Newton's Laws of Motion",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Newton's three laws of motion describe how forces cause changes in motion. They are fundamental to classical mechanics."
+        },
+        {
+          "type": "formula",
+          "body": "Newton's 1st Law (Inertia):\nAn object remains at rest or in uniform motion unless acted upon by a resultant external force.\n\nNewton's 2nd Law:\nF = ma\nResultant force = mass × acceleration\n\nNewton's 3rd Law (Action-Reaction):\nFor every action there is an equal and opposite reaction\nForce on A by B = -Force on B by A"
+        },
+        {
+          "type": "example",
+          "title": "Applications",
+          "body": "Rocket: gases expelled backward (action) → rocket pushed forward (reaction)\nWalking: foot pushes back on ground (action) → ground pushes foot forward (reaction)\nFree fall: weight W=mg acts down, air resistance R acts up\nTerminal velocity when W = R"
+        },
+        {
+          "type": "example",
+          "title": "Momentum and Impulse",
+          "body": "Momentum p = mv (kg·m/s)\nImpulse = Ft = Δp = m(v-u)\nConservation of momentum:\nIn closed system, total momentum before = total momentum after\nmₐuₐ + m_bu_b = mₐvₐ + m_bv_b"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Newton's 1st Law (inertia) states",
+            "options": [
+              "F=ma",
+              "objects remain at rest or constant velocity unless resultant force acts",
+              "action=reaction",
+              "momentum is conserved"
+            ],
+            "answer": "objects remain at rest or constant velocity unless resultant force acts",
+            "explanation": "Law of Inertia: objects resist changes to their motion. A net force is needed to change velocity."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 5kg object given 20N resultant force accelerates at",
+            "options": [
+              "4 m/s²",
+              "100 m/s²",
+              "0.25 m/s²",
+              "15 m/s²"
+            ],
+            "answer": "4 m/s²",
+            "explanation": "F=ma: a=F/m=20/5=4 m/s²"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Newton's 3rd Law: if horse pulls cart forward, cart pulls horse",
+            "options": [
+              "forward equally",
+              "backward with equal force",
+              "not at all",
+              "more strongly"
+            ],
+            "answer": "backward with equal force",
+            "explanation": "3rd Law: equal and opposite forces. Cart pulls horse backward with same force horse pulls cart forward."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Momentum of 2kg object at 10 m/s",
+            "options": [
+              "20 kg·m/s",
+              "5 kg·m/s",
+              "12 kg·m/s",
+              "0.2 kg·m/s"
+            ],
+            "answer": "20 kg·m/s",
+            "explanation": "p = mv = 2 × 10 = 20 kg·m/s"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Impulse equals",
+            "options": [
+              "force only",
+              "force × time = change in momentum",
+              "mass × velocity",
+              "energy"
+            ],
+            "answer": "force × time = change in momentum",
+            "explanation": "Impulse = Ft = Δp = m(v-u). Larger impulse = larger change in momentum."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Conservation of momentum applies when",
+            "options": [
+              "no forces act",
+              "no external (resultant) forces act on the system",
+              "objects are identical",
+              "velocities are equal"
+            ],
+            "answer": "no external (resultant) forces act on the system",
+            "explanation": "Momentum is conserved in a closed system where no external resultant forces act (e.g. collisions)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "5kg object at 6m/s collides with stationary 5kg. They stick together. Final velocity =",
+            "options": [
+              "12 m/s",
+              "6 m/s",
+              "3 m/s",
+              "0"
+            ],
+            "answer": "3 m/s",
+            "explanation": "p_before = 5×6+5×0 = 30. p_after = 10×v. v=3 m/s"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Inertia is the",
+            "options": [
+              "tendency to resist change in motion",
+              "force of gravity",
+              "measure of friction",
+              "velocity of object"
+            ],
+            "answer": "tendency to resist change in motion",
+            "explanation": "Inertia: property of matter that resists changes to its state of motion. Greater mass = greater inertia."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "During a car crash, seatbelts and airbags reduce injury by",
+            "options": [
+              "increasing force",
+              "increasing the time of deceleration, reducing peak force",
+              "reducing momentum",
+              "eliminating force"
+            ],
+            "answer": "increasing the time of deceleration, reducing peak force",
+            "explanation": "Impulse=Ft=Δp. Same momentum change over longer time = smaller force. Crumple zones, airbags, and seatbelts all extend collision time."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A rocket in space can accelerate because",
+            "options": [
+              "there is air to push against",
+              "Newton's 3rd Law: expelled gas backward → rocket pushed forward",
+              "gravity helps",
+              "friction assists"
+            ],
+            "answer": "Newton's 3rd Law: expelled gas backward → rocket pushed forward",
+            "explanation": "Rockets work by ejecting mass (exhaust) at high speed in one direction — by 3rd Law, equal force pushes rocket opposite direction."
+          },
+          {
+            "id": "motion_kinematics_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_phy_mk_l3",
+      "title": "Equations of Motion — Graphs and Calculations",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "SUVAT equations:\nv = u + at\ns = ut + ½at²\nv² = u² + 2as\ns = ½(u+v)t\n\nDistance-time graph: gradient = speed\nSpeed-time graph: gradient = acceleration\n                  Area = distance"
+        },
+        {
+          "type": "example",
+          "title": "Using SUVAT",
+          "body": "Car: u=0, a=3m/s², t=8s\nv = 0 + 3×8 = 24 m/s\ns = 0×8 + ½×3×64 = 96m"
+        },
+        {
+          "type": "text",
+          "body": "On a speed-time graph: horizontal line = constant speed, sloping up = acceleration, sloping down = deceleration, area under graph = distance travelled."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Gradient of distance-time graph =",
+            "options": [
+              "Acceleration",
+              "Speed",
+              "Force",
+              "Time"
+            ],
+            "answer": "Speed",
+            "explanation": "Δdistance/Δtime = speed"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Gradient of speed-time graph =",
+            "options": [
+              "Speed",
+              "Distance",
+              "Acceleration",
+              "Time"
+            ],
+            "answer": "Acceleration",
+            "explanation": "Δspeed/Δtime = acceleration"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Area under speed-time graph =",
+            "options": [
+              "Acceleration",
+              "Force",
+              "Speed",
+              "Distance"
+            ],
+            "answer": "Distance",
+            "explanation": "Area = base × height (or integral) gives total distance."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "v = u + at. If u=10, a=2, t=5: v =",
+            "options": [
+              "17",
+              "20",
+              "22",
+              "30"
+            ],
+            "answer": "20",
+            "explanation": "v = 10 + 2×5 = 20 m/s"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Object starts at rest, accelerates at 4m/s² for 6s. Distance =",
+            "options": [
+              "24m",
+              "72m",
+              "48m",
+              "144m"
+            ],
+            "answer": "72m",
+            "explanation": "s = ut + ½at² = 0 + ½×4×36 = 72m"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "u=30m/s, v=10m/s, t=4s. Acceleration =",
+            "options": [
+              "5 m/s²",
+              "-5 m/s²",
+              "10 m/s²",
+              "-10 m/s²"
+            ],
+            "answer": "-5 m/s²",
+            "explanation": "a = (v-u)/t = (10-30)/4 = -5 m/s² (deceleration)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Ball thrown up at 20m/s. Max height (g=10) =",
+            "options": [
+              "20m",
+              "40m",
+              "10m",
+              "200m"
+            ],
+            "answer": "20m",
+            "explanation": "v²=u²+2as: 0=400+2(-10)s → s=20m"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Horizontal line on speed-time graph means",
+            "options": [
+              "Speeding up",
+              "Slowing down",
+              "Constant speed",
+              "Stopped"
+            ],
+            "answer": "Constant speed",
+            "explanation": "Horizontal line: speed not changing = constant velocity."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "v²=u²+2as. u=0,a=5,s=20. v=",
+            "options": [
+              "10 m/s",
+              "14.1 m/s",
+              "20 m/s",
+              "100 m/s"
+            ],
+            "answer": "14.1 m/s",
+            "explanation": "v²=0+2×5×20=200, v=sqrt(200)=14.1m/s"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Object falls freely from rest. After 3s, speed (g=10) =",
+            "options": [
+              "3m/s",
+              "10m/s",
+              "30m/s",
+              "90m/s"
+            ],
+            "answer": "30m/s",
+            "explanation": "v = u+at = 0+10×3 = 30m/s"
+          },
+          {
+            "id": "motion_kinematics_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_phy_mk_l4",
+      "title": "Forces — Newton's Laws and Free Body Diagrams",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Newton's 1st: Object at rest/constant velocity unless net force acts\nNewton's 2nd: F_net = ma\nNewton's 3rd: Every action has equal and opposite reaction\n\nWeight W = mg\nFriction f = μN\nμ = coefficient of friction, N = normal force"
+        },
+        {
+          "type": "example",
+          "title": "Free Body Diagram",
+          "body": "Box (5kg) on table with 30N push, friction 10N:\nF_net = 30 - 10 = 20N\na = F/m = 20/5 = 4 m/s²"
+        },
+        {
+          "type": "text",
+          "body": "A free body diagram shows all forces on one object. Always identify all forces: weight down, normal force up (from surface), applied force, friction (opposing motion), tension, air resistance."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Newton's 1st law: Object moves at constant velocity if",
+            "options": [
+              "Net force is large",
+              "Net force is zero",
+              "Net force is positive",
+              "Friction is zero"
+            ],
+            "answer": "Net force is zero",
+            "explanation": "Zero net force → constant velocity (including zero velocity = rest)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "F_net = ma is Newton's",
+            "options": [
+              "1st law",
+              "2nd law",
+              "3rd law",
+              "Law of gravity"
+            ],
+            "answer": "2nd law",
+            "explanation": "Newton's 2nd law: net force = mass × acceleration."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "5kg box pulled with 20N, friction 5N. Acceleration =",
+            "options": [
+              "3 m/s²",
+              "4 m/s²",
+              "5 m/s²",
+              "1 m/s²"
+            ],
+            "answer": "3 m/s²",
+            "explanation": "F_net = 20-5=15N. a = 15/5 = 3 m/s²"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Newton's 3rd law: when you push a wall,",
+            "options": [
+              "Wall pushes back equally",
+              "Wall doesn't react",
+              "You accelerate into wall",
+              "Friction appears"
+            ],
+            "answer": "Wall pushes back equally",
+            "explanation": "Action-reaction: forces are equal, opposite, act on different objects."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Weight of 10kg object (g=10) =",
+            "options": [
+              "1N",
+              "10N",
+              "100N",
+              "1000N"
+            ],
+            "answer": "100N",
+            "explanation": "W = mg = 10 × 10 = 100N"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Normal force is",
+            "options": [
+              "Gravity",
+              "Force perpendicular to surface from surface on object",
+              "Friction",
+              "Applied force"
+            ],
+            "answer": "Force perpendicular to surface from surface on object",
+            "explanation": "Normal force is the contact force perpendicular to the surface, opposing penetration."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Friction always acts",
+            "options": [
+              "In direction of motion",
+              "Opposite to motion",
+              "Perpendicular to motion",
+              "Downward"
+            ],
+            "answer": "Opposite to motion",
+            "explanation": "Friction opposes relative motion between surfaces."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Terminal velocity occurs when",
+            "options": [
+              "Gravity equals air resistance",
+              "Weight is maximum",
+              "Acceleration equals g",
+              "Velocity is zero"
+            ],
+            "answer": "Gravity equals air resistance",
+            "explanation": "At terminal velocity: net force = 0, so gravity = drag. Constant velocity downward."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "On frictionless surface, 3kg box hit with 12N for 2s. Final speed =",
+            "options": [
+              "2 m/s",
+              "4 m/s",
+              "6 m/s",
+              "8 m/s"
+            ],
+            "answer": "8 m/s",
+            "explanation": "a = F/m = 4 m/s². v = at = 4×2 = 8 m/s"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Mass of object on moon where g=1.6m/s²",
+            "options": [
+              "Less than on Earth",
+              "Same as on Earth",
+              "More than on Earth",
+              "Zero"
+            ],
+            "answer": "Same as on Earth",
+            "explanation": "Mass is constant property of matter. Weight changes with g, but mass doesn't."
+          },
+          {
+            "id": "motion_kinematics_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motion_kinematics_l5",
+      "title": "Motion Kinematics — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Motion Kinematics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Motion Kinematics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Motion Kinematics builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Motion Kinematics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Motion Kinematics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Motion Kinematics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Motion Kinematics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "motion_kinematics_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "motion_kinematics_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "motion_kinematics_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "motion_kinematics_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "motion_kinematics_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "motion_kinematics_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "motion_kinematics_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "motion_kinematics_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "motion_kinematics_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "motion_kinematics_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "motion_kinematics_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "motion_kinematics_l6",
+      "title": "Motion Kinematics — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Motion Kinematics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Motion Kinematics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Motion Kinematics builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Motion Kinematics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Motion Kinematics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Motion Kinematics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Motion Kinematics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "motion_kinematics_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "motion_kinematics_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "motion_kinematics_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "motion_kinematics_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "motion_kinematics_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "motion_kinematics_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "motion_kinematics_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "motion_kinematics_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "motion_kinematics_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "motion_kinematics_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "motion_kinematics_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "motion_kinematics_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "motion_kinematics_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "motion_kinematics_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "motion_kinematics_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "motion_kinematics_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "motion_kinematics_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "motion_kinematics_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "motion_kinematics_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "motion_kinematics_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "motion_kinematics"
+}

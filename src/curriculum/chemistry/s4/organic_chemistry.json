@@ -1,0 +1,1813 @@
+{
+  "subject": "chemistry",
+  "level": "s4",
+  "lessons": [
+    {
+      "id": "s4_chem_org_l1",
+      "title": "Alkanes and Alkenes",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Alkanes: CnH(2n+2) saturated\nMethane CH4, Ethane C2H6, Propane C3H8, Butane C4H10\nReactions: combustion, free radical substitution with halogens (UV)\n\nAlkenes: CnH(2n) unsaturated, C=C double bond\nEthene C2H4, Propene C3H6\nTest for C=C: bromine water decolourises\nReactions: addition (more reactive than alkanes)"
+        },
+        {
+          "type": "example",
+          "title": "Key Reactions",
+          "body": "Alkane + Cl2 (UV): CH4+Cl2 → CH3Cl+HCl (substitution)\n\nAlkene + H2 (Ni, 150 C): hydrogenation CH2=CH2 + H2 → CH3CH3\nAlkene + Br2: addition CH2=CH2 + Br2 → CH2BrCH2Br\nAlkene + H2O (H3PO4, 300 C, 65 atm): CH2=CH2 + H2O → CH3CH2OH\n\nCracking: long alkanes → shorter alkanes + alkenes"
+        },
+        {
+          "type": "example",
+          "title": "Structural Isomers",
+          "body": "Same molecular formula, different structures\nC4H10: butane (straight chain) and 2-methylpropane (branched)\nBranched isomers have lower boiling points\n\nNaming: find longest chain, number from end nearest branch"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "General formula of alkanes",
+            "options": [
+              "CnH(2n)",
+              "CnH(2n-2)",
+              "CnH(2n+2)",
+              "CnH(2n+1)"
+            ],
+            "answer": "CnH(2n+2)",
+            "explanation": "Alkanes saturated: CnH(2n+2). Each carbon forms 4 bonds with H or other C"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Bromine water decolourises with alkenes because",
+            "options": [
+              "Br2 dissolves",
+              "addition across C=C double bond (Br2 consumed)",
+              "alkene is colourless",
+              "Br2 oxidised"
+            ],
+            "answer": "addition across C=C double bond (Br2 consumed)",
+            "explanation": "CH2=CH2 + Br2 → CH2BrCH2Br. Orange Br2 colour disappears. Alkanes do NOT decolourise (no C=C)"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Alkane halogenation reaction type",
+            "options": [
+              "addition",
+              "elimination",
+              "substitution (UV radical mechanism)",
+              "oxidation"
+            ],
+            "answer": "substitution (UV radical mechanism)",
+            "explanation": "Free radical substitution: UV splits Cl2 homolytically, chain reaction replaces H atoms with Cl"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Hydration of ethene produces",
+            "options": [
+              "methanol",
+              "propanol",
+              "ethanol",
+              "ethanoic acid"
+            ],
+            "answer": "ethanol",
+            "explanation": "CH2=CH2 + H2O → C2H5OH. Industrial production of ethanol, H3PO4 catalyst, 300C, high pressure"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Hydrogenation converts alkene to alkane using",
+            "options": [
+              "Br2",
+              "H2 with Ni catalyst",
+              "H2O",
+              "HCl"
+            ],
+            "answer": "H2 with Ni catalyst",
+            "explanation": "Alkene + H2 → alkane over Ni catalyst. Used to make margarine (partially hydrogenated vegetable oil)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two structural isomers of C4H10 are",
+            "options": [
+              "butene and isobutene",
+              "butane and 2-methylpropane",
+              "two forms of butane",
+              "ethane and propane"
+            ],
+            "answer": "butane and 2-methylpropane",
+            "explanation": "C4H10 isomers: n-butane (straight) and 2-methylpropane (branched). Different boiling points: -1C vs -12C"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Cracking crude oil produces",
+            "options": [
+              "only smaller alkanes",
+              "shorter alkanes AND alkenes useful as fuels and monomers",
+              "only alkenes",
+              "only gases"
+            ],
+            "answer": "shorter alkanes AND alkenes useful as fuels and monomers",
+            "explanation": "Cracking breaks long chains to shorter, more useful fractions. Alkenes produced are key monomers for polymer industry"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "First four alkanes in order",
+            "options": [
+              "methane, ethane, propane, butane",
+              "ethane, propane, butane, pentane",
+              "propane, butane, pentane, hexane",
+              "methane, propane, butane, pentane"
+            ],
+            "answer": "methane, ethane, propane, butane",
+            "explanation": "C1=methane, C2=ethane, C3=propane, C4=butane. Prefix: meth(1), eth(2), prop(3), but(4), pent(5), hex(6)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Markovnikov addition: HBr + propene CH3-CH=CH2 gives",
+            "options": [
+              "CH3-CH2-CH2Br (1-bromopropane)",
+              "CH3-CHBr-CH3 (2-bromopropane)",
+              "CH3Br+C2H4",
+              "CH2Br-CH=CH2"
+            ],
+            "answer": "CH3-CHBr-CH3 (2-bromopropane)",
+            "explanation": "Markovnikov: H adds to C with more H. In CH3-CH=CH2, H adds to =CH2 (more H), Br to =CH- giving 2-bromopropane"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Petroleum is separated into fractions by",
+            "options": [
+              "chromatography",
+              "electrolysis",
+              "fractional distillation",
+              "filtration"
+            ],
+            "answer": "fractional distillation",
+            "explanation": "Crude oil fractions: different chain lengths, different boiling points. Fractional distillation separates by boiling point"
+          },
+          {
+            "id": "organic_chemistry_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l1_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l1_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l1_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l1_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_chem_org_l2",
+      "title": "Alcohols, Carboxylic Acids and Esters",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Alcohols: R-OH (hydroxyl group)\nPrimary alcohol → aldehyde → carboxylic acid (K2Cr2O7/H2SO4, orange to green)\nSecondary → ketone\nTertiary → no oxidation\n\nCarboxylic acids: R-COOH (weak acids)\nEsterification: acid + alcohol ⇌ ester + water (H2SO4 catalyst, reflux)\nR-COOH + R-OH ⇌ R-COOR + H2O"
+        },
+        {
+          "type": "example",
+          "title": "Ester Synthesis",
+          "body": "Ethanol + ethanoic acid ⇌ ethyl ethanoate + water\nCH3COOH + C2H5OH ⇌ CH3COOC2H5 + H2O\nConc H2SO4 catalyst, heat under reflux\nReversible: equilibrium mixture\n\nNaming: alcohol part first (ethyl from ethanol), acid part second (ethanoate from ethanoic acid)\nSmells fruity - used in flavourings, solvents"
+        },
+        {
+          "type": "example",
+          "title": "Tests",
+          "body": "Carboxylic acid + Na2CO3 → CO2 effervescence\nAlcohol + K2Cr2O7/H2SO4 → orange to green (primary/secondary oxidise)\nFermentation: glucose + yeast → ethanol + CO2 (30C, anaerobic)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Hydroxyl functional group is",
+            "options": [
+              "C=O",
+              "-OH",
+              "-COOH",
+              "-NH2"
+            ],
+            "answer": "-OH",
+            "explanation": "Alcohols contain -OH (hydroxyl) group. Methanol CH3OH, ethanol C2H5OH, propan-1-ol CH3CH2CH2OH"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Primary alcohol oxidised by K2Cr2O7 gives first",
+            "options": [
+              "ketone",
+              "ester",
+              "aldehyde then carboxylic acid",
+              "nothing"
+            ],
+            "answer": "aldehyde then carboxylic acid",
+            "explanation": "Primary: -CH2OH → -CHO (aldehyde, distil off) → -COOH (acid, reflux). Dichromate: orange → green"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Tertiary alcohol cannot be oxidised because",
+            "options": [
+              "it is an acid",
+              "no H on carbon bearing OH group needed for oxidation",
+              "it is too volatile",
+              "it reacts differently"
+            ],
+            "answer": "no H on carbon bearing OH group needed for oxidation",
+            "explanation": "Tertiary: R3COH. No C-H bond adjacent to OH → no oxidation product possible"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Esterification is reversible. To improve yield, remove",
+            "options": [
+              "acid",
+              "alcohol",
+              "water (or ester) as formed",
+              "catalyst"
+            ],
+            "answer": "water (or ester) as formed",
+            "explanation": "Le Chatelier: removing product shifts equilibrium right. Water absorbed by H2SO4 catalyst or removed by distillation"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Ethyl ethanoate is made from",
+            "options": [
+              "methanol + ethanoic acid",
+              "ethanol + methanoic acid",
+              "ethanol + ethanoic acid",
+              "propanol + ethanoic acid"
+            ],
+            "answer": "ethanol + ethanoic acid",
+            "explanation": "Ethyl = from ethanol. Ethanoate = from ethanoic acid (CH3COOH). Product: CH3COOC2H5"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Carboxylic acid + Na2CO3 gives CO2 gas. This proves",
+            "options": [
+              "it is an alcohol",
+              "acid present (reacts with carbonate to form CO2)",
+              "it is a ketone",
+              "ester present"
+            ],
+            "answer": "acid present (reacts with carbonate to form CO2)",
+            "explanation": "2RCOOH + Na2CO3 → 2RCOONa + H2O + CO2. Effervescence distinguishes carboxylic acid from alcohol or ketone"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Saponification makes soap by",
+            "options": [
+              "esterification",
+              "hydrolysis of ester (fat/oil) with NaOH → sodium salt of fatty acid (soap) + glycerol",
+              "oxidation",
+              "fermentation"
+            ],
+            "answer": "hydrolysis of ester (fat/oil) with NaOH → sodium salt of fatty acid (soap) + glycerol",
+            "explanation": "Fat (triglyceride) + 3NaOH → 3 fatty acid sodium salts (soap) + glycerol. Ancient process"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Biofuel ethanol is renewable because",
+            "options": [
+              "it is liquid",
+              "crops absorb CO2 when growing then release same CO2 when burned - net zero carbon",
+              "it burns cleanly",
+              "it is cheap"
+            ],
+            "answer": "crops absorb CO2 when growing then release same CO2 when burned - net zero carbon",
+            "explanation": "Carbon cycle: plants fix CO2 during growth. Fermentation and combustion release it back. Net carbon = approximately zero"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Fermentation conditions for glucose to ethanol",
+            "options": [
+              "high temperature, oxygen",
+              "yeast enzymes, 30-37C, anaerobic (no O2)",
+              "acid and high pressure",
+              "platinum catalyst"
+            ],
+            "answer": "yeast enzymes, 30-37C, anaerobic (no O2)",
+            "explanation": "Fermentation: C6H12O6 → 2C2H5OH + 2CO2. Anaerobic. Yeast active 25-40C. Above 45C enzymes denature"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Ethanol has higher boiling point than ethane despite similar molecular mass because",
+            "options": [
+              "ethanol is heavier",
+              "hydrogen bonding between O-H groups requires more energy to overcome",
+              "ethanol is polar only",
+              "ethane has more electrons"
+            ],
+            "answer": "hydrogen bonding between O-H groups requires more energy to overcome",
+            "explanation": "OH group: strong intermolecular H-bonding. Ethanol bp=78C. Ethane (no OH) bp=-89C. H-bonds much stronger than London forces"
+          },
+          {
+            "id": "organic_chemistry_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_chem_org_l3",
+      "title": "Polymers and Macromolecules",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Addition polymers: C=C monomers\nn(CH2=CH2) → (-CH2-CH2-)n poly(ethene)\n\nCondensation polymers: two functional groups, lose H2O\nPolyamides: -COOH + -NH2 → amide bond + H2O\nPolyesters: -COOH + -OH → ester bond + H2O\n\nNylon-6,6: hexanedioic acid + hexane-1,6-diamine\nPET: benzene-1,4-dicarboxylic acid + ethan-1,2-diol"
+        },
+        {
+          "type": "example",
+          "title": "Common Polymers",
+          "body": "Addition: poly(ethene) bags/bottles, poly(propene) rope, PVC pipes, PTFE non-stick, polystyrene packaging\n\nCondensation: Nylon clothing/ropes, PET bottles/clothing, proteins (amino acids), DNA (nucleotides), starch/cellulose (glucose)\n\nProblems: most synthetic polymers non-biodegradable\nSolutions: recycling, biodegradable plastics, reduce use"
+        },
+        {
+          "type": "example",
+          "title": "Protein Structure",
+          "body": "Primary: amino acid sequence (peptide bonds)\nSecondary: alpha helix or beta sheet (H-bonding)\nTertiary: 3D folding (ionic, H-bonds, disulphide, hydrophobic)\nQuaternary: multiple polypeptide chains\n\nEnzyme active site complementary to substrate - shape specific"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Addition polymerisation monomer must have",
+            "options": [
+              "two OH groups",
+              "C=C double bond",
+              "two COOH groups",
+              "amine group"
+            ],
+            "answer": "C=C double bond",
+            "explanation": "Addition: C=C opens up, monomers chain together. No atoms lost. All monomer atoms in polymer"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Condensation polymerisation releases",
+            "options": [
+              "H2 gas",
+              "CO2",
+              "H2O from each bond formed",
+              "O2"
+            ],
+            "answer": "H2O from each bond formed",
+            "explanation": "Each bond formed between monomers expels H2O molecule. Polymer chains grow as water is eliminated"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Nylon is a polyamide. Repeat unit linkage is",
+            "options": [
+              "ester bond",
+              "-CO-NH- amide bond",
+              "C-C only",
+              "glycosidic bond"
+            ],
+            "answer": "-CO-NH- amide bond",
+            "explanation": "Polyamides: -CO-NH- repeating units. Formed between -COOH and -NH2 groups with loss of water"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "PET used in plastic bottles is a",
+            "options": [
+              "polyamide",
+              "polyalkene",
+              "polyester",
+              "natural polymer"
+            ],
+            "answer": "polyester",
+            "explanation": "PET: poly(ethylene terephthalate). Condensation polyester from terephthalic acid + ethylene glycol. Recyclable code 1"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Synthetic plastics environmental problem: most are non-biodegradable because",
+            "options": [
+              "they are coloured",
+              "microbes lack enzymes to break C-C backbone - persist hundreds of years",
+              "they are heavy",
+              "they repel water"
+            ],
+            "answer": "microbes lack enzymes to break C-C backbone - persist hundreds of years",
+            "explanation": "Evolutionary gap: synthetic C-C polymer backbones not present in nature before 1900s. Microbes have no enzymes evolved to break them down"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Degree of polymerisation: polymer Mr=56000, monomer Mr=56. n=",
+            "options": [
+              "100",
+              "1000",
+              "56",
+              "560"
+            ],
+            "answer": "1000",
+            "explanation": "n = Mr(polymer)/Mr(monomer) = 56000/56 = 1000 repeat units"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Cellulose and starch differ despite same glucose monomer because",
+            "options": [
+              "different molecular formula",
+              "starch has alpha-1,4 bonds (coiled, digestible), cellulose has beta-1,4 bonds (straight fibres, indigestible)",
+              "cellulose has more carbons",
+              "starch is a polymer"
+            ],
+            "answer": "starch has alpha-1,4 bonds (coiled, digestible), cellulose has beta-1,4 bonds (straight fibres, indigestible)",
+            "explanation": "Alpha-glucose bonds allow coiling (starch). Beta-glucose bonds form straight chains that hydrogen-bond together (cellulose fibres, cotton, paper)"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "PVC monomer is",
+            "options": [
+              "CH2=CH2",
+              "CH2=CHCl",
+              "CCl4",
+              "CH2=CCl2"
+            ],
+            "answer": "CH2=CHCl",
+            "explanation": "PVC = poly(vinyl chloride) = poly(chloroethene). Monomer: CH2=CHCl (chloroethene/vinyl chloride)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Primary structure of protein is",
+            "options": [
+              "alpha helix",
+              "sequence of amino acids joined by peptide bonds",
+              "3D shape",
+              "number of chains"
+            ],
+            "answer": "sequence of amino acids joined by peptide bonds",
+            "explanation": "Primary structure: linear sequence of amino acids. Determined by DNA. All other structural levels derive from this"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Enzyme activity is reduced by high temperature because",
+            "options": [
+              "substrate changes",
+              "enzyme protein denatures - active site loses complementary shape to substrate",
+              "pH changes",
+              "substrate dissolves"
+            ],
+            "answer": "enzyme protein denatures - active site loses complementary shape to substrate",
+            "explanation": "High T disrupts H-bonds, ionic bonds, disulphide bonds holding tertiary structure. Active site distorted - substrate no longer fits"
+          },
+          {
+            "id": "organic_chemistry_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "organic_chemistry_l4",
+      "title": "Organic Chemistry — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Organic Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Organic Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Organic Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Organic Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Organic Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Organic Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Organic Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "organic_chemistry_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l4_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l4_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l4_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l4_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "organic_chemistry_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "organic_chemistry_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "organic_chemistry_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "organic_chemistry_l4_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "organic_chemistry_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "organic_chemistry_l4_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "organic_chemistry_l4_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "organic_chemistry_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "organic_chemistry_l4_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "organic_chemistry_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "organic_chemistry_l5",
+      "title": "Organic Chemistry — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Organic Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Organic Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Organic Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Organic Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Organic Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Organic Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Organic Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "organic_chemistry_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l5_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l5_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l5_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l5_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "organic_chemistry_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "organic_chemistry_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "organic_chemistry_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "organic_chemistry_l5_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "organic_chemistry_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "organic_chemistry_l5_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "organic_chemistry_l5_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "organic_chemistry_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "organic_chemistry_l5_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "organic_chemistry_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "organic_chemistry_l6",
+      "title": "Organic Chemistry — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Organic Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Organic Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Organic Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Organic Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Organic Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Organic Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Organic Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "organic_chemistry_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "organic_chemistry_l6_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "organic_chemistry_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "organic_chemistry_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "organic_chemistry_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "organic_chemistry_l6_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "organic_chemistry_l6_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "organic_chemistry_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "organic_chemistry_l6_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "organic_chemistry_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "organic_chemistry_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "organic_chemistry_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "organic_chemistry_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "organic_chemistry_l6_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "organic_chemistry_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "organic_chemistry_l6_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "organic_chemistry_l6_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "organic_chemistry_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "organic_chemistry_l6_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "organic_chemistry_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "organic_chemistry"
+}

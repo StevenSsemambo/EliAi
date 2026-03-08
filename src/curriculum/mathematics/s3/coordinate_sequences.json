@@ -1,0 +1,1802 @@
+{
+  "topic_id": "coordinate_sequences",
+  "topic_title": "Coordinate Geometry",
+  "subject": "mathematics",
+  "class_level": "S3",
+  "lessons": [
+    {
+      "id": "s3_math_coord_l1",
+      "title": "Straight Lines — Gradient and Equation",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "Coordinate geometry combines algebra and geometry by placing shapes on a coordinate grid. The Cartesian plane has an x-axis (horizontal) and y-axis (vertical). Every point is uniquely described by coordinates (x, y). This branch of mathematics was developed by René Descartes in the 17th century."
+        },
+        {
+          "type": "formula",
+          "body": "Gradient (slope) of a line:\nm = (y₂ - y₁) / (x₂ - x₁)\n\nPositive gradient: line slopes upward left to right\nNegative gradient: line slopes downward left to right\nZero gradient: horizontal line\nUndefined gradient: vertical line\n\nEquation of a straight line:\ny = mx + c\nm = gradient, c = y-intercept"
+        },
+        {
+          "type": "example",
+          "title": "Finding Gradient and Equation",
+          "body": "Find the equation of the line through (1,3) and (3,7)\n\nGradient: m = (7-3)/(3-1) = 4/2 = 2\nUse y = mx + c with point (1,3):\n3 = 2(1) + c → c = 1\nEquation: y = 2x + 1\n\nCheck with (3,7): y = 2(3)+1 = 7 ✓"
+        },
+        {
+          "type": "formula",
+          "body": "Distance between two points:\nd = √[(x₂-x₁)² + (y₂-y₁)²]\n\nMidpoint of two points:\nM = ((x₁+x₂)/2, (y₁+y₂)/2)\n\nParallel lines have EQUAL gradients: m₁ = m₂\nPerpendicular lines: m₁ × m₂ = -1"
+        },
+        {
+          "type": "example",
+          "title": "Distance, Midpoint, Parallel/Perpendicular",
+          "body": "Points A(2,1) and B(6,4):\nDistance = √[(6-2)²+(4-1)²] = √[16+9] = √25 = 5\nMidpoint = ((2+6)/2, (1+4)/2) = (4, 2.5)\n\nLine 1: y = 3x + 2 (gradient 3)\nLine 2: y = 3x - 5 (gradient 3) → PARALLEL\nLine 3: y = -x/3 + 1 (gradient -1/3) → PERPENDICULAR to Line 1\n(3 × -1/3 = -1 ✓)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Gradient through (0,0) and (4,8):",
+            "options": [
+              "32",
+              "0.5",
+              "2",
+              "4"
+            ],
+            "answer": "2",
+            "explanation": "m = (8-0)/(4-0) = 8/4 = 2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "y = 3x - 5. What is the y-intercept?",
+            "options": [
+              "3",
+              "5",
+              "-5",
+              "x"
+            ],
+            "answer": "-5",
+            "explanation": "In y=mx+c, c is the y-intercept. Here c = -5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "y = 2x + 1. What is the gradient?",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "0"
+            ],
+            "answer": "2",
+            "explanation": "In y=mx+c, m is the gradient. Here m = 2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Distance from (1,2) to (4,6):",
+            "options": [
+              "5",
+              "3",
+              "7",
+              "25"
+            ],
+            "answer": "5",
+            "explanation": "d = √[(4-1)²+(6-2)²] = √[9+16] = √25 = 5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Midpoint of (2,4) and (8,10):",
+            "options": [
+              "(5,7)",
+              "(10,14)",
+              "(3,3)",
+              "(6,6)"
+            ],
+            "answer": "(5,7)",
+            "explanation": "M = ((2+8)/2, (4+10)/2) = (5, 7)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Parallel to y = 4x + 1 means gradient =",
+            "options": [
+              "-1/4",
+              "1/4",
+              "4",
+              "-4"
+            ],
+            "answer": "4",
+            "explanation": "Parallel lines have equal gradients. Gradient = 4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Perpendicular to gradient 2 has gradient:",
+            "options": [
+              "2",
+              "-2",
+              "1/2",
+              "-1/2"
+            ],
+            "answer": "-1/2",
+            "explanation": "Perpendicular: m₁ × m₂ = -1. So m₂ = -1/2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Line through (0,3) with gradient 2: equation?",
+            "options": [
+              "y=2x",
+              "y=3x+2",
+              "y=2x+3",
+              "y=x+2"
+            ],
+            "answer": "y=2x+3",
+            "explanation": "y = mx+c. m=2, y-intercept=3 (passes through (0,3)). y=2x+3."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Does (3,7) lie on y = 2x + 1?",
+            "options": [
+              "No, y would be 5",
+              "Yes, 2(3)+1=7",
+              "No, need more info",
+              "Yes, all points lie on it"
+            ],
+            "answer": "Yes, 2(3)+1=7",
+            "explanation": "Substitute x=3: y = 2(3)+1 = 7. Yes, (3,7) is on the line."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A horizontal line has gradient:",
+            "options": [
+              "1",
+              "Undefined",
+              "0",
+              "-1"
+            ],
+            "answer": "0",
+            "explanation": "Horizontal lines have zero gradient — they don't rise or fall."
+          },
+          {
+            "id": "coordinate_sequences_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_sequences_l1",
+      "title": "Sequences and Series",
+      "duration_minutes": 25,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "A sequence is an ordered list of numbers following a pattern. Each number in a sequence is called a term. Sequences appear in nature (Fibonacci in flowers), finance (compound interest), and computer science (algorithms)."
+        },
+        {
+          "type": "formula",
+          "body": "Arithmetic Sequence (AP):\nEach term differs by a constant amount called the common difference (d)\n\nnth term: aₙ = a + (n-1)d\nSum of n terms: Sₙ = n/2 × (2a + (n-1)d) = n/2 × (first + last)\n\nWhere a = first term, d = common difference\nExample: 3, 7, 11, 15, ... → a=3, d=4\nt₅ = 3 + 4(4) = 19"
+        },
+        {
+          "type": "formula",
+          "body": "Geometric Sequence (GP):\nEach term is multiplied by a constant called the common ratio (r)\n\nnth term: aₙ = ar^(n-1)\nSum of n terms: Sₙ = a(rⁿ-1)/(r-1)  for r≠1\n\nWhere a = first term, r = common ratio\nExample: 2, 6, 18, 54, ... → a=2, r=3\nt₄ = 2 × 3³ = 54"
+        },
+        {
+          "type": "example",
+          "title": "Identifying and Solving Sequences",
+          "body": "Is 5, 9, 13, 17, ... arithmetic or geometric?\nd = 9-5 = 4, 13-9 = 4 → constant difference → ARITHMETIC\na=5, d=4\n10th term = 5 + 9×4 = 41\n\nIs 3, 6, 12, 24, ... arithmetic or geometric?\nr = 6/3 = 2, 12/6 = 2 → constant ratio → GEOMETRIC\na=3, r=2\n8th term = 3 × 2⁷ = 384"
+        },
+        {
+          "type": "example",
+          "title": "Sum of Arithmetic Series",
+          "body": "Find sum of first 20 terms of 4, 7, 10, 13, ...\na=4, d=3, n=20\nLast term = 4 + 19×3 = 61\nS₂₀ = 20/2 × (4+61) = 10 × 65 = 650\n\nOR: S₂₀ = 20/2 × (2×4 + 19×3) = 10 × (8+57) = 650 ✓"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Sequence: 2, 5, 8, 11, ... What is the common difference?",
+            "options": [
+              "2",
+              "5",
+              "3",
+              "11"
+            ],
+            "answer": "3",
+            "explanation": "d = 5-2 = 3. Each term increases by 3. This is an arithmetic sequence."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "AP: a=3, d=5. Find the 6th term.",
+            "options": [
+              "28",
+              "33",
+              "30",
+              "18"
+            ],
+            "answer": "28",
+            "explanation": "t₆ = a + (n-1)d = 3 + 5×5 = 3+25 = 28."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "GP: 2, 6, 18, 54... Common ratio = ?",
+            "options": [
+              "4",
+              "3",
+              "2",
+              "6"
+            ],
+            "answer": "3",
+            "explanation": "r = 6/2 = 3. Each term is multiplied by 3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "GP: a=5, r=2. Find t₄.",
+            "options": [
+              "40",
+              "20",
+              "10",
+              "80"
+            ],
+            "answer": "40",
+            "explanation": "t₄ = 5 × 2³ = 5×8 = 40."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "AP: 1+3+5+7+...+19. Sum = ?",
+            "options": [
+              "100",
+              "50",
+              "95",
+              "110"
+            ],
+            "answer": "100",
+            "explanation": "a=1, d=2, last=19, n=10. S = 10/2×(1+19) = 5×20 = 100."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which is a geometric sequence?",
+            "options": [
+              "1,3,5,7",
+              "2,4,8,16",
+              "1,4,9,16",
+              "3,6,9,12"
+            ],
+            "answer": "2,4,8,16",
+            "explanation": "2,4,8,16: ratio = 4/2 = 2, 8/4 = 2, 16/8 = 2. Constant ratio → geometric."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "AP a=10, d=-3. Find t₅.",
+            "options": [
+              "-2",
+              "22",
+              "10",
+              "-5"
+            ],
+            "answer": "-2",
+            "explanation": "t₅ = 10 + 4×(-3) = 10-12 = -2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Sum of AP: n=8, a=2, d=3. Find S₈.",
+            "options": [
+              "100",
+              "88",
+              "76",
+              "112"
+            ],
+            "answer": "100",
+            "explanation": "S₈ = 8/2×(2×2+7×3) = 4×(4+21) = 4×25 = 100."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Fibonacci sequence: 1,1,2,3,5,8,13... Next term?",
+            "options": [
+              "14",
+              "20",
+              "21",
+              "16"
+            ],
+            "answer": "21",
+            "explanation": "Each term = sum of previous two. 13+8 = 21."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "GP: a=4, r=1/2. Find t₄.",
+            "options": [
+              "0.5",
+              "1",
+              "2",
+              "0.25"
+            ],
+            "answer": "0.5",
+            "explanation": "t₄ = 4 × (1/2)³ = 4 × 1/8 = 0.5."
+          },
+          {
+            "id": "coordinate_sequences_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_cs_l3",
+      "title": "AP and GP",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "AP: aₙ=a+(n−1)d, Sₙ=n/2[2a+(n−1)d]\nGP: aₙ=arⁿ⁻¹, Sₙ=a(rⁿ−1)/(r−1)\nGP Sum to infinity (|r|<1): S∞=a/(1−r)"
+        },
+        {
+          "type": "example",
+          "title": "AP",
+          "body": "3,7,11,15... a=3,d=4\na₁₀=3+9×4=39, S₁₀=5×(3+39)=210"
+        },
+        {
+          "type": "example",
+          "title": "GP",
+          "body": "2,6,18... a=2,r=3\na₅=2×3⁴=162, S₅=2(243−1)/2=242"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Common difference of 5,8,11,14",
+            "options": [
+              "3",
+              "5",
+              "8",
+              "−3"
+            ],
+            "answer": "3",
+            "explanation": "d=8−5=3"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "6th term of AP a=2,d=5",
+            "options": [
+              "27",
+              "32",
+              "25",
+              "30"
+            ],
+            "answer": "27",
+            "explanation": "a₆=2+5×5=27"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Sum of first 10 terms of 1,3,5...",
+            "options": [
+              "100",
+              "50",
+              "81",
+              "55"
+            ],
+            "answer": "100",
+            "explanation": "a=1,d=2. S₁₀=10/2×(2+18)=100"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Common ratio of 4,12,36",
+            "options": [
+              "8",
+              "3",
+              "4",
+              "12"
+            ],
+            "answer": "3",
+            "explanation": "r=12/4=3"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "5th term of GP a=3,r=2",
+            "options": [
+              "48",
+              "96",
+              "24",
+              "16"
+            ],
+            "answer": "48",
+            "explanation": "a₅=3×2⁴=48"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Sum to infinity a=6,r=0.5",
+            "options": [
+              "3",
+              "12",
+              "18",
+              "6"
+            ],
+            "answer": "12",
+            "explanation": "S∞=6/(1−0.5)=12"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "S∞ exists when |r|",
+            "options": [
+              "> 1",
+              "= 1",
+              "< 1",
+              "Any value"
+            ],
+            "answer": "< 1",
+            "explanation": "Converges only when |r|<1."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "nth term of 7,12,17,22",
+            "options": [
+              "5n+2",
+              "5n+7",
+              "7n+5",
+              "5n−2"
+            ],
+            "answer": "5n+2",
+            "explanation": "a=7,d=5: aₙ=7+(n−1)×5=5n+2"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "GP 100,50,25... S∞",
+            "options": [
+              "50",
+              "200",
+              "150",
+              "100"
+            ],
+            "answer": "200",
+            "explanation": "S∞=100/(1−0.5)=200"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "AP a=10,d=−2. First negative term is term",
+            "options": [
+              "5",
+              "6",
+              "7",
+              "8"
+            ],
+            "answer": "7",
+            "explanation": "aₙ=12−2n<0 → n>6, first is term 7"
+          },
+          {
+            "id": "coordinate_sequences_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_cs_l3",
+      "title": "Arithmetic and Geometric Progressions",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "AP: a, a+d, a+2d ...\nn-th term: a_n = a + (n-1)d\nSum: S_n = n/2 * [2a + (n-1)d]\n\nGP: a, ar, ar^2 ...\nn-th term: a_n = a*r^(n-1)\nSum: S_n = a(r^n - 1)/(r-1)\nSum to infinity: S_inf = a/(1-r), |r|<1"
+        },
+        {
+          "type": "example",
+          "title": "AP Example",
+          "body": "AP: 3, 7, 11, 15 ... a=3, d=4\n10th term: 3 + 9x4 = 39\nS_10 = 10/2 x (3+39) = 210"
+        },
+        {
+          "type": "example",
+          "title": "GP Example",
+          "body": "GP: 2, 6, 18, 54 ... a=2, r=3\n5th term: 2x3^4 = 162\nS_5 = 2(3^5-1)/(3-1) = 242"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "AP: 5, 8, 11, 14 ... Common difference =",
+            "options": [
+              "3",
+              "5",
+              "8",
+              "-3"
+            ],
+            "answer": "3",
+            "explanation": "d = 8-5 = 3"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "6th term of AP with a=2, d=5",
+            "options": [
+              "27",
+              "32",
+              "25",
+              "30"
+            ],
+            "answer": "27",
+            "explanation": "a_6 = 2 + 5*5 = 27"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Sum of first 10 terms of AP: 1,3,5,7...",
+            "options": [
+              "100",
+              "50",
+              "81",
+              "55"
+            ],
+            "answer": "100",
+            "explanation": "a=1,d=2. S_10=10/2*(2+18)=100"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "GP: 4, 12, 36... Common ratio =",
+            "options": [
+              "8",
+              "3",
+              "4",
+              "12"
+            ],
+            "answer": "3",
+            "explanation": "r = 12/4 = 3"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "5th term of GP with a=3, r=2",
+            "options": [
+              "48",
+              "96",
+              "24",
+              "16"
+            ],
+            "answer": "48",
+            "explanation": "a_5 = 3*2^4 = 48"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Sum to infinity of GP with a=6, r=0.5",
+            "options": [
+              "3",
+              "12",
+              "18",
+              "6"
+            ],
+            "answer": "12",
+            "explanation": "S_inf = 6/(1-0.5) = 12"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "For S_inf to exist |r| must be",
+            "options": [
+              "> 1",
+              "= 1",
+              "< 1",
+              "Any value"
+            ],
+            "answer": "< 1",
+            "explanation": "Geometric series converges only when |r| < 1."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "AP a=10, d=-2. First negative term is",
+            "options": [
+              "Term 5",
+              "Term 6",
+              "Term 7",
+              "Never"
+            ],
+            "answer": "Term 7",
+            "explanation": "a_n = 12-2n < 0 when n > 6. a_7 = -2, first negative."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "GP: 100, 50, 25 ... S_inf =",
+            "options": [
+              "50",
+              "200",
+              "150",
+              "100"
+            ],
+            "answer": "200",
+            "explanation": "r=0.5. S_inf = 100/(1-0.5) = 200"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "n-th term of AP 7, 12, 17, 22...",
+            "options": [
+              "5n+2",
+              "5n+7",
+              "7n+5",
+              "5n-2"
+            ],
+            "answer": "5n+2",
+            "explanation": "a=7, d=5. a_n = 7+(n-1)*5 = 5n+2"
+          },
+          {
+            "id": "coordinate_sequences_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "coordinate_sequences_l5",
+      "title": "Coordinate Geometry — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Coordinate Geometry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Coordinate Geometry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Coordinate Geometry builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Coordinate Geometry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Coordinate Geometry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Coordinate Geometry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Coordinate Geometry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "coordinate_sequences_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "coordinate_sequences_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "coordinate_sequences_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "coordinate_sequences_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "coordinate_sequences_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "coordinate_sequences_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "coordinate_sequences_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "coordinate_sequences_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "coordinate_sequences_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "coordinate_sequences_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "coordinate_sequences_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "coordinate_sequences_l6",
+      "title": "Coordinate Geometry — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Coordinate Geometry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Coordinate Geometry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Coordinate Geometry builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Coordinate Geometry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Coordinate Geometry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Coordinate Geometry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Coordinate Geometry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "coordinate_sequences_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "coordinate_sequences_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "coordinate_sequences_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "coordinate_sequences_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "coordinate_sequences_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "coordinate_sequences_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "coordinate_sequences_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "coordinate_sequences_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "coordinate_sequences_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "coordinate_sequences_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "coordinate_sequences_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "coordinate_sequences_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "coordinate_sequences_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "coordinate_sequences_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "coordinate_sequences_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "coordinate_sequences_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "coordinate_sequences_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "coordinate_sequences_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "coordinate_sequences_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "coordinate_sequences_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

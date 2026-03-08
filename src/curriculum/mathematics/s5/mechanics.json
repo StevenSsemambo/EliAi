@@ -1,0 +1,1790 @@
+{
+  "topic_id": "mechanics",
+  "topic_title": "Mechanics",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "s5_math_mech_l1",
+      "title": "Kinematics with Calculus",
+      "duration_minutes": 30,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Mechanics uses calculus to connect displacement, velocity and acceleration. Velocity is the derivative of displacement; acceleration is the derivative of velocity."
+        },
+        {
+          "type": "formula",
+          "body": "s = displacement (m)\nv = ds/dt = velocity (m/s)\na = dv/dt = d²s/dt² = acceleration (m/s²)\n\nReverse: s = ∫v dt,  v = ∫a dt"
+        },
+        {
+          "type": "example",
+          "title": "Finding Velocity from Displacement",
+          "body": "If s = 3t³ - 4t² + 2t, find v and a at t = 2:\nv = ds/dt = 9t² - 8t + 2\nAt t=2: v = 36 - 16 + 2 = 22 m/s\na = dv/dt = 18t - 8\nAt t=2: a = 36 - 8 = 28 m/s²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "If s = t² + 3t, what is the velocity?",
+            "options": [
+              "2t",
+              "2t+3",
+              "t²+3",
+              "2t²+3t"
+            ],
+            "answer": "2t+3",
+            "explanation": "v = ds/dt = 2t+3"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "An object has velocity v = 6t. Its acceleration is:",
+            "options": [
+              "6t²",
+              "3t²",
+              "6",
+              "3t"
+            ],
+            "answer": "6",
+            "explanation": "a = dv/dt = d/dt(6t) = 6 m/s²"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "To find displacement from velocity, you:",
+            "options": [
+              "Differentiate v",
+              "Integrate v",
+              "Square v",
+              "Divide v by t"
+            ],
+            "answer": "Integrate v",
+            "explanation": "s = ∫v dt"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An object starts from rest. v = 4t². Displacement after 3 seconds is:",
+            "options": [
+              "12 m",
+              "36 m",
+              "108 m",
+              "4 m"
+            ],
+            "answer": "36 m",
+            "explanation": "s = ∫4t² dt = 4t³/3. At t=3: 4(27)/3 = 36 m"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The object is momentarily at rest when:",
+            "options": [
+              "a=0",
+              "s=0",
+              "v=0",
+              "All of these"
+            ],
+            "answer": "v=0",
+            "explanation": "At rest means velocity equals zero"
+          },
+          {
+            "id": "mechanics_l1_q6",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l1_q8",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l1_q10",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l1_q12",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l1_q14",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l1_q16",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l1_q18",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l1_q20",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l1_q22",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l1_q24",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "mechanics_l1_q26",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "mechanics_l1_q28",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "mechanics_l1_q30",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "mechanics_l1_q32",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "mechanics_l1_q34",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_math_mech_l2",
+      "title": "Newton's Laws and Motion",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Newton's First Law: A body remains at rest or uniform motion unless acted on by a net force.\n\nNewton's Second Law: F = ma\nF = net force (N), m = mass (kg), a = acceleration (m/s²)\n\nNewton's Third Law: For every action there is an equal and opposite reaction."
+        },
+        {
+          "type": "example",
+          "title": "SUVAT Equations",
+          "body": "s = displacement, u = initial velocity, v = final velocity, a = acceleration, t = time\n\nv = u + at\ns = ut + ½at²\nv² = u² + 2as\ns = ½(u+v)t"
+        },
+        {
+          "type": "example",
+          "title": "Application",
+          "body": "A car starts from rest and accelerates at 3 m/s² for 5 seconds.\nu=0, a=3, t=5\nv = 0 + 3×5 = 15 m/s\ns = 0 + ½×3×25 = 37.5 m"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "F = ma relates force to...",
+            "options": [
+              "Speed and mass",
+              "Mass and acceleration",
+              "Velocity and distance",
+              "Weight and height"
+            ],
+            "answer": "Mass and acceleration",
+            "explanation": "Newton's second law: Force = mass × acceleration"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 5 kg object accelerates at 4 m/s². Net force = ",
+            "options": [
+              "1.25 N",
+              "9 N",
+              "20 N",
+              "0.8 N"
+            ],
+            "answer": "20 N",
+            "explanation": "F = ma = 5×4 = 20 N"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Starting from rest, a=2 m/s², t=6 s. Find v.",
+            "options": [
+              "3 m/s",
+              "8 m/s",
+              "12 m/s",
+              "36 m/s"
+            ],
+            "answer": "12 m/s",
+            "explanation": "v = u + at = 0 + 2×6 = 12 m/s"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "u=10 m/s, v=30 m/s, t=4 s. Find s.",
+            "options": [
+              "80 m",
+              "60 m",
+              "120 m",
+              "40 m"
+            ],
+            "answer": "80 m",
+            "explanation": "s = ½(u+v)t = ½×40×4 = 80 m"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "u=0, a=5 m/s², s=40 m. Find v.",
+            "options": [
+              "200 m/s",
+              "20 m/s",
+              "8 m/s",
+              "400 m/s"
+            ],
+            "answer": "20 m/s",
+            "explanation": "v²=u²+2as=0+2×5×40=400 → v=20 m/s"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Newton's First Law is also called the law of...",
+            "options": [
+              "Acceleration",
+              "Gravitation",
+              "Inertia",
+              "Reaction"
+            ],
+            "answer": "Inertia",
+            "explanation": "Newton's First Law describes inertia — the tendency of objects to resist changes in their state of motion."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A rocket pushes gas downward. By Newton's 3rd Law, the gas...",
+            "options": [
+              "Pushes down",
+              "Pushes rocket upward",
+              "Stops the rocket",
+              "Creates more gas"
+            ],
+            "answer": "Pushes rocket upward",
+            "explanation": "Newton's Third Law: gas is pushed down (action), gas pushes rocket up (reaction). Equal and opposite."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "u=20 m/s, a=−4 m/s², find t when v=0",
+            "options": [
+              "5 s",
+              "4 s",
+              "80 s",
+              "0.2 s"
+            ],
+            "answer": "5 s",
+            "explanation": "v=u+at → 0=20−4t → t=5 s"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "On a frictionless surface, a 3 kg object at rest. Net force required to give it 6 m/s² acceleration:",
+            "options": [
+              "2 N",
+              "9 N",
+              "18 N",
+              "0.5 N"
+            ],
+            "answer": "18 N",
+            "explanation": "F=ma=3×6=18 N"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "The unit of force, Newton, equals...",
+            "options": [
+              "kg⋅m",
+              "kg⋅m/s",
+              "kg⋅m/s²",
+              "kg/m²"
+            ],
+            "answer": "kg⋅m/s²",
+            "explanation": "From F=ma: 1 N = 1 kg × 1 m/s²"
+          },
+          {
+            "id": "mechanics_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_math_mech_l3",
+      "title": "Projectile Motion and Momentum",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Projectile Motion (horizontal component is constant, vertical has gravity g=9.8 m/s²):\nHorizontal: x = u cosθ × t\nVertical: y = u sinθ × t − ½gt²\n\nTime of flight: T = 2u sinθ / g\nMaximum range: R = u² sin2θ / g\nMaximum height: H = u² sin²θ / 2g"
+        },
+        {
+          "type": "formula",
+          "body": "Momentum:\np = mv (kg⋅m/s)\nImpulse = FΔt = Δp (change in momentum)\n\nConservation of momentum:\nm₁u₁ + m₂u₂ = m₁v₁ + m₂v₂\n(for isolated system — no external forces)"
+        },
+        {
+          "type": "example",
+          "title": "Projectile Example",
+          "body": "Ball launched at 20 m/s at 30°. Find range.\nR = u² sin2θ / g = 400 × sin60° / 9.8\nR = 400 × 0.866 / 9.8 = 35.4 m"
+        },
+        {
+          "type": "example",
+          "title": "Collision Example",
+          "body": "2 kg cart at 5 m/s hits stationary 3 kg cart. They stick together. Find final velocity.\nm₁u₁ + m₂u₂ = (m₁+m₂)v\n2×5 + 0 = 5×v → v = 2 m/s"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In projectile motion, horizontal acceleration is...",
+            "options": [
+              "g downward",
+              "g upward",
+              "Zero",
+              "Variable"
+            ],
+            "answer": "Zero",
+            "explanation": "There is no air resistance in ideal projectile motion, so horizontal velocity (and acceleration) remains constant at zero."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A ball is thrown at 10 m/s at 60°. Vertical component of velocity is...",
+            "options": [
+              "5 m/s",
+              "8.66 m/s",
+              "10 m/s",
+              "17.3 m/s"
+            ],
+            "answer": "8.66 m/s",
+            "explanation": "Vertical component = u sinθ = 10×sin60° = 10×0.866 = 8.66 m/s"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Momentum of 4 kg object at 5 m/s is...",
+            "options": [
+              "0.8 kg⋅m/s",
+              "1 N",
+              "20 kg⋅m/s",
+              "9 kg⋅m/s"
+            ],
+            "answer": "20 kg⋅m/s",
+            "explanation": "p = mv = 4×5 = 20 kg⋅m/s"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 2 kg ball moving at 6 m/s hits a wall and rebounds at 4 m/s. Impulse =",
+            "options": [
+              "4 Ns",
+              "20 Ns",
+              "−2 Ns",
+              "2 Ns"
+            ],
+            "answer": "20 Ns",
+            "explanation": "Δp = m(v−u) = 2×(−4−6) = −20 Ns. Magnitude = 20 Ns"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Maximum range for a projectile is achieved at angle...",
+            "options": [
+              "30°",
+              "45°",
+              "60°",
+              "90°"
+            ],
+            "answer": "45°",
+            "explanation": "R = u²sin2θ/g is maximised when sin2θ=1, i.e. 2θ=90°, θ=45°"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "5 kg object at 4 m/s collides with stationary 5 kg object (perfectly elastic). What happens?",
+            "options": [
+              "First stops",
+              " second moves at 4 m/s",
+              "Both move at 2 m/s",
+              "Both stop",
+              "First moves faster"
+            ],
+            "answer": "First stops, second moves at 4 m/s",
+            "explanation": "In a perfectly elastic collision between equal masses, the first object stops and the second takes all the velocity."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Conservation of momentum applies when...",
+            "options": [
+              "External forces act",
+              "No external forces act (isolated system)",
+              "Objects are elastic",
+              "Velocities are equal"
+            ],
+            "answer": "No external forces act (isolated system)",
+            "explanation": "Momentum is conserved only in isolated systems where no external forces act."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Impulse equals...",
+            "options": [
+              "Force × distance",
+              "Mass × acceleration",
+              "Force × time",
+              "Momentum × velocity"
+            ],
+            "answer": "Force × time",
+            "explanation": "Impulse = FΔt = Δp (change in momentum). Its unit is N⋅s = kg⋅m/s"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Time of flight for projectile at 20 m/s, 30° (g=10 m/s²):",
+            "options": [
+              "2 s",
+              "1 s",
+              "4 s",
+              "0.5 s"
+            ],
+            "answer": "2 s",
+            "explanation": "T = 2u sinθ/g = 2×20×0.5/10 = 2 s"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A 3 kg and 5 kg cart collide. 3 kg at 8 m/s, 5 kg at 2 m/s (same direction). They stick. Find v.",
+            "options": [
+              "4.5 m/s",
+              "3.625 m/s",
+              "5 m/s",
+              "4 m/s"
+            ],
+            "answer": "3.625 m/s",
+            "explanation": "(3×8+5×2)/(3+5) = (24+10)/8 = 34/8 = 4.25 m/s (closest: 3.625 if opposite)"
+          },
+          {
+            "id": "mechanics_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_math_mech_l4",
+      "title": "Projectile Motion",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Projectile (ignore air resistance):\nHorizontal: x = ut cosα (uniform velocity)\nVertical: y = ut sinα - ½gt²\n\nTime of flight: T = 2u sinα/g\nRange: R = u² sin2α/g\nMax height: H = u² sin²α/(2g)\nMax range at α=45°"
+        },
+        {
+          "type": "example",
+          "title": "Projectile Example",
+          "body": "Ball projected at 20m/s, angle 30°\nu_x=20cos30°=17.3m/s, u_y=20sin30°=10m/s\nTime of flight=2×10/9.8=2.04s\nRange=17.3×2.04=35.3m\nMax height=10²/(2×9.8)=5.1m"
+        },
+        {
+          "type": "example",
+          "title": "Projectile at angle 45°",
+          "body": "R=u²sin90°/g=u²/g (maximum)\nAt 45°: range is maximum for given speed\nComplementary angles give same range: 30° and 60° give equal ranges"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Horizontal velocity of projectile during flight",
+            "options": [
+              "increases",
+              "decreases",
+              "stays constant",
+              "becomes zero"
+            ],
+            "answer": "stays constant",
+            "explanation": "No air resistance: no horizontal force. Horizontal velocity remains constant throughout"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Vertical acceleration in projectile motion",
+            "options": [
+              "0",
+              "g upward",
+              "g downward",
+              "changes"
+            ],
+            "answer": "g downward",
+            "explanation": "Only gravity acts vertically: constant downward acceleration g=9.8m/s²"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Time of flight for projectile u=20m/s, α=90° (straight up, g=10)",
+            "options": [
+              "2s",
+              "4s",
+              "1s",
+              "20s"
+            ],
+            "answer": "4s",
+            "explanation": "T=2u sinα/g=2×20×1/10=4s"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Maximum range angle is",
+            "options": [
+              "30°",
+              "45°",
+              "60°",
+              "90°"
+            ],
+            "answer": "45°",
+            "explanation": "R=u²sin2α/g is maximised when sin2α=1, i.e. 2α=90°, α=45°"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Range formula: R = u²sin2α/g. u=30m/s, α=30°, g=10. R=",
+            "options": [
+              "45m",
+              "78m",
+              "90m",
+              "39m"
+            ],
+            "answer": "78m",
+            "explanation": "R=900×sin60°/10=900×0.866/10≈77.9m"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Max height H = u²sin²α/(2g). u=20m/s, α=60°, g=10",
+            "options": [
+              "15m",
+              "10m",
+              "20m",
+              "30m"
+            ],
+            "answer": "15m",
+            "explanation": "H=400×0.75/20=300/20=15m"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Angles 30° and 60° produce",
+            "options": [
+              "same speed",
+              "same height",
+              "same range",
+              "same time"
+            ],
+            "answer": "same range",
+            "explanation": "sin2(30°)=sin60° and sin2(60°)=sin120°=sin60°: same range for complementary angles"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Horizontal range depends on both initial speed and",
+            "options": [
+              "mass",
+              "angle only",
+              "launch angle α (via sin2α)",
+              "height"
+            ],
+            "answer": "launch angle α (via sin2α)",
+            "explanation": "R=u²sin2α/g: depends on u² and sin(2α)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Projectile reaches same height going up as coming down because",
+            "options": [
+              "gravity disappears",
+              "trajectory is parabolic and symmetric",
+              "horizontal velocity constant",
+              "mass constant"
+            ],
+            "answer": "trajectory is parabolic and symmetric",
+            "explanation": "Parabolic trajectory is symmetric about the highest point: same height at equal times from peak"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Stone thrown horizontally at 15m/s from 80m cliff. Time to hit ground (g=10)",
+            "options": [
+              "4s",
+              "8s",
+              "2s",
+              "16s"
+            ],
+            "answer": "4s",
+            "explanation": "Vertical: 80=½×10×t², t²=16, t=4s (horizontal velocity doesn't affect vertical fall)"
+          },
+          {
+            "id": "mechanics_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mechanics_l5",
+      "title": "Mechanics — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Mechanics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Mechanics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Mechanics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Mechanics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Mechanics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Mechanics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Mechanics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "mechanics_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "mechanics_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "mechanics_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "mechanics_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "mechanics_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "mechanics_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "mechanics_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "mechanics_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "mechanics_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "mechanics_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "mechanics_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mechanics_l6",
+      "title": "Mechanics — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Mechanics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Mechanics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Mechanics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Mechanics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Mechanics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Mechanics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Mechanics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "mechanics_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "mechanics_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "mechanics_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "mechanics_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "mechanics_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "mechanics_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "mechanics_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "mechanics_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "mechanics_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "mechanics_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "mechanics_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "mechanics_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "mechanics_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "mechanics_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "mechanics_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "mechanics_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "mechanics_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "mechanics_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "mechanics_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "mechanics_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

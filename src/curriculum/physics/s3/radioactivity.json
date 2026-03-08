@@ -1,0 +1,1840 @@
+{
+  "topic_id": "radioactivity",
+  "topic_title": "Radioactivity",
+  "subject": "physics",
+  "class_level": "S3",
+  "lessons": [
+    {
+      "id": "radioactivity_l1",
+      "title": "Radioactive Decay and Nuclear Radiation",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Radioactivity is the spontaneous emission of radiation from unstable atomic nuclei. When a nucleus is unstable, it decays by emitting particles or energy to become more stable. This process is random and cannot be sped up or slowed down by external conditions."
+        },
+        {
+          "type": "formula",
+          "body": "The three types of nuclear radiation:\nAlpha (α): 2 protons + 2 neutrons (helium nucleus). Charge: +2\nBeta (β): high-speed electron from nucleus. Charge: −1\nGamma (γ): high-frequency electromagnetic radiation. No charge, no mass"
+        },
+        {
+          "type": "example",
+          "title": "Penetrating Power and Ionisation",
+          "body": "Alpha (α):\n• Penetration: stopped by a sheet of paper or few cm of air\n• Ionisation: STRONGEST ioniser\n• Most dangerous if inhaled/ingested (inside body)\n\nBeta (β):\n• Penetration: stopped by a few mm of aluminium\n• Ionisation: moderate\n\nGamma (γ):\n• Penetration: needs several cm of lead or metres of concrete\n• Ionisation: weakest ioniser\n• Most dangerous externally (penetrates the body)"
+        },
+        {
+          "type": "formula",
+          "body": "Nuclear Equations:\nAlpha decay: mass number decreases by 4, atomic number decreases by 2\n²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He\n\nBeta decay: atomic number increases by 1, mass number unchanged\n¹⁴₆C → ¹⁴₇N + ⁰₋₁e"
+        },
+        {
+          "type": "formula",
+          "body": "Half-Life (t₁/₂): time for half of the radioactive nuclei in a sample to decay.\n\nAfter 1 half-life: N/2 remain\nAfter 2 half-lives: N/4 remain\nAfter 3 half-lives: N/8 remain\nAfter n half-lives: N/2ⁿ remain"
+        },
+        {
+          "type": "example",
+          "title": "Half-Life Calculation",
+          "body": "A sample has 800 atoms. Half-life = 3 days. How many remain after 9 days?\n9 days = 3 half-lives\nAfter 3 half-lives: 800/2³ = 800/8 = 100 atoms remain"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which radiation has the greatest penetrating power?",
+            "options": [
+              "Alpha",
+              "Beta",
+              "Gamma",
+              "They are equal"
+            ],
+            "answer": "Gamma",
+            "explanation": "Gamma radiation penetrates furthest — it requires lead or thick concrete to stop it."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "An alpha particle consists of:",
+            "options": [
+              "2 electrons and 2 neutrons",
+              "2 protons and 2 neutrons",
+              "1 proton and 1 neutron",
+              "4 electrons"
+            ],
+            "answer": "2 protons and 2 neutrons",
+            "explanation": "An alpha particle is a helium-4 nucleus: 2 protons and 2 neutrons."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What stops alpha radiation?",
+            "options": [
+              "Lead",
+              "Aluminium",
+              "Paper or a few cm of air",
+              "Concrete"
+            ],
+            "answer": "Paper or a few cm of air",
+            "explanation": "Alpha particles are heavy and slow — stopped by paper or a few centimetres of air."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In alpha decay, the mass number:",
+            "options": [
+              "Increases by 4",
+              "Decreases by 4",
+              "Stays the same",
+              "Decreases by 2"
+            ],
+            "answer": "Decreases by 4",
+            "explanation": "An alpha particle has mass number 4. When emitted, mass number of parent decreases by 4."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Half-life is the time for:",
+            "options": [
+              "All atoms to decay",
+              "Half the sample to decay",
+              "The sample to lose half its mass",
+              "Half the radiation to be emitted"
+            ],
+            "answer": "Half the sample to decay",
+            "explanation": "Half-life is the time for half of the radioactive atoms in a sample to decay."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A sample of 1600 atoms. After 2 half-lives, how many remain?",
+            "options": [
+              "800",
+              "400",
+              "200",
+              "100"
+            ],
+            "answer": "400",
+            "explanation": "After 2 half-lives: 1600/2² = 1600/4 = 400 atoms."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Beta radiation is:",
+            "options": [
+              "A helium nucleus",
+              "An electromagnetic wave",
+              "A high-speed electron",
+              "A neutron"
+            ],
+            "answer": "A high-speed electron",
+            "explanation": "Beta particles are high-speed electrons emitted from the nucleus during beta decay."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Gamma radiation has:",
+            "options": [
+              "Mass 4, charge +2",
+              "Mass 0, charge −1",
+              "No mass and no charge",
+              "Mass 1, charge 0"
+            ],
+            "answer": "No mass and no charge",
+            "explanation": "Gamma radiation is electromagnetic — it has no mass and no charge."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Which radiation is most ionising?",
+            "options": [
+              "Gamma",
+              "Beta",
+              "X-rays",
+              "Alpha"
+            ],
+            "answer": "Alpha",
+            "explanation": "Alpha particles are the strongest ionisers because they are large, slow, and highly charged."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Half-life = 5 years. After 15 years, what fraction of the sample remains?",
+            "options": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16"
+            ],
+            "answer": "1/8",
+            "explanation": "15 years = 3 half-lives. Fraction remaining = (1/2)³ = 1/8."
+          },
+          {
+            "id": "radioactivity_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "radioactivity_l2",
+      "title": "Uses and Dangers of Radiation",
+      "duration_minutes": 22,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "While radioactive materials are dangerous, they have many important applications in medicine, industry, and energy production. Understanding both uses and safety measures is essential."
+        },
+        {
+          "type": "example",
+          "title": "Medical Uses",
+          "body": "Cancer treatment (radiotherapy): gamma rays from Cobalt-60 kill cancer cells\nDiagnosis (tracers): radioactive iodine-131 accumulates in thyroid — scanned to detect problems\nSterilisation: gamma rays sterilise medical equipment without heat\nPET scans: positron emitters trace metabolic activity in the brain"
+        },
+        {
+          "type": "example",
+          "title": "Industrial Uses",
+          "body": "Thickness gauges: beta radiation measures paper/metal sheet thickness\nSmoke detectors: alpha source (Americium-241) ionises air — smoke breaks current, triggering alarm\nRadiocarbon dating: Carbon-14 (half-life 5730 years) used to date ancient organic material\nNuclear power stations: controlled fission of Uranium-235 produces enormous amounts of electricity"
+        },
+        {
+          "type": "text",
+          "body": "Dangers of radiation:\n• Ionisation damages DNA, potentially causing mutations and cancer\n• High doses cause radiation sickness (nausea, hair loss, organ failure)\n• Long-term low-dose exposure increases cancer risk\n• Alpha particles most dangerous internally (inside body)"
+        },
+        {
+          "type": "formula",
+          "body": "Safety precautions:\n• Wear protective clothing and dosimeter badges\n• Handle sources with long-handled tongs (never with bare hands)\n• Store radioactive materials in lead-lined containers\n• Minimise time of exposure\n• Maximise distance from source (intensity drops with square of distance)\n• Use lead/concrete shielding"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Radiocarbon dating uses Carbon-14 because:",
+            "options": [
+              "It has a very short half-life",
+              "It has a half-life of ~5730 years (useful timescale)",
+              "It emits gamma rays",
+              "It is not radioactive"
+            ],
+            "answer": "It has a half-life of ~5730 years (useful timescale)",
+            "explanation": "Carbon-14's half-life of ~5730 years is ideal for dating objects thousands of years old."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "How do smoke detectors use radioactivity?",
+            "options": [
+              "Gamma rays heat air",
+              "Alpha source ionises air; smoke stops ionisation, triggering alarm",
+              "Beta rays detect smoke particles",
+              "Gamma rays react with smoke chemically"
+            ],
+            "answer": "Alpha source ionises air; smoke stops ionisation, triggering alarm",
+            "explanation": "An alpha source (Americium-241) ionises air allowing current to flow. Smoke absorbs alpha particles, breaking the current and triggering the alarm."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Why is gamma radiation used to sterilise medical equipment?",
+            "options": [
+              "It is cheap",
+              "It penetrates packaging and kills bacteria without heat",
+              "It is not harmful",
+              "It makes instruments stronger"
+            ],
+            "answer": "It penetrates packaging and kills bacteria without heat",
+            "explanation": "Gamma radiation penetrates sealed packaging and kills microorganisms without needing to open or heat the equipment."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why should radioactive sources be handled with tongs?",
+            "options": [
+              "They are too heavy to pick up",
+              "To reduce exposure by maximising distance",
+              "They are magnetic",
+              "Tongs are required by law only"
+            ],
+            "answer": "To reduce exposure by maximising distance",
+            "explanation": "Greater distance from the source reduces radiation exposure."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "What type of radiation is used in cancer radiotherapy?",
+            "options": [
+              "Alpha",
+              "Beta",
+              "Gamma",
+              "Infrared"
+            ],
+            "answer": "Gamma",
+            "explanation": "Gamma radiation from Cobalt-60 is used to target and kill cancer cells in radiotherapy."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is alpha radiation most dangerous inside the body?",
+            "options": [
+              "It travels fastest",
+              "It has the most penetrating power",
+              "It causes the most ionisation and damage to nearby cells",
+              "It converts to gamma inside the body"
+            ],
+            "answer": "It causes the most ionisation and damage to nearby cells",
+            "explanation": "Alpha particles are the strongest ionisers. Inside the body, they are close to cells and cause extensive DNA damage."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Radioactive tracers in medicine are usually:",
+            "options": [
+              "Alpha emitters with long half-lives",
+              "Short half-life gamma/beta emitters that leave the body quickly",
+              "Stable isotopes",
+              "Only used for brain scans"
+            ],
+            "answer": "Short half-life gamma/beta emitters that leave the body quickly",
+            "explanation": "Medical tracers must emit detectable radiation (gamma/beta) and have short half-lives so they decay quickly and don't remain harmful in the body."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Nuclear power stations generate electricity through:",
+            "options": [
+              "Nuclear fusion",
+              "Controlled nuclear fission",
+              "Radioactive beta decay",
+              "Gamma ray heating"
+            ],
+            "answer": "Controlled nuclear fission",
+            "explanation": "Nuclear power stations split (fission) heavy nuclei like Uranium-235, releasing enormous heat energy to generate electricity."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "What material is used to store radioactive sources safely?",
+            "options": [
+              "Glass containers",
+              "Plastic bags",
+              "Lead-lined containers",
+              "Wooden boxes"
+            ],
+            "answer": "Lead-lined containers",
+            "explanation": "Lead is dense and absorbs radiation effectively, making it ideal for shielding and storage."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Radiation causes cancer by:",
+            "options": [
+              "Heating cells",
+              "Damaging/mutating DNA",
+              "Dehydrating cells",
+              "Producing acid in cells"
+            ],
+            "answer": "Damaging/mutating DNA",
+            "explanation": "Ionising radiation damages DNA strands. If the damage causes mutations in cell division genes, this can lead to cancer."
+          },
+          {
+            "id": "radioactivity_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_phy_rad_l3",
+      "title": "Nuclear Reactions and Half-Life",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Half-life (t½): time for half the radioactive nuclei to decay\nN = N₀ (1/2)^(t/t½)\nN₀ = initial number of atoms, N = remaining atoms after time t\n\nActivity A = λN\nλ = decay constant = 0.693/t½\nA decreases by half every half-life"
+        },
+        {
+          "type": "example",
+          "title": "Half-life Calculation",
+          "body": "A sample has 8000 radioactive atoms. t½ = 5 years.\nAfter 5 years: 4000 atoms\nAfter 10 years: 2000 atoms\nAfter 15 years: 1000 atoms\nAfter 20 years: 500 atoms\n(Fraction remaining after 4 half-lives = (1/2)⁴ = 1/16)"
+        },
+        {
+          "type": "example",
+          "title": "Applications of Half-life",
+          "body": "Carbon-14 dating: t½ = 5730 years → dates organic material up to ~50,000 years old\nUranium-238: t½ = 4.5 billion years → dates rocks\nTechnetium-99m: t½ = 6 hours → safe medical tracer\nCobalt-60: t½ = 5.3 years → cancer treatment radiation"
+        },
+        {
+          "type": "formula",
+          "body": "Nuclear equations:\nα decay: ²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He\nβ⁻ decay: ¹⁴₆C → ¹⁴₇N + ⁰₋₁e\nγ emission: no change in mass or atomic number\nConservation: mass numbers and atomic numbers must balance"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Half-life is...",
+            "options": [
+              "Time for all atoms to decay",
+              "Time for half the radioactive atoms to decay",
+              "Time for activity to double",
+              "Time for one atom to decay"
+            ],
+            "answer": "Time for half the radioactive atoms to decay",
+            "explanation": "Half-life (t½) is the time taken for exactly half the radioactive nuclei in a sample to decay."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A sample starts with 1600 atoms. After 3 half-lives remain...",
+            "options": [
+              "800",
+              "400",
+              "200",
+              "100"
+            ],
+            "answer": "200",
+            "explanation": "After 3 half-lives: 1600 × (1/2)³ = 1600/8 = 200 atoms"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Carbon-14 dating is used to...",
+            "options": [
+              "Date ancient rocks",
+              "Date organic materials up to ~50",
+              "000 years old",
+              "Measure temperature",
+              "Map ocean floors"
+            ],
+            "answer": "Date organic materials up to ~50,000 years old",
+            "explanation": "C-14 (t½=5730 years) is in all living organisms. After death, C-14 decays. Measuring ratio to C-12 gives age."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why is Tc-99m ideal for medical imaging?",
+            "options": [
+              "Long half-life → stays in body",
+              "Short t½=6h (safe dose) and emits γ rays for detection",
+              "It is very cheap",
+              "It emits α particles"
+            ],
+            "answer": "Short t½=6h (safe dose) and emits γ rays for detection",
+            "explanation": "Medical tracers need: short t½ (low radiation dose), γ emission (detected outside body), right chemistry to target organ."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In α decay, the nucleus loses...",
+            "options": [
+              "2 protons and 2 neutrons (mass number −4",
+              " atomic number −2)",
+              "1 neutron",
+              "1 electron",
+              "Only energy"
+            ],
+            "answer": "2 protons and 2 neutrons (mass number −4, atomic number −2)",
+            "explanation": "Alpha particle = helium nucleus = 2p + 2n. Mass number decreases by 4, atomic number by 2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In β⁻ decay, a neutron becomes a proton by emitting...",
+            "options": [
+              "Alpha particle",
+              "Positron",
+              "Electron (beta particle)",
+              "Gamma ray"
+            ],
+            "answer": "Electron (beta particle)",
+            "explanation": "In β⁻ decay: neutron → proton + electron + antineutrino. Atomic number increases by 1, mass unchanged."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Gamma radiation accompanies alpha or beta decay. What changes?",
+            "options": [
+              "Mass number",
+              "Atomic number",
+              "Neither (γ is just energy release)",
+              "Both"
+            ],
+            "answer": "Neither (γ is just energy release)",
+            "explanation": "Gamma emission just releases excess energy from an excited nucleus — no change in mass or atomic number."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Activity A = λN means activity is proportional to...",
+            "options": [
+              "Half-life",
+              "Number of radioactive atoms remaining",
+              "Square of N",
+              "Time"
+            ],
+            "answer": "Number of radioactive atoms remaining",
+            "explanation": "Activity (decays/second) = λ × N. More atoms remaining → more decays per second."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Uranium-238 (t½=4.5 billion years) is used to...",
+            "options": [
+              "Medical imaging",
+              "Date the age of ancient rocks and Earth",
+              "Power spacecraft",
+              "Treat cancer"
+            ],
+            "answer": "Date the age of ancient rocks and Earth",
+            "explanation": "Very long half-life → still decaying slowly after billions of years → compare U-238 to its decay product Pb-206 to date rocks."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A nuclear equation must conserve...",
+            "options": [
+              "Mass number and atomic number on both sides",
+              "Energy only",
+              "Number of neutrons only",
+              "Number of protons only"
+            ],
+            "answer": "Mass number and atomic number on both sides",
+            "explanation": "In nuclear equations, both the total mass number (top) and total atomic number (bottom) must balance on each side."
+          },
+          {
+            "id": "radioactivity_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "radioactivity_l4",
+      "title": "Radioactivity — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Radioactivity. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Radioactivity concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Radioactivity builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Radioactivity. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Radioactivity. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Radioactivity include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Radioactivity. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "radioactivity_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l4_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l4_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l4_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l4_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "radioactivity_l4_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "radioactivity_l4_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "radioactivity_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "radioactivity_l4_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "radioactivity_l4_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "radioactivity_l4_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "radioactivity_l4_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "radioactivity_l4_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "radioactivity_l4_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "radioactivity_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "radioactivity_l5",
+      "title": "Radioactivity — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Radioactivity. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Radioactivity concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Radioactivity builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Radioactivity. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Radioactivity. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Radioactivity include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Radioactivity. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "radioactivity_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "radioactivity_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "radioactivity_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "radioactivity_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "radioactivity_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "radioactivity_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "radioactivity_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "radioactivity_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "radioactivity_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "radioactivity_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "radioactivity_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "radioactivity_l6",
+      "title": "Radioactivity — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Radioactivity. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Radioactivity concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Radioactivity builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Radioactivity. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Radioactivity. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Radioactivity include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Radioactivity. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "radioactivity_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "radioactivity_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "radioactivity_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "radioactivity_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "radioactivity_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "radioactivity_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "radioactivity_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "radioactivity_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "radioactivity_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "radioactivity_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "radioactivity_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "radioactivity_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "radioactivity_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "radioactivity_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "radioactivity_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "radioactivity_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "radioactivity_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "radioactivity_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "radioactivity_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "radioactivity_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

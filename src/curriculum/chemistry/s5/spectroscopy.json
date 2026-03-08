@@ -1,0 +1,1727 @@
+{
+  "topic_id": "spectroscopy",
+  "topic_title": "Spectroscopy",
+  "subject": "chemistry",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "spectroscopy_l1",
+      "title": "IR, Mass Spectrometry & NMR Basics",
+      "duration_minutes": 30,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Spectroscopy identifies molecular structure using different types of radiation. The three main techniques are infrared (IR), mass spectrometry (MS), and nuclear magnetic resonance (NMR)."
+        },
+        {
+          "type": "formula",
+          "body": "IR Spectroscopy: identifies functional groups\n- O-H stretch: 2500-3300 cm⁻¹ (carboxylic acid, broad)\n- O-H stretch: 3200-3600 cm⁻¹ (alcohol)\n- C=O stretch: 1630-1820 cm⁻¹\n- N-H: 3300-3500 cm⁻¹\n\nMass Spec: M⁺ peak = molecular mass\nFragmentation pattern identifies structure"
+        },
+        {
+          "type": "example",
+          "title": "Reading an IR Spectrum",
+          "body": "If an IR spectrum shows:\n- Broad absorption at 2500-3300 cm⁻¹ → carboxylic acid O-H\n- Sharp absorption at ~1720 cm⁻¹ → C=O\nConclusion: compound contains COOH group (carboxylic acid)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What does the M⁺ peak in mass spectrometry tell you?",
+            "options": [
+              "Functional groups present",
+              "Relative molecular mass",
+              "Number of carbon atoms",
+              "Type of bonding"
+            ],
+            "answer": "Relative molecular mass",
+            "explanation": "The molecular ion peak (M⁺) corresponds to the molecular mass of the compound"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A broad IR absorption at 2500-3300 cm⁻¹ suggests:",
+            "options": [
+              "Alkene",
+              "Alcohol O-H",
+              "Carboxylic acid O-H",
+              "C-H bond"
+            ],
+            "answer": "Carboxylic acid O-H",
+            "explanation": "Carboxylic acids show a characteristic broad O-H stretch in this region"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "C=O stretching frequency in IR appears around:",
+            "options": [
+              "500 cm⁻¹",
+              "1700 cm⁻¹",
+              "3000 cm⁻¹",
+              "4000 cm⁻¹"
+            ],
+            "answer": "1700 cm⁻¹",
+            "explanation": "The C=O bond absorbs at approximately 1630-1820 cm⁻¹"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "NMR spectroscopy is based on:",
+            "options": [
+              "Electron spin",
+              "Proton (hydrogen nucleus) spin in a magnetic field",
+              "Infrared absorption",
+              "Ionisation energy"
+            ],
+            "answer": "Proton (hydrogen nucleus) spin in a magnetic field",
+            "explanation": "¹H NMR detects hydrogen atoms in different chemical environments"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In mass spectrometry, the base peak is:",
+            "options": [
+              "The molecular ion",
+              "The most abundant fragment",
+              "The lightest fragment",
+              "Always at m/z = 1"
+            ],
+            "answer": "The most abundant fragment",
+            "explanation": "The base peak is the tallest peak in the mass spectrum — the most common fragment"
+          },
+          {
+            "id": "spectroscopy_l1_q6",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l1_q8",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l1_q10",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l1_q12",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l1_q14",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l1_q16",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l1_q18",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l1_q20",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l1_q22",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l1_q24",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "spectroscopy_l1_q26",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "spectroscopy_l1_q28",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "spectroscopy_l1_q30",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "spectroscopy_l1_q32",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "spectroscopy_l1_q34",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectroscopy_l2",
+      "title": "Mass Spectrometry and NMR Spectroscopy",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Spectroscopic techniques allow chemists to determine the structure of organic compounds. The main techniques at A-level are mass spectrometry (MS), infrared spectroscopy (IR), and nuclear magnetic resonance (NMR)."
+        },
+        {
+          "type": "example",
+          "title": "Mass Spectrometry",
+          "body": "Principle: molecules are vaporised and ionised. Ions accelerated and deflected by magnetic field. Detected by mass/charge ratio (m/z).\n\nMolecular ion peak (M⁺): gives molecular mass\nBase peak: most abundant fragment\nFragmentation pattern helps identify structure\n\nIsotope peaks: M+1 for ¹³C, M+2 for Cl and Br\nChlorine: M and M+2 peaks in 3:1 ratio (³⁵Cl:³⁷Cl)\nBromine: M and M+2 peaks in 1:1 ratio (⁷⁹Br:⁸¹Br)"
+        },
+        {
+          "type": "example",
+          "title": "NMR Spectroscopy",
+          "body": "¹H NMR detects proton environments in a molecule\nChemical shift (δ, ppm) indicates type of proton:\n• TMS (reference): δ = 0\n• CH₃−: δ ≈ 1\n• −CH₂−: δ ≈ 1.5\n• −OH: δ ≈ 2-5\n• −CHO: δ ≈ 9-10\n• ArH (aromatic): δ ≈ 7-8\n\nSplitting pattern: n+1 rule (n adjacent H's → n+1 peaks)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The molecular ion peak (M⁺) in mass spectrometry gives...",
+            "options": [
+              "The most abundant fragment",
+              "The molecular mass",
+              "The base peak",
+              "The number of carbons"
+            ],
+            "answer": "The molecular mass",
+            "explanation": "The molecular ion peak M⁺ is formed when the molecule loses one electron. Its m/z value = relative molecular mass."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In mass spectrometry, if two peaks appear at M and M+2 in 3:1 ratio, the compound contains...",
+            "options": [
+              "Bromine",
+              "Chlorine",
+              "Nitrogen",
+              "Sulphur"
+            ],
+            "answer": "Chlorine",
+            "explanation": "³⁵Cl:³⁷Cl = 3:1 abundance ratio, giving M and M+2 peaks in 3:1 ratio."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "TMS is used in NMR as...",
+            "options": [
+              "A solvent",
+              "An internal reference (δ = 0)",
+              "A catalyst",
+              "A reactant"
+            ],
+            "answer": "An internal reference (δ = 0)",
+            "explanation": "Tetramethylsilane (TMS) is a universal reference with all equivalent protons, set at δ = 0 ppm."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An aldehyde proton (−CHO) appears at δ ≈ ...",
+            "options": [
+              "1 ppm",
+              "4 ppm",
+              "7 ppm",
+              "9-10 ppm"
+            ],
+            "answer": "9-10 ppm",
+            "explanation": "Aldehyde protons are very deshielded (due to adjacent C=O) and appear at δ = 9-10 ppm."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In NMR, the n+1 rule predicts the number of...",
+            "options": [
+              "Peaks due to chemical shifts",
+              "Lines in the splitting pattern",
+              "Carbon atoms",
+              "Hydrogen atoms"
+            ],
+            "answer": "Lines in the splitting pattern",
+            "explanation": "A proton with n equivalent adjacent protons is split into n+1 lines (doublet, triplet, quartet etc.)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Bromine gives M and M+2 peaks in ratio...",
+            "options": [
+              "3:1",
+              "1:3",
+              "1:1",
+              "2:1"
+            ],
+            "answer": "1:1",
+            "explanation": "⁷⁹Br and ⁸¹Br are nearly equal in abundance (about 50:50), giving M and M+2 peaks of equal height."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Infrared spectroscopy identifies...",
+            "options": [
+              "Molecular mass",
+              "Functional groups by bond vibrations",
+              "Number of carbon atoms",
+              "NMR shifts"
+            ],
+            "answer": "Functional groups by bond vibrations",
+            "explanation": "IR spectroscopy detects bond vibrations. Characteristic absorption frequencies identify functional groups (−OH, C=O, N−H etc.)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A CH₃ group adjacent to no other H's gives how many NMR peaks?",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": "1",
+            "explanation": "n+1 rule: CH₃ with 0 adjacent H's → 0+1 = 1 peak (singlet)."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "In a mass spectrum, the base peak is...",
+            "options": [
+              "The molecular ion",
+              "The most abundant peak (tallest)",
+              "The lowest m/z peak",
+              "Always at m/z = 1"
+            ],
+            "answer": "The most abundant peak (tallest)",
+            "explanation": "The base peak is the tallest peak in the mass spectrum — the most abundant ion formed in fragmentation."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Aromatic protons (ArH) appear in NMR at δ ≈ ...",
+            "options": [
+              "1 ppm",
+              "4 ppm",
+              "7-8 ppm",
+              "10-12 ppm"
+            ],
+            "answer": "7-8 ppm",
+            "explanation": "Aromatic ring protons are deshielded by the ring current of delocalized electrons, appearing at δ = 7-8 ppm."
+          },
+          {
+            "id": "spectroscopy_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectroscopy_l3",
+      "title": "Mass Spectrometry and Chromatography",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Mass Spectrometry stages:\n1. Ionisation (electron bombardment)\n2. Acceleration (electric field)\n3. Deflection (magnetic field) — lighter/more charged ions deflect more\n4. Detection\n\nm/z ratio: mass-to-charge ratio\nMolecular ion peak (M⁺): gives molecular mass\nBase peak: most abundant fragment\nIsotope peaks: M+1, M+2 (e.g. ³⁵Cl/³⁷Cl)\n\nChromatography: separates mixtures based on different affinities for stationary vs mobile phase"
+        },
+        {
+          "type": "example",
+          "title": "Mass Spectrum Interpretation",
+          "body": "Ethanol (M=46): M⁺ peak at m/z=46\nFragments: m/z=45 (loss of H, CH₃CH₂O⁺), m/z=31 (CH₂OH⁺), m/z=29 (CHO⁺)\n\nChlorine isotopes: ³⁵Cl:³⁷Cl = 3:1\nCH₃Cl M⁺: peaks at m/z=50 and m/z=52 in 3:1 ratio"
+        },
+        {
+          "type": "example",
+          "title": "Types of Chromatography",
+          "body": "TLC (thin layer): silica on plate, UV/iodine visualization, Rf = distance spot/distance solvent\nGas chromatography (GC): volatile compounds, separated by column, identified by retention time\nHPLC: high-performance liquid, non-volatile compounds\nColumn chromatography: large-scale separation\nGC-MS: combined — separate then identify each component by mass spectrum"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The molecular ion peak in a mass spectrum gives",
+            "options": [
+              "the base peak",
+              "the molecular mass of the compound",
+              "the number of carbons",
+              "isotope ratio"
+            ],
+            "answer": "the molecular mass of the compound",
+            "explanation": "M⁺ peak: the intact molecule minus one electron. m/z value (for z=1) = molecular mass"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In mass spectrometry, ions are separated by",
+            "options": [
+              "size",
+              "mass-to-charge ratio (m/z) in magnetic field",
+              "colour",
+              "solubility"
+            ],
+            "answer": "mass-to-charge ratio (m/z) in magnetic field",
+            "explanation": "Magnetic field deflects ions: lighter (smaller m) and more charged (larger z) deflect more → different paths"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Chlorine has two isotopes ³⁵Cl:³⁷Cl = 3:1. Compound CH₃Cl shows M⁺ peaks at m/z=50 and 52 in ratio",
+            "options": [
+              "1:1",
+              "3:1",
+              "2:1",
+              "1:3"
+            ],
+            "answer": "3:1",
+            "explanation": "³⁵Cl compound: m/z=50. ³⁷Cl compound: m/z=52. Natural abundance ratio 3:1 reflects in spectrum"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Rf value in TLC = ",
+            "options": [
+              "distance solvent/distance spot",
+              "distance spot/distance solvent front",
+              "retention time",
+              "m/z ratio"
+            ],
+            "answer": "distance spot/distance solvent front",
+            "explanation": "Rf = (distance travelled by spot)/(distance travelled by solvent front). Characteristic for each compound in given system"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Gas chromatography separates compounds based on",
+            "options": [
+              "molecular mass",
+              "different boiling points and affinities for stationary phase",
+              "colour",
+              "charge"
+            ],
+            "answer": "different boiling points and affinities for stationary phase",
+            "explanation": "GC: mobile phase is inert gas (He/N₂); compounds partition between gas and column stationary phase, separated by affinity and volatility"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "GC-MS is powerful because",
+            "options": [
+              "it is expensive",
+              "gas chromatography separates mixture, mass spectrometry identifies each component",
+              "it uses two detectors",
+              "it is fast"
+            ],
+            "answer": "gas chromatography separates mixture, mass spectrometry identifies each component",
+            "explanation": "GC separates complex mixtures; MS provides structural identification of each separated compound — powerful combined technique"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Base peak in mass spectrum is",
+            "options": [
+              "M⁺ peak",
+              "most abundant fragment (highest peak, normalized to 100%)",
+              "lowest m/z",
+              "molecular mass"
+            ],
+            "answer": "most abundant fragment (highest peak, normalized to 100%)",
+            "explanation": "Base peak: most stable fragment, easiest bond to break. Spectra normalized with base peak = 100%"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Fragmentation in mass spectrum helps determine",
+            "options": [
+              "molecular mass only",
+              "structural information — which bonds break tells us groups present",
+              "colour",
+              "melting point"
+            ],
+            "answer": "structural information — which bonds break tells us groups present",
+            "explanation": "Fragmentation pattern: each peak corresponds to a fragment. Identifying fragments reveals molecular structure"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "In column chromatography, compound with stronger affinity for stationary phase",
+            "options": [
+              "elutes first",
+              "elutes last (travels slower through column)",
+              "doesn't separate",
+              "remains on top"
+            ],
+            "answer": "elutes last (travels slower through column)",
+            "explanation": "Stronger interaction with stationary phase → moves slower → elutes later. Weaker interaction → elutes earlier"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "M+1 peak in mass spectrum is caused by",
+            "options": [
+              "impurity",
+              "one ¹³C instead of ¹²C in the molecule (natural abundance ~1.1% per C)",
+              "fragmentation",
+              "ionisation"
+            ],
+            "answer": "one ¹³C instead of ¹²C in the molecule (natural abundance ~1.1% per C)",
+            "explanation": "¹³C natural abundance is 1.1%. Compound with n carbons has M+1 peak of n×1.1% relative to M⁺. Used to count carbons"
+          },
+          {
+            "id": "spectroscopy_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectroscopy_l4",
+      "title": "NMR and Combined Spectroscopy",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "¹H NMR (Nuclear Magnetic Resonance):\nProtons in different environments → different chemical shifts δ (ppm)\nTMS reference (δ=0)\n\nChemical shift ranges:\nδ 0-2: alkyl H (C-H)\nδ 2-4: adjacent to C=O or halogen\nδ 4-5: vinyl, C=CH, O-CH\nδ 6-8: aromatic H\nδ 9-10: aldehyde H\nδ 10-12: carboxylic acid H\n\nSpin-spin splitting (n+1 rule):\nn adjacent H → n+1 peaks"
+        },
+        {
+          "type": "example",
+          "title": "NMR Interpretation",
+          "body": "Ethanol CH₃CH₂OH:\nCH₃: δ~1.2, triplet (split by 2H of CH₂)\nCH₂: δ~3.7, quartet (split by 3H of CH₃)\nOH: δ~3.5, singlet (no adjacent H)\n\nIntegration ratios: CH₃:CH₂:OH = 3:2:1\n\nPropan-2-one (CH₃COCH₃): one peak only (all 6H equivalent), δ~2.1"
+        },
+        {
+          "type": "example",
+          "title": "Combined Identification Strategy",
+          "body": "1. Molecular formula from mass spectrum (M⁺)\n2. Degree of unsaturation = (2C+2+N-H)/2\n3. IR: identify functional groups (C=O, O-H, N-H, C≡N)\n4. ¹H NMR: number/type of H environments, integration, splitting\n5. ¹³C NMR: number of C environments\n6. Cross-reference all evidence → structural formula"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In ¹H NMR, TMS is used as reference because",
+            "options": [
+              "it is toxic",
+              "it has one sharp peak at δ=0, away from most organic signals, is inert and volatile",
+              "it is cheap",
+              "it absorbs UV"
+            ],
+            "answer": "it has one sharp peak at δ=0, away from most organic signals, is inert and volatile",
+            "explanation": "TMS (tetramethylsilane): 12 equivalent H, one sharp δ=0 peak, unreactive, easy to remove (bp 27°C)"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Aldehyde H appears at δ",
+            "options": [
+              "0-2",
+              "4-5",
+              "6-8",
+              "9-10"
+            ],
+            "answer": "9-10",
+            "explanation": "Aldehyde H (R-CHO) appears at δ 9-10 — highly deshielded by adjacent C=O"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "n+1 rule: CH₃ next to CH₂ gives CH₃ signal as",
+            "options": [
+              "singlet",
+              "doublet",
+              "triplet",
+              "quartet"
+            ],
+            "answer": "triplet",
+            "explanation": "CH₃ has 2 adjacent H (from CH₂): n=2, n+1=3 peaks = triplet"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Integration in ¹H NMR gives",
+            "options": [
+              "chemical shift",
+              "number of H in each environment (relative)"
+            ],
+            "answer": "number of H in each environment (relative)",
+            "explanation": "Integration (area under peak) is proportional to number of equivalent protons"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Aromatic H appears at δ",
+            "options": [
+              "0-2",
+              "2-4",
+              "6-8",
+              "9-10"
+            ],
+            "answer": "6-8",
+            "explanation": "Aromatic (benzene ring) H: highly deshielded by ring current, δ 6.5-8.5"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Degree of unsaturation = (2C+2-H)/2 for CₙHₘ. For C₄H₈: DoU =",
+            "options": [
+              "1",
+              "2",
+              "0",
+              "4"
+            ],
+            "answer": "1",
+            "explanation": "DoU=(2×4+2-8)/2=(10-8)/2=1. One degree: one double bond or one ring"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "¹³C NMR of propan-2-one (CH₃COCH₃) shows how many peaks?",
+            "options": [
+              "6",
+              "3",
+              "2",
+              "1"
+            ],
+            "answer": "2",
+            "explanation": "Two types of C: CH₃ (both equivalent) and C=O. Only 2 peaks in ¹³C NMR"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "IR absorption at ~1700 cm⁻¹ indicates",
+            "options": [
+              "O-H bond",
+              "C≡N",
+              "C=O (carbonyl: ketone, aldehyde, carboxylic acid)",
+              "C-H"
+            ],
+            "answer": "C=O (carbonyl: ketone, aldehyde, carboxylic acid)",
+            "explanation": "C=O stretch: strong absorption ~1680-1750 cm⁻¹. Exact position distinguishes ketone, aldehyde, acid, ester"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Broad IR absorption at 2500-3300 cm⁻¹ with peak at ~1710 cm⁻¹ indicates",
+            "options": [
+              "alcohol",
+              "ketone",
+              "carboxylic acid (O-H stretch broad + C=O)",
+              "amine"
+            ],
+            "answer": "carboxylic acid (O-H stretch broad + C=O)",
+            "explanation": "Carboxylic acid: broad O-H stretch 2500-3300 cm⁻¹ (H-bonded) AND C=O stretch ~1710 cm⁻¹"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Strategy for identifying unknown organic compound: correct order is",
+            "options": [
+              "NMR first",
+              "mass spectrum (Mᵣ) → IR (functional groups) → NMR (H environments) → propose structure",
+              "IR first",
+              "colour test"
+            ],
+            "answer": "mass spectrum (Mᵣ) → IR (functional groups) → NMR (H environments) → propose structure",
+            "explanation": "Systematic approach: establish molecular mass, identify functional groups, then H environments, cross-check with fragments"
+          },
+          {
+            "id": "spectroscopy_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l4_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l4_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l4_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectroscopy_l3",
+      "title": "NMR Spectroscopy",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Nuclear Magnetic Resonance (NMR):\nMagnetic nuclei (¹H, ¹³C) in magnetic field absorb radiofrequency radiation\nChemical shift δ (ppm): position of absorption relative to TMS (δ=0)\nDifferent environments → different δ values\nSplitting (coupling): neighbouring H atoms split peaks\nIntegration: area ∝ number of H atoms\n\nCommon ¹H chemical shifts:\nTMS: 0\nCH₃ in alkane: ~1 ppm\nC=C-H: ~5-6 ppm\nAromatic H: ~7-8 ppm\nAldehyde CHO: ~9-10 ppm\nCOOH: ~11-12 ppm"
+        },
+        {
+          "type": "example",
+          "title": "Splitting Pattern",
+          "body": "n adjacent H atoms: (n+1) peaks\n0 neighbours: singlet\n1 neighbour: doublet\n2 neighbours: triplet\n3 neighbours: quartet\n\nEthanol CH₃CH₂OH:\nCH₃: quartet (3 adjacent H on CH₂) at ~1.2ppm\nCH₂: quartet (split by CH₃, triplet) at ~3.7ppm\nOH: singlet (D₂O exchanges) at ~2-5ppm"
+        },
+        {
+          "type": "example",
+          "title": "Interpreting Spectra",
+          "body": "Step 1: Count signals → number of H environments\nStep 2: Integration → relative number of H\nStep 3: Chemical shifts → chemical environment\nStep 4: Splitting → number of adjacent H\n\nMolecular formula + NMR → structure determination"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "NMR spectroscopy is used to determine",
+            "options": [
+              "molecular mass",
+              "arrangement of hydrogen atoms in molecule (structure)",
+              "boiling point",
+              "metal content"
+            ],
+            "answer": "arrangement of hydrogen atoms in molecule (structure)",
+            "explanation": "¹H NMR: identifies number and type of H environments, connectivity → determine molecular structure"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Chemical shift δ is measured relative to",
+            "options": [
+              "water",
+              "ethanol",
+              "TMS (tetramethylsilane, δ=0)",
+              "standard hydrogen electrode"
+            ],
+            "answer": "TMS (tetramethylsilane, δ=0)",
+            "explanation": "TMS (Si(CH₃)₄): all H equivalent, set to δ=0. All other chemical shifts measured relative to this"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Aromatic H (benzene ring) appears at approximately",
+            "options": [
+              "1 ppm",
+              "5-6 ppm",
+              "7-8 ppm",
+              "11-12 ppm"
+            ],
+            "answer": "7-8 ppm",
+            "explanation": "Aromatic H: deshielded by ring current, δ≈7-8 ppm"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Aldehyde CHO proton appears far downfield (9-10 ppm) because",
+            "options": [
+              "it is adjacent to double bond only",
+              "it is strongly deshielded by adjacent electronegative oxygen and C=O",
+              "it is rare",
+              "NMR scale is reversed"
+            ],
+            "answer": "it is strongly deshielded by adjacent electronegative oxygen and C=O",
+            "explanation": "Downfield = deshielded. Aldehyde H deshielded by C=O: electrons pulled away → bare proton resonates at low field"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "n+1 rule: CH₃ group (3H) adjacent to another CH₂ (2H) gives",
+            "options": [
+              "triplet (2+1=3 peaks)",
+              "doublet",
+              "quartet",
+              "singlet"
+            ],
+            "answer": "triplet (2+1=3 peaks)",
+            "explanation": "Splitting by adjacent group: CH₃ split by 2H of adjacent CH₂: 2+1=3 peaks = triplet"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Integration in NMR tells us",
+            "options": [
+              "chemical environment",
+              "chemical shift",
+              "relative number of H atoms in each signal",
+              "coupling constants"
+            ],
+            "answer": "relative number of H atoms in each signal",
+            "explanation": "Integration: area under each peak is proportional to number of H atoms in that environment"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Equivalent hydrogen atoms give",
+            "options": [
+              "multiple signals",
+              "one signal in NMR",
+              "no signal",
+              "signals at 0 ppm"
+            ],
+            "answer": "one signal in NMR",
+            "explanation": "Chemically equivalent H atoms are in identical environments → same chemical shift → one signal"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "D₂O addition to NMR sample causes OH and NH peaks to disappear because",
+            "options": [
+              "acid added",
+              "exchangeable protons replaced by deuterium (not NMR active)",
+              "temperature changes",
+              "D₂O absorbs"
+            ],
+            "answer": "exchangeable protons replaced by deuterium (not NMR active)",
+            "explanation": "¹H NMR detects ¹H. D₂O exchanges OH/NH₂ protons for ²H (NMR silent) → those peaks vanish → confirms -OH or -NH"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "CH₃CH₂Br ¹H NMR: CH₂ signal is split into how many peaks?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "singlet"
+            ],
+            "answer": "4",
+            "explanation": "CH₂ split by adjacent CH₃ (3H): n+1 = 4 peaks (quartet)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "¹³C NMR advantage over ¹H NMR",
+            "options": [
+              "more sensitive",
+              "shows carbon skeleton (each distinct C environment gives one peak)",
+              "cheaper",
+              "faster"
+            ],
+            "answer": "shows carbon skeleton (each distinct C environment gives one peak)",
+            "explanation": "¹³C NMR: each type of carbon gives one peak → map the carbon framework of molecule directly"
+          },
+          {
+            "id": "spectroscopy_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l5_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l5_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l5_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l5_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l5_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l5_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l5_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spectroscopy_l4",
+      "title": "Mass Spectrometry and Chromatography",
+      "duration_minutes": 25,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Mass Spectrometry:\n1. Vaporise sample\n2. Ionise (electron bombardment): M → M⁺ (molecular ion, m/z = M_r)\n3. Accelerate ions\n4. Deflect in magnetic field (heavier → less deflected)\n5. Detect\n\nm/z ratio (charge=1 usually): measures relative mass\nMolecular ion peak (M⁺): gives molecular mass\nFragment ion peaks: structural information\nBase peak: most abundant fragment"
+        },
+        {
+          "type": "example",
+          "title": "MS Fragmentation",
+          "body": "Butane (C₄H₁₀, M_r=58): M⁺ at m/z=58\nCommon fragments:\nm/z=43: CH₃CH₂CH₂⁺ or CH₃CO⁺\nm/z=29: C₂H₅⁺\nm/z=15: CH₃⁺\n\nIsotope peaks: M+1, M+2 peaks\n35Cl:37Cl = 3:1 → two M⁺ peaks in ratio 3:1 for chloro compounds"
+        },
+        {
+          "type": "example",
+          "title": "Chromatography",
+          "body": "TLC (Thin Layer): Rf = distance moved by spot / distance moved by solvent\nColumn: separate mixture by differential adsorption\nGLC (Gas-Liquid): volatile compounds separated by interaction with stationary phase\nHPLC: high pressure liquid chromatography\nRetention time in GLC: identifies compounds (compare to standards)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Molecular ion peak in mass spectrum gives",
+            "options": [
+              "fragments",
+              "molecular mass (M_r) of compound",
+              "boiling point",
+              "number of carbons only"
+            ],
+            "answer": "molecular mass (M_r) of compound",
+            "explanation": "M⁺ peak: intact molecule ionised. m/z (z=1) = relative molecular mass"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Base peak in mass spectrum is",
+            "options": [
+              "molecular ion",
+              "peak at m/z=0",
+              "most abundant fragment (tallest peak)",
+              "last peak"
+            ],
+            "answer": "most abundant fragment (tallest peak)",
+            "explanation": "Base peak: assigned 100% relative intensity — most stable/abundant fragment"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Chlorine has isotopes ³⁵Cl:³⁷Cl ≈ 3:1. A compound with one Cl shows molecular ion peaks ratio of",
+            "options": [
+              "3:1 at M and M+2",
+              "1:3",
+              "1:1",
+              "2:1"
+            ],
+            "answer": "3:1 at M and M+2",
+            "explanation": "One Cl: peaks at M (³⁵Cl) and M+2 (³⁷Cl) in ratio 3:1 — diagnostic for chloro compounds"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In mass spectrometer, ions are separated by",
+            "options": [
+              "mass",
+              "charge only",
+              "mass/charge ratio",
+              "speed"
+            ],
+            "answer": "mass/charge ratio",
+            "explanation": "Magnetic field deflects ions by m/z. Different m/z → different paths → separated → detected"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Rf value in TLC = ",
+            "options": [
+              "distance solvent/distance spot",
+              "distance spot/distance solvent front",
+              "spot diameter/plate length",
+              "mobile phase speed"
+            ],
+            "answer": "distance spot/distance solvent front",
+            "explanation": "Rf = distance travelled by spot / distance travelled by solvent. 0 < Rf < 1"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Higher Rf value means compound",
+            "options": [
+              "more polar",
+              "less strongly adsorbed, moves more with solvent (less polar)",
+              "larger",
+              "more soluble in water"
+            ],
+            "answer": "less strongly adsorbed, moves more with solvent (less polar)",
+            "explanation": "High Rf: compound moves far with solvent → interacts strongly with mobile phase (non-polar) → less polar compound"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "GLC retention time is used to",
+            "options": [
+              "measure mass",
+              "identify compounds by comparing to known standards under same conditions",
+              "determine Rf",
+              "measure boiling point"
+            ],
+            "answer": "identify compounds by comparing to known standards under same conditions",
+            "explanation": "In GLC: each compound exits column after characteristic time (retention time) under given conditions — identification by comparison"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Mass spectrum fragment at m/z=15 typically indicates",
+            "options": [
+              "water loss",
+              "CO₂ loss",
+              "CH₃⁺ fragment",
+              "Cl loss"
+            ],
+            "answer": "CH₃⁺ fragment",
+            "explanation": "m/z=15: mass of CH₃ = 15 → methyl cation. Common fragment in compounds containing methyl groups"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "HPLC advantage over simple column chromatography",
+            "options": [
+              "needs no solvent",
+              "much faster, higher resolution, quantitative due to high pressure mobile phase",
+              "cheaper",
+              "uses gas phase"
+            ],
+            "answer": "much faster, higher resolution, quantitative due to high pressure mobile phase",
+            "explanation": "HPLC: high pressure pumps mobile phase through fine particle column → faster, better separation, quantitative"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "In electron ionisation MS, M+1 peak is due to",
+            "options": [
+              "instrument error",
+              "presence of ¹³C (1.1% natural abundance)",
+              "nitrogen",
+              "oxygen"
+            ],
+            "answer": "presence of ¹³C (1.1% natural abundance)",
+            "explanation": "¹³C at 1.1% abundance: some molecules have one ¹³C → mass one unit higher → M+1 peak. Intensity ∝ number of C atoms"
+          },
+          {
+            "id": "spectroscopy_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "spectroscopy_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "spectroscopy_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "spectroscopy_l6_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "spectroscopy_l6_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "spectroscopy_l6_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "spectroscopy_l6_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "spectroscopy_l6_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "spectroscopy_l6_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "spectroscopy_l6_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    }
+  ]
+}

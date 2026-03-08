@@ -1,0 +1,1843 @@
+{
+  "topic_id": "sets",
+  "topic_title": "Sets & Venn Diagrams",
+  "subject": "mathematics",
+  "class_level": "S1",
+  "lessons": [
+    {
+      "id": "sets_l1",
+      "title": "Introduction to Sets",
+      "duration_minutes": 20,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "A set is a well-defined collection of distinct objects. The objects in a set are called elements or members. Sets are usually named with capital letters like A, B, or C."
+        },
+        {
+          "type": "formula",
+          "body": "Notation:\n• List form: A = {1, 2, 3, 4, 5}\n• Description: A = {even numbers less than 10}\n• ∈ means 'is an element of': 3 ∈ A\n• ∉ means 'is NOT an element of': 7 ∉ A"
+        },
+        {
+          "type": "example",
+          "title": "Types of Sets",
+          "body": "Empty Set (∅ or {}): a set with no elements. Example: {odd numbers divisible by 2}\nFinite Set: has a countable number of elements. Example: {vowels} = {a, e, i, o, u}\nInfinite Set: never-ending. Example: {natural numbers} = {1, 2, 3, 4, ...}\nUniversal Set (ξ): contains all elements under consideration."
+        },
+        {
+          "type": "example",
+          "title": "Subsets",
+          "body": "Set B is a subset of A (B ⊆ A) if every element of B is also in A.\nExample: If A = {1,2,3,4,5} and B = {2,4}, then B ⊆ A\nEvery set is a subset of itself: A ⊆ A\nThe empty set is a subset of every set: ∅ ⊆ A"
+        },
+        {
+          "type": "text",
+          "body": "The cardinality (number of elements) of a set A is written n(A). If A = {a, b, c, d}, then n(A) = 4. The empty set has cardinality zero: n(∅) = 0."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which of the following is an empty set?",
+            "options": [
+              "{0}",
+              "{even numbers between 1 and 3}",
+              "{whole numbers less than 1}",
+              "{ }"
+            ],
+            "answer": "{ }",
+            "explanation": "{ } is the empty set notation. {0} contains the element 0, and there is one even number between 1 and 3 which is 2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If A = {2, 4, 6, 8}, what is n(A)?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "8"
+            ],
+            "answer": "4",
+            "explanation": "n(A) is the cardinality — the number of elements. A has 4 elements: 2, 4, 6, 8."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which symbol means 'is an element of'?",
+            "options": [
+              "⊆",
+              "∩",
+              "∈",
+              "∪"
+            ],
+            "answer": "∈",
+            "explanation": "∈ means 'is an element of'. Example: 3 ∈ {1,2,3}."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If B = {1, 3, 5} and A = {1, 2, 3, 4, 5}, is B ⊆ A?",
+            "options": [
+              "No, because B has odd numbers only",
+              "Yes, every element of B is in A",
+              "No, A and B must be equal",
+              "Yes, only if n(B) = n(A)"
+            ],
+            "answer": "Yes, every element of B is in A",
+            "explanation": "B ⊆ A because 1∈A, 3∈A, 5∈A — every element of B belongs to A."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "What is the set of vowels in the word EDUCATION?",
+            "options": [
+              "{E, D, C, T, N}",
+              "{E, U, A, I, O}",
+              "{A, E, I, O, U}",
+              "{E, A, I, O}"
+            ],
+            "answer": "{E, A, I, O}",
+            "explanation": "The vowels in EDUCATION are E, D, U, C, A, T, I, O, N → vowels only: E, U, A, I, O → as a set {E, U, A, I, O}. Note: sets have no duplicates."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The empty set is a subset of:",
+            "options": [
+              "Only empty sets",
+              "No sets",
+              "Every set",
+              "Only infinite sets"
+            ],
+            "answer": "Every set",
+            "explanation": "By definition, the empty set ∅ is a subset of every set."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which set is infinite?",
+            "options": [
+              "{letters of the alphabet}",
+              "{whole numbers}",
+              "{months of the year}",
+              "{planets in the solar system}"
+            ],
+            "answer": "{whole numbers}",
+            "explanation": "Whole numbers (0,1,2,3,...) go on forever — that is an infinite set."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "If A = {a, b, c}, which of the following is TRUE?",
+            "options": [
+              "n(A) = 2",
+              "d ∈ A",
+              "b ∉ A",
+              "n(A) = 3"
+            ],
+            "answer": "n(A) = 3",
+            "explanation": "A has 3 elements (a, b, c), so n(A) = 3."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Which notation describes the set of even numbers?",
+            "options": [
+              "{1, 3, 5, 7, ...}",
+              "{2, 4, 6, 8, ...}",
+              "{0, 1, 2, 3, ...}",
+              "{2, 3, 5, 7, ...}"
+            ],
+            "answer": "{2, 4, 6, 8, ...}",
+            "explanation": "Even numbers are divisible by 2: 2, 4, 6, 8, ..."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Is {3, 5} ⊆ {1, 2, 3, 4, 5, 6}?",
+            "options": [
+              "No, 3 and 5 are odd",
+              "Yes",
+              "No, it must contain consecutive numbers",
+              "Only if we also include 4"
+            ],
+            "answer": "Yes",
+            "explanation": "3 and 5 are both in the second set, so {3,5} is a subset."
+          },
+          {
+            "id": "sets_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sets_l2",
+      "title": "Union, Intersection and Complement",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Set operations allow us to combine or compare sets. The three most important operations are Union (∪), Intersection (∩), and Complement (A')."
+        },
+        {
+          "type": "formula",
+          "body": "Union (A ∪ B): all elements that are in A OR in B (or both)\nIntersection (A ∩ B): elements that are in BOTH A AND B\nComplement (A'): all elements in the Universal Set that are NOT in A"
+        },
+        {
+          "type": "example",
+          "title": "Union and Intersection",
+          "body": "Let A = {1, 2, 3, 4} and B = {3, 4, 5, 6}\nUnion: A ∪ B = {1, 2, 3, 4, 5, 6}  (all elements, no repeats)\nIntersection: A ∩ B = {3, 4}  (only elements in BOTH sets)"
+        },
+        {
+          "type": "example",
+          "title": "Complement",
+          "body": "Universal Set ξ = {1, 2, 3, 4, 5, 6, 7, 8}\nA = {2, 4, 6, 8}\nA' (complement of A) = {1, 3, 5, 7}  (elements in ξ but NOT in A)"
+        },
+        {
+          "type": "formula",
+          "body": "Useful rules:\nn(A ∪ B) = n(A) + n(B) − n(A ∩ B)\nThis avoids counting shared elements twice!"
+        },
+        {
+          "type": "example",
+          "title": "Using the Formula",
+          "body": "n(A) = 10, n(B) = 8, n(A ∩ B) = 3\nn(A ∪ B) = 10 + 8 − 3 = 15"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "If A = {1,2,3} and B = {3,4,5}, what is A ∪ B?",
+            "options": [
+              "{3}",
+              "{1,2,3,4,5}",
+              "{1,2,4,5}",
+              "{1,2,3,3,4,5}"
+            ],
+            "answer": "{1,2,3,4,5}",
+            "explanation": "Union combines all elements with no repeats: {1,2,3,4,5}"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If A = {1,2,3} and B = {3,4,5}, what is A ∩ B?",
+            "options": [
+              "{1,2,3,4,5}",
+              "{1,2}",
+              "{3}",
+              "{4,5}"
+            ],
+            "answer": "{3}",
+            "explanation": "Intersection contains only elements in BOTH sets. Only 3 appears in both A and B."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "ξ = {1–10}, A = {1,3,5,7,9}. What is A'?",
+            "options": [
+              "{2,4,6,8,10}",
+              "{1,2,3,4,5}",
+              "{1,3,5,7,9}",
+              "{0,2,4,6,8}"
+            ],
+            "answer": "{2,4,6,8,10}",
+            "explanation": "A' contains elements in ξ (1-10) that are NOT in A (odd numbers), so A' = even numbers {2,4,6,8,10}."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "n(A)=12, n(B)=9, n(A∩B)=4. Find n(A∪B).",
+            "options": [
+              "25",
+              "17",
+              "21",
+              "13"
+            ],
+            "answer": "17",
+            "explanation": "n(A∪B) = n(A) + n(B) − n(A∩B) = 12 + 9 − 4 = 17"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two sets have no elements in common. What is their intersection?",
+            "options": [
+              "The universal set",
+              "One of the sets",
+              "The empty set ∅",
+              "Their union"
+            ],
+            "answer": "The empty set ∅",
+            "explanation": "If no elements are shared, the intersection is empty: ∅. These are called disjoint sets."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A = {vowels}, B = {a,b,c,d,e}. Find A ∩ B.",
+            "options": [
+              "{a,e}",
+              "{b,c,d}",
+              "{a,b,c,d,e}",
+              "{a,e,i,o,u}"
+            ],
+            "answer": "{a,e}",
+            "explanation": "Vowels = {a,e,i,o,u}. Elements in both sets: a and e are vowels AND in B."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What does A ∪ A' equal?",
+            "options": [
+              "∅",
+              "A",
+              "A'",
+              "ξ (Universal Set)"
+            ],
+            "answer": "ξ (Universal Set)",
+            "explanation": "A and its complement A' together cover ALL elements in the universal set."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What does A ∩ A' equal?",
+            "options": [
+              "ξ",
+              "A",
+              "∅",
+              "A'"
+            ],
+            "answer": "∅",
+            "explanation": "A set and its complement share no elements, so their intersection is empty."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "n(A)=20, n(B)=15, n(A∪B)=30. Find n(A∩B).",
+            "options": [
+              "5",
+              "65",
+              "35",
+              "10"
+            ],
+            "answer": "5",
+            "explanation": "n(A∩B) = n(A) + n(B) − n(A∪B) = 20 + 15 − 30 = 5"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "If A ⊆ B, what is A ∩ B?",
+            "options": [
+              "B",
+              "A",
+              "∅",
+              "A ∪ B"
+            ],
+            "answer": "A",
+            "explanation": "If A is a subset of B, then every element of A is already in B, so their intersection is just A."
+          },
+          {
+            "id": "sets_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sets_l3",
+      "title": "Venn Diagrams",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Venn diagrams are visual representations of sets. A rectangle represents the Universal Set (ξ). Circles inside the rectangle represent individual sets. Overlapping circles show elements shared between sets."
+        },
+        {
+          "type": "example",
+          "title": "Reading a Venn Diagram",
+          "body": "Draw ξ = {1,2,3,4,5,6,7,8}, A = {1,2,3,4}, B = {3,4,5,6}\n• Left circle (A only): {1, 2}\n• Overlap (A ∩ B): {3, 4}\n• Right circle (B only): {5, 6}\n• Outside both circles: {7, 8} — these are in ξ but not in A or B"
+        },
+        {
+          "type": "formula",
+          "body": "From a Venn diagram you can read:\n• n(A only) = n(A) − n(A∩B)\n• n(B only) = n(B) − n(A∩B)\n• n(A∪B) = n(A only) + n(A∩B) + n(B only)\n• Elements outside = n(ξ) − n(A∪B)"
+        },
+        {
+          "type": "example",
+          "title": "Problem Solving with Venn Diagrams",
+          "body": "In a class of 40 students: 25 study French, 20 study Kiswahili, 10 study both.\nFind the number who study French only.\nFrench only = 25 − 10 = 15\nKiswahili only = 20 − 10 = 10\nNeither = 40 − (15 + 10 + 10) = 5"
+        },
+        {
+          "type": "text",
+          "body": "Venn diagrams with three overlapping circles follow the same principles but track seven regions: A only, B only, C only, A∩B only, A∩C only, B∩C only, and A∩B∩C (center). This method is used to solve complex real-world classification problems."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a Venn diagram, what does the rectangle represent?",
+            "options": [
+              "Set A",
+              "The intersection",
+              "The Universal Set",
+              "The complement"
+            ],
+            "answer": "The Universal Set",
+            "explanation": "The rectangle in a Venn diagram always represents the Universal Set ξ."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The overlapping region of two circles represents:",
+            "options": [
+              "A ∪ B",
+              "A'",
+              "A ∩ B",
+              "The Universal Set"
+            ],
+            "answer": "A ∩ B",
+            "explanation": "The overlapping (shaded middle) region shows elements belonging to both A and B — the intersection."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "30 students play football, 20 play basketball, 8 play both. How many play football only?",
+            "options": [
+              "22",
+              "28",
+              "12",
+              "38"
+            ],
+            "answer": "22",
+            "explanation": "Football only = 30 − 8 = 22"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Using the same data: n(football ∪ basketball) = ?",
+            "options": [
+              "50",
+              "42",
+              "22",
+              "58"
+            ],
+            "answer": "42",
+            "explanation": "n(F∪B) = 30 + 20 − 8 = 42"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a class of 50: 28 like maths, 22 like English, 10 like both. How many like neither?",
+            "options": [
+              "10",
+              "50",
+              "40",
+              "0"
+            ],
+            "answer": "10",
+            "explanation": "n(M∪E) = 28 + 22 − 10 = 40. Neither = 50 − 40 = 10."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Elements OUTSIDE both circles but inside the rectangle belong to:",
+            "options": [
+              "A ∩ B",
+              "(A ∪ B)'",
+              "A only",
+              "B only"
+            ],
+            "answer": "(A ∪ B)'",
+            "explanation": "Elements inside ξ but outside both circles belong to the complement of A∪B, written (A∪B)'."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "n(ξ)=50, n(A∪B)=38. How many elements are outside both A and B?",
+            "options": [
+              "88",
+              "38",
+              "12",
+              "50"
+            ],
+            "answer": "12",
+            "explanation": "Elements outside = n(ξ) − n(A∪B) = 50 − 38 = 12"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A = {2,4,6,8,10} and B = {1,2,3,4,5}. What is n(A∩B)?",
+            "options": [
+              "1",
+              "3",
+              "2",
+              "8"
+            ],
+            "answer": "2",
+            "explanation": "A∩B = {2,4} — only 2 and 4 appear in both sets. n(A∩B) = 2."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "In a Venn diagram with two circles, how many distinct regions are there (including outside)?",
+            "options": [
+              "2",
+              "3",
+              "4",
+              "5"
+            ],
+            "answer": "4",
+            "explanation": "4 regions: A only, A∩B (overlap), B only, and outside both circles."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "50 people were surveyed. 35 drink tea, 20 drink coffee, 10 drink both. How many drink tea only?",
+            "options": [
+              "25",
+              "35",
+              "15",
+              "45"
+            ],
+            "answer": "25",
+            "explanation": "Tea only = 35 − 10 = 25"
+          },
+          {
+            "id": "sets_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sets_l4",
+      "title": "Sets & Venn Diagrams — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Sets & Venn Diagrams. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Sets & Venn Diagrams concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Sets & Venn Diagrams builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Sets & Venn Diagrams. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Sets & Venn Diagrams. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Sets & Venn Diagrams include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Sets & Venn Diagrams. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "sets_l4_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l4_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l4_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l4_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l4_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l4_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l4_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l4_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "sets_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "sets_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "sets_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "sets_l4_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "sets_l4_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "sets_l4_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "sets_l4_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "sets_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "sets_l4_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "sets_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sets_l5",
+      "title": "Sets & Venn Diagrams — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Sets & Venn Diagrams. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Sets & Venn Diagrams concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Sets & Venn Diagrams builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Sets & Venn Diagrams. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Sets & Venn Diagrams. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Sets & Venn Diagrams include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Sets & Venn Diagrams. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "sets_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "sets_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "sets_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "sets_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "sets_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "sets_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "sets_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "sets_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "sets_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "sets_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "sets_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sets_l6",
+      "title": "Sets & Venn Diagrams — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Sets & Venn Diagrams. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Sets & Venn Diagrams concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Sets & Venn Diagrams builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Sets & Venn Diagrams. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Sets & Venn Diagrams. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Sets & Venn Diagrams include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Sets & Venn Diagrams. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "sets_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "sets_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "sets_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "sets_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "sets_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "sets_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "sets_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "sets_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "sets_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "sets_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "sets_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "sets_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "sets_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "sets_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "sets_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "sets_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "sets_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "sets_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "sets_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "sets_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1840 @@
+{
+  "subject": "physics",
+  "level": "s5",
+  "lessons": [
+    {
+      "id": "s5_phy_opt_l1",
+      "title": "Wave Properties and Interference",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Wave equation: v = fλ\nv = wave speed (m/s), f = frequency (Hz), λ = wavelength (m)\nPeriod T = 1/f\n\nTypes:\nTransverse: oscillation ⊥ to direction of travel (EM waves, water)\nLongitudinal: oscillation ∥ to direction of travel (sound, P-seismic)\n\nWave properties: reflection, refraction, diffraction, interference"
+        },
+        {
+          "type": "example",
+          "title": "Young's Double Slit Experiment",
+          "body": "Coherent light → two slits → interference pattern\nConstructive (bright fringe): path difference = nλ\nDestructive (dark fringe): path difference = (n+½)λ\n\nFringe spacing: w = λD/d\nw=fringe width, D=distance to screen, d=slit separation\n\nProves light has wave nature"
+        },
+        {
+          "type": "formula",
+          "body": "Diffraction:\nWaves spread around obstacles/through gaps\nMaximum diffraction when gap ≈ wavelength\nExplains: radio waves bending around buildings,\nsound diffracting around corners"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Wave speed v = ",
+            "options": [
+              "f+λ",
+              "fλ",
+              "f/λ",
+              "λ/f"
+            ],
+            "answer": "fλ",
+            "explanation": "Wave equation: v = fλ. Speed = frequency × wavelength."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Frequency and period are related by",
+            "options": [
+              "f=T",
+              "f=1/T",
+              "f=2T",
+              "f=T²"
+            ],
+            "answer": "f=1/T",
+            "explanation": "Period T is the time for one complete cycle. Frequency f = cycles per second = 1/T."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In Young's experiment, bright fringes form where path difference =",
+            "options": [
+              "(n+½)λ",
+              "nλ",
+              "zero only",
+              "λ/2"
+            ],
+            "answer": "nλ",
+            "explanation": "Constructive interference (bright fringes): waves arrive in phase, path difference = whole number of wavelengths."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Fringe spacing in Young's experiment: w = λD/d. Increasing slit separation d",
+            "options": [
+              "increases fringe spacing",
+              "decreases fringe spacing",
+              "has no effect",
+              "changes wavelength"
+            ],
+            "answer": "decreases fringe spacing",
+            "explanation": "Fringes get closer when slits are further apart (d↑ → w↓). Wider slits = smaller fringes."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Sound is a longitudinal wave because",
+            "options": [
+              "it needs no medium",
+              "particles oscillate parallel to wave direction",
+              "it's an EM wave",
+              "it travels faster than light"
+            ],
+            "answer": "particles oscillate parallel to wave direction",
+            "explanation": "In longitudinal waves, particle displacement is parallel to wave propagation (compressions and rarefactions in sound)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Diffraction is most significant when",
+            "options": [
+              "wavelength >> gap/obstacle",
+              "wavelength << gap",
+              "waves are very fast",
+              "medium is dense"
+            ],
+            "answer": "wavelength >> gap/obstacle",
+            "explanation": "Maximum diffraction occurs when the gap or obstacle size is comparable to or smaller than the wavelength."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Constructive interference occurs when",
+            "options": [
+              "waves cancel",
+              "waves combine to give larger amplitude (in phase)",
+              "phase difference = π",
+              "one wave stops"
+            ],
+            "answer": "waves combine to give larger amplitude (in phase)",
+            "explanation": "Constructive interference: waves arrive in phase (crest meets crest) → amplitudes add → brighter/louder."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Young's experiment proved light has wave nature because",
+            "options": [
+              "it refracted",
+              "it showed interference patterns (only waves interfere)",
+              "it diffracted",
+              "it reflected"
+            ],
+            "answer": "it showed interference patterns (only waves interfere)",
+            "explanation": "Interference is a uniquely wave phenomenon. Young's double slit fringes proved light behaves as a wave."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Wavelength of sound with frequency 340Hz and speed 340 m/s",
+            "options": [
+              "1m",
+              "100m",
+              "1000m",
+              "0.1m"
+            ],
+            "answer": "1m",
+            "explanation": "λ = v/f = 340/340 = 1m"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Polarisation is possible for",
+            "options": [
+              "longitudinal waves",
+              "transverse waves only",
+              "all waves",
+              "sound waves"
+            ],
+            "answer": "transverse waves only",
+            "explanation": "Polarisation restricts oscillation to one plane — only possible for transverse waves (EM waves). Longitudinal waves cannot be polarised."
+          },
+          {
+            "id": "optics_full_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_opt_l2",
+      "title": "Lenses and Optical Instruments",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Lens formula:\n1/f = 1/v + 1/u  (real-is-positive convention)\nf = focal length, v = image distance, u = object distance\n\nMagnification m = v/u = image height/object height\n\nPower of lens P = 1/f  (dioptres, D, f in metres)\nPositive f = converging lens; negative f = diverging lens"
+        },
+        {
+          "type": "example",
+          "title": "Types of Lenses",
+          "body": "Converging (convex) lens: brings parallel rays to focus\nObject beyond 2f: real, inverted, diminished image (camera)\nObject between f and 2f: real, inverted, magnified (projector)\nObject inside f: virtual, upright, magnified (magnifying glass)\n\nDiverging (concave) lens:\nAlways virtual, upright, diminished image"
+        },
+        {
+          "type": "example",
+          "title": "Eye Defects and Correction",
+          "body": "Myopia (short-sighted): eyeball too long, image forms before retina\nCorrection: diverging (concave) lens\n\nHyperopia (long-sighted): eyeball too short, image behind retina\nCorrection: converging (convex) lens\n\nAstigmatism: uneven cornea curvature → blurred\nCorrection: cylindrical lens"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Lens formula is",
+            "options": [
+              "1/f=1/u+1/v",
+              "f=u+v",
+              "f=uv",
+              "1/f=u-v"
+            ],
+            "answer": "1/f=1/u+1/v",
+            "explanation": "Lens formula (real-is-positive): 1/f = 1/v + 1/u"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Image formed by lens with f=10cm, object at u=30cm (v?)",
+            "options": [
+              "15cm",
+              "30cm",
+              "10cm",
+              "20cm"
+            ],
+            "answer": "15cm",
+            "explanation": "1/v = 1/f - 1/u = 1/10 - 1/30 = 3/30 - 1/30 = 2/30. v = 15cm"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Magnification = ",
+            "options": [
+              "u/v",
+              "v/u",
+              "f/u",
+              "u+v"
+            ],
+            "answer": "v/u",
+            "explanation": "m = v/u (image distance / object distance). Also = image height / object height."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Power of a lens with focal length 25cm (0.25m)",
+            "options": [
+              "4D",
+              "0.25D",
+              "2D",
+              "25D"
+            ],
+            "answer": "4D",
+            "explanation": "P = 1/f = 1/0.25 = 4 dioptres"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A person is short-sighted (myopic). Correct with",
+            "options": [
+              "converging lens",
+              "diverging (concave) lens",
+              "plane glass",
+              "cylindrical lens"
+            ],
+            "answer": "diverging (concave) lens",
+            "explanation": "Myopia: light focuses in front of retina. Diverging lens spreads light slightly so it focuses on the retina."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A magnifying glass uses a converging lens with object",
+            "options": [
+              "beyond 2f",
+              "at exactly f",
+              "between f and the lens",
+              "at 2f"
+            ],
+            "answer": "between f and the lens",
+            "explanation": "Object inside f → converging lens produces virtual, upright, magnified image on same side as object."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A camera uses a converging lens with object",
+            "options": [
+              "inside f",
+              "between f and 2f",
+              "beyond 2f",
+              "at 2f"
+            ],
+            "answer": "beyond 2f",
+            "explanation": "Camera: object beyond 2f → real, inverted, diminished image on film/sensor."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Total internal reflection is used in",
+            "options": [
+              "mirrors",
+              "optical fibres — light repeatedly reflects inside the fibre",
+              "magnifying glasses",
+              "cameras"
+            ],
+            "answer": "optical fibres — light repeatedly reflects inside the fibre",
+            "explanation": "TIR keeps light inside optical fibres as it travels — requires angle greater than critical angle at each boundary."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Which lens always produces a virtual image?",
+            "options": [
+              "Converging lens always",
+              "Diverging lens always",
+              "Both converging and diverging",
+              "Neither"
+            ],
+            "answer": "Diverging lens always",
+            "explanation": "Diverging (concave) lens always forms a virtual, upright, diminished image regardless of object position."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "The human eye focuses light using",
+            "options": [
+              "only the cornea",
+              "variable-focus lens (changes shape by ciliary muscles)",
+              "a fixed lens",
+              "reflection"
+            ],
+            "answer": "variable-focus lens (changes shape by ciliary muscles)",
+            "explanation": "The crystalline lens changes shape (accommodation) by relaxing/contracting ciliary muscles to focus on near/far objects."
+          },
+          {
+            "id": "optics_full_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optics_full_l3",
+      "title": "Optics Full — Advanced Part 3",
+      "duration_minutes": 31,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Optics Full. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Optics Full concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Optics Full builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 3.1",
+          "body": "Consider a more complex problem on Optics Full. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 3.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Optics Full. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Optics Full include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Optics Full. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "optics_full_l3_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l3_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l3_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l3_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l3_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l3_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l3_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l3_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l3_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l3_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "optics_full_l3_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "optics_full_l3_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "optics_full_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "optics_full_l3_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "optics_full_l3_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "optics_full_l3_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "optics_full_l3_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "optics_full_l3_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "optics_full_l3_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "optics_full_l3_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optics_full_l4",
+      "title": "Optics Full — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Optics Full. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Optics Full concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Optics Full builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Optics Full. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Optics Full. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Optics Full include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Optics Full. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "optics_full_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l4_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l4_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l4_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l4_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "optics_full_l4_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "optics_full_l4_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "optics_full_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "optics_full_l4_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "optics_full_l4_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "optics_full_l4_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "optics_full_l4_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "optics_full_l4_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "optics_full_l4_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "optics_full_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optics_full_l5",
+      "title": "Optics Full — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Optics Full. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Optics Full concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Optics Full builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Optics Full. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Optics Full. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Optics Full include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Optics Full. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "optics_full_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "optics_full_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "optics_full_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "optics_full_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "optics_full_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "optics_full_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "optics_full_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "optics_full_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "optics_full_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "optics_full_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "optics_full_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "optics_full_l6",
+      "title": "Optics Full — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Optics Full. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Optics Full concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Optics Full builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Optics Full. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Optics Full. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Optics Full include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Optics Full. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "optics_full_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "optics_full_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "optics_full_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "optics_full_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "optics_full_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "optics_full_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "optics_full_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "optics_full_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "optics_full_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "optics_full_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "optics_full_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "optics_full_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "optics_full_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "optics_full_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "optics_full_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "optics_full_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "optics_full_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "optics_full_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "optics_full_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "optics_full_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "optics_full"
+}

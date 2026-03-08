@@ -1,0 +1,1799 @@
+{
+  "topic_id": "circular_gravitation",
+  "topic_title": "Circular Motion & Gravitation",
+  "subject": "physics",
+  "class_level": "S4",
+  "lessons": [
+    {
+      "id": "circular_gravitation_l1",
+      "title": "Circular Motion",
+      "duration_minutes": 30,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Circular motion occurs when an object moves along a circular path. Even if the speed is constant, the velocity is always changing direction — meaning the object is always accelerating! This acceleration points toward the centre of the circle and is called centripetal acceleration."
+        },
+        {
+          "type": "formula",
+          "body": "Angular velocity (ω): rate of change of angle\nω = θ/t = 2π/T = 2πf\nUnit: radians per second (rad/s)\n\nLinear (tangential) speed: v = rω = 2πr/T\nr = radius, T = period, f = frequency\n\nCentripetal acceleration: a = v²/r = ω²r\n\nCentripetal force: F = mv²/r = mω²r\n(directed toward the centre — it's the NET inward force)"
+        },
+        {
+          "type": "example",
+          "title": "Circular Motion Calculations",
+          "body": "A car rounds a bend of radius 50m at 20 m/s.\nCentripetal acceleration = v²/r = 400/50 = 8 m/s²\nCentripetal force (m=1000kg) = mv²/r = 1000×8 = 8000 N\n(This force is provided by friction between tyres and road!)\n\nA ball on a string r=0.5m, T=2s:\nω = 2π/T = π rad/s\nv = rω = 0.5π ≈ 1.57 m/s\na = ω²r = π²×0.5 ≈ 4.93 m/s²"
+        },
+        {
+          "type": "text",
+          "body": "Sources of centripetal force:\n• Car turning: friction from road on tyres\n• Satellite orbiting: gravity\n• Ball on string: tension in string\n• Electron orbiting nucleus: electrostatic attraction\n• Plane banking: component of lift force\n\nIMPORTANT: Centripetal force is not a new force — it is just the name given to whatever NET force acts toward the centre of a circular path."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Centripetal acceleration formula:",
+            "options": [
+              "v×r",
+              "v/r",
+              "v²/r",
+              "r/v²"
+            ],
+            "answer": "v²/r",
+            "explanation": "Centripetal acceleration a = v²/r, directed toward the centre."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Object in circular motion at constant speed — is velocity constant?",
+            "options": [
+              "Yes, speed = velocity",
+              "No — direction changes so velocity changes",
+              "Yes, if radius is fixed",
+              "Only at the top of the circle"
+            ],
+            "answer": "No — direction changes so velocity changes",
+            "explanation": "Velocity is a vector — it has magnitude (speed) AND direction. In circular motion, direction constantly changes even if speed doesn't."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A satellite orbits Earth. The centripetal force is provided by:",
+            "options": [
+              "Friction",
+              "Thrust",
+              "Gravity",
+              "Normal force"
+            ],
+            "answer": "Gravity",
+            "explanation": "For orbiting satellites, gravity provides the centripetal force that keeps them in circular orbit."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "v=10m/s, r=5m. Centripetal acceleration = ?",
+            "options": [
+              "2 m/s²",
+              "50 m/s²",
+              "20 m/s²",
+              "0.5 m/s²"
+            ],
+            "answer": "20 m/s²",
+            "explanation": "a = v²/r = 100/5 = 20 m/s²."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "m=2kg, v=4m/s, r=2m. Centripetal force = ?",
+            "options": [
+              "4N",
+              "16N",
+              "8N",
+              "32N"
+            ],
+            "answer": "16N",
+            "explanation": "F = mv²/r = 2×16/2 = 16 N."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Period T = 4s. Angular velocity ω = ?",
+            "options": [
+              "4π rad/s",
+              "π/2 rad/s",
+              "2π/4 = π/2 rad/s",
+              "8π rad/s"
+            ],
+            "answer": "π/2 rad/s",
+            "explanation": "ω = 2π/T = 2π/4 = π/2 rad/s."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Doubling the radius of circular motion (same speed): centripetal force is?",
+            "options": [
+              "Doubled",
+              "Quadrupled",
+              "Halved",
+              "Unchanged"
+            ],
+            "answer": "Halved",
+            "explanation": "F = mv²/r. If r doubles with v and m constant: F halves."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A car takes a bend. What provides centripetal force?",
+            "options": [
+              "Engine thrust",
+              "Gravity",
+              "Friction between tyres and road",
+              "Air resistance"
+            ],
+            "answer": "Friction between tyres and road",
+            "explanation": "Friction acts sideways (toward centre of bend) and provides the centripetal force for turning."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "v = rω. If r=0.4m and ω=5 rad/s, find v.",
+            "options": [
+              "0.08 m/s",
+              "12.5 m/s",
+              "2 m/s",
+              "5 m/s"
+            ],
+            "answer": "2 m/s",
+            "explanation": "v = rω = 0.4 × 5 = 2 m/s."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Centripetal force always points:",
+            "options": [
+              "Away from centre",
+              "Tangentially",
+              "Toward the centre",
+              "Downward"
+            ],
+            "answer": "Toward the centre",
+            "explanation": "Centripetal means 'centre-seeking'. The net centripetal force always points toward the centre of the circular path."
+          },
+          {
+            "id": "circular_gravitation_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_gravitation_l1",
+      "title": "Newton's Law of Universal Gravitation",
+      "duration_minutes": 28,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every object in the universe with mass attracts every other object with mass. This force is called gravity. Isaac Newton (1687) formulated the universal law of gravitation after (legend says) observing a falling apple. This same force that pulls apples to Earth keeps the Moon in orbit and holds galaxies together."
+        },
+        {
+          "type": "formula",
+          "body": "Newton's Law of Universal Gravitation:\nF = G × m₁m₂ / r²\n\nF = gravitational force (N)\nG = gravitational constant = 6.67 × 10⁻¹¹ N m² kg⁻²\nm₁, m₂ = masses of the two objects (kg)\nr = distance between their centres (m)\n\nKey features:\n• Always attractive (never repulsive)\n• Acts along the line joining the centres\n• Inverse square law (double r → force quarters)"
+        },
+        {
+          "type": "formula",
+          "body": "Gravitational field strength g:\ng = GM/r²  (at distance r from mass M)\n\nOn Earth's surface: g ≈ 9.8 m/s²\nWeight W = mg\n\nOrbital velocity for circular orbit:\nv = √(GM/r)\n\nOrbital period: T² = 4π²r³/GM (Kepler's 3rd Law)"
+        },
+        {
+          "type": "example",
+          "title": "Gravitation Calculations",
+          "body": "Earth mass M = 6×10²⁴ kg, radius = 6.4×10⁶ m, G = 6.67×10⁻¹¹\n\ng at surface = GM/r² = (6.67×10⁻¹¹ × 6×10²⁴)/(6.4×10⁶)²\n= 3.99×10¹⁴/4.1×10¹³ ≈ 9.8 m/s² ✓\n\nAt height r above surface (r = 2× Earth radius):\ng = 9.8/4 = 2.45 m/s²  (inverse square — distance doubled)"
+        },
+        {
+          "type": "text",
+          "body": "Kepler's Laws of Planetary Motion (supported by Newton's gravity):\n1. Planets orbit the Sun in ellipses (Sun at one focus)\n2. Line from Sun to planet sweeps equal areas in equal times\n3. T² ∝ r³ (square of period proportional to cube of orbital radius)\n\nGeostationary orbit: satellite with T = 24h orbits directly above equator, appears stationary — used for weather satellites, TV broadcast, GPS."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Newton's law of gravitation: F = ?",
+            "options": [
+              "Gm₁m₂r",
+              "Gm₁m₂/r",
+              "Gm₁m₂/r²",
+              "Gm₁/m₂r²"
+            ],
+            "answer": "Gm₁m₂/r²",
+            "explanation": "F = Gm₁m₂/r² — force between two masses separated by distance r."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Gravitational force is always:",
+            "options": [
+              "Repulsive",
+              "Attractive",
+              "Zero in space",
+              "Equal to weight"
+            ],
+            "answer": "Attractive",
+            "explanation": "Gravity is always an attractive force — masses always pull toward each other."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "If distance between two masses doubles, gravitational force:",
+            "options": [
+              "Doubles",
+              "Halves",
+              "Quarters",
+              "Stays same"
+            ],
+            "answer": "Quarters",
+            "explanation": "Inverse square law: F ∝ 1/r². Double r → F = original/4. Force quarters."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Weight of a 70kg person on Earth (g=9.8):",
+            "options": [
+              "70N",
+              "686N",
+              "7N",
+              "9.8N"
+            ],
+            "answer": "686N",
+            "explanation": "W = mg = 70 × 9.8 = 686 N."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Gravitational field strength decreases as you:",
+            "options": [
+              "Gain mass",
+              "Move toward Earth",
+              "Move away from Earth",
+              "Stand on Earth"
+            ],
+            "answer": "Move away from Earth",
+            "explanation": "g = GM/r². As r increases (moving away), g decreases."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A geostationary satellite has a period of:",
+            "options": [
+              "1 hour",
+              "12 hours",
+              "24 hours",
+              "1 month"
+            ],
+            "answer": "24 hours",
+            "explanation": "Geostationary satellites orbit with T = 24 hours, matching Earth's rotation, appearing stationary over one point."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Kepler's 3rd Law states:",
+            "options": [
+              "Planets orbit in ellipses",
+              "T² ∝ r³",
+              "Equal areas in equal times",
+              "T ∝ r"
+            ],
+            "answer": "T² ∝ r³",
+            "explanation": "Kepler's 3rd Law: square of orbital period is proportional to cube of orbital radius."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What provides centripetal force for a satellite?",
+            "options": [
+              "Rocket thrust",
+              "Normal force",
+              "Gravity",
+              "Magnetic force"
+            ],
+            "answer": "Gravity",
+            "explanation": "Gravity acts as the centripetal force, pulling the satellite toward Earth's centre, keeping it in orbit."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "The Moon orbits Earth because:",
+            "options": [
+              "It has engines",
+              "Earth's gravity provides centripetal force",
+              "Space is frictionless",
+              "Its speed exactly balances gravity"
+            ],
+            "answer": "Earth's gravity provides centripetal force",
+            "explanation": "The Moon is in free fall toward Earth, but its orbital speed means it continually 'misses' Earth — gravity provides the centripetal force."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Mass vs Weight: which changes with location?",
+            "options": [
+              "Mass",
+              "Weight",
+              "Both",
+              "Neither"
+            ],
+            "answer": "Weight",
+            "explanation": "Mass is a fixed property of matter. Weight = mg changes because g varies with location (less on Moon, zero in deep space)."
+          },
+          {
+            "id": "circular_gravitation_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_gas_l1",
+      "title": "Gas Laws",
+      "duration_minutes": 28,
+      "xp_reward": 75,
+      "content": [
+        {
+          "type": "text",
+          "body": "Gas laws describe how the pressure, volume, and temperature of a gas are related. These relationships were discovered experimentally in the 17th and 18th centuries and are vital in engineering, weather forecasting, and medicine."
+        },
+        {
+          "type": "formula",
+          "body": "Boyle's Law (constant temperature):\nP₁V₁ = P₂V₂\nPressure and volume are inversely proportional\n\nCharles' Law (constant pressure):\nV₁/T₁ = V₂/T₂\nVolume and temperature are directly proportional\nTemperature MUST be in Kelvin: T(K) = T(°C) + 273\n\nPressure Law / Gay-Lussac's (constant volume):\nP₁/T₁ = P₂/T₂\nPressure and temperature are directly proportional"
+        },
+        {
+          "type": "formula",
+          "body": "Combined Gas Law:\nP₁V₁/T₁ = P₂V₂/T₂\n\nIdeal Gas Equation:\nPV = nRT\nP = pressure (Pa), V = volume (m³)\nn = moles, R = 8.31 J mol⁻¹ K⁻¹, T = temperature (K)"
+        },
+        {
+          "type": "example",
+          "title": "Gas Law Calculations",
+          "body": "Boyle's Law: Gas at 2 atm, volume 3L. Pressure increases to 6 atm. New volume?\nP₁V₁ = P₂V₂ → 2×3 = 6×V₂ → V₂ = 1 L\n\nCharles' Law: Gas at 27°C, volume 500mL. Heated to 127°C. New volume?\nT₁ = 300K, T₂ = 400K\nV₂ = V₁ × T₂/T₁ = 500 × 400/300 = 667 mL\n\nPressure Law: Gas at 300K, pressure 100 kPa. Heated to 600K. New pressure?\nP₂ = P₁ × T₂/T₁ = 100 × 600/300 = 200 kPa"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Boyle's Law: P increases → V (at constant T):",
+            "options": [
+              "Increases",
+              "Stays same",
+              "Decreases",
+              "Doubles"
+            ],
+            "answer": "Decreases",
+            "explanation": "Boyle's Law: P and V are inversely proportional (PV = constant). Pressure up → volume down."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Convert 27°C to Kelvin:",
+            "options": [
+              "27K",
+              "246K",
+              "300K",
+              "373K"
+            ],
+            "answer": "300K",
+            "explanation": "T(K) = 27 + 273 = 300K."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "P₁=100kPa, V₁=4L, P₂=200kPa. Find V₂:",
+            "options": [
+              "8L",
+              "2L",
+              "200L",
+              "0.5L"
+            ],
+            "answer": "2L",
+            "explanation": "P₁V₁=P₂V₂ → 100×4=200×V₂ → V₂=2L."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Charles' Law applies at constant:",
+            "options": [
+              "Volume",
+              "Temperature",
+              "Pressure",
+              "Mass"
+            ],
+            "answer": "Pressure",
+            "explanation": "Charles' Law: V/T = constant at constant pressure."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Gas at 300K, 2L. Heated to 600K (constant P). New volume?",
+            "options": [
+              "1L",
+              "4L",
+              "3L",
+              "6L"
+            ],
+            "answer": "4L",
+            "explanation": "V₂ = V₁×T₂/T₁ = 2×600/300 = 4L."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Gas at 300K, 150kPa. Cooled to 150K (constant V). New pressure?",
+            "options": [
+              "300kPa",
+              "75kPa",
+              "150kPa",
+              "100kPa"
+            ],
+            "answer": "75kPa",
+            "explanation": "P₂ = P₁×T₂/T₁ = 150×150/300 = 75kPa."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The Ideal Gas Equation is:",
+            "options": [
+              "PV=mRT",
+              "PV=nRT",
+              "PV=nR/T",
+              "P=nRTV"
+            ],
+            "answer": "PV=nRT",
+            "explanation": "PV = nRT where n=moles, R=8.31 J/mol/K, T in Kelvin."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why must temperature be in Kelvin for gas laws?",
+            "options": [
+              "Kelvin is SI unit",
+              "0°C is arbitrary — Kelvin starts at absolute zero, making V∝T true",
+              "Gas laws only work in Kelvin",
+              "Celsius is too small"
+            ],
+            "answer": "0°C is arbitrary — Kelvin starts at absolute zero, making V∝T true",
+            "explanation": "At 0°C (273K), gas still has volume and pressure. Kelvin starts at absolute zero where particles have minimum energy, making ratios meaningful."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Absolute zero is:",
+            "options": [
+              "0°C",
+              "−100°C",
+              "−273°C",
+              "−373°C"
+            ],
+            "answer": "−273°C",
+            "explanation": "Absolute zero = 0K = −273°C. Theoretically, particles have minimum kinetic energy and gas volume/pressure approach zero."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Tyre pressure increases on a hot day because:",
+            "options": [
+              "Air enters the tyre",
+              "Gas molecules move faster and hit walls harder (more pressure)",
+              "The tyre shrinks",
+              "Gravity decreases"
+            ],
+            "answer": "Gas molecules move faster and hit walls harder (more pressure)",
+            "explanation": "Higher temperature → greater kinetic energy → more frequent and harder collisions with tyre walls → higher pressure (constant volume)."
+          },
+          {
+            "id": "circular_gravitation_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_cg_l4",
+      "title": "Gravitational Fields",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Newton's Law of Gravitation:\nF = Gm₁m₂/r²\nG = 6.67×10⁻¹¹ N⋅m²/kg²\n\nGravitational field strength:\ng = F/m = GM/r²\n(g = 9.8 m/s² at Earth's surface)\n\nGravitational potential:\nV = -GM/r  (negative: bound system)\nPotential energy: E_p = -GMm/r\n\nEscape velocity:\nv_esc = √(2GM/R) = √(2gR)"
+        },
+        {
+          "type": "example",
+          "title": "Orbital Mechanics",
+          "body": "For circular orbit: gravitational force = centripetal force\nGMm/r² = mv²/r\nv = √(GM/r)\nOrbital period: T = 2πr/v\nKepler's 3rd law: T² ∝ r³\nT²/r³ = 4π²/GM = constant"
+        },
+        {
+          "type": "example",
+          "title": "Example",
+          "body": "Satellite at height h=400km above Earth\nr = R_E + h = 6.4×10⁶ + 4×10⁵ = 6.8×10⁶ m\nv = √(6.67×10⁻¹¹×6×10²⁴/6.8×10⁶) = 7670 m/s\nT = 2π×6.8×10⁶/7670 = 5570 s ≈ 93 min"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Gravitational force between masses is",
+            "options": [
+              "F=Gm₁+m₂/r",
+              "F=Gm₁m₂/r²",
+              "F=m₁m₂/Gr²",
+              "F=G/m₁m₂r"
+            ],
+            "answer": "F=Gm₁m₂/r²",
+            "explanation": "Newton's law of gravitation: F=Gm₁m₂/r² (inverse square law)"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If separation doubles, gravitational force becomes",
+            "options": [
+              "double",
+              "half",
+              "quarter",
+              "same"
+            ],
+            "answer": "quarter",
+            "explanation": "F∝1/r²: double r → F×(1/4)"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Gravitational field strength g = GM/r². At 2R from Earth's centre vs surface",
+            "options": [
+              "same",
+              "double",
+              "quarter",
+              "half"
+            ],
+            "answer": "quarter",
+            "explanation": "g∝1/r²: doubling distance gives ¼ of surface g"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Escape velocity from planet v_esc =",
+            "options": [
+              "2gR",
+              "√(2gR)",
+              "gR",
+              "√(gR)"
+            ],
+            "answer": "√(2gR)",
+            "explanation": "v_esc=√(2GM/R)=√(2gR); need KE≥gravitational PE to escape"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Geostationary orbit period",
+            "options": [
+              "12 hours",
+              "24 hours",
+              "90 minutes",
+              "1 week"
+            ],
+            "answer": "24 hours",
+            "explanation": "Geostationary satellite orbits at same rate as Earth rotates: T=24h, appears stationary over same point"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Kepler's 3rd law: T² ∝ r³ means",
+            "options": [
+              "bigger orbit = faster",
+              "bigger orbit = slower (T larger)",
+              "orbit independent of mass",
+              "orbit circular always"
+            ],
+            "answer": "bigger orbit = slower (T larger)",
+            "explanation": "T²∝r³: planet further out (larger r) has longer period T"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Gravitational potential V=-GM/r is negative because",
+            "options": [
+              "it's a mistake",
+              "bound gravitational systems have negative energy (zero at infinity)",
+              "gravity points inward",
+              "G is negative"
+            ],
+            "answer": "bound gravitational systems have negative energy (zero at infinity)",
+            "explanation": "Convention: V=0 at infinity. Moving mass away from planet requires energy, so bound state is negative V"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "For circular orbit, centripetal acceleration equals",
+            "options": [
+              "g always",
+              "GM/r²",
+              "v/r",
+              "2πr/T"
+            ],
+            "answer": "GM/r²",
+            "explanation": "At radius r: centripetal acceleration = gravitational field strength = GM/r²"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Black hole forms when",
+            "options": [
+              "star is large",
+              "escape velocity exceeds speed of light",
+              "star cools",
+              "gravity is zero"
+            ],
+            "answer": "escape velocity exceeds speed of light",
+            "explanation": "Event horizon: radius at which v_esc=c. Nothing, not even light, can escape"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Orbital speed of satellite v=√(GM/r). Increasing r will",
+            "options": [
+              "increase v",
+              "decrease v",
+              "keep v same",
+              "make v=c"
+            ],
+            "answer": "decrease v",
+            "explanation": "v∝1/√r: larger orbit → slower orbital speed (but larger circumference)"
+          },
+          {
+            "id": "circular_gravitation_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "circular_gravitation_l5",
+      "title": "Circular Motion & Gravitation — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Circular Motion & Gravitation. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Circular Motion & Gravitation concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Circular Motion & Gravitation builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Circular Motion & Gravitation. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Circular Motion & Gravitation. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Circular Motion & Gravitation include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Circular Motion & Gravitation. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "circular_gravitation_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "circular_gravitation_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "circular_gravitation_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "circular_gravitation_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "circular_gravitation_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "circular_gravitation_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "circular_gravitation_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "circular_gravitation_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "circular_gravitation_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "circular_gravitation_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "circular_gravitation_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "circular_gravitation_l6",
+      "title": "Circular Motion & Gravitation — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Circular Motion & Gravitation. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Circular Motion & Gravitation concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Circular Motion & Gravitation builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Circular Motion & Gravitation. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Circular Motion & Gravitation. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Circular Motion & Gravitation include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Circular Motion & Gravitation. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "circular_gravitation_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "circular_gravitation_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "circular_gravitation_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "circular_gravitation_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "circular_gravitation_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "circular_gravitation_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "circular_gravitation_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "circular_gravitation_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "circular_gravitation_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "circular_gravitation_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "circular_gravitation_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "circular_gravitation_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "circular_gravitation_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "circular_gravitation_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "circular_gravitation_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "circular_gravitation_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "circular_gravitation_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "circular_gravitation_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "circular_gravitation_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "circular_gravitation_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

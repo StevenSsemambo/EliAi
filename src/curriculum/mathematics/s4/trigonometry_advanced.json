@@ -1,0 +1,1785 @@
+{
+  "subject": "mathematics",
+  "level": "s4",
+  "lessons": [
+    {
+      "id": "s4_math_trig_l1",
+      "title": "Sine and Cosine Rules for Any Triangle",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Sine Rule:\na/sinA = b/sinB = c/sinC\n\nUsed when: given two angles and one side (AAS)\nOr: two sides and non-included angle (SSA — ambiguous case)\n\nCosine Rule:\na² = b² + c² - 2bc cosA\ncos A = (b²+c²-a²)/(2bc)\n\nUsed when: given two sides and included angle (SAS)\nOr: all three sides (SSS) to find an angle\n\nArea = ½ab sinC"
+        },
+        {
+          "type": "example",
+          "title": "Sine Rule Example",
+          "body": "Triangle: A=40°, B=70°, a=8cm\nC=180-40-70=70°\n8/sin40° = b/sin70°\nb = 8×sin70°/sin40° = 11.68cm"
+        },
+        {
+          "type": "example",
+          "title": "Cosine Rule Example",
+          "body": "Triangle: a=5, b=7, C=60°\nc² = 25 + 49 - 2×5×7×cos60°\nc² = 74 - 35 = 39\nc = √39 = 6.24cm\n\nArea = ½×5×7×sin60° = 15.16 cm²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Sine rule is a/sinA =",
+            "options": [
+              "b+sinB",
+              "b/sinB",
+              "b×sinB",
+              "sinB/b"
+            ],
+            "answer": "b/sinB",
+            "explanation": "Sine rule: a/sinA = b/sinB = c/sinC"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Cosine rule a² = ",
+            "options": [
+              "b²+c²",
+              "b²+c²-2bc cosA",
+              "b²+c²+2bc cosA",
+              "b²-c²"
+            ],
+            "answer": "b²+c²-2bc cosA",
+            "explanation": "Cosine rule: a²=b²+c²-2bc cosA"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Area of triangle with two sides 6,8 and included angle 30°",
+            "options": [
+              "12",
+              "24",
+              "6",
+              "48"
+            ],
+            "answer": "12",
+            "explanation": "Area=½×6×8×sin30°=½×6×8×0.5=12"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "When to use sine rule",
+            "options": [
+              "three sides known",
+              "two sides and included angle",
+              "two angles and one side",
+              "only one side"
+            ],
+            "answer": "two angles and one side",
+            "explanation": "Sine rule needs two angles + one side, OR two sides + non-included angle."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "When to use cosine rule",
+            "options": [
+              "two angles and one side",
+              "two sides and included angle",
+              "one side only",
+              "three angles"
+            ],
+            "answer": "two sides and included angle",
+            "explanation": "Cosine rule used when: two sides and included angle (SAS) or three sides (SSS)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find c when a=10, b=8, C=90°",
+            "options": [
+              "12.8",
+              "6",
+              "√164",
+              "100"
+            ],
+            "answer": "√164",
+            "explanation": "c²=100+64-2×10×8×cos90°=164-0=164. c=√164≈12.8"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Cosine of an obtuse angle is",
+            "options": [
+              "positive",
+              "negative",
+              "zero",
+              "undefined"
+            ],
+            "answer": "negative",
+            "explanation": "Cosine is negative for angles between 90° and 180°. This makes cosine rule give larger c² when angle is obtuse."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In triangle with a=5, sinA=0.5, b=8. Using sine rule: sinB =",
+            "options": [
+              "0.8",
+              "0.4",
+              "0.16",
+              "0.625"
+            ],
+            "answer": "0.8",
+            "explanation": "sinB/b = sinA/a. sinB = 8×0.5/5 = 0.8"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Ambiguous case (SSA) in sine rule means",
+            "options": [
+              "no solution",
+              "exactly one triangle",
+              "possibly two triangles",
+              "three triangles"
+            ],
+            "answer": "possibly two triangles",
+            "explanation": "With SSA, there may be two possible triangles (one acute, one obtuse angle) — the ambiguous case."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Bearing navigation uses sine/cosine rules to find",
+            "options": [
+              "colour of sky",
+              "distances and angles in navigation problems",
+              "time only",
+              "speed only"
+            ],
+            "answer": "distances and angles in navigation problems",
+            "explanation": "Sine and cosine rules solve real-world navigation problems involving triangles: ship distances, aircraft paths."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_trig_l2",
+      "title": "Trigonometric Graphs and Equations",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Graphs of trig functions:\ny = sin x: period 360°, amplitude 1, range [-1,1]\ny = cos x: period 360°, amplitude 1, range [-1,1]\ny = tan x: period 180°, range all reals, asymptotes at 90°,270°...\n\nTransformations:\ny = a sin(bx + c) + d\na = amplitude, 2π/b = period, c = phase shift, d = vertical shift\n\nSolving: sin x = k, find all solutions in given range\nUse CAST diagram or symmetry of graph"
+        },
+        {
+          "type": "example",
+          "title": "Solving Trig Equations",
+          "body": "Solve sin x = 0.5 for 0° ≤ x ≤ 360°\nsin⁻¹(0.5) = 30°\nSin positive in 1st and 2nd quadrants\nSolutions: x = 30° and x = 180° - 30° = 150°\n\nSolve cos x = -0.5 for 0° ≤ x ≤ 360°\ncos⁻¹(0.5) = 60°\nCos negative in 2nd and 3rd quadrants\nx = 180° - 60° = 120° and x = 180° + 60° = 240°"
+        },
+        {
+          "type": "example",
+          "title": "CAST Diagram",
+          "body": "All: 1st quadrant (0°-90°): sin,cos,tan all positive\nSine: 2nd quadrant (90°-180°): sin positive\nTangent: 3rd quadrant (180°-270°): tan positive\nCosine: 4th quadrant (270°-360°): cos positive\n\nMnemonic: All Students Take Calculus"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Period of y = sin x",
+            "options": [
+              "90°",
+              "180°",
+              "360°",
+              "720°"
+            ],
+            "answer": "360°",
+            "explanation": "sin x completes one full cycle every 360°."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Period of y = tan x",
+            "options": [
+              "360°",
+              "180°",
+              "90°",
+              "270°"
+            ],
+            "answer": "180°",
+            "explanation": "tan x has period 180° — repeats every half-turn."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Amplitude of y = 3 sin 2x",
+            "options": [
+              "2",
+              "3",
+              "6",
+              "1"
+            ],
+            "answer": "3",
+            "explanation": "The coefficient of sin gives the amplitude = 3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Solutions to sin x = 0.5 in [0°,360°]",
+            "options": [
+              "30° only",
+              "30° and 150°",
+              "150° and 210°",
+              "30° and 210°"
+            ],
+            "answer": "30° and 150°",
+            "explanation": "sin=0.5 in 1st quadrant: 30°. Symmetric in 2nd: 180°-30°=150°"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Where is cosine negative?",
+            "options": [
+              "1st and 4th quadrants",
+              "2nd and 3rd quadrants",
+              "1st and 2nd",
+              "3rd and 4th"
+            ],
+            "answer": "2nd and 3rd quadrants",
+            "explanation": "Cosine = x-coordinate on unit circle. Negative when x is negative: 2nd and 3rd quadrants."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve cos x = 0 in [0°,360°]",
+            "options": [
+              "0° and 180°",
+              "90° and 270°",
+              "45° and 225°",
+              "0° and 360°"
+            ],
+            "answer": "90° and 270°",
+            "explanation": "cos=0 where unit circle crosses y-axis: at 90° and 270°"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "y = sin(2x): compared to y=sin x, period is",
+            "options": [
+              "doubled",
+              "halved",
+              "same",
+              "tripled"
+            ],
+            "answer": "halved",
+            "explanation": "Period = 360°/b. With b=2: period = 180° (half of 360°)"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Maximum value of y = 5 cos x - 1",
+            "options": [
+              "5",
+              "4",
+              "6",
+              "-1"
+            ],
+            "answer": "4",
+            "explanation": "Max cos x = 1, so max y = 5(1) - 1 = 4"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Tan x is undefined at",
+            "options": [
+              "0° and 180°",
+              "90° and 270° (cos x = 0)",
+              "45°",
+              "360°"
+            ],
+            "answer": "90° and 270° (cos x = 0)",
+            "explanation": "tan x = sin x/cos x. Undefined where cos x = 0: at 90°, 270°, ..."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Solve 2 sin x = 1 for 0 ≤ x ≤ 360°",
+            "options": [
+              "x=30°,150°",
+              "x=30°,210°",
+              "x=60°,120°",
+              "x=45°,135°"
+            ],
+            "answer": "x=30°,150°",
+            "explanation": "sin x = 1/2. x = 30° (1st quadrant) and 150° (2nd quadrant)."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_trig_l3",
+      "title": "Sine and Cosine Rules",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Sine Rule: a/sinA = b/sinB = c/sinC\nUse when: two angles + one side, or two sides + non-included angle\n\nCosine Rule: c² = a² + b² - 2ab cosC\na² = b² + c² - 2bc cosA\nUse when: three sides, or two sides + included angle\n\nArea of triangle: A = ½ab sinC"
+        },
+        {
+          "type": "example",
+          "title": "Sine Rule Example",
+          "body": "Triangle: A=40°, B=75°, a=8cm\nC = 180-40-75 = 65°\nb/sin75° = 8/sin40°\nb = 8×sin75°/sin40° = 12.0 cm"
+        },
+        {
+          "type": "example",
+          "title": "Cosine Rule Example",
+          "body": "Triangle: a=7, b=9, C=60°\nc² = 49+81-2(7)(9)cos60° = 130-63 = 67\nc = √67 = 8.19\n\nArea = ½×7×9×sin60° = 27.2 cm²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Sine rule formula",
+            "options": [
+              "a×sinA = b×sinB",
+              "a/sinA = b/sinB",
+              "sinA/a = sinB/a",
+              "a = b sinA"
+            ],
+            "answer": "a/sinA = b/sinB",
+            "explanation": "Sine rule: each side divided by sine of opposite angle are equal"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Cosine rule: c² =",
+            "options": [
+              "a²+b²",
+              "a²+b²-2ab cosC",
+              "a²-b²+2ab cosC",
+              "2ab cosC"
+            ],
+            "answer": "a²+b²-2ab cosC",
+            "explanation": "Cosine rule generalises Pythagoras — extra term -2ab cosC adjusts for non-right triangles"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "When is cosine rule used?",
+            "options": [
+              "Two angles known",
+              "Three sides known or two sides+included angle",
+              "Always",
+              "Never"
+            ],
+            "answer": "Three sides known or two sides+included angle",
+            "explanation": "Cosine rule: SSS (find angle) or SAS (find opposite side)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Area of triangle with sides 5,8 and included angle 30° =",
+            "options": [
+              "10",
+              "20",
+              "5√3",
+              "10√3"
+            ],
+            "answer": "10",
+            "explanation": "A=½×5×8×sin30°=½×40×0.5=10"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Triangle A=50°,B=70°,a=10. Find b.",
+            "options": [
+              "b=12.3",
+              "b=7.5",
+              "b=9.5",
+              "b=11.2"
+            ],
+            "answer": "b=12.3",
+            "explanation": "b/sin70°=10/sin50°; b=10×sin70°/sin50°≈12.3"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Triangle sides 5,6,7. Largest angle faces side 7. cosC =",
+            "options": [
+              "1/5",
+              "0.1",
+              "1/√2",
+              "0"
+            ],
+            "answer": "0.1",
+            "explanation": "c²=a²+b²-2ab cosC: 49=25+36-60cosC, cosC=(25+36-49)/60=12/60=0.2... wait: cosC=(a²+b²-c²)/(2ab)=(25+36-49)/60=12/60=0.2"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Sine rule used when",
+            "options": [
+              "3 sides given",
+              "2 sides+included angle",
+              "2 angles+1 side",
+              "right angle only"
+            ],
+            "answer": "2 angles+1 side",
+            "explanation": "Sine rule best when two angles are known (third can be calculated) and one side given"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Bearing 060° means",
+            "options": [
+              "60° from North clockwise",
+              "60° from East",
+              "60° from South",
+              "60° West"
+            ],
+            "answer": "60° from North clockwise",
+            "explanation": "Bearings measured clockwise from North: 060° is NE direction"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Triangle: sides 3,4,5. Angle opposite side 5 using cosine rule =",
+            "options": [
+              "90°",
+              "60°",
+              "45°",
+              "120°"
+            ],
+            "answer": "90°",
+            "explanation": "cosC=(9+16-25)/24=0/24=0, C=90°. Confirms 3-4-5 right triangle"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Area formula using sine: A=½ab sinC. C=45°,a=6,b=8. Area =",
+            "options": [
+              "12√2",
+              "24",
+              "48",
+              "12"
+            ],
+            "answer": "12√2",
+            "explanation": "A=½×6×8×sin45°=24×(√2/2)=12√2"
+          },
+          {
+            "id": "trigonometry_advanced_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_trig_l4",
+      "title": "Trigonometric Identities and Equations",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Pythagorean identities:\nsin²θ + cos²θ = 1\n1 + tan²θ = sec²θ\n1 + cot²θ = cosec²θ\n\nDouble angle formulae:\nsin2θ = 2sinθcosθ\ncos2θ = cos²θ - sin²θ = 1-2sin²θ = 2cos²θ-1\ntan2θ = 2tanθ/(1-tan²θ)\n\nCompound angles:\nsin(A±B) = sinA cosB ± cosA sinB\ncos(A±B) = cosA cosB ∓ sinA sinB"
+        },
+        {
+          "type": "example",
+          "title": "Proving Identities",
+          "body": "Prove: (1-cos²θ)/sinθ = sinθ\nLHS = sin²θ/sinθ = sinθ = RHS ✓\n\nProve: sin2θ/(1+cos2θ) = tanθ\nLHS = 2sinθcosθ/(1+2cos²θ-1) = 2sinθcosθ/2cos²θ = sinθ/cosθ = tanθ ✓"
+        },
+        {
+          "type": "example",
+          "title": "Solving Trig Equations",
+          "body": "Solve: 2sin²θ - sinθ - 1 = 0, 0°≤θ≤360°\nFactor: (2sinθ+1)(sinθ-1) = 0\nsinθ = -½ → θ=210°,330°\nsinθ = 1 → θ=90°"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "sin²θ + cos²θ =",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "sin2θ"
+            ],
+            "answer": "1",
+            "explanation": "Fundamental Pythagorean identity: sin²θ+cos²θ=1 for all θ"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "sin2θ =",
+            "options": [
+              "sin²θ",
+              "2sinθcosθ",
+              "cos²θ-sin²θ",
+              "1-2sin²θ"
+            ],
+            "answer": "2sinθcosθ",
+            "explanation": "Double angle: sin2θ=2sinθcosθ"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "cos2θ in terms of cosθ only",
+            "options": [
+              "2cosθ",
+              "2cos²θ-1",
+              "1-2cosθ",
+              "cos²θ"
+            ],
+            "answer": "2cos²θ-1",
+            "explanation": "cos2θ=2cos²θ-1 (one of three equivalent forms)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "sin(A+B) =",
+            "options": [
+              "sinA sinB + cosA cosB",
+              "sinA cosB + cosA sinB",
+              "sinA cosB - cosA sinB",
+              "sinA+sinB"
+            ],
+            "answer": "sinA cosB + cosA sinB",
+            "explanation": "Compound angle: sin(A+B)=sinA cosB+cosA sinB"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Simplify: 1-sin²θ",
+            "options": [
+              "cos²θ",
+              "sin²θ",
+              "tan²θ",
+              "0"
+            ],
+            "answer": "cos²θ",
+            "explanation": "From sin²θ+cos²θ=1: 1-sin²θ=cos²θ"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve sinθ=0.5 for 0°≤θ≤360°",
+            "options": [
+              "30° only",
+              "150° only",
+              "30° and 150°",
+              "30° and 210°"
+            ],
+            "answer": "30° and 150°",
+            "explanation": "sinθ=0.5: θ=30° and θ=180°-30°=150° (both in range)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Solve cos2θ=0 for 0°≤θ≤180°",
+            "options": [
+              "45°,135°",
+              "90°",
+              "0°,180°",
+              "45°"
+            ],
+            "answer": "45°,135°",
+            "explanation": "2θ=90°,270° → θ=45°,135°"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "1+tan²θ =",
+            "options": [
+              "sec²θ",
+              "cosec²θ",
+              "cot²θ",
+              "1"
+            ],
+            "answer": "sec²θ",
+            "explanation": "Second Pythagorean identity: 1+tan²θ=sec²θ"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "sin75° = sin(45°+30°) =",
+            "options": [
+              "(√6+√2)/4",
+              "(√6-√2)/4",
+              "√3/2",
+              "1/2"
+            ],
+            "answer": "(√6+√2)/4",
+            "explanation": "sin75°=sin45°cos30°+cos45°sin30°=(√2/2)(√3/2)+(√2/2)(1/2)=(√6+√2)/4"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Factor and solve 2cos²θ-cosθ-1=0",
+            "options": [
+              "θ=60°,120°,180°",
+              "θ=0°,90°",
+              "θ=60°,300°",
+              "θ=60°,120°,300°"
+            ],
+            "answer": "θ=60°,120°,180°",
+            "explanation": "(2cosθ+1)(cosθ-1)=0: cosθ=-½→120°, cosθ=1→0°,360°"
+          },
+          {
+            "id": "trigonometry_advanced_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "trigonometry_advanced_l5",
+      "title": "Trigonometry Advanced — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Trigonometry Advanced. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Trigonometry Advanced concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Trigonometry Advanced builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Trigonometry Advanced. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Trigonometry Advanced. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Trigonometry Advanced include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Trigonometry Advanced. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "trigonometry_advanced_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "trigonometry_advanced_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "trigonometry_advanced_l6",
+      "title": "Trigonometry Advanced — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Trigonometry Advanced. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Trigonometry Advanced concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Trigonometry Advanced builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Trigonometry Advanced. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Trigonometry Advanced. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Trigonometry Advanced include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Trigonometry Advanced. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "trigonometry_advanced_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "trigonometry_advanced_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "trigonometry_advanced"
+}

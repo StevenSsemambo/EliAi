@@ -1,0 +1,1785 @@
+{
+  "subject": "physics",
+  "level": "s4",
+  "lessons": [
+    {
+      "id": "s4_phy_elec_l1",
+      "title": "Electric Fields and Capacitors",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Electric field:\nE = F/q (force per unit charge)\nFor point charge: E = kQ/r² (k=9×10⁹ N⋅m²/C²)\nField lines: from positive → negative\n\nCapacitor:\nC = Q/V (capacitance = charge/voltage)\nUnit: Farad (F)\nEnergy stored: E = ½CV² = Q²/2C = ½QV\n\nSeries: 1/C_total = 1/C₁ + 1/C₂\nParallel: C_total = C₁ + C₂"
+        },
+        {
+          "type": "example",
+          "title": "Capacitor Calculations",
+          "body": "C=100μF, V=12V\nQ=CV=100×10⁻⁶×12=1.2×10⁻³ C\nE=½CV²=½×100×10⁻⁶×144=7.2×10⁻³ J\n\nTwo 6μF capacitors in series:\n1/C=1/6+1/6=2/6, C=3μF\nIn parallel: C=6+6=12μF"
+        },
+        {
+          "type": "example",
+          "title": "Electric Fields",
+          "body": "Uniform field between parallel plates:\nE = V/d (V=voltage, d=separation)\n\nField lines always perpendicular to equipotentials\nCloser lines = stronger field\nParallel plates: uniform field between them"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Electric field strength E = ",
+            "options": [
+              "F×q",
+              "F/q",
+              "q/F",
+              "Fq²"
+            ],
+            "answer": "F/q",
+            "explanation": "E = force per unit charge = F/q, units N/C or V/m"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Capacitance C = ",
+            "options": [
+              "V/Q",
+              "Q/V",
+              "Q×V",
+              "Q²/V"
+            ],
+            "answer": "Q/V",
+            "explanation": "C = Q/V. Larger capacitance: stores more charge per volt"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "100μF capacitor at 10V. Charge stored =",
+            "options": [
+              "10C",
+              "0.001C",
+              "1000C",
+              "0.01C"
+            ],
+            "answer": "0.001C",
+            "explanation": "Q=CV=100×10⁻⁶×10=1×10⁻³=0.001C"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Energy in capacitor = ½CV². C=50μF, V=20V. Energy =",
+            "options": [
+              "0.01J",
+              "10J",
+              "0.001J",
+              "1000J"
+            ],
+            "answer": "0.01J",
+            "explanation": "E=½×50×10⁻⁶×400=0.01J"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two 4μF capacitors in series. Total capacitance =",
+            "options": [
+              "8μF",
+              "2μF",
+              "4μF",
+              "16μF"
+            ],
+            "answer": "2μF",
+            "explanation": "1/C=1/4+1/4=2/4, C=2μF"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two 4μF capacitors in parallel. Total capacitance =",
+            "options": [
+              "2μF",
+              "4μF",
+              "8μF",
+              "16μF"
+            ],
+            "answer": "8μF",
+            "explanation": "Parallel: C=4+4=8μF"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Electric field lines go from",
+            "options": [
+              "negative to positive",
+              "positive to negative",
+              "always downward",
+              "parallel to surface"
+            ],
+            "answer": "positive to negative",
+            "explanation": "Field lines run from positive to negative charges, showing direction of force on positive test charge"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Between parallel plates (V=100V, d=0.01m). Field E =",
+            "options": [
+              "1V/m",
+              "10000V/m",
+              "0.1V/m",
+              "1000V/m"
+            ],
+            "answer": "10000V/m",
+            "explanation": "E=V/d=100/0.01=10000 V/m"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Capacitors in parallel all have the same",
+            "options": [
+              "charge",
+              "current",
+              "voltage",
+              "capacitance"
+            ],
+            "answer": "voltage",
+            "explanation": "Parallel: same voltage across each capacitor (connected across same two nodes)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What is a Farad?",
+            "options": [
+              "Coulomb per Volt",
+              "Joule per Volt",
+              "Ampere per Volt",
+              "Newton per Coulomb"
+            ],
+            "answer": "Coulomb per Volt",
+            "explanation": "1 Farad = 1 C/V (one coulomb stored per volt)"
+          },
+          {
+            "id": "electricity_detail_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_elec_l2",
+      "title": "Domestic Electricity and Safety",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Mains electricity:\nVoltage: 240V (rms) at 50Hz in Uganda/UK\nThree-pin plug wires:\nLive (brown/red): carries alternating voltage\nNeutral (blue/black): return path, near 0V\nEarth (green-yellow): safety connection\n\nFuses: melt if current too high (thin wire)\nCircuit breakers: electromagnetic switch trips\nRCDs: detect current imbalance → trip instantly\n\nPower: P=IV=I²R=V²/R\nCost: units(kWh) = power(kW) × time(h)"
+        },
+        {
+          "type": "example",
+          "title": "Electrical Safety",
+          "body": "Fuse rating: slightly above normal operating current\nToaster: P=1500W, V=240V: I=P/V=6.25A → use 10A fuse\nDouble insulation: no earth needed (class II appliance)\nEarth wire: connects metal casing to ground → fault current flows safely instead of through user"
+        },
+        {
+          "type": "example",
+          "title": "Electricity Cost",
+          "body": "Kettle: 2kW used for 15 min = 0.5h\nUnits = 2×0.5 = 1 kWh\nCost at UGX 500/kWh = UGX 500\n\nRefrigerator: 0.1kW for 24h\nUnits = 0.1×24 = 2.4 kWh/day = 72 kWh/month"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a 3-pin plug, the live wire colour is",
+            "options": [
+              "blue",
+              "green-yellow",
+              "brown/red",
+              "black"
+            ],
+            "answer": "brown/red",
+            "explanation": "Live wire (brown in UK, red in older): carries the alternating high voltage"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The earth wire protects by",
+            "options": [
+              "carrying current normally",
+              "connecting metal casing to ground so fault current flows safely",
+              "increasing resistance",
+              "reducing voltage"
+            ],
+            "answer": "connecting metal casing to ground so fault current flows safely",
+            "explanation": "If live wire touches metal casing, earth wire provides low-resistance path for fault current → trips fuse/breaker"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A fuse with correct rating should",
+            "options": [
+              "blow during normal use",
+              "blow only when current exceeds safe level",
+              "never blow",
+              "blow at exactly rated current always"
+            ],
+            "answer": "blow only when current exceeds safe level",
+            "explanation": "Fuse melts at slightly above normal current, protecting circuit from overload or short circuit"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "1500W kettle on 240V. Current drawn =",
+            "options": [
+              "360A",
+              "0.16A",
+              "6.25A",
+              "360,000A"
+            ],
+            "answer": "6.25A",
+            "explanation": "I=P/V=1500/240=6.25A"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Correct fuse for 6.25A appliance from options",
+            "options": [
+              "3A",
+              "5A",
+              "10A",
+              "30A"
+            ],
+            "answer": "10A",
+            "explanation": "Choose fuse rated slightly ABOVE normal current: 10A is next standard size above 6.25A"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "kWh means",
+            "options": [
+              "kilowatt per hour",
+              "kilojoules per hour",
+              "energy used by 1kW device in 1 hour",
+              "1000 watt-seconds"
+            ],
+            "answer": "energy used by 1kW device in 1 hour",
+            "explanation": "1 kWh = 1 kilowatt × 1 hour = 3,600,000 J. Unit of electrical energy for billing"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "RCD (Residual Current Device) trips when",
+            "options": [
+              "current too high",
+              "voltage drops",
+              "current in live ≠ current in neutral (earth leakage detected)",
+              "fuse blows"
+            ],
+            "answer": "current in live ≠ current in neutral (earth leakage detected)",
+            "explanation": "RCD detects tiny current imbalances (as small as 30mA) suggesting earth fault → cuts power in milliseconds"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "100W bulb for 5 hours uses how many kWh?",
+            "options": [
+              "500kWh",
+              "0.5kWh",
+              "5kWh",
+              "100kWh"
+            ],
+            "answer": "0.5kWh",
+            "explanation": "Energy=0.1kW×5h=0.5kWh"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Double insulation (class II) appliances",
+            "options": [
+              "must have earth wire",
+              "do not need earth wire",
+              "use 3-pin plugs only",
+              "need special fuses"
+            ],
+            "answer": "do not need earth wire",
+            "explanation": "Class II: plastic casing, two layers of insulation. No conducting parts exposed → no earth needed"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Neutral wire is at approximately",
+            "options": [
+              "240V",
+              "120V",
+              "0V",
+              "50V"
+            ],
+            "answer": "0V",
+            "explanation": "Neutral is return path connected to earth at substation — approximately 0V (potential). Live swings ±240V"
+          },
+          {
+            "id": "electricity_detail_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_ed_l3",
+      "title": "Electromagnetic Induction: Faraday's Law",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Faraday's Law:\nEMF = -N × ΔΦ/Δt\nΦ = BA cosθ (magnetic flux)\nN = number of turns\n\nLenz's Law: induced current opposes change causing it\n\nAC Generator:\nEMF = NBAω sin(ωt) = E₀ sin(ωt)\nE₀ = NBAω (peak EMF)\nω = 2πf (angular frequency)\n\nTransformer:\nVₛ/Vₚ = Nₛ/Nₚ = Iₚ/Iₛ (ideal)"
+        },
+        {
+          "type": "example",
+          "title": "Generator Calculations",
+          "body": "Generator: N=200, B=0.05T, A=0.01m², f=50Hz\nω=2π×50=314 rad/s\nE₀=200×0.05×0.01×314=31.4V\nRMS voltage=E₀/√2=22.2V"
+        },
+        {
+          "type": "example",
+          "title": "Transformer",
+          "body": "Step-up transformer: Nₛ>Nₚ → Vₛ>Vₚ\nNₚ=100, Nₛ=1000, Vₚ=240V\nVₛ=240×1000/100=2400V\nIf Iₛ=0.1A → Iₚ=0.1×1000/100=1A\nPower in = Power out (ideal): VₚIₚ=VₛIₛ=240W"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Faraday's law: EMF depends on",
+            "options": [
+              "voltage only",
+              "rate of change of magnetic flux",
+              "current",
+              "resistance"
+            ],
+            "answer": "rate of change of magnetic flux",
+            "explanation": "EMF = -NdΦ/dt: EMF proportional to rate of flux change"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Lenz's law states induced current",
+            "options": [
+              "always flows clockwise",
+              "opposes the change in flux that caused it",
+              "increases flux",
+              "flows with magnetic field"
+            ],
+            "answer": "opposes the change in flux that caused it",
+            "explanation": "Lenz's law: energy conservation — induced current creates field opposing original change"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "AC generator produces sinusoidal EMF because",
+            "options": [
+              "it has a capacitor",
+              "the coil rotates, changing flux sinusoidally",
+              "batteries are connected",
+              "wires are copper"
+            ],
+            "answer": "the coil rotates, changing flux sinusoidally",
+            "explanation": "Rotating coil: flux = BAcosθ = BAcos(ωt), EMF = −dΦ/dt = NBAω sin(ωt)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Peak EMF of generator N=100,B=0.1T,A=0.02m²,f=50Hz",
+            "options": [
+              "6.28V",
+              "62.8V",
+              "628V",
+              "31.4V"
+            ],
+            "answer": "62.8V",
+            "explanation": "E₀=NBAω=100×0.1×0.02×2π×50≈62.8V"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "RMS voltage relates to peak by",
+            "options": [
+              "Vrms=V₀",
+              "Vrms=V₀/2",
+              "Vrms=V₀/√2",
+              "Vrms=2V₀"
+            ],
+            "answer": "Vrms=V₀/√2",
+            "explanation": "RMS (root mean square) = peak/√2 for sinusoidal AC"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Step-up transformer increases",
+            "options": [
+              "current",
+              "voltage",
+              "power",
+              "frequency"
+            ],
+            "answer": "voltage",
+            "explanation": "Step-up: Nₛ>Nₚ → Vₛ>Vₚ. Power conserved (ideal): higher V, lower I"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Transformer ratio: Nₚ=500, Nₛ=50, Vₚ=220V. Vₛ=",
+            "options": [
+              "22V",
+              "2200V",
+              "110V",
+              "44V"
+            ],
+            "answer": "22V",
+            "explanation": "Vₛ=Vₚ×Nₛ/Nₚ=220×50/500=22V"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Electricity transmitted at high voltage because",
+            "options": [
+              "generators produce it",
+              "I²R losses reduced with lower current (P=IV constant)",
+              "insulation requires it",
+              "efficiency of transformer"
+            ],
+            "answer": "I²R losses reduced with lower current (P=IV constant)",
+            "explanation": "High V → low I for same power → power loss P=I²R much smaller → efficient long-distance transmission"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Ideal transformer: Vₛ=100V, Iₛ=2A, Vₚ=20V. Primary current Iₚ=",
+            "options": [
+              "0.4A",
+              "10A",
+              "40A",
+              "2A"
+            ],
+            "answer": "10A",
+            "explanation": "Power conserved: VₚIₚ=VₛIₛ → 20×Iₚ=100×2=200 → Iₚ=10A"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Mutual induction occurs when",
+            "options": [
+              "two conductors carry same current",
+              "changing current in one coil induces EMF in nearby coil",
+              "two magnets attract",
+              "AC converted to DC"
+            ],
+            "answer": "changing current in one coil induces EMF in nearby coil",
+            "explanation": "Mutual induction: basis of transformers. Changing flux from primary coil links secondary"
+          },
+          {
+            "id": "electricity_detail_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_phy_ed_l4",
+      "title": "Cathode Rays and the Electron",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Cathode ray tube (CRT):\nElectrons emitted from heated cathode\nAccelerated by anode voltage V\nKinetic energy: ½mv² = eV\nSpeed: v = √(2eV/m)\ne/m ratio (Thomson) ≈ 1.76×10¹¹ C/kg\n\nMillikan oil drop: measured e = 1.6×10⁻¹⁹ C\n∴ m_electron = 9.11×10⁻³¹ kg"
+        },
+        {
+          "type": "example",
+          "title": "CRT Applications",
+          "body": "Oscilloscope: displays voltage-time graphs\nX-plates: horizontal deflection (time base)\nY-plates: vertical deflection (signal)\nElectron gun: produces focused electron beam\n\nTV/monitor (old): scanning electron beam across screen\nModern: LCD/LED screens replaced CRT"
+        },
+        {
+          "type": "example",
+          "title": "Photoelectric Effect",
+          "body": "Light ejects electrons from metal surface\nEinstein: photons with energy E=hf\nThreshold frequency f₀: minimum to eject electron\nhf = φ + ½mv²max\nφ = work function (energy to release electron)\nh = 6.63×10⁻³⁴ J⋅s (Planck's constant)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Cathode rays are",
+            "options": [
+              "positive ions",
+              "light waves",
+              "electrons",
+              "neutrons"
+            ],
+            "answer": "electrons",
+            "explanation": "Cathode rays are streams of electrons emitted from heated cathode in evacuated tube"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Electron kinetic energy after acceleration through voltage V",
+            "options": [
+              "eV²",
+              "½eV",
+              "eV",
+              "e/V"
+            ],
+            "answer": "eV",
+            "explanation": "Work done by electric field: W=qV=eV = kinetic energy gained"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Speed of electron accelerated through 1000V (e=1.6×10⁻¹⁹, m=9.11×10⁻³¹)",
+            "options": [
+              "1.88×10⁷m/s",
+              "3×10⁸m/s",
+              "1000m/s",
+              "10⁶m/s"
+            ],
+            "answer": "1.88×10⁷m/s",
+            "explanation": "v=√(2eV/m)=√(2×1.6×10⁻¹⁹×1000/9.11×10⁻³¹)=1.88×10⁷m/s"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Millikan's oil drop experiment measured",
+            "options": [
+              "electron mass",
+              "electron charge (e=1.6×10⁻¹⁹C)",
+              "speed of light",
+              "Planck's constant"
+            ],
+            "answer": "electron charge (e=1.6×10⁻¹⁹C)",
+            "explanation": "Millikan balanced gravity and electric force on charged oil drops to determine e"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In oscilloscope, Y-plates deflect electron beam",
+            "options": [
+              "horizontally (time base)",
+              "vertically (input signal)",
+              "in both directions",
+              "not at all"
+            ],
+            "answer": "vertically (input signal)",
+            "explanation": "Y-plates: vertical deflection proportional to input voltage being measured"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Photoelectric effect shows light behaves as",
+            "options": [
+              "waves only",
+              "particles (photons)",
+              "magnetic field",
+              "continuous energy"
+            ],
+            "answer": "particles (photons)",
+            "explanation": "Photoelectric effect: light comes in discrete packets (photons E=hf). Proves particle nature of light"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Threshold frequency in photoelectric effect is",
+            "options": [
+              "maximum light frequency",
+              "minimum frequency to eject electrons from metal",
+              "frequency of UV only",
+              "frequency at maximum current"
+            ],
+            "answer": "minimum frequency to eject electrons from metal",
+            "explanation": "Below threshold frequency, no electrons ejected regardless of intensity — needs minimum energy per photon"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Einstein's photoelectric equation: hf = φ + ½mv²max means",
+            "options": [
+              "photon energy = work function + maximum KE of ejected electron",
+              "frequency = wavelength",
+              "h=mass",
+              "force=mass×acceleration"
+            ],
+            "answer": "photon energy = work function + maximum KE of ejected electron",
+            "explanation": "Photon energy (hf) used to overcome work function (φ) with remainder as kinetic energy of electron"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Increasing light INTENSITY in photoelectric effect (above threshold)",
+            "options": [
+              "increases max KE",
+              "increases ejection speed",
+              "increases number of electrons emitted per second",
+              "increases threshold"
+            ],
+            "answer": "increases number of electrons emitted per second",
+            "explanation": "More photons per second → more electrons per second. Max KE depends only on frequency, not intensity"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Planck's constant h has value",
+            "options": [
+              "9.11×10⁻³¹",
+              "6.63×10⁻³⁴ J⋅s",
+              "3×10⁸",
+              "1.6×10⁻¹⁹"
+            ],
+            "answer": "6.63×10⁻³⁴ J⋅s",
+            "explanation": "h=6.63×10⁻³⁴ J⋅s — relates photon energy to frequency: E=hf"
+          },
+          {
+            "id": "electricity_detail_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electricity_detail_l5",
+      "title": "Electricity Detail — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Electricity Detail. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Electricity Detail concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Electricity Detail builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Electricity Detail. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Electricity Detail. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Electricity Detail include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Electricity Detail. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "electricity_detail_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "electricity_detail_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "electricity_detail_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "electricity_detail_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "electricity_detail_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "electricity_detail_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "electricity_detail_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "electricity_detail_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "electricity_detail_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "electricity_detail_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "electricity_detail_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "electricity_detail_l6",
+      "title": "Electricity Detail — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Electricity Detail. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Electricity Detail concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Electricity Detail builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Electricity Detail. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Electricity Detail. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Electricity Detail include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Electricity Detail. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "electricity_detail_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "electricity_detail_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "electricity_detail_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "electricity_detail_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "electricity_detail_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "electricity_detail_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "electricity_detail_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "electricity_detail_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "electricity_detail_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "electricity_detail_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "electricity_detail_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "electricity_detail_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "electricity_detail_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "electricity_detail_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "electricity_detail_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "electricity_detail_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "electricity_detail_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "electricity_detail_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "electricity_detail_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "electricity_detail_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "electricity_detail"
+}

@@ -1,0 +1,1821 @@
+{
+  "topic_id": "biochemistry",
+  "topic_title": "Biochemistry",
+  "subject": "biology",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "biochemistry_l1",
+      "title": "Enzymes: Mechanism and Kinetics",
+      "duration_minutes": 30,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Enzymes are biological catalysts that speed up reactions by lowering activation energy. Each enzyme has an active site that binds specific substrates."
+        },
+        {
+          "type": "formula",
+          "body": "Enzyme-Substrate Complex: E + S ⇌ ES → E + P\nMichaelis-Menten: V = Vmax[S] / (Km + [S])\nKm = substrate concentration at half Vmax\n\nFactors: Temperature, pH, inhibitor type"
+        },
+        {
+          "type": "example",
+          "title": "Competitive vs Non-competitive Inhibition",
+          "body": "Competitive inhibitor: binds active site, blocks substrate\n→ Increasing [S] overcomes inhibition\n→ Km increases, Vmax unchanged\n\nNon-competitive: binds elsewhere, changes shape\n→ Cannot overcome by adding substrate\n→ Vmax decreases, Km unchanged"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Enzymes speed up reactions by:",
+            "options": [
+              "Increasing temperature",
+              "Lowering activation energy",
+              "Adding more substrate",
+              "Changing pH"
+            ],
+            "answer": "Lowering activation energy",
+            "explanation": "Enzymes provide an alternative reaction pathway with lower activation energy"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Km represents:",
+            "options": [
+              "Maximum velocity",
+              "Substrate concentration at half Vmax",
+              "Enzyme concentration",
+              "Inhibitor concentration"
+            ],
+            "answer": "Substrate concentration at half Vmax",
+            "explanation": "Km is the Michaelis constant — lower Km means higher enzyme affinity for substrate"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A competitive inhibitor binds to the:",
+            "options": [
+              "Allosteric site",
+              "Active site",
+              "Product",
+              "Coenzyme"
+            ],
+            "answer": "Active site",
+            "explanation": "Competitive inhibitors directly block the active site, competing with the substrate"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which type of inhibition can be overcome by adding more substrate?",
+            "options": [
+              "Non-competitive",
+              "Allosteric",
+              "Competitive",
+              "Both competitive and non-competitive"
+            ],
+            "answer": "Competitive",
+            "explanation": "With more substrate, it outcompetes the inhibitor for the active site"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Denaturation of an enzyme is usually caused by:",
+            "options": [
+              "Low substrate",
+              "High temperature or extreme pH",
+              "Competitive inhibition",
+              "Adding cofactors"
+            ],
+            "answer": "High temperature or extreme pH",
+            "explanation": "Heat and pH extremes break the hydrogen bonds maintaining the enzyme's shape"
+          },
+          {
+            "id": "biochemistry_l1_q6",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l1_q8",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l1_q10",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l1_q12",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l1_q14",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l1_q16",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l1_q18",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l1_q20",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l1_q22",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l1_q24",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          },
+          {
+            "id": "biochemistry_l1_q26",
+            "type": "multiple_choice",
+            "question": "What is respiration?",
+            "options": [
+              "The process of releasing energy from glucose in cells",
+              "Breathing in oxygen",
+              "Exchanging gases in the lungs",
+              "Making food using sunlight"
+            ],
+            "answer": "The process of releasing energy from glucose in cells",
+            "explanation": "Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. It releases energy from glucose for cell use."
+          },
+          {
+            "id": "biochemistry_l1_q28",
+            "type": "multiple_choice",
+            "question": "What is natural selection?",
+            "options": [
+              "Organisms with favourable traits survive and reproduce more",
+              "Humans selecting crop varieties",
+              "Random survival of organisms",
+              "All organisms evolving at the same rate"
+            ],
+            "answer": "Organisms with favourable traits survive and reproduce more",
+            "explanation": "Natural selection is Darwin's mechanism: individuals with traits better suited to the environment survive and pass on those traits."
+          },
+          {
+            "id": "biochemistry_l1_q30",
+            "type": "multiple_choice",
+            "question": "What organ filters blood in humans?",
+            "options": [
+              "Kidneys",
+              "Liver",
+              "Lungs",
+              "Heart"
+            ],
+            "answer": "Kidneys",
+            "explanation": "The kidneys filter blood to remove waste products (urea, excess water, salts), producing urine."
+          },
+          {
+            "id": "biochemistry_l1_q32",
+            "type": "multiple_choice",
+            "question": "What is the function of stomata in leaves?",
+            "options": [
+              "Gas exchange and transpiration",
+              "Photosynthesis only",
+              "Water absorption",
+              "Food storage"
+            ],
+            "answer": "Gas exchange and transpiration",
+            "explanation": "Stomata are pores in leaves that allow CO₂ in and O₂ out during photosynthesis, and water vapour out during transpiration."
+          },
+          {
+            "id": "biochemistry_l1_q34",
+            "type": "multiple_choice",
+            "question": "Which part of the neurone carries impulses away from the cell body?",
+            "options": [
+              "Axon",
+              "Dendrite",
+              "Synapse",
+              "Myelin sheath"
+            ],
+            "answer": "Axon",
+            "explanation": "The axon is the long fibre that carries nerve impulses away from the cell body to other neurons or effectors."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biochemistry_l2",
+      "title": "Enzymes — Biological Catalysts",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Enzymes are biological catalysts made of protein. They speed up chemical reactions in living organisms without being used up. Each enzyme is specific to one reaction due to its unique active site shape."
+        },
+        {
+          "type": "formula",
+          "body": "Lock and Key Model:\nThe substrate fits exactly into the enzyme's active site (like a key in a lock)\nEnzyme-substrate complex forms → products released → enzyme unchanged\n\nInduced Fit Model (more accurate):\nThe active site changes shape slightly to accommodate the substrate"
+        },
+        {
+          "type": "example",
+          "title": "Factors Affecting Enzyme Activity",
+          "body": "Temperature:\n• Increasing temperature increases reaction rate (more collisions)\n• Above optimum temperature, the enzyme DENATURES (active site shape changes permanently)\n• Most human enzymes work best at 37°C (body temperature)\n\npH:\n• Each enzyme has an optimum pH\n• Above or below optimum, the enzyme denatures\n• Pepsin (stomach): optimum pH 2 (acidic)\n• Salivary amylase (mouth): optimum pH 7\n\nSubstrate concentration:\n• More substrate = faster reaction (up to a point)\n• When all active sites are occupied, rate plateaus"
+        },
+        {
+          "type": "example",
+          "title": "Important Enzymes",
+          "body": "Amylase — breaks down starch to maltose (in saliva and pancreatic juice)\nProtease (pepsin, trypsin) — breaks down proteins to amino acids\nLipase — breaks down fats to fatty acids and glycerol\nDNA polymerase — copies DNA during replication\nRubisco — fixes CO₂ in photosynthesis"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What type of molecule are enzymes?",
+            "options": [
+              "Lipid",
+              "Carbohydrate",
+              "Protein",
+              "Nucleic acid"
+            ],
+            "answer": "Protein",
+            "explanation": "Enzymes are proteins. Their specific 3D shape is determined by their amino acid sequence."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the active site of an enzyme?",
+            "options": [
+              "The entire enzyme surface",
+              "Where the substrate binds",
+              "Where products are released",
+              "The enzyme's nucleus"
+            ],
+            "answer": "Where the substrate binds",
+            "explanation": "The active site is a specific region of the enzyme where the substrate binds to form the enzyme-substrate complex."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What happens to an enzyme above its optimum temperature?",
+            "options": [
+              "Works faster",
+              "Denatures",
+              "Freezes",
+              "Divides"
+            ],
+            "answer": "Denatures",
+            "explanation": "Above the optimum temperature, the bonds holding the enzyme's shape break. The active site changes shape permanently — the enzyme is denatured."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The optimum temperature for most human enzymes is approximately...",
+            "options": [
+              "0°C",
+              "20°C",
+              "37°C",
+              "100°C"
+            ],
+            "answer": "37°C",
+            "explanation": "Human enzymes are adapted to work best at body temperature, 37°C."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Pepsin works best at pH 2. What happens at pH 7?",
+            "options": [
+              "Works better",
+              "Works the same",
+              "Activity decreases, may denature",
+              "Becomes more specific"
+            ],
+            "answer": "Activity decreases, may denature",
+            "explanation": "Pepsin has an optimum pH of 2. At pH 7, the changed conditions affect the active site shape, reducing activity."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which enzyme breaks down starch?",
+            "options": [
+              "Lipase",
+              "Protease",
+              "Amylase",
+              "DNA polymerase"
+            ],
+            "answer": "Amylase",
+            "explanation": "Amylase breaks down starch (a polysaccharide) into maltose (a disaccharide). Found in saliva and pancreatic juice."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why is an enzyme specific to one substrate?",
+            "options": [
+              "Enzymes are too small",
+              "The active site shape only fits one substrate",
+              "Enzymes are found only in one organ",
+              "Substrate is too large"
+            ],
+            "answer": "The active site shape only fits one substrate",
+            "explanation": "Each enzyme has a uniquely shaped active site that only fits one specific substrate, like a lock fitting only one key."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What does lipase break down?",
+            "options": [
+              "Starch",
+              "Proteins",
+              "Fats",
+              "DNA"
+            ],
+            "answer": "Fats",
+            "explanation": "Lipase breaks down fats (lipids) into fatty acids and glycerol."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "When substrate concentration is very high, what happens to reaction rate?",
+            "options": [
+              "Increases indefinitely",
+              "Decreases",
+              "Levels off (plateau)",
+              "Doubles every time"
+            ],
+            "answer": "Levels off (plateau)",
+            "explanation": "When all enzyme active sites are occupied, adding more substrate has no effect. The rate plateaus (maximum velocity)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What does the induced fit model say that the lock-and-key model doesn't?",
+            "options": [
+              "Active site changes shape slightly to fit the substrate",
+              "Only one substrate fits an enzyme",
+              "Enzymes are used up",
+              "Products change the enzyme"
+            ],
+            "answer": "Active site changes shape slightly to fit the substrate",
+            "explanation": "The induced fit model proposes that the active site is flexible and molds itself around the substrate, unlike the rigid lock-and-key model."
+          },
+          {
+            "id": "biochemistry_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l2_q17",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l2_q19",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l2_q21",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l2_q23",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l2_q27",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biochemistry_l3",
+      "title": "Biological Molecules — Carbohydrates and Proteins",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Biological molecules (biomolecules) are the chemical compounds found in living organisms. The four main groups are carbohydrates, proteins, lipids, and nucleic acids. Each plays essential roles in life processes."
+        },
+        {
+          "type": "example",
+          "title": "Carbohydrates",
+          "body": "Made of C, H, O atoms in ratio approximately 1:2:1\nMonosaccharides (simple sugars): glucose, fructose, galactose\nDisaccharides: maltose, sucrose, lactose (two monosaccharides joined)\nPolysaccharides: starch, glycogen, cellulose (many monosaccharides joined)\n\nFunctions: energy source, energy storage (starch in plants, glycogen in animals), structural (cellulose in plant cell walls)"
+        },
+        {
+          "type": "formula",
+          "body": "Condensation reaction: two monomers join with release of water\nHydrolysis reaction: polymer broken down by addition of water\n\nGlucose + glucose → maltose + water (condensation)\nMaltose + water → glucose + glucose (hydrolysis)\n\nGlycodisic bond — bond linking sugar units"
+        },
+        {
+          "type": "example",
+          "title": "Proteins",
+          "body": "Made of C, H, O, N (and sometimes S)\nMonomer = amino acid (20 different types)\nPolypeptide = chain of amino acids joined by peptide bonds\n\nStructure levels:\nPrimary — sequence of amino acids\nSecondary — alpha helix or beta-pleated sheet (H-bonds)\nTertiary — 3D folded shape (various bonds)\nQuaternary — multiple polypeptide chains\n\nFunctions: enzymes, antibodies, hormones (insulin), structural (collagen), transport (haemoglobin)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What are the three elements in all carbohydrates?",
+            "options": [
+              "C, H, N",
+              "C, H, O",
+              "C, N, O",
+              "H, N, O"
+            ],
+            "answer": "C, H, O",
+            "explanation": "All carbohydrates contain carbon (C), hydrogen (H), and oxygen (O) in approximately a 1:2:1 ratio."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What type of molecule is glucose?",
+            "options": [
+              "Polysaccharide",
+              "Disaccharide",
+              "Monosaccharide",
+              "Amino acid"
+            ],
+            "answer": "Monosaccharide",
+            "explanation": "Glucose is a monosaccharide — a simple single sugar unit that cannot be hydrolysed further."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What bond links amino acids together in a protein?",
+            "options": [
+              "Hydrogen bond",
+              "Peptide bond",
+              "Ionic bond",
+              "Glycosidic bond"
+            ],
+            "answer": "Peptide bond",
+            "explanation": "Amino acids are joined by peptide bonds (formed by condensation reactions) to create polypeptide chains."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the monomer of proteins?",
+            "options": [
+              "Glucose",
+              "Fatty acid",
+              "Amino acid",
+              "Nucleotide"
+            ],
+            "answer": "Amino acid",
+            "explanation": "Proteins are polymers made of amino acid monomers. There are 20 different amino acids."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "What is the function of glycogen in animals?",
+            "options": [
+              "Structural support",
+              "Energy storage",
+              "Enzyme activity",
+              "Transport"
+            ],
+            "answer": "Energy storage",
+            "explanation": "Glycogen is the storage polysaccharide in animals, mainly stored in the liver and muscles. It is hydrolysed to glucose when energy is needed."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "What is the primary structure of a protein?",
+            "options": [
+              "3D folded shape",
+              "Alpha helix arrangement",
+              "Sequence of amino acids",
+              "Multiple polypeptide chains"
+            ],
+            "answer": "Sequence of amino acids",
+            "explanation": "The primary structure is simply the sequence of amino acids in the polypeptide chain, determined by the gene encoding the protein."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What type of reaction joins two monosaccharides with the release of water?",
+            "options": [
+              "Hydrolysis",
+              "Condensation",
+              "Oxidation",
+              "Neutralisation"
+            ],
+            "answer": "Condensation",
+            "explanation": "A condensation reaction joins two monomers with the release of a water molecule. The reverse process is hydrolysis."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which polysaccharide forms the cell wall of plants?",
+            "options": [
+              "Starch",
+              "Glycogen",
+              "Cellulose",
+              "Chitin"
+            ],
+            "answer": "Cellulose",
+            "explanation": "Cellulose is made of beta-glucose units and forms the structural cell wall of plant cells. Its fibres give strength."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "What holds the secondary structure of a protein in shape?",
+            "options": [
+              "Peptide bonds",
+              "Hydrogen bonds",
+              "Ionic bonds",
+              "Disulphide bridges"
+            ],
+            "answer": "Hydrogen bonds",
+            "explanation": "The secondary structure (alpha helix, beta-pleated sheet) is maintained by hydrogen bonds between amino acids."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Haemoglobin has four polypeptide chains. This is an example of...",
+            "options": [
+              "Primary structure",
+              "Secondary structure",
+              "Tertiary structure",
+              "Quaternary structure"
+            ],
+            "answer": "Quaternary structure",
+            "explanation": "Quaternary structure involves proteins made of more than one polypeptide chain. Haemoglobin has 4 subunits."
+          },
+          {
+            "id": "biochemistry_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l3_q17",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l3_q19",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l3_q21",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l3_q23",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l3_q27",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biochemistry_l4",
+      "title": "Biochemistry — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Biochemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Biochemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of biology."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Biochemistry builds on foundational knowledge. In biology, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Biochemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Biochemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Biochemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Biochemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "biochemistry_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l4_q2",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l4_q4",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l4_q5",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l4_q6",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l4_q7",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l4_q9",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          },
+          {
+            "id": "biochemistry_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is respiration?",
+            "options": [
+              "The process of releasing energy from glucose in cells",
+              "Breathing in oxygen",
+              "Exchanging gases in the lungs",
+              "Making food using sunlight"
+            ],
+            "answer": "The process of releasing energy from glucose in cells",
+            "explanation": "Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. It releases energy from glucose for cell use."
+          },
+          {
+            "id": "biochemistry_l4_q12",
+            "type": "multiple_choice",
+            "question": "What is natural selection?",
+            "options": [
+              "Organisms with favourable traits survive and reproduce more",
+              "Humans selecting crop varieties",
+              "Random survival of organisms",
+              "All organisms evolving at the same rate"
+            ],
+            "answer": "Organisms with favourable traits survive and reproduce more",
+            "explanation": "Natural selection is Darwin's mechanism: individuals with traits better suited to the environment survive and pass on those traits."
+          },
+          {
+            "id": "biochemistry_l4_q13",
+            "type": "multiple_choice",
+            "question": "What organ filters blood in humans?",
+            "options": [
+              "Kidneys",
+              "Liver",
+              "Lungs",
+              "Heart"
+            ],
+            "answer": "Kidneys",
+            "explanation": "The kidneys filter blood to remove waste products (urea, excess water, salts), producing urine."
+          },
+          {
+            "id": "biochemistry_l4_q14",
+            "type": "multiple_choice",
+            "question": "What is the function of stomata in leaves?",
+            "options": [
+              "Gas exchange and transpiration",
+              "Photosynthesis only",
+              "Water absorption",
+              "Food storage"
+            ],
+            "answer": "Gas exchange and transpiration",
+            "explanation": "Stomata are pores in leaves that allow CO₂ in and O₂ out during photosynthesis, and water vapour out during transpiration."
+          },
+          {
+            "id": "biochemistry_l4_q15",
+            "type": "multiple_choice",
+            "question": "Which part of the neurone carries impulses away from the cell body?",
+            "options": [
+              "Axon",
+              "Dendrite",
+              "Synapse",
+              "Myelin sheath"
+            ],
+            "answer": "Axon",
+            "explanation": "The axon is the long fibre that carries nerve impulses away from the cell body to other neurons or effectors."
+          },
+          {
+            "id": "biochemistry_l4_q16",
+            "type": "multiple_choice",
+            "question": "What is the function of enzymes?",
+            "options": [
+              "Biological catalysts that speed up reactions",
+              "Energy sources for cells",
+              "Carriers of oxygen",
+              "Building blocks of DNA"
+            ],
+            "answer": "Biological catalysts that speed up reactions",
+            "explanation": "Enzymes are protein catalysts that lower activation energy and speed up biochemical reactions without being consumed."
+          },
+          {
+            "id": "biochemistry_l4_q17",
+            "type": "multiple_choice",
+            "question": "What gas do plants absorb during photosynthesis?",
+            "options": [
+              "Carbon dioxide (CO₂)",
+              "Oxygen (O₂)",
+              "Nitrogen (N₂)",
+              "Water vapour"
+            ],
+            "answer": "Carbon dioxide (CO₂)",
+            "explanation": "Plants absorb CO₂ from the air through stomata during photosynthesis, converting it to glucose using light energy."
+          },
+          {
+            "id": "biochemistry_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is a food chain?",
+            "options": [
+              "A sequence showing how energy passes from one organism to another",
+              "A list of foods animals eat",
+              "The process of digestion",
+              "How plants make food"
+            ],
+            "answer": "A sequence showing how energy passes from one organism to another",
+            "explanation": "A food chain shows the transfer of energy from producers (plants) through consumers. Example: Grass → Rabbit → Fox."
+          },
+          {
+            "id": "biochemistry_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the function of the cell membrane?",
+            "options": [
+              "Controls what enters and leaves the cell (selectively permeable)",
+              "Provides rigid support",
+              "Site of photosynthesis",
+              "Makes proteins"
+            ],
+            "answer": "Controls what enters and leaves the cell (selectively permeable)",
+            "explanation": "The cell membrane is selectively permeable, controlling the passage of substances in and out of the cell."
+          },
+          {
+            "id": "biochemistry_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is mitosis?",
+            "options": [
+              "Cell division producing two genetically identical daughter cells",
+              "Cell division for reproduction",
+              "Cell division producing 4 cells",
+              "Only occurs in plants"
+            ],
+            "answer": "Cell division producing two genetically identical daughter cells",
+            "explanation": "Mitosis is cell division for growth and repair, producing two daughter cells with identical chromosomes to the parent cell (diploid)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biochemistry_l5",
+      "title": "Biochemistry — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Biochemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Biochemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of biology."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Biochemistry builds on foundational knowledge. In biology, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Biochemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Biochemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Biochemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Biochemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "biochemistry_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l5_q4",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l5_q5",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l5_q6",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l5_q7",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l5_q9",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          },
+          {
+            "id": "biochemistry_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is respiration?",
+            "options": [
+              "The process of releasing energy from glucose in cells",
+              "Breathing in oxygen",
+              "Exchanging gases in the lungs",
+              "Making food using sunlight"
+            ],
+            "answer": "The process of releasing energy from glucose in cells",
+            "explanation": "Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. It releases energy from glucose for cell use."
+          },
+          {
+            "id": "biochemistry_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is natural selection?",
+            "options": [
+              "Organisms with favourable traits survive and reproduce more",
+              "Humans selecting crop varieties",
+              "Random survival of organisms",
+              "All organisms evolving at the same rate"
+            ],
+            "answer": "Organisms with favourable traits survive and reproduce more",
+            "explanation": "Natural selection is Darwin's mechanism: individuals with traits better suited to the environment survive and pass on those traits."
+          },
+          {
+            "id": "biochemistry_l5_q13",
+            "type": "multiple_choice",
+            "question": "What organ filters blood in humans?",
+            "options": [
+              "Kidneys",
+              "Liver",
+              "Lungs",
+              "Heart"
+            ],
+            "answer": "Kidneys",
+            "explanation": "The kidneys filter blood to remove waste products (urea, excess water, salts), producing urine."
+          },
+          {
+            "id": "biochemistry_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the function of stomata in leaves?",
+            "options": [
+              "Gas exchange and transpiration",
+              "Photosynthesis only",
+              "Water absorption",
+              "Food storage"
+            ],
+            "answer": "Gas exchange and transpiration",
+            "explanation": "Stomata are pores in leaves that allow CO₂ in and O₂ out during photosynthesis, and water vapour out during transpiration."
+          },
+          {
+            "id": "biochemistry_l5_q15",
+            "type": "multiple_choice",
+            "question": "Which part of the neurone carries impulses away from the cell body?",
+            "options": [
+              "Axon",
+              "Dendrite",
+              "Synapse",
+              "Myelin sheath"
+            ],
+            "answer": "Axon",
+            "explanation": "The axon is the long fibre that carries nerve impulses away from the cell body to other neurons or effectors."
+          },
+          {
+            "id": "biochemistry_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is the function of enzymes?",
+            "options": [
+              "Biological catalysts that speed up reactions",
+              "Energy sources for cells",
+              "Carriers of oxygen",
+              "Building blocks of DNA"
+            ],
+            "answer": "Biological catalysts that speed up reactions",
+            "explanation": "Enzymes are protein catalysts that lower activation energy and speed up biochemical reactions without being consumed."
+          },
+          {
+            "id": "biochemistry_l5_q17",
+            "type": "multiple_choice",
+            "question": "What gas do plants absorb during photosynthesis?",
+            "options": [
+              "Carbon dioxide (CO₂)",
+              "Oxygen (O₂)",
+              "Nitrogen (N₂)",
+              "Water vapour"
+            ],
+            "answer": "Carbon dioxide (CO₂)",
+            "explanation": "Plants absorb CO₂ from the air through stomata during photosynthesis, converting it to glucose using light energy."
+          },
+          {
+            "id": "biochemistry_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is a food chain?",
+            "options": [
+              "A sequence showing how energy passes from one organism to another",
+              "A list of foods animals eat",
+              "The process of digestion",
+              "How plants make food"
+            ],
+            "answer": "A sequence showing how energy passes from one organism to another",
+            "explanation": "A food chain shows the transfer of energy from producers (plants) through consumers. Example: Grass → Rabbit → Fox."
+          },
+          {
+            "id": "biochemistry_l5_q19",
+            "type": "multiple_choice",
+            "question": "What is the function of the cell membrane?",
+            "options": [
+              "Controls what enters and leaves the cell (selectively permeable)",
+              "Provides rigid support",
+              "Site of photosynthesis",
+              "Makes proteins"
+            ],
+            "answer": "Controls what enters and leaves the cell (selectively permeable)",
+            "explanation": "The cell membrane is selectively permeable, controlling the passage of substances in and out of the cell."
+          },
+          {
+            "id": "biochemistry_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is mitosis?",
+            "options": [
+              "Cell division producing two genetically identical daughter cells",
+              "Cell division for reproduction",
+              "Cell division producing 4 cells",
+              "Only occurs in plants"
+            ],
+            "answer": "Cell division producing two genetically identical daughter cells",
+            "explanation": "Mitosis is cell division for growth and repair, producing two daughter cells with identical chromosomes to the parent cell (diploid)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biochemistry_l6",
+      "title": "Biochemistry — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Biochemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Biochemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of biology."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Biochemistry builds on foundational knowledge. In biology, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Biochemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Biochemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Biochemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Biochemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "biochemistry_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the basic unit of life?",
+            "options": [
+              "The cell",
+              "The atom",
+              "The molecule",
+              "The nucleus"
+            ],
+            "answer": "The cell",
+            "explanation": "The cell is the basic structural and functional unit of all living organisms."
+          },
+          {
+            "id": "biochemistry_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which organelle is responsible for energy production in cells?",
+            "options": [
+              "Mitochondria",
+              "Nucleus",
+              "Ribosome",
+              "Vacuole"
+            ],
+            "answer": "Mitochondria",
+            "explanation": "Mitochondria carry out aerobic respiration to produce ATP — the cell's energy currency. Hence called the 'powerhouse of the cell'."
+          },
+          {
+            "id": "biochemistry_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is photosynthesis?",
+            "options": [
+              "The process by which plants make food using sunlight",
+              "The breakdown of glucose for energy",
+              "The absorption of minerals from soil",
+              "Cell division in plants"
+            ],
+            "answer": "The process by which plants make food using sunlight",
+            "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Plants convert light energy to chemical energy stored in glucose."
+          },
+          {
+            "id": "biochemistry_l6_q4",
+            "type": "multiple_choice",
+            "question": "What is osmosis?",
+            "options": [
+              "Movement of water from high to low water potential through a semi-permeable membrane",
+              "Movement of glucose into cells",
+              "Active transport of ions",
+              "Evaporation of water from leaves"
+            ],
+            "answer": "Movement of water from high to low water potential through a semi-permeable membrane",
+            "explanation": "Osmosis is the passive movement of water molecules through a semi-permeable membrane from a region of higher water potential to lower."
+          },
+          {
+            "id": "biochemistry_l6_q5",
+            "type": "multiple_choice",
+            "question": "What molecule carries genetic information?",
+            "options": [
+              "DNA (Deoxyribonucleic acid)",
+              "RNA",
+              "ATP",
+              "Protein"
+            ],
+            "answer": "DNA (Deoxyribonucleic acid)",
+            "explanation": "DNA carries the genetic code in sequences of bases (A, T, G, C) that determine the structure of proteins."
+          },
+          {
+            "id": "biochemistry_l6_q6",
+            "type": "multiple_choice",
+            "question": "What is the function of chloroplasts?",
+            "options": [
+              "Site of photosynthesis",
+              "Site of respiration",
+              "Protein synthesis",
+              "Cell division"
+            ],
+            "answer": "Site of photosynthesis",
+            "explanation": "Chloroplasts contain chlorophyll and are the site of photosynthesis, capturing light energy to make glucose."
+          },
+          {
+            "id": "biochemistry_l6_q7",
+            "type": "multiple_choice",
+            "question": "In genetics, what is a dominant allele?",
+            "options": [
+              "One that is expressed even when only one copy is present",
+              "One that is only expressed when two copies are present",
+              "A mutated allele",
+              "Always harmful"
+            ],
+            "answer": "One that is expressed even when only one copy is present",
+            "explanation": "A dominant allele is expressed in the phenotype regardless of whether it is heterozygous or homozygous."
+          },
+          {
+            "id": "biochemistry_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is diffusion?",
+            "options": [
+              "Movement of particles from high to low concentration without energy",
+              "Movement against a concentration gradient",
+              "Movement of water only",
+              "Requires energy (ATP)"
+            ],
+            "answer": "Movement of particles from high to low concentration without energy",
+            "explanation": "Diffusion is the passive movement of particles down a concentration gradient — no energy (ATP) is required."
+          },
+          {
+            "id": "biochemistry_l6_q9",
+            "type": "multiple_choice",
+            "question": "Which blood component carries oxygen?",
+            "options": [
+              "Red blood cells (haemoglobin)",
+              "White blood cells",
+              "Platelets",
+              "Plasma"
+            ],
+            "answer": "Red blood cells (haemoglobin)",
+            "explanation": "Red blood cells contain haemoglobin, which binds to oxygen in the lungs and releases it in body tissues."
+          },
+          {
+            "id": "biochemistry_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the role of the nucleus?",
+            "options": [
+              "Controls cell activities and contains DNA",
+              "Produces energy (ATP)",
+              "Makes proteins",
+              "Stores water"
+            ],
+            "answer": "Controls cell activities and contains DNA",
+            "explanation": "The nucleus is the control centre of the cell, containing DNA and directing all cellular activities including protein synthesis."
+          },
+          {
+            "id": "biochemistry_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is respiration?",
+            "options": [
+              "The process of releasing energy from glucose in cells",
+              "Breathing in oxygen",
+              "Exchanging gases in the lungs",
+              "Making food using sunlight"
+            ],
+            "answer": "The process of releasing energy from glucose in cells",
+            "explanation": "Cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP. It releases energy from glucose for cell use."
+          },
+          {
+            "id": "biochemistry_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is natural selection?",
+            "options": [
+              "Organisms with favourable traits survive and reproduce more",
+              "Humans selecting crop varieties",
+              "Random survival of organisms",
+              "All organisms evolving at the same rate"
+            ],
+            "answer": "Organisms with favourable traits survive and reproduce more",
+            "explanation": "Natural selection is Darwin's mechanism: individuals with traits better suited to the environment survive and pass on those traits."
+          },
+          {
+            "id": "biochemistry_l6_q13",
+            "type": "multiple_choice",
+            "question": "What organ filters blood in humans?",
+            "options": [
+              "Kidneys",
+              "Liver",
+              "Lungs",
+              "Heart"
+            ],
+            "answer": "Kidneys",
+            "explanation": "The kidneys filter blood to remove waste products (urea, excess water, salts), producing urine."
+          },
+          {
+            "id": "biochemistry_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the function of stomata in leaves?",
+            "options": [
+              "Gas exchange and transpiration",
+              "Photosynthesis only",
+              "Water absorption",
+              "Food storage"
+            ],
+            "answer": "Gas exchange and transpiration",
+            "explanation": "Stomata are pores in leaves that allow CO₂ in and O₂ out during photosynthesis, and water vapour out during transpiration."
+          },
+          {
+            "id": "biochemistry_l6_q15",
+            "type": "multiple_choice",
+            "question": "Which part of the neurone carries impulses away from the cell body?",
+            "options": [
+              "Axon",
+              "Dendrite",
+              "Synapse",
+              "Myelin sheath"
+            ],
+            "answer": "Axon",
+            "explanation": "The axon is the long fibre that carries nerve impulses away from the cell body to other neurons or effectors."
+          },
+          {
+            "id": "biochemistry_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is the function of enzymes?",
+            "options": [
+              "Biological catalysts that speed up reactions",
+              "Energy sources for cells",
+              "Carriers of oxygen",
+              "Building blocks of DNA"
+            ],
+            "answer": "Biological catalysts that speed up reactions",
+            "explanation": "Enzymes are protein catalysts that lower activation energy and speed up biochemical reactions without being consumed."
+          },
+          {
+            "id": "biochemistry_l6_q17",
+            "type": "multiple_choice",
+            "question": "What gas do plants absorb during photosynthesis?",
+            "options": [
+              "Carbon dioxide (CO₂)",
+              "Oxygen (O₂)",
+              "Nitrogen (N₂)",
+              "Water vapour"
+            ],
+            "answer": "Carbon dioxide (CO₂)",
+            "explanation": "Plants absorb CO₂ from the air through stomata during photosynthesis, converting it to glucose using light energy."
+          },
+          {
+            "id": "biochemistry_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is a food chain?",
+            "options": [
+              "A sequence showing how energy passes from one organism to another",
+              "A list of foods animals eat",
+              "The process of digestion",
+              "How plants make food"
+            ],
+            "answer": "A sequence showing how energy passes from one organism to another",
+            "explanation": "A food chain shows the transfer of energy from producers (plants) through consumers. Example: Grass → Rabbit → Fox."
+          },
+          {
+            "id": "biochemistry_l6_q19",
+            "type": "multiple_choice",
+            "question": "What is the function of the cell membrane?",
+            "options": [
+              "Controls what enters and leaves the cell (selectively permeable)",
+              "Provides rigid support",
+              "Site of photosynthesis",
+              "Makes proteins"
+            ],
+            "answer": "Controls what enters and leaves the cell (selectively permeable)",
+            "explanation": "The cell membrane is selectively permeable, controlling the passage of substances in and out of the cell."
+          },
+          {
+            "id": "biochemistry_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is mitosis?",
+            "options": [
+              "Cell division producing two genetically identical daughter cells",
+              "Cell division for reproduction",
+              "Cell division producing 4 cells",
+              "Only occurs in plants"
+            ],
+            "answer": "Cell division producing two genetically identical daughter cells",
+            "explanation": "Mitosis is cell division for growth and repair, producing two daughter cells with identical chromosomes to the parent cell (diploid)."
+          }
+        ]
+      }
+    }
+  ]
+}

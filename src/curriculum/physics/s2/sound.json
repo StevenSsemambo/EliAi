@@ -1,0 +1,1789 @@
+{
+  "subject": "physics",
+  "level": "s2",
+  "lessons": [
+    {
+      "id": "s2_phy_snd_l1",
+      "title": "Nature and Properties of Sound",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Sound = longitudinal mechanical wave\nNeeds medium to travel (NOT through vacuum)\nFrequency range:\n  Infrasound: <20 Hz\n  Audible: 20 Hz – 20,000 Hz\n  Ultrasound: >20,000 Hz\n\nSpeed of sound:\n  Air (20°C): ~343 m/s\n  Water: ~1480 m/s\n  Steel: ~5000 m/s\nSpeed increases in denser/stiffer media"
+        },
+        {
+          "type": "example",
+          "title": "Sound Properties",
+          "body": "Pitch ∝ frequency (higher f = higher pitch)\nLoudness ∝ amplitude (larger A = louder)\nTimbre: quality determined by harmonics\n\nEchoes: sound reflected from surface\nTime for echo: t = 2d/v (round trip)\nReverberation: multiple reflections in room"
+        },
+        {
+          "type": "example",
+          "title": "Sound Calculations",
+          "body": "Distance of cliff using echo:\nEcho heard after 2s, v=340m/s\nd = v×t/2 = 340×2/2 = 340m\n\nFrequency of note A = 440 Hz\nWavelength: λ=v/f=343/440≈0.78m"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Sound is a transverse wave",
+            "options": [
+              "True",
+              "False",
+              "Only in water",
+              "Only at high frequency"
+            ],
+            "answer": "False",
+            "explanation": "Sound is longitudinal: particles vibrate parallel to direction of travel"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Sound cannot travel through",
+            "options": [
+              "water",
+              "air",
+              "steel",
+              "vacuum"
+            ],
+            "answer": "vacuum",
+            "explanation": "Sound needs medium (molecules to vibrate). Cannot travel through vacuum"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Increasing frequency of sound increases",
+            "options": [
+              "amplitude",
+              "pitch",
+              "loudness",
+              "speed"
+            ],
+            "answer": "pitch",
+            "explanation": "Higher frequency → higher pitch (more vibrations per second → higher note)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Speed of sound in air at 20°C is approximately",
+            "options": [
+              "3×10⁸m/s",
+              "1500m/s",
+              "340m/s",
+              "5000m/s"
+            ],
+            "answer": "340m/s",
+            "explanation": "Speed of sound in air ≈340-343 m/s at room temperature"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Echo heard 1.5s after shout, v=340m/s. Distance to wall",
+            "options": [
+              "510m",
+              "255m",
+              "340m",
+              "170m"
+            ],
+            "answer": "255m",
+            "explanation": "d=vt/2=340×1.5/2=255m"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Ultrasound frequency is",
+            "options": [
+              "<20Hz",
+              "20-20000Hz",
+              ">20000Hz",
+              ">3×10⁸Hz"
+            ],
+            "answer": ">20000Hz",
+            "explanation": "Ultrasound: above human hearing range, >20,000 Hz"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Sound travels faster in water than air because",
+            "options": [
+              "water is denser",
+              "water molecules more tightly packed, transmit vibrations faster",
+              "water is wet",
+              "sound is a transverse wave in water"
+            ],
+            "answer": "water molecules more tightly packed, transmit vibrations faster",
+            "explanation": "Speed of sound ∝ √(bulk modulus/density). Water's stiffness dominates → faster"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Loudness of sound depends on",
+            "options": [
+              "frequency",
+              "wavelength",
+              "amplitude of vibration",
+              "speed"
+            ],
+            "answer": "amplitude of vibration",
+            "explanation": "Loudness ∝ intensity ∝ amplitude². Bigger vibrations → louder sound"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Reverberation differs from echo because",
+            "options": [
+              "reverberation is faster",
+              "reverberation is multiple overlapping reflections (in a room), echo is distinct single reflection",
+              "only echo involves walls",
+              "reverberation is clearer"
+            ],
+            "answer": "reverberation is multiple overlapping reflections (in a room), echo is distinct single reflection",
+            "explanation": "Echo: distinct reflected sound heard >0.1s after original. Reverberation: rapid multiple reflections merge, prolonging sound"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Frequency 500Hz, speed 340m/s. Wavelength=",
+            "options": [
+              "0.68m",
+              "1.47m",
+              "0.17m",
+              "170m"
+            ],
+            "answer": "0.68m",
+            "explanation": "λ=v/f=340/500=0.68m"
+          },
+          {
+            "id": "sound_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_snd_l2",
+      "title": "Sound Applications: Ultrasound and Resonance",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "text",
+          "body": "Ultrasound (>20,000 Hz) has many practical applications in medicine, industry and navigation. Resonance is an important phenomenon in sound."
+        },
+        {
+          "type": "formula",
+          "body": "Ultrasound applications:\nMedical imaging (sonography): foetal scans, organ imaging\nEcholocation: bats, sonar\nUltrasonic cleaning: high-frequency vibration removes dirt\nNon-destructive testing: detect cracks in metals\nSpeed of sound in tissue: ~1500 m/s\n\nResonance:\nNatural frequency: frequency at which object vibrates most easily\nResonance: driving frequency = natural frequency → large amplitude\n\nStanding waves in pipes:\nOpen pipe: harmonics f=nv/2L (n=1,2,3...)\nClosed pipe: f=nv/4L (n=1,3,5 odd only)"
+        },
+        {
+          "type": "example",
+          "title": "Resonance Examples",
+          "body": "Tacoma Narrows Bridge (1940): wind caused resonance → collapsed\nOpera singer breaking glass: hits natural frequency of glass\nMRI: resonance of atomic nuclei\nRadio tuning: circuit resonant frequency = radio frequency"
+        },
+        {
+          "type": "example",
+          "title": "Ultrasound Timing",
+          "body": "Ultrasound pulse takes 0.15ms to return from foetal surface:\nd=v×t/2=1500×0.00015/2=0.1125m=11.25cm"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Ultrasound medical scans use",
+            "options": [
+              "X-rays",
+              "high-frequency sound waves",
+              "radio waves",
+              "visible light"
+            ],
+            "answer": "high-frequency sound waves",
+            "explanation": "Ultrasound imaging: pulses of >20kHz sound sent into body; reflections from tissue boundaries create image"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Resonance occurs when",
+            "options": [
+              "wave is reflected",
+              "driving frequency matches natural frequency of object",
+              "amplitude is small",
+              "medium changes"
+            ],
+            "answer": "driving frequency matches natural frequency of object",
+            "explanation": "Resonance: maximum energy transfer when forcing frequency = natural/resonant frequency"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Bats use echolocation to",
+            "options": [
+              "see in dark",
+              "navigate and hunt using ultrasonic pulses and reflected echoes",
+              "communicate",
+              "see UV light"
+            ],
+            "answer": "navigate and hunt using ultrasonic pulses and reflected echoes",
+            "explanation": "Bats emit >100kHz ultrasonic pulses; brain processes returning echoes to determine distance and direction of objects"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Open pipe fundamental frequency f=v/2L. L=0.5m, v=340m/s. f=",
+            "options": [
+              "340Hz",
+              "170Hz",
+              "680Hz",
+              "85Hz"
+            ],
+            "answer": "340Hz",
+            "explanation": "f=340/(2×0.5)=340Hz"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Closed pipe (closed at one end) only supports",
+            "options": [
+              "even harmonics",
+              "odd harmonics only",
+              "all harmonics",
+              "no harmonics"
+            ],
+            "answer": "odd harmonics only",
+            "explanation": "Closed end = displacement node. Only odd harmonics (n=1,3,5) fit: fundamental plus 3rd, 5th... harmonics"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Ultrasound pulse in tissue v=1500m/s, returns in 0.0001s. Depth of reflector=",
+            "options": [
+              "0.075m",
+              "0.15m",
+              "1500m",
+              "0.15cm"
+            ],
+            "answer": "0.075m",
+            "explanation": "d=vt/2=1500×0.0001/2=0.075m=7.5cm"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Non-destructive testing with ultrasound detects",
+            "options": [
+              "colour changes",
+              "cracks/flaws inside metal objects without damaging them",
+              "temperature",
+              "chemical composition"
+            ],
+            "answer": "cracks/flaws inside metal objects without damaging them",
+            "explanation": "Ultrasonic testing: sound reflects from internal boundaries. Flaw creates extra reflection → crack detected without cutting"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Tacoma Narrows Bridge collapsed due to",
+            "options": [
+              "earthquake",
+              "wind-driven resonance matching bridge natural frequency",
+              "flood",
+              "metal fatigue only"
+            ],
+            "answer": "wind-driven resonance matching bridge natural frequency",
+            "explanation": "Aerodynamic flutter from wind matched bridge's natural frequency → ever-growing oscillations → structural failure"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Why can't ultrasound image bones well?",
+            "options": [
+              "Too slow",
+              "Ultrasound mostly reflected at soft tissue-bone boundary (impedance mismatch), not transmitted",
+              "Too loud",
+              "Wrong frequency"
+            ],
+            "answer": "Ultrasound mostly reflected at soft tissue-bone boundary (impedance mismatch), not transmitted",
+            "explanation": "Large acoustic impedance mismatch at soft tissue/bone boundary → most ultrasound reflected, little penetrates bone"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Tuning fork resonance: when fork vibrates near same-pitch string, string vibrates because",
+            "options": [
+              "magnets",
+              "forced vibration at natural frequency (resonance)",
+              "sound is loud",
+              "air pressure only"
+            ],
+            "answer": "forced vibration at natural frequency (resonance)",
+            "explanation": "String's natural frequency matches fork frequency → resonance → string vibrates with large amplitude"
+          },
+          {
+            "id": "sound_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_snd_l3",
+      "title": "The Doppler Effect",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Doppler effect: apparent change in frequency when source and observer move relative to each other\n\nSource moving toward observer:\nf_obs = f_source × v/(v-v_s)\n(higher observed frequency)\n\nSource moving away:\nf_obs = f_source × v/(v+v_s)\n(lower observed frequency)\n\nv = speed of sound, v_s = speed of source\n\nApplications: police radar, weather radar, medical Doppler ultrasound, red-shift of galaxies"
+        },
+        {
+          "type": "example",
+          "title": "Doppler Examples",
+          "body": "Ambulance siren 500Hz, moves at 30m/s, v=340m/s:\nApproaching: f=500×340/(340-30)=500×340/310=548Hz\nReceding: f=500×340/(340+30)=500×340/370=459Hz\n\nRed-shift: galaxies moving away → lower frequency light"
+        },
+        {
+          "type": "example",
+          "title": "Applications",
+          "body": "Police radar: measures frequency shift of reflected radio waves → vehicle speed\nMedical Doppler: measures blood flow velocity from frequency shift of reflected ultrasound\nWeather radar: detects wind speeds from Doppler shift of reflected radio waves"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Doppler effect is observed when",
+            "options": [
+              "sound is loud",
+              "source or observer moves relative to each other, changing observed frequency",
+              "medium changes",
+              "frequency is very high"
+            ],
+            "answer": "source or observer moves relative to each other, changing observed frequency",
+            "explanation": "Doppler: relative motion between source and observer compresses or stretches the wave pattern → pitch change"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Ambulance approaching: observed pitch is",
+            "options": [
+              "same as emitted",
+              "lower than emitted",
+              "higher than emitted",
+              "zero"
+            ],
+            "answer": "higher than emitted",
+            "explanation": "Approaching source: wave fronts compressed → shorter wavelength → higher frequency → higher pitch"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "As ambulance passes and moves away, pitch",
+            "options": [
+              "stays same",
+              "suddenly drops",
+              "gradually rises",
+              "oscillates"
+            ],
+            "answer": "suddenly drops",
+            "explanation": "As source passes: frequency shifts from above emitted (approaching) to below emitted (receding) — characteristic pitch drop"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Doppler formula: f_obs = f_s×v/(v-v_s). Source speed 0 gives",
+            "options": [
+              "f=0",
+              "f=f_s",
+              "f=2f_s",
+              "f=v"
+            ],
+            "answer": "f=f_s",
+            "explanation": "If v_s=0: f_obs=f_s×v/v=f_s (no Doppler shift when stationary)"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Police speed radar uses Doppler by",
+            "options": [
+              "measuring echo time",
+              "measuring frequency shift of reflected radio waves from moving vehicle",
+              "using GPS",
+              "counting wheel rotations"
+            ],
+            "answer": "measuring frequency shift of reflected radio waves from moving vehicle",
+            "explanation": "Radar gun: transmits radio waves, measures Doppler shift of echo from moving car → calculates speed"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Redshift of galaxies is analogous to Doppler because",
+            "options": [
+              "galaxies emit red light",
+              "light from receding galaxies has longer wavelength (lower frequency) — same principle as receding sound",
+              "light is a mechanical wave",
+              "galaxies are hot"
+            ],
+            "answer": "light from receding galaxies has longer wavelength (lower frequency) — same principle as receding sound",
+            "explanation": "Cosmological redshift: as galaxy moves away, light waves stretched → longer λ, lower f → shifted toward red end"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Source f=400Hz, v_sound=340m/s, v_source=40m/s approaching. Observed f=",
+            "options": [
+              "354Hz",
+              "457Hz",
+              "400Hz",
+              "460Hz"
+            ],
+            "answer": "457Hz",
+            "explanation": "f=400×340/(340-40)=400×340/300≈453Hz. Closest answer 457Hz"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Medical Doppler ultrasound measures",
+            "options": [
+              "organ size",
+              "frequency shift of reflected ultrasound from moving blood cells → blood flow velocity",
+              "bone density",
+              "temperature"
+            ],
+            "answer": "frequency shift of reflected ultrasound from moving blood cells → blood flow velocity",
+            "explanation": "Doppler ultrasound: detects shift in frequency of ultrasound reflected from moving red blood cells → flow velocity"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Bat detecting a stationary moth uses which effect?",
+            "options": [
+              "Doppler",
+              "Refraction",
+              "Diffraction",
+              "Interference"
+            ],
+            "answer": "Doppler",
+            "explanation": "If bat moves toward stationary moth, reflected echolocation pulses are Doppler-shifted → bat detects closing speed"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Source behind observer, moving away at speed v_s. f_obs =",
+            "options": [
+              "f_s×v/(v+v_s)",
+              "f_s×(v+v_s)/v",
+              "f_s×v/(v-v_s)",
+              "f_s×v_s/v"
+            ],
+            "answer": "f_s×v/(v+v_s)",
+            "explanation": "Receding source: f_obs=f_s×v/(v+v_s). Denominator larger → f_obs smaller → lower pitch"
+          },
+          {
+            "id": "sound_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_snd_l4",
+      "title": "Musical Instruments and Harmonics",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Harmonics and overtones:\nFundamental (1st harmonic): simplest standing wave\n2nd harmonic = 1st overtone: twice fundamental\n3rd harmonic etc.\n\nString instrument: both ends fixed\nHarmonics: f_n = nv/2L (n=1,2,3...)\nWave speed on string: v=√(T/μ) (T=tension, μ=mass/length)\n\nWind instruments (open pipe):\nf_n = nv/2L\nFlute, oboe (effectively open)\n\nClosed pipe (one end closed):\nf_n = nv/4L  (n=1,3,5 odd)"
+        },
+        {
+          "type": "example",
+          "title": "String Examples",
+          "body": "Guitar string L=0.65m, v=400m/s\nFundamental: f=v/2L=400/1.3=308Hz\n2nd harmonic: f=2×308=615Hz\n3rd harmonic: 3×308=923Hz\n\nTuning: higher tension T → higher v → higher pitch\nShorter string → higher pitch"
+        },
+        {
+          "type": "example",
+          "title": "Recorder (closed pipe)",
+          "body": "L=0.30m, v=340m/s\nFundamental: f=340/(4×0.30)=283Hz\n3rd harmonic: f=3×283=850Hz\n(no 2nd harmonic — closed pipe)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Fundamental frequency is",
+            "options": [
+              "highest frequency",
+              "simplest standing wave (lowest harmonic)",
+              "all harmonics combined",
+              "same as overtone"
+            ],
+            "answer": "simplest standing wave (lowest harmonic)",
+            "explanation": "Fundamental (1st harmonic): simplest resonant frequency of string/pipe"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "String both ends fixed, L=1m, v=400m/s. Fundamental f=",
+            "options": [
+              "400Hz",
+              "200Hz",
+              "100Hz",
+              "800Hz"
+            ],
+            "answer": "200Hz",
+            "explanation": "f=v/2L=400/2=200Hz"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "2nd harmonic of a string is",
+            "options": [
+              "fundamental/2",
+              "3×fundamental",
+              "2×fundamental",
+              "same as fundamental"
+            ],
+            "answer": "2×fundamental",
+            "explanation": "2nd harmonic (1st overtone) = twice the fundamental frequency"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Closed pipe (one end closed) plays",
+            "options": [
+              "all harmonics",
+              "even harmonics only",
+              "odd harmonics only",
+              "no harmonics"
+            ],
+            "answer": "odd harmonics only",
+            "explanation": "Closed pipe: displacement node at closed end → only odd harmonics (1st, 3rd, 5th)"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "To raise pitch of guitar string you should",
+            "options": [
+              "loosen string",
+              "increase length",
+              "increase tension (tighten)",
+              "use thicker string"
+            ],
+            "answer": "increase tension (tighten)",
+            "explanation": "v=√(T/μ): higher tension T → higher wave speed → higher frequency/pitch"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Flute (open pipe) L=0.66m, v=340m/s. Fundamental =",
+            "options": [
+              "258Hz",
+              "129Hz",
+              "516Hz",
+              "340Hz"
+            ],
+            "answer": "258Hz",
+            "explanation": "f=v/2L=340/(2×0.66)=340/1.32≈258Hz"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Shortening a string while playing (fretting) does what?",
+            "options": [
+              "Lowers pitch",
+              "Raises pitch",
+              "No change",
+              "Changes timbre only"
+            ],
+            "answer": "Raises pitch",
+            "explanation": "Shorter string L → higher fundamental f=v/2L → higher pitch (what guitarists do when fretting)"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Timbre (tone quality) of instruments differs due to",
+            "options": [
+              "volume",
+              "speed",
+              "different mix of harmonics (overtones)",
+              "fundamental frequency"
+            ],
+            "answer": "different mix of harmonics (overtones)",
+            "explanation": "Same note on violin vs piano: same fundamental but different harmonic content → different sound quality"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Resonance box of violin amplifies sound by",
+            "options": [
+              "adding energy",
+              "creating sympathetic vibration at same frequency as string",
+              "reflecting sound",
+              "electrically amplifying"
+            ],
+            "answer": "creating sympathetic vibration at same frequency as string",
+            "explanation": "Resonance cavity: shaped to resonate at string frequencies → couples string vibration efficiently to air → louder sound"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Open organ pipe 3rd harmonic vs closed pipe 3rd harmonic frequency ratio",
+            "options": [
+              "1:1",
+              "2:1",
+              "3:1",
+              "1:3"
+            ],
+            "answer": "3:1",
+            "explanation": "Open: f_3=3v/2L. Closed: f_3=3v/4L. Ratio=(3v/2L)/(3v/4L)=2. So open 3rd=2×closed 3rd. Ratio 2:1 (open higher)"
+          },
+          {
+            "id": "sound_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sound_l5",
+      "title": "Sound — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Sound. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Sound concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Sound builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Sound. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Sound. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Sound include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Sound. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "sound_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "sound_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "sound_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "sound_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "sound_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "sound_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "sound_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "sound_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "sound_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "sound_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "sound_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "sound_l6",
+      "title": "Sound — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Sound. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Sound concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Sound builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Sound. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Sound. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Sound include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Sound. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "sound_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "sound_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "sound_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "sound_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "sound_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "sound_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "sound_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "sound_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "sound_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "sound_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "sound_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "sound_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "sound_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "sound_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "sound_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "sound_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "sound_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "sound_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "sound_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "sound_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "sound"
+}

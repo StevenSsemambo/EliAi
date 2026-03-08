@@ -1,0 +1,1796 @@
+{
+  "topic_id": "statistics",
+  "topic_title": "Statistics Basics",
+  "subject": "mathematics",
+  "class_level": "S2",
+  "lessons": [
+    {
+      "id": "s2_math_stats_l1",
+      "title": "Mean, Median, Mode and Range",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Statistics involves collecting, organising, and interpreting data. Measures of central tendency describe the 'typical' value in a data set. Measures of spread describe how spread out the data is."
+        },
+        {
+          "type": "formula",
+          "body": "MEAN (Average):\nMean = Sum of all values ÷ Number of values\n\nMEDIAN (Middle value):\nArrange data in order, find the middle value.\nIf even number of values, median = average of the two middle values.\n\nMODE:\nThe value that appears most often.\nA data set can have no mode, one mode, or multiple modes.\n\nRANGE (Spread):\nRange = Highest value − Lowest value"
+        },
+        {
+          "type": "example",
+          "title": "Finding Averages",
+          "body": "Data: 3, 7, 5, 9, 5, 8, 4, 6, 5\n\nMean = (3+7+5+9+5+8+4+6+5)/9 = 52/9 = 5.78\n\nOrdered: 3, 4, 5, 5, 5, 6, 7, 8, 9\nMedian = 5 (5th value in 9 values)\n\nMode = 5 (appears 3 times)\n\nRange = 9 − 3 = 6"
+        },
+        {
+          "type": "example",
+          "title": "Even Number of Values",
+          "body": "Data: 12, 15, 8, 20, 14, 18\nOrdered: 8, 12, 14, 15, 18, 20\nMedian = (14+15)/2 = 14.5 (average of 3rd and 4th)\nMean = (8+12+14+15+18+20)/6 = 87/6 = 14.5\nMode = none (all values appear once)\nRange = 20 − 8 = 12"
+        },
+        {
+          "type": "text",
+          "body": "When to use each average:\nMean: best when data is symmetric with no extreme outliers\nMedian: best when data has outliers (e.g. income data where a few very rich people skew the mean)\nMode: best for categorical data (e.g. most popular shoe size)\n\nA very high or low value (outlier) greatly affects the mean but NOT the median."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the mean of: 4, 8, 6, 10, 7",
+            "options": [
+              "7",
+              "6",
+              "8",
+              "35"
+            ],
+            "answer": "7",
+            "explanation": "Mean = (4+8+6+10+7)/5 = 35/5 = 7."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the median of: 3, 1, 7, 9, 5",
+            "options": [
+              "7",
+              "5",
+              "4",
+              "6"
+            ],
+            "answer": "5",
+            "explanation": "Ordered: 1, 3, 5, 7, 9. Middle (3rd) value = 5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the mode of: 2, 5, 3, 2, 8, 5, 2",
+            "options": [
+              "5",
+              "3",
+              "2",
+              "8"
+            ],
+            "answer": "2",
+            "explanation": "2 appears 3 times (most frequent). Mode = 2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the range of: 15, 3, 22, 8, 17",
+            "options": [
+              "19",
+              "11",
+              "25",
+              "5"
+            ],
+            "answer": "19",
+            "explanation": "Range = highest − lowest = 22 − 3 = 19."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Median of: 6, 9, 3, 12, 8, 4",
+            "options": [
+              "7",
+              "8",
+              "6",
+              "9"
+            ],
+            "answer": "7",
+            "explanation": "Ordered: 3, 4, 6, 8, 9, 12. Median = (6+8)/2 = 7."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Ages: 12, 13, 12, 14, 12, 15. Find the mode.",
+            "options": [
+              "13",
+              "14",
+              "15",
+              "12"
+            ],
+            "answer": "12",
+            "explanation": "12 appears 3 times — more than any other value. Mode = 12."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why is median preferred over mean for income data?",
+            "options": [
+              "Median is easier to calculate",
+              "Mean is less accurate",
+              "Median is not affected by extreme outliers",
+              "Mean requires more data"
+            ],
+            "answer": "Median is not affected by extreme outliers",
+            "explanation": "A few very high earners raise the mean significantly, making it misleading. The median better represents the 'typical' income."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Scores: 45, 60, 55, 70, 80, 65, 55, 70. Find mean.",
+            "options": [
+              "62.5",
+              "60",
+              "65",
+              "55"
+            ],
+            "answer": "62.5",
+            "explanation": "Sum = 500. Mean = 500/8 = 62.5."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Data set has no repeated values. Its mode is:",
+            "options": [
+              "The median",
+              "Zero",
+              "Undefined/no mode",
+              "The mean"
+            ],
+            "answer": "Undefined/no mode",
+            "explanation": "If no value appears more than once, the data set has no mode."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Mean of 5 numbers is 8. What is their sum?",
+            "options": [
+              "40",
+              "13",
+              "3",
+              "1.6"
+            ],
+            "answer": "40",
+            "explanation": "Mean = Sum/n → Sum = Mean × n = 8 × 5 = 40."
+          },
+          {
+            "id": "statistics_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_stats_l2",
+      "title": "Frequency Tables and Histograms",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "When dealing with large data sets, we organise data into frequency tables. This makes it easier to find averages and spot patterns. Histograms and bar charts let us visualise data."
+        },
+        {
+          "type": "formula",
+          "body": "Frequency Table Terms:\nFrequency (f): how many times a value occurs\nRelative frequency: f/total\nCumulative frequency: running total of frequencies\n\nMean from frequency table:\nMean = Σ(x × f) / Σf\n(multiply each value by its frequency, sum up, divide by total frequency)"
+        },
+        {
+          "type": "example",
+          "title": "Mean from Frequency Table",
+          "body": "Number of goals scored per match:\nGoals(x): 0  1  2  3  4\nFreq(f):   3  5  6  4  2\n\nΣf = 3+5+6+4+2 = 20 matches\nΣ(xf) = (0×3)+(1×5)+(2×6)+(3×4)+(4×2)\n     = 0 + 5 + 12 + 12 + 8 = 37\nMean = 37/20 = 1.85 goals per match"
+        },
+        {
+          "type": "example",
+          "title": "Bar Chart vs Histogram",
+          "body": "Bar chart: used for DISCRETE or CATEGORICAL data\n• Bars have gaps between them\n• Height = frequency\n\nHistogram: used for CONTINUOUS data in class intervals\n• NO gaps between bars\n• Area (not height) represents frequency\n• Frequency density = frequency / class width"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a frequency table, what does 'f' represent?",
+            "options": [
+              "The value",
+              "How often a value occurs",
+              "The mean",
+              "The range"
+            ],
+            "answer": "How often a value occurs",
+            "explanation": "Frequency (f) is the count of how many times each value appears in the data."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "x: 1,2,3; f: 4,6,2. Find Σf.",
+            "options": [
+              "6",
+              "12",
+              "10",
+              "14"
+            ],
+            "answer": "12",
+            "explanation": "Σf = 4+6+2 = 12 (total number of values)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "x: 1,2,3; f: 4,6,2. Find Σ(xf).",
+            "options": [
+              "14",
+              "22",
+              "12",
+              "20"
+            ],
+            "answer": "22",
+            "explanation": "Σ(xf) = (1×4)+(2×6)+(3×2) = 4+12+6 = 22."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Using above: mean = Σ(xf)/Σf = ?",
+            "options": [
+              "1.83",
+              "2.2",
+              "1.67",
+              "2"
+            ],
+            "answer": "1.83",
+            "explanation": "Mean = 22/12 ≈ 1.83."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A histogram differs from a bar chart because:",
+            "options": [
+              "It uses pie shapes",
+              "There are no gaps between bars and it shows continuous data",
+              "It only shows one variable",
+              "It uses lines instead of bars"
+            ],
+            "answer": "There are no gaps between bars and it shows continuous data",
+            "explanation": "Histograms show continuous data with no gaps — the area of each bar represents frequency."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Frequency density = ?",
+            "options": [
+              "Frequency × class width",
+              "Frequency / class width",
+              "Frequency + class width",
+              "Frequency − class width"
+            ],
+            "answer": "Frequency / class width",
+            "explanation": "Frequency density = frequency ÷ class width. Used in histograms when class widths differ."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Cumulative frequency is:",
+            "options": [
+              "Frequency × frequency",
+              "Running total of all frequencies up to that point",
+              "The largest frequency",
+              "Frequency divided by total"
+            ],
+            "answer": "Running total of all frequencies up to that point",
+            "explanation": "Cumulative frequency adds up all frequencies from the beginning to each point."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "f: 5, 8, 7, 3, 2. Total = 25. Relative frequency of class with f=8:",
+            "options": [
+              "0.32",
+              "0.08",
+              "8",
+              "0.8"
+            ],
+            "answer": "0.32",
+            "explanation": "Relative frequency = f/total = 8/25 = 0.32."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "In a bar chart for shoe sizes, gaps between bars indicate:",
+            "options": [
+              "Missing data",
+              "Discrete data (shoe sizes are separate values)",
+              "Errors",
+              "Continuous data"
+            ],
+            "answer": "Discrete data (shoe sizes are separate values)",
+            "explanation": "Bar charts with gaps are used for discrete (countable, separate) data like shoe sizes."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "50 students' test scores. Modal class is 60-70 with f=18. What fraction scored in this range?",
+            "options": [
+              "18%",
+              "36%",
+              "0.36",
+              "0.18"
+            ],
+            "answer": "0.36",
+            "explanation": "Relative frequency = 18/50 = 0.36 (or 36%)."
+          },
+          {
+            "id": "statistics_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_stats_l3",
+      "title": "Probability",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "P(event) = Number of favourable outcomes / Total number of outcomes\n0 ≤ P(A) ≤ 1\nP(certain event) = 1, P(impossible event) = 0\nP(A') = 1 − P(A) (complementary probability)"
+        },
+        {
+          "type": "example",
+          "title": "Basic Probability",
+          "body": "A bag has 3 red, 4 blue, 5 green balls (12 total)\nP(red) = 3/12 = 1/4\nP(not green) = 7/12\nP(blue or green) = 9/12 = 3/4"
+        },
+        {
+          "type": "formula",
+          "body": "Addition Rule:\nP(A or B) = P(A) + P(B) − P(A and B)\nIf A and B are mutually exclusive: P(A or B) = P(A) + P(B)\n\nMultiplication Rule:\nP(A and B) = P(A) × P(B|A)\nIf A and B are independent: P(A and B) = P(A) × P(B)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A die is rolled. P(getting 4) =",
+            "options": [
+              "1/2",
+              "1/4",
+              "1/6",
+              "4/6"
+            ],
+            "answer": "1/6",
+            "explanation": "A standard die has 6 faces. Only one face shows 4. P(4) = 1/6"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.3. What is P(A')?",
+            "options": [
+              "0.3",
+              "0.7",
+              "0.6",
+              "1.3"
+            ],
+            "answer": "0.7",
+            "explanation": "P(A') = 1 − P(A) = 1 − 0.3 = 0.7"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A card is drawn from 52 cards. P(heart) =",
+            "options": [
+              "1/4",
+              "1/13",
+              "1/52",
+              "4/52"
+            ],
+            "answer": "1/4",
+            "explanation": "There are 13 hearts in 52 cards. P(heart) = 13/52 = 1/4"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Two coins are tossed. P(both heads) =",
+            "options": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "3/4"
+            ],
+            "answer": "1/4",
+            "explanation": "P(H)×P(H) = 1/2 × 1/2 = 1/4 (independent events)"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Events A and B are mutually exclusive if...",
+            "options": [
+              "P(A)=P(B)",
+              "They can both happen",
+              "They cannot both happen",
+              "P(A)+P(B)=1"
+            ],
+            "answer": "They cannot both happen",
+            "explanation": "Mutually exclusive events cannot occur simultaneously: P(A and B)=0"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "P(A)=0.4, P(B)=0.3, P(A and B)=0.1. Find P(A or B).",
+            "options": [
+              "0.7",
+              "0.6",
+              "0.5",
+              "0.8"
+            ],
+            "answer": "0.6",
+            "explanation": "P(A or B)=P(A)+P(B)−P(A∩B)=0.4+0.3−0.1=0.6"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A bag has 2 red and 3 blue balls. Two drawn without replacement. P(both red) =",
+            "options": [
+              "2/25",
+              "1/10",
+              "2/10",
+              "4/25"
+            ],
+            "answer": "1/10",
+            "explanation": "P(R₁)=2/5, P(R₂|R₁)=1/4. P(both)=2/5×1/4=2/20=1/10"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What probability value means impossible?",
+            "options": [
+              "0.5",
+              "1",
+              "0",
+              "−1"
+            ],
+            "answer": "0",
+            "explanation": "An impossible event has probability 0. Probability ranges from 0 to 1."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "P(A)=0.6, P(B)=0.5, independent. P(A and B)=",
+            "options": [
+              "0.3",
+              "0.8",
+              "0.1",
+              "0.5"
+            ],
+            "answer": "0.3",
+            "explanation": "For independent events: P(A and B)=P(A)×P(B)=0.6×0.5=0.3"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "In an experiment, the sum of all probabilities of all outcomes equals...",
+            "options": [
+              "0.5",
+              "any number",
+              "1",
+              "the number of outcomes"
+            ],
+            "answer": "1",
+            "explanation": "The probabilities of all possible outcomes must sum to 1 (certainty)."
+          },
+          {
+            "id": "statistics_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_math_stats_l4",
+      "title": "Measures of Dispersion",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Range = Maximum value − Minimum value\n\nVariance = Σ(x − x̄)²/n\nStandard Deviation = √Variance\n\nInterquartile Range (IQR) = Q3 − Q1\nQ1 = lower quartile (25th percentile)\nQ3 = upper quartile (75th percentile)"
+        },
+        {
+          "type": "example",
+          "title": "Standard Deviation Example",
+          "body": "Data: 3, 5, 7, 5, 10\nMean x̄ = 30/5 = 6\nDeviations: −3, −1, 1, −1, 4\nSquared deviations: 9, 1, 1, 1, 16\nVariance = 28/5 = 5.6\nSD = √5.6 ≈ 2.37"
+        },
+        {
+          "type": "text",
+          "body": "A small standard deviation means data is clustered close to the mean. A large standard deviation means data is spread out. Two datasets can have the same mean but very different standard deviations."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What does a large standard deviation indicate?",
+            "options": [
+              "Data close to mean",
+              "Data spread far from mean",
+              "No outliers",
+              "Equal values"
+            ],
+            "answer": "Data spread far from mean",
+            "explanation": "Standard deviation measures spread. Large SD means values are widely spread from the mean."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Data: 2,4,6,8,10. What is the range?",
+            "options": [
+              "4",
+              "8",
+              "6",
+              "10"
+            ],
+            "answer": "8",
+            "explanation": "Range = max−min = 10−2 = 8"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the IQR?",
+            "options": [
+              "Max−Min",
+              "Q3−Q1",
+              "Mean−Median",
+              "Q2−Q1"
+            ],
+            "answer": "Q3−Q1",
+            "explanation": "IQR (Interquartile Range) = Q3 − Q1, the range of the middle 50% of data."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Data: 5,5,5,5,5. What is the standard deviation?",
+            "options": [
+              "5",
+              "1",
+              "0",
+              "25"
+            ],
+            "answer": "0",
+            "explanation": "When all values are equal, every deviation from the mean is 0. Variance and SD are both 0."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Variance of dataset X is 9. What is the standard deviation?",
+            "options": [
+              "81",
+              "4.5",
+              "3",
+              "9"
+            ],
+            "answer": "3",
+            "explanation": "Standard deviation = √variance = √9 = 3"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which measure is NOT affected by outliers?",
+            "options": [
+              "Range",
+              "Mean",
+              "IQR",
+              "Standard deviation"
+            ],
+            "answer": "IQR",
+            "explanation": "IQR only uses the middle 50% of data (Q1 to Q3), so extreme values (outliers) don't affect it."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Data: 1,2,3,4,5. Mean=3. Variance=?",
+            "options": [
+              "1",
+              "2",
+              "4",
+              "3"
+            ],
+            "answer": "2",
+            "explanation": "Deviations: −2,−1,0,1,2. Squared: 4,1,0,1,4. Sum=10. Variance=10/5=2"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is standard deviation preferred over variance?",
+            "options": [
+              "It's easier",
+              "It has the same units as the data",
+              "It's always smaller",
+              "It ignores outliers"
+            ],
+            "answer": "It has the same units as the data",
+            "explanation": "Variance uses squared units (e.g. cm²). Standard deviation is the square root, restoring original units (cm)."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "In a box plot, what does the box represent?",
+            "options": [
+              "All the data",
+              "The IQR (middle 50%)",
+              "The range",
+              "The mean ± SD"
+            ],
+            "answer": "The IQR (middle 50%)",
+            "explanation": "The box in a box-and-whisker plot spans from Q1 to Q3, representing the IQR (middle 50% of data)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Two classes have the same mean test score. Class A has SD=2, Class B has SD=10. What can you conclude?",
+            "options": [
+              "Class A scored higher",
+              "Class B scored higher",
+              "Class A scores are more consistent",
+              "Class B scores are more consistent"
+            ],
+            "answer": "Class A scores are more consistent",
+            "explanation": "Lower SD means scores are closer to the mean — more consistent. Class A is more consistent."
+          },
+          {
+            "id": "statistics_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "statistics_l5",
+      "title": "Statistics Basics — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Statistics Basics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Statistics Basics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Statistics Basics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Statistics Basics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Statistics Basics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Statistics Basics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Statistics Basics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "statistics_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "statistics_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "statistics_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "statistics_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "statistics_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "statistics_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "statistics_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "statistics_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "statistics_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "statistics_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "statistics_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "statistics_l6",
+      "title": "Statistics Basics — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Statistics Basics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Statistics Basics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Statistics Basics builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Statistics Basics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Statistics Basics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Statistics Basics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Statistics Basics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "statistics_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "statistics_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "statistics_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "statistics_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "statistics_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "statistics_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "statistics_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "statistics_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "statistics_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "statistics_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "statistics_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "statistics_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "statistics_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "statistics_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "statistics_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "statistics_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "statistics_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "statistics_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "statistics_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "statistics_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

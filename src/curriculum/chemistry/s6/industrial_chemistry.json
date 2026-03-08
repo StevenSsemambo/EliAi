@@ -1,0 +1,1821 @@
+{
+  "subject": "chemistry",
+  "level": "s6",
+  "lessons": [
+    {
+      "id": "s6_chem_ind_l1",
+      "title": "Industrial Processes",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Industrial chemistry applies chemical principles at large scale to produce commercially important materials efficiently and sustainably."
+        },
+        {
+          "type": "example",
+          "title": "Contact Process (H₂SO₄)",
+          "body": "2SO₂ + O₂ ⇌ 2SO₃  (V₂O₅ catalyst, 450°C, 1-2 atm)\nSO₃ + H₂SO₄ → H₂S₂O₇ (oleum)\nH₂S₂O₇ + H₂O → 2H₂SO₄\n\nWhy not absorb SO₃ directly in water? Produces dangerous acid mist\nSulphuric acid: fertilisers, detergents, batteries, drugs"
+        },
+        {
+          "type": "example",
+          "title": "Haber Process (NH₃) and Ostwald Process (HNO₃)",
+          "body": "N₂+3H₂⇌2NH₃ (Fe, 450°C, 200atm)\n\nOstwald: NH₃→HNO₃\n4NH₃+5O₂→4NO+6H₂O (Pt/Rh catalyst, 900°C)\n2NO+O₂→2NO₂\n3NO₂+H₂O→2HNO₃+NO\n\nApplications: fertilisers (ammonium nitrate, urea), explosives"
+        },
+        {
+          "type": "formula",
+          "body": "Economic and environmental considerations:\n• Yield vs rate compromise (Haber)\n• Atom economy: reduce waste\n• Energy efficiency: heat exchange\n• Pollution control: SO₂ scrubbers, catalytic converters\n• Raw materials: cost, availability, renewability"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The Contact Process produces",
+            "options": [
+              "nitric acid",
+              "sulphuric acid",
+              "ammonia",
+              "hydrochloric acid"
+            ],
+            "answer": "sulphuric acid",
+            "explanation": "The Contact Process is the industrial method for producing sulphuric acid (H₂SO₄) from sulphur dioxide."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In the Contact Process, SO₃ is not absorbed directly in water because",
+            "options": [
+              "it is too slow",
+              "it produces dangerous sulphuric acid mist",
+              "it forms SO₂",
+              "it is insoluble"
+            ],
+            "answer": "it produces dangerous sulphuric acid mist",
+            "explanation": "Direct absorption of SO₃ in water produces a dangerous mist of fine H₂SO₄ droplets. Oleum is used instead."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "V₂O₅ in the Contact Process acts as",
+            "options": [
+              "a reactant",
+              "a product",
+              "a catalyst",
+              "an inhibitor"
+            ],
+            "answer": "a catalyst",
+            "explanation": "Vanadium(V) oxide (V₂O₅) is the catalyst for 2SO₂+O₂→2SO₃."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The Haber Process produces",
+            "options": [
+              "sulphuric acid",
+              "nitric acid",
+              "ammonia",
+              "chlorine"
+            ],
+            "answer": "ammonia",
+            "explanation": "The Haber Process: N₂+3H₂→2NH₃ using Fe catalyst at 450°C and 200 atm."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The Ostwald Process converts ammonia to",
+            "options": [
+              "urea",
+              "nitric acid",
+              "nitrogen",
+              "ammonium nitrate"
+            ],
+            "answer": "nitric acid",
+            "explanation": "Ostwald: oxidises NH₃ to NO, then NO₂, then dissolves in water to give HNO₃."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Atom economy encourages chemists to",
+            "options": [
+              "use more solvents",
+              "design reactions where more of the reactant atoms end up in the desired product",
+              "work faster",
+              "use high pressure only"
+            ],
+            "answer": "design reactions where more of the reactant atoms end up in the desired product",
+            "explanation": "High atom economy means less waste — important economically (raw materials) and environmentally."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Catalytic converters in cars convert",
+            "options": [
+              "CO₂ to O₂",
+              "CO and NOₓ to CO₂ and N₂",
+              "SO₂ to SO₃",
+              "N₂ to NH₃"
+            ],
+            "answer": "CO and NOₓ to CO₂ and N₂",
+            "explanation": "Pt/Rh/Pd catalysts oxidise CO→CO₂, hydrocarbons→CO₂+H₂O, and reduce NOₓ→N₂."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is 450°C used in the Haber Process rather than a lower temperature?",
+            "options": [
+              "Lower temperature impossible",
+              "Lower temperature gives too slow a reaction rate despite higher equilibrium yield",
+              "Iron catalyst only works at 450°C",
+              "Higher temperatures give more NH₃"
+            ],
+            "answer": "Lower temperature gives too slow a reaction rate despite higher equilibrium yield",
+            "explanation": "Compromise: very low T gives high yield but negligible rate. 450°C balances acceptable yield (~15%) with industrial rate."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Nitrogen for the Haber Process comes from",
+            "options": [
+              "decomposing ammonia",
+              "fractional distillation of liquefied air",
+              "coal",
+              "the Ostwald Process"
+            ],
+            "answer": "fractional distillation of liquefied air",
+            "explanation": "Liquid air is fractionally distilled — N₂ (bp -196°C) boils off separately from O₂ (bp -183°C)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Sulphuric acid is described as the world's most important industrial chemical because",
+            "options": [
+              "it is the cheapest",
+              "it is used in making fertilisers, detergents, drugs, explosives, batteries and many other products",
+              "it is easy to make",
+              "it is non-toxic"
+            ],
+            "answer": "it is used in making fertilisers, detergents, drugs, explosives, batteries and many other products",
+            "explanation": "H₂SO₄ is a starting material or reagent in producing an enormous range of industrial products."
+          },
+          {
+            "id": "industrial_chemistry_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l1_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l1_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l1_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l1_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_chem_ind_l2",
+      "title": "Electrochemistry in Industry",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Electrochemical cells:\nGalvanic cell: spontaneous redox → electrical energy\nElectrolytic cell: electrical energy → non-spontaneous redox\n\nStandard electrode potential E°:\nMore positive E° = better oxidising agent (reduction preferred)\nCell EMF = E°(cathode) - E°(anode)\nSpontaneous if EMF > 0"
+        },
+        {
+          "type": "example",
+          "title": "Electroplating and Refining",
+          "body": "Electroplating (copper):\nCathode: object to be plated (Cu²⁺+2e⁻ → Cu)\nAnode: copper (Cu → Cu²⁺+2e⁻)\nElectrolyte: copper sulphate solution\n\nCopper refining:\nImpure Cu anode dissolves, pure Cu deposits on cathode\nAnode sludge: precious metals (Ag, Au) collect below anode"
+        },
+        {
+          "type": "example",
+          "title": "Batteries and Fuel Cells",
+          "body": "Primary (non-rechargeable): Zn-MnO₂ (dry cell)\nSecondary (rechargeable): Lead-acid (car battery), Li-ion (phones)\nFuel cell: H₂ + ½O₂ → H₂O, releasing electrical energy\nH₂ fuel cell: no emissions (only water), high efficiency\nChallenge: H₂ storage and production"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a galvanic cell, chemical energy converts to",
+            "options": [
+              "heat",
+              "electrical energy",
+              "light",
+              "mechanical energy"
+            ],
+            "answer": "electrical energy",
+            "explanation": "Galvanic (voltaic) cell: spontaneous redox reaction drives electrons through external circuit → electrical energy."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Standard electrode potential E° measures",
+            "options": [
+              "temperature",
+              "tendency to be reduced (gain electrons) relative to standard hydrogen electrode",
+              "pH",
+              "mass"
+            ],
+            "answer": "tendency to be reduced (gain electrons) relative to standard hydrogen electrode",
+            "explanation": "More positive E°: more readily reduced (stronger oxidising agent). Used to predict cell reactions."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Cell EMF = ",
+            "options": [
+              "E°anode + E°cathode",
+              "E°cathode - E°anode",
+              "E°anode - E°cathode",
+              "E°cathode × E°anode"
+            ],
+            "answer": "E°cathode - E°anode",
+            "explanation": "EMF = E°(right/cathode) - E°(left/anode). Positive EMF = spontaneous reaction."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In electroplating, the object to be plated is the",
+            "options": [
+              "anode",
+              "electrolyte",
+              "cathode",
+              "power source"
+            ],
+            "answer": "cathode",
+            "explanation": "The object receives metal ions from solution (reduction) at the cathode (negative electrode)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Lead-acid car battery is a secondary cell because",
+            "options": [
+              "it uses lead",
+              "it can be recharged by reversing the reaction",
+              "it is large",
+              "it uses acid"
+            ],
+            "answer": "it can be recharged by reversing the reaction",
+            "explanation": "Secondary cells are rechargeable — applying external EMF reverses the chemical reaction, restoring the battery."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Hydrogen fuel cells produce as their only emission",
+            "options": [
+              "CO₂",
+              "water (H₂O)",
+              "nitrogen",
+              "oxygen"
+            ],
+            "answer": "water (H₂O)",
+            "explanation": "H₂ + ½O₂ → H₂O. The only product is water — zero harmful emissions if H₂ produced from renewable sources."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why is copper refined electrolytically?",
+            "options": [
+              "To make it cheaper",
+              "To obtain very high purity needed for electrical conductors",
+              "To increase strength",
+              "To make it recyclable"
+            ],
+            "answer": "To obtain very high purity needed for electrical conductors",
+            "explanation": "Electrical conductors need 99.99% pure copper — impurities dramatically reduce conductivity."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The anode in a galvanic cell",
+            "options": [
+              "gains electrons (reduction)",
+              "loses electrons (oxidation)",
+              "gains mass",
+              "is positive and gains electrons"
+            ],
+            "answer": "loses electrons (oxidation)",
+            "explanation": "In galvanic cell: anode = negative electrode where oxidation occurs (loses electrons)."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Corrosion of iron (rusting) is",
+            "options": [
+              "reduction only",
+              "an electrochemical process where iron is oxidised",
+              "a physical change",
+              "caused by nitrogen"
+            ],
+            "answer": "an electrochemical process where iron is oxidised",
+            "explanation": "Rusting: Fe → Fe²⁺ (oxidation at anode areas). Oxygen and water act as cathodic areas. Electrochemical corrosion cell forms."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Zinc coating (galvanising) protects iron because",
+            "options": [
+              "zinc is shiny",
+              "zinc is a sacrificial anode — more reactive so oxidises preferentially instead of iron",
+              "zinc repels water",
+              "zinc conducts electricity"
+            ],
+            "answer": "zinc is a sacrificial anode — more reactive so oxidises preferentially instead of iron",
+            "explanation": "Zinc is more reactive than iron — it oxidises (corrodes) preferentially, protecting the iron underneath."
+          },
+          {
+            "id": "industrial_chemistry_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_chem_ind_l3",
+      "title": "Modern Materials and Nanotechnology",
+      "duration_minutes": 25,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "Modern chemistry has produced many novel materials with unique properties. Nanotechnology works at the scale of atoms and molecules (1-100 nanometres)."
+        },
+        {
+          "type": "example",
+          "title": "Smart Materials",
+          "body": "Shape memory alloys (e.g. Nitinol): return to original shape when heated\nApplications: spectacle frames, stents, actuators\n\nPhotochromic materials: darken in UV, clear indoors\nApplications: transition lenses\n\nThermochromic materials: change colour with temperature\nApplications: temperature-sensitive labels\n\nPiezoelectric materials: generate electricity under pressure\nApplications: sensors, speakers, sonar"
+        },
+        {
+          "type": "example",
+          "title": "Nanomaterials",
+          "body": "Carbon nanotubes: cylindrical, extremely strong, conduct electricity\nStrength: 100× steel at fraction of weight\nApplications: aerospace, electronics, drug delivery\n\nGraphene: single atom layer of carbon\nHardest known material, excellent conductor\nApplications: flexible screens, water filters\n\nNanoparticles in medicine: drug delivery to specific cells\nNanoparticles in sunscreen: TiO₂ blocks UV without white residue"
+        },
+        {
+          "type": "formula",
+          "body": "Why nano is different:\nHigh surface area to volume ratio\nQuantum effects become significant\nUnique optical, electrical, magnetic properties\nGold nanoparticles: red/purple (not gold coloured)\nSilver nanoparticles: antibacterial"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Nanotechnology works at the scale of",
+            "options": [
+              "millimetres",
+              "micrometres",
+              "nanometres (1-100nm)",
+              "centimetres"
+            ],
+            "answer": "nanometres (1-100nm)",
+            "explanation": "Nanotechnology manipulates matter at 1-100 nanometres — the scale of individual molecules and atomic clusters."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Shape memory alloys are special because",
+            "options": [
+              "they melt at low temperature",
+              "they return to original shape when heated",
+              "they are very hard",
+              "they conduct heat only"
+            ],
+            "answer": "they return to original shape when heated",
+            "explanation": "Shape memory alloys (like Nitinol) deform at low temperature but snap back to their memorised shape when warmed."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Carbon nanotubes are extremely strong due to",
+            "options": [
+              "ionic bonding",
+              "sp² carbon bonds in cylindrical arrangement",
+              "Van der Waals forces",
+              "metallic bonding"
+            ],
+            "answer": "sp² carbon bonds in cylindrical arrangement",
+            "explanation": "The covalent C-C bonds in the hexagonal nanotube lattice make them stronger than steel at a fraction of the weight."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Graphene is a single layer of carbon atoms arranged in",
+            "options": [
+              "a cube",
+              "a hexagonal (honeycomb) lattice",
+              "a random pattern",
+              "cubes"
+            ],
+            "answer": "a hexagonal (honeycomb) lattice",
+            "explanation": "Graphene: one atom thick layer of carbon in hexagonal arrangement — 2D allotrope of carbon."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why do nanomaterials have different properties from bulk material?",
+            "options": [
+              "They are purer",
+              "Very high surface area:volume ratio and quantum effects become significant",
+              "They are smaller",
+              "They are heated"
+            ],
+            "answer": "Very high surface area:volume ratio and quantum effects become significant",
+            "explanation": "At nanoscale: huge SA:Vol ratio (more surface reactions), and quantum mechanical effects alter electronic/optical properties."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Gold nanoparticles appear red/purple, not gold, because",
+            "options": [
+              "impurities",
+              "quantum effects alter optical properties at nanoscale",
+              "they are different element",
+              "temperature"
+            ],
+            "answer": "quantum effects alter optical properties at nanoscale",
+            "explanation": "At nanoscale, gold nanoparticles have plasmon resonance that absorbs different wavelengths than bulk gold."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "TiO₂ nanoparticles in sunscreen",
+            "options": [
+              "block UV and appear white",
+              "block UV without visible white residue",
+              "absorb sunlight as heat",
+              "reflect all light"
+            ],
+            "answer": "block UV without visible white residue",
+            "explanation": "Nanoparticle TiO₂ is transparent to visible light but still absorbs UV — gives effective UV protection without the white paste."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Piezoelectric materials convert",
+            "options": [
+              "heat to light",
+              "pressure to electrical signals (and vice versa)",
+              "UV to electricity",
+              "sound to heat"
+            ],
+            "answer": "pressure to electrical signals (and vice versa)",
+            "explanation": "Piezoelectric effect: mechanical pressure → electric signal. Used in sensors, lighters, sonar, microphones."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "The main concern about nanomaterials for health and environment is",
+            "options": [
+              "they are expensive",
+              "their behaviour in biological systems is poorly understood — may be toxic",
+              "they are magnetic",
+              "they absorb sound"
+            ],
+            "answer": "their behaviour in biological systems is poorly understood — may be toxic",
+            "explanation": "Nanoparticles are small enough to penetrate cell membranes and cross the blood-brain barrier. Long-term effects not fully known."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Thermochromic materials are used in",
+            "options": [
+              "aerospace structures",
+              "temperature-sensitive indicators that change colour with temperature",
+              "electrical circuits",
+              "sunscreen"
+            ],
+            "answer": "temperature-sensitive indicators that change colour with temperature",
+            "explanation": "Thermochromic inks change colour at specific temperatures — used on food packaging, baby bottles, temperature strips."
+          },
+          {
+            "id": "industrial_chemistry_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial_chemistry_l4",
+      "title": "Industrial Chemistry — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Industrial Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Industrial Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Industrial Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Industrial Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Industrial Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Industrial Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Industrial Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "industrial_chemistry_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l4_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l4_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l4_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l4_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "industrial_chemistry_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "industrial_chemistry_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "industrial_chemistry_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "industrial_chemistry_l4_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "industrial_chemistry_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "industrial_chemistry_l4_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "industrial_chemistry_l4_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "industrial_chemistry_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "industrial_chemistry_l4_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "industrial_chemistry_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial_chemistry_l5",
+      "title": "Industrial Chemistry — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Industrial Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Industrial Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Industrial Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Industrial Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Industrial Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Industrial Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Industrial Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "industrial_chemistry_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l5_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l5_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l5_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l5_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "industrial_chemistry_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "industrial_chemistry_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "industrial_chemistry_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "industrial_chemistry_l5_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "industrial_chemistry_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "industrial_chemistry_l5_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "industrial_chemistry_l5_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "industrial_chemistry_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "industrial_chemistry_l5_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "industrial_chemistry_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "industrial_chemistry_l6",
+      "title": "Industrial Chemistry — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Industrial Chemistry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Industrial Chemistry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Industrial Chemistry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Industrial Chemistry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Industrial Chemistry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Industrial Chemistry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Industrial Chemistry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "industrial_chemistry_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l6_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "industrial_chemistry_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "industrial_chemistry_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "industrial_chemistry_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "industrial_chemistry_l6_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "industrial_chemistry_l6_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "industrial_chemistry_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "industrial_chemistry_l6_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "industrial_chemistry_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "industrial_chemistry_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "industrial_chemistry_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "industrial_chemistry_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "industrial_chemistry_l6_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "industrial_chemistry_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "industrial_chemistry_l6_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "industrial_chemistry_l6_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "industrial_chemistry_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "industrial_chemistry_l6_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "industrial_chemistry_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "industrial_chemistry"
+}

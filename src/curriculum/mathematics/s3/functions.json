@@ -1,0 +1,1802 @@
+{
+  "topic_id": "functions",
+  "topic_title": "Functions & Graphs",
+  "subject": "mathematics",
+  "class_level": "S3",
+  "lessons": [
+    {
+      "id": "functions_l1",
+      "title": "Introduction to Functions",
+      "duration_minutes": 25,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "A function is a rule that assigns exactly one output to each input. Think of a function as a machine: put in a value (input/domain), get out exactly one result (output/range). Functions are written as f(x), g(x), etc."
+        },
+        {
+          "type": "formula",
+          "body": "Function notation:\nf(x) = 2x + 3 means 'f of x equals 2x + 3'\nIf x = 4: f(4) = 2(4) + 3 = 11\n\nDomain: the set of all allowed input values\nRange: the set of all possible output values"
+        },
+        {
+          "type": "example",
+          "title": "Evaluating Functions",
+          "body": "f(x) = x² − 3x + 2\nFind: f(0), f(2), f(−1)\nf(0) = 0 − 0 + 2 = 2\nf(2) = 4 − 6 + 2 = 0\nf(−1) = 1 + 3 + 2 = 6"
+        },
+        {
+          "type": "example",
+          "title": "Composite Functions",
+          "body": "f(x) = 2x + 1 and g(x) = x²\nfg(x) means f(g(x)) — apply g first, then f\nfg(3) = f(g(3)) = f(9) = 2(9)+1 = 19\ngf(3) = g(f(3)) = g(7) = 49\nNote: fg ≠ gf usually!"
+        },
+        {
+          "type": "text",
+          "body": "A function must pass the vertical line test: any vertical line drawn through the graph touches it at most once. If a vertical line touches the graph at two points, it is NOT a function."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "If f(x) = 3x − 4, find f(5).",
+            "options": [
+              "11",
+              "19",
+              "1",
+              "15"
+            ],
+            "answer": "11",
+            "explanation": "f(5) = 3(5) − 4 = 15 − 4 = 11"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If g(x) = x² + 1, find g(−3).",
+            "options": [
+              "8",
+              "10",
+              "−8",
+              "−10"
+            ],
+            "answer": "10",
+            "explanation": "g(−3) = (−3)² + 1 = 9 + 1 = 10"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A function assigns each input exactly ___ output(s).",
+            "options": [
+              "zero",
+              "one",
+              "two",
+              "any number of"
+            ],
+            "answer": "one",
+            "explanation": "By definition, a function maps each input to exactly one output."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "f(x)=2x+1, g(x)=x². Find fg(2).",
+            "options": [
+              "9",
+              "10",
+              "25",
+              "5"
+            ],
+            "answer": "9",
+            "explanation": "fg(2) = f(g(2)) = f(4) = 2(4)+1 = 9"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "f(x)=2x+1, g(x)=x². Find gf(2).",
+            "options": [
+              "9",
+              "10",
+              "25",
+              "5"
+            ],
+            "answer": "25",
+            "explanation": "gf(2) = g(f(2)) = g(5) = 5² = 25"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If h(x) = (x+3)/2, find h(7).",
+            "options": [
+              "2",
+              "5",
+              "10",
+              "3.5"
+            ],
+            "answer": "5",
+            "explanation": "h(7) = (7+3)/2 = 10/2 = 5"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the domain restriction for f(x) = 1/x?",
+            "options": [
+              "x must be positive",
+              "x cannot be 1",
+              "x cannot be 0",
+              "x must be an integer"
+            ],
+            "answer": "x cannot be 0",
+            "explanation": "Division by zero is undefined, so x = 0 is excluded from the domain."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "f(x) = √x. What is the domain?",
+            "options": [
+              "All real numbers",
+              "x > 0 only",
+              "x ≥ 0",
+              "Integers only"
+            ],
+            "answer": "x ≥ 0",
+            "explanation": "Square root of negative numbers is not real, so x must be ≥ 0."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "If f(a) = 10 and f(x) = 2x, find a.",
+            "options": [
+              "5",
+              "20",
+              "12",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "2a = 10, so a = 5."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Is the vertical line test used to check if a graph is:",
+            "options": [
+              "A straight line",
+              "A function",
+              "Symmetrical",
+              "An equation"
+            ],
+            "answer": "A function",
+            "explanation": "The vertical line test: if any vertical line touches the graph more than once, it's not a function."
+          },
+          {
+            "id": "functions_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_logarithms_l1",
+      "title": "Logarithms — Rules and Applications",
+      "duration_minutes": 30,
+      "xp_reward": 75,
+      "content": [
+        {
+          "type": "text",
+          "body": "A logarithm is the inverse of an exponent. If 2³ = 8, then log₂(8) = 3. Logarithms ask: 'What power do I raise the base to, to get this number?'"
+        },
+        {
+          "type": "formula",
+          "body": "Definition: logₐ(x) = y ↔ aʸ = x\n\nCommon logs:\nlog₁₀(x) = log(x) (base 10, default)\nlogₑ(x) = ln(x) (natural log, base e≈2.718)\n\nlog(10) = 1,  log(100) = 2,  log(1000) = 3\nlog(1) = 0 for any base"
+        },
+        {
+          "type": "formula",
+          "body": "Log Rules (very important!):\n1. Product: log(AB) = log A + log B\n2. Quotient: log(A/B) = log A − log B\n3. Power: log(Aⁿ) = n × log A\n4. Change of base: logₐ(x) = log(x)/log(a)"
+        },
+        {
+          "type": "example",
+          "title": "Using Log Rules",
+          "body": "Simplify: log 4 + log 25\n= log(4 × 25) = log 100 = 2\n\nSimplify: log 1000 − log 10\n= log(1000/10) = log 100 = 2\n\nSimplify: log 2⁵\n= 5 log 2 = 5 × 0.301 = 1.505"
+        },
+        {
+          "type": "example",
+          "title": "Solving Logarithmic Equations",
+          "body": "Solve: log₂(x) = 5\nConvert: 2⁵ = x\nx = 32\n\nSolve: log(x+1) = 2\nConvert: 10² = x+1\n100 = x+1\nx = 99"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is log₂(8)?",
+            "options": [
+              "4",
+              "2",
+              "3",
+              "8"
+            ],
+            "answer": "3",
+            "explanation": "2³ = 8, so log₂(8) = 3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is log₁₀(1000)?",
+            "options": [
+              "100",
+              "4",
+              "3",
+              "2"
+            ],
+            "answer": "3",
+            "explanation": "10³ = 1000, so log(1000) = 3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Simplify: log 3 + log 4",
+            "options": [
+              "log 7",
+              "log 12",
+              "log 1",
+              "7"
+            ],
+            "answer": "log 12",
+            "explanation": "log A + log B = log(AB) = log(3×4) = log 12."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Simplify: log 50 − log 5",
+            "options": [
+              "log 45",
+              "log 10 = 1",
+              "log 250",
+              "log 55"
+            ],
+            "answer": "log 10 = 1",
+            "explanation": "log(50/5) = log 10 = 1."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Simplify: log 2³",
+            "options": [
+              "3log 2",
+              "2log 3",
+              "log 6",
+              "3+log2"
+            ],
+            "answer": "3log 2",
+            "explanation": "log(Aⁿ) = n log A. So log 2³ = 3 log 2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve: log₃(x) = 4",
+            "options": [
+              "x = 12",
+              "x = 81",
+              "x = 64",
+              "x = 34"
+            ],
+            "answer": "x = 81",
+            "explanation": "3⁴ = 81. So x = 81."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is log(1) for any base?",
+            "options": [
+              "1",
+              "The base",
+              "Undefined",
+              "0"
+            ],
+            "answer": "0",
+            "explanation": "Any base raised to power 0 = 1. So logₐ(1) = 0 always."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Solve: log(x) = 3 (base 10)",
+            "options": [
+              "x=30",
+              "x=1000",
+              "x=300",
+              "x=100"
+            ],
+            "answer": "x=1000",
+            "explanation": "10³ = 1000."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "log 6 + log 5 − log 3 = ?",
+            "options": [
+              "log 8",
+              "log 10 = 1",
+              "log 90",
+              "2"
+            ],
+            "answer": "log 10 = 1",
+            "explanation": "= log(6×5/3) = log(10) = 1."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "If log 2 = 0.301, find log 8.",
+            "options": [
+              "0.602",
+              "0.903",
+              "1.204",
+              "2.408"
+            ],
+            "answer": "0.903",
+            "explanation": "log 8 = log 2³ = 3 log 2 = 3 × 0.301 = 0.903."
+          },
+          {
+            "id": "functions_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_func_l3",
+      "title": "Inverse and Composite Functions",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Composite: fg(x)=f(g(x)) — apply g first then f\nInverse f⁻¹: swap x and y, solve for y\nDomain of f⁻¹ = range of f\nf(f⁻¹(x)) = x"
+        },
+        {
+          "type": "example",
+          "title": "Finding Inverse",
+          "body": "f(x)=2x+3\ny=2x+3 → swap: x=2y+3\ny=(x−3)/2\nf⁻¹(x)=(x−3)/2"
+        },
+        {
+          "type": "example",
+          "title": "Composite",
+          "body": "f(x)=x², g(x)=x+1\nfg(x)=f(x+1)=(x+1)²\ngf(x)=g(x²)=x²+1"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "fg(x) means",
+            "options": [
+              "f(x)×g(x)",
+              "Apply g first then f",
+              "Apply f first then g",
+              "f(x)+g(x)"
+            ],
+            "answer": "Apply g first then f",
+            "explanation": "fg(x)=f(g(x)): g applied first, result fed into f."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "f(x)=3x, g(x)=x+2, fg(x)=",
+            "options": [
+              "3x+2",
+              "3x+6",
+              "x+6",
+              "6x"
+            ],
+            "answer": "3x+6",
+            "explanation": "fg(x)=f(x+2)=3(x+2)=3x+6"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Inverse of f(x)=2x+1",
+            "options": [
+              "(x−1)/2",
+              "(2x+1)/2",
+              "(x+1)/2",
+              "2x−1"
+            ],
+            "answer": "(x−1)/2",
+            "explanation": "y=2x+1 → x=2y+1 → y=(x−1)/2"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Graph of f⁻¹ is reflection of f in",
+            "options": [
+              "x-axis",
+              "y-axis",
+              "y=x line",
+              "origin"
+            ],
+            "answer": "y=x line",
+            "explanation": "Inverse function swaps x and y coordinates → reflection in y=x."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Domain of f⁻¹ equals",
+            "options": [
+              "Domain of f",
+              "Range of f",
+              "All reals",
+              "Zero"
+            ],
+            "answer": "Range of f",
+            "explanation": "Input to f⁻¹ must be valid output of f. Domain of f⁻¹ = range of f."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "f(x)=x²+1, g(x)=√x, gf(x)=",
+            "options": [
+              "√(x²+1)",
+              "x²+1",
+              "x+1",
+              "√x+1"
+            ],
+            "answer": "√(x²+1)",
+            "explanation": "gf(x)=g(x²+1)=√(x²+1)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "f(f⁻¹(x))=",
+            "options": [
+              "0",
+              "f(x)",
+              "x",
+              "2x"
+            ],
+            "answer": "x",
+            "explanation": "By definition of inverse function: f(f⁻¹(x))=x for all valid x."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Inverse of f(x)=x³",
+            "options": [
+              "x^(1/3)",
+              "3x",
+              "x³",
+              "−x³"
+            ],
+            "answer": "x^(1/3)",
+            "explanation": "Inverse of cubing is cube root: f⁻¹(x)=x^(1/3)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Which has no inverse over all reals",
+            "options": [
+              "f(x)=2x+1",
+              "f(x)=x³",
+              "f(x)=x²",
+              "f(x)=eˣ"
+            ],
+            "answer": "f(x)=x²",
+            "explanation": "x² fails horizontal line test (e.g. both 2 and −2 map to 4). Not one-to-one."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "f(x)=3x−5, g(x)=2x, gf(3)",
+            "options": [
+              "13",
+              "8",
+              "4",
+              "24"
+            ],
+            "answer": "8",
+            "explanation": "f(3)=4, gf(3)=g(4)=8"
+          },
+          {
+            "id": "functions_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_func_l3",
+      "title": "Inverse and Composite Functions",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Composite function:\nfg(x) = f(g(x)) - apply g first then f\nfg(x) is NOT equal to gf(x) in general\n\nInverse function f^-1(x):\nSwaps x and y: write y=f(x), swap x and y, solve for y\nDomain of f^-1 = Range of f"
+        },
+        {
+          "type": "example",
+          "title": "Finding Inverse",
+          "body": "f(x) = 2x+3\nLet y=2x+3, swap x and y:\nx = 2y+3, solve: y = (x-3)/2\nSo f^-1(x) = (x-3)/2\nCheck: f(f^-1(x)) = x"
+        },
+        {
+          "type": "example",
+          "title": "Composite Example",
+          "body": "f(x)=x^2, g(x)=x+1\nfg(x) = f(g(x)) = (x+1)^2\ngf(x) = g(f(x)) = x^2+1\nfg(2)=(3)^2=9, gf(2)=4+1=5 - different!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "fg(x) means",
+            "options": [
+              "f(x) times g(x)",
+              "Apply f first then g",
+              "Apply g first then f",
+              "f(x)+g(x)"
+            ],
+            "answer": "Apply g first then f",
+            "explanation": "fg(x) = f(g(x)): g is applied first to x, then f is applied to the result."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "f(x)=3x, g(x)=x+2. fg(x) =",
+            "options": [
+              "3x+2",
+              "3(x+2)=3x+6",
+              "3x+6",
+              "3x^2+6x"
+            ],
+            "answer": "3x+6",
+            "explanation": "fg(x)=f(g(x))=f(x+2)=3(x+2)=3x+6"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For f(x)=2x+1 find f^-1(x)",
+            "options": [
+              "(x-1)/2",
+              "(2x+1)/2",
+              "(x+1)/2",
+              "2x-1"
+            ],
+            "answer": "(x-1)/2",
+            "explanation": "y=2x+1, swap: x=2y+1, solve: y=(x-1)/2"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Graph of f^-1 is reflection of f in",
+            "options": [
+              "x-axis",
+              "y-axis",
+              "y=x line",
+              "y=-x"
+            ],
+            "answer": "y=x line",
+            "explanation": "Inverse function is a reflection in y=x because x and y swap."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Domain of f^-1 equals",
+            "options": [
+              "Domain of f",
+              "Range of f",
+              "All reals",
+              "Zero"
+            ],
+            "answer": "Range of f",
+            "explanation": "Domain of f^-1 = Range of f (and vice versa)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "f(x)=x^2+1, g(x)=sqrt(x). gf(x) =",
+            "options": [
+              "sqrt(x^2+1)",
+              "x^2+1",
+              "x+1",
+              "sqrt(x)+1"
+            ],
+            "answer": "sqrt(x^2+1)",
+            "explanation": "gf(x)=g(f(x))=g(x^2+1)=sqrt(x^2+1)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "f(f^-1(x)) always equals",
+            "options": [
+              "0",
+              "f(x)",
+              "x",
+              "f^2(x)"
+            ],
+            "answer": "x",
+            "explanation": "By definition: applying f then its inverse returns x."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "For f(x) = x^3, f^-1(x) =",
+            "options": [
+              "x^(1/3)",
+              "3x",
+              "x^3",
+              "-x^3"
+            ],
+            "answer": "x^(1/3)",
+            "explanation": "Inverse of cubing is cube root: x^(1/3)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Which function has no inverse over all reals",
+            "options": [
+              "f(x)=2x+1",
+              "f(x)=x^3",
+              "f(x)=x^2",
+              "f(x)=e^x"
+            ],
+            "answer": "f(x)=x^2",
+            "explanation": "x^2 fails horizontal line test - both 2 and -2 give same output 4."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "f(x)=3x-5, g(x)=2x. gf(3) =",
+            "options": [
+              "13",
+              "8",
+              "4",
+              "24"
+            ],
+            "answer": "8",
+            "explanation": "f(3)=9-5=4, gf(3)=g(4)=8"
+          },
+          {
+            "id": "functions_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "functions_l5",
+      "title": "Functions & Graphs — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Functions & Graphs. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Functions & Graphs concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Functions & Graphs builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Functions & Graphs. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Functions & Graphs. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Functions & Graphs include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Functions & Graphs. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "functions_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "functions_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "functions_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "functions_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "functions_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "functions_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "functions_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "functions_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "functions_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "functions_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "functions_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "functions_l6",
+      "title": "Functions & Graphs — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Functions & Graphs. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Functions & Graphs concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Functions & Graphs builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Functions & Graphs. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Functions & Graphs. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Functions & Graphs include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Functions & Graphs. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "functions_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "functions_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "functions_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "functions_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "functions_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "functions_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "functions_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "functions_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "functions_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "functions_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "functions_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "functions_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "functions_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "functions_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "functions_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "functions_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "functions_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "functions_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "functions_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "functions_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

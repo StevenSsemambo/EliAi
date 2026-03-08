@@ -1,0 +1,1821 @@
+{
+  "subject": "chemistry",
+  "level": "s3",
+  "lessons": [
+    {
+      "id": "s3_chem_sto_l1",
+      "title": "Moles and Molar Calculations",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Mole concept:\n1 mole = 6.022×10²³ particles (Avogadro's number, Nₐ)\n\nn = m/M  (moles = mass/molar mass)\nn = V/22.4  at STP  (for gases)\nn = cV  (for solutions, c in mol/dm³)\n\nMolar mass = sum of atomic masses of all atoms in formula\nH₂O: 2(1)+16 = 18 g/mol\nNaCl: 23+35.5 = 58.5 g/mol\nH₂SO₄: 2+32+4(16) = 98 g/mol"
+        },
+        {
+          "type": "example",
+          "title": "Mole Calculations",
+          "body": "Mass of 2 mol CaCO₃ (100 g/mol):\nmass = n × M = 2 × 100 = 200 g\n\nMoles in 9g of H₂O (18 g/mol):\nn = 9/18 = 0.5 mol\n\nParticles in 0.25 mol:\nN = 0.25 × 6.022×10²³ = 1.5×10²³ particles"
+        },
+        {
+          "type": "example",
+          "title": "Empirical and Molecular Formulae",
+          "body": "Empirical formula: simplest whole number ratio of atoms\nMolecular formula: actual number of atoms in molecule\n\nFind empirical formula of compound: 40%C, 6.7%H, 53.3%O\nC: 40/12=3.33, H: 6.7/1=6.7, O: 53.3/16=3.33\nRatio C:H:O = 1:2:1 → empirical formula: CH₂O\nIf molar mass=180: CH₂O×6 → C₆H₁₂O₆ (glucose)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Avogadro's number (6.022×10²³) is the number of particles in",
+            "options": [
+              "1 gram",
+              "1 mole",
+              "1 litre",
+              "1 atom"
+            ],
+            "answer": "1 mole",
+            "explanation": "One mole of any substance contains 6.022×10²³ particles (atoms, molecules, or ions)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Molar mass of H₂SO₄ (H=1, S=32, O=16)",
+            "options": [
+              "64",
+              "98",
+              "49",
+              "80"
+            ],
+            "answer": "98",
+            "explanation": "H₂SO₄: 2(1)+32+4(16) = 2+32+64 = 98 g/mol"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Moles in 44g of CO₂ (44 g/mol)",
+            "options": [
+              "0.5",
+              "2",
+              "1",
+              "44"
+            ],
+            "answer": "1",
+            "explanation": "n = 44/44 = 1 mol"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Mass of 3 mol of NaOH (40 g/mol)",
+            "options": [
+              "13.3g",
+              "43g",
+              "120g",
+              "40g"
+            ],
+            "answer": "120g",
+            "explanation": "mass = n×M = 3×40 = 120g"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Number of molecules in 0.5 mol of CO₂",
+            "options": [
+              "3.01×10²³",
+              "6.022×10²³",
+              "1.2×10²⁴",
+              "6.022×10²²"
+            ],
+            "answer": "3.01×10²³",
+            "explanation": "N = 0.5 × 6.022×10²³ = 3.011×10²³"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Volume of 2 mol of gas at STP",
+            "options": [
+              "22.4L",
+              "44.8L",
+              "11.2L",
+              "48L"
+            ],
+            "answer": "44.8L",
+            "explanation": "V = n × 22.4 = 2 × 22.4 = 44.8L"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Empirical formula is",
+            "options": [
+              "same as molecular formula",
+              "simplest whole-number ratio of atoms",
+              "formula with all atoms",
+              "formula with charges"
+            ],
+            "answer": "simplest whole-number ratio of atoms",
+            "explanation": "Empirical formula gives the simplest integer ratio of elements, not necessarily the actual molecular formula."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Compound: 75% C, 25% H. Empirical formula (C=12,H=1)",
+            "options": [
+              "CH₃",
+              "CH₄",
+              "C₂H₆",
+              "CH"
+            ],
+            "answer": "CH₄",
+            "explanation": "C: 75/12=6.25, H: 25/1=25. Ratio=1:4 → CH₄"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Moles of solute in 250cm³ of 0.4 mol/dm³ solution",
+            "options": [
+              "0.1",
+              "0.4",
+              "1",
+              "0.04"
+            ],
+            "answer": "0.1",
+            "explanation": "n = c×V = 0.4 × 0.25 = 0.1 mol"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Molar mass is measured in",
+            "options": [
+              "mol",
+              "g/mol",
+              "g",
+              "L/mol"
+            ],
+            "answer": "g/mol",
+            "explanation": "Molar mass is grams per mole (g/mol) — the mass of one mole of a substance."
+          },
+          {
+            "id": "stoichiometry_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l1_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l1_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l1_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l1_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_chem_sto_l2",
+      "title": "Stoichiometry and Chemical Calculations",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "text",
+          "body": "Stoichiometry uses the mole ratios in balanced equations to calculate masses, volumes, and concentrations of reactants and products."
+        },
+        {
+          "type": "formula",
+          "body": "Steps for stoichiometry calculations:\n1. Write balanced equation\n2. Convert given quantity to moles\n3. Use mole ratio from equation\n4. Convert moles to required quantity\n\nMole ratio = coefficients in balanced equation\n2H₂ + O₂ → 2H₂O\n2 mol H₂ : 1 mol O₂ : 2 mol H₂O"
+        },
+        {
+          "type": "example",
+          "title": "Mass Calculations",
+          "body": "How much CaO from 50g CaCO₃?\nCaCO₃ → CaO + CO₂\nMM: CaCO₃=100, CaO=56\nn(CaCO₃) = 50/100 = 0.5 mol\nn(CaO) = 0.5 mol (1:1 ratio)\nmass(CaO) = 0.5 × 56 = 28g"
+        },
+        {
+          "type": "example",
+          "title": "Limiting Reagent and Yield",
+          "body": "Limiting reagent: reactant that runs out first (limits product)\nExcess reagent: reactant left over\n\nTheoretical yield: maximum mass of product (from stoichiometry)\nActual yield: what you actually get in experiment\n% yield = (actual yield/theoretical yield) × 100\n% atom economy = (molar mass of desired product / total molar mass of all products) × 100"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In 2H₂ + O₂ → 2H₂O, the mole ratio H₂:O₂:H₂O is",
+            "options": [
+              "1:1:1",
+              "2:1:2",
+              "1:2:1",
+              "2:2:1"
+            ],
+            "answer": "2:1:2",
+            "explanation": "Coefficients give the mole ratio directly: 2 mol H₂ : 1 mol O₂ : 2 mol H₂O"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Moles of O₂ needed to react with 4 mol H₂ (2H₂+O₂→2H₂O)",
+            "options": [
+              "4",
+              "2",
+              "1",
+              "8"
+            ],
+            "answer": "2",
+            "explanation": "Ratio H₂:O₂ = 2:1, so 4 mol H₂ needs 4/2 = 2 mol O₂"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Mass of CO₂ from burning 12g carbon (C+O₂→CO₂, C=12,CO₂=44)",
+            "options": [
+              "44g",
+              "24g",
+              "12g",
+              "56g"
+            ],
+            "answer": "44g",
+            "explanation": "n(C)=12/12=1mol. 1mol C→1mol CO₂. mass(CO₂)=44g"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Limiting reagent is",
+            "options": [
+              "reactant in excess",
+              "reactant completely consumed that limits product amount",
+              "product that forms first",
+              "catalyst"
+            ],
+            "answer": "reactant completely consumed that limits product amount",
+            "explanation": "The limiting reagent is fully used up first, determining the maximum amount of product that can form."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "% yield = ",
+            "options": [
+              "theoretical/actual ×100",
+              "(actual/theoretical) ×100",
+              "actual×theoretical",
+              "actual-theoretical"
+            ],
+            "answer": "(actual/theoretical) ×100",
+            "explanation": "% yield = (actual yield obtained / theoretical maximum yield) × 100"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Theoretical yield of 100% would mean",
+            "options": [
+              "some product lost",
+              "all possible product is obtained with no losses",
+              "excess reagent used",
+              "wrong equation"
+            ],
+            "answer": "all possible product is obtained with no losses",
+            "explanation": "100% yield = perfectly efficient reaction with no side reactions, incomplete reaction, or product loss."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Atom economy = (molar mass of desired product / total molar mass of products) × 100. A reaction making only one product has atom economy of",
+            "options": [
+              "0%",
+              "50%",
+              "100%",
+              "depends"
+            ],
+            "answer": "100%",
+            "explanation": "If the only product is the desired product, all atoms end up in useful product → 100% atom economy."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "3g H₂ reacts with excess N₂ (N₂+3H₂→2NH₃). Moles of NH₃ formed (H=1, N=14)",
+            "options": [
+              "3",
+              "1",
+              "2",
+              "0.5"
+            ],
+            "answer": "2",
+            "explanation": "n(H₂)=3/2=1.5mol. Ratio H₂:NH₃=3:2, so n(NH₃)=1.5×(2/3)=1mol... wait: n(H₂)=1.5, × (2/3) = 1 mol NH₃"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Why might actual yield be less than theoretical yield?",
+            "options": [
+              "Wrong equation",
+              "Reaction incomplete, side reactions, or product lost during collection",
+              "Too much reactant",
+              "Temperature too high"
+            ],
+            "answer": "Reaction incomplete, side reactions, or product lost during collection",
+            "explanation": "Real reactions may not go to completion, produce unwanted byproducts, or lose product during filtration/transfer."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Percentage purity = (mass of pure substance / total mass of sample) × 100. A 5g sample containing 4g NaCl has purity of",
+            "options": [
+              "80%",
+              "20%",
+              "40%",
+              "100%"
+            ],
+            "answer": "80%",
+            "explanation": "% purity = (4/5)×100 = 80%"
+          },
+          {
+            "id": "stoichiometry_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_chem_sto_l3",
+      "title": "Titration and Volumetric Analysis",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "Titration is a precise technique to find the concentration of an unknown solution by reacting it with a standard solution of known concentration."
+        },
+        {
+          "type": "formula",
+          "body": "Titration steps:\n1. Fill burette with standard solution (titrant)\n2. Pipette exact volume of unknown into conical flask\n3. Add indicator\n4. Add titrant until endpoint (colour change)\n5. Record volume used (titre)\n6. Repeat for concordant results (within 0.1cm³)\n\nCalculation:\nn = cV → find moles of known\nUse mole ratio → moles of unknown\nc = n/V → concentration of unknown"
+        },
+        {
+          "type": "example",
+          "title": "Acid-Base Titration",
+          "body": "NaOH + HCl → NaCl + H₂O\n25cm³ of NaOH of unknown concentration\nTitrated with 0.1 mol/dm³ HCl\nVolume HCl used: 20cm³\n\nn(HCl) = 0.1 × 0.020 = 0.002 mol\nRatio 1:1, so n(NaOH) = 0.002 mol\nc(NaOH) = 0.002/0.025 = 0.08 mol/dm³"
+        },
+        {
+          "type": "example",
+          "title": "Indicators",
+          "body": "Litmus: red (acid) ↔ purple (neutral) ↔ blue (alkali)\nPhenolphthalein: colourless (acid) → pink/red (alkali)\nMethyl orange: red (acid) → yellow (alkali)\n\nSuitable for strong acid/strong base: either indicator\nWeak acid/strong base: phenolphthalein\nStrong acid/weak base: methyl orange"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a titration, the burette contains the",
+            "options": [
+              "unknown solution",
+              "standard solution (titrant) of known concentration",
+              "indicator",
+              "water"
+            ],
+            "answer": "standard solution (titrant) of known concentration",
+            "explanation": "The burette contains the titrant — the solution of known concentration added to the flask."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Concordant results in titration means",
+            "options": [
+              "getting exact answer",
+              "two or more readings within 0.1cm³ of each other",
+              "indicator changes colour",
+              "burette is full"
+            ],
+            "answer": "two or more readings within 0.1cm³ of each other",
+            "explanation": "Concordant results: repeated titres that agree closely (within 0.1cm³), confirming precision."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In NaOH+HCl→NaCl+H₂O, 20cm³ of 0.2M HCl neutralises NaOH. Moles of HCl =",
+            "options": [
+              "0.04",
+              "0.004",
+              "0.4",
+              "4"
+            ],
+            "answer": "0.004",
+            "explanation": "n = c×V = 0.2 × 0.020 = 0.004 mol"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Using result above (1:1 ratio), if NaOH volume was 25cm³, concentration =",
+            "options": [
+              "0.16",
+              "0.004",
+              "0.16",
+              "0.1"
+            ],
+            "answer": "0.16",
+            "explanation": "n(NaOH)=0.004mol, c=0.004/0.025=0.16 mol/dm³"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Phenolphthalein is colourless in acid and turns pink in alkali. It is best for",
+            "options": [
+              "strong acid/strong base",
+              "strong base/weak acid titrations",
+              "strong acid/weak base",
+              "all titrations"
+            ],
+            "answer": "strong base/weak acid titrations",
+            "explanation": "Phenolphthalein endpoint is in the alkaline range — ideal when the equivalence point is slightly alkaline (weak acid/strong base)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The endpoint in acid-base titration is when",
+            "options": [
+              "temperature is maximum",
+              "indicator permanently changes colour (neutralisation point)",
+              "burette is empty",
+              "pH=7 exactly"
+            ],
+            "answer": "indicator permanently changes colour (neutralisation point)",
+            "explanation": "Endpoint: the point at which the indicator changes colour permanently, indicating neutralisation is complete."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A back titration is used when",
+            "options": [
+              "the analyte is insoluble or reacts too slowly for direct titration",
+              "you have excess acid",
+              "equipment is broken",
+              "you want faster results"
+            ],
+            "answer": "the analyte is insoluble or reacts too slowly for direct titration",
+            "explanation": "Back titration: add excess known reagent, then titrate the excess with another standard solution. Used for insoluble/slow-reacting substances."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why must the pipette be rinsed with the solution it will measure?",
+            "options": [
+              "To cool it",
+              "To prevent dilution of the measured solution",
+              "To fill it faster",
+              "To add indicator"
+            ],
+            "answer": "To prevent dilution of the measured solution",
+            "explanation": "Rinsing with the sample solution removes any water that would otherwise dilute the solution and give incorrect results."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Methyl orange is red in acid and yellow in alkali. It is best for",
+            "options": [
+              "weak acid/weak base",
+              "weak acid/strong base",
+              "strong acid/weak base titrations",
+              "all titrations"
+            ],
+            "answer": "strong acid/weak base titrations",
+            "explanation": "Methyl orange endpoint is acidic — ideal when equivalence point is slightly acidic (strong acid/weak base)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What is the purpose of a rough titration?",
+            "options": [
+              "To get the exact answer",
+              "To get an approximate value so subsequent careful titrations know when endpoint is near",
+              "To fill the burette",
+              "To test the indicator"
+            ],
+            "answer": "To get an approximate value so subsequent careful titrations know when endpoint is near",
+            "explanation": "A rough titre gives an approximate endpoint. Accurate subsequent titrations can then be added dropwise near the endpoint."
+          },
+          {
+            "id": "stoichiometry_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoichiometry_l4",
+      "title": "Stoichiometry — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Stoichiometry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Stoichiometry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Stoichiometry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Stoichiometry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Stoichiometry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Stoichiometry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Stoichiometry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "stoichiometry_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l4_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l4_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l4_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l4_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "stoichiometry_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "stoichiometry_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "stoichiometry_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "stoichiometry_l4_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "stoichiometry_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "stoichiometry_l4_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "stoichiometry_l4_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "stoichiometry_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "stoichiometry_l4_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "stoichiometry_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoichiometry_l5",
+      "title": "Stoichiometry — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Stoichiometry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Stoichiometry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Stoichiometry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Stoichiometry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Stoichiometry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Stoichiometry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Stoichiometry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "stoichiometry_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l5_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l5_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l5_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l5_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "stoichiometry_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "stoichiometry_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "stoichiometry_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "stoichiometry_l5_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "stoichiometry_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "stoichiometry_l5_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "stoichiometry_l5_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "stoichiometry_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "stoichiometry_l5_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "stoichiometry_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "stoichiometry_l6",
+      "title": "Stoichiometry — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Stoichiometry. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Stoichiometry concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Stoichiometry builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Stoichiometry. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Stoichiometry. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Stoichiometry include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Stoichiometry. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "stoichiometry_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "stoichiometry_l6_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "stoichiometry_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "stoichiometry_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "stoichiometry_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "stoichiometry_l6_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "stoichiometry_l6_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "stoichiometry_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "stoichiometry_l6_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "stoichiometry_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "stoichiometry_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "stoichiometry_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "stoichiometry_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "stoichiometry_l6_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "stoichiometry_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "stoichiometry_l6_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "stoichiometry_l6_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "stoichiometry_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "stoichiometry_l6_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "stoichiometry_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "stoichiometry"
+}

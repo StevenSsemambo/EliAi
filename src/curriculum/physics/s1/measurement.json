@@ -1,0 +1,1829 @@
+{
+  "topic_id": "measurement",
+  "topic_title": "Measurement",
+  "subject": "physics",
+  "class_level": "S1",
+  "lessons": [
+    {
+      "id": "measurement_l1",
+      "title": "Physical Quantities and Units",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Physics is the study of matter, energy, and the forces that act between them. To study physics, we must be able to measure things precisely. A physical quantity is anything that can be measured, such as length, mass, time, or temperature."
+        },
+        {
+          "type": "formula",
+          "body": "Every measurement has two parts:\n1. A number (magnitude)\n2. A unit\nExample: 5 metres — '5' is the number, 'metres' is the unit"
+        },
+        {
+          "type": "example",
+          "title": "Base SI Units",
+          "body": "The International System of Units (SI) has 7 base units:\nLength — metre (m)\nMass — kilogram (kg)\nTime — second (s)\nTemperature — kelvin (K)\nElectric current — ampere (A)\nAmount of substance — mole (mol)\nLuminous intensity — candela (cd)"
+        },
+        {
+          "type": "text",
+          "body": "For S1 physics, the most important base units are metre (m), kilogram (kg), and second (s). These three units form the MKS system which is the foundation of most physics calculations."
+        },
+        {
+          "type": "example",
+          "title": "Common Prefixes",
+          "body": "kilo (k) = × 1000 → 1 km = 1000 m\ncenti (c) = × 0.01 → 1 cm = 0.01 m\nmilli (m) = × 0.001 → 1 mm = 0.001 m\nmicro (μ) = × 0.000001\nExample: 5.2 km = 5200 m, 35 cm = 0.35 m"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of length?",
+            "options": [
+              "kilometre",
+              "centimetre",
+              "metre",
+              "foot"
+            ],
+            "answer": "metre",
+            "explanation": "The metre (m) is the SI base unit of length."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of mass?",
+            "options": [
+              "gram",
+              "pound",
+              "tonne",
+              "kilogram"
+            ],
+            "answer": "kilogram",
+            "explanation": "The kilogram (kg) is the SI base unit of mass."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many metres are in 3.5 km?",
+            "options": [
+              "35 m",
+              "350 m",
+              "3500 m",
+              "35000 m"
+            ],
+            "answer": "3500 m",
+            "explanation": "1 km = 1000 m, so 3.5 km = 3.5 × 1000 = 3500 m"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What does the prefix 'centi' mean?",
+            "options": [
+              "× 1000",
+              "× 100",
+              "× 0.01",
+              "× 0.001"
+            ],
+            "answer": "× 0.01",
+            "explanation": "Centi means one hundredth (0.01). So 1 cm = 0.01 m."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A physical quantity must always have...",
+            "options": [
+              "Only a number",
+              "Only a unit",
+              "A number and a unit",
+              "A formula"
+            ],
+            "answer": "A number and a unit",
+            "explanation": "Every physical quantity consists of both a number (magnitude) and a unit. Without a unit, the number is meaningless."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Convert 250 cm to metres.",
+            "options": [
+              "0.25 m",
+              "2.5 m",
+              "25 m",
+              "2500 m"
+            ],
+            "answer": "2.5 m",
+            "explanation": "1 cm = 0.01 m, so 250 cm = 250 × 0.01 = 2.5 m"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of time?",
+            "options": [
+              "minute",
+              "hour",
+              "second",
+              "millisecond"
+            ],
+            "answer": "second",
+            "explanation": "The second (s) is the SI base unit of time."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT an SI base unit?",
+            "options": [
+              "metre",
+              "kilogram",
+              "newton",
+              "second"
+            ],
+            "answer": "newton",
+            "explanation": "The newton is a derived unit (kg⋅m/s²), not a base unit. The base units include metre, kilogram, and second."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "How many millimetres are in 1 metre?",
+            "options": [
+              "10",
+              "100",
+              "1000",
+              "10000"
+            ],
+            "answer": "1000",
+            "explanation": "1 m = 100 cm = 1000 mm. The prefix milli means × 0.001."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What does MKS stand for in the MKS system?",
+            "options": [
+              "Mass-Kelvin-Speed",
+              "Metre-Kilogram-Second",
+              "Motion-Kinetic-Static",
+              "Milli-Kilo-Seconds"
+            ],
+            "answer": "Metre-Kilogram-Second",
+            "explanation": "MKS refers to the three fundamental units: Metre (length), Kilogram (mass), and Second (time)."
+          },
+          {
+            "id": "measurement_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "measurement_l2",
+      "title": "Measuring Length and Area",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "text",
+          "body": "Measuring length accurately is a fundamental skill in physics. Different instruments are used depending on what is being measured and how precise the measurement needs to be."
+        },
+        {
+          "type": "example",
+          "title": "Instruments for Measuring Length",
+          "body": "Ruler — measures lengths from 1mm to 30cm or 1m. Precision: ±0.5 mm\nMetre rule — measures up to 1 metre. Precision: ±0.5 mm\nVernier calliper — measures small lengths very precisely. Precision: ±0.1 mm\nMicrometer screw gauge — measures very small objects like wire thickness. Precision: ±0.01 mm\nMeasuring tape — measures long distances. Precision: ±1 mm"
+        },
+        {
+          "type": "example",
+          "title": "Reading a Ruler Correctly",
+          "body": "Always place your eye directly above the mark you are reading (to avoid parallax error)\nRead the scale at the actual mark, not from the edge of the ruler\nRecord the reading with its unit\nExample: A reading of 4.3 cm means the object is between the 4 cm and 5 cm marks, closer to the 4 cm mark"
+        },
+        {
+          "type": "formula",
+          "body": "Area Formulas:\nRectangle: A = length × width\nSquare: A = side²\nTriangle: A = ½ × base × height\nCircle: A = πr² (where r = radius)\nUnits of area: m², cm², mm²"
+        },
+        {
+          "type": "example",
+          "title": "Calculating Area",
+          "body": "Example 1: A rectangular room is 5 m long and 4 m wide.\nArea = 5 × 4 = 20 m²\n\nExample 2: A circle has radius 7 cm.\nArea = π × 7² = 3.14 × 49 = 153.9 cm²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which instrument is most precise for measuring the diameter of a wire?",
+            "options": [
+              "Ruler",
+              "Metre rule",
+              "Measuring tape",
+              "Micrometer screw gauge"
+            ],
+            "answer": "Micrometer screw gauge",
+            "explanation": "A micrometer screw gauge has a precision of ±0.01 mm, making it the most suitable for very small measurements like wire diameter."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is parallax error?",
+            "options": [
+              "Using the wrong unit",
+              "Reading a scale from an angle rather than directly above",
+              "Using a broken instrument",
+              "Writing the wrong number"
+            ],
+            "answer": "Reading a scale from an angle rather than directly above",
+            "explanation": "Parallax error occurs when the eye is not directly above the measurement mark, causing an incorrect reading."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A rectangle is 8 m long and 3 m wide. What is its area?",
+            "options": [
+              "11 m²",
+              "22 m²",
+              "24 m²",
+              "32 m²"
+            ],
+            "answer": "24 m²",
+            "explanation": "Area of rectangle = length × width = 8 × 3 = 24 m²"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What are the units of area?",
+            "options": [
+              "m",
+              "m²",
+              "m³",
+              "m/s"
+            ],
+            "answer": "m²",
+            "explanation": "Area is a two-dimensional measurement, so its units are squared — m², cm², or mm²."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A square has sides of 5 cm. What is its area?",
+            "options": [
+              "10 cm²",
+              "20 cm²",
+              "25 cm²",
+              "50 cm²"
+            ],
+            "answer": "25 cm²",
+            "explanation": "Area of square = side² = 5² = 25 cm²"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "What is the precision of a standard ruler?",
+            "options": [
+              "±5 mm",
+              "±1 mm",
+              "±0.5 mm",
+              "±0.01 mm"
+            ],
+            "answer": "±0.5 mm",
+            "explanation": "A standard ruler can measure to the nearest millimetre, giving a precision of ±0.5 mm."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A triangle has a base of 6 cm and height of 4 cm. What is its area?",
+            "options": [
+              "24 cm²",
+              "12 cm²",
+              "10 cm²",
+              "48 cm²"
+            ],
+            "answer": "12 cm²",
+            "explanation": "Area of triangle = ½ × base × height = ½ × 6 × 4 = 12 cm²"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which instrument would you use to measure the length of a football field?",
+            "options": [
+              "Micrometer",
+              "Vernier calliper",
+              "Measuring tape",
+              "Ruler"
+            ],
+            "answer": "Measuring tape",
+            "explanation": "A measuring tape can measure long distances (up to 50m or more) and is suitable for measuring a football field."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "The radius of a circle is 3 cm. What is its area? (use π = 3.14)",
+            "options": [
+              "9.42 cm²",
+              "18.84 cm²",
+              "28.26 cm²",
+              "56.52 cm²"
+            ],
+            "answer": "28.26 cm²",
+            "explanation": "Area = πr² = 3.14 × 3² = 3.14 × 9 = 28.26 cm²"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Why should you NOT measure from the very edge of a ruler?",
+            "options": [
+              "The edge is too thick",
+              "The edge may be worn or damaged, giving inaccurate readings",
+              "It is too difficult",
+              "The numbers start from 1"
+            ],
+            "answer": "The edge may be worn or damaged, giving inaccurate readings",
+            "explanation": "The end of a ruler can be chipped or worn, so measurements should start from a clear graduation mark like the 1 cm mark."
+          },
+          {
+            "id": "measurement_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "measurement_l3",
+      "title": "Measuring Volume and Density",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "text",
+          "body": "Volume is the amount of three-dimensional space that an object or substance occupies. Density tells us how much mass is packed into a given volume. These are two very important quantities in physics."
+        },
+        {
+          "type": "formula",
+          "body": "Volume formulas:\nCuboid: V = length × width × height\nCylinder: V = πr²h\nSphere: V = (4/3)πr³\nSI unit of volume: m³\nCommon unit: cm³ or litres (1 litre = 1000 cm³)"
+        },
+        {
+          "type": "example",
+          "title": "Measuring Volume of Liquids",
+          "body": "Use a measuring cylinder for liquids.\nPlace it on a flat surface.\nRead the bottom of the meniscus (the curved surface of the liquid).\nKeep your eye at the level of the meniscus to avoid parallax error.\nExample: Water forms a concave meniscus — read from the bottom of the curve."
+        },
+        {
+          "type": "example",
+          "title": "Volume of Irregular Solids — Displacement Method",
+          "body": "To find the volume of an irregular object (like a stone):\n1. Fill a measuring cylinder with water. Record the volume V₁.\n2. Carefully lower the object into the water.\n3. Record the new water level V₂.\n4. Volume of object = V₂ − V₁\nThis works because the object displaces water equal to its own volume."
+        },
+        {
+          "type": "formula",
+          "body": "Density formula:\nDensity (ρ) = Mass (m) ÷ Volume (V)\nρ = m/V\nUnit: kg/m³ or g/cm³\n\nDensity of water = 1000 kg/m³ = 1 g/cm³\nObjects with density < 1 g/cm³ float in water\nObjects with density > 1 g/cm³ sink in water"
+        },
+        {
+          "type": "example",
+          "title": "Density Calculation",
+          "body": "A stone has mass 150 g and volume 50 cm³.\nDensity = mass ÷ volume = 150 ÷ 50 = 3 g/cm³\nSince 3 g/cm³ > 1 g/cm³, the stone sinks in water."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the formula for density?",
+            "options": [
+              "D = V/m",
+              "D = m × V",
+              "D = m/V",
+              "D = V + m"
+            ],
+            "answer": "D = m/V",
+            "explanation": "Density = mass ÷ volume. It tells us how much mass is packed into each unit of volume."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A block has mass 200 g and volume 100 cm³. What is its density?",
+            "options": [
+              "0.5 g/cm³",
+              "2 g/cm³",
+              "20000 g/cm³",
+              "300 g/cm³"
+            ],
+            "answer": "2 g/cm³",
+            "explanation": "Density = mass ÷ volume = 200 ÷ 100 = 2 g/cm³"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the density of water?",
+            "options": [
+              "0.5 g/cm³",
+              "1 g/cm³",
+              "2 g/cm³",
+              "10 g/cm³"
+            ],
+            "answer": "1 g/cm³",
+            "explanation": "The density of pure water is 1 g/cm³ or 1000 kg/m³."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An object has density 0.6 g/cm³. What happens when placed in water?",
+            "options": [
+              "Sinks",
+              "Floats",
+              "Dissolves",
+              "Explodes"
+            ],
+            "answer": "Floats",
+            "explanation": "Objects with density less than water (1 g/cm³) float. Since 0.6 < 1, the object floats."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Where should you read a measuring cylinder?",
+            "options": [
+              "Top of the meniscus",
+              "Bottom of the meniscus",
+              "Side of the meniscus",
+              "From above"
+            ],
+            "answer": "Bottom of the meniscus",
+            "explanation": "For liquids like water that form a concave meniscus, you read the volume at the bottom of the curved surface."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A measuring cylinder reads 40 cm³ before adding a stone. After, it reads 65 cm³. What is the volume of the stone?",
+            "options": [
+              "40 cm³",
+              "65 cm³",
+              "25 cm³",
+              "105 cm³"
+            ],
+            "answer": "25 cm³",
+            "explanation": "Volume of stone = V₂ − V₁ = 65 − 40 = 25 cm³ (displacement method)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of volume?",
+            "options": [
+              "cm³",
+              "litre",
+              "m³",
+              "mm³"
+            ],
+            "answer": "m³",
+            "explanation": "The SI unit of volume is the cubic metre (m³). However cm³ and litres are commonly used in the laboratory."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A box is 2 m × 3 m × 4 m. What is its volume?",
+            "options": [
+              "9 m³",
+              "14 m³",
+              "24 m³",
+              "36 m³"
+            ],
+            "answer": "24 m³",
+            "explanation": "Volume of cuboid = l × w × h = 2 × 3 × 4 = 24 m³"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "If density = 5 g/cm³ and volume = 20 cm³, what is the mass?",
+            "options": [
+              "4 g",
+              "0.25 g",
+              "100 g",
+              "25 g"
+            ],
+            "answer": "100 g",
+            "explanation": "Mass = density × volume = 5 × 20 = 100 g"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What method is used to find the volume of an irregular shaped solid?",
+            "options": [
+              "Ruler measurement",
+              "Water displacement method",
+              "Weighing",
+              "Using a formula"
+            ],
+            "answer": "Water displacement method",
+            "explanation": "Irregular solids cannot be measured with formulas. The displacement method (submerging in water) measures their volume accurately."
+          },
+          {
+            "id": "measurement_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "measurement_l4",
+      "title": "Measuring Time and Errors in Measurement",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Time is the duration between two events. In physics, accurate time measurement is critical for calculating speed, acceleration, and many other quantities. We also need to understand the types of errors that can occur in any measurement."
+        },
+        {
+          "type": "example",
+          "title": "Instruments for Measuring Time",
+          "body": "Stopwatch — measures time intervals. Digital stopwatches are precise to 0.01 seconds.\nPendulum clock — uses a swinging pendulum. One complete swing = one period.\nAttomic clock — most accurate, used in GPS and scientific research.\nIn the lab, a stopwatch is most commonly used."
+        },
+        {
+          "type": "formula",
+          "body": "Period of a pendulum:\nT = time for one complete swing (back and forth)\nTo reduce timing errors: time 20 swings, then divide by 20\nPeriod T = Total time ÷ number of swings"
+        },
+        {
+          "type": "example",
+          "title": "Types of Errors",
+          "body": "1. Systematic errors — consistent errors that always shift results in one direction.\nExample: A ruler that starts at 1 cm instead of 0 cm always gives readings 1 cm too large.\n\n2. Random errors — unpredictable errors that vary each time you measure.\nExample: Reaction time when starting/stopping a stopwatch.\n\n3. Parallax error — reading a scale from the wrong angle."
+        },
+        {
+          "type": "example",
+          "title": "Reducing Errors",
+          "body": "Take multiple readings and calculate the average\nUse more precise instruments\nRepeat measurements (repeat trials)\nEliminate parallax by keeping eye level with the scale\nFor time: measure multiple cycles (e.g. 20 pendulum swings) and divide"
+        },
+        {
+          "type": "formula",
+          "body": "Average = Sum of all readings ÷ Number of readings\nExample: Readings of 4.2, 4.3, 4.1, 4.2 cm\nAverage = (4.2+4.3+4.1+4.2)/4 = 16.8/4 = 4.2 cm"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the period of a pendulum?",
+            "options": [
+              "The length of the pendulum",
+              "The time for one complete swing",
+              "The mass of the bob",
+              "The height of the swing"
+            ],
+            "answer": "The time for one complete swing",
+            "explanation": "The period (T) is the time for one complete oscillation — one swing to the right and back to the starting point."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A pendulum makes 20 swings in 40 seconds. What is the period?",
+            "options": [
+              "800 s",
+              "0.5 s",
+              "2 s",
+              "20 s"
+            ],
+            "answer": "2 s",
+            "explanation": "Period = Total time ÷ Number of swings = 40 ÷ 20 = 2 seconds."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What type of error always shifts measurements in the same direction?",
+            "options": [
+              "Random error",
+              "Parallax error",
+              "Systematic error",
+              "Human error"
+            ],
+            "answer": "Systematic error",
+            "explanation": "Systematic errors are consistent — they always make measurements too large or too small by the same amount."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which of these is a random error?",
+            "options": [
+              "A ruler starting at 1 cm",
+              "Parallax from a tilted instrument",
+              "Reaction time when stopping a stopwatch",
+              "Using the wrong formula"
+            ],
+            "answer": "Reaction time when stopping a stopwatch",
+            "explanation": "Reaction time varies each time you press the stopwatch button. This unpredictable variation is a random error."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "How can you reduce random errors?",
+            "options": [
+              "Use a less precise instrument",
+              "Take only one reading",
+              "Take multiple readings and calculate the average",
+              "Ignore outliers completely"
+            ],
+            "answer": "Take multiple readings and calculate the average",
+            "explanation": "Averaging multiple readings reduces the effect of random errors because they are unpredictable and tend to cancel out."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Measurements of 5.1, 4.9, 5.0, 5.2, 4.8 cm. What is the average?",
+            "options": [
+              "5.0 cm",
+              "4.9 cm",
+              "5.1 cm",
+              "5.2 cm"
+            ],
+            "answer": "5.0 cm",
+            "explanation": "Average = (5.1 + 4.9 + 5.0 + 5.2 + 4.8) ÷ 5 = 25.0 ÷ 5 = 5.0 cm"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why is it better to time 20 pendulum swings rather than just 1?",
+            "options": [
+              "It is more interesting",
+              "It reduces reaction time errors",
+              "It changes the period",
+              "It makes the pendulum faster"
+            ],
+            "answer": "It reduces reaction time errors",
+            "explanation": "Timing 20 swings spreads the reaction time error over 20 periods. Dividing by 20 makes the error per swing very small."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A digital stopwatch precision is typically...",
+            "options": [
+              "±1 second",
+              "±0.1 second",
+              "±0.01 second",
+              "±0.001 second"
+            ],
+            "answer": "±0.01 second",
+            "explanation": "Standard digital stopwatches are precise to 0.01 seconds (centiseconds)."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "What is the best way to eliminate parallax error?",
+            "options": [
+              "Use a bigger ruler",
+              "Keep the eye directly level with the scale",
+              "Take the average of many readings",
+              "Measure twice"
+            ],
+            "answer": "Keep the eye directly level with the scale",
+            "explanation": "Parallax error is eliminated by placing your eye directly opposite the scale mark you are reading."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A ruler that is worn at the zero end is causing which type of error?",
+            "options": [
+              "Random error",
+              "Parallax error",
+              "Systematic error",
+              "Calculation error"
+            ],
+            "answer": "Systematic error",
+            "explanation": "A worn ruler end consistently shifts ALL measurements by the same amount — this is a systematic error."
+          },
+          {
+            "id": "measurement_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "measurement_l5",
+      "title": "Measurement — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Measurement. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Measurement concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Measurement builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Measurement. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Measurement. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Measurement include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Measurement. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "measurement_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "measurement_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "measurement_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "measurement_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "measurement_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "measurement_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "measurement_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "measurement_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "measurement_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "measurement_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "measurement_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "measurement_l6",
+      "title": "Measurement — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Measurement. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Measurement concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Measurement builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Measurement. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Measurement. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Measurement include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Measurement. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "measurement_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "measurement_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "measurement_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "measurement_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "measurement_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "measurement_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "measurement_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "measurement_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "measurement_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "measurement_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "measurement_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "measurement_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "measurement_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "measurement_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "measurement_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "measurement_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "measurement_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "measurement_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "measurement_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "measurement_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

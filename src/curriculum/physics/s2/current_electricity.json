@@ -1,0 +1,1787 @@
+{
+  "subject": "physics",
+  "level": "s2",
+  "lessons": [
+    {
+      "id": "s2_phy_ce_l1",
+      "title": "Current, Voltage and Resistance",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Electric current I: rate of flow of charge\nI = Q/t  (A = C/s)\nQ = charge (coulombs, C), t = time (s)\n\nVoltage (potential difference) V:\nWork done per unit charge  V = W/Q\nUnit: volt (V)\n\nResistance R:\nOhm's Law: V = IR\nUnit: ohm (Ω)\n\nPower:\nP = IV = I²R = V²/R\nUnit: watt (W)"
+        },
+        {
+          "type": "example",
+          "title": "Kirchhoff's Laws",
+          "body": "KCL (current law): sum of currents into junction = sum leaving\nI₁ = I₂ + I₃\n\nKVL (voltage law): sum of voltages around any closed loop = 0\nIn series: V_total = V₁ + V₂ + V₃\nIn parallel: V_total = V₁ = V₂ = V₃ (same voltage)"
+        },
+        {
+          "type": "example",
+          "title": "Series and Parallel",
+          "body": "Series: R_total = R₁+R₂+R₃ (same current)\nParallel: 1/R_total = 1/R₁+1/R₂+1/R₃ (same voltage)\n\nTwo 6Ω in series: R=12Ω\nTwo 6Ω in parallel: 1/R=1/6+1/6=1/3, R=3Ω"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Electric current measures",
+            "options": [
+              "voltage",
+              "rate of flow of charge (C/s)",
+              "resistance",
+              "power"
+            ],
+            "answer": "rate of flow of charge (C/s)",
+            "explanation": "Current I = Q/t: amount of charge passing a point per second. Unit: ampere (A)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Charge flowing when 3A flows for 20s",
+            "options": [
+              "60C",
+              "6.67C",
+              "0.15C",
+              "23C"
+            ],
+            "answer": "60C",
+            "explanation": "Q = It = 3 × 20 = 60 C"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Ohm's Law states",
+            "options": [
+              "V = I/R",
+              "V = IR",
+              "V = I+R",
+              "V = I²R"
+            ],
+            "answer": "V = IR",
+            "explanation": "V = IR. Ohm's Law: voltage = current × resistance."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Resistance of component with V=12V, I=0.5A",
+            "options": [
+              "6Ω",
+              "24Ω",
+              "12Ω",
+              "0.04Ω"
+            ],
+            "answer": "24Ω",
+            "explanation": "R = V/I = 12/0.5 = 24Ω"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Power dissipated by 10Ω resistor with 2A",
+            "options": [
+              "20W",
+              "40W",
+              "5W",
+              "100W"
+            ],
+            "answer": "40W",
+            "explanation": "P = I²R = 4 × 10 = 40W"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Three 3Ω resistors in series: total R",
+            "options": [
+              "1Ω",
+              "9Ω",
+              "3Ω",
+              "6Ω"
+            ],
+            "answer": "9Ω",
+            "explanation": "Series: R = 3+3+3 = 9Ω"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Two 12Ω resistors in parallel: total R",
+            "options": [
+              "24Ω",
+              "6Ω",
+              "12Ω",
+              "3Ω"
+            ],
+            "answer": "6Ω",
+            "explanation": "1/R=1/12+1/12=2/12=1/6, R=6Ω"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a parallel circuit, voltage across each branch is",
+            "options": [
+              "different",
+              "same",
+              "zero",
+              "additive"
+            ],
+            "answer": "same",
+            "explanation": "Parallel circuit: all branches share the same terminal voltage."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Kirchhoff's current law states",
+            "options": [
+              "voltages sum to zero",
+              "sum of currents entering junction = sum leaving",
+              "resistance is constant",
+              "power is conserved"
+            ],
+            "answer": "sum of currents entering junction = sum leaving",
+            "explanation": "KCL: charge conservation — all current entering a node must leave it."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Energy used by 60W bulb in 5 hours",
+            "options": [
+              "300J",
+              "300Wh=1080000J",
+              "12J",
+              "60J"
+            ],
+            "answer": "300Wh=1080000J",
+            "explanation": "E = Pt = 60×5×3600 = 1,080,000J = 300Wh"
+          },
+          {
+            "id": "current_electricity_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_ce_l2",
+      "title": "Domestic Electricity and Safety",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Mains electricity in Uganda is 240V AC, 50Hz. Safe use requires understanding of wiring, fuses, circuit breakers, and earthing."
+        },
+        {
+          "type": "formula",
+          "body": "UK/Uganda mains:\nVoltage: 230-240V RMS\nFrequency: 50Hz\nLive wire: brown (carries high voltage)\nNeutral wire: blue (return path, ~0V)\nEarth wire: green/yellow (safety)\n\nFuse: thin wire that melts if current too high\nChoose fuse slightly above normal operating current\n3A: small electronics; 5A: medium; 13A: high-power appliances"
+        },
+        {
+          "type": "example",
+          "title": "Safety Features",
+          "body": "Fuse: breaks circuit if current exceeds rating → prevents fire\nCircuit breaker (MCB): like fuse but reusable, trips instantly\nRCCD (residual current device): detects imbalance between live/neutral → trips if person touches live wire\nEarthing: connects metal parts to earth → fault current flows safely to earth → fuse blows"
+        },
+        {
+          "type": "example",
+          "title": "Electrical Energy and Units",
+          "body": "Energy = Power × time\nElectricity bill unit: kilowatt-hour (kWh)\n1 kWh = 1000W × 3600s = 3,600,000 J = 3.6 MJ\n\nCost = power (kW) × time (h) × price per kWh\n\nA 2kW heater running 3h: 6 kWh\nAt 500 UGX/kWh: 3000 UGX"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In Uganda/UK mains, the live wire is",
+            "options": [
+              "blue",
+              "brown",
+              "green-yellow",
+              "red"
+            ],
+            "answer": "brown",
+            "explanation": "Live wire (high voltage, dangerous): brown. Neutral (return): blue. Earth (safety): green/yellow."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A fuse protects a circuit by",
+            "options": [
+              "earthing it",
+              "increasing voltage",
+              "melting to break circuit if current is too high",
+              "reducing resistance"
+            ],
+            "answer": "melting to break circuit if current is too high",
+            "explanation": "Fuse wire has low melting point. Excess current → wire heats → melts → circuit breaks → prevents overheating/fire."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which fuse is best for a 750W hair dryer on 250V?",
+            "options": [
+              "1A",
+              "3A",
+              "13A",
+              "0.5A"
+            ],
+            "answer": "3A",
+            "explanation": "I = P/V = 750/250 = 3A. Choose fuse slightly above: 3A (or 5A if no 3A available)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The earth wire's purpose is",
+            "options": [
+              "carry current normally",
+              "provide return path",
+              "safely conduct fault current to earth → blow fuse",
+              "prevent circuit working"
+            ],
+            "answer": "safely conduct fault current to earth → blow fuse",
+            "explanation": "If live wire touches metal casing, earth wire provides low-resistance path → large current → fuse blows immediately."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "1 kWh equals",
+            "options": [
+              "1000 J",
+              "1 watt",
+              "3,600,000 J",
+              "1000 wh"
+            ],
+            "answer": "3,600,000 J",
+            "explanation": "1 kWh = 1000W × 3600s = 3.6×10⁶ J = 3.6 MJ"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "An RCCB/RCD protects against",
+            "options": [
+              "overloading",
+              "electric shock — detects imbalance between live/neutral currents",
+              "power cuts",
+              "voltage surges"
+            ],
+            "answer": "electric shock — detects imbalance between live/neutral currents",
+            "explanation": "RCD detects tiny current difference between live and neutral (indicating leakage through person) and trips in milliseconds."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Cost of running 100W bulb for 10 hours at 500 UGX/kWh",
+            "options": [
+              "500 UGX",
+              "50 UGX",
+              "5000 UGX",
+              "1000 UGX"
+            ],
+            "answer": "500 UGX",
+            "explanation": "Energy = 0.1kW × 10h = 1kWh. Cost = 1 × 500 = 500 UGX"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Double insulation means",
+            "options": [
+              "two earth wires",
+              "the appliance has no earth wire because the plastic casing cannot conduct electricity",
+              "two fuses",
+              "waterproofing"
+            ],
+            "answer": "the appliance has no earth wire because the plastic casing cannot conduct electricity",
+            "explanation": "Doubly insulated appliances have no metal casing to earth — plastic insulation provides complete protection."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Mains frequency in Uganda is",
+            "options": [
+              "60Hz",
+              "50Hz",
+              "100Hz",
+              "25Hz"
+            ],
+            "answer": "50Hz",
+            "explanation": "Uganda (and most of Africa, UK, Europe) uses 50Hz AC mains. USA uses 60Hz."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A circuit breaker (MCB) differs from a fuse because",
+            "options": [
+              "it is slower",
+              "it can be reset after tripping (reusable) whereas fuse must be replaced",
+              "it is higher current",
+              "it is less safe"
+            ],
+            "answer": "it can be reset after tripping (reusable) whereas fuse must be replaced",
+            "explanation": "MCBs trip electromagnetically or thermally and are reset by flicking a switch. Fuses must be replaced after blowing."
+          },
+          {
+            "id": "current_electricity_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_ce_l3",
+      "title": "Electric Power and Energy",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Power: P = IV = I²R = V²/R\nUnits: Watts (W)\n\nElectrical Energy:\nE = Pt = IVt\nUnits: Joules (J)\n\nCommercial unit: kilowatt-hour (kWh)\n1 kWh = 3,600,000 J"
+        },
+        {
+          "type": "example",
+          "title": "Power Calculation",
+          "body": "A 240V heater draws 5A current.\nP = IV = 240 × 5 = 1200W = 1.2kW\nEnergy in 2 hours: E = Pt = 1200 × 7200 = 8,640,000 J = 2.4 kWh"
+        },
+        {
+          "type": "text",
+          "body": "Electrical appliances are rated by power (watts). A 60W bulb uses 60J every second. Cost of electricity is based on energy used in kWh."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Electrical power P =",
+            "options": [
+              "IV",
+              "I+V",
+              "I/V",
+              "V/I"
+            ],
+            "answer": "IV",
+            "explanation": "P = IV = current × voltage"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 240V device draws 2A. Power =",
+            "options": [
+              "480W",
+              "120W",
+              "242W",
+              "238W"
+            ],
+            "answer": "480W",
+            "explanation": "P = IV = 240 × 2 = 480W"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Power formula using resistance only: P =",
+            "options": [
+              "IR",
+              "I²R",
+              "V/R",
+              "I+R"
+            ],
+            "answer": "I²R",
+            "explanation": "P = I²R (derived from P=IV and V=IR)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "1 kWh equals",
+            "options": [
+              "1000J",
+              "3600J",
+              "3,600,000J",
+              "100J"
+            ],
+            "answer": "3,600,000J",
+            "explanation": "1kWh = 1000W × 3600s = 3,600,000J"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A 2kW heater runs for 3 hours. Energy used =",
+            "options": [
+              "6 kWh",
+              "2 kWh",
+              "3 kWh",
+              "0.67 kWh"
+            ],
+            "answer": "6 kWh",
+            "explanation": "E = Pt = 2 × 3 = 6 kWh"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which uses most power",
+            "options": [
+              "60W bulb",
+              "1500W kettle",
+              "100W TV",
+              "500W fridge"
+            ],
+            "answer": "1500W kettle",
+            "explanation": "Higher wattage = more power = faster energy use."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Fuse rating should be",
+            "options": [
+              "Less than device current",
+              "Slightly above normal device current",
+              "Much higher than device current",
+              "Equal to voltage"
+            ],
+            "answer": "Slightly above normal device current",
+            "explanation": "Fuse protects circuit - should blow if current exceeds normal operating current."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A 100W bulb on 240V. Current =",
+            "options": [
+              "0.42A",
+              "2.4A",
+              "24A",
+              "100A"
+            ],
+            "answer": "0.42A",
+            "explanation": "I = P/V = 100/240 = 0.417A"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Cost of running 3kW heater for 4 hours at 500 UGX/kWh",
+            "options": [
+              "6000 UGX",
+              "3000 UGX",
+              "12000 UGX",
+              "500 UGX"
+            ],
+            "answer": "6000 UGX",
+            "explanation": "Energy = 3×4 = 12kWh. Cost = 12 × 500 = 6000 UGX"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Short circuit is dangerous because",
+            "options": [
+              "Resistance increases",
+              "Current becomes very large",
+              "Voltage drops",
+              "Power decreases"
+            ],
+            "answer": "Current becomes very large",
+            "explanation": "Short circuit bypasses resistance, R→0, so I=V/R becomes extremely large, causing overheating."
+          },
+          {
+            "id": "current_electricity_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_phy_ce_l4",
+      "title": "Electrical Safety and Wiring",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Electrical safety involves understanding earthing, fuses, circuit breakers, and proper wiring. A three-pin plug has Live (brown), Neutral (blue), and Earth (green/yellow) wires."
+        },
+        {
+          "type": "formula",
+          "body": "Fuse: thin wire that melts when current too high\nCircuit breaker: switch that trips automatically\nEarthing: connects metal case to ground (0V)\nRCD: detects current imbalance, trips quickly"
+        },
+        {
+          "type": "example",
+          "title": "Why Earth Wire Matters",
+          "body": "If live wire touches metal kettle case and no earth:\n- Case becomes live (240V)\n- Person touching case gets shock\nWith earth wire: fault current flows to earth, fuse blows, protecting person"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In 3-pin plug, live wire colour is",
+            "options": [
+              "Blue",
+              "Brown",
+              "Green/Yellow",
+              "Red"
+            ],
+            "answer": "Brown",
+            "explanation": "In modern wiring: Live=Brown, Neutral=Blue, Earth=Green/Yellow."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Earth wire function is to",
+            "options": [
+              "Carry current to device",
+              "Provide path for fault current to ground",
+              "Increase voltage",
+              "Reduce power"
+            ],
+            "answer": "Provide path for fault current to ground",
+            "explanation": "Earth wire safely conducts fault current away if live wire touches metal casing."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Fuse is connected in",
+            "options": [
+              "Neutral wire",
+              "Earth wire",
+              "Live wire",
+              "Both live and neutral"
+            ],
+            "answer": "Live wire",
+            "explanation": "Fuse must be in live wire to isolate device from dangerous voltage."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Circuit breaker advantage over fuse",
+            "options": [
+              "Cheaper",
+              "Can be reset after tripping",
+              "More accurate",
+              "Smaller"
+            ],
+            "answer": "Can be reset after tripping",
+            "explanation": "Circuit breakers can be reset; fuses must be replaced after blowing."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Double insulation means device has",
+            "options": [
+              "Two fuses",
+              "No metal parts exposed + two layers of insulation",
+              "Two earth wires",
+              "240V rating"
+            ],
+            "answer": "No metal parts exposed + two layers of insulation",
+            "explanation": "Doubly insulated devices don't need earth wire - two insulating barriers prevent shock."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "RCD (Residual Current Device) works by",
+            "options": [
+              "Measuring voltage",
+              "Comparing current in live and neutral wires",
+              "Measuring temperature",
+              "Measuring power"
+            ],
+            "answer": "Comparing current in live and neutral wires",
+            "explanation": "RCD detects difference between live and neutral currents (sign of fault) and trips instantly."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Neutral wire is at approximately",
+            "options": [
+              "240V",
+              "120V",
+              "0V",
+              "12V"
+            ],
+            "answer": "0V",
+            "explanation": "Neutral wire is maintained near earth potential (0V)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Overloading a socket is dangerous because",
+            "options": [
+              "Too many plugs look bad",
+              "Total current may exceed safe rating, causing fire",
+              "Voltage increases",
+              "Watts decrease"
+            ],
+            "answer": "Total current may exceed safe rating, causing fire",
+            "explanation": "Multiple high-power devices share same wiring - total current may exceed fuse/cable rating."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Correct fuse for device using 3A normally",
+            "options": [
+              "1A",
+              "3A",
+              "5A",
+              "13A"
+            ],
+            "answer": "5A",
+            "explanation": "Choose fuse slightly above normal current. 5A fuse protects a 3A device while allowing normal operation."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Electric shock occurs when",
+            "options": [
+              "Touching neutral wire only",
+              "Current passes through body to earth",
+              "Touching earth wire",
+              "Both wires are neutral"
+            ],
+            "answer": "Current passes through body to earth",
+            "explanation": "Shock requires current path through body. Touching live wire while earthed creates this path."
+          },
+          {
+            "id": "current_electricity_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_electricity_l5",
+      "title": "Current Electricity — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Current Electricity. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Current Electricity concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Current Electricity builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Current Electricity. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Current Electricity. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Current Electricity include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Current Electricity. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "current_electricity_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "current_electricity_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "current_electricity_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "current_electricity_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "current_electricity_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "current_electricity_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "current_electricity_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "current_electricity_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "current_electricity_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "current_electricity_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "current_electricity_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "current_electricity_l6",
+      "title": "Current Electricity — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Current Electricity. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Current Electricity concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Current Electricity builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Current Electricity. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Current Electricity. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Current Electricity include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Current Electricity. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "current_electricity_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "current_electricity_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "current_electricity_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "current_electricity_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "current_electricity_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "current_electricity_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "current_electricity_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "current_electricity_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "current_electricity_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "current_electricity_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "current_electricity_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "current_electricity_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "current_electricity_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "current_electricity_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "current_electricity_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "current_electricity_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "current_electricity_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "current_electricity_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "current_electricity_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "current_electricity_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "current_electricity"
+}

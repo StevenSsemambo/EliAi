@@ -1,0 +1,1799 @@
+{
+  "topic_id": "permcomb",
+  "topic_title": "Permutations & Combinations",
+  "subject": "mathematics",
+  "class_level": "S4",
+  "lessons": [
+    {
+      "id": "s4_math_perm_l1",
+      "title": "The Counting Principle and Permutations",
+      "duration_minutes": 28,
+      "xp_reward": 75,
+      "content": [
+        {
+          "type": "text",
+          "body": "Combinatorics is the mathematics of counting. How many ways can a race be won? How many passwords are possible? How many ways can you arrange a team? These questions use counting principles that are essential in probability, statistics, and computing."
+        },
+        {
+          "type": "formula",
+          "body": "Fundamental Counting Principle:\nIf event A can occur in m ways AND event B can occur in n ways,\nthen both events together can occur in m × n ways.\n\nExample: 3 shirts and 4 trousers → 3×4=12 different outfits\n\nFactorial: n! = n × (n-1) × (n-2) × ... × 2 × 1\n5! = 5×4×3×2×1 = 120\n0! = 1 (by definition)"
+        },
+        {
+          "type": "formula",
+          "body": "PERMUTATIONS (ORDER MATTERS):\nnPr = n! / (n-r)!\n\nNumber of ways to arrange r items chosen from n distinct items\n\nExample: How many ways can 3 people be chosen as 1st, 2nd, 3rd from 8?\n⁸P₃ = 8! / (8-3)! = 8!/5! = 8×7×6 = 336"
+        },
+        {
+          "type": "example",
+          "title": "Permutation Examples",
+          "body": "How many 3-digit numbers can be made from {1,2,3,4,5} without repeating?\n= ⁵P₃ = 5!/2! = 5×4×3 = 60\n\nHow many ways can all 6 students sit in a row?\n= 6! = 720\n\nHow many ways to arrange the letters in MATHS?\n= 5! = 120 (all different letters)\n\nNote: if letters repeat, divide by the factorial of each repeated letter"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "5! = ?",
+            "options": [
+              "25",
+              "15",
+              "120",
+              "60"
+            ],
+            "answer": "120",
+            "explanation": "5! = 5×4×3×2×1 = 120."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "4 tops × 3 bottoms × 2 shoes = how many outfits?",
+            "options": [
+              "9",
+              "12",
+              "24",
+              "18"
+            ],
+            "answer": "24",
+            "explanation": "Counting principle: 4×3×2 = 24 outfits."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "⁵P₂ = ?",
+            "options": [
+              "10",
+              "20",
+              "5",
+              "2"
+            ],
+            "answer": "20",
+            "explanation": "⁵P₂ = 5!/(5-2)! = 5!/3! = 5×4 = 20."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "How many ways can 5 people sit in a row?",
+            "options": [
+              "10",
+              "25",
+              "60",
+              "120"
+            ],
+            "answer": "120",
+            "explanation": "5! = 120 arrangements."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "⁸P₁ = ?",
+            "options": [
+              "8",
+              "1",
+              "8!",
+              "7"
+            ],
+            "answer": "8",
+            "explanation": "⁸P₁ = 8!/(8-1)! = 8!/7! = 8. Choosing 1 from 8 in order = 8 ways."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "3-digit numbers from {1,2,3,4} no repeats: how many?",
+            "options": [
+              "12",
+              "24",
+              "64",
+              "9"
+            ],
+            "answer": "24",
+            "explanation": "⁴P₃ = 4×3×2 = 24."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "0! = ?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "1",
+            "explanation": "0! = 1 by definition."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Gold, silver, bronze from 10 athletes: how many ways?",
+            "options": [
+              "30",
+              "720",
+              "1000",
+              "10"
+            ],
+            "answer": "720",
+            "explanation": "¹⁰P₃ = 10×9×8 = 720."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "⁶P₆ = ?",
+            "options": [
+              "6",
+              "36",
+              "720",
+              "1"
+            ],
+            "answer": "720",
+            "explanation": "⁶P₆ = 6! = 720. Arranging all 6 from 6."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "nP1 always equals:",
+            "options": [
+              "1",
+              "n!",
+              "n",
+              "n-1"
+            ],
+            "answer": "n",
+            "explanation": "nP1 = n!/(n-1)! = n. Selecting 1 item from n in order = n choices."
+          },
+          {
+            "id": "permcomb_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_comb_l1",
+      "title": "Combinations and the Binomial Theorem",
+      "duration_minutes": 30,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "formula",
+          "body": "COMBINATIONS (ORDER DOES NOT MATTER):\nnCr = n! / [r!(n-r)!]  also written C(n,r) or (n choose r)\n\nWhen selecting a group where the order doesn't matter\n(e.g. choosing a committee — same people in any order = same committee)\n\nKey relationship: nCr = nC(n-r)\n⁸C₃ = ⁸C₅ = 56"
+        },
+        {
+          "type": "example",
+          "title": "Combination Examples",
+          "body": "A class of 10: choose a committee of 4. How many ways?\n¹⁰C₄ = 10!/(4!×6!) = (10×9×8×7)/(4×3×2×1) = 5040/24 = 210\n\nPick 3 fruits from {apple, banana, mango, pear, orange}: how many groups?\n⁵C₃ = 10\n\nKey: 'committee', 'team', 'group', 'select', 'choose' → COMBINATIONS\n     'arrange', 'order', '1st/2nd/3rd', 'rank', 'password' → PERMUTATIONS"
+        },
+        {
+          "type": "formula",
+          "body": "Pascal's Triangle:\nRow 0:    1\nRow 1:   1  1\nRow 2:  1  2  1\nRow 3: 1  3  3  1\nRow 4:1  4  6  4  1\n\nEach number = sum of two above it\nRow n gives the coefficients of (a+b)ⁿ"
+        },
+        {
+          "type": "formula",
+          "body": "Binomial Theorem:\n(a+b)ⁿ = Σ nCr × a^(n-r) × bʳ\n\n(a+b)² = a² + 2ab + b²\n(a+b)³ = a³ + 3a²b + 3ab² + b³\n(a+b)⁴ = a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴"
+        },
+        {
+          "type": "example",
+          "title": "Binomial Expansion",
+          "body": "Expand (x+2)³:\n= x³ + 3(x²)(2) + 3(x)(2²) + 2³\n= x³ + 6x² + 12x + 8\n\nExpand (2x-1)⁴:\nCoefficients from row 4: 1, 4, 6, 4, 1\n= (2x)⁴ + 4(2x)³(-1) + 6(2x)²(-1)² + 4(2x)(-1)³ + (-1)⁴\n= 16x⁴ - 32x³ + 24x² - 8x + 1"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "⁵C₂ = ?",
+            "options": [
+              "20",
+              "10",
+              "5",
+              "2"
+            ],
+            "answer": "10",
+            "explanation": "⁵C₂ = 5!/(2!3!) = (5×4)/(2×1) = 10."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Choosing a group of 3 from 7: how many ways?",
+            "options": [
+              "210",
+              "21",
+              "35",
+              "42"
+            ],
+            "answer": "35",
+            "explanation": "⁷C₃ = 7!/(3!4!) = (7×6×5)/(3×2×1) = 35."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which involves combinations (not permutations)?",
+            "options": [
+              "Horse race positions",
+              "Password creation",
+              "Team selection",
+              "Phone keypad code"
+            ],
+            "answer": "Team selection",
+            "explanation": "Team selection: order doesn't matter (same players = same team regardless of selection order). Use combinations."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "nCn = ?",
+            "options": [
+              "n!",
+              "n",
+              "0",
+              "1"
+            ],
+            "answer": "1",
+            "explanation": "nCn = n!/(n!×0!) = 1/1 = 1. Only one way to choose all n items."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "⁸C₃ = ⁸C? (using nCr = nC(n-r))",
+            "options": [
+              "⁸C₂",
+              "⁸C₅",
+              "⁸C₄",
+              "⁸C₈"
+            ],
+            "answer": "⁸C₅",
+            "explanation": "nCr = nC(n-r). ⁸C₃ = ⁸C(8-3) = ⁸C₅."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Coefficient of x² in (1+x)⁴:",
+            "options": [
+              "4",
+              "6",
+              "1",
+              "3"
+            ],
+            "answer": "6",
+            "explanation": "Row 4 of Pascal: 1,4,6,4,1. Coefficient of x² (r=2) is ⁴C₂ = 6."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "(a+b)³ = ?",
+            "options": [
+              "a³+b³",
+              "a³+3a²b+3ab²+b³",
+              "a³+3ab+b³",
+              "3a²b+3ab²"
+            ],
+            "answer": "a³+3a²b+3ab²+b³",
+            "explanation": "Binomial theorem: (a+b)³ = a³ + 3a²b + 3ab² + b³."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a lottery, choose 6 from 49 numbers. This uses:",
+            "options": [
+              "Permutations (order matters)",
+              "Combinations (order doesn't matter)",
+              "Factorials only",
+              "Basic counting"
+            ],
+            "answer": "Combinations (order doesn't matter)",
+            "explanation": "The same 6 numbers win regardless of the order you pick them — combinations."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Expand (x+1)²",
+            "options": [
+              "x²+1",
+              "x²+x+1",
+              "x²+2x+1",
+              "2x+1"
+            ],
+            "answer": "x²+2x+1",
+            "explanation": "(x+1)² = x² + 2(x)(1) + 1² = x² + 2x + 1."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "⁶C₀ = ?",
+            "options": [
+              "0",
+              "6",
+              "1",
+              "6!"
+            ],
+            "answer": "1",
+            "explanation": "nC0 = 1. There is exactly one way to choose nothing."
+          },
+          {
+            "id": "permcomb_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_pc_l3",
+      "title": "Probability with Combinations",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "ⁿPᵣ=n!/(n−r)! (ordered)\nⁿCᵣ=n!/r!(n−r)! (unordered)\nP(event)=favourable/total"
+        },
+        {
+          "type": "example",
+          "title": "Cards",
+          "body": "P(all 5 hearts from 52 cards)\nFav: ¹³C₅=1287, Total: ⁵²C₅=2,598,960\nP=1287/2,598,960≈0.0005"
+        },
+        {
+          "type": "example",
+          "title": "Binomial",
+          "body": "P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ\nⁿCᵣ counts the number of ways r successes can occur in n trials"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "⁵P₂=",
+            "options": [
+              "20",
+              "10",
+              "25",
+              "120"
+            ],
+            "answer": "20",
+            "explanation": "5×4=20"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "⁵C₂=",
+            "options": [
+              "10",
+              "20",
+              "5",
+              "25"
+            ],
+            "answer": "10",
+            "explanation": "5!/(2!3!)=10"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "⁵P₂ > ⁵C₂ because",
+            "options": [
+              "More combinations",
+              "Ordered arrangements (AB≠BA)",
+              "5 is smaller",
+              "They're equal"
+            ],
+            "answer": "Ordered arrangements (AB≠BA)",
+            "explanation": "Permutations count every ordering. Each combination corresponds to r! permutations."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "8 books on shelf ordered, choose 3",
+            "options": [
+              "56",
+              "336",
+              "24",
+              "512"
+            ],
+            "answer": "336",
+            "explanation": "⁸P₃=8×7×6=336"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Committee of 4 from 9 people",
+            "options": [
+              "3024",
+              "126",
+              "504",
+              "36"
+            ],
+            "answer": "126",
+            "explanation": "⁹C₄=126 (order irrelevant)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "P(at least one success)",
+            "options": [
+              "P(all fail)",
+              "1−P(all fail)",
+              "P(exactly one)",
+              "0"
+            ],
+            "answer": "1−P(all fail)",
+            "explanation": "Complement rule: P(at least 1)=1−P(none)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "5 people in queue, P(A is first)",
+            "options": [
+              "1/5",
+              "1/25",
+              "1",
+              "4/5"
+            ],
+            "answer": "1/5",
+            "explanation": "Each equally likely to be first: 1/5."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "P(king of hearts from 52 cards)",
+            "options": [
+              "1/52",
+              "4/52",
+              "13/52",
+              "1/4"
+            ],
+            "answer": "1/52",
+            "explanation": "One king of hearts in 52 cards."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "P(X=2) for B(5,0.3)",
+            "options": [
+              "⁵C₂×0.3²×0.7³",
+              "⁵C₂×0.3³×0.7²",
+              "0.3²",
+              "5×0.09"
+            ],
+            "answer": "⁵C₂×0.3²×0.7³",
+            "explanation": "P(X=r)=ⁿCᵣpʳ(1−p)ⁿ⁻ʳ"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "⁸C₈=",
+            "options": [
+              "0",
+              "8",
+              "64",
+              "1"
+            ],
+            "answer": "1",
+            "explanation": "Only 1 way to choose all 8 from 8."
+          },
+          {
+            "id": "permcomb_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_pc_l3",
+      "title": "Probability with Counting Methods",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "nPr = n!/(n-r)! ordered arrangements\nnCr = n!/r!(n-r)! unordered selections\n\nProbability:\nP(event) = favourable outcomes / total outcomes"
+        },
+        {
+          "type": "example",
+          "title": "Using Combinations for Probability",
+          "body": "From 52 cards draw 5. P(all hearts)?\nFavourable = C(13,5) = 1287\nTotal = C(52,5) = 2,598,960\nP = 1287/2598960 approx 0.000495"
+        },
+        {
+          "type": "example",
+          "title": "Group Selection",
+          "body": "10 students (6F, 4M) choose 3. P(all female)?\nFavourable = C(6,3) = 20\nTotal = C(10,3) = 120\nP = 20/120 = 1/6"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "5P2 =",
+            "options": [
+              "20",
+              "10",
+              "25",
+              "120"
+            ],
+            "answer": "20",
+            "explanation": "5P2 = 5!/(5-2)! = 5x4 = 20"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "5C2 =",
+            "options": [
+              "10",
+              "20",
+              "5",
+              "25"
+            ],
+            "answer": "10",
+            "explanation": "5C2 = 5!/(2!3!) = 10"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "5P2 is larger than 5C2 because",
+            "options": [
+              "Permutations count all orderings separately",
+              "More combinations than permutations",
+              "5 > 2",
+              "They should be equal"
+            ],
+            "answer": "Permutations count all orderings separately",
+            "explanation": "Each combination gives 2! orderings. So 5P2 = 2 x 5C2 = 20."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "8 books choose 3 for shelf (order matters)",
+            "options": [
+              "56",
+              "336",
+              "24",
+              "512"
+            ],
+            "answer": "336",
+            "explanation": "8P3 = 8x7x6 = 336"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Committee of 4 from 9 people",
+            "options": [
+              "3024",
+              "126",
+              "504",
+              "36"
+            ],
+            "answer": "126",
+            "explanation": "9C4 = 9!/(4!5!) = 126"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "P(at least one success) =",
+            "options": [
+              "P(all fail)",
+              "1 - P(all fail)",
+              "P(exactly one)",
+              "0"
+            ],
+            "answer": "1 - P(all fail)",
+            "explanation": "Use complement: P(at least one) = 1 - P(none succeed)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "5 people in queue. P(A is first) =",
+            "options": [
+              "1/5",
+              "1/25",
+              "1",
+              "4/5"
+            ],
+            "answer": "1/5",
+            "explanation": "One specific person out of 5 equally likely positions."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "From 52 cards P(king of hearts) =",
+            "options": [
+              "1/52",
+              "4/52",
+              "13/52",
+              "1/4"
+            ],
+            "answer": "1/52",
+            "explanation": "Only one king of hearts in 52 cards."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "P(X=2) for B(5,0.3) =",
+            "options": [
+              "C(5",
+              "2)*0.3^2*0.7^3",
+              "C(5",
+              "2)*0.3^3*0.7^2",
+              "0.3^2",
+              "5*0.3^2*0.7^3"
+            ],
+            "answer": "C(5,2)*0.3^2*0.7^3",
+            "explanation": "Binomial: P(X=r)=nCr*p^r*(1-p)^(n-r)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "8C8 =",
+            "options": [
+              "0",
+              "8",
+              "64",
+              "1"
+            ],
+            "answer": "1",
+            "explanation": "Only 1 way to choose all 8 items from 8."
+          },
+          {
+            "id": "permcomb_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "permcomb_l5",
+      "title": "Permutations & Combinations — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Permutations & Combinations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Permutations & Combinations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Permutations & Combinations builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Permutations & Combinations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Permutations & Combinations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Permutations & Combinations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Permutations & Combinations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "permcomb_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "permcomb_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "permcomb_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "permcomb_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "permcomb_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "permcomb_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "permcomb_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "permcomb_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "permcomb_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "permcomb_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "permcomb_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "permcomb_l6",
+      "title": "Permutations & Combinations — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Permutations & Combinations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Permutations & Combinations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Permutations & Combinations builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Permutations & Combinations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Permutations & Combinations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Permutations & Combinations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Permutations & Combinations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "permcomb_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "permcomb_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "permcomb_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "permcomb_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "permcomb_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "permcomb_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "permcomb_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "permcomb_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "permcomb_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "permcomb_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "permcomb_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "permcomb_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "permcomb_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "permcomb_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "permcomb_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "permcomb_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "permcomb_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "permcomb_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "permcomb_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "permcomb_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

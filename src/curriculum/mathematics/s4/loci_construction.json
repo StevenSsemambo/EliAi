@@ -1,0 +1,1793 @@
+{
+  "subject": "mathematics",
+  "level": "s4",
+  "lessons": [
+    {
+      "id": "s4_math_loci_l1",
+      "title": "Geometric Constructions",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Geometric constructions use only a compass and straight edge (ruler without measurements). Key constructions include bisecting angles, drawing perpendiculars, and constructing specific angles."
+        },
+        {
+          "type": "formula",
+          "body": "Key constructions:\n1. Perpendicular bisector of line AB: arc from A and B intersect above and below AB\n2. Angle bisector: arc from vertex cuts arms, then equal arcs intersect\n3. Perpendicular from point to line\n4. Angles: 60° (equilateral triangle arc), 90° (perpendicular bisector), 30°=half of 60°, 45°=half of 90°"
+        },
+        {
+          "type": "example",
+          "title": "Constructing 60°",
+          "body": "Draw line AB. Set compass to AB length.\nWith centre A, draw arc through B.\nWith centre B, draw arc with same radius.\nArcs meet at C. Angle BAC = 60°\n(Triangle ABC is equilateral)"
+        },
+        {
+          "type": "example",
+          "title": "Perpendicular Bisector",
+          "body": "Draw arc from A with radius > half AB.\nDraw arc from B with same radius.\nConnect intersection points. This line is perpendicular bisector of AB, meeting AB at its midpoint."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Perpendicular bisector of AB meets AB at",
+            "options": [
+              "A",
+              "B",
+              "midpoint of AB",
+              "any point"
+            ],
+            "answer": "midpoint of AB",
+            "explanation": "Perpendicular bisector passes through midpoint at 90°"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "To construct 60°, start with",
+            "options": [
+              "right angle",
+              "equilateral triangle arcs",
+              "protractor",
+              "bisection"
+            ],
+            "answer": "equilateral triangle arcs",
+            "explanation": "60° comes from equilateral triangle where all angles are 60°"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Angle bisector divides angle into",
+            "options": [
+              "two unequal parts",
+              "two equal parts",
+              "four parts",
+              "three parts"
+            ],
+            "answer": "two equal parts",
+            "explanation": "Bisector cuts angle exactly in half"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Constructing 30° requires first constructing",
+            "options": [
+              "90°",
+              "45°",
+              "60°",
+              "120°"
+            ],
+            "answer": "60°",
+            "explanation": "30° = half of 60°, so bisect the 60° angle"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Tools used in geometric construction",
+            "options": [
+              "protractor and ruler",
+              "compass and straight edge only",
+              "calculator",
+              "set square"
+            ],
+            "answer": "compass and straight edge only",
+            "explanation": "Pure constructions use only compass and unmarked straight edge"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "To construct perpendicular from external point P to line L",
+            "options": [
+              "draw from P at random angle",
+              "bisect any angle on L",
+              "use arcs from P to get two intersection points on L, then bisect",
+              "draw parallel line"
+            ],
+            "answer": "use arcs from P to get two intersection points on L, then bisect",
+            "explanation": "Standard method: two equidistant points on L from P, then bisect that chord"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A locus is",
+            "options": [
+              "a single point",
+              "a shape always",
+              "the set of all points satisfying a given condition",
+              "a type of construction"
+            ],
+            "answer": "the set of all points satisfying a given condition",
+            "explanation": "Locus: collection of all points meeting a specific geometric condition"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "To construct 45°",
+            "options": [
+              "bisect 60°",
+              "bisect 90°",
+              "construct 30°+15°",
+              "construct 45° directly"
+            ],
+            "answer": "bisect 90°",
+            "explanation": "45° = half of 90°; first construct 90° then bisect it"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Constructing 90° at a point on a line uses",
+            "options": [
+              "angle bisector method",
+              "equilateral triangle",
+              "perpendicular bisector method at that point",
+              "60° construction"
+            ],
+            "answer": "perpendicular bisector method at that point",
+            "explanation": "To get 90° at a specific point, use the perpendicular bisector method centered there"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Equilateral triangle has angles",
+            "options": [
+              "30-60-90",
+              "60-60-60",
+              "45-45-90",
+              "90-60-30"
+            ],
+            "answer": "60-60-60",
+            "explanation": "All three angles of an equilateral triangle are 60°"
+          },
+          {
+            "id": "loci_construction_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_loci_l2",
+      "title": "Loci and Regions",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "text",
+          "body": "A locus (plural: loci) is the set of all points satisfying a given geometric condition. Combining two or more loci defines a region."
+        },
+        {
+          "type": "formula",
+          "body": "Standard loci:\n• Fixed distance from point → circle\n• Equidistant from two points → perpendicular bisector\n• Fixed distance from line → parallel lines\n• Equidistant from two lines → angle bisector\n• Fixed distance from circle centre → concentric circle"
+        },
+        {
+          "type": "example",
+          "title": "Locus Problems",
+          "body": "Locus of points 5cm from point A: circle radius 5, centre A\nLocus equidistant from A and B: perpendicular bisector of AB\nLocus of points ≤3cm from A: disc (filled circle) radius 3\nLocus inside angle and <4cm from vertex: sector of circle"
+        },
+        {
+          "type": "example",
+          "title": "Region Problems",
+          "body": "Region closer to A than B: half-plane on A-side of perpendicular bisector of AB\nRegion within 5cm of line L: strip between two lines parallel to L, each 5cm away\nSatisfying two conditions: intersection of both loci"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Locus of points 4cm from fixed point P",
+            "options": [
+              "square",
+              "4cm from P circle",
+              "line",
+              "parabola"
+            ],
+            "answer": "4cm from P circle",
+            "explanation": "All points at fixed distance from a point form a circle"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Locus equidistant from A and B",
+            "options": [
+              "circle through A and B",
+              "line AB",
+              "perpendicular bisector of AB",
+              "angle bisector"
+            ],
+            "answer": "perpendicular bisector of AB",
+            "explanation": "Points equidistant from two points lie on the perpendicular bisector"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Locus equidistant from two intersecting lines",
+            "options": [
+              "perpendicular bisector",
+              "circle",
+              "angle bisector",
+              "parallel lines"
+            ],
+            "answer": "angle bisector",
+            "explanation": "Points equidistant from two lines lie on their angle bisectors"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Locus of points 3cm from line L",
+            "options": [
+              "3cm circle",
+              "two parallel lines 3cm from L",
+              "line parallel on one side",
+              "perpendicular"
+            ],
+            "answer": "two parallel lines 3cm from L",
+            "explanation": "One parallel line on each side of L, each at 3cm distance"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Region satisfying TWO locus conditions is their",
+            "options": [
+              "sum",
+              "difference",
+              "intersection",
+              "union"
+            ],
+            "answer": "intersection",
+            "explanation": "Both conditions must be satisfied, so take the overlap (intersection) of both loci"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Point inside triangle and equidistant from all sides lies at",
+            "options": [
+              "circumcentre",
+              "centroid",
+              "incentre",
+              "orthocentre"
+            ],
+            "answer": "incentre",
+            "explanation": "Incentre: intersection of angle bisectors, equidistant from all three sides"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Point equidistant from all three vertices of a triangle",
+            "options": [
+              "circumcentre",
+              "centroid",
+              "incentre",
+              "orthocentre"
+            ],
+            "answer": "circumcentre",
+            "explanation": "Circumcentre: intersection of perpendicular bisectors of sides"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Locus of a point that moves so angle APB=90°, where A and B fixed",
+            "options": [
+              "line AB",
+              "perpendicular bisector of AB",
+              "circle with AB as diameter",
+              "square"
+            ],
+            "answer": "circle with AB as diameter",
+            "explanation": "Angle in semicircle is 90°: locus is circle with AB as diameter"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Region ≤r from point P and ≤r from point Q (overlapping circles)",
+            "options": [
+              "two circles",
+              "lens-shaped region (intersection)",
+              "region outside both",
+              "rectangle"
+            ],
+            "answer": "lens-shaped region (intersection)",
+            "explanation": "Intersection of two circles forms a lens shape (vesica piscis)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Locus of midpoints of chords through fixed point inside circle",
+            "options": [
+              "smaller circle",
+              "point only",
+              "line",
+              "same circle"
+            ],
+            "answer": "smaller circle",
+            "explanation": "Midpoints of parallel chords trace a smaller circle (or for chords through a fixed point, another circle)"
+          },
+          {
+            "id": "loci_construction_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_lc_l3",
+      "title": "Bearings and Scale Maps",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Bearings: measured clockwise from North (000° to 360°)\nN=000°, E=090°, S=180°, W=270°\n\nBack bearing = bearing + 180° (or -180°)\nIf bearing A to B = 065°, bearing B to A = 245°"
+        },
+        {
+          "type": "example",
+          "title": "Bearing Problems",
+          "body": "From A, B is on bearing 120° at distance 5km.\nFrom A, C is on bearing 040° at distance 3km.\nDraw N at A, measure 120° clockwise from N for B.\nAngle BAC = 120°-40° = 80°\nUse cosine rule to find BC"
+        },
+        {
+          "type": "example",
+          "title": "Scale Drawing",
+          "body": "Scale 1:500,000\n1cm = 500,000cm = 5km\nDraw bearings accurately, measure and convert"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "North bearing is",
+            "options": [
+              "090°",
+              "180°",
+              "360°/000°",
+              "270°"
+            ],
+            "answer": "360°/000°",
+            "explanation": "North is 000° (or 360°) — bearings measured clockwise from North"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "East bearing is",
+            "options": [
+              "000°",
+              "090°",
+              "180°",
+              "270°"
+            ],
+            "answer": "090°",
+            "explanation": "Bearings: N=000, E=090, S=180, W=270"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Back bearing of 065° is",
+            "options": [
+              "245°",
+              "125°",
+              "115°",
+              "155°"
+            ],
+            "answer": "245°",
+            "explanation": "Back bearing = 065+180 = 245°"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Ship sails on bearing 220°. This direction is",
+            "options": [
+              "NE",
+              "SW",
+              "SE",
+              "NW"
+            ],
+            "answer": "SW",
+            "explanation": "220° is between S(180°) and W(270°) → SW"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Point B is NW of A. Bearing from A to B is",
+            "options": [
+              "045°",
+              "135°",
+              "225°",
+              "315°"
+            ],
+            "answer": "315°",
+            "explanation": "NW = 315° bearing"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Bearing 150° is in which quadrant direction",
+            "options": [
+              "SE",
+              "NE",
+              "SW",
+              "NW"
+            ],
+            "answer": "SE",
+            "explanation": "150° between S(180°) and E(90°) → SE direction"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Scale 1:200,000. Map distance 3cm = actual",
+            "options": [
+              "600m",
+              "6km",
+              "3km",
+              "2km"
+            ],
+            "answer": "6km",
+            "explanation": "3×200,000=600,000cm=6km"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Back bearing formula",
+            "options": [
+              "bearing+90°",
+              "bearing+180°",
+              "bearing-90°",
+              "360°-bearing"
+            ],
+            "answer": "bearing+180°",
+            "explanation": "Back bearing is opposite direction: add 180° (subtract if result>360°)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Bearing from A to B is 070°. Bearing from B to A is",
+            "options": [
+              "250°",
+              "110°",
+              "290°",
+              "070°"
+            ],
+            "answer": "250°",
+            "explanation": "070+180=250°"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Point C is due South of A. Bearing A to C is",
+            "options": [
+              "000°",
+              "090°",
+              "180°",
+              "270°"
+            ],
+            "answer": "180°",
+            "explanation": "Due South = 180° bearing"
+          },
+          {
+            "id": "loci_construction_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s4_math_lc_l4",
+      "title": "Practical Geometric Constructions",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "text",
+          "body": "Geometric constructions are used in architecture, engineering and design. We use accurate constructions to solve real problems involving angles, distances and shapes."
+        },
+        {
+          "type": "example",
+          "title": "Construction of Triangles",
+          "body": "Given three sides (SSS): use compass to mark arcs\nGiven two sides and included angle (SAS): draw one side, construct angle, draw second side\nGiven two angles and a side (ASA): draw side, construct both angles from each end\n\nCircumscribed circle: through all vertices (circumcircle) — use perpendicular bisectors\nInscribed circle: touches all sides (incircle) — use angle bisectors"
+        },
+        {
+          "type": "example",
+          "title": "Regular Polygons",
+          "body": "Square: construct 90° then equal sides\nRegular hexagon: compass radius = side length, 6 arcs around circle\nRegular pentagon: 360°/5=72° internal exterior angle approach\n\nTiling/tessellation: only triangles, squares, hexagons tile the plane regularly"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "To construct an equilateral triangle on AB, set compass to length AB and draw arcs from",
+            "options": [
+              "A only",
+              "B only",
+              "A and B",
+              "midpoint of AB"
+            ],
+            "answer": "A and B",
+            "explanation": "Equal arcs from A and B intersect at C, where AC=BC=AB — equilateral triangle"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Circumscribed circle of triangle passes through",
+            "options": [
+              "midpoints of sides",
+              "all three vertices",
+              "feet of altitudes",
+              "centroid"
+            ],
+            "answer": "all three vertices",
+            "explanation": "Circumcircle: circle passing through all three vertices, centre = circumcenter"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Incentre is the intersection of",
+            "options": [
+              "perpendicular bisectors",
+              "angle bisectors",
+              "medians",
+              "altitudes"
+            ],
+            "answer": "angle bisectors",
+            "explanation": "Incentre: centre of inscribed circle, found at intersection of angle bisectors"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Regular hexagon: set compass to circle radius. Number of arcs needed around circumference",
+            "options": [
+              "4",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "6",
+            "explanation": "Hexagon side = circle radius → 6 equal steps around circumference"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Only regular polygon that does NOT tessellate alone",
+            "options": [
+              "equilateral triangle",
+              "square",
+              "regular hexagon",
+              "regular pentagon"
+            ],
+            "answer": "regular pentagon",
+            "explanation": "Pentagons have interior angles of 108°; 360÷108=3.33 (not integer) → cannot tile without gaps"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Centroid divides each median in ratio",
+            "options": [
+              "1:1",
+              "2:1 from vertex",
+              "1:2 from vertex",
+              "3:1"
+            ],
+            "answer": "2:1 from vertex",
+            "explanation": "Centroid is ⅔ of the way along each median from vertex"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "To construct 75°: construct",
+            "options": [
+              "60°+15°",
+              "90°-15° (bisect 90°, bisect result, add)",
+              "45°+30°",
+              "bisect 150°"
+            ],
+            "answer": "90°-15° (bisect 90°, bisect result, add)",
+            "explanation": "75° = 60°+15° or equivalently 90°-15°. Bisect 30° to get 15°, add to 60°"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Orthocentre is intersection of",
+            "options": [
+              "angle bisectors",
+              "medians",
+              "altitudes",
+              "perpendicular bisectors of sides"
+            ],
+            "answer": "altitudes",
+            "explanation": "Orthocentre: intersection of the three altitudes of a triangle"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "For SSS triangle construction, three sides given a,b,c. First draw side a, then",
+            "options": [
+              "draw angle",
+              "draw both remaining sides simultaneously",
+              "draw arc radius b from one end, arc radius c from other",
+              "bisect a"
+            ],
+            "answer": "draw arc radius b from one end, arc radius c from other",
+            "explanation": "Two arcs intersect at third vertex when radii equal other two sides"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A tessellation covers a plane without gaps or overlaps. This requires angles around each meeting point to sum to",
+            "options": [
+              "180°",
+              "270°",
+              "360°",
+              "720°"
+            ],
+            "answer": "360°",
+            "explanation": "Angles around a point must sum to exactly 360° for tessellation to work"
+          },
+          {
+            "id": "loci_construction_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "loci_construction_l5",
+      "title": "Loci Construction — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Loci Construction. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Loci Construction concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Loci Construction builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Loci Construction. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Loci Construction. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Loci Construction include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Loci Construction. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "loci_construction_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "loci_construction_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "loci_construction_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "loci_construction_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "loci_construction_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "loci_construction_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "loci_construction_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "loci_construction_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "loci_construction_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "loci_construction_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "loci_construction_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "loci_construction_l6",
+      "title": "Loci Construction — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Loci Construction. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Loci Construction concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Loci Construction builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Loci Construction. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Loci Construction. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Loci Construction include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Loci Construction. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "loci_construction_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "loci_construction_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "loci_construction_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "loci_construction_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "loci_construction_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "loci_construction_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "loci_construction_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "loci_construction_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "loci_construction_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "loci_construction_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "loci_construction_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "loci_construction_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "loci_construction_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "loci_construction_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "loci_construction_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "loci_construction_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "loci_construction_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "loci_construction_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "loci_construction_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "loci_construction_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "loci_construction"
+}

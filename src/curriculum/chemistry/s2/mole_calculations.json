@@ -1,0 +1,1813 @@
+{
+  "subject": "chemistry",
+  "level": "s2",
+  "lessons": [
+    {
+      "id": "s2_chem_mole_l1",
+      "title": "The Mole and Molar Mass",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Mole: 6.02×10²³ particles (Avogadro's number, L)\n\nMolar mass M: mass of 1 mole in g/mol\n= relative atomic/molecular mass in grams\n\nMoles = mass/molar mass\nn = m/M\nm = nM\n\nMoles of gas at STP: n = V/22.4 (litres)\nConcentration: c = n/V(litres)\nn = cV"
+        },
+        {
+          "type": "example",
+          "title": "Mole Calculations",
+          "body": "Moles of H₂O in 36g:\nM(H₂O) = 2(1)+16 = 18 g/mol\nn = 36/18 = 2 mol\n\nMass of 0.5 mol NaCl:\nM(NaCl) = 23+35.5 = 58.5 g/mol\nm = 0.5×58.5 = 29.25g\n\nMolecules in 2 mol CO₂:\nN = 2 × 6.02×10²³ = 1.204×10²⁴ molecules"
+        },
+        {
+          "type": "example",
+          "title": "Concentration",
+          "body": "2 mol NaOH dissolved in 500cm³\nV = 0.5L\nc = 2/0.5 = 4 mol/L (4M)\n\n250cm³ of 0.1M HCl:\nn = 0.1 × 0.25 = 0.025 mol = 0.025×36.5 = 0.91g HCl"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is",
+            "options": [
+              "6.02×10²³",
+              "6.02×10²²",
+              "6.02×10²⁴",
+              "6.02×10²⁰"
+            ],
+            "answer": "6.02×10²³",
+            "explanation": "Avogadro's number: 6.022×10²³ particles per mole"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Molar mass of CO₂ (C=12, O=16)",
+            "options": [
+              "28",
+              "44",
+              "32",
+              "40"
+            ],
+            "answer": "44",
+            "explanation": "M=12+2×16=44 g/mol"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Moles in 44g of CO₂ (M=44)",
+            "options": [
+              "1",
+              "2",
+              "4",
+              "44"
+            ],
+            "answer": "1",
+            "explanation": "n=m/M=44/44=1 mol"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Mass of 3 mol H₂O (M=18)",
+            "options": [
+              "6g",
+              "18g",
+              "54g",
+              "36g"
+            ],
+            "answer": "54g",
+            "explanation": "m=nM=3×18=54g"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Concentration: 0.1 mol in 2 litres",
+            "options": [
+              "0.05M",
+              "0.2M",
+              "0.1M",
+              "2M"
+            ],
+            "answer": "0.05M",
+            "explanation": "c=n/V=0.1/2=0.05 mol/L"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Moles of Na₂SO₄ (M=142) in 71g",
+            "options": [
+              "0.5",
+              "1",
+              "2",
+              "4"
+            ],
+            "answer": "0.5",
+            "explanation": "n=71/142=0.5 mol"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Volume of 0.5 mol gas at STP",
+            "options": [
+              "11.2L",
+              "22.4L",
+              "44.8L",
+              "5.6L"
+            ],
+            "answer": "11.2L",
+            "explanation": "V=n×22.4=0.5×22.4=11.2L"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Number of molecules in 0.25 mol",
+            "options": [
+              "1.505×10²³",
+              "6.02×10²³",
+              "2.408×10²³",
+              "3.01×10²²"
+            ],
+            "answer": "1.505×10²³",
+            "explanation": "N=0.25×6.02×10²³=1.505×10²³"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "0.2M HCl, 100cm³. Moles of HCl =",
+            "options": [
+              "0.02",
+              "0.2",
+              "2",
+              "0.002"
+            ],
+            "answer": "0.02",
+            "explanation": "n=0.2×0.1=0.02 mol"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Empirical formula mass of CH₂O = 30. Molecular mass = 180. Molecular formula =",
+            "options": [
+              "CH₂O",
+              "C₂H₄O₂",
+              "C₆H₁₂O₆",
+              "C₃H₆O₃"
+            ],
+            "answer": "C₆H₁₂O₆",
+            "explanation": "180/30=6. Multiply empirical formula by 6: C₆H₁₂O₆ (glucose)"
+          },
+          {
+            "id": "mole_calculations_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l1_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l1_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l1_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l1_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_chem_mole_l2",
+      "title": "Stoichiometry and Limiting Reagents",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Stoichiometry uses mole ratios from balanced equation:\naA + bB → cC + dD\nmoles A : moles B : moles C : moles D = a : b : c : d\n\nLimiting reagent: reactant that runs out first\n(determines max product)\n\nExcess reagent: left over after reaction\n\n% yield = (actual yield/theoretical yield) × 100\n% purity = (pure mass/total mass) × 100\n\nAtom economy = (desired product mass/all products mass) × 100"
+        },
+        {
+          "type": "example",
+          "title": "Stoichiometry Example",
+          "body": "2H₂ + O₂ → 2H₂O\n4 mol H₂ + 3 mol O₂:\nH₂ needs O₂ = 4/2 = 2 mol\nAvailable O₂ = 3 mol (excess)\nH₂ is limiting reagent\nH₂O produced = 4 mol (1:1 with H₂)"
+        },
+        {
+          "type": "example",
+          "title": "Percentage Yield",
+          "body": "N₂ + 3H₂ → 2NH₃\n1 mol N₂ + 3 mol H₂: theoretical yield = 2 mol NH₃ = 34g\nActual yield obtained = 28g\n% yield = 28/34 × 100 = 82.4%"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In 2H₂+O₂→2H₂O, moles H₂O from 4 mol O₂ =",
+            "options": [
+              "4",
+              "2",
+              "8",
+              "16"
+            ],
+            "answer": "8",
+            "explanation": "Ratio O₂:H₂O = 1:2. 4 mol O₂ → 8 mol H₂O"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Limiting reagent is",
+            "options": [
+              "reactant in largest amount",
+              "reactant that runs out first limiting product formed",
+              "product",
+              "catalyst"
+            ],
+            "answer": "reactant that runs out first limiting product formed",
+            "explanation": "Limiting reagent consumed first — determines maximum amount of product"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Fe+S→FeS. 3mol Fe + 2mol S. Limiting reagent =",
+            "options": [
+              "Fe",
+              "S",
+              "FeS",
+              "neither"
+            ],
+            "answer": "S",
+            "explanation": "Fe needs S in 1:1 ratio. 3mol Fe needs 3mol S but only 2mol available. S is limiting"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "% yield formula",
+            "options": [
+              "actual/max×100",
+              "max/actual×100",
+              "actual-max",
+              "actual×100"
+            ],
+            "answer": "actual/max×100",
+            "explanation": "% yield=(actual yield/theoretical maximum yield)×100%"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Theoretical yield 50g, actual 40g. % yield =",
+            "options": [
+              "80%",
+              "125%",
+              "50%",
+              "40%"
+            ],
+            "answer": "80%",
+            "explanation": "40/50×100=80%"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Atom economy favours reactions where",
+            "options": [
+              "by-products are valuable",
+              "all atoms in reactants end up in desired product",
+              "reaction is fast",
+              "temperature is low"
+            ],
+            "answer": "all atoms in reactants end up in desired product",
+            "explanation": "High atom economy: less waste, more sustainable. All reactant atoms incorporated into desired product"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "CaCO₃→CaO+CO₂. Atom economy for CaO =",
+            "options": [
+              "100%",
+              "56%",
+              "44%",
+              "78%"
+            ],
+            "answer": "56%",
+            "explanation": "M(CaO)=56, M(CaCO₃)=100. Atom economy=56/100×100=56%"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Excess reagent is",
+            "options": [
+              "the product",
+              "reactant completely used up",
+              "reactant remaining after reaction",
+              "catalyst"
+            ],
+            "answer": "reactant remaining after reaction",
+            "explanation": "Excess: more than stoichiometrically required. Some remains after limiting reagent is consumed"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "2g H₂ + 32g O₂ → H₂O (M_H₂=2,M_O₂=32). Limiting reagent?",
+            "options": [
+              "O₂ (fewer moles)",
+              "H₂ (more reactive)",
+              "O₂ (heavier)",
+              "Neither"
+            ],
+            "answer": "O₂ (fewer moles)",
+            "explanation": "n(H₂)=1mol, n(O₂)=1mol. Ratio needed H₂:O₂=2:1. 1mol H₂ needs 0.5mol O₂ — O₂ is actually in excess. H₂ limits"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Industrial processes want high atom economy because",
+            "options": [
+              "products are heavier",
+              "less waste reduces cost and environmental impact",
+              "reactions are faster",
+              "more reactants needed"
+            ],
+            "answer": "less waste reduces cost and environmental impact",
+            "explanation": "Green chemistry principle: high atom economy = less unwanted byproducts = lower cost, less pollution"
+          },
+          {
+            "id": "mole_calculations_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s2_chem_mole_l3",
+      "title": "Empirical and Molecular Formulas",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Empirical formula: simplest whole number ratio of atoms\nMolecular formula: actual number of atoms\n\nFinding empirical formula from % composition:\n1. Assume 100g → mass = %\n2. Divide each mass by molar mass → moles\n3. Divide by smallest → ratio\n4. Round to whole numbers (×2 if needed)\n\nMolecular formula:\nMF = EF × n\nn = molecular mass / empirical formula mass"
+        },
+        {
+          "type": "example",
+          "title": "Empirical Formula Calculation",
+          "body": "Compound: 40% C, 6.7% H, 53.3% O\nIn 100g: C=40g, H=6.7g, O=53.3g\nMoles: C=40/12=3.33, H=6.7/1=6.7, O=53.3/16=3.33\nRatio: 3.33:6.7:3.33 = 1:2:1\nEF = CH₂O (formaldehyde)"
+        },
+        {
+          "type": "example",
+          "title": "Molecular Formula",
+          "body": "EF=CH₂O (M=30), actual M=180\nn=180/30=6\nMF = C₆H₁₂O₆ (glucose!)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Empirical formula shows",
+            "options": [
+              "number of atoms exactly",
+              "simplest whole-number ratio of atoms",
+              "3D shape",
+              "mass of compound"
+            ],
+            "answer": "simplest whole-number ratio of atoms",
+            "explanation": "EF: simplest ratio. H₂O₂ has EF=HO; C₆H₁₂O₆ has EF=CH₂O"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Compound 75% C, 25% H. EF =",
+            "options": [
+              "C₃H",
+              "CH₄",
+              "CH₃",
+              "C₂H₆"
+            ],
+            "answer": "CH₄",
+            "explanation": "C: 75/12=6.25, H: 25/1=25. Ratio=6.25:25=1:4. EF=CH₄"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "EF=CH₂, M=56. Molecular formula?",
+            "options": [
+              "CH₂",
+              "C₂H₄",
+              "C₄H₈",
+              "C₃H₆"
+            ],
+            "answer": "C₄H₈",
+            "explanation": "M(CH₂)=14. n=56/14=4. MF=C₄H₈"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Combustion analysis: burning organic compound and measuring CO₂ and H₂O gives",
+            "options": [
+              "O only",
+              "C and H content (from CO₂ and H₂O masses)",
+              "N content",
+              "molecular mass"
+            ],
+            "answer": "C and H content (from CO₂ and H₂O masses)",
+            "explanation": "Combustion: C→CO₂, H→H₂O. Masses of CO₂ and H₂O reveal C and H in original compound"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "36% Na, 25.5% S, 38.5% O (M of Na=23,S=32,O=16). EF =",
+            "options": [
+              "NaSO₃",
+              "Na₂SO₄",
+              "Na₂S₂O₃",
+              "NaSO₄"
+            ],
+            "answer": "Na₂SO₄",
+            "explanation": "Na:36/23=1.565, S:25.5/32=0.797, O:38.5/16=2.406. Ratio÷0.797=1.96:1:3.02≈2:1:4 → Na₂SO₄? No: 2:1:4 → Na₂SO₄"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Compound 85.7%C, 14.3%H. EF =",
+            "options": [
+              "C₂H₄",
+              "CH₂",
+              "CH₄",
+              "C₃H₆"
+            ],
+            "answer": "CH₂",
+            "explanation": "C:85.7/12=7.14, H:14.3/1=14.3. Ratio=7.14:14.3=1:2. EF=CH₂"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Molecular formula can be same as empirical formula when",
+            "options": [
+              "always",
+              "n=1 (EF mass = molecular mass)",
+              "never",
+              "only for organic compounds"
+            ],
+            "answer": "n=1 (EF mass = molecular mass)",
+            "explanation": "When n=1, MF=EF. Examples: H₂O, NaCl, CO₂"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Calculating moles step in empirical formula: divide mass by",
+            "options": [
+              "density",
+              "molar mass",
+              "Avogadro number",
+              "formula mass"
+            ],
+            "answer": "molar mass",
+            "explanation": "Moles = mass/molar mass. This converts grams to moles for each element"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "After finding mole ratio 1.5:1:3, you should",
+            "options": [
+              "round 1.5 to 2",
+              "multiply all by 2 to get 3:2:6",
+              "leave as is",
+              "divide by 3"
+            ],
+            "answer": "multiply all by 2 to get 3:2:6",
+            "explanation": "When ratio contains 0.5 (½), multiply all by 2 to get whole numbers"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Magnesium burns in oxygen. 0.48g Mg gives 0.80g MgO. Empirical formula (Mg=24,O=16)?",
+            "options": [
+              "MgO₂",
+              "Mg₂O",
+              "MgO",
+              "Mg₂O₃"
+            ],
+            "answer": "MgO",
+            "explanation": "O in product=0.80-0.48=0.32g. Mg:O moles=0.48/24:0.32/16=0.02:0.02=1:1. EF=MgO"
+          },
+          {
+            "id": "mole_calculations_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mole_calculations_l4",
+      "title": "Mole Calculations — Advanced Part 4",
+      "duration_minutes": 33,
+      "xp_reward": 100,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Mole Calculations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Mole Calculations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Mole Calculations builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.1",
+          "body": "Consider a more complex problem on Mole Calculations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 4.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Mole Calculations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Mole Calculations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Mole Calculations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "mole_calculations_l4_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l4_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l4_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l4_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l4_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l4_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l4_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l4_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l4_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l4_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "mole_calculations_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "mole_calculations_l4_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "mole_calculations_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "mole_calculations_l4_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "mole_calculations_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "mole_calculations_l4_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "mole_calculations_l4_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "mole_calculations_l4_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "mole_calculations_l4_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "mole_calculations_l4_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mole_calculations_l5",
+      "title": "Mole Calculations — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Mole Calculations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Mole Calculations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Mole Calculations builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Mole Calculations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Mole Calculations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Mole Calculations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Mole Calculations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "mole_calculations_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l5_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l5_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l5_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l5_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "mole_calculations_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "mole_calculations_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "mole_calculations_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "mole_calculations_l5_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "mole_calculations_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "mole_calculations_l5_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "mole_calculations_l5_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "mole_calculations_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "mole_calculations_l5_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "mole_calculations_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "mole_calculations_l6",
+      "title": "Mole Calculations — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Mole Calculations. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Mole Calculations concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Mole Calculations builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Mole Calculations. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Mole Calculations. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Mole Calculations include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Mole Calculations. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "mole_calculations_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "mole_calculations_l6_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "mole_calculations_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "mole_calculations_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "mole_calculations_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "mole_calculations_l6_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "mole_calculations_l6_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "mole_calculations_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "mole_calculations_l6_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "mole_calculations_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "mole_calculations_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "mole_calculations_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "mole_calculations_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "mole_calculations_l6_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "mole_calculations_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "mole_calculations_l6_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "mole_calculations_l6_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "mole_calculations_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "mole_calculations_l6_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "mole_calculations_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "mole_calculations"
+}

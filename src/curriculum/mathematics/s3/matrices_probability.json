@@ -1,0 +1,1866 @@
+{
+  "topic_id": "matrices_probability",
+  "topic_title": "Matrices",
+  "subject": "mathematics",
+  "class_level": "S3",
+  "lessons": [
+    {
+      "id": "matrices_probability_l1",
+      "title": "Introduction to Matrices",
+      "duration_minutes": 25,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "A matrix is a rectangular array of numbers arranged in rows and columns. Matrices are used in computer graphics, solving systems of equations, economics, engineering, and coding theory."
+        },
+        {
+          "type": "formula",
+          "body": "A matrix with m rows and n columns is called an m×n matrix.\n\nExample of a 2×3 matrix:\nA = [1  2  3]\n    [4  5  6]\n\nElements are denoted aᵢⱼ where i=row, j=column\na₁₂ = 2 (row 1, column 2)\na₂₃ = 6 (row 2, column 3)\n\nSpecial matrices:\nSquare matrix: same number of rows and columns\nIdentity matrix I: square matrix with 1s on diagonal, 0s elsewhere\nZero matrix 0: all elements are 0"
+        },
+        {
+          "type": "formula",
+          "body": "Matrix ADDITION and SUBTRACTION:\nOnly possible if matrices have the SAME order (same dimensions)\nAdd/subtract corresponding elements\n\n[1 2] + [5 6] = [1+5  2+6] = [6  8]\n[3 4]   [7 8]   [3+7  4+8]   [10 12]\n\nScalar multiplication (multiply by a number):\nk × [a b] = [ka  kb]\n    [c d]   [kc  kd]"
+        },
+        {
+          "type": "example",
+          "title": "Matrix Multiplication",
+          "body": "Multiply A (2×2) by B (2×2): row × column\nA = [1 2]  B = [5 6]\n    [3 4]      [7 8]\n\nAB = [(1×5+2×7)  (1×6+2×8)] = [19  22]\n     [(3×5+4×7)  (3×6+4×8)]   [43  50]\n\nRule: A(m×n) × B(n×p) = C(m×p)\nInner dimensions MUST match!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 3×4 matrix has:",
+            "options": [
+              "3 columns and 4 rows",
+              "4 rows and 3 columns",
+              "3 rows and 4 columns",
+              "12 diagonal elements"
+            ],
+            "answer": "3 rows and 4 columns",
+            "explanation": "An m×n matrix has m rows and n columns. 3×4 means 3 rows, 4 columns."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Can you add a 2×3 matrix to a 3×2 matrix?",
+            "options": [
+              "Yes always",
+              "Yes if they're square",
+              "No — dimensions must match",
+              "Yes by transposing"
+            ],
+            "answer": "No — dimensions must match",
+            "explanation": "Matrix addition requires identical dimensions. 2×3 and 3×2 are different shapes."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "[1 2] + [3 4] = ?",
+            "options": [
+              "[4 6]",
+              "[3 8]",
+              "[2 3]",
+              "[4 8]"
+            ],
+            "answer": "[4 6]",
+            "explanation": "Add corresponding elements: 1+3=4, 2+4=6. Result: [4 6]."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "3 × [2 4] = ?  ",
+            "options": [
+              "[5 7]",
+              "[6 4]",
+              "[6 12]",
+              "[2 12]"
+            ],
+            "answer": "[6 12]",
+            "explanation": "Scalar multiplication: 3×2=6, 3×4=12. Result: [6 12]."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The identity matrix I has:",
+            "options": [
+              "All zeros",
+              "All ones",
+              "1s on the main diagonal and 0s elsewhere",
+              "1s everywhere"
+            ],
+            "answer": "1s on the main diagonal and 0s elsewhere",
+            "explanation": "The identity matrix I has 1s along the main diagonal (top-left to bottom-right) and 0s everywhere else."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For A(2×3) × B to be possible, B must have:",
+            "options": [
+              "2 rows",
+              "3 rows",
+              "3 columns",
+              "2 columns"
+            ],
+            "answer": "3 rows",
+            "explanation": "Inner dimensions must match: A is 2×3, so B must start with 3 rows: B is 3×n."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In matrix A, element a₂₁ refers to:",
+            "options": [
+              "Row 1, Column 2",
+              "Row 2, Column 1",
+              "Row 2, Column 2",
+              "The 21st element"
+            ],
+            "answer": "Row 2, Column 1",
+            "explanation": "aᵢⱼ: i is the row number, j is the column number. a₂₁ = row 2, column 1."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "[2 1] × [3] = ?  (1×2 times 2×1)",
+            "options": [
+              "Cannot multiply",
+              "[7]",
+              "[6 3]",
+              "[6 1]"
+            ],
+            "answer": "[7]",
+            "explanation": "(1×2)(2×1) → (1×1): 2×3 + 1×1 = 6+1 = [7]."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "A − A = ?",
+            "options": [
+              "2A",
+              "I (identity)",
+              "0 (zero matrix)",
+              "A²"
+            ],
+            "answer": "0 (zero matrix)",
+            "explanation": "Any matrix minus itself gives the zero matrix (all elements zero)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Is matrix multiplication commutative? (AB = BA always?)",
+            "options": [
+              "Yes always",
+              "No — AB ≠ BA in general",
+              "Only for square matrices",
+              "Only for 2×2 matrices"
+            ],
+            "answer": "No — AB ≠ BA in general",
+            "explanation": "Matrix multiplication is NOT commutative. AB ≠ BA in general (unlike regular number multiplication)."
+          },
+          {
+            "id": "matrices_probability_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_prob_l1",
+      "title": "Probability — Basics and Rules",
+      "duration_minutes": 25,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "text",
+          "body": "Probability measures how likely an event is to occur. It is expressed as a number between 0 and 1: 0 means impossible, 1 means certain. Probability is used in weather forecasting, insurance, games, medical testing, and many other fields."
+        },
+        {
+          "type": "formula",
+          "body": "Basic Probability:\nP(event) = Number of favourable outcomes / Total number of possible outcomes\n\n0 ≤ P(A) ≤ 1\nP(impossible event) = 0\nP(certain event) = 1\nP(A) + P(A') = 1  →  P(A') = 1 − P(A)\n\nA' is the complement of A (A does NOT happen)"
+        },
+        {
+          "type": "example",
+          "title": "Basic Probability Examples",
+          "body": "A bag has 3 red, 5 blue, 2 green balls (10 total)\n\nP(red) = 3/10\nP(blue) = 5/10 = 1/2\nP(green) = 2/10 = 1/5\nP(not red) = 1 − 3/10 = 7/10\nP(red or blue) = (3+5)/10 = 8/10 = 4/5\nP(yellow) = 0/10 = 0 (impossible)"
+        },
+        {
+          "type": "formula",
+          "body": "Addition Rule:\nP(A or B) = P(A) + P(B) − P(A and B)\n\nFor MUTUALLY EXCLUSIVE events (cannot both happen):\nP(A and B) = 0\nP(A or B) = P(A) + P(B)\n\nMultiplication Rule:\nFor INDEPENDENT events (one doesn't affect the other):\nP(A and B) = P(A) × P(B)"
+        },
+        {
+          "type": "example",
+          "title": "Combined Events",
+          "body": "Toss a coin AND roll a die:\nP(Head) = 1/2, P(6) = 1/6\nP(Head AND 6) = 1/2 × 1/6 = 1/12 (independent)\n\nDraw 2 cards from a pack without replacement:\nP(Ace then Ace) = 4/52 × 3/51 = 12/2652 = 1/221 (dependent!)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A fair coin is tossed. P(Heads) = ?",
+            "options": [
+              "1",
+              "0",
+              "1/2",
+              "2"
+            ],
+            "answer": "1/2",
+            "explanation": "A fair coin has 2 equally likely outcomes. P(Heads) = 1/2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A fair die is rolled. P(getting a 4) = ?",
+            "options": [
+              "4/6",
+              "1/4",
+              "1/6",
+              "2/3"
+            ],
+            "answer": "1/6",
+            "explanation": "A die has 6 equally likely outcomes. P(4) = 1/6."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.3. Find P(A').",
+            "options": [
+              "0.3",
+              "0.7",
+              "3",
+              "0.03"
+            ],
+            "answer": "0.7",
+            "explanation": "P(A') = 1 − P(A) = 1 − 0.3 = 0.7."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Bag: 4 red, 6 blue. P(blue) = ?",
+            "options": [
+              "6",
+              "0.4",
+              "3/5",
+              "2/3"
+            ],
+            "answer": "3/5",
+            "explanation": "P(blue) = 6/10 = 3/5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "P(A)=0.4, P(B)=0.3, mutually exclusive. P(A or B)=?",
+            "options": [
+              "0.12",
+              "0.1",
+              "0.7",
+              "1.4"
+            ],
+            "answer": "0.7",
+            "explanation": "Mutually exclusive: P(A or B) = P(A)+P(B) = 0.4+0.3 = 0.7."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two independent events: P(A)=0.5, P(B)=0.4. P(A and B)=?",
+            "options": [
+              "0.9",
+              "0.1",
+              "0.2",
+              "0.45"
+            ],
+            "answer": "0.2",
+            "explanation": "Independent: P(A and B) = P(A)×P(B) = 0.5×0.4 = 0.2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which probability is impossible?",
+            "options": [
+              "P=0",
+              "P=0.5",
+              "P=1",
+              "P=1.5"
+            ],
+            "answer": "P=1.5",
+            "explanation": "Probability must be between 0 and 1 inclusive. P=1.5 is not a valid probability."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A card is drawn from 52. P(Ace or King)=?",
+            "options": [
+              "8/52=2/13",
+              "4/52",
+              "16/52",
+              "1/52"
+            ],
+            "answer": "8/52=2/13",
+            "explanation": "4 Aces + 4 Kings = 8 cards. Mutually exclusive: P = 8/52 = 2/13."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Roll a die twice. P(6 both times)=?",
+            "options": [
+              "1/6",
+              "1/12",
+              "1/36",
+              "2/6"
+            ],
+            "answer": "1/36",
+            "explanation": "Independent: P(6)×P(6) = 1/6 × 1/6 = 1/36."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "P(rain today)=0.6. P(no rain today)=?",
+            "options": [
+              "0.6",
+              "0.4",
+              "1.6",
+              "0.06"
+            ],
+            "answer": "0.4",
+            "explanation": "P(no rain) = 1 − P(rain) = 1 − 0.6 = 0.4."
+          },
+          {
+            "id": "matrices_probability_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_mp_l3",
+      "title": "Matrix Inverse and Determinant",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "M=[[a,b],[c,d]]: det=ad−bc\nM⁻¹=(1/det)[[d,−b],[−c,a]]\nExists only if det≠0\nAX=B → X=A⁻¹B"
+        },
+        {
+          "type": "example",
+          "title": "Inverse",
+          "body": "M=[[3,1],[2,4]]\ndet=12−2=10\nM⁻¹=(1/10)[[4,−1],[−2,3]]"
+        },
+        {
+          "type": "example",
+          "title": "Solving system",
+          "body": "2x+y=5, x+3y=10\nA=[[2,1],[1,3]], det=5\nA⁻¹=(1/5)[[3,−1],[−1,2]]\nX=A⁻¹B=(1/5)[[5],[15]]=[[1],[3]]"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "det([[4,2],[1,3]])",
+            "options": [
+              "10",
+              "14",
+              "12",
+              "6"
+            ],
+            "answer": "10",
+            "explanation": "4×3−2×1=10"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "det(A)=0 means",
+            "options": [
+              "Invertible",
+              "Singular (no inverse)",
+              "Identity",
+              "Diagonal"
+            ],
+            "answer": "Singular (no inverse)",
+            "explanation": "Zero determinant → no inverse (singular matrix)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Inverse of diagonal [[2,0],[0,3]]",
+            "options": [
+              "[[3",
+              "0]",
+              "[0",
+              "2]]",
+              "[[1/2",
+              "0]",
+              "[0",
+              "1/3]]",
+              "[[0.5",
+              "0]",
+              "[0",
+              "3]]",
+              "None"
+            ],
+            "answer": "[[1/2,0],[0,1/3]]",
+            "explanation": "det=6, M⁻¹=(1/6)[[3,0],[0,2]]=[[0.5,0],[0,1/3]]"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "AA⁻¹=",
+            "options": [
+              "A",
+              "0",
+              "I",
+              "2A"
+            ],
+            "answer": "I",
+            "explanation": "Matrix times its inverse = identity matrix I."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Identity 2×2 matrix",
+            "options": [
+              "[[1",
+              "1]",
+              "[1",
+              "1]]",
+              "[[1",
+              "0]",
+              "[0",
+              "1]]",
+              "[[0",
+              "1]",
+              "[1",
+              "0]]",
+              "[[2",
+              "0]",
+              "[0",
+              "2]]"
+            ],
+            "answer": "[[1,0],[0,1]]",
+            "explanation": "I₂=[[1,0],[0,1]]"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "To solve AX=B for X",
+            "options": [
+              "A÷B",
+              "B−A",
+              "A⁻¹B",
+              "AB"
+            ],
+            "answer": "A⁻¹B",
+            "explanation": "Premultiply both sides by A⁻¹: X=A⁻¹B"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "det([[a,b],[c,d]])",
+            "options": [
+              "ab−cd",
+              "ac−bd",
+              "ad−bc",
+              "a+d"
+            ],
+            "answer": "ad−bc",
+            "explanation": "Determinant = ad−bc (main diagonal product minus other)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Matrix multiplication is",
+            "options": [
+              "Always AB=BA",
+              "Not generally commutative",
+              "Only for square matrices",
+              "Associative only"
+            ],
+            "answer": "Not generally commutative",
+            "explanation": "AB≠BA in general. Order matters in matrix multiplication."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "[[3,2],[1,1]] inverse",
+            "options": [
+              "[[1",
+              "−2]",
+              "[−1",
+              "3]]",
+              "[[1",
+              "2]",
+              "[1",
+              "3]]",
+              "None",
+              "[[−1",
+              "2]",
+              "[1",
+              "−3]]"
+            ],
+            "answer": "[[1,−2],[−1,3]]",
+            "explanation": "det=3−2=1, M⁻¹=[[1,−2],[−1,3]]"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "det([[1,0],[0,1]])",
+            "options": [
+              "0",
+              "1",
+              "2",
+              "−1"
+            ],
+            "answer": "1",
+            "explanation": "det of identity = 1×1−0×0=1"
+          },
+          {
+            "id": "matrices_probability_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_mp_l3",
+      "title": "Matrices - Inverse and Systems",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "For 2x2 matrix M = [[a,b],[c,d]]:\ndet(M) = ad - bc\nM^-1 = (1/det) * [[d,-b],[-c,a]]\nM^-1 exists only if det(M) != 0"
+        },
+        {
+          "type": "example",
+          "title": "Finding Inverse",
+          "body": "M = [[3,1],[2,4]]\ndet = 12-2 = 10\nM^-1 = (1/10)*[[4,-1],[-2,3]]"
+        },
+        {
+          "type": "example",
+          "title": "Solving Systems",
+          "body": "2x+y=5 and x+3y=10\nMatrix: A = [[2,1],[1,3]], B = [[5],[10]]\ndet(A) = 6-1 = 5\nA^-1 = (1/5)*[[3,-1],[-1,2]]\nX = A^-1 B = [[1],[3]]"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "det of [[4,2],[1,3]] =",
+            "options": [
+              "10",
+              "14",
+              "12",
+              "6"
+            ],
+            "answer": "10",
+            "explanation": "det = 4*3 - 2*1 = 10"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If det(A) = 0 matrix A is",
+            "options": [
+              "Invertible",
+              "Singular no inverse",
+              "Identity",
+              "Diagonal"
+            ],
+            "answer": "Singular no inverse",
+            "explanation": "det=0 means singular matrix - no inverse exists."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Inverse of [[2,0],[0,3]] =",
+            "options": [
+              "[[3",
+              "0]",
+              "[0",
+              "2]]",
+              "[[0.5",
+              "0]",
+              "[0",
+              "1/3]]",
+              "[[0.5",
+              "0]",
+              "[0",
+              "3]]",
+              "Same matrix"
+            ],
+            "answer": "[[0.5,0],[0,1/3]]",
+            "explanation": "det=6. M^-1=(1/6)[[3,0],[0,2]] = [[0.5,0],[0,1/3]]"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A times A^-1 =",
+            "options": [
+              "A",
+              "0",
+              "Identity matrix I",
+              "2A"
+            ],
+            "answer": "Identity matrix I",
+            "explanation": "By definition MM^-1 = I."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "2x2 Identity matrix is",
+            "options": [
+              "[[1",
+              "1]",
+              "[1",
+              "1]]",
+              "[[1",
+              "0]",
+              "[0",
+              "1]]",
+              "[[0",
+              "1]",
+              "[1",
+              "0]]",
+              "[[2",
+              "0]",
+              "[0",
+              "2]]"
+            ],
+            "answer": "[[1,0],[0,1]]",
+            "explanation": "Identity matrix has 1s on diagonal, 0s elsewhere."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "To solve AX=B we compute",
+            "options": [
+              "A divided by B",
+              "B-A",
+              "A^-1 times B",
+              "A times B"
+            ],
+            "answer": "A^-1 times B",
+            "explanation": "AX=B gives X=A^-1 B"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "det([[a,b],[c,d]]) =",
+            "options": [
+              "ab-cd",
+              "ac-bd",
+              "ad-bc",
+              "a+d"
+            ],
+            "answer": "ad-bc",
+            "explanation": "Determinant = product of main diagonal minus product of other diagonal."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "[[1,2],[3,4]] x [[0,1],[1,0]] =",
+            "options": [
+              "[[2",
+              "1]",
+              "[4",
+              "3]]",
+              "[[0",
+              "2]",
+              "[3",
+              "4]]",
+              "Identity",
+              "[[3",
+              "1]",
+              "[7",
+              "3]]"
+            ],
+            "answer": "[[2,1],[4,3]]",
+            "explanation": "Row x col: row1=(1*0+2*1,1*1+2*0)=(2,1), row2=(3*0+4*1,3*1+4*0)=(4,3)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "[[3,2],[1,1]] inverse =",
+            "options": [
+              "[[1",
+              "-2]",
+              "[-1",
+              "3]]",
+              "[[1",
+              "2]",
+              "[1",
+              "3]]",
+              "[[-1",
+              "2]",
+              "[1",
+              "-3]]",
+              "Cannot find"
+            ],
+            "answer": "[[1,-2],[-1,3]]",
+            "explanation": "det=3-2=1. M^-1=(1/1)[[1,-2],[-1,3]]"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Matrix multiplication AB generally equals BA",
+            "options": [
+              "Always true",
+              "Never true",
+              "Not generally true",
+              "Only for square matrices"
+            ],
+            "answer": "Not generally true",
+            "explanation": "Matrix multiplication is NOT commutative. AB != BA in general."
+          },
+          {
+            "id": "matrices_probability_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "matrices_probability_l5",
+      "title": "Matrices — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Matrices. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Matrices concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Matrices builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Matrices. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Matrices. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Matrices include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Matrices. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "matrices_probability_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "matrices_probability_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "matrices_probability_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "matrices_probability_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "matrices_probability_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "matrices_probability_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "matrices_probability_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "matrices_probability_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "matrices_probability_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "matrices_probability_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "matrices_probability_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "matrices_probability_l6",
+      "title": "Matrices — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Matrices. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Matrices concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Matrices builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Matrices. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Matrices. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Matrices include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Matrices. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "matrices_probability_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "matrices_probability_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "matrices_probability_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "matrices_probability_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "matrices_probability_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "matrices_probability_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "matrices_probability_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "matrices_probability_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "matrices_probability_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "matrices_probability_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "matrices_probability_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "matrices_probability_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "matrices_probability_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "matrices_probability_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "matrices_probability_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "matrices_probability_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "matrices_probability_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "matrices_probability_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "matrices_probability_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "matrices_probability_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ]
+}

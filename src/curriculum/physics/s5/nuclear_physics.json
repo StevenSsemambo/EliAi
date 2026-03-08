@@ -1,0 +1,2019 @@
+{
+  "subject": "physics",
+  "level": "s5",
+  "lessons": [
+    {
+      "id": "s5_phy_nuc_l1",
+      "title": "Nuclear Structure and Radioactive Decay",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Nucleus: protons (Z) + neutrons (N)\nMass number A = Z + N\nNuclide notation: ᴬ_Z X\n\nIsotopes: same Z, different N\n\nDecay equations (conserve A and Z):\nAlpha: ᴬ_Z X → ᴬ⁻⁴_{Z-2} Y + ⁴_₂He\nBeta-minus: ᴬ_Z X → ᴬ_{Z+1} Y + ⁰_{-1}e + antineutrino\nBeta-plus: ᴬ_Z X → ᴬ_{Z-1} Y + ⁰_{+1}e + neutrino\nGamma: no change in A or Z, just energy release"
+        },
+        {
+          "type": "example",
+          "title": "Decay Examples",
+          "body": "²³⁸_₉₂U → ²³⁴_₉₀Th + ⁴_₂He (alpha decay)\n¹⁴_₆C → ¹⁴_₇N + ⁰_{-1}e (beta-minus: carbon-14 dating)\n⁶⁰_₂₇Co → ⁶⁰_₂₈Ni + ⁰_{-1}e + γ (beta + gamma)\n\nPenetrating power:\nAlpha (⁴He): stopped by paper/few cm air\nBeta (electron): stopped by few mm aluminium\nGamma (γ-ray): reduced by thick lead/concrete"
+        },
+        {
+          "type": "formula",
+          "body": "Binding energy:\nE = mc²  (Einstein mass-energy)\nMass defect Δm: mass of nucleus < sum of constituent masses\nBinding energy = Δm × c²\nHigher binding energy per nucleon = more stable nucleus\nFe-56: most stable nucleus"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Mass number A is the total number of",
+            "options": [
+              "protons only",
+              "neutrons only",
+              "protons plus neutrons",
+              "electrons"
+            ],
+            "answer": "protons plus neutrons",
+            "explanation": "A = Z (protons) + N (neutrons) = total nucleons"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Isotopes have the same",
+            "options": [
+              "mass number",
+              "number of neutrons",
+              "number of protons (Z)",
+              "number of electrons in outer shell"
+            ],
+            "answer": "number of protons (Z)",
+            "explanation": "Isotopes: same element (same Z) but different N → different A"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Alpha decay of ²³⁸_₉₂U produces",
+            "options": [
+              "²³⁴_₉₀Th",
+              "²³⁴_₉₁Pa",
+              "²³⁶_₉₀Th",
+              "²³⁴_₉₂U"
+            ],
+            "answer": "²³⁴_₉₀Th",
+            "explanation": "Alpha particle is ⁴_₂He: A decreases by 4, Z decreases by 2. 238→234, 92→90 = Th"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Beta-minus decay converts a neutron to",
+            "options": [
+              "proton + electron",
+              "proton + positron",
+              "proton only",
+              "two neutrons"
+            ],
+            "answer": "proton + electron",
+            "explanation": "β⁻ decay: n → p + e⁻ + antineutrino. Z increases by 1"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Most penetrating radiation is",
+            "options": [
+              "alpha",
+              "beta-minus",
+              "gamma",
+              "all equal"
+            ],
+            "answer": "gamma",
+            "explanation": "Gamma: electromagnetic radiation, no charge. Stopped only by thick lead or concrete"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Alpha particles are stopped by",
+            "options": [
+              "thick lead",
+              "1mm aluminium",
+              "paper or few cm air",
+              "water only"
+            ],
+            "answer": "paper or few cm air",
+            "explanation": "Alpha: heavy, doubly charged. Stopped by paper or a few centimetres of air"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "E=mc² means",
+            "options": [
+              "energy equals mass times velocity",
+              "energy and mass are equivalent (c=3×10⁸m/s)",
+              "mass doubles at c",
+              "speed of light squared is constant"
+            ],
+            "answer": "energy and mass are equivalent (c=3×10⁸m/s)",
+            "explanation": "Einstein's mass-energy equivalence: a mass Δm converts to enormous energy E=Δmc²"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is Fe-56 the most stable nucleus?",
+            "options": [
+              "Largest nucleus",
+              "Highest binding energy per nucleon",
+              "Most protons",
+              "Lightest metal"
+            ],
+            "answer": "Highest binding energy per nucleon",
+            "explanation": "Fe-56 sits at peak of binding energy per nucleon curve — maximum stability"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Gamma decay results in",
+            "options": [
+              "decrease in A by 4",
+              "increase in Z by 1",
+              "no change in A or Z (just energy release)",
+              "loss of two protons"
+            ],
+            "answer": "no change in A or Z (just energy release)",
+            "explanation": "Gamma: nucleus releases excess energy as photon. Proton and neutron numbers unchanged"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Carbon-14 (¹⁴_₆C) undergoes beta-minus decay. Product is",
+            "options": [
+              "¹⁴_₇N",
+              "¹⁴_₅B",
+              "¹³_₆C",
+              "¹⁰_₄Be"
+            ],
+            "answer": "¹⁴_₇N",
+            "explanation": "Beta-minus: Z increases by 1 (6→7=Nitrogen), A unchanged (14). Product: ¹⁴_₇N"
+          },
+          {
+            "id": "nuclear_physics_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l2",
+      "title": "Radioactive Decay and Half-Life",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Decay law:\nN = N₀ e^(-λt)\nA = A₀ e^(-λt)  (activity = λN)\nHalf-life T½ = ln2/λ = 0.693/λ\n\nN₀=initial nuclei, N=nuclei at time t\nλ=decay constant (s⁻¹)\nActivity A = dN/dt = λN  (in Becquerel, Bq)\n1 Bq = 1 decay per second\n1 Ci (Curie) = 3.7×10¹⁰ Bq"
+        },
+        {
+          "type": "example",
+          "title": "Half-life Problems",
+          "body": "¹⁴C: T½=5730 years, λ=0.693/5730=1.21×10⁻⁴ yr⁻¹\nFraction remaining after 11460 years (2 half-lives):\nN/N₀ = (½)² = 0.25 → 25% remains\n\nI-131: T½=8 days. Initial activity 10,000 Bq.\nAfter 24 days (3 half-lives): A=10000×(½)³=1250 Bq"
+        },
+        {
+          "type": "example",
+          "title": "Carbon Dating",
+          "body": "Living organisms maintain constant ¹⁴C ratio\nAt death, ¹⁴C decays with T½=5730 years\nMeasure ¹⁴C ratio → calculate age\nUseful for ~50,000 year range\nOlder: use ⁴⁰K/⁴⁰Ar (T½=1.26 Gyr) or U-Pb"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Half-life T½ =",
+            "options": [
+              "0.693λ",
+              "ln2/λ",
+              "λ/0.693",
+              "1/λ"
+            ],
+            "answer": "ln2/λ",
+            "explanation": "T½=ln2/λ=0.693/λ where λ is the decay constant"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "After 3 half-lives, fraction remaining =",
+            "options": [
+              "1/4",
+              "1/6",
+              "1/8",
+              "1/3"
+            ],
+            "answer": "1/8",
+            "explanation": "(1/2)³=1/8"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "N=N₀e^(-λt). After one half-life, N/N₀=",
+            "options": [
+              "0.5",
+              "0.693",
+              "0.368",
+              "0.25"
+            ],
+            "answer": "0.5",
+            "explanation": "By definition of half-life: half the nuclei remain after one T½"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "T½=10 years. λ=",
+            "options": [
+              "1.44 yr⁻¹",
+              "0.0693 yr⁻¹",
+              "0.693 yr⁻¹",
+              "0.1 yr⁻¹"
+            ],
+            "answer": "0.0693 yr⁻¹",
+            "explanation": "λ=ln2/T½=0.693/10=0.0693yr⁻¹"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Activity = ",
+            "options": [
+              "N/λ",
+              "λN",
+              "N/t",
+              "N₀-N"
+            ],
+            "answer": "λN",
+            "explanation": "Activity A=λN (decay constant × number of undecayed nuclei)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Unit of radioactivity (Becquerel) equals",
+            "options": [
+              "energy per second",
+              "1 decay per second",
+              "electron volts",
+              "joules per kg"
+            ],
+            "answer": "1 decay per second",
+            "explanation": "1 Bq = 1 nuclear disintegration per second"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Carbon-14 dating is unreliable beyond ~50,000 years because",
+            "options": [
+              "carbon runs out",
+              "¹⁴C activity too low to measure accurately",
+              "temperature changes",
+              "oxygen interferes"
+            ],
+            "answer": "¹⁴C activity too low to measure accurately",
+            "explanation": "After ~8-9 half-lives, remaining ¹⁴C < 0.2% — below detection limits of most instruments"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "T½=20 min. Initial activity 8000 Bq. After 60 min:",
+            "options": [
+              "1000 Bq",
+              "2000 Bq",
+              "500 Bq",
+              "4000 Bq"
+            ],
+            "answer": "1000 Bq",
+            "explanation": "60min = 3 half-lives: 8000×(1/2)³=8000/8=1000Bq"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Radioactive decay is random and spontaneous, meaning",
+            "options": [
+              "we can predict exactly when each nucleus decays",
+              "we can only predict statistically, not individually",
+              "it requires energy input",
+              "temperature affects it strongly"
+            ],
+            "answer": "we can only predict statistically, not individually",
+            "explanation": "Individual decay: unpredictable. Large numbers: statistically predictable half-life. Temperature/pressure don't affect it"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Which isotope is best for dating rocks billions of years old?",
+            "options": [
+              "¹⁴C (T½=5730yr)",
+              "²³⁸U (T½=4.5Gyr)",
+              "¹³¹I (T½=8days)",
+              "³H (T½=12yr)"
+            ],
+            "answer": "²³⁸U (T½=4.5Gyr)",
+            "explanation": "Match half-life to age range: ²³⁸U half-life similar to rock ages (billions of years) → good precision"
+          },
+          {
+            "id": "nuclear_physics_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l3",
+      "title": "Nuclear Reactions: Fission and Fusion",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Nuclear fission:\nHeavy nucleus splits into two lighter nuclei + neutrons + energy\n²³⁵U + n → ⁹²Kr + ¹⁴¹Ba + 3n + 200MeV\nChain reaction: neutrons from fission cause more fissions\nCritical mass: minimum mass for self-sustaining chain reaction\n\nNuclear fusion:\nLight nuclei combine to form heavier nucleus + energy\n²₁H + ³₁H → ⁴₂He + n + 17.6 MeV\nRequires extreme temperature (>10⁷K) to overcome Coulomb barrier"
+        },
+        {
+          "type": "example",
+          "title": "Nuclear Power",
+          "body": "Controlled fission in reactor:\nFuel: enriched ²³⁵U (3-5%)\nModerator (graphite/water): slows neutrons to thermal energies\nControl rods (boron): absorb neutrons, control reaction rate\nCoolant: transfers heat to steam turbine\nShielding: concrete blocks radiation\n1kg ²³⁵U releases ~80 million times energy of 1kg coal"
+        },
+        {
+          "type": "example",
+          "title": "Fusion Power",
+          "body": "Sun: H→He fusion, 4.6×10⁹ years\nAttempts on Earth: tokamak (magnetic confinement), laser fusion\nJET, ITER projects\nAdvantages: more energy than fission, fuel (deuterium from sea) abundant, less radioactive waste\nChallenge: sustaining plasma at 10⁸K"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Nuclear fission releases energy because",
+            "options": [
+              "electricity flows",
+              "product nuclei have lower total mass (mass defect→E=mc²)",
+              "neutrons are fast",
+              "uranium is radioactive"
+            ],
+            "answer": "product nuclei have lower total mass (mass defect→E=mc²)",
+            "explanation": "Mass defect: products slightly lighter than reactants → mass converted to energy via E=mc²"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Chain reaction occurs when fission neutrons cause",
+            "options": [
+              "decay",
+              "further fissions in adjacent nuclei",
+              "fusion",
+              "gamma emission"
+            ],
+            "answer": "further fissions in adjacent nuclei",
+            "explanation": "Each fission releases ~3 neutrons which can each cause new fissions → exponential chain reaction"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Control rods in nuclear reactor",
+            "options": [
+              "speed up neutrons",
+              "slow down neutrons",
+              "absorb neutrons to control reaction rate",
+              "generate steam"
+            ],
+            "answer": "absorb neutrons to control reaction rate",
+            "explanation": "Control rods (boron/cadmium) absorb neutrons — inserting further slows/stops reaction"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Moderator in nuclear reactor slows neutrons to",
+            "options": [
+              "0 speed",
+              "thermal (slow) speeds so they are better absorbed by ²³⁵U",
+              "ultrasonic speed",
+              "light speed"
+            ],
+            "answer": "thermal (slow) speeds so they are better absorbed by ²³⁵U",
+            "explanation": "Fast neutrons less likely to cause fission. Moderator (water/graphite) thermalises neutrons → more efficient fission"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Nuclear fusion requires extremely high temperature to",
+            "options": [
+              "melt uranium",
+              "overcome Coulomb repulsion between nuclei",
+              "produce neutrons",
+              "cool the plasma"
+            ],
+            "answer": "overcome Coulomb repulsion between nuclei",
+            "explanation": "Nuclei both positively charged → repel. Need enormous KE (10⁸K) to get close enough for strong nuclear force"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Fusion produces more energy per kg of fuel than fission because",
+            "options": [
+              "fuel is lighter",
+              "fusion releases more energy per nucleon at the binding energy curve peak region",
+              "fusion is faster",
+              "less radiation"
+            ],
+            "answer": "fusion releases more energy per nucleon at the binding energy curve peak region",
+            "explanation": "Light nuclei (H→He) have steep increase in binding energy/nucleon → large energy release"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Main advantage of fusion over fission",
+            "options": [
+              "easier to start",
+              "no radioactive waste (only short-lived tritium/He)",
+              "more uranium available",
+              "less expensive"
+            ],
+            "answer": "no radioactive waste (only short-lived tritium/He)",
+            "explanation": "Fusion products (helium) not radioactive; no long-lived nuclear waste. Fuel is deuterium from sea"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Critical mass in fission is",
+            "options": [
+              "minimum reactor size",
+              "minimum mass for self-sustaining chain reaction",
+              "maximum safe uranium",
+              "half of fuel mass"
+            ],
+            "answer": "minimum mass for self-sustaining chain reaction",
+            "explanation": "Below critical mass: too many neutrons escape without causing fission. At/above: chain reaction self-sustains"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Enriched uranium contains higher proportion of",
+            "options": [
+              "²³⁸U",
+              "²³⁵U",
+              "plutonium",
+              "thorium"
+            ],
+            "answer": "²³⁵U",
+            "explanation": "Natural uranium is 99.3% ²³⁸U, 0.7% ²³⁵U. Enrichment increases ²³⁵U (fissile) fraction to 3-90%"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "²₁H + ³₁H → ⁴₂He + ?",
+            "options": [
+              "proton",
+              "electron",
+              "neutron",
+              "alpha particle"
+            ],
+            "answer": "neutron",
+            "explanation": "Deuterium-tritium fusion: ²₁H+³₁H → ⁴₂He + ¹₀n (neutron) + 17.6 MeV. Conserve A(2+3=4+1) and Z(1+1=2+0)✓"
+          },
+          {
+            "id": "nuclear_physics_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l4",
+      "title": "Radiation Safety and Applications",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Radiation units:\nActivity: Becquerel (Bq) = decays/second\nAbsorbed dose: Gray (Gy) = J/kg\nEffective dose: Sievert (Sv) = Gy × radiation weighting factor\nα has weighting 20, β and γ have weighting 1\n\nBackground radiation sources:\n~50% radon gas (geology)\n~15% medical (X-rays)\n~12% cosmic rays\n~12% food/drink\n~11% building materials\nUK average: ~2.7 mSv/year"
+        },
+        {
+          "type": "example",
+          "title": "Medical Applications",
+          "body": "Diagnostic:\nX-rays: bone imaging (dense tissue absorbs more)\nCT scan: many X-ray angles\nPET scan: ¹⁸F-FDG positron emitter → gamma detected\n\nTherapy:\nRadiotherapy: γ-rays kill cancer cells\n¹³¹I for thyroid cancer (selectively absorbed)\nBrachytherapy: radioactive seeds implanted"
+        },
+        {
+          "type": "example",
+          "title": "Industrial Applications",
+          "body": "Thickness gauging: β or γ passes through material, detector measures transmission — more passes = thinner material\nSmoke detectors: ²⁴¹Am α emitter ionises air in detector\nSterilisation: γ rays kill bacteria in medical equipment/food\nTracer techniques: radioactive isotope follows flow (pipelines, groundwater)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Unit of absorbed radiation dose is",
+            "options": [
+              "Becquerel",
+              "Gray (J/kg)",
+              "Sievert",
+              "Tesla"
+            ],
+            "answer": "Gray (J/kg)",
+            "explanation": "Absorbed dose in Gray: energy deposited per kg of tissue"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Sievert accounts for",
+            "options": [
+              "activity only",
+              "absorbed dose × radiation weighting factor (biological damage)",
+              "distance from source",
+              "shielding"
+            ],
+            "answer": "absorbed dose × radiation weighting factor (biological damage)",
+            "explanation": "Effective dose (Sv) = Gy × radiation weighting factor. α causes 20× more biological damage than γ per Gy"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Alpha radiation weighting factor is 20, meaning",
+            "options": [
+              "alpha travels 20m",
+              "alpha causes 20× more biological damage per J/kg than gamma",
+              "alpha has 20 particles",
+              "20% absorbed"
+            ],
+            "answer": "alpha causes 20× more biological damage per J/kg than gamma",
+            "explanation": "Alpha particles are highly ionising — cause much more cellular damage than beta or gamma for same absorbed energy"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Largest source of background radiation in many countries is",
+            "options": [
+              "nuclear power",
+              "cosmic rays",
+              "radon gas from ground",
+              "medical X-rays"
+            ],
+            "answer": "radon gas from ground",
+            "explanation": "Radon-222 (from uranium decay in granite rocks) accounts for ~50% of average background dose"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "¹³¹I (iodine-131) is used for thyroid cancer because",
+            "options": [
+              "it is cheap",
+              "thyroid selectively absorbs iodine → targeted irradiation",
+              "it has long half-life",
+              "it emits alpha"
+            ],
+            "answer": "thyroid selectively absorbs iodine → targeted irradiation",
+            "explanation": "Thyroid naturally concentrates iodine. ¹³¹I delivers targeted radiation (β and γ) directly to thyroid tissue"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Smoke detectors use americium-241 because",
+            "options": [
+              "it is cheap",
+              "it emits alpha particles that ionise air between detector plates",
+              "it emits gamma rays",
+              "it glows"
+            ],
+            "answer": "it emits alpha particles that ionise air between detector plates",
+            "explanation": "²⁴¹Am α emitter: ionises air creating small current. Smoke disrupts ionisation → alarm triggers"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "ALARA radiation safety principle means",
+            "options": [
+              "as low as reasonably achievable",
+              "always lead and rubber aprons",
+              "all levels are risky",
+              "annual limit radiation acceptable"
+            ],
+            "answer": "as low as reasonably achievable",
+            "explanation": "ALARA: keep radiation dose As Low As Reasonably Achievable through time, distance, shielding"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "PET scan uses positron emitters. Positrons annihilate with electrons producing",
+            "options": [
+              "alpha particles",
+              "two gamma rays (511 keV)",
+              "X-rays",
+              "neutrons"
+            ],
+            "answer": "two gamma rays (511 keV)",
+            "explanation": "Positron+electron → 2γ photons (511 keV each, opposite directions) detected to locate source in body"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Gamma irradiation of food (sterilisation) makes food",
+            "options": [
+              "radioactive",
+              "sterile (pathogens killed) without adding radioactivity",
+              "glow",
+              "taste different significantly"
+            ],
+            "answer": "sterile (pathogens killed) without adding radioactivity",
+            "explanation": "Gamma irradiation kills bacteria/insects without making food radioactive — used for spices, some produce"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Time, distance and shielding reduce radiation dose because",
+            "options": [
+              "they are regulations",
+              "time: less exposure; distance: inverse square law I∝1/r²; shielding: absorbs radiation",
+              "they change the isotope",
+              "they reduce half-life"
+            ],
+            "answer": "time: less exposure; distance: inverse square law I∝1/r²; shielding: absorbs radiation",
+            "explanation": "Three principles of radiation protection: minimise time exposed, maximise distance, use appropriate shielding"
+          },
+          {
+            "id": "nuclear_physics_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l2",
+      "title": "Radioactive Decay and Half-Life",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Radioactive decay is random and spontaneous.\n\nHalf-life (t½): time for half the nuclei to decay\n\nN = N₀ × (½)^(t/t½)\nA = A₀ × (½)^(t/t½)  (activity)\n\nDecay constant λ: N = N₀e^(-λt)\nλ = ln2 / t½ = 0.693 / t½\nActivity A = λN\n\nUnits: Becquerel (Bq) = 1 decay/second"
+        },
+        {
+          "type": "example",
+          "title": "Half-Life Calculations",
+          "body": "Sample: N₀=1000, t½=3 years\nAfter 3y: N=500\nAfter 6y: N=250\nAfter 9y: N=125\nAfter 12y: N=62.5\n\nFormula: N=1000×(½)^(12/3)=1000×(½)^4=1000/16=62.5"
+        },
+        {
+          "type": "example",
+          "title": "Carbon-14 Dating",
+          "body": "¹⁴C t½=5730 years. Cosmic rays continually make ¹⁴C in atmosphere.\nLiving organisms maintain constant ¹⁴C ratio.\nAfter death, ¹⁴C decays. Measure remaining ratio → calculate age.\n\nBone has 25% original ¹⁴C:\n(½)^(t/5730)=0.25=(½)^2 → t=2×5730=11,460 years"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Half-life is defined as",
+            "options": [
+              "time for ALL nuclei to decay",
+              "time for HALF the nuclei to decay",
+              "time for activity to reach zero",
+              "one second"
+            ],
+            "answer": "time for HALF the nuclei to decay",
+            "explanation": "t½: the time during which the number of radioactive nuclei (and activity) halves"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "N₀=800, t½=2 hours. After 6 hours, N=",
+            "options": [
+              "100",
+              "200",
+              "400",
+              "50"
+            ],
+            "answer": "100",
+            "explanation": "6/2=3 half-lives: 800→400→200→100"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Decay is described as random because",
+            "options": [
+              "all nuclei decay together",
+              "we cannot predict WHICH nucleus will decay next",
+              "rate is constant",
+              "it follows a pattern"
+            ],
+            "answer": "we cannot predict WHICH nucleus will decay next",
+            "explanation": "Radioactive decay is a quantum process — individually unpredictable, statistically predictable in bulk"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Activity A = λN. If λ=0.1 s⁻¹ and N=5000, A=",
+            "options": [
+              "500 Bq",
+              "50 Bq",
+              "0.00002 Bq",
+              "5000 Bq"
+            ],
+            "answer": "500 Bq",
+            "explanation": "A=λN=0.1×5000=500 decays per second = 500 Bq"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "t½=10 days. Decay constant λ=",
+            "options": [
+              "0.0693 day⁻¹",
+              "10 day⁻¹",
+              "6.93 day⁻¹",
+              "0.1 day⁻¹"
+            ],
+            "answer": "0.0693 day⁻¹",
+            "explanation": "λ=0.693/t½=0.693/10=0.0693 day⁻¹"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "After 4 half-lives, fraction remaining=",
+            "options": [
+              "1/4",
+              "1/8",
+              "1/16",
+              "1/2"
+            ],
+            "answer": "1/16",
+            "explanation": "(½)^4=1/16"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Carbon-14 dating works because",
+            "options": [
+              "all organisms contain C-14",
+              "living organisms maintain constant ¹⁴C/¹²C ratio which decays after death",
+              "C-14 is stable",
+              "organisms absorb C-14 after death"
+            ],
+            "answer": "living organisms maintain constant ¹⁴C/¹²C ratio which decays after death",
+            "explanation": "While alive: ¹⁴C replenished from atmosphere. After death: ¹⁴C decays, ratio decreases predictably"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Technetium-99m (t½=6 hours) used in medical scans. After 24 hours, fraction remaining=",
+            "options": [
+              "1/2",
+              "1/4",
+              "1/8",
+              "1/16"
+            ],
+            "answer": "1/16",
+            "explanation": "24/6=4 half-lives: (½)^4=1/16"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Background radiation comes from",
+            "options": [
+              "only nuclear power",
+              "cosmic rays, rocks (radon), food, medical sources",
+              "only medical sources",
+              "only the sun"
+            ],
+            "answer": "cosmic rays, rocks (radon), food, medical sources",
+            "explanation": "Background radiation: ~50% from radon gas, ~10% cosmic, ~12% medical, ~13% food, ~15% buildings/soil"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "N=N₀e^(-λt). Why does activity never reach exactly zero?",
+            "options": [
+              "It does reach zero",
+              "Exponential decay approaches zero asymptotically but never reaches it",
+              "λ changes",
+              "N₀ is constant"
+            ],
+            "answer": "Exponential decay approaches zero asymptotically but never reaches it",
+            "explanation": "Exponential function: e^(-λt)→0 as t→∞ but never equals zero mathematically"
+          },
+          {
+            "id": "nuclear_physics_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l5_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l5_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l5_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l5_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l5_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l5_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l5_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l5_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l3",
+      "title": "Nuclear Fission, Fusion and Applications",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Nuclear Fission:\nHeavy nucleus splits into smaller nuclei + neutrons + energy\n²³⁵U + n → ⁹²Kr + ¹⁴¹Ba + 3n + 200 MeV\nChain reaction: neutrons cause further fissions\nCritical mass: minimum mass for self-sustaining chain reaction\n\nNuclear Fusion:\nLight nuclei combine → heavier nucleus + energy\n²H + ³H → ⁴He + n + 17.6 MeV\nRequires extreme T (~10⁸ K) and pressure\nPowers the sun and stars"
+        },
+        {
+          "type": "example",
+          "title": "Nuclear Power Station",
+          "body": "Fuel: enriched uranium (3% ²³⁵U)\nModeration: slow neutrons (graphite/water)\nControl rods: absorb neutrons (boron/cadmium) — control reaction rate\nCoolant: removes heat (water/CO₂/liquid metal)\nHeat exchanger → steam → turbine → generator\nContainment: thick concrete shields radiation"
+        },
+        {
+          "type": "example",
+          "title": "Fusion vs Fission",
+          "body": "Fission advantages: controllable, lots of energy per kg\nFission disadvantages: radioactive waste (thousands of years), meltdown risk\n\nFusion advantages: more energy per reaction, fuel abundant (hydrogen from sea), little radioactive waste\nFusion disadvantages: requires 100 million°C — no material can contain it directly (magnetic confinement: tokamak)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Nuclear fission involves",
+            "options": [
+              "combining light nuclei",
+              "splitting heavy nucleus into smaller fragments + energy",
+              "beta decay",
+              "electron capture"
+            ],
+            "answer": "splitting heavy nucleus into smaller fragments + energy",
+            "explanation": "Fission: heavy nucleus (U-235, Pu-239) splits when struck by neutron, releasing 2-3 neutrons and ~200 MeV"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In a chain reaction, neutrons from one fission cause",
+            "options": [
+              "no further reactions",
+              "one more fission only",
+              "further fissions — self-sustaining reaction",
+              "fusion reactions"
+            ],
+            "answer": "further fissions — self-sustaining reaction",
+            "explanation": "Each fission releases ~3 neutrons; each can trigger another fission → exponential chain reaction"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Control rods in a nuclear reactor",
+            "options": [
+              "generate heat",
+              "slow neutrons",
+              "absorb neutrons to control reaction rate",
+              "cool the fuel"
+            ],
+            "answer": "absorb neutrons to control reaction rate",
+            "explanation": "Control rods (boron/cadmium) absorb neutrons. Inserting deeper → fewer neutrons available → reaction slows"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Moderator in a nuclear reactor slows neutrons because",
+            "options": [
+              "fast neutrons cause too much fission",
+              "slow (thermal) neutrons are more likely to cause fission in U-235",
+              "fast neutrons escape",
+              "moderator absorbs neutrons"
+            ],
+            "answer": "slow (thermal) neutrons are more likely to cause fission in U-235",
+            "explanation": "U-235 fission cross-section is much higher for thermal (slow) neutrons — moderation improves efficiency"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Nuclear fusion powers the sun. The reaction fuses",
+            "options": [
+              "uranium nuclei",
+              "hydrogen isotopes (deuterium + tritium) → helium + energy",
+              "carbon atoms",
+              "neutrons only"
+            ],
+            "answer": "hydrogen isotopes (deuterium + tritium) → helium + energy",
+            "explanation": "Sun: p-p chain fusing hydrogen → helium. Fusion reactors use ²H+³H→⁴He+n+17.6 MeV"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Main challenge for controlled fusion reactors on Earth",
+            "options": [
+              "finding fuel",
+              "plasma must reach ~100 million°C — containing it is extremely difficult",
+              "uranium shortage",
+              "radiation shielding"
+            ],
+            "answer": "plasma must reach ~100 million°C — containing it is extremely difficult",
+            "explanation": "Fusion requires T>10⁸K. No material withstands this — magnetic confinement (tokamak) or inertial confinement used"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Radioactive waste from fission requires",
+            "options": [
+              "1-2 years storage",
+              "overnight cooling",
+              "safe storage for thousands of years",
+              "burial in garden"
+            ],
+            "answer": "safe storage for thousands of years",
+            "explanation": "Long-lived isotopes (Cs-137 t½=30y, Pu-239 t½=24,000y) require deep geological storage for millennia"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Fusion is considered cleaner than fission because",
+            "options": [
+              "it produces no energy",
+              "fuel is unlimited hydrogen from seawater and products are mainly helium (not long-lived waste)",
+              "it is colder",
+              "it uses uranium"
+            ],
+            "answer": "fuel is unlimited hydrogen from seawater and products are mainly helium (not long-lived waste)",
+            "explanation": "Fusion: abundant fuel (H from seawater), products mostly ⁴He (stable) — far less problematic waste than fission"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "E=mc². 1 atomic mass unit u=1.66×10⁻²⁷kg. Mass defect 0.001u → energy release =",
+            "options": [
+              "1.49×10⁻¹³ J",
+              "1.66×10⁻³⁰ J",
+              "9×10¹³ J",
+              "3×10⁸ J"
+            ],
+            "answer": "1.49×10⁻¹³ J",
+            "explanation": "E=Δmc²=0.001×1.66×10⁻²⁷×(3×10⁸)²=1.49×10⁻¹³ J"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Critical mass of fissile material is the minimum mass needed for",
+            "options": [
+              "storing safely",
+              "a self-sustaining chain reaction",
+              "medical use",
+              "power generation only"
+            ],
+            "answer": "a self-sustaining chain reaction",
+            "explanation": "Below critical mass: too many neutrons escape without causing fission. At/above critical: chain reaction sustained"
+          },
+          {
+            "id": "nuclear_physics_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l6_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l6_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l6_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l6_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l6_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l6_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l6_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l6_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_phy_nuc_l4",
+      "title": "Radiation Safety and Medical Applications",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "Ionising radiation can damage living tissue. Understanding risks and protective measures is essential. Medical applications exploit controlled radiation for diagnosis and treatment."
+        },
+        {
+          "type": "formula",
+          "body": "Radiation dose:\nAbsorbed dose: D = E/m (Gray, Gy = J/kg)\nEquivalent dose: H = D × Q (Sievert, Sv)\nQ = quality factor (α=20, β=1, γ=1)\nEffective dose accounts for tissue sensitivity\n\nProtection: Time, Distance, Shielding\nInverse square law: I ∝ 1/r²"
+        },
+        {
+          "type": "example",
+          "title": "Medical Uses",
+          "body": "Diagnosis:\n• X-rays: dense tissue (bones) absorb more → shadow image\n• CT scan: multiple X-ray angles → 3D image\n• PET scan: positron-emitting isotope → annihilation γ-rays\n• Gamma camera: Tc-99m (t½=6h) γ-emission tracked\n\nTherapy:\n• Radiotherapy: γ-rays (Co-60) targeted at tumour\n• Brachytherapy: radioactive seeds implanted\n• Iodine-131: treats thyroid cancer (absorbed by thyroid)"
+        },
+        {
+          "type": "example",
+          "title": "Radiation Protection",
+          "body": "ALARA principle: As Low As Reasonably Achievable\nTime: minimize exposure time\nDistance: double distance → ¼ intensity (inverse square)\nShielding: α=paper, β=aluminium, γ=thick lead/concrete\n\nRadon gas: naturally occurring, can accumulate indoors\nMost significant natural radiation source in UK homes"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Unit of absorbed radiation dose is",
+            "options": [
+              "Sievert",
+              "Becquerel",
+              "Gray",
+              "Curie"
+            ],
+            "answer": "Gray",
+            "explanation": "Gray (Gy): absorbed dose = energy deposited per unit mass (J/kg). Sievert accounts for biological effect"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Alpha particles are most ionising inside body because",
+            "options": [
+              "they travel far",
+              "they have large mass and charge, depositing all energy over short distance",
+              "they penetrate deeply",
+              "they are fast"
+            ],
+            "answer": "they have large mass and charge, depositing all energy over short distance",
+            "explanation": "Alpha: mass=4, charge=2 → intense ionisation in very short path (~40μm in tissue) — most damaging internally"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Inverse square law: double the distance from source, intensity becomes",
+            "options": [
+              "double",
+              "half",
+              "quarter",
+              "same"
+            ],
+            "answer": "quarter",
+            "explanation": "I∝1/r². Double r → I×(1/4). Essential for radiation safety"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Technetium-99m (t½=6h) is ideal for medical scans because",
+            "options": [
+              "it is very radioactive",
+              "it emits only gamma (for detection), short half-life (reduces patient dose), and concentrates in specific tissues",
+              "it is cheap",
+              "it emits alpha"
+            ],
+            "answer": "it emits only gamma (for detection), short half-life (reduces patient dose), and concentrates in specific tissues",
+            "explanation": "Ideal medical isotope: gamma emitter (detectable outside body), short t½, chemically attaches to target tissue"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Radiotherapy treats cancer by",
+            "options": [
+              "chemotherapy",
+              "targeted ionising radiation damaging tumour DNA",
+              "surgery",
+              "drugs"
+            ],
+            "answer": "targeted ionising radiation damaging tumour DNA",
+            "explanation": "Radiation breaks DNA strands in rapidly dividing cancer cells. Multiple beams cross at tumour to minimise healthy tissue dose"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "ALARA principle in radiation protection means",
+            "options": [
+              "use maximum dose",
+              "keep dose as low as reasonably achievable",
+              "avoid all radiation",
+              "use alpha only"
+            ],
+            "answer": "keep dose as low as reasonably achievable",
+            "explanation": "ALARA: minimize exposure while achieving required purpose — time, distance, shielding"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Main advantage of PET scan over X-ray",
+            "options": [
+              "cheaper",
+              "gives 3D metabolic activity images (functional, not just structural)",
+              "uses visible light",
+              "no radiation"
+            ],
+            "answer": "gives 3D metabolic activity images (functional, not just structural)",
+            "explanation": "PET: positron-emitting tracer shows metabolic activity (e.g. glucose uptake) — can detect cancer before structural changes"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Radon gas is dangerous because",
+            "options": [
+              "it is toxic chemically",
+              "it is an alpha emitter that can be inhaled, irradiating lung tissue",
+              "it blocks oxygen",
+              "it is hot"
+            ],
+            "answer": "it is an alpha emitter that can be inhaled, irradiating lung tissue",
+            "explanation": "Radon-222 (from uranium decay in rocks) enters buildings. When inhaled, alpha decay directly irradiates bronchial tissue"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Worker receives 2 Gy of alpha radiation (Q=20). Equivalent dose =",
+            "options": [
+              "2 Sv",
+              "40 Sv",
+              "0.1 Sv",
+              "2.2 Sv"
+            ],
+            "answer": "40 Sv",
+            "explanation": "H=D×Q=2×20=40 Sv (very dangerous — lethal dose ~6Sv whole body)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Background radiation sources in Uganda/Africa include",
+            "options": [
+              "only nuclear plants",
+              "cosmic rays, soil/rocks (thorium/uranium), food (K-40), medical",
+              "power lines",
+              "mobile phones"
+            ],
+            "answer": "cosmic rays, soil/rocks (thorium/uranium), food (K-40), medical",
+            "explanation": "Natural background: cosmic rays, terrestrial (U-238, Th-232 in rocks), radon, food (K-40, C-14). Plus medical exposures"
+          },
+          {
+            "id": "nuclear_physics_l7_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "nuclear_physics_l7_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "nuclear_physics_l7_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "nuclear_physics_l7_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "nuclear_physics_l7_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "nuclear_physics_l7_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "nuclear_physics_l7_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "nuclear_physics_l7_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "nuclear_physics_l7_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "nuclear_physics_l7_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "nuclear_physics"
+}

@@ -1,0 +1,1809 @@
+{
+  "topic_id": "energy",
+  "topic_title": "Work, Energy & Power",
+  "subject": "physics",
+  "class_level": "S1",
+  "lessons": [
+    {
+      "id": "energy_l1",
+      "title": "Work and Energy",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "text",
+          "body": "In physics, 'work' has a precise meaning. Work is done when a force moves an object in the direction of the force. Energy is the capacity to do work. Energy can neither be created nor destroyed — only converted from one form to another (Law of Conservation of Energy)."
+        },
+        {
+          "type": "formula",
+          "body": "Work Done:\nW = F × d × cos θ\nW = work (Joules, J)\nF = force (Newtons, N)\nd = displacement in direction of force (metres, m)\nθ = angle between force and displacement\n\nIf force and displacement are in SAME direction: θ=0, cos0=1\nW = F × d (simplest case)"
+        },
+        {
+          "type": "formula",
+          "body": "Types of Energy:\nKinetic Energy (KE): energy of motion\nKE = ½mv²  (m=mass in kg, v=speed in m/s)\n\nGravitational Potential Energy (GPE): energy due to height\nGPE = mgh  (m=mass, g=9.8 m/s², h=height in m)\n\nElastic PE: energy stored in stretched/compressed objects\nChemical, thermal, nuclear, electromagnetic, sound..."
+        },
+        {
+          "type": "example",
+          "title": "Energy Calculations",
+          "body": "A 2 kg ball is lifted 3 m high:\nGPE = mgh = 2 × 9.8 × 3 = 58.8 J\n\nThe ball is released and falls. At the bottom:\nAll GPE converts to KE (ignoring air resistance)\nKE = 58.8 J\n½mv² = 58.8 → v² = 58.8 × 2/2 = 58.8 → v = 7.67 m/s"
+        },
+        {
+          "type": "formula",
+          "body": "Conservation of Mechanical Energy:\nKE + GPE = constant (no friction)\n\nAt top: v=0, KE=0, all energy is GPE\nAt bottom: h=0, GPE=0, all energy is KE\n\nWork-Energy Theorem:\nNet work done on object = Change in kinetic energy\nW = ΔKE = ½mv² − ½mu²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Work done = F × d. Unit of work is:",
+            "options": [
+              "Newton",
+              "Watt",
+              "Joule",
+              "Pascal"
+            ],
+            "answer": "Joule",
+            "explanation": "Work is measured in Joules (J). 1 Joule = 1 Newton × 1 metre."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Force = 20N, displacement = 5m (same direction). Work done = ?",
+            "options": [
+              "4 J",
+              "25 J",
+              "100 J",
+              "15 J"
+            ],
+            "answer": "100 J",
+            "explanation": "W = F × d = 20 × 5 = 100 J."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "KE = ½mv². Object m=4kg, v=3m/s. KE = ?",
+            "options": [
+              "6 J",
+              "36 J",
+              "18 J",
+              "24 J"
+            ],
+            "answer": "18 J",
+            "explanation": "KE = ½ × 4 × 3² = ½ × 4 × 9 = 18 J."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "GPE = mgh. m=5kg, h=10m, g=9.8m/s². GPE = ?",
+            "options": [
+              "490 J",
+              "50 J",
+              "98 J",
+              "980 J"
+            ],
+            "answer": "490 J",
+            "explanation": "GPE = 5 × 9.8 × 10 = 490 J."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A ball falls from 5m. At bottom, speed is (g=10):",
+            "options": [
+              "10 m/s",
+              "5 m/s",
+              "50 m/s",
+              "√100=10 m/s"
+            ],
+            "answer": "10 m/s",
+            "explanation": "GPE→KE: mgh=½mv² → gh=½v² → v²=2×10×5=100 → v=10 m/s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "When you carry a box horizontally (no vertical movement), work done against gravity is:",
+            "options": [
+              "mgh",
+              "Zero",
+              "Positive",
+              "F×d"
+            ],
+            "answer": "Zero",
+            "explanation": "Work = F×d×cosθ. For gravity (vertical), horizontal displacement means θ=90°. cos90°=0. No work done against gravity."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Energy is measured in:",
+            "options": [
+              "Watts",
+              "Joules",
+              "Newtons",
+              "m/s"
+            ],
+            "answer": "Joules",
+            "explanation": "Energy (like work) is measured in Joules (J)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A stretched spring has:",
+            "options": [
+              "Kinetic energy",
+              "Gravitational PE",
+              "Elastic PE",
+              "No energy"
+            ],
+            "answer": "Elastic PE",
+            "explanation": "A stretched or compressed spring stores elastic potential energy."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "As an object falls freely, what happens to its KE and GPE?",
+            "options": [
+              "Both increase",
+              "Both decrease",
+              "KE increases, GPE decreases",
+              "GPE increases, KE decreases"
+            ],
+            "answer": "KE increases, GPE decreases",
+            "explanation": "As height decreases, GPE converts to KE. Total mechanical energy stays constant."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "No work is done when:",
+            "options": [
+              "A force moves an object",
+              "An object is lifted",
+              "The force and displacement are perpendicular",
+              "Energy is transferred"
+            ],
+            "answer": "The force and displacement are perpendicular",
+            "explanation": "W = Fdcosθ. When θ=90°, cos90°=0, so W=0. No work is done."
+          },
+          {
+            "id": "energy_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l1_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l1_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l1_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy_l2",
+      "title": "Power and Efficiency",
+      "duration_minutes": 22,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "POWER:\nPower = Work done / Time taken\nP = W/t = F×v\nUnit: Watt (W). 1W = 1 J/s\n1 kW = 1000 W\n1 MW = 1,000,000 W\n\nPower tells us HOW FAST energy is transferred or work is done."
+        },
+        {
+          "type": "example",
+          "title": "Power Calculations",
+          "body": "A motor does 6000 J of work in 30 seconds. Find its power.\nP = W/t = 6000/30 = 200 W\n\nA car engine produces force 2000N and travels at 20 m/s. Find power.\nP = F×v = 2000 × 20 = 40,000 W = 40 kW"
+        },
+        {
+          "type": "formula",
+          "body": "EFFICIENCY:\nEfficiency = (Useful energy output / Total energy input) × 100%\n\nNo machine is 100% efficient — energy is always lost, usually as heat and sound.\n\nEfficiency tells us what fraction of input energy is usefully converted."
+        },
+        {
+          "type": "example",
+          "title": "Efficiency Calculations",
+          "body": "A light bulb receives 100 J of electrical energy.\nIt produces 15 J of light and 85 J of heat.\nEfficiency = (15/100) × 100% = 15%\n\nA motor is 80% efficient and receives 500 J.\nUseful work = 80% × 500 = 400 J\nWasted energy = 100 J (as heat/sound)"
+        },
+        {
+          "type": "text",
+          "body": "Energy sources:\nRenewable: solar, wind, hydro, geothermal, tidal — naturally replenished\nNon-renewable: coal, oil, natural gas, nuclear fuel — limited supply, cause pollution\nUganda's energy: mainly hydroelectric (Owen Falls/Jinja, Karuma, Isimba dams on River Nile)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Power is measured in:",
+            "options": [
+              "Joules",
+              "Watts",
+              "Newtons",
+              "Metres"
+            ],
+            "answer": "Watts",
+            "explanation": "Power is measured in Watts (W). 1 Watt = 1 Joule per second."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "W=1500J done in 5s. Find power.",
+            "options": [
+              "7500W",
+              "300W",
+              "1505W",
+              "1495W"
+            ],
+            "answer": "300W",
+            "explanation": "P = W/t = 1500/5 = 300 W."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "1 kW = ?",
+            "options": [
+              "100W",
+              "10W",
+              "1000W",
+              "10000W"
+            ],
+            "answer": "1000W",
+            "explanation": "kilo = 1000. 1 kilowatt = 1000 watts."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Efficiency = (useful output / total input) × 100%. Motor: input=800J, useful output=600J. Efficiency = ?",
+            "options": [
+              "75%",
+              "133%",
+              "25%",
+              "200J"
+            ],
+            "answer": "75%",
+            "explanation": "Efficiency = (600/800) × 100% = 75%."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why is no machine 100% efficient?",
+            "options": [
+              "We don't build them properly",
+              "Energy is always lost, usually as heat or sound",
+              "The formula is wrong",
+              "Efficiency can be over 100%"
+            ],
+            "answer": "Energy is always lost, usually as heat or sound",
+            "explanation": "Friction and air resistance convert some input energy to heat and sound — this energy cannot be usefully recovered."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A car engine force=3000N at v=25m/s. Power = ?",
+            "options": [
+              "75W",
+              "120W",
+              "75000W",
+              "3025W"
+            ],
+            "answer": "75000W",
+            "explanation": "P = F×v = 3000 × 25 = 75,000 W = 75 kW."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Solar panels are a renewable energy source because:",
+            "options": [
+              "They never stop working",
+              "Sunlight is naturally and continuously replenished",
+              "They have no cost",
+              "They work at night too"
+            ],
+            "answer": "Sunlight is naturally and continuously replenished",
+            "explanation": "Renewable energy comes from sources that are naturally replenished — the sun keeps shining."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Uganda's largest energy source is:",
+            "options": [
+              "Coal",
+              "Solar",
+              "Hydroelectric (from River Nile)",
+              "Nuclear"
+            ],
+            "answer": "Hydroelectric (from River Nile)",
+            "explanation": "Uganda generates most of its electricity from hydroelectric dams on the River Nile, including Nalubaale (Owen Falls) and Karuma."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Motor is 70% efficient. Input=1000J. Wasted energy = ?",
+            "options": [
+              "700J",
+              "70J",
+              "300J",
+              "1300J"
+            ],
+            "answer": "300J",
+            "explanation": "Useful = 70% × 1000 = 700J. Wasted = 1000 − 700 = 300J."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A person climbs 10m in 20s. Mass=60kg, g=10. Power output = ?",
+            "options": [
+              "30W",
+              "300W",
+              "600W",
+              "6000W"
+            ],
+            "answer": "300W",
+            "explanation": "W = mgh = 60×10×10 = 6000J. P = W/t = 6000/20 = 300W."
+          },
+          {
+            "id": "energy_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy_l3",
+      "title": "Work, Power and Efficiency",
+      "duration_minutes": 25,
+      "xp_reward": 55,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Work done:\nW = Fd cosθ\nW = work (J), F = force (N), d = displacement (m), θ = angle between force and displacement\nIf force parallel to motion: W = Fd\nUnit: joule (J) = N·m"
+        },
+        {
+          "type": "formula",
+          "body": "Power:\nP = W/t = Fd/t = Fv\nP = power (W), W = work (J), t = time (s)\nUnit: watt (W) = J/s\n1 kW = 1000 W, 1 MW = 10⁶ W"
+        },
+        {
+          "type": "formula",
+          "body": "Efficiency:\nEfficiency = (useful energy output / total energy input) × 100%\nOr: Efficiency = (useful power output / total power input) × 100%\nNo machine is 100% efficient — some energy always lost as heat"
+        },
+        {
+          "type": "example",
+          "title": "Power Calculation",
+          "body": "A motor lifts a 200 kg load 5 m in 10 seconds.\nWork done = mgh = 200×10×5 = 10,000 J\nPower = W/t = 10,000/10 = 1000 W = 1 kW"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Work done = Force × ...",
+            "options": [
+              "Time",
+              "Mass",
+              "Displacement (in direction of force)",
+              "Velocity"
+            ],
+            "answer": "Displacement (in direction of force)",
+            "explanation": "W = Fd cosθ. When force and motion are parallel (θ=0), W = Fd."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "No work is done when...",
+            "options": [
+              "Force is large",
+              "Object moves in direction of force",
+              "Force is perpendicular to displacement",
+              "Object is heavy"
+            ],
+            "answer": "Force is perpendicular to displacement",
+            "explanation": "W = Fd cosθ. When θ=90°, cos90°=0, W=0. No work done when force ⊥ displacement."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Power = ",
+            "options": [
+              "Force × distance",
+              "Work / time",
+              "Force × time",
+              "Energy × velocity"
+            ],
+            "answer": "Work / time",
+            "explanation": "Power = rate of doing work = Work ÷ time. Unit: watt (W)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 500 W motor runs for 20 s. Work done = ",
+            "options": [
+              "25 J",
+              "10",
+              "000 J",
+              "520 J",
+              "480 J"
+            ],
+            "answer": "10,000 J",
+            "explanation": "Work = Power × time = 500 × 20 = 10,000 J"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A machine uses 2000 J but only 1500 J is useful. Efficiency = ",
+            "options": [
+              "75%",
+              "133%",
+              "500 J",
+              "25%"
+            ],
+            "answer": "75%",
+            "explanation": "Efficiency = (1500/2000) × 100% = 75%"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is no machine 100% efficient?",
+            "options": [
+              "Machines are poorly designed",
+              "Some energy always lost as heat (friction)",
+              "Machines run too fast",
+              "Laws of physics prevent it"
+            ],
+            "answer": "Some energy always lost as heat (friction)",
+            "explanation": "Friction in moving parts always converts some energy to heat, reducing useful output."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Unit of work done is...",
+            "options": [
+              "Watt",
+              "Newton",
+              "Joule",
+              "Pascal"
+            ],
+            "answer": "Joule",
+            "explanation": "1 joule = work done when 1 N force moves object 1 m in direction of force."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A person of mass 60 kg climbs 3 m stairs. Work against gravity (g=10 N/kg) = ",
+            "options": [
+              "180 J",
+              "1800 J",
+              "20 J",
+              "63 J"
+            ],
+            "answer": "1800 J",
+            "explanation": "W = mgh = 60×10×3 = 1800 J"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "A car engine outputs 40 kW and moves at 20 m/s. Driving force = ",
+            "options": [
+              "2000 N",
+              "800 N",
+              "60 kN",
+              "40 N"
+            ],
+            "answer": "2000 N",
+            "explanation": "P = Fv → F = P/v = 40,000/20 = 2000 N"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Watt is equivalent to...",
+            "options": [
+              "J×s",
+              "J/s",
+              "N·m/s²",
+              "kg·m/s"
+            ],
+            "answer": "J/s",
+            "explanation": "1 W = 1 J/s (one joule per second). Power measures rate of energy transfer."
+          },
+          {
+            "id": "energy_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy_l4",
+      "title": "Energy Resources and Electricity Generation",
+      "duration_minutes": 22,
+      "xp_reward": 50,
+      "content": [
+        {
+          "type": "text",
+          "body": "Energy resources are used to generate electricity. They can be classified as renewable (replenished naturally) or non-renewable (finite supply that will run out)."
+        },
+        {
+          "type": "example",
+          "title": "Non-Renewable Resources",
+          "body": "Coal, oil, natural gas (fossil fuels) and nuclear fuel.\nAdvantages: reliable, high energy density, available on demand\nDisadvantages: CO₂ emissions (fossil fuels), finite supply, environmental damage\n\nNuclear power: no CO₂, but radioactive waste and safety concerns"
+        },
+        {
+          "type": "example",
+          "title": "Renewable Resources",
+          "body": "Solar: panels convert sunlight to electricity. No pollution. Intermittent.\nWind: turbines convert kinetic energy. No pollution. Intermittent.\nHydroelectric: falling water drives turbines. Reliable. Environmental impact on rivers.\nTidal/Wave: ocean energy. Predictable but limited locations.\nGeothermal: Earth's internal heat. Very reliable. Limited locations."
+        },
+        {
+          "type": "formula",
+          "body": "Electricity generation:\nGenerator: converts kinetic energy → electrical energy (electromagnetic induction)\nTransformer: changes voltage for efficient transmission\nHigh voltage transmission reduces current → less energy lost as heat (P=I²R)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which is a renewable energy source?",
+            "options": [
+              "Coal",
+              "Oil",
+              "Wind",
+              "Natural gas"
+            ],
+            "answer": "Wind",
+            "explanation": "Wind is continuously replenished by natural processes. Coal, oil, and natural gas are finite fossil fuels."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Fossil fuels release CO₂ when burned. This contributes to...",
+            "options": [
+              "Acid rain only",
+              "Global warming (greenhouse effect)",
+              "Ozone depletion",
+              "Nuclear radiation"
+            ],
+            "answer": "Global warming (greenhouse effect)",
+            "explanation": "CO₂ is a greenhouse gas that traps heat in the atmosphere, contributing to global warming and climate change."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Solar panels convert...",
+            "options": [
+              "Heat to electricity",
+              "Sunlight (light energy) to electricity",
+              "Wind to electricity",
+              "Water to electricity"
+            ],
+            "answer": "Sunlight (light energy) to electricity",
+            "explanation": "Solar photovoltaic (PV) panels convert light energy directly to electrical energy using the photoelectric effect."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Hydroelectric power uses...",
+            "options": [
+              "Heat from water",
+              "Kinetic energy of falling water to drive turbines",
+              "Chemical energy in water",
+              "Tidal waves"
+            ],
+            "answer": "Kinetic energy of falling water to drive turbines",
+            "explanation": "In hydroelectric power, water falls from high reservoir, its kinetic energy turns turbines, which drive generators."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why is electricity transmitted at high voltage?",
+            "options": [
+              "To increase current",
+              "To reduce current and minimise heat energy losses",
+              "To protect cables",
+              "To make it travel faster"
+            ],
+            "answer": "To reduce current and minimise heat energy losses",
+            "explanation": "Power loss = I²R. High voltage means low current, so less power lost as heat in cables."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Nuclear power produces...",
+            "options": [
+              "No radiation at all",
+              "Large amounts of CO₂",
+              "No CO₂ but radioactive waste",
+              "Cheap unlimited energy"
+            ],
+            "answer": "No CO₂ but radioactive waste",
+            "explanation": "Nuclear fission releases energy without burning fuel, so no CO₂. But it produces radioactive waste requiring careful disposal."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which energy source is most reliable regardless of weather?",
+            "options": [
+              "Solar",
+              "Wind",
+              "Nuclear",
+              "Tidal"
+            ],
+            "answer": "Nuclear",
+            "explanation": "Nuclear power plants generate electricity continuously regardless of weather. Solar and wind are intermittent."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A generator converts...",
+            "options": [
+              "Electrical energy to kinetic energy",
+              "Kinetic energy to electrical energy",
+              "Chemical energy to heat",
+              "Heat to electricity"
+            ],
+            "answer": "Kinetic energy to electrical energy",
+            "explanation": "A generator uses electromagnetic induction: rotating coil in magnetic field → electrical current."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Geothermal energy comes from...",
+            "options": [
+              "Sun's heat",
+              "Earth's internal heat",
+              "Ocean tides",
+              "Wind"
+            ],
+            "answer": "Earth's internal heat",
+            "explanation": "Geothermal energy harnesses heat from within the Earth (from radioactive decay and original formation)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "The main disadvantage of wind power is...",
+            "options": [
+              "It produces CO₂",
+              "It is intermittent (only works when wind blows)",
+              "It is expensive",
+              "It requires water"
+            ],
+            "answer": "It is intermittent (only works when wind blows)",
+            "explanation": "Wind turbines only generate electricity when wind blows at suitable speed. Energy storage is needed for calm periods."
+          },
+          {
+            "id": "energy_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy_l5",
+      "title": "Work, Energy & Power — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Work, Energy & Power. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Work, Energy & Power concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Work, Energy & Power builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Work, Energy & Power. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Work, Energy & Power. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Work, Energy & Power include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Work, Energy & Power. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "energy_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "energy_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "energy_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "energy_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "energy_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "energy_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "energy_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "energy_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "energy_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "energy_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "energy_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "energy_l6",
+      "title": "Work, Energy & Power — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Work, Energy & Power. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Work, Energy & Power concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Work, Energy & Power builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Work, Energy & Power. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Work, Energy & Power. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Work, Energy & Power include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Work, Energy & Power. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "energy_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "energy_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "energy_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "energy_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "energy_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "energy_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "energy_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "energy_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "energy_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "energy_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "energy_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "energy_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "energy_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "energy_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "energy_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "energy_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "energy_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "energy_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "energy_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "energy_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

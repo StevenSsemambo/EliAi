@@ -1,0 +1,1784 @@
+{
+  "topic_id": "astrophysics",
+  "topic_title": "Astrophysics",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "astrophysics_l1",
+      "title": "Stars, Galaxies & the Universe",
+      "duration_minutes": 25,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Astrophysics applies physics to understand stars and the universe. Stars form from nebulae, and their life cycle depends on mass. The universe began with the Big Bang about 13.8 billion years ago."
+        },
+        {
+          "type": "formula",
+          "body": "Hubble's Law: v = H₀d\nH₀ ≈ 70 km/s/Mpc (Hubble constant)\n\nStar luminosity: L ∝ R²T⁴ (Stefan-Boltzmann)\nDistance modulus: m - M = 5 log(d/10pc)"
+        },
+        {
+          "type": "example",
+          "title": "Hubble's Law",
+          "body": "A galaxy is 100 Mpc away.\nv = H₀ × d = 70 × 100 = 7000 km/s\nThis galaxy is receding from us at 7000 km/s"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Hubble's Law relates a galaxy's recession speed to its:",
+            "options": [
+              "Temperature",
+              "Age",
+              "Distance",
+              "Mass"
+            ],
+            "answer": "Distance",
+            "explanation": "v = H₀d — the farther the galaxy, the faster it recedes"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The Big Bang happened approximately:",
+            "options": [
+              "4.5 billion years ago",
+              "6000 years ago",
+              "13.8 billion years ago",
+              "1 billion years ago"
+            ],
+            "answer": "13.8 billion years ago",
+            "explanation": "Current evidence places the Big Bang at approximately 13.8 billion years ago"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A main sequence star is powered by:",
+            "options": [
+              "Nuclear fission",
+              "Chemical burning",
+              "Nuclear fusion",
+              "Gravity only"
+            ],
+            "answer": "Nuclear fusion",
+            "explanation": "Stars convert hydrogen to helium via nuclear fusion in their cores"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the final stage of a massive star (>8 solar masses)?",
+            "options": [
+              "White dwarf",
+              "Brown dwarf",
+              "Neutron star or black hole",
+              "Red giant"
+            ],
+            "answer": "Neutron star or black hole",
+            "explanation": "Massive stars end as supernovae, leaving neutron stars or black holes"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Redshift of distant galaxies provides evidence for:",
+            "options": [
+              "Universe shrinking",
+              "Static universe",
+              "Expanding universe",
+              "Star formation"
+            ],
+            "answer": "Expanding universe",
+            "explanation": "Redshifted light shows galaxies moving away — the universe is expanding"
+          },
+          {
+            "id": "astrophysics_l1_q6",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l1_q8",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l1_q10",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l1_q12",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l1_q14",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l1_q16",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l1_q18",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l1_q20",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l1_q22",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l1_q24",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "astrophysics_l1_q26",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "astrophysics_l1_q28",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "astrophysics_l1_q30",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "astrophysics_l1_q32",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "astrophysics_l1_q34",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          }
+        ]
+      }
+    },
+    {
+      "id": "astrophysics_l2",
+      "title": "Stars — Formation, Life Cycle and Classification",
+      "duration_minutes": 30,
+      "xp_reward": 75,
+      "content": [
+        {
+          "type": "text",
+          "body": "Stars are massive balls of plasma held together by gravity and powered by nuclear fusion. Our Sun is a medium-sized star. Stars are born from nebulae, evolve through different stages depending on their mass, and eventually die."
+        },
+        {
+          "type": "example",
+          "title": "Star Life Cycle",
+          "body": "Low/medium mass stars (like Sun):\nNebula → Protostar → Main sequence (billions of years) → Red giant → Planetary nebula → White dwarf → Black dwarf\n\nHigh mass stars:\nNebula → Protostar → Main sequence → Red supergiant → Supernova → Neutron star OR Black hole"
+        },
+        {
+          "type": "formula",
+          "body": "Hertzsprung-Russell (HR) Diagram:\nPlots luminosity vs surface temperature\nMain sequence: most stars including Sun (diagonal band)\nGiants and supergiants: top right\nWhite dwarfs: bottom left\nHotter stars are bluer; cooler stars are redder\n\nStefan-Boltzmann for stars: L = 4πR²σT⁴\nL = luminosity, R = radius, T = surface temperature"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What powers a star?",
+            "options": [
+              "Chemical combustion",
+              "Nuclear fission",
+              "Nuclear fusion",
+              "Gravity alone"
+            ],
+            "answer": "Nuclear fusion",
+            "explanation": "Stars are powered by nuclear fusion — hydrogen nuclei fuse to form helium, releasing enormous energy (E=mc²)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the Sun classified as on the HR diagram?",
+            "options": [
+              "Giant",
+              "White dwarf",
+              "Main sequence star",
+              "Supergiant"
+            ],
+            "answer": "Main sequence star",
+            "explanation": "The Sun is a G-type main sequence star, sitting in the diagonal band of the HR diagram."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What happens to a low-mass star after the main sequence?",
+            "options": [
+              "Goes supernova",
+              "Becomes a black hole",
+              "Becomes a red giant then white dwarf",
+              "Explodes immediately"
+            ],
+            "answer": "Becomes a red giant then white dwarf",
+            "explanation": "Low/medium mass stars (like Sun) expand into red giants, shed outer layers as planetary nebula, then cool as white dwarfs."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A supernova can produce...",
+            "options": [
+              "A red giant",
+              "A white dwarf",
+              "A neutron star or black hole",
+              "A protostar"
+            ],
+            "answer": "A neutron star or black hole",
+            "explanation": "Massive stars end their lives in supernova explosions, leaving behind either a neutron star or black hole."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "On the HR diagram, hotter stars appear...",
+            "options": [
+              "Red",
+              "Yellow",
+              "Blue-white",
+              "Orange"
+            ],
+            "answer": "Blue-white",
+            "explanation": "Wien's law: hotter stars emit peak radiation at shorter wavelengths — they appear blue/white."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Stars form from...",
+            "options": [
+              "Black holes",
+              "Planetary nebulae",
+              "Interstellar gas and dust clouds (nebulae)",
+              "White dwarfs"
+            ],
+            "answer": "Interstellar gas and dust clouds (nebulae)",
+            "explanation": "Stars begin as clouds of gas (mainly hydrogen) and dust that collapse under gravity to form protostars."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Luminosity of a star depends on...",
+            "options": [
+              "Radius and temperature only",
+              "Mass only",
+              "Radius² and T⁴",
+              "Distance from Earth"
+            ],
+            "answer": "Radius² and T⁴",
+            "explanation": "L = 4πR²σT⁴. Luminosity increases with larger radius and much more rapidly with temperature."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "White dwarfs are...",
+            "options": [
+              "Hot and large",
+              "Cool and small remnants of dead stars",
+              "Forming stars",
+              "Blue supergiants"
+            ],
+            "answer": "Cool and small remnants of dead stars",
+            "explanation": "White dwarfs are the dense remnants of low-mass stars — Earth-sized but very hot initially, gradually cooling."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "What prevents main sequence stars from collapsing under gravity?",
+            "options": [
+              "Magnetic force",
+              "Outward radiation pressure from fusion balances gravity",
+              "Dark matter",
+              "Rotation"
+            ],
+            "answer": "Outward radiation pressure from fusion balances gravity",
+            "explanation": "Main sequence stars are in hydrostatic equilibrium: gravity inward = radiation pressure from fusion outward."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Chandrasekhar limit (~1.4 solar masses) determines...",
+            "options": [
+              "Maximum mass of a neutron star",
+              "Maximum mass of a white dwarf",
+              "Minimum mass for fusion",
+              "Mass of black hole"
+            ],
+            "answer": "Maximum mass of a white dwarf",
+            "explanation": "If a white dwarf exceeds 1.4 solar masses, electron degeneracy pressure cannot support it — it collapses further."
+          },
+          {
+            "id": "astrophysics_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l2_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l2_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l2_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_phy_ast_l3",
+      "title": "The Life Cycle of Stars",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Star life cycle depends on mass:\nAll stars: nebula → protostar → main sequence\n\nLow mass (like Sun):\nmain sequence → red giant → planetary nebula → white dwarf → (black dwarf)\n\nHigh mass:\nmain sequence → red supergiant → supernova → neutron star or black hole\n\nMain sequence: H→He fusion, hydrostatic equilibrium\nHertzsprung-Russell diagram: luminosity vs temperature"
+        },
+        {
+          "type": "example",
+          "title": "Stellar Classification",
+          "body": "HR Diagram zones:\nMain sequence: diagonal band (90% of stars)\nRed giants: upper right (cool, luminous)\nWhite dwarfs: lower left (hot, dim)\nSupergiants: top (most luminous)\n\nSpectral types O B A F G K M (hottest to coolest)\nOh Be A Fine Girl/Guy Kiss Me\nSun: G-type, surface T~5800K, mass=1M☉"
+        },
+        {
+          "type": "example",
+          "title": "Nucleosynthesis",
+          "body": "Main sequence: ⁴H → ⁴He (proton-proton chain)\nRed giant: He → C, O (triple-alpha process)\nMassive stars: C,O → Ne,Mg,Si,Fe\nIron-56: most stable — no more fusion possible → core collapse\nSupernova: elements heavier than Fe formed and dispersed"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Main sequence star is powered by",
+            "options": [
+              "gravitational contraction",
+              "hydrogen to helium fusion",
+              "helium to carbon fusion",
+              "fission"
+            ],
+            "answer": "hydrogen to helium fusion",
+            "explanation": "Main sequence: nuclear fusion of H→He in core, releasing energy that supports star against gravity"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Our Sun will eventually become a",
+            "options": [
+              "neutron star",
+              "black hole",
+              "red supergiant then white dwarf",
+              "pulsar"
+            ],
+            "answer": "red supergiant then white dwarf",
+            "explanation": "Sun (low mass): red giant → planetary nebula → white dwarf. Not massive enough for neutron star/black hole"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Supernova occurs for",
+            "options": [
+              "all stars",
+              "only low-mass stars",
+              "high-mass stars when iron core collapses",
+              "binary star systems only"
+            ],
+            "answer": "high-mass stars when iron core collapses",
+            "explanation": "Massive stars: iron core (no more fusion) → collapses → rebound → supernova explosion"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Hydrostatic equilibrium means",
+            "options": [
+              "star not moving",
+              "gravity inward = radiation pressure outward (star stable)",
+              "temperature constant",
+              "fusion stopped"
+            ],
+            "answer": "gravity inward = radiation pressure outward (star stable)",
+            "explanation": "Main sequence balance: fusion energy pushes outward = gravity pulling inward → stable star"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "White dwarf is held up by",
+            "options": [
+              "nuclear fusion",
+              "neutron degeneracy pressure",
+              "electron degeneracy pressure",
+              "dark energy"
+            ],
+            "answer": "electron degeneracy pressure",
+            "explanation": "White dwarf: no fusion. Held against gravity by electron degeneracy pressure (Pauli exclusion principle)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Heaviest elements (iron, gold, uranium) were formed",
+            "options": [
+              "in Big Bang",
+              "on Earth",
+              "in stellar nucleosynthesis and supernovae",
+              "in planetary nebulae"
+            ],
+            "answer": "in stellar nucleosynthesis and supernovae",
+            "explanation": "Elements up to Fe in stellar cores; heavier elements during supernova explosions"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "HR diagram plots",
+            "options": [
+              "temperature vs distance",
+              "luminosity vs surface temperature",
+              "mass vs radius",
+              "age vs brightness"
+            ],
+            "answer": "luminosity vs surface temperature",
+            "explanation": "Hertzsprung-Russell diagram: y-axis luminosity (or magnitude), x-axis surface temperature (right to left) or spectral type"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "O-type stars are",
+            "options": [
+              "cool and red",
+              "the hottest, most luminous blue-white stars",
+              "like our Sun",
+              "dim white dwarfs"
+            ],
+            "answer": "the hottest, most luminous blue-white stars",
+            "explanation": "Spectral class O: T>30,000K, blue-white, most luminous, but rare and short-lived"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Nebula is",
+            "options": [
+              "a galaxy",
+              "cloud of gas and dust from which stars form",
+              "remnant of supernova only",
+              "group of stars"
+            ],
+            "answer": "cloud of gas and dust from which stars form",
+            "explanation": "Nebulae are stellar nurseries — gravity causes regions to collapse forming protostars"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Chandrasekhar limit (~1.4M☉) is maximum mass for a",
+            "options": [
+              "neutron star",
+              "main sequence star",
+              "white dwarf",
+              "black hole"
+            ],
+            "answer": "white dwarf",
+            "explanation": "Above Chandrasekhar limit, electron degeneracy pressure cannot support white dwarf → collapses to neutron star"
+          },
+          {
+            "id": "astrophysics_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l3_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l3_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l3_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_phy_ast_l4",
+      "title": "Cosmology: Big Bang and Expanding Universe",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Evidence for expanding universe:\nHubble's law: v = H₀d\nH₀ ≈ 70 km/s/Mpc (Hubble constant)\nRedshift: light stretched as source moves away\nz = Δλ/λ = v/c (for v<<c)\n\nCosmic Microwave Background (CMB):\nRemnant radiation from ~380,000 years after Big Bang\nT≈2.7K, extremely uniform\n\nAge of universe ≈ 1/H₀ ≈ 13.8 billion years"
+        },
+        {
+          "type": "example",
+          "title": "Big Bang Evidence",
+          "body": "1. Hubble's law: galaxies recede faster with distance\n2. CMB: uniform 2.7K background radiation (Penzias & Wilson 1964)\n3. Big Bang nucleosynthesis: predicted H:He ≈ 3:1 (observed!)\n4. Large-scale structure: galaxy distribution matches models\n\nFATE: Dark energy (68%), dark matter (27%), ordinary matter (5%)"
+        },
+        {
+          "type": "example",
+          "title": "Redshift and Blueshift",
+          "body": "Doppler effect for light:\nReceding source: wavelength stretched → redshift (z>0)\nApproaching source: wavelength compressed → blueshift\nAndromeda galaxy: blueshifted (approaching Milky Way)\nAll other galaxies: redshifted (expanding universe)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Hubble's law (v=H₀d) tells us",
+            "options": [
+              "galaxies orbit centre",
+              "more distant galaxies recede faster → universe expanding",
+              "universe is contracting",
+              "galaxy speed = mass"
+            ],
+            "answer": "more distant galaxies recede faster → universe expanding",
+            "explanation": "Hubble's law: recessional velocity proportional to distance. All galaxies receding → universe expanding from all points"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Redshift of galaxy means",
+            "options": [
+              "it is hot",
+              "it is approaching us",
+              "it is receding from us (light wavelength stretched)",
+              "it emits red light"
+            ],
+            "answer": "it is receding from us (light wavelength stretched)",
+            "explanation": "Redshift: wavelengths of spectral lines longer than expected → Doppler effect → moving away"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Cosmic Microwave Background radiation is evidence for Big Bang because",
+            "options": [
+              "it is hot",
+              "it is the afterglow of the hot early universe, now cooled to 2.7K",
+              "it comes from stars",
+              "it fills one direction"
+            ],
+            "answer": "it is the afterglow of the hot early universe, now cooled to 2.7K",
+            "explanation": "CMB: thermal radiation from when universe first became transparent (~380,000 years old), red-shifted to 2.7K today"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Age of universe estimated from Hubble constant as approximately",
+            "options": [
+              "6 billion years",
+              "13.8 billion years",
+              "100 billion years",
+              "1 million years"
+            ],
+            "answer": "13.8 billion years",
+            "explanation": "t ≈ 1/H₀ ≈ 1/(70 km/s/Mpc) ≈ 13.8 billion years"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Dark energy makes up approximately what fraction of universe?",
+            "options": [
+              "5%",
+              "27%",
+              "68%",
+              "100%"
+            ],
+            "answer": "68%",
+            "explanation": "Current model: 68% dark energy, 27% dark matter, 5% ordinary matter (baryonic)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Hubble constant H₀ units are",
+            "options": [
+              "km/s",
+              "km/s/Mpc",
+              "m/s²",
+              "Hz"
+            ],
+            "answer": "km/s/Mpc",
+            "explanation": "H₀ in km/s per megaparsec: velocity per unit distance. 1 Mpc ≈ 3.1×10²² m"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Olbers' paradox asks why the night sky is dark if universe is infinite. Resolution is",
+            "options": [
+              "stars too far",
+              "universe has finite age, so light from very distant stars hasn't reached us",
+              "stars absorb each other",
+              "dark matter blocks light"
+            ],
+            "answer": "universe has finite age, so light from very distant stars hasn't reached us",
+            "explanation": "Finite age → finite observable universe. We only see light from within the cosmological horizon"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Andromeda galaxy shows blueshift, meaning",
+            "options": [
+              "it is cool",
+              "it is approaching the Milky Way",
+              "it is small",
+              "it has no stars"
+            ],
+            "answer": "it is approaching the Milky Way",
+            "explanation": "Blueshift indicates approach. Andromeda and Milky Way will collide in ~4.5 billion years"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Big Bang nucleosynthesis predicted the ratio of hydrogen to helium (3:1). This is considered strong evidence because",
+            "options": [
+              "it was known before the theory",
+              "the prediction was made before observation and matched accurately",
+              "helium is rare",
+              "ratio is always 3:1"
+            ],
+            "answer": "the prediction was made before observation and matched accurately",
+            "explanation": "Predictive success: Big Bang model predicted H:He ratio before it was precisely measured — strong scientific test"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "What does z=0.5 redshift tell us about a galaxy?",
+            "options": [
+              "5% of speed of light",
+              "v≈0.5c, galaxy very distant",
+              "z<1 means not moving",
+              "z=0.5 means 50% wavelength shift"
+            ],
+            "answer": "v≈0.5c, galaxy very distant",
+            "explanation": "z=Δλ/λ≈v/c for small z. z=0.5: v≈0.5×3×10⁸=1.5×10⁸m/s, extremely distant galaxy"
+          },
+          {
+            "id": "astrophysics_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l4_q13",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l4_q21",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l4_q27",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          }
+        ]
+      }
+    },
+    {
+      "id": "astrophysics_l5",
+      "title": "Astrophysics — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Astrophysics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Astrophysics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Astrophysics builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Astrophysics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Astrophysics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Astrophysics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Astrophysics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "astrophysics_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l5_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l5_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l5_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "astrophysics_l5_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "astrophysics_l5_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "astrophysics_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "astrophysics_l5_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "astrophysics_l5_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "astrophysics_l5_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "astrophysics_l5_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "astrophysics_l5_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "astrophysics_l5_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "astrophysics_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    },
+    {
+      "id": "astrophysics_l6",
+      "title": "Astrophysics — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Astrophysics. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Astrophysics concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Astrophysics builds on foundational knowledge. In physics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Astrophysics. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Astrophysics. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Astrophysics include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Astrophysics. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "astrophysics_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the SI unit of force?",
+            "options": [
+              "Newton (N)",
+              "Joule (J)",
+              "Watt (W)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Newton (N)",
+            "explanation": "Force is measured in Newtons (N). Named after Sir Isaac Newton. 1 N = 1 kg⋅m/s²."
+          },
+          {
+            "id": "astrophysics_l6_q2",
+            "type": "multiple_choice",
+            "question": "State Newton's Second Law of Motion.",
+            "options": [
+              "Force = mass × acceleration (F = ma)",
+              "An object at rest stays at rest",
+              "Every action has an equal reaction",
+              "Force = mass + velocity"
+            ],
+            "answer": "Force = mass × acceleration (F = ma)",
+            "explanation": "Newton's Second Law: F = ma, where F is net force, m is mass, and a is acceleration."
+          },
+          {
+            "id": "astrophysics_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the speed if distance = 60 m and time = 12 s?",
+            "options": [
+              "5 m/s",
+              "72 m/s",
+              "0.2 m/s",
+              "48 m/s"
+            ],
+            "answer": "5 m/s",
+            "explanation": "Speed = distance ÷ time = 60 ÷ 12 = 5 m/s."
+          },
+          {
+            "id": "astrophysics_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of wave is light?",
+            "options": [
+              "Transverse wave",
+              "Longitudinal wave",
+              "Mechanical wave",
+              "Sound wave"
+            ],
+            "answer": "Transverse wave",
+            "explanation": "Light is a transverse electromagnetic wave — particles oscillate perpendicular to the direction of travel."
+          },
+          {
+            "id": "astrophysics_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the unit of electrical resistance?",
+            "options": [
+              "Ohm (Ω)",
+              "Volt (V)",
+              "Ampere (A)",
+              "Coulomb (C)"
+            ],
+            "answer": "Ohm (Ω)",
+            "explanation": "Resistance is measured in Ohms (Ω), named after Georg Simon Ohm."
+          },
+          {
+            "id": "astrophysics_l6_q6",
+            "type": "multiple_choice",
+            "question": "Using V = IR, if I = 3A and R = 4Ω, find V.",
+            "options": [
+              "12 V",
+              "1.33 V",
+              "7 V",
+              "34 V"
+            ],
+            "answer": "12 V",
+            "explanation": "V = IR = 3 × 4 = 12 V."
+          },
+          {
+            "id": "astrophysics_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is the acceleration due to gravity on Earth?",
+            "options": [
+              "9.8 m/s² (approximately 10 m/s²)",
+              "9.8 m/s",
+              "9.8 N",
+              "98 m/s²"
+            ],
+            "answer": "9.8 m/s² (approximately 10 m/s²)",
+            "explanation": "Gravitational acceleration on Earth's surface g ≈ 9.8 m/s² (often approximated as 10 m/s² in calculations)."
+          },
+          {
+            "id": "astrophysics_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is kinetic energy?",
+            "options": [
+              "Energy due to motion (KE = ½mv²)",
+              "Energy stored in a spring",
+              "Energy due to position",
+              "Chemical energy"
+            ],
+            "answer": "Energy due to motion (KE = ½mv²)",
+            "explanation": "Kinetic energy = ½mv², where m is mass and v is velocity. It is the energy possessed by a moving object."
+          },
+          {
+            "id": "astrophysics_l6_q9",
+            "type": "multiple_choice",
+            "question": "What happens to resistance as temperature increases (for most conductors)?",
+            "options": [
+              "Resistance increases",
+              "Resistance decreases",
+              "Resistance stays the same",
+              "Resistance becomes zero"
+            ],
+            "answer": "Resistance increases",
+            "explanation": "For most metallic conductors, as temperature increases, atomic vibrations increase, impeding electron flow, so resistance increases."
+          },
+          {
+            "id": "astrophysics_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is the frequency if period T = 0.5 s?",
+            "options": [
+              "2 Hz",
+              "0.5 Hz",
+              "5 Hz",
+              "0.2 Hz"
+            ],
+            "answer": "2 Hz",
+            "explanation": "Frequency f = 1/T = 1/0.5 = 2 Hz."
+          },
+          {
+            "id": "astrophysics_l6_q11",
+            "type": "multiple_choice",
+            "question": "Which quantity is a vector?",
+            "options": [
+              "Velocity",
+              "Speed",
+              "Mass",
+              "Temperature"
+            ],
+            "answer": "Velocity",
+            "explanation": "Velocity is a vector quantity — it has both magnitude and direction. Speed is a scalar (magnitude only)."
+          },
+          {
+            "id": "astrophysics_l6_q12",
+            "type": "multiple_choice",
+            "question": "What is the principle of conservation of energy?",
+            "options": [
+              "Energy cannot be created or destroyed, only transformed",
+              "Energy is always lost as heat",
+              "Kinetic energy is always conserved",
+              "Potential energy converts to mass"
+            ],
+            "answer": "Energy cannot be created or destroyed, only transformed",
+            "explanation": "The law of conservation of energy states that the total energy in a closed system remains constant."
+          },
+          {
+            "id": "astrophysics_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the unit of power?",
+            "options": [
+              "Watt (W)",
+              "Joule (J)",
+              "Newton (N)",
+              "Pascal (Pa)"
+            ],
+            "answer": "Watt (W)",
+            "explanation": "Power is measured in Watts (W). 1 W = 1 J/s. Power is the rate of energy transfer."
+          },
+          {
+            "id": "astrophysics_l6_q14",
+            "type": "multiple_choice",
+            "question": "What is the boiling point of water at standard pressure?",
+            "options": [
+              "100°C",
+              "0°C",
+              "37°C",
+              "212°F (wrong for Celsius)"
+            ],
+            "answer": "100°C",
+            "explanation": "Water boils at 100°C (373 K) at standard atmospheric pressure (101.325 kPa)."
+          },
+          {
+            "id": "astrophysics_l6_q15",
+            "type": "multiple_choice",
+            "question": "In a series circuit, the current:",
+            "options": [
+              "Is the same through all components",
+              "Splits at each component",
+              "Is largest at the first component",
+              "Is zero if one component fails"
+            ],
+            "answer": "Is the same through all components",
+            "explanation": "In a series circuit, there is only one path for current, so the same current flows through all components."
+          },
+          {
+            "id": "astrophysics_l6_q16",
+            "type": "multiple_choice",
+            "question": "What is pressure?",
+            "options": [
+              "Force per unit area (P = F/A)",
+              "Force times area",
+              "Mass per unit volume",
+              "Force times distance"
+            ],
+            "answer": "Force per unit area (P = F/A)",
+            "explanation": "Pressure P = F/A, where F is force applied perpendicular to a surface area A. SI unit is Pascal (Pa)."
+          },
+          {
+            "id": "astrophysics_l6_q17",
+            "type": "multiple_choice",
+            "question": "Which type of radiation has the highest penetrating power?",
+            "options": [
+              "Gamma (γ) rays",
+              "Alpha (α) particles",
+              "Beta (β) particles",
+              "Infrared radiation"
+            ],
+            "answer": "Gamma (γ) rays",
+            "explanation": "Gamma rays are electromagnetic radiation with very short wavelength and highest penetrating power, requiring thick lead or concrete to stop."
+          },
+          {
+            "id": "astrophysics_l6_q18",
+            "type": "multiple_choice",
+            "question": "What happens to light when it travels from air into glass?",
+            "options": [
+              "It slows down and bends (refracts)",
+              "It speeds up",
+              "It is completely reflected",
+              "Nothing changes"
+            ],
+            "answer": "It slows down and bends (refracts)",
+            "explanation": "Light slows down when entering a denser medium (glass) and changes direction — this is refraction."
+          },
+          {
+            "id": "astrophysics_l6_q19",
+            "type": "multiple_choice",
+            "question": "State the law of conservation of momentum.",
+            "options": [
+              "Total momentum before = total momentum after in a closed system",
+              "Momentum always increases",
+              "Momentum is force times distance",
+              "Fast objects have less momentum"
+            ],
+            "answer": "Total momentum before = total momentum after in a closed system",
+            "explanation": "In a closed system with no external forces, the total momentum before a collision equals the total momentum after."
+          },
+          {
+            "id": "astrophysics_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is the half-life of a radioactive substance?",
+            "options": [
+              "The time for half the radioactive nuclei to decay",
+              "The time for all nuclei to decay",
+              "Half the original mass",
+              "The time to double in activity"
+            ],
+            "answer": "The time for half the radioactive nuclei to decay",
+            "explanation": "Half-life is the time taken for the activity (or number of radioactive nuclei) to decrease to half its original value."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1793 @@
+{
+  "subject": "mathematics",
+  "level": "s3",
+  "lessons": [
+    {
+      "id": "s3_math_int_l1",
+      "title": "Introduction to Integration",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Integration is the reverse of differentiation (antiderivative)\n∫xⁿ dx = xⁿ⁺¹/(n+1) + C  (n≠-1)\n∫eˣ dx = eˣ + C\n∫cos x dx = sin x + C\n∫sin x dx = -cos x + C\n∫1/x dx = ln|x| + C\n∫k dx = kx + C\nC = constant of integration"
+        },
+        {
+          "type": "example",
+          "title": "Basic Integrals",
+          "body": "∫3x² dx = x³ + C\n∫(4x³ - 2x + 5) dx = x⁴ - x² + 5x + C\n∫√x dx = ∫x^(1/2) dx = (2/3)x^(3/2) + C\n∫1/x² dx = ∫x⁻² dx = -x⁻¹ + C = -1/x + C"
+        },
+        {
+          "type": "example",
+          "title": "Finding C from conditions",
+          "body": "dy/dx = 3x², passes through (2,9)\ny = ∫3x² dx = x³ + C\nAt (2,9): 9 = 8 + C → C = 1\ny = x³ + 1"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "∫x⁴ dx =",
+            "options": [
+              "4x³+C",
+              "x⁵/5+C",
+              "x³/3+C",
+              "x⁵+C"
+            ],
+            "answer": "x⁵/5+C",
+            "explanation": "Power rule: ∫xⁿdx=xⁿ⁺¹/(n+1)+C → ∫x⁴dx=x⁵/5+C"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "∫6x² dx =",
+            "options": [
+              "3x²+C",
+              "2x³+C",
+              "6x³+C",
+              "18x+C"
+            ],
+            "answer": "2x³+C",
+            "explanation": "∫6x²dx=6·x³/3+C=2x³+C"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "∫(2x+3) dx =",
+            "options": [
+              "2x²+3x+C",
+              "x²+3x+C",
+              "2x²+3+C",
+              "x+3x²+C"
+            ],
+            "answer": "x²+3x+C",
+            "explanation": "∫2x dx+∫3 dx=x²+3x+C"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "∫eˣ dx =",
+            "options": [
+              "eˣ+1+C",
+              "xeˣ+C",
+              "eˣ+C",
+              "e^(x+1)+C"
+            ],
+            "answer": "eˣ+C",
+            "explanation": "∫eˣdx=eˣ+C (eˣ is its own antiderivative)"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "∫cos x dx =",
+            "options": [
+              "-sin x+C",
+              "cos x+C",
+              "sin x+C",
+              "-cos x+C"
+            ],
+            "answer": "sin x+C",
+            "explanation": "∫cos x dx=sin x+C (derivative of sin x is cos x)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫sin x dx =",
+            "options": [
+              "cos x+C",
+              "-cos x+C",
+              "sin x+C",
+              "-sin x+C"
+            ],
+            "answer": "-cos x+C",
+            "explanation": "∫sin x dx=-cos x+C (derivative of -cos x is sin x)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "∫1/x dx =",
+            "options": [
+              "ln(x²)+C",
+              "1/x²+C",
+              "ln",
+              "x",
+              "+C",
+              "x⁻²+C"
+            ],
+            "answer": "ln|x|+C",
+            "explanation": "∫(1/x)dx=ln|x|+C (valid for x≠0)"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Given dy/dx=4x and y=7 when x=1. Find y.",
+            "options": [
+              "2x²+5",
+              "4x²+3",
+              "2x²+7",
+              "x²+6"
+            ],
+            "answer": "2x²+5",
+            "explanation": "y=∫4x dx=2x²+C. At(1,7):7=2+C→C=5. y=2x²+5"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "∫(x^(1/2)) dx =",
+            "options": [
+              "(2/3)x^(3/2)+C",
+              "x^(3/2)+C",
+              "(1/2)x^(-1/2)+C",
+              "(3/2)x^(1/2)+C"
+            ],
+            "answer": "(2/3)x^(3/2)+C",
+            "explanation": "∫x^(1/2)dx=x^(3/2)/(3/2)+C=(2/3)x^(3/2)+C"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "∫(3eˣ - 2sin x) dx =",
+            "options": [
+              "3eˣ-2cos x+C",
+              "3eˣ+2cos x+C",
+              "3xeˣ+2cos x+C",
+              "eˣ-2cos x+C"
+            ],
+            "answer": "3eˣ+2cos x+C",
+            "explanation": "∫3eˣdx=3eˣ, ∫-2sin x dx=2cos x. Total: 3eˣ+2cos x+C"
+          },
+          {
+            "id": "integration_l1_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l1_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l1_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l1_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l1_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l1_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l1_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l1_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_int_l2",
+      "title": "Definite Integrals and Area",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Definite integral:\n∫ₐᵇ f(x) dx = [F(x)]ₐᵇ = F(b) - F(a)\nwhere F'(x) = f(x)\n\nArea under curve (above x-axis):\nA = ∫ₐᵇ f(x) dx\n\nArea below x-axis gives negative value → use |∫|\nArea between two curves:\nA = ∫ₐᵇ [f(x) - g(x)] dx  where f(x) ≥ g(x)"
+        },
+        {
+          "type": "example",
+          "title": "Definite Integral Examples",
+          "body": "∫₁³ x² dx = [x³/3]₁³ = 27/3 - 1/3 = 26/3\n\n∫₀^π sin x dx = [-cos x]₀^π = (-cos π)-(-cos 0) = 1+1 = 2\n\nArea between y=x² and y=x (x from 0 to 1):\nA = ∫₀¹(x-x²)dx=[x²/2-x³/3]₀¹=1/2-1/3=1/6"
+        },
+        {
+          "type": "example",
+          "title": "Practical Area",
+          "body": "Find area under y=3x² between x=1 and x=3:\nA=∫₁³3x² dx=[x³]₁³=27-1=26 square units\n\nNote: definite integral has no constant C (it cancels)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "∫₀² x³ dx =",
+            "options": [
+              "8",
+              "4",
+              "16",
+              "2"
+            ],
+            "answer": "4",
+            "explanation": "[x⁴/4]₀²=16/4-0=4"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "∫₁⁴ 2x dx =",
+            "options": [
+              "15",
+              "8",
+              "16",
+              "12"
+            ],
+            "answer": "15",
+            "explanation": "[x²]₁⁴=16-1=15"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "∫₀^(π/2) cos x dx =",
+            "options": [
+              "0",
+              "-1",
+              "2",
+              "1"
+            ],
+            "answer": "1",
+            "explanation": "[sin x]₀^(π/2)=sin(π/2)-sin(0)=1-0=1"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Area under y=x² from x=0 to x=3",
+            "options": [
+              "27",
+              "9",
+              "3",
+              "81"
+            ],
+            "answer": "9",
+            "explanation": "∫₀³x²dx=[x³/3]₀³=9"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "∫₋₁¹ x dx =",
+            "options": [
+              "2",
+              "0",
+              "1",
+              "-1"
+            ],
+            "answer": "0",
+            "explanation": "[x²/2]₋₁¹=1/2-1/2=0 (odd function, symmetric interval)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫₁² (3x²+2x) dx =",
+            "options": [
+              "10",
+              "14",
+              "8",
+              "12"
+            ],
+            "answer": "10",
+            "explanation": "[x³+x²]₁²=(8+4)-(1+1)=12-2=10"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Area between y=x and y=x² from x=0 to x=1",
+            "options": [
+              "1/6",
+              "1/2",
+              "1/3",
+              "1/4"
+            ],
+            "answer": "1/6",
+            "explanation": "∫₀¹(x-x²)dx=[x²/2-x³/3]₀¹=1/2-1/3=1/6"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Negative definite integral means",
+            "options": [
+              "error",
+              "function is negative",
+              "the area is below the x-axis",
+              "integration wrong"
+            ],
+            "answer": "the area is below the x-axis",
+            "explanation": "If f(x)<0 on [a,b], ∫ₐᵇf(x)dx<0. Area is still positive but integral is negative"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "∫₂⁵ 4 dx =",
+            "options": [
+              "20",
+              "8",
+              "12",
+              "5"
+            ],
+            "answer": "12",
+            "explanation": "∫₂⁵4dx=4[x]₂⁵=4(5-2)=12"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "∫₀² (x²-x) dx =",
+            "options": [
+              "4/3",
+              "2/3",
+              "1",
+              "0"
+            ],
+            "answer": "2/3",
+            "explanation": "[x³/3-x²/2]₀²=8/3-2=8/3-6/3=2/3"
+          },
+          {
+            "id": "integration_l2_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l2_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l2_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l2_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l2_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l2_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l2_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l2_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_int_l3",
+      "title": "Integration by Substitution",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Integration by substitution (chain rule reversed):\nLet u = g(x), then du = g'(x) dx\n∫f(g(x))·g'(x) dx = ∫f(u) du\n\nFor definite integrals: change limits too!\nif u=g(x): new limits are g(a) and g(b)"
+        },
+        {
+          "type": "example",
+          "title": "Substitution Examples",
+          "body": "∫2x(x²+1)⁴ dx\nLet u=x²+1, du=2x dx\n=∫u⁴ du=u⁵/5+C=(x²+1)⁵/5+C\n\n∫sin(3x) dx\nLet u=3x, du=3 dx, dx=du/3\n=∫sin(u)·(1/3)du=(-cos u)/3+C=-cos(3x)/3+C\n\n∫e^(2x) dx → u=2x, du=2dx → e^(2x)/2+C"
+        },
+        {
+          "type": "example",
+          "title": "Definite with Substitution",
+          "body": "∫₀² x·e^(x²) dx\nLet u=x², du=2x dx, x dx=du/2\nLimits: x=0→u=0, x=2→u=4\n=∫₀⁴ (1/2)eᵘ du=[eᵘ/2]₀⁴=(e⁴-1)/2"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "∫(2x)(x²+3)⁵ dx using u=x²+3",
+            "options": [
+              "(x²+3)⁵/5+C",
+              "(x²+3)⁶/6+C",
+              "2(x²+3)⁵+C",
+              "(x²+3)⁴/4+C"
+            ],
+            "answer": "(x²+3)⁶/6+C",
+            "explanation": "u=x²+3,du=2x dx. ∫u⁵du=u⁶/6+C=(x²+3)⁶/6+C"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "∫cos(5x) dx =",
+            "options": [
+              "5sin(5x)+C",
+              "sin(5x)/5+C",
+              "-sin(5x)/5+C",
+              "cos(5x)/5+C"
+            ],
+            "answer": "sin(5x)/5+C",
+            "explanation": "u=5x,du=5dx. ∫cos(u)du/5=sin(u)/5+C=sin(5x)/5+C"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "∫e^(3x) dx =",
+            "options": [
+              "3e^(3x)+C",
+              "e^(3x)/3+C",
+              "e^(3x+1)+C",
+              "xe^(3x)+C"
+            ],
+            "answer": "e^(3x)/3+C",
+            "explanation": "u=3x,du=3dx. ∫eᵘdu/3=eᵘ/3+C=e^(3x)/3+C"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "∫sin(2x) dx =",
+            "options": [
+              "cos(2x)/2+C",
+              "-cos(2x)/2+C",
+              "2cos(2x)+C",
+              "-2cos(2x)+C"
+            ],
+            "answer": "-cos(2x)/2+C",
+            "explanation": "u=2x,du=2dx. ∫sin(u)du/2=-cos(u)/2+C=-cos(2x)/2+C"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "∫(6x²)(x³+1)³ dx =",
+            "options": [
+              "(x³+1)³+C",
+              "(x³+1)⁴/4+C",
+              "2(x³+1)⁴+C",
+              "(x³+1)⁴/2+C"
+            ],
+            "answer": "(x³+1)⁴/2+C",
+            "explanation": "u=x³+1,du=3x²dx,6x²dx=2du. ∫2u³du=u⁴/2+C=(x³+1)⁴/2+C. Wait: 2·u⁴/4=u⁴/2"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫1/(2x+1) dx =",
+            "options": [
+              "ln(2x+1)/2+C",
+              "2ln(2x+1)+C",
+              "ln(2x+1)+C",
+              "1/(2x+1)²+C"
+            ],
+            "answer": "ln(2x+1)/2+C",
+            "explanation": "u=2x+1,du=2dx. ∫(1/u)du/2=ln|u|/2+C=ln|2x+1|/2+C"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "∫₀¹ 2x(x²+1) dx using u=x²+1, limits change to",
+            "options": [
+              "0,1",
+              "1,2",
+              "0,2",
+              "1,3"
+            ],
+            "answer": "1,2",
+            "explanation": "u=x²+1: x=0→u=1, x=1→u=2. New limits: 1 to 2"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "∫2sin(x)cos(x) dx using u=sin(x)",
+            "options": [
+              "cos²(x)+C",
+              "sin²(x)+C",
+              "-cos(2x)+C",
+              "2sin(x)+C"
+            ],
+            "answer": "sin²(x)+C",
+            "explanation": "u=sin(x),du=cos(x)dx. ∫2u du=u²+C=sin²(x)+C"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "∫x/√(x²+4) dx =",
+            "options": [
+              "√(x²+4)+C",
+              "(x²+4)^(3/2)/3+C",
+              "x²+4+C",
+              "2√(x²+4)+C"
+            ],
+            "answer": "√(x²+4)+C",
+            "explanation": "u=x²+4,du=2x dx. ∫(1/2)u^(-1/2)du=u^(1/2)+C=√(x²+4)+C"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "∫tan x dx = ∫sin x/cos x dx using u=cos x",
+            "options": [
+              "ln",
+              "sin x",
+              "+C",
+              "ln",
+              "cos x",
+              "+C",
+              "-ln",
+              "cos x",
+              "+C",
+              "sin x/cos x+C"
+            ],
+            "answer": "-ln|cos x|+C",
+            "explanation": "u=cos x,du=-sin x dx. ∫-du/u=-ln|u|+C=-ln|cos x|+C"
+          },
+          {
+            "id": "integration_l3_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l3_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l3_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l3_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l3_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l3_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l3_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l3_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s3_math_int_l4",
+      "title": "Applications of Integration",
+      "duration_minutes": 25,
+      "xp_reward": 60,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Volume of revolution (about x-axis):\nV = π∫ₐᵇ y² dx\n\nVolume about y-axis:\nV = π∫_c^d x² dy\n\nKinematics:\nIf a=dv/dt → v=∫a dt\nIf v=ds/dt → s=∫v dt\n\nMean value of f(x) on [a,b]:\n= (1/(b-a))∫ₐᵇ f(x) dx"
+        },
+        {
+          "type": "example",
+          "title": "Volume Example",
+          "body": "Find volume when y=x² rotated about x-axis from x=0 to x=2:\nV=π∫₀²(x²)² dx=π∫₀²x⁴ dx=π[x⁵/5]₀²\n=π·32/5=32π/5 ≈ 20.1 cubic units"
+        },
+        {
+          "type": "example",
+          "title": "Kinematics Example",
+          "body": "Acceleration a=6t-2, v=0 when t=0\nv=∫(6t-2)dt=3t²-2t+C, C=0\nv=3t²-2t\nDisplacement: s=∫(3t²-2t)dt=t³-t²+C"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Volume of revolution about x-axis is",
+            "options": [
+              "∫y dx",
+              "2π∫y dx",
+              "π∫y² dx",
+              "π∫y dx"
+            ],
+            "answer": "π∫y² dx",
+            "explanation": "Pappus/disc method: V=π∫ₐᵇ[f(x)]²dx"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Volume when y=x rotated about x-axis from x=0 to x=3",
+            "options": [
+              "9π",
+              "3π",
+              "27π",
+              "18π"
+            ],
+            "answer": "9π",
+            "explanation": "V=π∫₀³x²dx=π[x³/3]₀³=9π"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Mean value of f(x) on [a,b] =",
+            "options": [
+              "f(a)+f(b)/2",
+              "(1/(b-a))∫ₐᵇf(x)dx",
+              "f((a+b)/2)",
+              "∫f(x)dx"
+            ],
+            "answer": "(1/(b-a))∫ₐᵇf(x)dx",
+            "explanation": "Mean value theorem for integrals: average height of function over interval"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Mean value of x² on [0,3]",
+            "options": [
+              "3",
+              "9",
+              "2",
+              "1"
+            ],
+            "answer": "3",
+            "explanation": "(1/3)∫₀³x²dx=(1/3)[x³/3]₀³=(1/3)(9)=3"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "v=t²+2t. Displacement from t=0 to t=3",
+            "options": [
+              "18",
+              "15",
+              "27",
+              "9"
+            ],
+            "answer": "18",
+            "explanation": "s=∫₀³(t²+2t)dt=[t³/3+t²]₀³=9+9=18"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Acceleration a=4, v=2 at t=0. v at t=3",
+            "options": [
+              "14",
+              "12",
+              "8",
+              "6"
+            ],
+            "answer": "14",
+            "explanation": "v=∫4dt=4t+C. C=2 so v=4t+2. At t=3: v=14"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Volume of y=2x rotated about x-axis from x=1 to x=2",
+            "options": [
+              "7π/3",
+              "4π",
+              "28π/3",
+              "14π/3"
+            ],
+            "answer": "28π/3",
+            "explanation": "V=π∫₁²(2x)²dx=4π∫₁²x²dx=4π[x³/3]₁²=4π(8/3-1/3)=4π·7/3=28π/3"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Mean value of sin x on [0,π]",
+            "options": [
+              "0",
+              "2/π",
+              "π/2",
+              "1"
+            ],
+            "answer": "2/π",
+            "explanation": "(1/π)∫₀^π sin x dx=(1/π)[-cos x]₀^π=(1/π)(1+1)=2/π"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Integration gives displacement from velocity because",
+            "options": [
+              "v=ds/dt means s=∫v dt",
+              "v=d²s/dt²",
+              "they are equal",
+              "velocity is constant"
+            ],
+            "answer": "v=ds/dt means s=∫v dt",
+            "explanation": "Velocity is rate of change of displacement: v=ds/dt → s=∫v dt"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Volume of sphere radius r by revolution",
+            "options": [
+              "4πr²",
+              "πr³",
+              "(4/3)πr³",
+              "(2/3)πr³"
+            ],
+            "answer": "(4/3)πr³",
+            "explanation": "Rotate semicircle y=√(r²-x²) about x-axis from -r to r: V=π∫_{-r}^r(r²-x²)dx=(4/3)πr³"
+          },
+          {
+            "id": "integration_l4_q11",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l4_q13",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l4_q17",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l4_q21",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l4_q23",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l4_q25",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l4_q27",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l4_q29",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          }
+        ]
+      }
+    },
+    {
+      "id": "integration_l5",
+      "title": "Integration — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Integration. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Integration concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Integration builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Integration. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Integration. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Integration include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Integration. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "integration_l5_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l5_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l5_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l5_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l5_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l5_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l5_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l5_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "integration_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "integration_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "integration_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "integration_l5_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "integration_l5_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "integration_l5_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "integration_l5_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "integration_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "integration_l5_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "integration_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "integration_l6",
+      "title": "Integration — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Integration. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Integration concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Integration builds on foundational knowledge. In mathematics, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Integration. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Integration. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Integration include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Integration. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "integration_l6_q1",
+            "type": "multiple_choice",
+            "question": "What does simplifying an expression mean?",
+            "options": [
+              "Reducing it to its simplest equivalent form",
+              "Making it longer",
+              "Adding more variables",
+              "Changing the answer"
+            ],
+            "answer": "Reducing it to its simplest equivalent form",
+            "explanation": "Simplification means rewriting an expression in its simplest equivalent form by collecting like terms and applying arithmetic."
+          },
+          {
+            "id": "integration_l6_q2",
+            "type": "multiple_choice",
+            "question": "Which of these is an example of a variable?",
+            "options": [
+              "x in 3x + 2",
+              "The number 5",
+              "The + sign",
+              "A fraction"
+            ],
+            "answer": "x in 3x + 2",
+            "explanation": "A variable is a letter (like x, y, n) that represents an unknown or changing value."
+          },
+          {
+            "id": "integration_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is 2x + 3x simplified?",
+            "options": [
+              "5x",
+              "6x",
+              "5x²",
+              "23x"
+            ],
+            "answer": "5x",
+            "explanation": "Collect like terms: 2x + 3x = 5x (both terms have the same variable x)."
+          },
+          {
+            "id": "integration_l6_q4",
+            "type": "multiple_choice",
+            "question": "Solve for x: x + 7 = 15",
+            "options": [
+              "x = 8",
+              "x = 22",
+              "x = 7",
+              "x = 15"
+            ],
+            "answer": "x = 8",
+            "explanation": "Subtract 7 from both sides: x = 15 - 7 = 8."
+          },
+          {
+            "id": "integration_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the result of expanding 4(y - 3)?",
+            "options": [
+              "4y - 12",
+              "4y - 3",
+              "y - 12",
+              "4y + 12"
+            ],
+            "answer": "4y - 12",
+            "explanation": "Distribute: 4 × y - 4 × 3 = 4y - 12."
+          },
+          {
+            "id": "integration_l6_q6",
+            "type": "multiple_choice",
+            "question": "Which operation reverses addition?",
+            "options": [
+              "Subtraction",
+              "Multiplication",
+              "Division",
+              "Squaring"
+            ],
+            "answer": "Subtraction",
+            "explanation": "Subtraction is the inverse (reverse) of addition."
+          },
+          {
+            "id": "integration_l6_q7",
+            "type": "multiple_choice",
+            "question": "What is 3² equal to?",
+            "options": [
+              "9",
+              "6",
+              "8",
+              "12"
+            ],
+            "answer": "9",
+            "explanation": "3² = 3 × 3 = 9. The exponent 2 means multiply the base by itself."
+          },
+          {
+            "id": "integration_l6_q8",
+            "type": "multiple_choice",
+            "question": "Factorise: 4x + 8",
+            "options": [
+              "4(x + 2)",
+              "4x + 8",
+              "2(2x + 8)",
+              "8(x + 1)"
+            ],
+            "answer": "4(x + 2)",
+            "explanation": "The HCF of 4x and 8 is 4. So 4x + 8 = 4(x + 2)."
+          },
+          {
+            "id": "integration_l6_q9",
+            "type": "multiple_choice",
+            "question": "What is the y-intercept of y = 3x + 5?",
+            "options": [
+              "5",
+              "3",
+              "0",
+              "8"
+            ],
+            "answer": "5",
+            "explanation": "In y = mx + c, c is the y-intercept. Here c = 5."
+          },
+          {
+            "id": "integration_l6_q10",
+            "type": "multiple_choice",
+            "question": "Solve: 3x = 18",
+            "options": [
+              "x = 6",
+              "x = 15",
+              "x = 21",
+              "x = 54"
+            ],
+            "answer": "x = 6",
+            "explanation": "Divide both sides by 3: x = 18 ÷ 3 = 6."
+          },
+          {
+            "id": "integration_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for the area of a rectangle?",
+            "options": [
+              "A = length × width",
+              "A = ½ × base × height",
+              "A = π r²",
+              "A = side²"
+            ],
+            "answer": "A = length × width",
+            "explanation": "Area of a rectangle = length × width."
+          },
+          {
+            "id": "integration_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a like term with 3x²?",
+            "options": [
+              "5x²",
+              "−2x²",
+              "x²",
+              "3x"
+            ],
+            "answer": "5x²",
+            "explanation": "Like terms must have the same variable AND the same power. 3x has power 1, not 2, so it is not a like term with 3x²."
+          },
+          {
+            "id": "integration_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is the gradient/slope of a horizontal line?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "∞"
+            ],
+            "answer": "0",
+            "explanation": "A horizontal line has no rise, so gradient = rise/run = 0/run = 0."
+          },
+          {
+            "id": "integration_l6_q14",
+            "type": "multiple_choice",
+            "question": "If a = 4 and b = 3, find 2a + b.",
+            "options": [
+              "11",
+              "14",
+              "7",
+              "10"
+            ],
+            "answer": "11",
+            "explanation": "Substitute: 2(4) + 3 = 8 + 3 = 11."
+          },
+          {
+            "id": "integration_l6_q15",
+            "type": "multiple_choice",
+            "question": "What does the inequality x > 5 mean?",
+            "options": [
+              "x is greater than 5",
+              "x is less than 5",
+              "x equals 5",
+              "x is at least 5"
+            ],
+            "answer": "x is greater than 5",
+            "explanation": "The > symbol means 'greater than'. x > 5 means x takes values greater than (but not equal to) 5."
+          },
+          {
+            "id": "integration_l6_q16",
+            "type": "multiple_choice",
+            "question": "Solve: 2(x + 3) = 14",
+            "options": [
+              "x = 4",
+              "x = 5",
+              "x = 7",
+              "x = 11"
+            ],
+            "answer": "x = 4",
+            "explanation": "Expand: 2x + 6 = 14. Subtract 6: 2x = 8. Divide: x = 4."
+          },
+          {
+            "id": "integration_l6_q17",
+            "type": "multiple_choice",
+            "question": "The HCF of 12 and 18 is:",
+            "options": [
+              "6",
+              "2",
+              "3",
+              "36"
+            ],
+            "answer": "6",
+            "explanation": "Factors of 12: 1,2,3,4,6,12. Factors of 18: 1,2,3,6,9,18. Highest common factor = 6."
+          },
+          {
+            "id": "integration_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is the LCM of 4 and 6?",
+            "options": [
+              "12",
+              "24",
+              "2",
+              "10"
+            ],
+            "answer": "12",
+            "explanation": "Multiples of 4: 4,8,12,... Multiples of 6: 6,12,... Lowest common multiple = 12."
+          },
+          {
+            "id": "integration_l6_q19",
+            "type": "multiple_choice",
+            "question": "Which number is prime?",
+            "options": [
+              "7",
+              "9",
+              "15",
+              "21"
+            ],
+            "answer": "7",
+            "explanation": "A prime number has exactly two factors: 1 and itself. 7 is prime (factors: 1 and 7 only)."
+          },
+          {
+            "id": "integration_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is 0.5 as a fraction?",
+            "options": [
+              "½",
+              "⅓",
+              "¼",
+              "⅕"
+            ],
+            "answer": "½",
+            "explanation": "0.5 = 5/10 = 1/2. You can verify: 1 ÷ 2 = 0.5."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "integration"
+}

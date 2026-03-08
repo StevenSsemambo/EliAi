@@ -1,0 +1,1785 @@
+{
+  "subject": "chemistry",
+  "level": "s5",
+  "lessons": [
+    {
+      "id": "s5_chem_eq_l1",
+      "title": "Chemical Equilibrium and Le Chatelier's Principle",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Reversible reaction: A + B ⇌ C + D\nEquilibrium: forward rate = reverse rate\nConcentrations constant (not equal) at equilibrium\n\nEquilibrium constant Kc:\nFor aA + bB ⇌ cC + dD:\nKc = [C]^c[D]^d / [A]^a[B]^b\n\nLe Chatelier's Principle:\nIf system at equilibrium is disturbed, it shifts to OPPOSE the change"
+        },
+        {
+          "type": "example",
+          "title": "Le Chatelier Applications",
+          "body": "N₂ + 3H₂ ⇌ 2NH₃   ΔH = -92 kJ/mol\n\n↑ pressure: shifts right (fewer moles of gas)\n↓ pressure: shifts left (more moles of gas)\n↑ temperature: shifts left (endothermic direction opposes heat increase)\n↓ temperature: shifts right (exothermic direction, more NH₃)\nAdd catalyst: NO shift (equilibrium position unchanged, just reaches it faster)"
+        },
+        {
+          "type": "example",
+          "title": "Haber Process",
+          "body": "Industrial production of ammonia:\nN₂(g) + 3H₂(g) ⇌ 2NH₃(g)   ΔH = -92 kJ/mol\nConditions: 450°C, 200 atm, Fe catalyst\nCompromise: lower T gives more NH₃ but slowly\nHigher P gives more NH₃ but costly/dangerous\n450°C balances yield and rate"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "At chemical equilibrium",
+            "options": [
+              "reaction has stopped",
+              "only forward reaction occurs",
+              "forward rate = reverse rate",
+              "concentrations are equal"
+            ],
+            "answer": "forward rate = reverse rate",
+            "explanation": "Equilibrium: both reactions ongoing but at equal rates — concentrations remain constant"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Kc = [products]/[reactants]. Large Kc means",
+            "options": [
+              "equal amounts",
+              "equilibrium favours reactants",
+              "equilibrium strongly favours products",
+              "reaction is slow"
+            ],
+            "answer": "equilibrium strongly favours products",
+            "explanation": "Large Kc: numerator (products) >> denominator. Products are favoured at equilibrium"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Le Chatelier's Principle: increasing pressure shifts equilibrium toward",
+            "options": [
+              "the side with more gas moles",
+              "the side with fewer gas moles",
+              "products always",
+              "reactants always"
+            ],
+            "answer": "the side with fewer gas moles",
+            "explanation": "Higher pressure favours the side with fewer gas molecules (reduces volume to oppose pressure increase)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "For N₂+3H₂⇌2NH₃. Increasing temperature (exothermic reaction) will",
+            "options": [
+              "increase NH₃ yield",
+              "decrease NH₃ yield (shifts left, endothermic direction",
+              "no effect",
+              "increase Kc"
+            ],
+            "answer": "decrease NH₃ yield (shifts left, endothermic direction",
+            "explanation": "Endothermic direction absorbs the added heat — shifts backward, reducing product yield"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Adding a catalyst to a reaction at equilibrium",
+            "options": [
+              "shifts equilibrium right",
+              "shifts equilibrium left",
+              "increases Kc",
+              "has no effect on equilibrium position — only speeds up reaching equilibrium"
+            ],
+            "answer": "has no effect on equilibrium position — only speeds up reaching equilibrium",
+            "explanation": "Catalyst speeds both forward and reverse equally — same equilibrium position reached faster"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Haber process temperature compromise (450°C) reflects",
+            "options": [
+              "maximum yield",
+              "catalyst requires this temperature; higher T reduces yield but lower T is too slow",
+              "cost only",
+              "safety only"
+            ],
+            "answer": "catalyst requires this temperature; higher T reduces yield but lower T is too slow",
+            "explanation": "450°C: Fe catalyst active, acceptable rate. Higher T: better rate but lower NH₃ yield (equilibrium shifts left)"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A(g) + 2B(g) ⇌ C(g). Kc = [C]/([A][B]²). Units of Kc =",
+            "options": [
+              "mol/L",
+              "L²/mol²",
+              "no units",
+              "(mol/L)⁻²"
+            ],
+            "answer": "L²/mol²",
+            "explanation": "[C]/([A][B]²) = (mol/L) / (mol/L × (mol/L)²) = 1/(mol/L)² = L²/mol²"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Contact process for H₂SO₄: 2SO₂+O₂⇌2SO₃. Increasing O₂ concentration will",
+            "options": [
+              "shift equilibrium left",
+              "shift equilibrium right (more SO₃)",
+              "not affect equilibrium",
+              "decrease Kc"
+            ],
+            "answer": "shift equilibrium right (more SO₃)",
+            "explanation": "Adding O₂: more reactant → equilibrium shifts right to use extra O₂, producing more SO₃"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Removing product from equilibrium mixture causes",
+            "options": [
+              "equilibrium to shift left",
+              "no change",
+              "equilibrium to shift right to replace removed product",
+              "Kc to change"
+            ],
+            "answer": "equilibrium to shift right to replace removed product",
+            "explanation": "Removing product disturbs equilibrium; system responds by forming more product (shifts right)"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Which is NOT affected by a change in temperature at equilibrium?",
+            "options": [
+              "Rate of reaction",
+              "Position of equilibrium",
+              "Value of Kc",
+              "All are affected"
+            ],
+            "answer": "None — all three are affected",
+            "explanation": "Temperature changes: rate (both reactions), position (Le Chatelier), AND Kc (only T changes Kc)"
+          },
+          {
+            "id": "equilibria_l1_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l1_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l1_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l1_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l1_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l1_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l1_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l1_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l1_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l1_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_chem_eq_l2",
+      "title": "Acid-Base Equilibria and pH",
+      "duration_minutes": 28,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Bronsted-Lowry: acid = H⁺ donor, base = H⁺ acceptor\n\nWater autoionisation:\nH₂O ⇌ H⁺ + OH⁻\nKw = [H⁺][OH⁻] = 1×10⁻¹⁴ at 25°C\npH = -log[H⁺]\n[H⁺] = 10^(-pH)\npOH = -log[OH⁻]\npH + pOH = 14\n\nStrong acid: fully dissociates\n[H⁺] = concentration of acid\n\nWeak acid: Ka = [H⁺][A⁻]/[HA]\npKa = -log Ka; smaller pKa = stronger acid"
+        },
+        {
+          "type": "example",
+          "title": "pH Calculations",
+          "body": "Strong acid: 0.01M HCl\n[H⁺] = 0.01 mol/L\npH = -log(0.01) = 2\n\nStrong base: 0.001M NaOH\n[OH⁻] = 0.001\npOH = 3\npH = 14 - 3 = 11\n\nWeak acid: Ka=4×10⁻⁵ for 0.1M ethanoic acid\n[H⁺] = √(Ka×C) = √(4×10⁻⁵×0.1) = √(4×10⁻⁶) = 2×10⁻³\npH = -log(2×10⁻³) = 2.70"
+        },
+        {
+          "type": "example",
+          "title": "Buffer Solutions",
+          "body": "Buffer: resists pH change when small amounts of acid or alkali added\nWeak acid + its conjugate base (e.g. CH₃COOH + CH₃COO⁻)\nAdding H⁺: reacts with CH₃COO⁻\nAdding OH⁻: reacts with CH₃COOH\npH = pKa + log([A⁻]/[HA])  (Henderson-Hasselbalch)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Bronsted-Lowry acid is",
+            "options": [
+              "H⁺ acceptor",
+              "OH⁻ donor",
+              "H⁺ donor",
+              "electron donor"
+            ],
+            "answer": "H⁺ donor",
+            "explanation": "Bronsted-Lowry: acid donates H⁺ (proton donor), base accepts H⁺"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "pH of 0.001M HCl =",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": "3",
+            "explanation": "[H⁺]=0.001=10⁻³, pH=-log(10⁻³)=3"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Kw = [H⁺][OH⁻] = 1×10⁻¹⁴. Pure water [H⁺] =",
+            "options": [
+              "1×10⁻⁷",
+              "1×10⁻¹⁴",
+              "1",
+              "10"
+            ],
+            "answer": "1×10⁻⁷",
+            "explanation": "In pure water [H⁺]=[OH⁻]=√(1×10⁻¹⁴)=1×10⁻⁷, pH=7"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "0.1M NaOH has pH =",
+            "options": [
+              "1",
+              "7",
+              "13",
+              "14"
+            ],
+            "answer": "13",
+            "explanation": "[OH⁻]=0.1, pOH=1, pH=14-1=13"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Weak acid has Ka=1×10⁻⁵. pKa =",
+            "options": [
+              "5",
+              "-5",
+              "10",
+              "0.00001"
+            ],
+            "answer": "5",
+            "explanation": "pKa=-log(1×10⁻⁵)=5"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Stronger acid has",
+            "options": [
+              "larger pKa",
+              "smaller Ka",
+              "smaller pKa",
+              "pH closer to 7"
+            ],
+            "answer": "smaller pKa",
+            "explanation": "More acidic = larger Ka (more dissociation) = smaller pKa. Smaller pKa = stronger acid"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Buffer solution resists pH change because",
+            "options": [
+              "it is concentrated",
+              "it contains weak acid/conjugate base pair to neutralise added H⁺ or OH⁻",
+              "it is at pH 7",
+              "it contains strong acid"
+            ],
+            "answer": "it contains weak acid/conjugate base pair to neutralise added H⁺ or OH⁻",
+            "explanation": "Buffer: weak acid neutralises added OH⁻; conjugate base neutralises added H⁺"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Blood is buffered at pH≈7.4. Main buffer system is",
+            "options": [
+              "NaOH/HCl",
+              "H₂CO₃/HCO₃⁻ (carbonic acid/bicarbonate)",
+              "H₂SO₄/SO₄²⁻",
+              "NaCl/HCl"
+            ],
+            "answer": "H₂CO₃/HCO₃⁻ (carbonic acid/bicarbonate)",
+            "explanation": "Blood buffering: CO₂+H₂O⇌H₂CO₃⇌H⁺+HCO₃⁻; pH controlled by lungs (CO₂) and kidneys (HCO₃⁻)"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Henderson-Hasselbalch: pH = pKa + log([A⁻]/[HA]). Equal concentrations: pH =",
+            "options": [
+              "pKa + 1",
+              "pKa - 1",
+              "pKa",
+              "pKa × 2"
+            ],
+            "answer": "pKa",
+            "explanation": "If [A⁻]=[HA], log(1)=0, so pH=pKa"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A solution has [OH⁻]=2×10⁻³. [H⁺] =",
+            "options": [
+              "2×10⁻³",
+              "5×10⁻¹²",
+              "1×10⁻¹⁴",
+              "2×10¹¹"
+            ],
+            "answer": "5×10⁻¹²",
+            "explanation": "[H⁺]=Kw/[OH⁻]=10⁻¹⁴/(2×10⁻³)=5×10⁻¹²"
+          },
+          {
+            "id": "equilibria_l2_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l2_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l2_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l2_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l2_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l2_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l2_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l2_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l2_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l2_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_chem_eq_l3",
+      "title": "Solubility Equilibria and Ksp",
+      "duration_minutes": 28,
+      "xp_reward": 65,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Sparingly soluble salts:\nAgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)\nKsp = [Ag⁺][Cl⁻]\n\nFor MₐXᵦ: Ksp = [M^(b+)]^a × [X^(a-)]^b\n\nSolubility s:\nAgCl: Ksp=[s][s]=s²  →  s=√Ksp\nAg₂CrO₄: Ksp=[2s]²[s]=4s³  →  s=(Ksp/4)^(1/3)\n\nCommon ion effect: adding common ion reduces solubility"
+        },
+        {
+          "type": "example",
+          "title": "Ksp Calculations",
+          "body": "AgCl: Ksp=1.8×10⁻¹⁰\ns=√(1.8×10⁻¹⁰)=1.34×10⁻⁵ mol/L\n\nPbSO₄: Ksp=1.6×10⁻⁸\nPbSO₄⇌Pb²⁺+SO₄²⁻: Ksp=s²\ns=√(1.6×10⁻⁸)=1.26×10⁻⁴ mol/L\n\nCommon ion: dissolve AgCl in 0.1M NaCl\n[Cl⁻]=0.1+s≈0.1\nKsp=[Ag⁺][0.1]=1.8×10⁻¹⁰\n[Ag⁺]=1.8×10⁻⁹ mol/L (much less than 1.34×10⁻⁵)"
+        },
+        {
+          "type": "example",
+          "title": "Precipitation",
+          "body": "Predict precipitation: if [M][X] > Ksp → precipitate forms\nIon product Q > Ksp → precipitate\nQ < Ksp → solution unsaturated\nQ = Ksp → saturated, at equilibrium"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Ksp is defined for",
+            "options": [
+              "any solute",
+              "sparingly soluble ionic compounds in equilibrium with their ions",
+              "all salts",
+              "only strong electrolytes"
+            ],
+            "answer": "sparingly soluble ionic compounds in equilibrium with their ions",
+            "explanation": "Ksp (solubility product): equilibrium constant for dissolution of sparingly soluble ionic compounds"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For AgCl ⇌ Ag⁺ + Cl⁻, Ksp=1.8×10⁻¹⁰. Solubility s =",
+            "options": [
+              "1.8×10⁻¹⁰",
+              "1.34×10⁻⁵",
+              "9×10⁻¹¹",
+              "3.6×10⁻¹⁰"
+            ],
+            "answer": "1.34×10⁻⁵",
+            "explanation": "s=√Ksp=√(1.8×10⁻¹⁰)=1.34×10⁻⁵ mol/L"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Common ion effect: adding NaCl to AgCl solution",
+            "options": [
+              "increases Ag⁺ solubility",
+              "decreases AgCl solubility (more Cl⁻ shifts equilibrium left)",
+              "has no effect",
+              "increases Ksp"
+            ],
+            "answer": "decreases AgCl solubility (more Cl⁻ shifts equilibrium left)",
+            "explanation": "Extra Cl⁻ from NaCl → Le Chatelier: equilibrium shifts left → less AgCl dissolves"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Precipitation occurs when ion product Q is",
+            "options": [
+              "equal to Ksp",
+              "less than Ksp",
+              "greater than Ksp",
+              "zero"
+            ],
+            "answer": "greater than Ksp",
+            "explanation": "Q > Ksp: solution supersaturated → precipitate forms until Q = Ksp"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Ag₂CrO₄: Ksp=1.2×10⁻¹². Ksp=[Ag⁺]²[CrO₄²⁻]=[2s]²[s]=4s³. Solubility s=",
+            "options": [
+              "(1.2×10⁻¹²/4)^(1/3)",
+              "√(1.2×10⁻¹²)",
+              "1.2×10⁻⁶",
+              "6.7×10⁻⁵"
+            ],
+            "answer": "(1.2×10⁻¹²/4)^(1/3)",
+            "explanation": "4s³=1.2×10⁻¹², s³=3×10⁻¹³, s=(3×10⁻¹³)^(1/3)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Ksp of AgCl is larger than AgBr which is larger than AgI. This means",
+            "options": [
+              "AgCl most insoluble",
+              "AgCl most soluble (largest Ksp=most ions in solution)",
+              "AgI most soluble",
+              "all equal solubility"
+            ],
+            "answer": "AgCl most soluble (largest Ksp=most ions in solution)",
+            "explanation": "Larger Ksp → more dissolved ions → greater solubility. AgCl > AgBr > AgI in solubility"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Selective precipitation separates ions by",
+            "options": [
+              "filtering",
+              "adding reagent that precipitates one ion but not others based on different Ksp values",
+              "heating",
+              "centrifugation"
+            ],
+            "answer": "adding reagent that precipitates one ion but not others based on different Ksp values",
+            "explanation": "Add Cl⁻: AgCl precipitates (low Ksp) while NaCl stays dissolved → separate Ag⁺ from Na⁺"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Does BaSO₄ precipitate when 0.001M Ba²⁺ mixed with 0.001M SO₄²⁻? Ksp(BaSO₄)=1.1×10⁻¹⁰",
+            "options": [
+              "No, Q<Ksp",
+              "Yes, Q>Ksp",
+              "Yes, Q=Ksp",
+              "Cannot determine"
+            ],
+            "answer": "Yes, Q>Ksp",
+            "explanation": "Q=[0.001][0.001]=10⁻⁶ >> 1.1×10⁻¹⁰=Ksp → precipitate forms"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Why is Ksp not affected by common ion effect?",
+            "options": [
+              "Ksp does change",
+              "Ksp is only a function of temperature — equilibrium constant unchanged",
+              "common ion increases Ksp",
+              "solubility and Ksp are the same"
+            ],
+            "answer": "Ksp is only a function of temperature — equilibrium constant unchanged",
+            "explanation": "Ksp is an equilibrium constant — depends only on temperature. Solubility (not Ksp) decreases with common ion"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Hard water is caused by dissolved Ca²⁺ and Mg²⁺. Adding Na₂CO₃ (washing soda) softens water because",
+            "options": [
+              "CO₃²⁻ reacts with Ca²⁺ → CaCO₃↓ precipitates removing Ca²⁺",
+              "it dissolves the ions",
+              "it changes Ksp",
+              "Na⁺ replaces Ca²⁺"
+            ],
+            "answer": "CO₃²⁻ reacts with Ca²⁺ → CaCO₃↓ precipitates removing Ca²⁺",
+            "explanation": "Ca²⁺ + CO₃²⁻ → CaCO₃↓ (Ksp very small). Removing Ca²⁺ softens the water"
+          },
+          {
+            "id": "equilibria_l3_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l3_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l3_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l3_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l3_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l3_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l3_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l3_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l3_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l3_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_chem_eq_l4",
+      "title": "Electrochemical Cells and Standard Electrode Potentials",
+      "duration_minutes": 30,
+      "xp_reward": 70,
+      "content": [
+        {
+          "type": "formula",
+          "body": "Standard electrode potential E° (vs SHE at 25°C, 1M, 1atm):\nMore positive E°: stronger oxidising agent\nMore negative E°: stronger reducing agent\n\nCell potential: E°cell = E°cathode - E°anode\nPositive E°cell → spontaneous reaction\n\nNernst equation:\nE = E° - (RT/nF)lnQ = E° - (0.0257/n)lnQ at 25°C\nn=moles electrons, F=96485 C/mol\n\nΔG = -nFE°cell (+ linking to thermodynamics)"
+        },
+        {
+          "type": "example",
+          "title": "Cell Potential Examples",
+          "body": "Zn/Cu cell:\nZn²⁺/Zn: E°=-0.76V (anode, oxidation)\nCu²⁺/Cu: E°=+0.34V (cathode, reduction)\nE°cell=0.34-(-0.76)=+1.10V (spontaneous)\n\nOverall: Zn + Cu²⁺ → Zn²⁺ + Cu\n\nΔG=-nFE°=-2×96485×1.10=-212,267 J=-212.3 kJ"
+        },
+        {
+          "type": "example",
+          "title": "Batteries and Fuel Cells",
+          "body": "Daniell cell: Zn/ZnSO₄||CuSO₄/Cu, 1.1V\nLead-acid (car): Pb/H₂SO₄/PbO₂, 2V per cell, 12V for 6 cells\nAlkaline: Zn/MnO₂, 1.5V\nLithium-ion: 3.6V per cell, rechargeable\nHydrogen fuel cell: H₂+½O₂→H₂O, 1.23V, only water produced"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Standard Hydrogen Electrode (SHE) is assigned E° =",
+            "options": [
+              "1V",
+              "-1V",
+              "0V",
+              "0.5V"
+            ],
+            "answer": "0V",
+            "explanation": "SHE: H⁺(1M)/H₂(1atm)/Pt at 25°C. All other electrodes measured relative to this reference (0V)"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "E°cell = E°cathode - E°anode. Zn/Cu cell (E°Zn=-0.76V, E°Cu=+0.34V). E°cell=",
+            "options": [
+              "1.10V",
+              "-1.10V",
+              "0.58V",
+              "-0.58V"
+            ],
+            "answer": "1.10V",
+            "explanation": "E°cell=0.34-(-0.76)=1.10V (positive=spontaneous)"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "More positive electrode potential means",
+            "options": [
+              "better reducing agent",
+              "better oxidising agent (more easily reduced)",
+              "weaker oxidant",
+              "lower reactivity"
+            ],
+            "answer": "better oxidising agent (more easily reduced)",
+            "explanation": "Higher E°: species more easily reduced → stronger oxidising agent (e.g. F₂ with highest E° is strongest oxidant)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Cathode in electrochemical cell is where",
+            "options": [
+              "oxidation occurs",
+              "reduction occurs",
+              "salt bridge connects",
+              "electrons leave"
+            ],
+            "answer": "reduction occurs",
+            "explanation": "Cathode: reduction (gain electrons). Anode: oxidation (lose electrons). Mnemonic: OILRIG, Red Cat An Ox"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "ΔG = -nFE°. If E°cell is positive, ΔG is",
+            "options": [
+              "positive (non-spontaneous)",
+              "zero",
+              "negative (spontaneous)",
+              "undefined"
+            ],
+            "answer": "negative (spontaneous)",
+            "explanation": "Positive E°cell → negative ΔG → spontaneous reaction. Consistent thermodynamics"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Salt bridge in galvanic cell",
+            "options": [
+              "conducts electrons",
+              "maintains electrical neutrality by allowing ion flow between half-cells",
+              "generates electricity",
+              "contains the electrolyte"
+            ],
+            "answer": "maintains electrical neutrality by allowing ion flow between half-cells",
+            "explanation": "Salt bridge: allows slow ion migration to balance charge accumulation in each half-cell without mixing solutions"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Lead-acid battery in a car is rechargeable because",
+            "options": [
+              "it has large E°",
+              "the electrochemical reactions are reversible — driving current reverses the reactions",
+              "it contains lead",
+              "it uses H₂SO₄"
+            ],
+            "answer": "the electrochemical reactions are reversible — driving current reverses the reactions",
+            "explanation": "Rechargeable batteries: applying external voltage reverses the discharge reactions, restoring reactants"
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Nernst equation shows cell potential",
+            "options": [
+              "never changes",
+              "changes with temperature and concentration",
+              "depends only on temperature",
+              "equals E° always"
+            ],
+            "answer": "changes with temperature and concentration",
+            "explanation": "E=E°-(RT/nF)lnQ: as concentrations change (Q changes), cell potential deviates from E°"
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "Hydrogen fuel cell produces",
+            "options": [
+              "CO₂ and water",
+              "only water (and electricity)",
+              "hydrogen",
+              "oxygen only"
+            ],
+            "answer": "only water (and electricity)",
+            "explanation": "H₂+½O₂→H₂O. Only product is water — zero emission during operation"
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "Standard conditions for measuring electrode potentials include",
+            "options": [
+              "any temperature",
+              "25°C, all ions at 1M concentration, gases at 1atm pressure",
+              "0°C, 1M",
+              "room temperature, any concentration"
+            ],
+            "answer": "25°C, all ions at 1M concentration, gases at 1atm pressure",
+            "explanation": "Standard: T=298K(25°C), concentration=1mol/L, gas pressure=1atm (101.325kPa)"
+          },
+          {
+            "id": "equilibria_l4_q11",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l4_q13",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l4_q15",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l4_q17",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l4_q19",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l4_q21",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l4_q23",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l4_q25",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l4_q27",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l4_q29",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          }
+        ]
+      }
+    },
+    {
+      "id": "equilibria_l5",
+      "title": "Equilibria — Advanced Part 5",
+      "duration_minutes": 35,
+      "xp_reward": 110,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Equilibria. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Equilibria concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Equilibria builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.1",
+          "body": "Consider a more complex problem on Equilibria. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 5.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Equilibria. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Equilibria include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Equilibria. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "equilibria_l5_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l5_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l5_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l5_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l5_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l5_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l5_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l5_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l5_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l5_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "equilibria_l5_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "equilibria_l5_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "equilibria_l5_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "equilibria_l5_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "equilibria_l5_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "equilibria_l5_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "equilibria_l5_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "equilibria_l5_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "equilibria_l5_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "equilibria_l5_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "equilibria_l6",
+      "title": "Equilibria — Advanced Part 6",
+      "duration_minutes": 37,
+      "xp_reward": 120,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we explore advanced aspects of Equilibria. Build on what you have already learned and apply your knowledge to more challenging problems."
+        },
+        {
+          "type": "heading",
+          "body": "Learning Objectives"
+        },
+        {
+          "type": "text",
+          "body": "By the end of this lesson you should be able to: (1) Apply Equilibria concepts to complex problems. (2) Use appropriate formulas and methods. (3) Interpret results in context. (4) Connect this topic to related areas of chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "Core Theory"
+        },
+        {
+          "type": "text",
+          "body": "This section of Equilibria builds on foundational knowledge. In chemistry, advanced problem-solving requires not just knowing formulas but understanding when and how to apply them. Study each worked example carefully."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.1",
+          "body": "Consider a more complex problem on Equilibria. Approach: (1) Read and understand the problem. (2) Identify all given information. (3) Determine which concepts apply. (4) Solve systematically, showing all steps. (5) Check your answer is reasonable."
+        },
+        {
+          "type": "example",
+          "title": "Worked Example 6.2",
+          "body": "Another type of problem you may encounter: Questions may test your ability to combine multiple concepts within Equilibria. Practice identifying the type of problem and the appropriate method before attempting to solve."
+        },
+        {
+          "type": "text",
+          "body": "Common examination questions on Equilibria include: definitions and explanations, numerical calculations, diagram interpretation, and analysis of given data. Make sure you can handle all types."
+        },
+        {
+          "type": "heading",
+          "body": "Summary and Review"
+        },
+        {
+          "type": "text",
+          "body": "You have now covered all lessons in Equilibria. Review the key concepts from each lesson, practice past paper questions, and ensure you can apply your knowledge confidently. Good luck in your studies!"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "equilibria_l6_q1",
+            "type": "multiple_choice",
+            "question": "What is the chemical formula of water?",
+            "options": [
+              "H₂O",
+              "H₂O₂",
+              "HO₂",
+              "H₃O"
+            ],
+            "answer": "H₂O",
+            "explanation": "Water consists of 2 hydrogen atoms and 1 oxygen atom bonded covalently. Formula: H₂O."
+          },
+          {
+            "id": "equilibria_l6_q2",
+            "type": "multiple_choice",
+            "question": "What is the atomic number of carbon?",
+            "options": [
+              "6",
+              "12",
+              "14",
+              "8"
+            ],
+            "answer": "6",
+            "explanation": "Carbon has 6 protons (atomic number = 6). Its most common isotope has mass number 12 (6p + 6n)."
+          },
+          {
+            "id": "equilibria_l6_q3",
+            "type": "multiple_choice",
+            "question": "What is the pH of a neutral solution?",
+            "options": [
+              "7",
+              "0",
+              "14",
+              "1"
+            ],
+            "answer": "7",
+            "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is alkaline. Water has pH ≈ 7."
+          },
+          {
+            "id": "equilibria_l6_q4",
+            "type": "multiple_choice",
+            "question": "What type of bond forms in NaCl?",
+            "options": [
+              "Ionic bond (transfer of electrons)",
+              "Covalent bond (sharing)",
+              "Metallic bond",
+              "Hydrogen bond"
+            ],
+            "answer": "Ionic bond (transfer of electrons)",
+            "explanation": "Sodium gives its outer electron to chlorine, forming Na⁺ and Cl⁻ ions held by electrostatic attraction — an ionic bond."
+          },
+          {
+            "id": "equilibria_l6_q5",
+            "type": "multiple_choice",
+            "question": "What is the molar mass of CO₂? (C=12, O=16)",
+            "options": [
+              "44 g/mol",
+              "28 g/mol",
+              "32 g/mol",
+              "56 g/mol"
+            ],
+            "answer": "44 g/mol",
+            "explanation": "CO₂: C=12, 2×O=32. Molar mass = 12 + 32 = 44 g/mol."
+          },
+          {
+            "id": "equilibria_l6_q6",
+            "type": "multiple_choice",
+            "question": "What happens in a neutralisation reaction?",
+            "options": [
+              "Acid + Base → Salt + Water",
+              "Metal + Acid → Oxide + Water",
+              "Two salts exchange ions",
+              "An element is displaced"
+            ],
+            "answer": "Acid + Base → Salt + Water",
+            "explanation": "Neutralisation: Acid + Base → Salt + Water. Example: HCl + NaOH → NaCl + H₂O."
+          },
+          {
+            "id": "equilibria_l6_q7",
+            "type": "multiple_choice",
+            "question": "Avogadro's number is approximately:",
+            "options": [
+              "6.02 × 10²³ particles/mol",
+              "6.02 × 10²² particles/mol",
+              "3.0 × 10⁸ particles/mol",
+              "1.67 × 10⁻²⁴ particles/mol"
+            ],
+            "answer": "6.02 × 10²³ particles/mol",
+            "explanation": "Avogadro's constant = 6.02 × 10²³. One mole of any substance contains this many particles."
+          },
+          {
+            "id": "equilibria_l6_q8",
+            "type": "multiple_choice",
+            "question": "What is an isotope?",
+            "options": [
+              "Atoms of the same element with different numbers of neutrons",
+              "Different elements with same mass number",
+              "Ions of the same element",
+              "Atoms with different numbers of protons"
+            ],
+            "answer": "Atoms of the same element with different numbers of neutrons",
+            "explanation": "Isotopes are atoms of the same element (same proton number) but different neutron numbers, giving different mass numbers."
+          },
+          {
+            "id": "equilibria_l6_q9",
+            "type": "multiple_choice",
+            "question": "In electrolysis of water, which gas forms at the cathode?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Chlorine (Cl₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "At the cathode (negative electrode), hydrogen ions gain electrons and are reduced to H₂ gas: 2H⁺ + 2e⁻ → H₂."
+          },
+          {
+            "id": "equilibria_l6_q10",
+            "type": "multiple_choice",
+            "question": "What is oxidation in terms of electrons?",
+            "options": [
+              "Loss of electrons",
+              "Gain of electrons",
+              "Gain of oxygen",
+              "Increase in pH"
+            ],
+            "answer": "Loss of electrons",
+            "explanation": "Oxidation Is Loss, Reduction Is Gain — remember 'OIL RIG'. Oxidation = loss of electrons; reduction = gain of electrons."
+          },
+          {
+            "id": "equilibria_l6_q11",
+            "type": "multiple_choice",
+            "question": "What is the formula for calculating moles?",
+            "options": [
+              "moles = mass ÷ molar mass",
+              "moles = molar mass ÷ mass",
+              "moles = mass × molar mass",
+              "moles = volume ÷ concentration"
+            ],
+            "answer": "moles = mass ÷ molar mass",
+            "explanation": "Number of moles = mass (g) ÷ molar mass (g/mol). This is the fundamental mole equation."
+          },
+          {
+            "id": "equilibria_l6_q12",
+            "type": "multiple_choice",
+            "question": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+            "options": [
+              "Hydrogen (H₂)",
+              "Oxygen (O₂)",
+              "Sulphur dioxide (SO₂)",
+              "Carbon dioxide (CO₂)"
+            ],
+            "answer": "Hydrogen (H₂)",
+            "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂. Metals above hydrogen in the reactivity series displace hydrogen from dilute acids."
+          },
+          {
+            "id": "equilibria_l6_q13",
+            "type": "multiple_choice",
+            "question": "What is a covalent bond?",
+            "options": [
+              "Sharing of electron pairs between atoms",
+              "Transfer of electrons between atoms",
+              "Attraction between ions",
+              "Sharing of protons"
+            ],
+            "answer": "Sharing of electron pairs between atoms",
+            "explanation": "In a covalent bond, two atoms share one or more pairs of electrons. Common in non-metal compounds like H₂O, CO₂, CH₄."
+          },
+          {
+            "id": "equilibria_l6_q14",
+            "type": "multiple_choice",
+            "question": "What does the rate of reaction measure?",
+            "options": [
+              "How fast reactants are converted to products",
+              "The energy released in a reaction",
+              "The amount of catalyst needed",
+              "The equilibrium constant"
+            ],
+            "answer": "How fast reactants are converted to products",
+            "explanation": "Rate of reaction = change in concentration (or amount) of reactant/product per unit time."
+          },
+          {
+            "id": "equilibria_l6_q15",
+            "type": "multiple_choice",
+            "question": "What is the effect of a catalyst on a reaction?",
+            "options": [
+              "Increases rate without being consumed",
+              "Is consumed during the reaction",
+              "Increases the amount of product",
+              "Raises activation energy"
+            ],
+            "answer": "Increases rate without being consumed",
+            "explanation": "A catalyst increases reaction rate by providing an alternative pathway with lower activation energy. It is not consumed."
+          },
+          {
+            "id": "equilibria_l6_q16",
+            "type": "multiple_choice",
+            "question": "Which type of organic compound has the general formula CₙH₂ₙ₊₂?",
+            "options": [
+              "Alkanes",
+              "Alkenes",
+              "Alkynes",
+              "Alcohols"
+            ],
+            "answer": "Alkanes",
+            "explanation": "Alkanes have the general formula CₙH₂ₙ₊₂. They are saturated hydrocarbons with only single C-C bonds."
+          },
+          {
+            "id": "equilibria_l6_q17",
+            "type": "multiple_choice",
+            "question": "What is the first ionisation energy?",
+            "options": [
+              "Energy to remove one mole of electrons from one mole of gaseous atoms",
+              "Energy released when an electron is added",
+              "Bond dissociation energy",
+              "Lattice enthalpy"
+            ],
+            "answer": "Energy to remove one mole of electrons from one mole of gaseous atoms",
+            "explanation": "First ionisation energy: X(g) → X⁺(g) + e⁻. It is the energy needed to remove the outermost electron from a gaseous atom."
+          },
+          {
+            "id": "equilibria_l6_q18",
+            "type": "multiple_choice",
+            "question": "What is Le Chatelier's Principle?",
+            "options": [
+              "If a system at equilibrium is disturbed, it shifts to oppose the change",
+              "Reactions always go to completion",
+              "Catalysts change equilibrium position",
+              "Temperature has no effect on equilibrium"
+            ],
+            "answer": "If a system at equilibrium is disturbed, it shifts to oppose the change",
+            "explanation": "Le Chatelier's Principle: A system at equilibrium responds to a change (temperature, pressure, concentration) by shifting to counteract it."
+          },
+          {
+            "id": "equilibria_l6_q19",
+            "type": "multiple_choice",
+            "question": "What does 'exothermic' mean?",
+            "options": [
+              "The reaction releases heat energy to surroundings",
+              "The reaction absorbs heat energy",
+              "The reaction requires a catalyst",
+              "Temperature decreases during the reaction"
+            ],
+            "answer": "The reaction releases heat energy to surroundings",
+            "explanation": "Exothermic reactions release energy (ΔH < 0). Products have less energy than reactants. Examples: combustion, neutralisation."
+          },
+          {
+            "id": "equilibria_l6_q20",
+            "type": "multiple_choice",
+            "question": "What is Boyle's Law?",
+            "options": [
+              "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+              "Volume is proportional to temperature",
+              "Pressure is proportional to temperature",
+              "Volume is independent of pressure"
+            ],
+            "answer": "At constant temperature, pressure × volume = constant (P₁V₁ = P₂V₂)",
+            "explanation": "Boyle's Law: P ∝ 1/V at constant temperature. Doubling pressure halves volume (for ideal gases)."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_id": "equilibria"
+}
