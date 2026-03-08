@@ -27,7 +27,7 @@ function PermissionCard({ permission, onRequest, theme }) {
     granted:     { icon: '✅', title: 'Notifications Enabled', sub: 'You will receive study reminders', col: '#4ADE80', bg: 'rgba(74,222,128,0.08)', border: 'rgba(74,222,128,0.25)', btn: null },
     denied:      { icon: '🔕', title: 'Notifications Blocked', sub: 'Enable them in your browser settings → Site Settings → Notifications', col: '#EF4444', bg: 'rgba(239,68,68,0.08)', border: 'rgba(239,68,68,0.25)', btn: null },
     default:     { icon: '🔔', title: 'Enable Notifications', sub: 'Get study reminders at your best time, streak alerts, and mission nudges', col: '#F59E0B', bg: 'rgba(245,158,11,0.08)', border: 'rgba(245,158,11,0.25)', btn: 'Enable Now' },
-    unsupported: { icon: '📵', title: 'Not Supported', sub: 'Your browser does not support notifications. Try installing the app from Chrome on Android.', col: '#94A3B8', bg: theme.card, border: theme.border, btn: null },
+    unsupported: { icon: '📵', title: 'Not Supported', sub: 'Your browser does not support notifications. Try installing the app from Chrome on Android.', col: '#94A3B8', bg: 'rgba(255,255,255,0.04)', border: 'rgba(255,255,255,0.08)', btn: null },
   }
   const s = states[permission] || states.default
 
