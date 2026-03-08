@@ -3,11 +3,11 @@ import { useTheme } from '../context/ThemeContext.jsx'
 import { SoundEngine } from '../utils/soundEngine.js'
 
 const LINKS = [
-  { path:'/dashboard',  icon:'🏠', label:'Home'   },
-  { path:'/ai-tutor',   icon:'🧠', label:'AI'     },
-  { path:'/games',      icon:'🎮', label:'Games'  },
-  { path:'/flashcards', icon:'🃏', label:'Cards'  },
+  { path:'/dashboard',  icon:'🏠', label:'Home'    },
+  { path:'/ai-tutor',   icon:'🧠', label:'AI'      },
+  { path:'/games',      icon:'🎮', label:'Games'   },
   { path:'/progress',   icon:'📊', label:'Progress'},
+  { path:'/settings',   icon:'⚙️', label:'Settings'},
 ]
 
 export default function Navbar() {
