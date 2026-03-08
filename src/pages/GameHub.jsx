@@ -198,9 +198,15 @@ export default function GameHub() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Show games immediately with level 1 unlocked, then update with real data
-    const def = { status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }
-    setUnlockData(def)
+    try {
+      const def = {
+        status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])),
+        lessonsCompleted:0, avgScore:0, examsCompleted:0
+      }
+      setUnlockData(def)
+    } catch(e) {
+      setUnlockData({ status:{}, lessonsCompleted:0, avgScore:0, examsCompleted:0 })
+    }
     setLoading(false)
     if (!student) return
     getUnlockStatus(student.id)
