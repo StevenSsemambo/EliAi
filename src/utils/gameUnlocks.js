@@ -183,26 +183,43 @@ export const GAMES = [
 
 export async function getUnlockStatus(studentId) {
   if (!studentId) return { status:{}, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
-  const allProgress = await db.progress.where('student_id').equals(studentId).toArray()
-  const completed = allProgress.filter(p => p.status==='completed')
-  const lessonsCompleted = completed.length
-  const avgScore = completed.length>0 ? Math.round(completed.reduce((s,p)=>s+(p.best_score||0),0)/completed.length) : 0
-  const examResults = await db.exam_results.where('student_id').equals(studentId).toArray()
-  const examsCompleted = examResults.filter(e=>(e.score||0)>=50).length
-  const status = {}
-  for (const game of GAMES) {
-    status[game.id] = { unlockedLevels:[], highScores:{} }
-    for (const lvl of game.levels) {
-      const r = lvl.req
-      if (lessonsCompleted>=r.lessons && avgScore>=r.avgScore && examsCompleted>=r.exams)
-        status[game.id].unlockedLevels.push(lvl.level)
+  try {
+    const allProgress = await db.progress.where('student_id').equals(studentId).toArray()
+    const completed = allProgress.filter(p => p.status==='completed')
+    const lessonsCompleted = completed.length
+    const avgScore = completed.length>0 ? Math.round(completed.reduce((s,p)=>s+(p.best_score||0),0)/completed.length) : 0
+    let examsCompleted = 0
+    try {
+      const examResults = await db.exam_results.where('student_id').equals(studentId).toArray()
+      examsCompleted = examResults.filter(e=>(e.score||0)>=50).length
+    } catch(e) {}
+    const status = {}
+    for (const game of GAMES) {
+      status[game.id] = { unlockedLevels:[], highScores:{} }
+      for (const lvl of game.levels) {
+        const r = lvl.req
+        if (!r) continue
+        // Level 1 always unlocked so games are always visible
+        if (lvl.level === 1 || (lessonsCompleted>=r.lessons && avgScore>=r.avgScore && examsCompleted>=r.exams))
+          status[game.id].unlockedLevels.push(lvl.level)
+      }
     }
+    try {
+      const gameScores = await db.game_progress.where('student_id').equals(studentId).toArray()
+      for (const gs of gameScores) {
+        if (status[gs.game_id]) status[gs.game_id].highScores[gs.level] = gs.high_score
+      }
+    } catch(e) {}
+    return { status, lessonsCompleted, avgScore, examsCompleted }
+  } catch(e) {
+    console.error('getUnlockStatus error:', e)
+    // Fallback: return all games with level 1 unlocked
+    const status = {}
+    for (const game of GAMES) {
+      status[game.id] = { unlockedLevels:[1], highScores:{} }
+    }
+    return { status, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
   }
-  const gameScores = await db.game_progress.where('student_id').equals(studentId).toArray()
-  for (const gs of gameScores) {
-    if (status[gs.game_id]) status[gs.game_id].highScores[gs.level] = gs.high_score
-  }
-  return { status, lessonsCompleted, avgScore, examsCompleted }
 }
 
 export async function saveGameScore(studentId, gameId, level, score) {
