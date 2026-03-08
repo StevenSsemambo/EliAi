@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
-import { processMessage, QUICK_TOPICS } from '../ai/chatbot.js'
+import { processMessage, QUICK_TOPICS, loadStudentProfile } from '../ai/chatbot.js'
 import { generateResponse, getEngineStatus, onProgress, initEngine } from '../ai/llmEngine.js'
 import { SoundEngine } from '../utils/soundEngine.js'
 
@@ -204,6 +204,7 @@ export default function ElimuChatbot() {
   const [showTopics, setShowTopics] = useState(false)
   const [llmStatus, setLlmStatus] = useState(() => getEngineStatus())
   const [llmProgress, setLlmProgress] = useState(0)
+  const [studentProfile, setStudentProfile] = useState(null)
 
   // Chat context
   const ctx = useRef({
@@ -246,17 +247,48 @@ export default function ElimuChatbot() {
     if (open && !hasGreeted.current) {
       hasGreeted.current = true
       const isLLM = llmStatus === 'ready'
-      setTimeout(() => addBot(null, {
-        parts: [{
-          type:'text',
-          text: isLLM
-            ? `Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — powered by an on-device language model.\n\nI can answer almost anything about your curriculum, explain concepts in different ways, solve problems step by step, and remember our entire conversation.\n\nWhat would you like to learn?`
-            : `Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — your study assistant.\n\nAsk me to **explain** a topic, **calculate** step by step, **quiz** you, or give you a **hint** when stuck.\n\nWhat would you like to learn?`,
-        }, {
-          type:'suggestions',
-          items:['What is osmosis?','Quiz me on forces','How do I solve quadratic equations?',"I don't understand photosynthesis"],
-        }],
-      }), 400)
+
+      // Load student profile for personalised greeting
+      if (student?.id) {
+        loadStudentProfile(student.id).then(profile => {
+          setStudentProfile(profile)
+          if (isLLM) {
+            // LLM path — simple greeting, LLM handles personalisation
+            addBot(null, {
+              parts: [{ type:'text',
+                text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — powered by an on-device AI model.\n\nI can explain any topic, solve equations step by step, quiz you and remember our whole conversation.\n\nWhat would you like to learn?`,
+              }, { type:'suggestions', items:['What is osmosis?','Quiz me on forces','Solve 3x + 6 = 15','What should I study today?'] }],
+            })
+          } else if (profile && profile.summary.totalCompleted > 0) {
+            // Personalised greeting using real quiz data
+            import('../ai/chatbot.js').then(({ generatePersonalisedGreeting }) => {
+              const resp = generatePersonalisedGreeting(profile, student?.name)
+              addBot(null, resp || {
+                parts: [{ type:'text', text:`Hello ${student?.name || 'there'}! 👋 Ready to study? What topic today?` },
+                  { type:'suggestions', items:['What is osmosis?','Quiz me on forces','Solve 3x + 6 = 15','What should I study today?'] }]
+              })
+            })
+          } else {
+            // New student — standard welcome
+            addBot(null, {
+              parts: [{ type:'text',
+                text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — your personal study assistant for S1–S6.\n\nI can **explain** any topic, **solve** equations step by step, **quiz** you, and give you **personalised study tips** based on your progress.\n\nWhat would you like to start with?`,
+              }, { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 2x + 4 = 10','What should I study today?'] }],
+            })
+          }
+        }).catch(() => {
+          // Fallback if DB fails
+          addBot(null, {
+            parts: [{ type:'text', text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI**. Ask me anything about your S1–S6 curriculum!` },
+              { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 3x = 12','Explain probability'] }],
+          })
+        })
+      } else {
+        addBot(null, {
+          parts: [{ type:'text', text:`Hello! 👋 I am **Elimu AI** — your study assistant for S1–S6.\n\nAsk me to explain a topic, quiz you, solve a calculation, or give exam tips!` },
+            { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 2x + 4 = 10','What should I study?'] }],
+        })
+      }
       if (open) inputRef.current?.focus()
     }
     if (open) setHasUnread(false)
@@ -333,6 +365,7 @@ export default function ElimuChatbot() {
         const response = await processMessage(msg, {
           ...ctx.current,
           studentName: student?.name || '',
+          studentProfile,
         })
         setTyping(false)
 
