@@ -193,20 +193,16 @@ function UnlockCelebration({ game, level, onClose }) {
 export default function GameHub() {
   const { student } = useUser()
   const navigate = useNavigate()
-  const [unlockData, setUnlockData] = useState(null)
+  const defaultUnlocks = { status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }
+  const [unlockData, setUnlockData] = useState(defaultUnlocks)
   const [celebration, setCelebration] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    if (!student) { setLoading(false); return }
-    // Timeout fallback — never stay stuck on loading screen
-    const timeout = setTimeout(() => {
-      setUnlockData({ status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 })
-      setLoading(false)
-    }, 4000)
+    if (!student) return
     getUnlockStatus(student.id)
-      .then(data => { clearTimeout(timeout); setUnlockData(data); setLoading(false) })
-      .catch(() => { clearTimeout(timeout); setUnlockData({ status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }); setLoading(false) })
+      .then(data => setUnlockData(data))
+      .catch(() => {})
   }, [student])
 
   function handlePlay(game, level) {
