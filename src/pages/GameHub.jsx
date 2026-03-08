@@ -198,20 +198,14 @@ export default function GameHub() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    let cancelled = false
-    const fallback = setTimeout(() => {
-      if (!cancelled) {
-        const def = { status: {}, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
-        try { def.status = Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])) } catch(e) {}
-        setUnlockData(def)
-        setLoading(false)
-      }
-    }, 3000)
-    if (!student) { clearTimeout(fallback); setLoading(false); return }
+    // Show games immediately with level 1 unlocked, then update with real data
+    const def = { status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])), lessonsCompleted:0, avgScore:0, examsCompleted:0 }
+    setUnlockData(def)
+    setLoading(false)
+    if (!student) return
     getUnlockStatus(student.id)
-      .then(data => { if (!cancelled) { clearTimeout(fallback); setUnlockData(data); setLoading(false) } })
-      .catch(() => { if (!cancelled) { clearTimeout(fallback); setLoading(false) } })
-    return () => { cancelled = true; clearTimeout(fallback) }
+      .then(data => { if (data?.status) setUnlockData(data) })
+      .catch(() => {})
   }, [student])
 
   function handlePlay(game, level) {
