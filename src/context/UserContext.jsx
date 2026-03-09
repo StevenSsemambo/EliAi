@@ -39,13 +39,22 @@ export function UserProvider({ children }) {
     setStudent(s)
   }
 
+  const loginAsStudent = async (studentId) => {
+    const s = await studentDB.get(studentId)
+    if (s) {
+      localStorage.setItem('elimu_student_id', s.id)
+      studentDB.updateStreak(s.id)
+      setStudent(s)
+    }
+  }
+
   const logout = () => {
     localStorage.removeItem('elimu_student_id')
     setStudent(null)
   }
 
   return (
-    <UserContext.Provider value={{ student, loading, createStudent, refreshStudent, logout }}>
+    <UserContext.Provider value={{ student, loading, createStudent, refreshStudent, logout, loginAsStudent }}>
       {children}
     </UserContext.Provider>
   )
