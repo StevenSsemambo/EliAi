@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { UserProvider, useUser } from './context/UserContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { SubjectThemeProvider } from './context/SubjectThemeContext.jsx'
+import { checkPendingNotifications } from './utils/notifications.js'
 import SplashScreen          from './components/SplashScreen.jsx'
 import OfflineIndicator      from './components/OfflineIndicator.jsx'
 import ElimuChatbot          from './components/ElimuChatbot.jsx'
@@ -86,6 +87,11 @@ function AppRoutes() {
 export default function App() {
   const [splashDone, setSplashDone] = useState(false)
   const hasStudent = !!localStorage.getItem('elimu_student_id')
+
+  useEffect(() => {
+    // Fire any notifications that were scheduled while app was closed
+    checkPendingNotifications().catch(() => {})
+  }, [])
 
   return (
     <BrowserRouter>
