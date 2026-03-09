@@ -1,17 +1,17 @@
 /**
- * ELIMU LEARN — INTELLIGENT RULE-BASED AI  v4.0
- * ─────────────────────────────────────────────────────────────────
+ * ELIMU LEARN - INTELLIGENT RULE-BASED AI  v4.0
+ * -----------------------------------------------------------------
  * 100% offline. Works on all devices.
  *
  * v4 upgrades over v3:
- *   ✅ ALL 100+ curriculum files indexed — probability, logs, etc. all work
+ *   ✅ ALL 100+ curriculum files indexed - probability, logs, etc. all work
  *   ✅ Reads real student quiz data from DB (brain.js integration)
  *   ✅ Personalised greeting based on actual scores + weak topics
  *   ✅ "What should I study?" gives data-driven answer per student
  *   ✅ "How do I improve?" gives personalised plan per mistake type
  *   ✅ Topics flagged with personal score: "⚠️ You got 45% here last time"
  *   ✅ Step-by-step equation solver (linear + quadratic)
- *   ✅ Student answer evaluator — checks typed definitions
+ *   ✅ Student answer evaluator - checks typed definitions
  *   ✅ Compare mode for "X vs Y" questions
  *   ✅ Conversation memory + follow-up handling
  *   ✅ Fuzzy matching + typo correction
@@ -20,14 +20,14 @@
 
 import { analyseStudent } from './brain.js'
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // COMPLETE CURRICULUM INDEX
-// Maps every keyword → { subject, file, level, title }
+// Maps every keyword -> { subject, file, level, title }
 // Built from the actual file structure on disk
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 const CURRICULUM_INDEX = [
-  // ── MATHEMATICS ─────────────────────────────────────────────────
+  // -- MATHEMATICS -------------------------------------------------
   { file:'algebra',             subject:'mathematics', level:'s1', title:'Algebra Basics',
     keys:['algebra','variable','expression','coefficient','like terms','simplify','expand','linear','solve for x'] },
   { file:'linear_equations',    subject:'mathematics', level:'s1', title:'Linear Equations',
@@ -58,7 +58,7 @@ const CURRICULUM_INDEX = [
   { file:'logarithms',          subject:'mathematics', level:'s2', title:'Logarithms',
     keys:['logarithm','log','ln','natural log','log base','antilog','laws of logarithms','exponential equation'] },
   { file:'statistics',          subject:'mathematics', level:'s2', title:'Statistics',
-    keys:['probability','chance','likelihood','event','outcome','sample space','tree diagram','equally likely'] },
+    keys:['chance','likelihood','event','outcome','sample space','tree diagram','equally likely','basic probability'] },
   { file:'vectors_intro',       subject:'mathematics', level:'s2', title:'Vectors',
     keys:['vector','scalar','magnitude','direction','resultant','position vector','column vector'] },
 
@@ -87,7 +87,7 @@ const CURRICULUM_INDEX = [
     keys:['locus','loci','construction','compass','bearing','scale drawing','region','bisector','perpendicular bisector'] },
 
   { file:'probability_advanced', subject:'mathematics', level:'s5', title:'Probability',
-    keys:['probability distribution','binomial distribution','normal distribution','poisson','expected value','random variable','hypothesis test','statistical test'] },
+    keys:['probability','probability tree','probability problem','probability question','probability help','binomial distribution','probability distribution','normal distribution','poisson','expected value','random variable','hypothesis test','statistical test'] },
   { file:'further_calculus',    subject:'mathematics', level:'s5', title:'Further Calculus',
     keys:['chain rule','product rule','quotient rule','parametric','implicit differentiation','integration by parts','maclaurin','taylor'] },
   { file:'mechanics',           subject:'mathematics', level:'s5', title:'Mechanics',
@@ -108,11 +108,11 @@ const CURRICULUM_INDEX = [
   { file:'applied_mathematics', subject:'mathematics', level:'s6', title:'Applied Mathematics',
     keys:['linear programming','objective function','constraint','feasible region','simplex','optimization'] },
 
-  // ── PHYSICS ──────────────────────────────────────────────────────
+  // -- PHYSICS ------------------------------------------------------
   { file:'measurement',         subject:'physics', level:'s1', title:'Measurement',
     keys:['measurement','unit','si unit','significant figure','error','accuracy','precision','instrument','physical quantity'] },
   { file:'forces',              subject:'physics', level:'s1', title:'Forces & Motion',
-    keys:['force','newton','gravity','weight','friction','tension','normal force','resultant force','moment','turning effect','pressure'] },
+    keys:['physics','force','newton','gravity','weight','friction','tension','normal force','resultant force','moment','turning effect','pressure'] },
   { file:'energy',              subject:'physics', level:'s1', title:'Work, Energy & Power',
     keys:['energy','work done','power','kinetic energy','potential energy','joule','conservation of energy','efficiency','watt'] },
   { file:'light',               subject:'physics', level:'s1', title:'Light & Optics',
@@ -125,7 +125,7 @@ const CURRICULUM_INDEX = [
   { file:'waves_electricity',   subject:'physics', level:'s2', title:'Waves & Sound',
     keys:['wave','frequency','amplitude','wavelength','transverse','longitudinal','period','wavefront','sound','echo','resonance','doppler'] },
   { file:'current_electricity', subject:'physics', level:'s2', title:'Current Electricity',
-    keys:['current','voltage','resistance','circuit','ohm','series circuit','parallel circuit','ammeter','voltmeter','resistor','charge','electric power'] },
+    keys:['electricity','current','voltage','resistance','circuit','ohm','series circuit','parallel circuit','ammeter','voltmeter','resistor','charge','electric power'] },
   { file:'magnetism_heat',      subject:'physics', level:'s2', title:'Magnetism & Heat',
     keys:['magnet','magnetism','magnetic field','electromagnet','solenoid','poles','compass','heat transfer','conduction','convection','radiation'] },
   { file:'sound',               subject:'physics', level:'s2', title:'Sound',
@@ -171,7 +171,7 @@ const CURRICULUM_INDEX = [
   { file:'quantum_mechanics',   subject:'physics', level:'s6', title:'Quantum Mechanics',
     keys:['quantum mechanics','wave function','schrodinger','energy level','orbital','quantum number','electron configuration advanced'] },
 
-  // ── BIOLOGY ──────────────────────────────────────────────────────
+  // -- BIOLOGY ------------------------------------------------------
   { file:'cells',               subject:'biology', level:'s1', title:'Cell Structure & Function',
     keys:['cell','nucleus','membrane','cytoplasm','organelle','mitochondria','chloroplast','vacuole','cell wall','ribosome','eukaryotic','prokaryotic'] },
   { file:'classification',      subject:'biology', level:'s1', title:'Classification',
@@ -232,7 +232,7 @@ const CURRICULUM_INDEX = [
   { file:'developmental_biology', subject:'biology', level:'s6', title:'Developmental Biology',
     keys:['developmental','embryo','gastrulation','morphogen','stem cell differentiation','hox gene','organogenesis','cloning'] },
 
-  // ── CHEMISTRY ────────────────────────────────────────────────────
+  // -- CHEMISTRY ----------------------------------------------------
   { file:'atoms',               subject:'chemistry', level:'s1', title:'Atoms & Periodic Table',
     keys:['atom','element','proton','neutron','electron','atomic number','mass number','isotope','electron shell','valence electron','electron configuration'] },
   { file:'bonding',             subject:'chemistry', level:'s1', title:'Chemical Bonding',
@@ -247,7 +247,7 @@ const CURRICULUM_INDEX = [
   { file:'reactions_metals',    subject:'chemistry', level:'s2', title:'Chemical Reactions & Metals',
     keys:['reactivity series','metal','displacement reaction','corrosion','rusting','extraction','oxidation','reduction','redox','oxidation state'] },
   { file:'acids_periodic',      subject:'chemistry', level:'s2', title:'Acids, Bases & Salts',
-    keys:['acid','base','alkali','ph','indicator','neutralisation','litmus','universal indicator','strong acid','weak acid','salt','hydrochloric','sulphuric','nitric','periodic table','group','period'] },
+    keys:['ph','ph value','acid','base','alkali','ph indicator','indicator','neutralisation','litmus','universal indicator','strong acid','weak acid','salt','hydrochloric','sulphuric','nitric','periodic table','group','period'] },
   { file:'gases_solutions',     subject:'chemistry', level:'s2', title:'Gases & Solutions',
     keys:['gas law','solution','solute','solvent','solubility','concentration','dissolve','saturated','boyle','charles','ideal gas','preparation of gases'] },
   { file:'energy_changes',      subject:'chemistry', level:'s2', title:'Energy Changes',
@@ -289,7 +289,7 @@ const CURRICULUM_INDEX = [
 ]
 
 // Build fast keyword lookup
-const KEYWORD_MAP = new Map()  // keyword → array of topic entries
+const KEYWORD_MAP = new Map()  // keyword -> array of topic entries
 for (const entry of CURRICULUM_INDEX) {
   for (const key of entry.keys) {
     const k = key.toLowerCase()
@@ -298,9 +298,9 @@ for (const entry of CURRICULUM_INDEX) {
   }
 }
 
-// ═══════════════════════════════════════════════════════════════════
-// TOPIC EXTRACTOR  — searches ALL 100+ files
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
+// TOPIC EXTRACTOR  - searches ALL 100+ files
+// ===================================================================
 
 function levenshtein(a, b) {
   if (Math.abs(a.length - b.length) > 3) return 99
@@ -315,11 +315,38 @@ function levenshtein(a, b) {
 
 export function extractTopic(input) {
   const text = input.toLowerCase()
-  const scores = new Map()  // topic key → score
+  const scores = new Map()  // topic key -> score
 
-  // Pass 1: exact keyword matches
+  // Shortcut: if input is just a subject name, return the best intro topic
+  const subjectMap = {
+    'physics': { topic:'forces', subject:'physics', title:'Forces & Motion', level:'s1' },
+    'chemistry': { topic:'acids_periodic', subject:'chemistry', title:'Acids, Bases & Salts', level:'s2' },
+    'biology': { topic:'cells', subject:'biology', title:'Cell Biology', level:'s1' },
+    'mathematics': { topic:'algebra', subject:'mathematics', title:'Algebra', level:'s1' },
+    'maths': { topic:'algebra', subject:'mathematics', title:'Algebra', level:'s1' },
+    'math': { topic:'algebra', subject:'mathematics', title:'Algebra', level:'s1' },
+    'help with physics': { topic:'forces', subject:'physics', title:'Forces & Motion', level:'s1' },
+    'help with chemistry': { topic:'acids_periodic', subject:'chemistry', title:'Acids, Bases & Salts', level:'s2' },
+    'help with biology': { topic:'cells', subject:'biology', title:'Cell Biology', level:'s1' },
+    'help with maths': { topic:'algebra', subject:'mathematics', title:'Algebra', level:'s1' },
+    'help with math': { topic:'algebra', subject:'mathematics', title:'Algebra', level:'s1' },
+  }
+  const trimmed = text.trim().replace(/[?.!,]+$/, '')
+  if (subjectMap[trimmed]) return subjectMap[trimmed]
+  // Also check if input CONTAINS a subject shortcut phrase
+  for (const [phrase, result] of Object.entries(subjectMap)) {
+    if (trimmed.includes(phrase) && phrase.length > 4) return result
+  }
+
+  // Pass 1: exact keyword matches (word-boundary safe)
   for (const [keyword, entries] of KEYWORD_MAP) {
-    if (text.includes(keyword)) {
+    // Use word boundary: keyword must appear as whole word or phrase
+    const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const pattern = keyword.includes(' ')
+      ? escaped                          // multi-word: substring is fine
+      : `(?<![a-z])${escaped}(?:s|es|ed|ing|ion)?(?![a-z])` // allow plurals/suffixes
+    const re = new RegExp(pattern, 'i')
+    if (re.test(text)) {
       const weight = keyword.length * 2  // longer = more specific
       for (const e of entries) {
         const key = `${e.subject}/${e.file}`
@@ -359,7 +386,7 @@ export function extractTopic(input) {
   return entry ? { topic: entry.file, subject: entry.subject, title: entry.title, level: entry.level } : null
 }
 
-// For smart fallback — find closest even with no match
+// For smart fallback - find closest even with no match
 function findClosestTopic(input) {
   const text = input.toLowerCase()
   let best = null, bestScore = 0
@@ -379,9 +406,9 @@ function findClosestTopic(input) {
   return best
 }
 
-// ═══════════════════════════════════════════════════════════════════
-// CURRICULUM KNOWLEDGE LOADER  — tries all levels
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
+// CURRICULUM KNOWLEDGE LOADER  - tries all levels
+// ===================================================================
 
 const KNOWLEDGE_CACHE = {}
 
@@ -439,9 +466,9 @@ function extractKnowledge(data, topic, subject, titleOverride = null) {
   return k
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // CONVERSATION MEMORY
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 export const conversationMemory = {
   lastTopic: null, lastSubject: null, lastKnowledge: null,
@@ -455,9 +482,9 @@ export function resetMemory() {
   })
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // CALCULATION SOLVER
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 const CALC_ENGINES = [
   { match: /speed|velocity|distance.*time|time.*distance/i,
@@ -535,9 +562,9 @@ function tryAutoCalculate(input) {
   return null
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // INTENT CLASSIFIER
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 const INTENT_PATTERNS = [
   { intent:'FOLLOWUP_MORE',    patterns: [/^(tell me more|more|continue|go on|elaborate|expand)[\s.!?]*$/i, /^more (about|on|please)[\s.!?]*$/i] },
@@ -567,9 +594,9 @@ export function classifyIntent(input) {
   return { intent: 'EXPLAIN', raw: input }
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // RESPONSE GENERATORS
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 function pick(arr) { return arr[Math.floor(Math.random()*arr.length)] }
 
@@ -583,7 +610,7 @@ function smartFallback(query) {
     parts.push({ type:'suggestions', items:[`Explain ${name}`, `Quiz me on ${name}`, `How do I calculate ${name}?`, 'Show all topics'] })
   } else {
     parts.push({ type:'heading', text:"🤔 I'm not sure about that" })
-    parts.push({ type:'text', text:`I specialise in the S1–S6 UNEB curriculum. Try asking about a specific topic:` })
+    parts.push({ type:'text', text:`I specialise in the S1-S6 UNEB curriculum. Try asking about a specific topic:` })
     parts.push({ type:'list', items:['"What is photosynthesis?"','"Explain quadratic equations"','"Quiz me on forces"','"How do I calculate moles?"','"Exam tips for genetics"'] })
     parts.push({ type:'suggestions', items:['Explain photosynthesis','Quiz me on algebra','Explain electricity','How do I calculate force?'] })
   }
@@ -651,7 +678,7 @@ export function generateCalculateResponse(knowledge, query) {
   if (knowledge.formulas.length > 0) {
     parts.push({ type:'formula', title:'📐 Formulas', items: knowledge.formulas.map(f=>`${f.label}: ${f.content}`) })
     parts.push({ type:'list', title:'📋 Step-by-Step Method', items:[
-      '1️⃣ Read the question — list all given values',
+      '1️⃣ Read the question - list all given values',
       '2️⃣ Identify the unknown (what you need to find)',
       '3️⃣ Choose the right formula from above',
       '4️⃣ Substitute the values into the formula',
@@ -691,7 +718,7 @@ export function generateHintResponse(knowledge, query) {
   if (!knowledge) {
     parts.push({ type:'heading', text:'💡 Let me help you' })
     parts.push({ type:'list', title:'When you are stuck, try this:', items:[
-      '📖 Re-read the question — what is it actually asking?',
+      '📖 Re-read the question - what is it actually asking?',
       '📝 Write down all values given in the question',
       '🔍 Which topic does this question relate to?',
       '📚 Look at a similar worked example in your notes',
@@ -723,16 +750,16 @@ function generateExamTipResponse(knowledge, query) {
     const tips = []
     if (knowledge.formulas.length>0)
       tips.push(`Memorise these formulas: ${knowledge.formulas.map(f=>f.content).slice(0,3).join(' | ')}`)
-    tips.push(`For definitions — learn exact key terms. UNEB examiners mark specific wording`)
-    tips.push(`Always show your working — method marks matter even if your final answer is wrong`)
+    tips.push(`For definitions - learn exact key terms. UNEB examiners mark specific wording`)
+    tips.push(`Always show your working - method marks matter even if your final answer is wrong`)
     tips.push(`Common mistake: not writing units in the final answer`)
     parts.push({ type:'list', title:`📌 Tips for ${knowledge.title}:`, items: tips })
   }
   parts.push({ type:'list', title:'📋 General UNEB Strategy:', items:[
-    '📝 Show all working — never skip steps',
-    '⏱️ If stuck, skip and come back — manage your time',
+    '📝 Show all working - never skip steps',
+    '⏱️ If stuck, skip and come back - manage your time',
     '🔢 Always include units in your answer',
-    '✅ Check arithmetic — many marks are lost on simple errors',
+    '✅ Check arithmetic - many marks are lost on simple errors',
     '📊 Label diagrams fully and use a ruler',
   ]})
   parts.push({ type:'suggestions', items:[
@@ -743,15 +770,15 @@ function generateExamTipResponse(knowledge, query) {
   return { parts, topic: knowledge?.topic, subject: knowledge?.subject }
 }
 
-// ── Greetings & small talk ─────────────────────────────────────────
+// -- Greetings & small talk -----------------------------------------
 const GREETINGS = [
-  n=>`Hello${n?' '+n:''}! 👋 I am **Elimu AI** — your personal study assistant for S1–S6.\n\nI can help you:\n• **Explain** any topic — _"What is osmosis?"_\n• **Solve** calculations — _"Find force if mass=5kg acceleration=3m/s²"_\n• **Quiz** you — _"Quiz me on probability"_\n• **Hints** when stuck — _"I don't understand simultaneous equations"_\n• **Exam tips** — _"Tips for chemistry exam"_\n\nWhat would you like to study today?`,
-  n=>`Hi${n?' '+n:''}! 🌟 Ready to study? I know your entire S1–S6 curriculum — all four subjects.\n\nTry:\n• _"Explain logarithms"_\n• _"Quiz me on cells"_\n• _"How do I calculate moles?"_\n• _"Difference between mitosis and meiosis"_`,
+  n=>`Hello${n?' '+n:''}! 👋 I am **Elimu AI** - your personal study assistant for S1-S6.\n\nI can help you:\n• **Explain** any topic - _"What is osmosis?"_\n• **Solve** calculations - _"Find force if mass=5kg acceleration=3m/s²"_\n• **Quiz** you - _"Quiz me on probability"_\n• **Hints** when stuck - _"I don't understand simultaneous equations"_\n• **Exam tips** - _"Tips for chemistry exam"_\n\nWhat would you like to study today?`,
+  n=>`Hi${n?' '+n:''}! 🌟 Ready to study? I know your entire S1-S6 curriculum - all four subjects.\n\nTry:\n• _"Explain logarithms"_\n• _"Quiz me on cells"_\n• _"How do I calculate moles?"_\n• _"Difference between mitosis and meiosis"_`,
   n=>`Good to see you${n?', '+n:''}! 🚀 Let's make this study session count.\n\nI cover every topic in Maths, Physics, Biology and Chemistry from S1 to S6. What are we tackling today?`,
 ]
 const THANKS_MSGS = [
   "You're welcome! 😊 Every question you ask makes you stronger. What's next?",
-  "Happy to help! 🌟 Keep studying consistently — it's the key to UNEB success. What else?",
+  "Happy to help! 🌟 Keep studying consistently - it's the key to UNEB success. What else?",
   "Great! 🚀 The students who ask questions are the ones who pass. What else can I help with?",
   "Glad that helped! 💪 Want to test yourself with a quick quiz?",
   "Any time! 🎯 What topic next?",
@@ -760,10 +787,10 @@ const CORRECT_RESP = [
   n=>`✅ Correct${n?', '+n:''}! Well done! 🎉`,
   ()=>`✅ That's right! Excellent! ⭐`,
   ()=>`✅ Perfect! You clearly know this topic. 🚀`,
-  ()=>`✅ Spot on! Keep this up — you will ace UNEB. 💪`,
+  ()=>`✅ Spot on! Keep this up - you will ace UNEB. 💪`,
 ]
 const WRONG_RESP = [
-  ()=>`❌ Not quite — but that's how we learn.`,
+  ()=>`❌ Not quite - but that's how we learn.`,
   ()=>`❌ Good try! The correct answer is below.`,
   ()=>`❌ Almost! Check the correct answer below.`,
 ]
@@ -791,9 +818,9 @@ export function checkQuizAnswer(userInput, currentQuestion) {
   return { correct: input===al || al.startsWith(input) || input.startsWith(al), chosen: userInput, answer, explanation: currentQuestion.explanation }
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // MAIN PROCESSOR
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 export async function processMessage(input, context={}) {
   const mem = conversationMemory
@@ -859,22 +886,22 @@ export async function processMessage(input, context={}) {
       if (dominantMistakes.length > 0) {
         const m = dominantMistakes[0]
         const advice = {
-          calculation:'Practice at least 5 worked examples per topic. Write every step — never skip.',
+          calculation:'Practice at least 5 worked examples per topic. Write every step - never skip.',
           concept:'Write each key definition in your own words without looking. Repeat daily.',
           application:'Practice past paper "Given that..." problems. Do at least 2 every day.',
           memory:'Use the Flashcards feature. Cover the answer and try to recall before flipping.',
           diagram:'Draw and label diagrams from memory. Check against notes. Repeat.',
         }
-        parts.push({ type:'text', text:`🎯 **Your biggest weakness: ${m.label}**\n→ ${advice[m.id]||'Focus on consistent daily practice.'}` })
+        parts.push({ type:'text', text:`🎯 **Your biggest weakness: ${m.label}**\n-> ${advice[m.id]||'Focus on consistent daily practice.'}` })
       }
       if (allWeakTopics.length > 0)
         parts.push({ type:'list', title:'🔄 Retry these first (your lowest scores):', items:
-          allWeakTopics.slice(0,3).map(t=>`${t.topic.replace(/_/g,' ')} — ${t.score}%, aim for 70%+`) })
+          allWeakTopics.slice(0,3).map(t=>`${t.topic.replace(/_/g,' ')} - ${t.score}%, aim for 70%+`) })
     } else {
-      parts.push({ type:'text', text:'Complete some quizzes first — then I can give personalised advice based on your actual weak areas!' })
+      parts.push({ type:'text', text:'Complete some quizzes first - then I can give personalised advice based on your actual weak areas!' })
     }
     parts.push({ type:'list', title:'📋 Daily improvement plan:', items:[
-      '1️⃣ 1 lesson minimum per day — consistency beats cramming',
+      '1️⃣ 1 lesson minimum per day - consistency beats cramming',
       '2️⃣ Read the AI explanation for every wrong answer',
       '3️⃣ Flashcards for topics below 60%',
       '4️⃣ Weekly mock exam in the Exam Center',
@@ -884,7 +911,7 @@ export async function processMessage(input, context={}) {
     return { parts }
   }
 
-  // ── Check for equation/algebra solving BEFORE topic detection ────
+  // -- Check for equation/algebra solving BEFORE topic detection ----
   if (intent==='CALCULATE' || /solve|equation|find x|=\s*\d/i.test(input)) {
     const solved = solveEquation(input)
     if (solved) {
@@ -898,7 +925,7 @@ export async function processMessage(input, context={}) {
     }
   }
 
-  // ── Detect if student is submitting their OWN answer for evaluation
+  // -- Detect if student is submitting their OWN answer for evaluation
   // e.g. "osmosis is the movement of water" or "my answer: ..."
   const isOwnAnswer = /^(osmosis|photosynthesis|diffusion|respiration|mitosis|meiosis|gravity|friction|voltage|acid|base|atom|cell|gene|enzyme|catalyst|oxidation|reduction|electrolysis|probability|vector|matrix|derivative|integral)\s+(is|are|means|refers|occurs|happens|involves)/i.test(input.trim())
     || /^my answer[:\s]/i.test(input.trim())
@@ -920,7 +947,7 @@ export async function processMessage(input, context={}) {
     }
   }
 
-  // ── Load knowledge for topic ──────────────────────────────────────
+  // -- Load knowledge for topic --------------------------------------
   const topicResult = extractTopic(input)
   let knowledge = null
   if (topicResult) {
@@ -935,7 +962,7 @@ export async function processMessage(input, context={}) {
     if (!mem.sessionTopics.includes(knowledge.topic)) mem.sessionTopics.push(knowledge.topic)
   }
 
-  // ── Personalise responses using student profile ───────────────────
+  // -- Personalise responses using student profile -------------------
   const profile = context.studentProfile || getCachedProfile()
   if (profile && knowledge) {
     // Check if student has quiz data for this topic
@@ -946,9 +973,9 @@ export async function processMessage(input, context={}) {
 
     // Add personalised context to responses
     if (isWeakTopic && topicScore !== undefined) {
-      knowledge._personalNote = `⚠️ You scored **${topicScore}%** on this topic last time — pay extra attention!`
+      knowledge._personalNote = `⚠️ You scored **${topicScore}%** on this topic last time - pay extra attention!`
     } else if (isStrongTopic) {
-      knowledge._personalNote = `✅ You're doing well in this topic — challenge yourself with harder questions!`
+      knowledge._personalNote = `✅ You're doing well in this topic - challenge yourself with harder questions!`
     }
   }
 
@@ -967,7 +994,7 @@ export async function processMessage(input, context={}) {
   }
 }
 
-// ── Compare two topics ────────────────────────────────────────────
+// -- Compare two topics --------------------------------------------
 function generateCompareResponse(knowledge, input) {
   // Extract second topic from "X vs Y" or "difference between X and Y"
   const vsMatch = input.match(/difference between (.+) and (.+)/i)
@@ -998,9 +1025,9 @@ function generateCompareResponse(knowledge, input) {
   return { parts, topic: knowledge?.topic, subject: knowledge?.subject }
 }
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // QUICK TOPIC CHIPS
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
 export const QUICK_TOPICS = [
   { label:'📐 Algebra',           query:'Explain algebra' },
@@ -1019,11 +1046,11 @@ export const QUICK_TOPICS = [
   { label:'🧮 Solve Problem',     query:'Find force if mass=5kg acceleration=3m/s²' },
 ]
 
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 // STUDENT PROFILE INTEGRATION  (reads brain.js analysis from DB)
-// ═══════════════════════════════════════════════════════════════════
+// ===================================================================
 
-// Cached profile — refreshed when chatbot opens
+// Cached profile - refreshed when chatbot opens
 // Cache lives for 5 minutes OR until invalidated (e.g. after quiz completion)
 let cachedProfile = null
 let profileStudentId = null
@@ -1051,7 +1078,7 @@ export function invalidateProfileCache() {
 
 export function getCachedProfile() { return cachedProfile }
 
-// ── Proactive greeting using real student data ────────────────────
+// -- Proactive greeting using real student data --------------------
 export function generatePersonalisedGreeting(profile, studentName) {
   const name = studentName || conversationMemory.studentName || ''
   if (!profile) return null  // fall back to default greeting
@@ -1076,20 +1103,20 @@ export function generatePersonalisedGreeting(profile, studentName) {
   }
 
   if (weakestSubj) {
-    lines.push(`⚠️ **Needs attention:** ${weakestSubj[0]} (${weakestSubj[1]}% strength) — this is where you need the most work`)
+    lines.push(`⚠️ **Needs attention:** ${weakestSubj[0]} (${weakestSubj[1]}% strength) - this is where you need the most work`)
   }
 
   if (allWeakTopics.length > 0) {
     const t = allWeakTopics[0]
-    lines.push(`🔄 **Lowest score:** ${t.topic.replace(/_/g,' ')} in ${t.subject} — you got ${t.score}%`)
+    lines.push(`🔄 **Lowest score:** ${t.topic.replace(/_/g,' ')} in ${t.subject} - you got ${t.score}%`)
   }
 
   if (topRisk && topRisk.mastery < 70) {
-    lines.push(`🎓 **UNEB risk:** ${topRisk.topic.replace(/_/g,' ')} — important exam topic, only ${topRisk.mastery}% mastered`)
+    lines.push(`🎓 **UNEB risk:** ${topRisk.topic.replace(/_/g,' ')} - important exam topic, only ${topRisk.mastery}% mastered`)
   }
 
   if (summary.streakRisk) {
-    lines.push(`⏰ **Study streak:** You've only studied ${summary.studyDaysThisWeek} days this week — aim for at least 5!`)
+    lines.push(`⏰ **Study streak:** You've only studied ${summary.studyDaysThisWeek} days this week - aim for at least 5!`)
   }
 
   lines.push(`\nWhat would you like to work on? I can explain topics, quiz you on weak areas, or give you a study plan.`)
@@ -1107,7 +1134,7 @@ export function generatePersonalisedGreeting(profile, studentName) {
   }
 }
 
-// ── Personalised study recommendation using real data ─────────────
+// -- Personalised study recommendation using real data -------------
 export function generateSmartRecommendation(profile) {
   if (!profile) {
     return {
@@ -1132,7 +1159,7 @@ export function generateSmartRecommendation(profile) {
   // Weakest topics to retry
   if (allWeakTopics.length > 0) {
     parts.push({ type:'list', title:'🔄 Retry these (your lowest scores):', items:
-      allWeakTopics.slice(0,4).map(t => `${t.topic.replace(/_/g,' ')} (${t.subject}) — you got ${t.score}%`)
+      allWeakTopics.slice(0,4).map(t => `${t.topic.replace(/_/g,' ')} (${t.subject}) - you got ${t.score}%`)
     })
   }
 
@@ -1145,14 +1172,14 @@ export function generateSmartRecommendation(profile) {
 
   if (topRisks.length > 0) {
     parts.push({ type:'list', title:'🎓 High UNEB priority topics:', items:
-      topRisks.map(t => `${t.topic.replace(/_/g,' ')} (${t.subject}) — ${t.mastery}% mastered, high exam probability`)
+      topRisks.map(t => `${t.topic.replace(/_/g,' ')} (${t.subject}) - ${t.mastery}% mastered, high exam probability`)
     })
   }
 
   // Mistake pattern advice
   if (dominantMistakes.length > 0) {
     const m = dominantMistakes[0]
-    parts.push({ type:'text', text:`🧠 **Your main weakness type:** ${m.label} — ${
+    parts.push({ type:'text', text:`🧠 **Your main weakness type:** ${m.label} - ${
       m.id==='calculation' ? 'Practice more worked examples and show full working in every answer' :
       m.id==='concept'     ? 'Focus on definitions and understanding the "why" behind each topic' :
       m.id==='application' ? 'Practice questions that start with "given that..." or "a student..."' :
@@ -1166,7 +1193,7 @@ export function generateSmartRecommendation(profile) {
   if (weakestSubj) {
     const diff = adaptiveDifficulty[weakestSubj[0]]
     const levels = ['','Foundation','Developing','Intermediate','Advanced','Expert']
-    parts.push({ type:'text', text:`📈 **Recommended level for ${weakestSubj[0]}:** ${levels[diff] || 'Foundation'} — start with easier questions and build up` })
+    parts.push({ type:'text', text:`📈 **Recommended level for ${weakestSubj[0]}:** ${levels[diff] || 'Foundation'} - start with easier questions and build up` })
   }
 
   parts.push({ type:'suggestions', items: [
@@ -1179,7 +1206,7 @@ export function generateSmartRecommendation(profile) {
   return { parts }
 }
 
-// ── Answer evaluator — checks student's own typed answer ──────────
+// -- Answer evaluator - checks student's own typed answer ----------
 export function evaluateStudentAnswer(studentAnswer, knowledge) {
   if (!knowledge) return null
   const ans = studentAnswer.toLowerCase().trim()
@@ -1203,7 +1230,7 @@ export function evaluateStudentAnswer(studentAnswer, knowledge) {
       return {
         verdict: 'partial',
         score,
-        feedback: `🟡 Partially correct — you're on the right track. Key terms you missed: **${missing.join(', ')}**\n\nFull definition: **${def.definition}**`,
+        feedback: `🟡 Partially correct - you're on the right track. Key terms you missed: **${missing.join(', ')}**\n\nFull definition: **${def.definition}**`,
         missing,
       }
     } else {
@@ -1232,7 +1259,7 @@ export function evaluateStudentAnswer(studentAnswer, knowledge) {
   return null
 }
 
-// ── Step-by-step algebra/equation solver ─────────────────────────
+// -- Step-by-step algebra/equation solver -------------------------
 export function solveEquation(input) {
   const text = input.toLowerCase().trim()
 
@@ -1295,10 +1322,10 @@ export function solveEquation(input) {
     steps.push(`Discriminant = b²-4ac = ${b}²-4(${a})(${c}) = **${discriminant}**`)
 
     if (discriminant < 0) {
-      steps.push(`❌ Discriminant < 0 — **no real solutions**`)
+      steps.push(`❌ Discriminant < 0 - **no real solutions**`)
     } else if (discriminant === 0) {
       const x = -b / (2*a)
-      steps.push(`Discriminant = 0 → one solution: **x = -b/2a = ${x}**`)
+      steps.push(`Discriminant = 0 -> one solution: **x = -b/2a = ${x}**`)
     } else {
       const x1 = (-b + Math.sqrt(discriminant)) / (2*a)
       const x2 = (-b - Math.sqrt(discriminant)) / (2*a)
