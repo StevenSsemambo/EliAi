@@ -37,10 +37,24 @@ export default defineConfig({
         ]
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,json}'],
+        // Only precache app shell — NOT curriculum JSON (too large, loaded at runtime)
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        // Raise limit for JS bundles which can be large
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
         skipWaiting: true,
         clientsClaim: true,
         runtimeCaching: [
+          // Curriculum JSON: cache on first fetch, serve from cache offline
+          {
+            urlPattern: /\/curriculum\/.*\.json$/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'curriculum-cache',
+              expiration: { maxEntries: 200, maxAgeSeconds: 60 * 60 * 24 * 90 }, // 90 days
+              cacheableResponse: { statuses: [0, 200] },
+            }
+          },
+          // Google Fonts
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
             handler: 'CacheFirst',
