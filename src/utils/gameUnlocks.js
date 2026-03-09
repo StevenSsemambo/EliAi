@@ -179,7 +179,7 @@ export const GAMES = [
       'Vectors I','Matrices I','Calculus I','UNEB Exam Prep',
     ], l => ({ req: gradual(l, { minL:0, maxL:0, minS:40, maxS:80, minE:0, maxE:0 }) })),
   },
-]
+].filter(Boolean)
 
 export async function getUnlockStatus(studentId) {
   if (!studentId) return { status:{}, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
