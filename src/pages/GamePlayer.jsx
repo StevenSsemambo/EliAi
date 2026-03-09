@@ -22,6 +22,13 @@ const GAME_COMPONENTS = {
   arithmetic: NumberWarp,
   sequence:   SequenceMemory,
   logic:      LogicGrid,
+  // Subject-specific games
+  subject: {
+    chem_lab:       ChemLabGame,
+    physics_forces: PhysicsForcesGame,
+    biology_cells:  BiologyCellGame,
+    maths_speed:    MathsSpeedGame,
+  },
 }
 
 const CATEGORY_COLORS = {
@@ -78,7 +85,8 @@ export default function GamePlayer() {
 
   const game = GAMES.find(g => g.id === gameId) || state?.game
   const levelData = game?.levels.find(l => l.level === parseInt(levelNum)) || state?.level
-  const GameComponent = game ? GAME_COMPONENTS[game.type] : null
+  const _comp = game ? GAME_COMPONENTS[game.type] : null
+  const GameComponent = _comp && typeof _comp === 'object' ? _comp[game.id] : _comp
 
   if (!game || !levelData || !GameComponent) {
     return (
