@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { GAMES } from '../utils/gameUnlocks.js'
+import db from '../db/schema.js'
 
 import NebulaMemory   from './games/NebulaMemory.jsx'
 import ChemLabGame    from './games/ChemLabGame.jsx'
@@ -28,15 +29,42 @@ const CATEGORY_COLORS = {
   Arithmetic:'#F59E0B', Logic:'#06B6D4',
 }
 
-function trackGameAchievements(gameId, level) {
-  // Track for achievements
-  localStorage.setItem('elimu_game_first', '1')
-  const maxLevel = parseInt(localStorage.getItem('elimu_game_max_level') || '0')
-  if (level > maxLevel) localStorage.setItem('elimu_game_max_level', String(level))
-  const played = JSON.parse(localStorage.getItem('elimu_games_played') || '[]')
-  if (!played.includes(gameId)) {
-    played.push(gameId)
-    localStorage.setItem('elimu_games_played', JSON.stringify(played))
+async function saveGameProgress(studentId, gameId, level, score) {
+  if (!studentId) return
+  try {
+    // Upsert: update if exists, insert if not
+    const existing = await db.game_progress
+      .where('[student_id+game_id+level]')
+      .equals([studentId, gameId, level])
+      .first()
+    if (existing) {
+      if (score > (existing.high_score || 0)) {
+        await db.game_progress.update(existing.id, { high_score: score, played_at: new Date().toISOString() })
+      }
+    } else {
+      await db.game_progress.add({
+        student_id: studentId,
+        game_id: gameId,
+        level,
+        high_score: score,
+        unlocked_at: new Date().toISOString(),
+      })
+    }
+  } catch(e) {
+    // Compound index may not exist — fall back to simple query
+    try {
+      const rows = await db.game_progress.where('student_id').equals(studentId).toArray()
+      const existing = rows.find(r => r.game_id === gameId && r.level === level)
+      if (existing) {
+        if (score > (existing.high_score || 0))
+          await db.game_progress.update(existing.id, { high_score: score, played_at: new Date().toISOString() })
+      } else {
+        await db.game_progress.add({
+          student_id: studentId, game_id: gameId, level,
+          high_score: score, unlocked_at: new Date().toISOString(),
+        })
+      }
+    } catch {}
   }
 }
 
@@ -114,7 +142,12 @@ export default function GamePlayer() {
 
       {/* Game */}
       <div className="flex-1 px-4 pt-4 pb-6 overflow-auto max-w-lg mx-auto w-full">
-        <GameComponent key={key} game={game} levelData={levelData} studentId={student?.id} onFinish={() => navigate('/games')} />
+        <GameComponent key={key} game={game} levelData={levelData} studentId={student?.id}
+          onFinish={async () => {
+            // Save a completion record for ProgressReport gameLevels count
+            await saveGameProgress(student?.id, gameId, lv, levelData.level * 10)
+            navigate('/games')
+          }} />
       </div>
     </div>
   )
