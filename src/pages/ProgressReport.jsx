@@ -4,6 +4,7 @@ import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
 import { SoundEngine } from '../utils/soundEngine.js'
 import db from '../db/schema.js'
+import { analyseStudent } from '../ai/brain.js'
 import Navbar from '../components/Navbar.jsx'
 
 const SUBJECTS = ['mathematics','physics','biology','chemistry']
@@ -33,10 +34,11 @@ export default function ProgressReport() {
   const reportRef   = useRef(null)
 
   const [stats, setStats]       = useState(null)
+  const [analysis, setAnalysis] = useState(null)
   const [loading, setLoading]   = useState(true)
   const [printing, setPrinting] = useState(false)
 
-  useEffect(() => { if (student) loadStats() }, [student])
+  useEffect(() => { if (student) { loadStats(); analyseStudent(student.id).then(setAnalysis).catch(()=>{}) } }, [student])
 
   async function loadStats() {
     const allProgress = await db.progress.where('student_id').equals(student.id).toArray()
@@ -113,7 +115,11 @@ export default function ProgressReport() {
       }),
       ``,
       `Powered by Elimu Learn | Built by SEMATECH DEVELOPERS 🇺🇬`,
-    ].join('\n')
+    ]
+    if (analysis?.allWeakTopics?.length) {
+      const weak = analysis.allWeakTopics.slice(0,3).map(t=>t.topic.replace(/_/g,' ')).join(', ')
+      text.splice(text.length - 1, 0, ``, `NEEDS REVISION`, `• ${weak}`)
+    }.join('\n')
     try {
       if (navigator.share) await navigator.share({ title: 'Elimu Progress Report', text })
       else { await navigator.clipboard?.writeText(text); alert('Report copied to clipboard!') }
@@ -247,6 +253,55 @@ export default function ProgressReport() {
               })}
             </div>
           </div>
+
+          {/* AI Insights — weak topics & UNEB risk */}
+          {analysis && analysis.summary.totalCompleted > 0 && (() => {
+            const weakTopics = analysis.allWeakTopics?.slice(0, 5) || []
+            const topRisks = Object.values(analysis.examPredictions).flat()
+              .filter(t => t.riskScore > 0.25).sort((a,b) => b.riskScore - a.riskScore).slice(0, 4)
+            const topMistake = analysis.dominantMistakes?.[0]
+            if (!weakTopics.length && !topRisks.length) return null
+            return (
+              <div className="rounded-2xl p-4 mb-4" style={{ background: theme.card, border:`1px solid ${theme.border}` }}>
+                <h3 className="font-black text-sm mb-3" style={{ color: theme.text }}>🧠 AI Learning Analysis</h3>
+                {topMistake && (
+                  <div className="rounded-xl px-3 py-2 mb-3"
+                    style={{background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)'}}>
+                    <p className="text-xs font-bold" style={{color:'#F59E0B'}}>Main Mistake Pattern</p>
+                    <p className="text-xs mt-0.5" style={{color:theme.subtext}}>{topMistake.label} — {topMistake.advice || 'Review concept understanding'}</p>
+                  </div>
+                )}
+                {weakTopics.length > 0 && (
+                  <>
+                    <p className="text-xs font-bold mb-2" style={{color:theme.muted}}>Needs Revision</p>
+                    {weakTopics.map((t,i) => (
+                      <div key={i} className="flex justify-between items-center py-1 border-b last:border-0"
+                        style={{borderColor:theme.border}}>
+                        <span className="text-xs capitalize" style={{color:theme.text}}>{t.topic.replace(/_/g,' ')} <span style={{color:theme.muted}}>({t.subject})</span></span>
+                        <span className="text-xs font-bold" style={{color:'#F87171'}}>{t.score}%</span>
+                      </div>
+                    ))}
+                  </>
+                )}
+                {topRisks.length > 0 && (
+                  <>
+                    <p className="text-xs font-bold mb-2 mt-3" style={{color:theme.muted}}>⚠️ High UNEB Exam Risk</p>
+                    {topRisks.map((t,i) => {
+                      const risk = Math.round(t.riskScore * 100)
+                      const col = risk > 60 ? '#EF4444' : '#F59E0B'
+                      return (
+                        <div key={i} className="flex justify-between items-center py-1 border-b last:border-0"
+                          style={{borderColor:theme.border}}>
+                          <span className="text-xs capitalize" style={{color:theme.text}}>{t.topic.replace(/_/g,' ')}</span>
+                          <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{background:`${col}20`,color:col}}>{risk}% risk</span>
+                        </div>
+                      )
+                    })}
+                  </>
+                )}
+              </div>
+            )
+          })()}
 
           {/* Teacher/parent note */}
           <div className="rounded-2xl p-4 mb-4"
