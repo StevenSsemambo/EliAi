@@ -119,10 +119,11 @@ export default function ProgressReport() {
     if (analysis?.allWeakTopics?.length) {
       const weak = analysis.allWeakTopics.slice(0,3).map(t=>t.topic.replace(/_/g,' ')).join(', ')
       text.splice(text.length - 1, 0, ``, `NEEDS REVISION`, `• ${weak}`)
-    }.join('\n')
+    }
+    const textStr = text.join('\n')
     try {
-      if (navigator.share) await navigator.share({ title: 'Elimu Progress Report', text })
-      else { await navigator.clipboard?.writeText(text); alert('Report copied to clipboard!') }
+      if (navigator.share) await navigator.share({ title: 'Elimu Progress Report', text: textStr })
+      else { await navigator.clipboard?.writeText(textStr); alert('Report copied to clipboard!') }
     } catch(e) {}
   }
 
