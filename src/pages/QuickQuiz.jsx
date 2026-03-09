@@ -1,9 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
-import { goalsDB } from '../db/progressDB.js'
+import { goalsDB, quizDB } from '../db/progressDB.js'
 import { calculateScore } from '../utils/scoring.js'
 import { SoundEngine, Haptics } from '../utils/soundEngine.js'
+import { saveDetailedAttempt } from '../ai/brain.js'
+import { recordStudySession } from '../ai/learning.js'
+import { invalidateProfileCache } from '../ai/chatbot.js'
 
 const SUBJ_FILES={
   mathematics:{s1:['algebra','sets','numbers','geometry','ratio_indices'],s2:['quadratic','trigonometry','statistics','simultaneous'],s3:['functions','coordinate_sequences','matrices_probability'],s4:['calculus','vectors','permcomb'],s5:['further_calculus','differential_equations','complex_numbers','mechanics'],s6:['pure_mathematics','statistics_probability','applied_mathematics']},
@@ -72,7 +75,14 @@ export default function QuickQuiz(){
       else{
         const s=Math.round(newA.filter((a,i)=>a===qs[i]?.answer).length/qs.length*100)
         setScore(s);setDone(true);SoundEngine.quizComplete()
-        if(student)await goalsDB.incrementCompleted(student.id)
+        if(student){
+          await goalsDB.incrementCompleted(student.id)
+          // Save to quiz history so brain.js can analyse it
+          await quizDB.saveAttempt(student.id, `quickquiz_${Date.now()}`, newA, s, qs.length * 25)
+          await saveDetailedAttempt(student.id, `quickquiz_${Date.now()}`, qs, newA)
+          recordStudySession(student.id, s, Math.round(qs.length * 25 / 60)).catch(()=>{})
+          invalidateProfileCache()
+        }
       }
     },1000)
   }
