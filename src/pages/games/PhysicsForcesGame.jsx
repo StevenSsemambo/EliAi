@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from 'react'
-import { useTheme } from '../../context/ThemeContext.jsx'
+import { useState, useEffect } from 'react'
 import { SoundEngine } from '../../utils/soundEngine.js'
+import { saveGameScore } from '../../utils/gameUnlocks.js'
 
 // ── Physics questions (curriculum-aligned, S1–S6) ─────────────────
 const QUESTIONS = [
@@ -48,8 +48,8 @@ function ForceArrow({ force, direction, color }) {
   )
 }
 
-export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
-  const { theme } = useTheme()
+export default function PhysicsForcesGame({ game, levelData, studentId, onFinish }) {
+  const level = levelData?.level || 1
   const [qs]      = useState(() => getQsForLevel(level))
   const [qIdx, setQIdx]       = useState(0)
   const [selected, setSelected] = useState(null)
@@ -88,7 +88,9 @@ export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
     setTimeout(() => {
       const next = qIdx + 1
       if (next >= qs.length) {
-        onComplete?.({ score: score + (isCorrect ? Math.max(10, timeLeft*3) : 0), correct: correct + (isCorrect?1:0), total: qs.length })
+        const finalScore = score + (isCorrect ? Math.max(10, timeLeft * 3) : 0)
+        if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
+        setTimeout(() => onFinish?.(), 400)
       } else {
         setQIdx(next); setSelected(null); setPhase('question')
       }
@@ -96,27 +98,26 @@ export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
   }
 
   const catColors = { Mechanics:'#0891B2', Forces:'#7C3AED', Newton:'#EF4444', Energy:'#F59E0B', Pressure:'#16A34A', Waves:'#A78BFA', Electricity:'#F59E0B', Optics:'#0D9488' }
-  const col = catColors[q?.cat] || theme.accent
+  const col = catColors[q?.cat] || '#14B8A6'
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: theme.bg }}>
+    <div className="flex flex-col rounded-2xl overflow-hidden" style={{ background: '#0C0F1A', minHeight: 480 }}>
       {/* Header */}
-      <div className="px-5 pt-10 pb-4" style={{ background: theme.surface, borderBottom: `1px solid ${theme.border}` }}>
+      <div className="px-4 pt-4 pb-3" style={{ background: '#131829', borderBottom: '1px solid #1A2035' }}>
         <div className="flex items-center justify-between mb-2">
-          <button onClick={onExit} style={{ color: theme.muted }}>✕</button>
-          <span className="font-black text-sm" style={{ color: theme.text }}>⚡ Physics Forces — Lvl {level}</span>
+          <span className="font-black text-sm text-white">⚡ Physics Forces — Lvl {level}</span>
           <span className="text-xs font-black" style={{ color: '#F59E0B' }}>⭐ {score}</span>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: theme.border }}>
+          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: '#1A2035' }}>
             <div className="h-full rounded-full transition-all" style={{ width:`${((qIdx)/qs.length)*100}%`, background: col }}/>
           </div>
-          <span className="text-xs font-bold" style={{ color: theme.muted }}>{qIdx+1}/{qs.length}</span>
-          <span className="font-black text-sm" style={{ color: timeLeft<8 ? '#EF4444' : theme.accent }}>{timeLeft}s</span>
+          <span className="text-xs font-bold text-slate-500">{qIdx+1}/{qs.length}</span>
+          <span className="font-black text-sm" style={{ color: timeLeft<8 ? '#EF4444' : '#14B8A6' }}>{timeLeft}s</span>
         </div>
       </div>
 
-      <div className="flex-1 px-5 py-5 max-w-lg mx-auto w-full">
+      <div className="flex-1 px-4 py-4 max-w-lg mx-auto w-full">
         {/* Category badge */}
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black mb-4"
           style={{ background:`${col}18`, color: col }}>
@@ -126,19 +127,17 @@ export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
         {/* Formula hint */}
         <div className="rounded-2xl px-4 py-3 mb-4"
           style={{ background: 'rgba(8,145,178,0.08)', border: '1px solid rgba(8,145,178,0.2)' }}>
-          <p className="text-xs font-bold mb-0.5" style={{ color: '#7DD3FC' }}>📐 Formula / Hint</p>
-          <p className="text-xs font-mono" style={{ color: theme.subtext }}>{q?.formula}</p>
+          <p className="text-xs font-bold mb-0.5" style={{ color: '#7DD3FC' }}>Formula / Hint</p>
+          <p className="text-xs font-mono text-slate-400">{q?.formula}</p>
         </div>
 
         {/* Question */}
-        <p className="text-base font-black leading-relaxed mb-5" style={{ color: theme.text }}>
-          {q?.q}
-        </p>
+        <p className="text-base font-black leading-relaxed mb-5 text-white">{q?.q}</p>
 
         {/* Answer options */}
         <div className="space-y-2">
           {q?.options.map((opt, i) => {
-            let bg = theme.card, border = `1px solid ${theme.border}`, textCol = theme.text
+            let bg = '#131829', border = '1px solid #1A2035', textCol = '#E2E8F0'
             if (phase === 'result') {
               if (opt === q.answer)     { bg='rgba(74,222,128,0.1)'; border='2px solid #22C55E'; textCol='#4ADE80' }
               else if (opt === selected){ bg='rgba(239,68,68,0.1)';  border='2px solid #EF4444'; textCol='#EF4444' }
@@ -147,7 +146,7 @@ export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
               <button key={i} onClick={() => handleAnswer(opt)} disabled={phase==='result'}
                 className="w-full rounded-2xl px-4 py-3.5 text-left font-bold text-sm transition-all active:scale-95"
                 style={{ background: bg, border, color: textCol }}>
-                <span className="mr-2" style={{ color: theme.muted }}>{['A','B','C','D'][i]}.</span>
+                <span className="mr-2 text-slate-500">{['A','B','C','D'][i]}.</span>
                 {opt}
               </button>
             )
@@ -158,7 +157,7 @@ export default function PhysicsForcesGame({ level = 1, onComplete, onExit }) {
           <div className="mt-3 rounded-xl px-3 py-2"
             style={{ background: selected===q?.answer ? 'rgba(74,222,128,0.08)' : 'rgba(239,68,68,0.08)' }}>
             <p className="text-sm font-bold" style={{ color: selected===q?.answer ? '#4ADE80' : '#EF4444' }}>
-              {selected===q?.answer ? `✅ Correct! ${streak>1?`🔥 ${streak} streak!`:''}` : `❌ Answer: ${q?.answer}`}
+              {selected===q?.answer ? `Correct! ${streak>1?`🔥 ${streak} streak`:''}` : `Answer: ${q?.answer}`}
             </p>
           </div>
         )}
