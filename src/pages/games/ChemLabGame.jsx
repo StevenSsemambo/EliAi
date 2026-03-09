@@ -103,7 +103,7 @@ export default function ChemLabGame({ game, levelData, studentId, onFinish }) {
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
           <span style={{ color:'white', fontWeight:900, fontSize:14 }}>Chem Lab - Level {level}</span>
           <div style={{ display:'flex', gap:2 }}>
-            {[...Array(3)].map((_,i)=><span key={i} style={{ opacity: i<lives?1:0.2 }}>heart</span>)}
+            {[...Array(3)].map((_,i)=><span key={i} style={{ opacity: i<lives?1:0.2 }}>❤️</span>)}
           </div>
         </div>
         <div style={{ display:'flex', alignItems:'center', gap:8 }}>
@@ -155,7 +155,7 @@ export default function ChemLabGame({ game, levelData, studentId, onFinish }) {
 
         {phase === 'reacting' && (
           <div style={{ textAlign:'center' }}>
-            <div style={{ fontSize:36, marginBottom:8, animation:'shake 0.3s ease infinite' }}>flask</div>
+            <div style={{ fontSize:36, marginBottom:8, animation:'shake 0.3s ease infinite' }}>⚗️</div>
             <p style={{ color:col, fontWeight:900 }}>Reaction in progress...</p>
           </div>
         )}
