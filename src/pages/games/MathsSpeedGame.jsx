@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
-import { useTheme } from '../../context/ThemeContext.jsx'
 import { SoundEngine } from '../../utils/soundEngine.js'
+import { saveGameScore } from '../../utils/gameUnlocks.js'
 
 // ── Question generator (curriculum-aligned, difficulty by level) ──
 function generateQuestion(level) {
@@ -122,8 +122,8 @@ function generateOptions(correct) {
 
 const CAT_COLORS = { Arithmetic:'#0891B2', Fractions:'#7C3AED', Powers:'#F59E0B', Division:'#16A34A', 'Linear Equations':'#EF4444', Percentages:'#0D9488', Quadratics:'#7C3AED', Simultaneous:'#A78BFA', Trigonometry:'#F59E0B', Logarithms:'#EF4444', Sequences:'#0891B2' }
 
-export default function MathsSpeedGame({ level=1, onComplete, onExit }) {
-  const { theme }  = useTheme()
+export default function MathsSpeedGame({ game, levelData, studentId, onFinish }) {
+  const level  = levelData?.level || 1
   const ROUNDS     = Math.min(5 + Math.floor(level/3), 10)
   const BASE_TIME  = Math.max(10, 30 - level)
 
@@ -176,7 +176,9 @@ export default function MathsSpeedGame({ level=1, onComplete, onExit }) {
       const next = round + 1
       if (next >= ROUNDS) {
         const finalBonus = isCorrect ? Math.max(10, timeLeft*4) : 0
-        onComplete?.({ score: score+finalBonus, correct: correct+(isCorrect?1:0), total: ROUNDS })
+        const finalScore = score + finalBonus
+        if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
+        setTimeout(() => onFinish?.(), 400)
       } else {
         setRound(next); newQuestion()
       }
@@ -184,60 +186,58 @@ export default function MathsSpeedGame({ level=1, onComplete, onExit }) {
   }
 
   if (!q) return null
-  const col = CAT_COLORS[q.type] || theme.accent
+  const col = CAT_COLORS[q.type] || '#14B8A6'
   const urgentTime = timeLeft <= Math.floor(BASE_TIME * 0.3)
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: theme.bg }}>
+    <div className="flex flex-col rounded-2xl overflow-hidden" style={{ background: '#0C0F1A', minHeight: 480 }}>
       {/* Header */}
-      <div className="px-5 pt-10 pb-4" style={{ background: theme.surface, borderBottom:`1px solid ${theme.border}` }}>
+      <div className="px-4 pt-4 pb-3" style={{ background: '#131829', borderBottom: '1px solid #1A2035' }}>
         <div className="flex items-center justify-between mb-2">
-          <button onClick={onExit} style={{ color: theme.muted }}>✕</button>
-          <span className="font-black text-sm" style={{ color: theme.text }}>🔢 Maths Speed — Lvl {level}</span>
+          <span className="font-black text-sm text-white">🔢 Maths Speed — Lvl {level}</span>
           <span className="text-xs font-black" style={{ color:'#F59E0B' }}>⭐ {score}</span>
         </div>
         <div className="flex items-center gap-3">
-          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: theme.border }}>
+          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: '#1A2035' }}>
             <div className="h-full rounded-full transition-all"
               style={{ width:`${(round/ROUNDS)*100}%`, background: col }}/>
           </div>
-          <span className="text-xs font-bold" style={{ color: theme.muted }}>{round+1}/{ROUNDS}</span>
+          <span className="text-xs font-bold text-slate-500">{round+1}/{ROUNDS}</span>
         </div>
       </div>
 
-      <div className="flex-1 px-5 py-5 max-w-lg mx-auto w-full">
+      <div className="flex-1 px-4 py-4 max-w-lg mx-auto w-full">
         {/* Category + timer */}
         <div className="flex items-center justify-between mb-4">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black"
             style={{ background:`${col}18`, color: col }}>
-            📐 {q.type}
+            {q.type}
           </div>
           <div className="flex items-center gap-1.5">
             {streak > 1 && <span className="text-xs font-black" style={{ color:'#F59E0B' }}>🔥{streak}</span>}
-            <span className="font-black text-lg" style={{ color: urgentTime ? '#EF4444' : theme.accent,
-              animation: urgentTime ? 'pulse 0.5s ease infinite' : 'none' }}>
+            <span className="font-black text-lg" style={{ color: urgentTime ? '#EF4444' : '#14B8A6' }}>
               {timeLeft}s
             </span>
           </div>
         </div>
 
         {/* Timer bar */}
-        <div className="h-1.5 rounded-full overflow-hidden mb-5" style={{ background: theme.border }}>
+        <div className="h-1.5 rounded-full overflow-hidden mb-5" style={{ background: '#1A2035' }}>
           <div className="h-full rounded-full transition-all duration-1000"
             style={{ width:`${(timeLeft/BASE_TIME)*100}%`, background: urgentTime?'#EF4444':col }}/>
         </div>
 
-        {/* Question in a big display */}
+        {/* Question */}
         <div className="rounded-3xl p-6 mb-6 text-center"
           style={{ background:`${col}10`, border:`2px solid ${col}30` }}>
-          <p className="text-3xl font-black whitespace-pre-line" style={{ color: theme.text }}>{q.q}</p>
-          <p className="text-xs mt-2" style={{ color: theme.muted }}>{q.hint}</p>
+          <p className="text-3xl font-black whitespace-pre-line text-white">{q.q}</p>
+          <p className="text-xs mt-2 text-slate-500">{q.hint}</p>
         </div>
 
         {/* Options */}
         <div className="grid grid-cols-2 gap-3">
           {options.map((opt, i) => {
-            let bg = theme.card, border = `1px solid ${theme.border}`, textCol = theme.text
+            let bg = '#131829', border = '1px solid #1A2035', textCol = '#E2E8F0'
             if (phase === 'result') {
               if (opt === q.answer)     { bg=`${col}15`; border=`2px solid ${col}`; textCol=col }
               else if (opt === selected){ bg='rgba(239,68,68,0.1)'; border='2px solid #EF4444'; textCol='#EF4444' }
@@ -257,8 +257,8 @@ export default function MathsSpeedGame({ level=1, onComplete, onExit }) {
             style={{ background: selected===q.answer?'rgba(74,222,128,0.08)':'rgba(239,68,68,0.08)' }}>
             <p className="font-bold text-sm" style={{ color: selected===q.answer?'#4ADE80':'#EF4444' }}>
               {selected===q.answer
-                ? `✅ +${Math.max(10,timeLeft*4)+streak*8} XP${streak>1?` 🔥${streak}x streak!`:''}`
-                : `❌ Answer: ${q.answer}`}
+                ? `Correct! +${Math.max(10,timeLeft*4)+streak*8} XP${streak>1?` 🔥${streak}x`:''}`
+                : `Answer: ${q.answer}`}
             </p>
           </div>
         )}
