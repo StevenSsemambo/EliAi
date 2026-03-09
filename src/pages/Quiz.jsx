@@ -12,6 +12,7 @@ import {
 import { invalidateProfileCache } from '../ai/chatbot.js'
 import { calculateScore } from '../utils/scoring.js'
 import { SoundEngine, Haptics } from '../utils/soundEngine.js'
+import { recordStudyActivity } from '../utils/notifications.js'
 
 const QUESTION_TIME = 30
 
