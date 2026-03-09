@@ -1,24 +1,42 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useUser } from '../context/UserContext.jsx'
+import { studentDB } from '../db/progressDB.js'
 import { SoundEngine } from '../utils/soundEngine.js'
 
 const AVATARS=['🦁','🐯','🦊','🐺','🦅','🐘','🦒','🦓','🐬','🦋']
 const CLASSES=['S1','S2','S3','S4','S5','S6']
 
 export default function Welcome() {
-  const { createStudent } = useUser()
+  const { createStudent, loginAsStudent } = useUser()
   const [step,setStep]=useState(0)
   const [name,setName]=useState('')
   const [avatar,setAvatar]=useState(0)
   const [cls,setCls]=useState('S1')
   const [loading,setLoading]=useState(false)
+  const [existingStudents,setExistingStudents]=useState([])
+  const [showReturning,setShowReturning]=useState(false)
+
+  // On mount: check if any students already exist in DB
+  useEffect(()=>{
+    studentDB.getAll().then(all => {
+      if(all.length > 0) { setExistingStudents(all); setShowReturning(true) }
+    })
+  },[])
 
   function next(n){ SoundEngine.tap(); setStep(n) }
 
   async function handleCreate(){
     if(!name.trim())return
     SoundEngine.tap(); setLoading(true)
-    await createStudent(name.trim(),cls,avatar)
+    // Check if a student with this exact name already exists
+    const all = await studentDB.getAll()
+    const existing = all.find(s => s.name.toLowerCase() === name.trim().toLowerCase())
+    if(existing) {
+      // Log back in as the existing student — restore all their progress
+      await loginAsStudent(existing.id)
+    } else {
+      await createStudent(name.trim(),cls,avatar)
+    }
   }
 
   const BG = { background:'linear-gradient(160deg,#0C0F1A 0%,#111827 100%)' }
@@ -29,7 +47,36 @@ export default function Welcome() {
         <div className="ambient-glow w-96 h-96 rounded-full" style={{background:'radial-gradient(circle,rgba(13,148,136,0.18) 0%,transparent 70%)'}}/>
       </div>
 
-      {step===0 && (
+      {/* ── Returning student picker ── */}
+      {showReturning && step===0 && (
+        <div className="page-enter text-center max-w-sm w-full relative z-10">
+          <div className="text-5xl mb-4">👋</div>
+          <h2 className="text-2xl font-display font-extrabold text-white mb-2">Welcome back!</h2>
+          <p className="text-slate-400 text-sm mb-6">Who is studying today?</p>
+          <div className="flex flex-col gap-3 mb-6">
+            {existingStudents.map(s => (
+              <button key={s.id}
+                onClick={async () => { SoundEngine.tap(); await loginAsStudent(s.id) }}
+                className="flex items-center gap-4 p-4 rounded-2xl glass text-left transition-all active:scale-95 hover:border-teal-500"
+                style={{border:'2px solid #252D45'}}>
+                <div className="text-3xl">{['🦁','🐯','🦊','🐺','🦅','🐘','🦒','🦓','🐬','🦋'][s.avatar??0]}</div>
+                <div>
+                  <div className="text-white font-bold">{s.name}</div>
+                  <div className="text-slate-400 text-xs">{s.class_level} · {s.total_xp||0} XP · {s.streak_days||0} day streak</div>
+                </div>
+                <div className="ml-auto text-teal-400 text-lg">→</div>
+              </button>
+            ))}
+          </div>
+          <button onClick={()=>setShowReturning(false)}
+            className="w-full py-3 rounded-2xl text-slate-400 text-sm glass transition-all active:scale-95"
+            style={{border:'1px solid #252D45'}}>
+            + Add new student
+          </button>
+        </div>
+      )}
+
+      {!showReturning && step===0 && (
         <div className="page-enter text-center max-w-sm w-full relative z-10">
           <div className="mb-8">
             <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-5 glow-teal"
