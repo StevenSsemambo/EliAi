@@ -55,6 +55,29 @@ function applyGravity(grid, w, h) {
   return newGrid
 }
 
+function ScoreBar({ score, best }) {
+  return (
+    <div className="flex items-center gap-4 text-sm">
+      <span className="font-bold text-white">⭐ {score}</span>
+      {best > 0 && <span style={{ color: '#F59E0B' }}>Best: {best}</span>}
+    </div>
+  )
+}
+
+function GameOverlay({ title, subtitle, icon, color, children }) {
+  return (
+    <div className="absolute inset-0 z-30 flex items-center justify-center rounded-2xl"
+      style={{ background: 'rgba(5,8,16,0.92)', backdropFilter: 'blur(4px)' }}>
+      <div className="text-center px-6">
+        <div className="text-6xl mb-3">{icon}</div>
+        <h2 className="text-2xl font-black text-white mb-1">{title}</h2>
+        <p className="mb-6" style={{ color }}>{subtitle}</p>
+        {children}
+      </div>
+    </div>
+  )
+}
+
 function QuasarChain({ game, levelData, studentId, onFinish }) {
   const { gridW: W, gridH: H, colors: numColors } = levelData
   const [grid, setGrid] = useState(() => makeGrid(W, H, numColors))
