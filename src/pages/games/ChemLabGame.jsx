@@ -1,192 +1,179 @@
 import { useState, useEffect } from 'react'
-import { SoundEngine } from '../../utils/soundEngine.js'
-import { saveGameScore } from '../../utils/gameUnlocks.js'
 
 const REACTIONS = [
-  { id:'r1',  a:'HCl',    b:'NaOH',     product:'NaCl + H2O',       type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
-  { id:'r2',  a:'H2SO4',  b:'KOH',      product:'K2SO4 + H2O',      type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
-  { id:'r3',  a:'HNO3',   b:'Ca(OH)2',  product:'Ca(NO3)2 + H2O',   type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
-  { id:'r4',  a:'Zn',     b:'HCl',      product:'ZnCl2 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
-  { id:'r5',  a:'Fe',     b:'H2SO4',    product:'FeSO4 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
-  { id:'r6',  a:'Mg',     b:'HCl',      product:'MgCl2 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
-  { id:'r7',  a:'C',      b:'O2',       product:'CO2',              type:'Combustion',     color:'#EF4444', hint:'Carbon burns in oxygen -> carbon dioxide' },
-  { id:'r8',  a:'CH4',    b:'O2',       product:'CO2 + H2O',        type:'Combustion',     color:'#EF4444', hint:'Hydrocarbon + oxygen -> CO2 + water' },
-  { id:'r9',  a:'H2',     b:'O2',       product:'H2O',              type:'Combustion',     color:'#EF4444', hint:'Hydrogen burns to form water' },
-  { id:'r10', a:'Fe',     b:'CuSO4',    product:'FeSO4 + Cu',       type:'Displacement',   color:'#7C3AED', hint:'More reactive metal displaces less reactive one' },
-  { id:'r11', a:'Zn',     b:'CuSO4',    product:'ZnSO4 + Cu',       type:'Displacement',   color:'#7C3AED', hint:'Zinc is more reactive than copper' },
-  { id:'r12', a:'Mg',     b:'ZnSO4',    product:'MgSO4 + Zn',       type:'Displacement',   color:'#7C3AED', hint:'Magnesium displaces zinc from solution' },
+  { a:'HCl',    b:'NaOH',    product:'NaCl + H2O',     type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
+  { a:'H2SO4',  b:'KOH',     product:'K2SO4 + H2O',    type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
+  { a:'HNO3',   b:'Ca(OH)2', product:'Ca(NO3)2 + H2O', type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
+  { a:'Zn',     b:'HCl',     product:'ZnCl2 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
+  { a:'Fe',     b:'H2SO4',   product:'FeSO4 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
+  { a:'Mg',     b:'HCl',     product:'MgCl2 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
+  { a:'C',      b:'O2',      product:'CO2',             type:'Combustion',     color:'#EF4444', hint:'Carbon burns in oxygen gives carbon dioxide' },
+  { a:'CH4',    b:'O2',      product:'CO2 + H2O',       type:'Combustion',     color:'#EF4444', hint:'Hydrocarbon + oxygen gives CO2 + water' },
+  { a:'H2',     b:'O2',      product:'H2O',             type:'Combustion',     color:'#EF4444', hint:'Hydrogen burns to form water' },
+  { a:'Fe',     b:'CuSO4',   product:'FeSO4 + Cu',      type:'Displacement',   color:'#A78BFA', hint:'More reactive metal displaces less reactive one' },
+  { a:'Zn',     b:'CuSO4',   product:'ZnSO4 + Cu',      type:'Displacement',   color:'#A78BFA', hint:'Zinc is more reactive than copper' },
+  { a:'Mg',     b:'ZnSO4',   product:'MgSO4 + Zn',      type:'Displacement',   color:'#A78BFA', hint:'Magnesium displaces zinc from solution' },
 ]
 
-const WRONG_PRODUCTS = [
-  'No reaction', 'H2SO4 + O2', 'NaOH + Cl2', 'CaCl2 + H2',
-  'KNO3 + H2O', 'MgO + H2', 'FeO + CO2', 'Na2O + H2O',
-  'CO + H2O', 'ZnO + HCl', 'CuO + H2SO4', 'Al2O3 + H2',
+const WRONG = [
+  'No reaction','H2SO4 + O2','NaOH + Cl2','CaCl2 + H2',
+  'KNO3 + H2O','MgO + H2','FeO + CO2','Na2O + H2O',
+  'CO + H2O','ZnO + HCl','CuO + H2SO4','Al2O3 + H2',
 ]
 
-function getReactionForLevel(level) {
-  const idx = Math.min(Math.floor((level - 1) / 2), REACTIONS.length - 1)
-  return REACTIONS[idx]
-}
-
-export default function ChemLabGame({ game, levelData, studentId, onFinish }) {
+export default function ChemLabGame({ levelData, onFinish }) {
   const level = levelData?.level || 1
-  const TOTAL_ROUNDS = Math.min(5 + Math.floor(level / 4), 10)
-  const reaction = getReactionForLevel(level)
+  const ROUNDS = Math.min(5 + Math.floor(level / 4), 10)
+  const reaction = REACTIONS[Math.min(Math.floor((level - 1) / 2), REACTIONS.length - 1)]
 
-  const [phase, setPhase]         = useState('mix')
-  const [selected, setSelected]   = useState(null)
-  const [options, setOptions]     = useState([])
-  const [score, setScore]         = useState(0)
-  const [questions, setQuestions] = useState(0)
-  const [streak, setStreak]       = useState(0)
-  const [showBubbles, setShowBubbles] = useState(false)
-  const [timeLeft, setTimeLeft]   = useState(25)
-  const [lives, setLives]         = useState(3)
+  const [phase, setPhase]       = useState('mix')
+  const [selected, setSelected] = useState(null)
+  const [options, setOptions]   = useState([])
+  const [score, setScore]       = useState(0)
+  const [round, setRound]       = useState(0)
+  const [streak, setStreak]     = useState(0)
+  const [timeLeft, setTimeLeft] = useState(25)
+  const [lives, setLives]       = useState(3)
+  const [shaking, setShaking]   = useState(false)
 
   useEffect(() => {
-    const wrong = WRONG_PRODUCTS.filter(w => w !== reaction.product).sort(() => Math.random() - 0.5).slice(0, 3)
+    const wrong = WRONG.filter(w => w !== reaction.product).sort(() => Math.random() - 0.5).slice(0, 3)
     setOptions([reaction.product, ...wrong].sort(() => Math.random() - 0.5))
-  }, [reaction])
+  }, [])
 
   useEffect(() => {
     if (phase !== 'answer') return
-    const t = setInterval(() => {
-      setTimeLeft(tl => {
-        if (tl <= 1) { clearInterval(t); handleAnswer(null); return 0 }
-        return tl - 1
-      })
-    }, 1000)
+    const t = setInterval(() => setTimeLeft(n => {
+      if (n <= 1) { clearInterval(t); pick(null); return 0 }
+      return n - 1
+    }), 1000)
     return () => clearInterval(t)
   }, [phase])
 
-  function startReaction() {
-    SoundEngine.tap?.()
+  function mix() {
     setPhase('reacting')
-    setShowBubbles(true)
-    setTimeout(() => { setShowBubbles(false); setPhase('answer'); setTimeLeft(25) }, 1800)
+    setShaking(true)
+    setTimeout(() => { setShaking(false); setPhase('answer'); setTimeLeft(25) }, 1800)
   }
 
-  function handleAnswer(ans) {
+  function pick(ans) {
     if (phase !== 'answer') return
     setSelected(ans)
-    const correct = ans === reaction.product
     setPhase('result')
-    if (correct) {
-      SoundEngine.gameCorrect?.()
-      setScore(s => s + Math.max(10, timeLeft * 4 + streak * 5))
-      setStreak(s => s + 1)
-    } else {
-      SoundEngine.gameWrong?.()
-      setStreak(0)
-      setLives(l => l - 1)
-    }
-    const nextQ = questions + 1
-    setQuestions(nextQ)
+    const ok = ans === reaction.product
+    const newLives = ok ? lives : lives - 1
+    const newStreak = ok ? streak + 1 : 0
+    const gained = ok ? Math.max(10, timeLeft * 4 + streak * 5) : 0
+    const newScore = score + gained
+    setScore(newScore)
+    setStreak(newStreak)
+    setLives(newLives)
+    const nextRound = round + 1
+    setRound(nextRound)
     setTimeout(() => {
-      if ((lives <= 1 && !correct) || nextQ >= TOTAL_ROUNDS) {
-        const finalScore = score + (correct ? Math.max(10, timeLeft * 4) : 0)
-        if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
+      if (newLives <= 0 || nextRound >= ROUNDS) {
         onFinish?.()
       } else {
         setPhase('mix'); setSelected(null); setTimeLeft(25)
       }
-    }, 1800)
+    }, 1600)
   }
 
-  const col = reaction.color
+  const C = reaction.color
 
   return (
-    <div style={{ background:'#0C0F1A', borderRadius:16, overflow:'hidden', minHeight:480 }}>
-      <style>{`@keyframes bubble{to{transform:translateY(-60px) scale(0);opacity:0}} @keyframes shake{0%,100%{transform:none}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}`}</style>
-
-      <div style={{ background:'#131829', borderBottom:'1px solid #1A2035', padding:'16px 16px 12px' }}>
+    <div style={{ background:'#0C0F1A', borderRadius:16, overflow:'hidden', minHeight:480, fontFamily:'system-ui,sans-serif' }}>
+      {/* Header */}
+      <div style={{ background:'#131829', borderBottom:'1px solid #1E2A45', padding:'14px 16px 10px' }}>
         <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
-          <span style={{ color:'white', fontWeight:900, fontSize:14 }}>Chem Lab - Level {level}</span>
-          <div style={{ display:'flex', gap:2 }}>
-            {[...Array(3)].map((_,i)=><span key={i} style={{ opacity: i<lives?1:0.2 }}>❤️</span>)}
+          <span style={{ color:'white', fontWeight:800, fontSize:14 }}>🧪 Chem Lab · Level {level}</span>
+          <div style={{ display:'flex', gap:4 }}>
+            {[0,1,2].map(i => <span key={i} style={{ fontSize:14, opacity: i < lives ? 1 : 0.2 }}>❤️</span>)}
           </div>
         </div>
         <div style={{ display:'flex', alignItems:'center', gap:8 }}>
-          <div style={{ flex:1, height:6, borderRadius:9999, overflow:'hidden', background:'#1A2035' }}>
-            <div style={{ height:'100%', borderRadius:9999, width:`${(questions/TOTAL_ROUNDS)*100}%`, background:col }}/>
+          <div style={{ flex:1, height:5, borderRadius:99, background:'#1E2A45' }}>
+            <div style={{ height:'100%', borderRadius:99, width:`${(round/ROUNDS)*100}%`, background:C, transition:'width 0.3s' }}/>
           </div>
-          <span style={{ color:'#64748B', fontSize:12 }}>{questions}/{TOTAL_ROUNDS}</span>
-          <span style={{ color:'#F59E0B', fontSize:12, fontWeight:900 }}>* {score}</span>
+          <span style={{ color:'#64748B', fontSize:12 }}>{round}/{ROUNDS}</span>
+          <span style={{ color:'#FBBF24', fontSize:12, fontWeight:700 }}>⭐ {score}</span>
         </div>
       </div>
 
-      <div style={{ display:'flex', flexDirection:'column', alignItems:'center', padding:'20px 16px' }}>
-        <div style={{ background:`${col}22`, color:col, padding:'4px 12px', borderRadius:9999, fontSize:12, fontWeight:900, marginBottom:16 }}>
-          {reaction.type} Reaction
+      <div style={{ padding:'20px 16px', display:'flex', flexDirection:'column', alignItems:'center' }}>
+        {/* Reaction type badge */}
+        <div style={{ background:`${C}22`, color:C, padding:'3px 12px', borderRadius:99, fontSize:11, fontWeight:700, marginBottom:16 }}>
+          {reaction.type}
         </div>
 
-        <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'center', gap:32, marginBottom:24 }}>
-          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:8 }}>
-            <div style={{ width:80, height:96, borderRadius:'0 0 12px 12px', position:'relative', overflow:'hidden', background:'rgba(8,145,178,0.15)', border:'2px solid rgba(8,145,178,0.4)', display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
-              <div style={{ width:'100%', height:'60%', background:'rgba(8,145,178,0.3)', borderRadius:'0 0 10px 10px' }}/>
-              {showBubbles && [...Array(6)].map((_,i)=>(
-                <div key={i} style={{ position:'absolute', width:10, height:10, borderRadius:'50%', background:col, animation:`bubble 1s ease-out ${i*0.1}s forwards`, transform:`rotate(${i*60}deg) translateX(18px)`, opacity:0.7 }}/>
-              ))}
+        {/* Beakers */}
+        <div style={{ display:'flex', alignItems:'flex-end', gap:24, marginBottom:20 }}>
+          {[{chem:reaction.a, bg:'rgba(8,145,178,0.15)', border:'rgba(8,145,178,0.5)', liquid:'rgba(8,145,178,0.35)'},
+            {chem:reaction.b, bg:'rgba(124,58,237,0.15)', border:'rgba(124,58,237,0.5)', liquid:'rgba(124,58,237,0.35)'}
+          ].map((beaker, idx) => (
+            <div key={idx} style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:6 }}>
+              <div style={{ width:72, height:88, borderRadius:'0 0 10px 10px', background:beaker.bg, border:`2px solid ${beaker.border}`, display:'flex', alignItems:'flex-end', justifyContent:'center', overflow:'hidden', position:'relative',
+                animation: shaking ? `shake${idx} 0.15s ease infinite` : 'none' }}>
+                <div style={{ width:'100%', height:'55%', background:beaker.liquid, borderRadius:'0 0 8px 8px' }}/>
+              </div>
+              <span style={{ color:'white', fontWeight:700, fontSize:13 }}>{beaker.chem}</span>
             </div>
-            <span style={{ color:'white', fontWeight:900, fontSize:14 }}>{reaction.a}</span>
-          </div>
-
-          <span style={{ color:'#64748B', fontSize:28, fontWeight:900, paddingBottom:20 }}>+</span>
-
-          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:8 }}>
-            <div style={{ width:80, height:96, borderRadius:'0 0 12px 12px', position:'relative', overflow:'hidden', background:'rgba(124,58,237,0.15)', border:'2px solid rgba(124,58,237,0.4)', display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
-              <div style={{ width:'100%', height:'60%', background:'rgba(124,58,237,0.3)', borderRadius:'0 0 10px 10px' }}/>
-              {showBubbles && [...Array(6)].map((_,i)=>(
-                <div key={i} style={{ position:'absolute', width:10, height:10, borderRadius:'50%', background:col, animation:`bubble 1s ease-out ${i*0.1}s forwards`, transform:`rotate(${i*60}deg) translateX(18px)`, opacity:0.7 }}/>
-              ))}
-            </div>
-            <span style={{ color:'white', fontWeight:900, fontSize:14 }}>{reaction.b}</span>
-          </div>
+          ))}
+          <span style={{ color:'#475569', fontSize:24, fontWeight:900, paddingBottom:28 }}>+</span>
         </div>
 
+        <style>{`
+          @keyframes shake0{0%,100%{transform:none}25%{transform:translateX(-3px) rotate(-1deg)}75%{transform:translateX(3px) rotate(1deg)}}
+          @keyframes shake1{0%,100%{transform:none}25%{transform:translateX(3px) rotate(1deg)}75%{transform:translateX(-3px) rotate(-1deg)}}
+        `}</style>
+
+        {/* Hint */}
+        <div style={{ background:'rgba(20,184,166,0.07)', border:'1px solid rgba(20,184,166,0.2)', borderRadius:10, padding:'8px 14px', marginBottom:16, textAlign:'center', maxWidth:320 }}>
+          <span style={{ color:'#5EEAD4', fontSize:12 }}>{reaction.hint}</span>
+        </div>
+
+        {/* Mix phase */}
         {phase === 'mix' && (
-          <div style={{ textAlign:'center' }}>
-            <p style={{ color:'#94A3B8', fontSize:13, marginBottom:16 }}>{reaction.hint}</p>
-            <button onClick={startReaction} style={{ padding:'14px 32px', borderRadius:16, fontWeight:900, color:'white', fontSize:16, background:`linear-gradient(135deg,${col},#7C3AED)`, border:'none', cursor:'pointer' }}>
-              Mix Chemicals!
-            </button>
-          </div>
+          <button onClick={mix} style={{ padding:'13px 32px', borderRadius:14, fontWeight:800, color:'white', fontSize:15, background:`linear-gradient(135deg,${C},#7C3AED)`, border:'none', cursor:'pointer', marginTop:4 }}>
+            ⚗️ Mix Chemicals!
+          </button>
         )}
 
+        {/* Reacting phase */}
         {phase === 'reacting' && (
-          <div style={{ textAlign:'center' }}>
-            <div style={{ fontSize:36, marginBottom:8, animation:'shake 0.3s ease infinite' }}>⚗️</div>
-            <p style={{ color:col, fontWeight:900 }}>Reaction in progress...</p>
+          <div style={{ textAlign:'center', marginTop:8 }}>
+            <div style={{ fontSize:32, marginBottom:6 }}>⚗️</div>
+            <p style={{ color:C, fontWeight:700, fontSize:14 }}>Reacting...</p>
           </div>
         )}
 
+        {/* Answer / Result phase */}
         {(phase === 'answer' || phase === 'result') && (
-          <div style={{ width:'100%', maxWidth:360 }}>
-            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
-              <span style={{ color:'white', fontWeight:900, fontSize:14 }}>What are the products?</span>
-              {phase === 'answer' && <span style={{ color: timeLeft<8?'#EF4444':'#14B8A6', fontWeight:900 }}>{timeLeft}s</span>}
+          <div style={{ width:'100%', maxWidth:340 }}>
+            <div style={{ display:'flex', justifyContent:'space-between', marginBottom:10 }}>
+              <span style={{ color:'white', fontWeight:700, fontSize:14 }}>What are the products?</span>
+              {phase === 'answer' && <span style={{ color: timeLeft < 8 ? '#EF4444' : '#14B8A6', fontWeight:800, fontSize:14 }}>{timeLeft}s</span>}
             </div>
             <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
-              {options.map((opt,i) => {
-                let bg='#131829', border='1px solid #1A2035', color='#E2E8F0'
-                if (phase==='result') {
-                  if (opt===reaction.product) { bg='rgba(74,222,128,0.12)'; border='2px solid #22C55E'; color='#4ADE80' }
-                  else if (opt===selected)    { bg='rgba(239,68,68,0.12)'; border='2px solid #EF4444'; color='#EF4444' }
+              {options.map((opt, i) => {
+                let bg = '#131829', border = '1px solid #1E2A45', color = '#CBD5E1'
+                if (phase === 'result') {
+                  if (opt === reaction.product) { bg = 'rgba(74,222,128,0.1)'; border = '2px solid #22C55E'; color = '#4ADE80' }
+                  else if (opt === selected)    { bg = 'rgba(239,68,68,0.1)';  border = '2px solid #EF4444'; color = '#F87171' }
                 }
                 return (
-                  <button key={i} onClick={()=>handleAnswer(opt)} disabled={phase==='result'}
-                    style={{ background:bg, border, color, padding:'12px 16px', borderRadius:16, textAlign:'left', fontWeight:700, fontSize:13, cursor:'pointer', width:'100%' }}>
+                  <button key={i} disabled={phase === 'result'} onClick={() => pick(opt)}
+                    style={{ background:bg, border, color, padding:'12px 14px', borderRadius:12, textAlign:'left', fontWeight:600, fontSize:13, cursor:'pointer', width:'100%', transition:'all 0.15s' }}>
                     {opt}
                   </button>
                 )
               })}
             </div>
-            {phase==='result' && (
-              <div style={{ marginTop:12, padding:'8px 12px', borderRadius:12, background: selected===reaction.product?'rgba(74,222,128,0.08)':'rgba(239,68,68,0.08)' }}>
-                <p style={{ color: selected===reaction.product?'#4ADE80':'#EF4444', fontWeight:700, fontSize:13 }}>
-                  {selected===reaction.product ? 'Correct!' : `Answer: ${reaction.product}`}
+            {phase === 'result' && (
+              <div style={{ marginTop:10, padding:'8px 12px', borderRadius:10, background: selected === reaction.product ? 'rgba(74,222,128,0.07)' : 'rgba(239,68,68,0.07)' }}>
+                <p style={{ color: selected === reaction.product ? '#4ADE80' : '#F87171', fontWeight:700, fontSize:13, margin:0 }}>
+                  {selected === reaction.product ? `✅ Correct!${streak > 0 ? ` ${streak + 1}x streak!` : ''}` : `❌ Answer: ${reaction.product}`}
                 </p>
-                {streak > 1 && <p style={{ color:'#F59E0B', fontSize:12 }}>x{streak} streak bonus!</p>}
               </div>
             )}
           </div>
