@@ -1,33 +1,26 @@
-import { useState, useEffect, useCallback } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useUser } from '../../context/UserContext.jsx'
-import { useTheme } from '../../context/ThemeContext.jsx'
+import { useState, useEffect } from 'react'
 import { SoundEngine } from '../../utils/soundEngine.js'
+import { saveGameScore } from '../../utils/gameUnlocks.js'
 
-// ── Chemistry reaction database (curriculum-aligned) ──────────────
 const REACTIONS = [
-  // Level 1-6: Acids + Bases (S1-S2)
-  { id:'r1', a:'HCl',   b:'NaOH',  product:'NaCl + H₂O',    type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base → Salt + Water' },
-  { id:'r2', a:'H₂SO₄', b:'KOH',   product:'K₂SO₄ + H₂O',  type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base → Salt + Water' },
-  { id:'r3', a:'HNO₃',  b:'Ca(OH)₂',product:'Ca(NO₃)₂ + H₂O',type:'Neutralisation',color:'#4ADE80', hint:'Acid + Base → Salt + Water' },
-  // Level 7-12: Metals + Acids (S2-S3)
-  { id:'r4', a:'Zn',    b:'HCl',   product:'ZnCl₂ + H₂↑',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid → salt + hydrogen gas' },
-  { id:'r5', a:'Fe',    b:'H₂SO₄', product:'FeSO₄ + H₂↑',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid → salt + hydrogen gas' },
-  { id:'r6', a:'Mg',    b:'HCl',   product:'MgCl₂ + H₂↑',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid → salt + hydrogen gas' },
-  // Level 13-18: Combustion (S3-S4)
-  { id:'r7', a:'C',     b:'O₂',    product:'CO₂',            type:'Combustion',     color:'#EF4444', hint:'Carbon burns in oxygen → carbon dioxide' },
-  { id:'r8', a:'CH₄',   b:'O₂',    product:'CO₂ + H₂O',     type:'Combustion',     color:'#EF4444', hint:'Hydrocarbon + oxygen → CO₂ + water' },
-  { id:'r9', a:'H₂',    b:'O₂',    product:'H₂O',            type:'Combustion',     color:'#EF4444', hint:'Hydrogen burns to form water' },
-  // Level 19-24: Displacement (S4-S6)
-  { id:'r10',a:'Fe',    b:'CuSO₄', product:'FeSO₄ + Cu',     type:'Displacement',   color:'#7C3AED', hint:'More reactive metal displaces less reactive one' },
-  { id:'r11',a:'Zn',    b:'CuSO₄', product:'ZnSO₄ + Cu',     type:'Displacement',   color:'#7C3AED', hint:'Zinc is more reactive than copper' },
-  { id:'r12',a:'Mg',    b:'ZnSO₄', product:'MgSO₄ + Zn',     type:'Displacement',   color:'#7C3AED', hint:'Magnesium displaces zinc from solution' },
+  { id:'r1',  a:'HCl',    b:'NaOH',     product:'NaCl + H2O',       type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
+  { id:'r2',  a:'H2SO4',  b:'KOH',      product:'K2SO4 + H2O',      type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
+  { id:'r3',  a:'HNO3',   b:'Ca(OH)2',  product:'Ca(NO3)2 + H2O',   type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base -> Salt + Water' },
+  { id:'r4',  a:'Zn',     b:'HCl',      product:'ZnCl2 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
+  { id:'r5',  a:'Fe',     b:'H2SO4',    product:'FeSO4 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
+  { id:'r6',  a:'Mg',     b:'HCl',      product:'MgCl2 + H2 gas',   type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid -> salt + hydrogen gas' },
+  { id:'r7',  a:'C',      b:'O2',       product:'CO2',              type:'Combustion',     color:'#EF4444', hint:'Carbon burns in oxygen -> carbon dioxide' },
+  { id:'r8',  a:'CH4',    b:'O2',       product:'CO2 + H2O',        type:'Combustion',     color:'#EF4444', hint:'Hydrocarbon + oxygen -> CO2 + water' },
+  { id:'r9',  a:'H2',     b:'O2',       product:'H2O',              type:'Combustion',     color:'#EF4444', hint:'Hydrogen burns to form water' },
+  { id:'r10', a:'Fe',     b:'CuSO4',    product:'FeSO4 + Cu',       type:'Displacement',   color:'#7C3AED', hint:'More reactive metal displaces less reactive one' },
+  { id:'r11', a:'Zn',     b:'CuSO4',    product:'ZnSO4 + Cu',       type:'Displacement',   color:'#7C3AED', hint:'Zinc is more reactive than copper' },
+  { id:'r12', a:'Mg',     b:'ZnSO4',    product:'MgSO4 + Zn',       type:'Displacement',   color:'#7C3AED', hint:'Magnesium displaces zinc from solution' },
 ]
 
 const WRONG_PRODUCTS = [
-  'No reaction', 'H₂SO₄ + O₂', 'NaOH + Cl₂', 'CaCl₂ + H₂',
-  'KNO₃ + H₂O', 'MgO + H₂', 'FeO + CO₂', 'Na₂O + H₂O',
-  'CO + H₂O', 'ZnO + HCl', 'CuO + H₂SO₄', 'Al₂O₃ + H₂',
+  'No reaction', 'H2SO4 + O2', 'NaOH + Cl2', 'CaCl2 + H2',
+  'KNO3 + H2O', 'MgO + H2', 'FeO + CO2', 'Na2O + H2O',
+  'CO + H2O', 'ZnO + HCl', 'CuO + H2SO4', 'Al2O3 + H2',
 ]
 
 function getReactionForLevel(level) {
@@ -35,46 +28,24 @@ function getReactionForLevel(level) {
   return REACTIONS[idx]
 }
 
-function BubbleAnimation({ color }) {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      {[...Array(8)].map((_, i) => (
-        <div key={i} className="absolute w-3 h-3 rounded-full opacity-70"
-          style={{
-            background: color,
-            animation: `bubble 1s ease-out ${i * 0.1}s forwards`,
-            transform: `rotate(${i * 45}deg) translateX(${20 + Math.random() * 20}px)`,
-          }}/>
-      ))}
-    </div>
-  )
-}
-
-export default function ChemLabGame({ level = 1, onComplete, onExit }) {
-  const { theme }   = useTheme()
-  const { student } = useUser()
-
-  const reaction    = getReactionForLevel(level)
-  const [phase, setPhase]     = useState('mix')    // mix | reacting | answer | result
-  const [selected, setSelected] = useState(null)
-  const [options, setOptions]   = useState([])
-  const [score, setScore]       = useState(0)
-  const [questions, setQuestions] = useState(0)
-  const [streak, setStreak]     = useState(0)
-  const [showBubbles, setShowBubbles] = useState(false)
-  const [timeLeft, setTimeLeft] = useState(25)
-  const [lives, setLives]       = useState(3)
-
+export default function ChemLabGame({ game, levelData, studentId, onFinish }) {
+  const level = levelData?.level || 1
   const TOTAL_ROUNDS = Math.min(5 + Math.floor(level / 4), 10)
+  const reaction = getReactionForLevel(level)
+
+  const [phase, setPhase]         = useState('mix')
+  const [selected, setSelected]   = useState(null)
+  const [options, setOptions]     = useState([])
+  const [score, setScore]         = useState(0)
+  const [questions, setQuestions] = useState(0)
+  const [streak, setStreak]       = useState(0)
+  const [showBubbles, setShowBubbles] = useState(false)
+  const [timeLeft, setTimeLeft]   = useState(25)
+  const [lives, setLives]         = useState(3)
 
   useEffect(() => {
-    // Build answer options
-    const wrong = WRONG_PRODUCTS
-      .filter(w => w !== reaction.product)
-      .sort(() => Math.random() - 0.5)
-      .slice(0, 3)
-    const opts = [reaction.product, ...wrong].sort(() => Math.random() - 0.5)
-    setOptions(opts)
+    const wrong = WRONG_PRODUCTS.filter(w => w !== reaction.product).sort(() => Math.random() - 0.5).slice(0, 3)
+    setOptions([reaction.product, ...wrong].sort(() => Math.random() - 0.5))
   }, [reaction])
 
   useEffect(() => {
@@ -89,7 +60,7 @@ export default function ChemLabGame({ level = 1, onComplete, onExit }) {
   }, [phase])
 
   function startReaction() {
-    SoundEngine.tap()
+    SoundEngine.tap?.()
     setPhase('reacting')
     setShowBubbles(true)
     setTimeout(() => { setShowBubbles(false); setPhase('answer'); setTimeLeft(25) }, 1800)
@@ -100,7 +71,6 @@ export default function ChemLabGame({ level = 1, onComplete, onExit }) {
     setSelected(ans)
     const correct = ans === reaction.product
     setPhase('result')
-
     if (correct) {
       SoundEngine.gameCorrect?.()
       setScore(s => s + Math.max(10, timeLeft * 4 + streak * 5))
@@ -110,149 +80,113 @@ export default function ChemLabGame({ level = 1, onComplete, onExit }) {
       setStreak(0)
       setLives(l => l - 1)
     }
-
     const nextQ = questions + 1
     setQuestions(nextQ)
-
     setTimeout(() => {
-      if (lives <= 1 && !correct || nextQ >= TOTAL_ROUNDS) {
-        // Game over
+      if ((lives <= 1 && !correct) || nextQ >= TOTAL_ROUNDS) {
         const finalScore = score + (correct ? Math.max(10, timeLeft * 4) : 0)
-        onComplete?.({ score: finalScore, correct: correct ? score/10+1 : score/10, total: TOTAL_ROUNDS })
+        if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
+        onFinish?.()
       } else {
-        setPhase('mix')
-        setSelected(null)
-        setTimeLeft(25)
+        setPhase('mix'); setSelected(null); setTimeLeft(25)
       }
     }, 1800)
   }
 
-  const reactionCol = reaction.color
+  const col = reaction.color
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: theme.bg }}>
-      <style>{`
-        @keyframes bubble { to { transform: translateY(-60px) scale(0); opacity: 0; } }
-        @keyframes shake  { 0%,100%{transform:none} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
-      `}</style>
+    <div style={{ background:'#0C0F1A', borderRadius:16, overflow:'hidden', minHeight:480 }}>
+      <style>{`@keyframes bubble{to{transform:translateY(-60px) scale(0);opacity:0}} @keyframes shake{0%,100%{transform:none}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}`}</style>
 
-      {/* Header */}
-      <div className="px-5 pt-10 pb-4" style={{ background: theme.surface, borderBottom: `1px solid ${theme.border}` }}>
-        <div className="flex items-center justify-between mb-2">
-          <button onClick={onExit} style={{ color: theme.muted }}>✕</button>
-          <span className="font-black text-sm" style={{ color: theme.text }}>🧪 Chem Lab — Level {level}</span>
-          <div className="flex gap-1">
-            {[...Array(3)].map((_, i) => (
-              <span key={i} style={{ opacity: i < lives ? 1 : 0.2 }}>❤️</span>
-            ))}
+      <div style={{ background:'#131829', borderBottom:'1px solid #1A2035', padding:'16px 16px 12px' }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
+          <span style={{ color:'white', fontWeight:900, fontSize:14 }}>Chem Lab - Level {level}</span>
+          <div style={{ display:'flex', gap:2 }}>
+            {[...Array(3)].map((_,i)=><span key={i} style={{ opacity: i<lives?1:0.2 }}>heart</span>)}
           </div>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: theme.border }}>
-            <div className="h-full rounded-full" style={{ width: `${(questions/TOTAL_ROUNDS)*100}%`, background: reactionCol }}/>
+        <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+          <div style={{ flex:1, height:6, borderRadius:9999, overflow:'hidden', background:'#1A2035' }}>
+            <div style={{ height:'100%', borderRadius:9999, width:`${(questions/TOTAL_ROUNDS)*100}%`, background:col }}/>
           </div>
-          <span className="text-xs font-bold" style={{ color: theme.muted }}>{questions}/{TOTAL_ROUNDS}</span>
-          <span className="text-xs font-black" style={{ color: '#F59E0B' }}>⭐ {score}</span>
+          <span style={{ color:'#64748B', fontSize:12 }}>{questions}/{TOTAL_ROUNDS}</span>
+          <span style={{ color:'#F59E0B', fontSize:12, fontWeight:900 }}>* {score}</span>
         </div>
       </div>
 
-      {/* Lab bench */}
-      <div className="flex-1 flex flex-col items-center px-5 py-6">
-
-        {/* Reaction type label */}
-        <div className="px-3 py-1 rounded-full text-xs font-black mb-4"
-          style={{ background: `${reactionCol}22`, color: reactionCol }}>
+      <div style={{ display:'flex', flexDirection:'column', alignItems:'center', padding:'20px 16px' }}>
+        <div style={{ background:`${col}22`, color:col, padding:'4px 12px', borderRadius:9999, fontSize:12, fontWeight:900, marginBottom:16 }}>
           {reaction.type} Reaction
         </div>
 
-        {/* Beakers */}
-        <div className="flex items-end justify-center gap-8 mb-6">
-          {/* Beaker A */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-20 h-24 rounded-b-xl relative flex items-end justify-center overflow-hidden"
-              style={{ background: 'rgba(8,145,178,0.15)', border: '2px solid rgba(8,145,178,0.4)' }}>
-              <div className="w-full rounded-b-xl transition-all"
-                style={{ height: '60%', background: 'rgba(8,145,178,0.3)' }}/>
-              {showBubbles && <BubbleAnimation color={reactionCol}/>}
+        <div style={{ display:'flex', alignItems:'flex-end', justifyContent:'center', gap:32, marginBottom:24 }}>
+          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:8 }}>
+            <div style={{ width:80, height:96, borderRadius:'0 0 12px 12px', position:'relative', overflow:'hidden', background:'rgba(8,145,178,0.15)', border:'2px solid rgba(8,145,178,0.4)', display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
+              <div style={{ width:'100%', height:'60%', background:'rgba(8,145,178,0.3)', borderRadius:'0 0 10px 10px' }}/>
+              {showBubbles && [...Array(6)].map((_,i)=>(
+                <div key={i} style={{ position:'absolute', width:10, height:10, borderRadius:'50%', background:col, animation:`bubble 1s ease-out ${i*0.1}s forwards`, transform:`rotate(${i*60}deg) translateX(18px)`, opacity:0.7 }}/>
+              ))}
             </div>
-            <p className="text-sm font-black" style={{ color: theme.text }}>{reaction.a}</p>
+            <span style={{ color:'white', fontWeight:900, fontSize:14 }}>{reaction.a}</span>
           </div>
 
-          {/* Plus sign */}
-          <div className="text-3xl font-black pb-10" style={{ color: theme.muted }}>+</div>
+          <span style={{ color:'#64748B', fontSize:28, fontWeight:900, paddingBottom:20 }}>+</span>
 
-          {/* Beaker B */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="w-20 h-24 rounded-b-xl relative flex items-end justify-center overflow-hidden"
-              style={{ background: 'rgba(124,58,237,0.15)', border: '2px solid rgba(124,58,237,0.4)' }}>
-              <div className="w-full rounded-b-xl"
-                style={{ height: '60%', background: 'rgba(124,58,237,0.3)' }}/>
-              {showBubbles && <BubbleAnimation color={reactionCol}/>}
+          <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:8 }}>
+            <div style={{ width:80, height:96, borderRadius:'0 0 12px 12px', position:'relative', overflow:'hidden', background:'rgba(124,58,237,0.15)', border:'2px solid rgba(124,58,237,0.4)', display:'flex', alignItems:'flex-end', justifyContent:'center' }}>
+              <div style={{ width:'100%', height:'60%', background:'rgba(124,58,237,0.3)', borderRadius:'0 0 10px 10px' }}/>
+              {showBubbles && [...Array(6)].map((_,i)=>(
+                <div key={i} style={{ position:'absolute', width:10, height:10, borderRadius:'50%', background:col, animation:`bubble 1s ease-out ${i*0.1}s forwards`, transform:`rotate(${i*60}deg) translateX(18px)`, opacity:0.7 }}/>
+              ))}
             </div>
-            <p className="text-sm font-black" style={{ color: theme.text }}>{reaction.b}</p>
+            <span style={{ color:'white', fontWeight:900, fontSize:14 }}>{reaction.b}</span>
           </div>
         </div>
 
-        {/* Mix button */}
         {phase === 'mix' && (
-          <div className="text-center">
-            <p className="text-sm mb-4" style={{ color: theme.muted }}>
-              {reaction.hint}
-            </p>
-            <button onClick={startReaction}
-              className="px-8 py-4 rounded-2xl font-black text-white text-lg transition-all active:scale-95"
-              style={{ background: `linear-gradient(135deg,${reactionCol},#7C3AED)` }}>
-              ⚗️ Mix Chemicals!
+          <div style={{ textAlign:'center' }}>
+            <p style={{ color:'#94A3B8', fontSize:13, marginBottom:16 }}>{reaction.hint}</p>
+            <button onClick={startReaction} style={{ padding:'14px 32px', borderRadius:16, fontWeight:900, color:'white', fontSize:16, background:`linear-gradient(135deg,${col},#7C3AED)`, border:'none', cursor:'pointer' }}>
+              Mix Chemicals!
             </button>
           </div>
         )}
 
-        {/* Reacting */}
         {phase === 'reacting' && (
-          <div className="text-center">
-            <div className="text-4xl mb-2" style={{ animation: 'shake 0.3s ease infinite' }}>⚗️</div>
-            <p className="font-black" style={{ color: reactionCol }}>Reaction in progress...</p>
+          <div style={{ textAlign:'center' }}>
+            <div style={{ fontSize:36, marginBottom:8, animation:'shake 0.3s ease infinite' }}>flask</div>
+            <p style={{ color:col, fontWeight:900 }}>Reaction in progress...</p>
           </div>
         )}
 
-        {/* Question */}
         {(phase === 'answer' || phase === 'result') && (
-          <div className="w-full max-w-sm">
-            <div className="flex items-center justify-between mb-3">
-              <p className="text-sm font-black" style={{ color: theme.text }}>
-                What are the products?
-              </p>
-              {phase === 'answer' && (
-                <span className="font-black text-sm" style={{ color: timeLeft < 8 ? '#EF4444' : theme.accent }}>
-                  {timeLeft}s
-                </span>
-              )}
+          <div style={{ width:'100%', maxWidth:360 }}>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:12 }}>
+              <span style={{ color:'white', fontWeight:900, fontSize:14 }}>What are the products?</span>
+              {phase === 'answer' && <span style={{ color: timeLeft<8?'#EF4444':'#14B8A6', fontWeight:900 }}>{timeLeft}s</span>}
             </div>
-
-            <div className="space-y-2">
-              {options.map((opt, i) => {
-                let bg = theme.card, border = `1px solid ${theme.border}`, textCol = theme.text
-                if (phase === 'result') {
-                  if (opt === reaction.product) { bg = 'rgba(74,222,128,0.12)'; border = '2px solid #22C55E'; textCol = '#4ADE80' }
-                  else if (opt === selected)    { bg = 'rgba(239,68,68,0.12)';  border = '2px solid #EF4444'; textCol = '#EF4444' }
+            <div style={{ display:'flex', flexDirection:'column', gap:8 }}>
+              {options.map((opt,i) => {
+                let bg='#131829', border='1px solid #1A2035', color='#E2E8F0'
+                if (phase==='result') {
+                  if (opt===reaction.product) { bg='rgba(74,222,128,0.12)'; border='2px solid #22C55E'; color='#4ADE80' }
+                  else if (opt===selected)    { bg='rgba(239,68,68,0.12)'; border='2px solid #EF4444'; color='#EF4444' }
                 }
                 return (
-                  <button key={i} onClick={() => handleAnswer(opt)} disabled={phase === 'result'}
-                    className="w-full rounded-2xl px-4 py-3 text-left text-sm font-bold transition-all active:scale-95"
-                    style={{ background: bg, border, color: textCol }}>
+                  <button key={i} onClick={()=>handleAnswer(opt)} disabled={phase==='result'}
+                    style={{ background:bg, border, color, padding:'12px 16px', borderRadius:16, textAlign:'left', fontWeight:700, fontSize:13, cursor:'pointer', width:'100%' }}>
                     {opt}
                   </button>
                 )
               })}
             </div>
-
-            {phase === 'result' && (
-              <div className="mt-3 rounded-xl px-3 py-2"
-                style={{ background: selected === reaction.product ? 'rgba(74,222,128,0.08)' : 'rgba(239,68,68,0.08)' }}>
-                <p className="text-xs font-bold" style={{ color: selected === reaction.product ? '#4ADE80' : '#EF4444' }}>
-                  {selected === reaction.product ? '✅ Correct!' : `❌ Answer: ${reaction.product}`}
+            {phase==='result' && (
+              <div style={{ marginTop:12, padding:'8px 12px', borderRadius:12, background: selected===reaction.product?'rgba(74,222,128,0.08)':'rgba(239,68,68,0.08)' }}>
+                <p style={{ color: selected===reaction.product?'#4ADE80':'#EF4444', fontWeight:700, fontSize:13 }}>
+                  {selected===reaction.product ? 'Correct!' : `Answer: ${reaction.product}`}
                 </p>
-                {streak > 1 && <p className="text-xs" style={{ color: '#F59E0B' }}>🔥 {streak} streak! Bonus XP</p>}
+                {streak > 1 && <p style={{ color:'#F59E0B', fontSize:12 }}>x{streak} streak bonus!</p>}
               </div>
             )}
           </div>
