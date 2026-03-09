@@ -76,10 +76,11 @@ export default function QuickQuiz(){
         const s=Math.round(newA.filter((a,i)=>a===qs[i]?.answer).length/qs.length*100)
         setScore(s);setDone(true);SoundEngine.quizComplete()
         if(student){
+          const attemptId = `quickquiz_${Date.now()}`
           await goalsDB.incrementCompleted(student.id)
           // Save to quiz history so brain.js can analyse it
-          await quizDB.saveAttempt(student.id, `quickquiz_${Date.now()}`, newA, s, qs.length * 25)
-          await saveDetailedAttempt(student.id, `quickquiz_${Date.now()}`, qs, newA)
+          await quizDB.saveAttempt(student.id, attemptId, newA, s, qs.length * 25)
+          await saveDetailedAttempt(student.id, attemptId, qs, newA)
           recordStudySession(student.id, s, Math.round(qs.length * 25 / 60)).catch(()=>{})
           invalidateProfileCache()
         }
