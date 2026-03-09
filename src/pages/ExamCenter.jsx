@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { EXAM_TIMETABLES, MOCK_TESTS, getMockTestsForLevel } from '../data/exams.js'
 import db from '../db/schema.js'
+import { invalidateProfileCache } from '../ai/chatbot.js'
+import { recordStudySession } from '../ai/learning.js'
 
 // Load all curriculum questions
 async function loadQuestions(subject, topics) {
@@ -113,6 +115,7 @@ function TimetableView({ timetable, onClose }) {
 
 // ── Exam Session ─────────────────────────────────────────────────
 function ExamSession({ test, onFinish }) {
+  const { student } = useUser()
   const [questions, setQuestions] = useState([])
   const [answers, setAnswers] = useState({})
   const [flagged, setFlagged] = useState(new Set())
@@ -145,6 +148,22 @@ function ExamSession({ test, onFinish }) {
     })
     const score = Math.round((correct / questions.length) * 100)
     setResults({ correct, total: questions.length, score, timeTaken, review })
+    // ── Save to DB so brain.js examPredictions and ProgressReport can read it ──
+    if (student?.id) {
+      db.exam_results.add({
+        student_id: student.id,
+        exam_id: test.id,
+        subject: test.subject,
+        title: test.title,
+        score,
+        correct,
+        total: questions.length,
+        time_taken: timeTaken,
+        attempted_at: new Date().toISOString(),
+      }).catch(() => {})
+      recordStudySession(student.id, score, Math.round(timeTaken / 60)).catch(() => {})
+      invalidateProfileCache()
+    }
   }
 
   if (loading) return (
