@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { studentDB } from '../db/progressDB.js'
 import { SoundEngine, Haptics } from '../utils/soundEngine.js'
+import { recordStudySession } from '../ai/learning.js'
+import { recordStudyActivity } from '../utils/notifications.js'
+import { invalidateProfileCache } from '../ai/chatbot.js'
 import ParticleBurst from '../components/ParticleBurst.jsx'
 
 const SESSIONS=[{label:'15 min',secs:15*60,xp:30},{label:'25 min',secs:25*60,xp:50},{label:'45 min',secs:45*60,xp:80}]
@@ -37,7 +40,13 @@ export default function FocusTimer(){
     setRunning(false);setDone(true)
     SoundEngine.timerComplete();Haptics.timerDone()
     setBurst(true);setTimeout(()=>setBurst(false),1400)
-    if(student){await studentDB.update(student.id,{total_xp:(student.total_xp||0)+sess.xp});refreshStudent()}
+    if(student){
+      await studentDB.update(student.id,{total_xp:(student.total_xp||0)+sess.xp})
+      recordStudySession(student.id, 100, Math.round(sess.secs/60)).catch(()=>{})
+      recordStudyActivity()
+      invalidateProfileCache()
+      refreshStudent()
+    }
   }
 
   function toggle(){if(done)return;SoundEngine.tap();setRunning(r=>!r)}
