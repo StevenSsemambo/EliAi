@@ -2,130 +2,100 @@ import { useState, useEffect, useCallback } from 'react'
 import { SoundEngine } from '../../utils/soundEngine.js'
 import { saveGameScore } from '../../utils/gameUnlocks.js'
 
-// ── Question generator (curriculum-aligned, difficulty by level) ──
 function generateQuestion(level) {
-  const tier = Math.floor((level - 1) / 4) // 0-5
+  const tier = Math.floor((level - 1) / 4)
 
   if (tier === 0) {
-    // S1: Basic arithmetic
-    const ops = ['+', '-', '×']
+    const ops = ['+', '-', 'x']
     const op  = ops[Math.floor(Math.random() * ops.length)]
-    const a   = Math.floor(Math.random() * 20) + 1
-    const b   = Math.floor(Math.random() * 15) + 1
+    const a = Math.floor(Math.random() * 20) + 1
+    const b = Math.floor(Math.random() * 15) + 1
     let ans, q
     if (op==='+') { ans=a+b; q=`${a} + ${b}` }
     else if (op==='-') { const x=Math.max(a,b),y=Math.min(a,b); ans=x-y; q=`${x} - ${y}` }
-    else { ans=a*b; q=`${a} × ${b}` }
-    return { q: `${q} = ?`, answer: String(ans), type:'Arithmetic', hint:'Basic arithmetic' }
+    else { ans=a*b; q=`${a} x ${b}` }
+    return { q:`${q} = ?`, answer:String(ans), type:'Arithmetic', hint:'Basic arithmetic' }
   }
 
   if (tier === 1) {
-    // S2: Fractions + Powers
-    const types = ['fraction', 'power', 'divide']
-    const t = types[Math.floor(Math.random() * types.length)]
-    if (t === 'fraction') {
-      const d = [2,4,5,10][Math.floor(Math.random()*4)]
-      const n = Math.floor(Math.random()*(d-1))+1
-      const m = Math.floor(Math.random()*8)+2
-      const ans = (n*m)/d
-      return { q:`${n}/${d} × ${m} = ?`, answer: Number.isInteger(ans)?String(ans):`${n*m}/${d}`, type:'Fractions', hint:'Multiply numerator by the whole number' }
+    const t = ['fraction','power','divide'][Math.floor(Math.random()*3)]
+    if (t==='fraction') {
+      const d=[2,4,5,10][Math.floor(Math.random()*4)]
+      const n=Math.floor(Math.random()*(d-1))+1
+      const m=Math.floor(Math.random()*8)+2
+      const ans=(n*m)/d
+      return { q:`${n}/${d} x ${m} = ?`, answer:Number.isInteger(ans)?String(ans):`${n*m}/${d}`, type:'Fractions', hint:`Multiply numerator by ${m}` }
     }
-    if (t === 'power') {
-      const base = Math.floor(Math.random()*5)+2
-      const exp  = Math.floor(Math.random()*3)+2
-      const ans  = Math.pow(base,exp)
-      return { q:`${base}${exp===2?'²':exp===3?'³':'^'+exp} = ?`, answer: String(ans), type:'Powers', hint:`Multiply ${base} by itself ${exp} times` }
+    if (t==='power') {
+      const base=Math.floor(Math.random()*5)+2
+      const exp=Math.floor(Math.random()*3)+2
+      return { q:`${base}^${exp} = ?`, answer:String(Math.pow(base,exp)), type:'Powers', hint:`Multiply ${base} by itself ${exp} times` }
     }
     const a=Math.floor(Math.random()*9)+2, b=Math.floor(Math.random()*9)+1
-    return { q:`${a*b} ÷ ${a} = ?`, answer: String(b), type:'Division', hint:'How many times does the divisor go in?' }
+    return { q:`${a*b} / ${a} = ?`, answer:String(b), type:'Division', hint:'How many times does the divisor go in?' }
   }
 
   if (tier === 2) {
-    // S2-S3: Simple algebra
-    const x = Math.floor(Math.random() * 10) + 1
-    const a = Math.floor(Math.random() * 8) + 2
-    const b = Math.floor(Math.random() * 20) + 5
-    const types = ['linear1', 'linear2']
-    const t = types[Math.floor(Math.random() * 2)]
-    if (t === 'linear1') {
-      // ax = b → x = b/a
-      const prod = a * x
-      return { q:`${a}x = ${prod}\nx = ?`, answer: String(x), type:'Linear Equations', hint:'Divide both sides by the coefficient of x' }
+    const x=Math.floor(Math.random()*10)+1
+    const a=Math.floor(Math.random()*8)+2
+    const b=Math.floor(Math.random()*20)+5
+    if (Math.random()>0.5) {
+      return { q:`${a}x = ${a*x}\nx = ?`, answer:String(x), type:'Linear Equations', hint:'Divide both sides by the coefficient' }
     }
-    // ax + b = c
-    const c = a*x + b
-    return { q:`${a}x + ${b} = ${c}\nx = ?`, answer: String(x), type:'Linear Equations', hint:'Subtract b from both sides, then divide by a' }
+    return { q:`${a}x + ${b} = ${a*x+b}\nx = ?`, answer:String(x), type:'Linear Equations', hint:'Subtract b, then divide by a' }
   }
 
   if (tier === 3) {
-    // S3-S4: Quadratics + percentages
-    const types = ['percent', 'quad_roots', 'simultaneous']
-    const t = types[Math.floor(Math.random()*3)]
-    if (t === 'percent') {
-      const pcts = [10,20,25,50,15]
-      const pct  = pcts[Math.floor(Math.random()*pcts.length)]
-      const vals = [200,400,600,800,120,240]
-      const val  = vals[Math.floor(Math.random()*vals.length)]
-      const ans  = (pct/100)*val
-      return { q:`${pct}% of ${val} = ?`, answer: String(ans), type:'Percentages', hint:`Divide by 100 then multiply: ${val} × ${pct}/100` }
+    const t=['percent','quad_roots','simultaneous'][Math.floor(Math.random()*3)]
+    if (t==='percent') {
+      const pcts=[10,20,25,50,15]
+      const pct=pcts[Math.floor(Math.random()*pcts.length)]
+      const vals=[200,400,600,800,120,240]
+      const val=vals[Math.floor(Math.random()*vals.length)]
+      return { q:`${pct}% of ${val} = ?`, answer:String((pct/100)*val), type:'Percentages', hint:`${val} x ${pct}/100` }
     }
-    if (t === 'quad_roots') {
-      // (x+a)(x+b) roots
+    if (t==='quad_roots') {
       const r1=Math.floor(Math.random()*5)+1, r2=Math.floor(Math.random()*5)+1
-      const sum=r1+r2, prod=r1*r2
-      return { q:`x² - ${sum}x + ${prod} = 0\nSmaller root?`, answer: String(Math.min(r1,r2)), type:'Quadratics', hint:`Find two numbers that add to ${sum} and multiply to ${prod}` }
+      return { q:`x^2 - ${r1+r2}x + ${r1*r2} = 0\nSmaller root?`, answer:String(Math.min(r1,r2)), type:'Quadratics', hint:`Find two numbers that add to ${r1+r2} and multiply to ${r1*r2}` }
     }
-    // Simultaneous: x+y=a, x-y=b
     const s=Math.floor(Math.random()*10)+4, d=Math.floor(Math.random()*4)+1
-    const x=(s+d)/2, y=(s-d)/2
-    if(Number.isInteger(x)&&Number.isInteger(y))
-      return { q:`x + y = ${s}\nx - y = ${d}\nx = ?`, answer: String(x), type:'Simultaneous', hint:'Add the two equations to eliminate y' }
-    return { q:`2x + 3 = ${2*5+3}\nx = ?`, answer:'5', type:'Linear Equations', hint:'Subtract 3, then divide by 2' }
+    const xv=(s+d)/2, yv=(s-d)/2
+    if (Number.isInteger(xv)&&Number.isInteger(yv))
+      return { q:`x + y = ${s}\nx - y = ${d}\nx = ?`, answer:String(xv), type:'Simultaneous', hint:'Add the two equations to eliminate y' }
+    return { q:`2x + 3 = 13\nx = ?`, answer:'5', type:'Linear Equations', hint:'Subtract 3, then divide by 2' }
   }
 
-  if (tier >= 4) {
-    // S4-S6: Trigonometry + logs
-    const types = ['trig', 'log', 'sequence']
-    const t = types[Math.floor(Math.random()*3)]
-    if (t === 'trig') {
-      const known = [{sin30:'0.5'},{cos60:'0.5'},{tan45:'1'},{sin90:'1'},{cos0:'1'}]
-      const k = known[Math.floor(Math.random()*known.length)]
-      const [key, val] = Object.entries(k)[0]
-      const fn = key.slice(0,3), deg = key.slice(3)
-      return { q:`${fn}(${deg}°) = ?`, answer: val, type:'Trigonometry', hint:'Standard angle — memorise sin/cos/tan of 0°,30°,45°,60°,90°' }
-    }
-    if (t === 'log') {
-      const bases = [{b:2,x:8,ans:3},{b:2,x:16,ans:4},{b:3,x:9,ans:2},{b:10,x:100,ans:2},{b:5,x:25,ans:2}]
-      const k = bases[Math.floor(Math.random()*bases.length)]
-      return { q:`log${k.b}(${k.x}) = ?`, answer: String(k.ans), type:'Logarithms', hint:`${k.b}^? = ${k.x}` }
-    }
-    // Arithmetic sequence
-    const a1=Math.floor(Math.random()*5)+1, d2=Math.floor(Math.random()*4)+2, n=Math.floor(Math.random()*4)+4
-    const nth = a1 + (n-1)*d2
-    return { q:`Sequence: ${a1}, ${a1+d2}, ${a1+2*d2}, ...\nTerm ${n} = ?`, answer: String(nth), type:'Sequences', hint:`aₙ = a₁ + (n-1)d` }
+  const t=['trig','log','sequence'][Math.floor(Math.random()*3)]
+  if (t==='trig') {
+    const known=[{fn:'sin',deg:'30',val:'0.5'},{fn:'cos',deg:'60',val:'0.5'},{fn:'tan',deg:'45',val:'1'},{fn:'sin',deg:'90',val:'1'}]
+    const k=known[Math.floor(Math.random()*known.length)]
+    return { q:`${k.fn}(${k.deg} degrees) = ?`, answer:k.val, type:'Trigonometry', hint:'Standard angle values' }
   }
+  if (t==='log') {
+    const bases=[{b:2,x:8,ans:3},{b:2,x:16,ans:4},{b:3,x:9,ans:2},{b:10,x:100,ans:2},{b:5,x:25,ans:2}]
+    const k=bases[Math.floor(Math.random()*bases.length)]
+    return { q:`log${k.b}(${k.x}) = ?`, answer:String(k.ans), type:'Logarithms', hint:`${k.b}^? = ${k.x}` }
+  }
+  const a1=Math.floor(Math.random()*5)+1, d2=Math.floor(Math.random()*4)+2, n=Math.floor(Math.random()*4)+4
+  return { q:`${a1}, ${a1+d2}, ${a1+d2*2}, ...\nTerm ${n} = ?`, answer:String(a1+(n-1)*d2), type:'Sequences', hint:`an = a1 + (n-1)d` }
 }
 
 function generateOptions(correct) {
   const n = parseInt(correct)
-  if (isNaN(n)) {
-    // String answer — generate plausible wrongs
-    return [correct, correct+'²', String(parseFloat(correct)*2), 'undefined'].sort(()=>Math.random()-0.5)
-  }
+  if (isNaN(n)) return [correct, correct+'2', 'undefined', '0'].sort(()=>Math.random()-0.5)
   const wrongs = new Set()
-  while (wrongs.size < 3) {
-    const offsets = [-2,-1,1,2,n-1,n+1,n*2,Math.round(n/2)].filter(x=>x!==n&&x>=0)
-    wrongs.add(String(offsets[Math.floor(Math.random()*offsets.length)]))
-  }
+  const offsets = [-2,-1,1,2,n-1,n+1,n*2,Math.round(n/2)].filter(x=>x!==n&&x>=0)
+  while (wrongs.size < 3 && offsets.length > 0) wrongs.add(String(offsets[Math.floor(Math.random()*offsets.length)]))
+  while (wrongs.size < 3) wrongs.add(String(Math.floor(Math.random()*20)+1))
   return [correct, ...wrongs].sort(()=>Math.random()-0.5)
 }
 
 const CAT_COLORS = { Arithmetic:'#0891B2', Fractions:'#7C3AED', Powers:'#F59E0B', Division:'#16A34A', 'Linear Equations':'#EF4444', Percentages:'#0D9488', Quadratics:'#7C3AED', Simultaneous:'#A78BFA', Trigonometry:'#F59E0B', Logarithms:'#EF4444', Sequences:'#0891B2' }
 
 export default function MathsSpeedGame({ game, levelData, studentId, onFinish }) {
-  const level  = levelData?.level || 1
-  const ROUNDS     = Math.min(5 + Math.floor(level/3), 10)
-  const BASE_TIME  = Math.max(10, 30 - level)
+  const level    = levelData?.level || 1
+  const ROUNDS   = Math.min(5 + Math.floor(level/3), 10)
+  const BASE_TIME = Math.max(10, 30 - level)
 
   const [round, setRound]     = useState(0)
   const [q, setQ]             = useState(null)
@@ -158,14 +128,13 @@ export default function MathsSpeedGame({ game, levelData, studentId, onFinish })
   }, [round, phase])
 
   function handleAnswer(ans) {
-    if (phase !== 'question') return
+    if (phase !== 'question' || !q) return
     setSelected(ans)
     setPhase('result')
-    const isCorrect = ans === q?.answer
+    const isCorrect = ans === q.answer
     if (isCorrect) {
       SoundEngine.gameCorrect?.()
-      const bonus = Math.max(10, timeLeft * 4) + streak * 8
-      setScore(s => s + bonus)
+      setScore(s => s + Math.max(10, timeLeft * 4) + streak * 8)
       setCorrect(c => c+1)
       setStreak(s => s+1)
     } else {
@@ -175,77 +144,65 @@ export default function MathsSpeedGame({ game, levelData, studentId, onFinish })
     setTimeout(() => {
       const next = round + 1
       if (next >= ROUNDS) {
-        const finalBonus = isCorrect ? Math.max(10, timeLeft*4) : 0
-        const finalScore = score + finalBonus
+        const finalScore = score + (isCorrect ? Math.max(10, timeLeft*4) : 0)
         if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
-        setTimeout(() => onFinish?.(), 400)
+        onFinish?.()
       } else {
         setRound(next); newQuestion()
       }
     }, 1600)
   }
 
-  if (!q) return null
+  if (!q) return <div style={{ background:'#0C0F1A', borderRadius:16, minHeight:480, display:'flex', alignItems:'center', justifyContent:'center' }}><p style={{ color:'#64748B' }}>Loading...</p></div>
+
   const col = CAT_COLORS[q.type] || '#14B8A6'
-  const urgentTime = timeLeft <= Math.floor(BASE_TIME * 0.3)
+  const urgent = timeLeft <= Math.floor(BASE_TIME * 0.3)
 
   return (
-    <div className="flex flex-col rounded-2xl overflow-hidden" style={{ background: '#0C0F1A', minHeight: 480 }}>
-      {/* Header */}
-      <div className="px-4 pt-4 pb-3" style={{ background: '#131829', borderBottom: '1px solid #1A2035' }}>
-        <div className="flex items-center justify-between mb-2">
-          <span className="font-black text-sm text-white">🔢 Maths Speed — Lvl {level}</span>
-          <span className="text-xs font-black" style={{ color:'#F59E0B' }}>⭐ {score}</span>
+    <div style={{ background:'#0C0F1A', borderRadius:16, overflow:'hidden', minHeight:480 }}>
+      <div style={{ background:'#131829', borderBottom:'1px solid #1A2035', padding:'16px 16px 12px' }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:8 }}>
+          <span style={{ color:'white', fontWeight:900, fontSize:14 }}>Maths Speed - Lvl {level}</span>
+          <span style={{ color:'#F59E0B', fontWeight:900, fontSize:12 }}>* {score}</span>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="flex-1 h-1.5 rounded-full overflow-hidden" style={{ background: '#1A2035' }}>
-            <div className="h-full rounded-full transition-all"
-              style={{ width:`${(round/ROUNDS)*100}%`, background: col }}/>
+        <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+          <div style={{ flex:1, height:6, borderRadius:9999, overflow:'hidden', background:'#1A2035' }}>
+            <div style={{ height:'100%', borderRadius:9999, width:`${(round/ROUNDS)*100}%`, background:col, transition:'width 0.3s' }}/>
           </div>
-          <span className="text-xs font-bold text-slate-500">{round+1}/{ROUNDS}</span>
+          <span style={{ color:'#64748B', fontSize:12 }}>{round+1}/{ROUNDS}</span>
         </div>
       </div>
 
-      <div className="flex-1 px-4 py-4 max-w-lg mx-auto w-full">
-        {/* Category + timer */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black"
-            style={{ background:`${col}18`, color: col }}>
+      <div style={{ padding:'16px' }}>
+        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:16 }}>
+          <div style={{ background:`${col}18`, color:col, padding:'4px 12px', borderRadius:9999, fontSize:12, fontWeight:900 }}>
             {q.type}
           </div>
-          <div className="flex items-center gap-1.5">
-            {streak > 1 && <span className="text-xs font-black" style={{ color:'#F59E0B' }}>🔥{streak}</span>}
-            <span className="font-black text-lg" style={{ color: urgentTime ? '#EF4444' : '#14B8A6' }}>
-              {timeLeft}s
-            </span>
+          <div style={{ display:'flex', alignItems:'center', gap:8 }}>
+            {streak > 1 && <span style={{ color:'#F59E0B', fontWeight:900, fontSize:12 }}>x{streak}</span>}
+            <span style={{ color: urgent?'#EF4444':'#14B8A6', fontWeight:900, fontSize:20 }}>{timeLeft}s</span>
           </div>
         </div>
 
-        {/* Timer bar */}
-        <div className="h-1.5 rounded-full overflow-hidden mb-5" style={{ background: '#1A2035' }}>
-          <div className="h-full rounded-full transition-all duration-1000"
-            style={{ width:`${(timeLeft/BASE_TIME)*100}%`, background: urgentTime?'#EF4444':col }}/>
+        <div style={{ height:6, borderRadius:9999, overflow:'hidden', marginBottom:20, background:'#1A2035' }}>
+          <div style={{ height:'100%', borderRadius:9999, width:`${(timeLeft/BASE_TIME)*100}%`, background:urgent?'#EF4444':col, transition:'width 1s linear' }}/>
         </div>
 
-        {/* Question */}
-        <div className="rounded-3xl p-6 mb-6 text-center"
-          style={{ background:`${col}10`, border:`2px solid ${col}30` }}>
-          <p className="text-3xl font-black whitespace-pre-line text-white">{q.q}</p>
-          <p className="text-xs mt-2 text-slate-500">{q.hint}</p>
+        <div style={{ background:`${col}10`, border:`2px solid ${col}30`, borderRadius:24, padding:24, marginBottom:24, textAlign:'center' }}>
+          <p style={{ color:'white', fontWeight:900, fontSize:28, whiteSpace:'pre-line' }}>{q.q}</p>
+          <p style={{ color:'#64748B', fontSize:12, marginTop:8 }}>{q.hint}</p>
         </div>
 
-        {/* Options */}
-        <div className="grid grid-cols-2 gap-3">
-          {options.map((opt, i) => {
-            let bg = '#131829', border = '1px solid #1A2035', textCol = '#E2E8F0'
-            if (phase === 'result') {
-              if (opt === q.answer)     { bg=`${col}15`; border=`2px solid ${col}`; textCol=col }
-              else if (opt === selected){ bg='rgba(239,68,68,0.1)'; border='2px solid #EF4444'; textCol='#EF4444' }
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:12 }}>
+          {options.map((opt,i) => {
+            let bg='#131829', border='1px solid #1A2035', color='#E2E8F0'
+            if (phase==='result') {
+              if (opt===q.answer)     { bg=`${col}15`; border=`2px solid ${col}`; color=col }
+              else if (opt===selected){ bg='rgba(239,68,68,0.1)'; border='2px solid #EF4444'; color='#EF4444' }
             }
             return (
-              <button key={i} onClick={() => handleAnswer(opt)} disabled={phase==='result'}
-                className="rounded-2xl py-5 font-black text-xl transition-all active:scale-90"
-                style={{ background: bg, border, color: textCol }}>
+              <button key={i} onClick={()=>handleAnswer(opt)} disabled={phase==='result'}
+                style={{ background:bg, border, color, padding:'20px 8px', borderRadius:16, fontWeight:900, fontSize:20, cursor:'pointer', width:'100%' }}>
                 {opt}
               </button>
             )
@@ -253,12 +210,9 @@ export default function MathsSpeedGame({ game, levelData, studentId, onFinish })
         </div>
 
         {phase==='result' && (
-          <div className="mt-4 rounded-xl px-3 py-2 text-center"
-            style={{ background: selected===q.answer?'rgba(74,222,128,0.08)':'rgba(239,68,68,0.08)' }}>
-            <p className="font-bold text-sm" style={{ color: selected===q.answer?'#4ADE80':'#EF4444' }}>
-              {selected===q.answer
-                ? `Correct! +${Math.max(10,timeLeft*4)+streak*8} XP${streak>1?` 🔥${streak}x`:''}`
-                : `Answer: ${q.answer}`}
+          <div style={{ marginTop:16, padding:'10px 14px', borderRadius:12, textAlign:'center', background: selected===q.answer?'rgba(74,222,128,0.08)':'rgba(239,68,68,0.08)' }}>
+            <p style={{ color: selected===q.answer?'#4ADE80':'#EF4444', fontWeight:700, fontSize:13 }}>
+              {selected===q.answer ? `Correct! +${Math.max(10,timeLeft*4)+streak*8} XP${streak>1?` x${streak}`:''}`:`Answer: ${q.answer}`}
             </p>
           </div>
         )}
