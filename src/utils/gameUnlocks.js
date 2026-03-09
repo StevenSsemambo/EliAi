@@ -195,6 +195,7 @@ export async function getUnlockStatus(studentId) {
     } catch(e) {}
     const status = {}
     for (const game of GAMES) {
+      if (!game || !game.id) continue
       status[game.id] = { unlockedLevels:[], highScores:{} }
       for (const lvl of game.levels) {
         const r = lvl.req
@@ -216,6 +217,7 @@ export async function getUnlockStatus(studentId) {
     // Fallback: return all games with level 1 unlocked
     const status = {}
     for (const game of GAMES) {
+      if (!game || !game.id) continue
       status[game.id] = { unlockedLevels:[1], highScores:{} }
     }
     return { status, lessonsCompleted:0, avgScore:0, examsCompleted:0 }
