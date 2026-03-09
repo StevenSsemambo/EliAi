@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
+import { analyseStudent } from '../ai/brain.js'
 import Navbar from '../components/Navbar.jsx'
 
 const SUBJECT_FILES = {
@@ -83,13 +84,20 @@ export default function Search() {
   const [loading, setLoading] = useState(false)
   const [indexed, setIndexed] = useState(false)
   const [indexSize, setIndexSize] = useState(0)
+  const [weakTopics, setWeakTopics] = useState(new Set())
   const inputRef = useRef(null)
   const debounceRef = useRef(null)
 
   useEffect(() => {
     inputRef.current?.focus()
     buildSearchIndex().then(idx => { setIndexed(true); setIndexSize(idx.length) })
-  }, [])
+    // Load weak topics from brain.js to personalise ranking
+    if (student?.id) {
+      analyseStudent(student.id)
+        .then(a => setWeakTopics(new Set((a.allWeakTopics || []).map(t => t.topic))))
+        .catch(() => {})
+    }
+  }, [student])
 
   useEffect(() => {
     if (!query.trim()) { setResults([]); return }
@@ -108,7 +116,10 @@ export default function Search() {
             if (item.subject.includes(word)) score += 4
             if (item.searchText.includes(word)) score += 1
           }
-          return { ...item, score }
+          // Boost weak topics so they appear at top as revision priority
+          const topicKey = item.topicId || item.lessonId?.split('_')[0]
+          if (score > 0 && weakTopics.has(topicKey)) score += 8
+          return { ...item, score, isWeak: weakTopics.has(topicKey) }
         })
         .filter(r => r.score > 0)
         .sort((a, b) => b.score - a.score)
@@ -189,6 +200,8 @@ export default function Search() {
                       <span className="text-slate-500 text-xs">{r.classLevel}</span>
                       <span className="text-slate-600 text-xs">·</span>
                       <span className="text-teal-400 text-xs">+{r.xpReward} XP</span>
+                      {r.isWeak && <span className="text-xs px-1.5 py-0.5 rounded-full font-bold"
+                        style={{background:'rgba(239,68,68,0.15)',color:'#F87171'}}>⚠️ Revise</span>}
                     </div>
                   </div>
                   <span className="text-slate-500 shrink-0">›</span>
