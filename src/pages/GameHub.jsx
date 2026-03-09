@@ -200,7 +200,7 @@ export default function GameHub() {
   useEffect(() => {
     try {
       const def = {
-        status: Object.fromEntries(GAMES.map(g => [g.id, { unlockedLevels:[1], highScores:{} }])),
+        status: Object.fromEntries(GAMES.filter(Boolean).map(g => [g.id, { unlockedLevels:[1], highScores:{} }])),
         lessonsCompleted:0, avgScore:0, examsCompleted:0
       }
       setUnlockData(def)
@@ -305,7 +305,7 @@ export default function GameHub() {
               <p className="text-slate-500 text-sm">Scanning the cosmos...</p>
             </div>
           ) : (
-            GAMES.map(game => (
+            GAMES.filter(Boolean).map(game => (
               <GameCard
                 key={game.id}
                 game={game}
