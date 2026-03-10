@@ -1827,39 +1827,12 @@ const INTENT_PATTERNS = [
   { intent:'HINT',      patterns: [/i('?m| am) stuck/i, /give me a hint/i, /i don'?t (understand|get)/i, /help me (with|understand)/i, /i need help/i, /i'?m? confused/i, /hint/i, /struggling with/i, /not sure (about|how)/i] },
   { intent:'EXAM_TIP',  patterns: [/exam tip/i, /how (do i|should i|to) (pass|study for|prepare for)/i, /uneb (tip|advice)/i, /common (mistake|error)s?/i, /how to revise/i, /revision tip/i] },
   { intent:'COMPARE',   patterns: [/difference between (.+) and (.+)/i, /compare (.+) (and|with|to) (.+)/i, /(.+) vs\.? (.+)/i, /distinguish between (.+) and (.+)/i, /similarities.*differences/i] },
-  { intent:'GREET',     patterns: [/^(hi|hello|hey|good morning|good evening|good afternoon|helo|hi there|howdy)[\s!.]*$/i, /^(how are you|what can you do|who are you)[\s?]*$/i, /^(start|begin)[\s!.]*$/i] },
-  { intent:'THANKS',    patterns: [/^(thanks?|thank you|ok thanks?|great|awesome|cool|perfect|got it|i see|understood)[\s!.]*$/i, /^(nice|brilliant|excellent|wonderful|fantastic|that helps?)[\s!.]*$/i] },
-  { intent:'IMPROVE',   patterns: [/how (do i|can i|to) improve/i, /how (do i|can i) (get|score) better/i, /tips to improve/i, /improve my (score|marks|grade)/i, /how to (pass|get better|do better)/i, /i (keep|keep on) failing/i, /i scored (low|badly|poorly)/i] },
-  { intent:'RECOMMEND', patterns: [/what should i (study|learn|do) (next|now)?/i, /recommend/i, /where do i start/i, /what'?s? next/i, /guide me/i, /what (today|now)/i, /study plan/i, /make me a (study|revision) plan/i] },
-  { intent:'STUDY_PLAN',patterns: [/study plan/i, /revision schedule/i, /plan for (my|the) exam/i, /(day.by.day|week.by.week) (plan|schedule)/i, /how many days/i] },
-  { intent:'TEACH',     patterns: [/teach me (step.by.step|how to|about)/i, /i want to (learn|understand) (.+)/i, /walk me through (.+)/i, /can you (teach|tutor) me/i] },
-  { intent:'VOICE',     patterns: [/voice (input|mode|on)|use (my )?mic|speak to you|talk to you/i] },
-]
+  { intent:'STRUGGLING',  patterns: [/i('?m| am) (struggling|failing|lost|hopeless|bad at|terrible at|no good at)/i, /i (can'?t|cannot) (understand|get|do|pass)/i, /this is (too hard|impossible)/i, /i give up/i, /i'?m? (scared|nervous|worried) (about|of) (the exam|uneb|results)/i] },
+  { intent:'BORED',       patterns: [/^(this is boring|i'?m? bored|not interested)[.!?]*$/i, /studying is (boring|hard|pointless)/i] },
+  { intent:'TIRED',       patterns: [/^(i'?m? tired|i'?m? exhausted|need a break|so tired)[.!?]*$/i] },
+  { intent:'ENCOURAGE',   patterns: [/^(motivate me|encourage me|i need motivation|cheer me up)[.!?]*$/i, /will i pass/i, /am i going to (pass|fail)/i] },
+  { intent:'CASUAL_CHAT', patterns: [/^(what'?s? up|how'?s? it going|how are you doing|are you (real|human|a robot|ai))[.!?]*$/i, /^(lol|haha|ok+|okay+|sure|yep|yeah|nah)[.!?]*$/i] },
 
-const INTENT_PATTERNS = [
-  // Follow-ups (checked first — they're short phrases)
-  { intent:'FOLLOWUP_MORE',    patterns: [/^(tell me more|more|continue|go on|elaborate|expand|keep going)[\s.!?]*$/i, /^more (about|on|please)[\s.!?]*$/i] },
-  { intent:'FOLLOWUP_SIMPLER', patterns: [/^(simpler|easier|i (still )?don'?t get it)[\s.!?]*$/i, /explain (it )?differently|in simple(r)? terms/i, /simpler (please|explanation)/i, /can you (explain|say) (it|that) (differently|simpler|again)/i, /too (hard|difficult|complex)/i] },
-  { intent:'FOLLOWUP_EXAMPLE', patterns: [/^give me (an?|another) example[\s.!?]*$/i, /^(example please|another example|show me (an? )?example)[\s.!?]*$/i, /^(real[ -]life|practical) example/i] },
-  { intent:'FOLLOWUP_WHY',     patterns: [/^(why\??|but why\??|why is (that|this|it)\??)[\s.!?]*$/i, /^why does (that|this|it) (happen|work)/i, /what'?s? the reason/i] },
-  { intent:'FOLLOWUP_NEXT_QUIZ', patterns: [/^(next( question)?|another( question)?|again|one more|next one|continue quiz)[\s.!?]*$/i, /^ask me (another|again)[\s.!?]*$/i] },
-  { intent:'FOLLOWUP_NEXT_TOPIC', patterns: [/^(next topic|what'?s? next|continue|move on|next lesson)[\s.!?]*$/i, /^(next chapter|next unit)[\s.!?]*$/i] },
-  { intent:'FOLLOWUP_SUMMARY', patterns: [/^(what have we (covered|done|learned)|summaris|summary|recap)[\s.!?]*/i, /what did (we|i) (just|cover|learn)/i] },
-
-  // Emotional / conversational states — checked before academic intents
-  { intent:'STRUGGLING',  patterns: [/i('?m| am) (struggling|failing|lost|hopeless|bad at|terrible at|no good at)/i, /i (can'?t|cannot|don'?t) (understand|get|do|pass)/i, /this is (too hard|impossible|difficult)/i, /i give up/i, /i'?m? (scared|nervous|worried|anxious) (about|of) (the exam|uneb|results)/i] },
-  { intent:'BORED',       patterns: [/^(this is boring|i'?m? bored|not interested|don'?t (want to|feel like) (study|learn))[.!?]*$/i, /studying is (boring|hard|pointless)/i] },
-  { intent:'TIRED',       patterns: [/^(i'?m? tired|i'?m? exhausted|need a break|so tired|i'?m? sleepy)[.!?]*$/i] },
-  { intent:'ENCOURAGE',   patterns: [/^(motivate me|encourage me|i need motivation|cheer me up|i feel like giving up)[.!?]*$/i, /will i pass/i, /am i going to (pass|fail|make it)/i] },
-  { intent:'CASUAL_CHAT', patterns: [/^(what'?s? up|how'?s? it going|how are you doing|are you (real|human|a robot|ai))[.!?]*$/i, /do you (like|enjoy|have)/i, /^(lol|haha|😂|😅|ok+|okay+|sure|yep|nope|yeah|nah)[.!?!]*$/i] },
-
-  // Core intents
-  { intent:'EXPLAIN',   patterns: [/what is (.+)/i, /what are (.+)/i, /define (.+)/i, /explain (.+)/i, /tell me about (.+)/i, /describe (.+)/i, /how does (.+) work/i, /teach me (.+)/i, /what do you know about (.+)/i, /introduce (.+)/i] },
-  { intent:'CALCULATE', patterns: [/calculate (.+)/i, /solve (.+)/i, /how do (i|you|we) (calculate|solve|find|work out) (.+)/i, /formula for (.+)/i, /find (.+) (if|when|given) (.+)/i, /what is (.+) if (.+)/i, /work out (.+)/i] },
-  { intent:'QUIZ',      patterns: [/quiz me (on )?(.+)/i, /test me (on )?(.+)/i, /ask me .*(about|on) (.+)/i, /practice (.+)/i, /revise (.+)/i, /drill me on (.+)/i, /question on (.+)/i] },
-  { intent:'HINT',      patterns: [/i('?m| am) stuck/i, /give me a hint/i, /i don'?t (understand|get)/i, /help me (with|understand)/i, /i need help/i, /i'?m? confused/i, /hint/i, /struggling with/i, /not sure (about|how)/i] },
-  { intent:'EXAM_TIP',  patterns: [/exam tip/i, /how (do i|should i|to) (pass|study for|prepare for)/i, /uneb (tip|advice)/i, /common (mistake|error)s?/i, /how to revise/i, /revision tip/i] },
-  { intent:'COMPARE',   patterns: [/difference between (.+) and (.+)/i, /compare (.+) (and|with|to) (.+)/i, /(.+) vs\.? (.+)/i, /distinguish between (.+) and (.+)/i, /similarities.*differences/i] },
   { intent:'GREET',     patterns: [/^(hi|hello|hey|good morning|good evening|good afternoon|helo|hi there|howdy)[\s!.]*$/i, /^(how are you|what can you do|who are you)[\s?]*$/i, /^(start|begin)[\s!.]*$/i] },
   { intent:'THANKS',    patterns: [/^(thanks?|thank you|ok thanks?|great|awesome|cool|perfect|got it|i see|understood)[\s!.]*$/i, /^(nice|brilliant|excellent|wonderful|fantastic|that helps?)[\s!.]*$/i] },
   { intent:'IMPROVE',   patterns: [/how (do i|can i|to) improve/i, /how (do i|can i) (get|score) better/i, /tips to improve/i, /improve my (score|marks|grade)/i, /how to (pass|get better|do better)/i, /i (keep|keep on) failing/i, /i scored (low|badly|poorly)/i] },
@@ -1885,39 +1858,52 @@ export function classifyIntent(input) {
   return { intent: 'EXPLAIN', raw: input }
 }
 
+
+
+
 // ===================================================================
-// CONVERSATIONAL INTENT HANDLERS  — emotional + casual responses
+// RESPONSE GENERATORS  v5
+// ===================================================================
+
+function pick(arr) { return arr[Math.floor(Math.random() * arr.length)] }
+
+// ===================================================================
+// CONVERSATIONAL INTENT HANDLERS
 // ===================================================================
 
 function handleStrugglingIntent(input, mem) {
-  const topic = mem.lastTopic?.replace(/_/g,' ')
-  const responses = [
-    `Hey, that feeling is completely normal — even the best students hit walls. 💪\n\nThe fact that you're here means you're already doing something about it. Let's figure out what's tripping you up. ${topic ? `Is it **${topic}** specifically, or something else?` : 'Which topic is giving you trouble?'}`,
-    `Honestly? Most students feel this way at some point before UNEB. It doesn't mean you can't do it.\n\nLet's take it one step at a time. ${topic ? `We can go back over **${topic}** more slowly, or switch to something you feel more confident with.` : 'Tell me which topic feels hardest and we'll start there.'}`,
-    `I hear you. 😔 But struggling now is actually better than not knowing until the exam — at least we can fix it.\n\n${topic ? `Let's try **${topic}** from a different angle. Sometimes just seeing it explained differently makes everything click.` : 'Which part is confusing you? Give me a topic and we\'ll break it down properly.'}`,
+  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
+  var followUp = topic ? ('Is it **' + topic + '** specifically, or something else?') : "Which topic is giving you trouble?"
+  var slowDown = topic ? ('We can go back over **' + topic + '** more slowly, or switch to something you feel more confident with.') : "Tell me which topic feels hardest and we'll start there."
+  var newAngle = topic ? ("Let's try **" + topic + "** from a different angle. Sometimes seeing it explained differently makes everything click.") : "Which part is confusing you? Give me a topic and we'll break it down properly."
+  var responses = [
+    "Hey, that feeling is completely normal — even the best students hit walls.\n\nThe fact that you're here means you're already doing something about it. Let's figure out what's tripping you up. " + followUp,
+    "Honestly? Most students feel this way at some point before UNEB. It doesn't mean you can't do it.\n\nLet's take it one step at a time. " + slowDown,
+    "I hear you. But struggling now is actually better than not knowing until the exam — at least we can fix it.\n\n" + newAngle,
   ]
-  const parts = [
+  var parts = [
     { type:'text', text: pick(responses) },
     { type:'suggestions', items: topic
-      ? [`Explain ${topic} more simply`, `Quiz me slowly on ${topic}`, `Give me a hint on ${topic}`, 'Start a different topic']
+      ? ['Explain ' + topic + ' more simply', 'Quiz me slowly on ' + topic, 'Give me a hint on ' + topic, 'Start a different topic']
       : ['Explain photosynthesis simply','Quiz me on algebra','What should I study today?','Make me a study plan']
     }
   ]
-  return { parts }
+  return { parts: parts }
 }
 
 function handleBoredIntent(mem) {
-  const topic = mem.lastTopic?.replace(/_/g,' ')
-  const texts = [
-    `Ha — fair enough. Let's make it more interesting. 😄\n\nHow about we skip the explanations for now and I just throw questions at you? Sometimes competing against yourself is more fun than reading notes. ${topic ? `Want a rapid-fire quiz on **${topic}**?` : 'Pick a topic and let\'s see how many you can get right.'}`,
-    `Studying can feel like that sometimes! Let's switch things up — have you tried the games section? It covers real curriculum content but feels a lot less like studying. Or I can just quiz you — short, fast questions.`,
-    `Understood. 😄 Tell you what — give me 5 minutes and 3 quick questions. If you get them right, you're done with this topic. Deal?`,
+  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
+  var quizLine = topic ? ('Want a rapid-fire quiz on **' + topic + '**?') : "Pick a topic and let's see how many you can get right."
+  var texts = [
+    "Ha — fair enough. Let's make it more interesting.\n\nHow about we skip the explanations and I just throw questions at you? Sometimes competing against yourself is more fun than reading notes. " + quizLine,
+    "Studying can feel like that sometimes! Let's switch things up — have you tried the games section? It covers real curriculum content but feels less like studying. Or I can just quiz you — short, fast questions.",
+    "Understood. Tell you what — give me 5 minutes and 3 quick questions. If you get them right, you're done with this topic. Deal?",
   ]
   return {
     parts: [
       { type:'text', text: pick(texts) },
       { type:'suggestions', items: topic
-        ? [`Quick quiz on ${topic}`, 'Show me the games', 'Try a different topic', 'What should I study today?']
+        ? ['Quick quiz on ' + topic, 'Show me the games', 'Try a different topic', 'What should I study today?']
         : ['Quick quiz on forces', 'Show me the games', 'Quiz me on algebra', 'What should I study today?']
       }
     ]
@@ -1925,35 +1911,39 @@ function handleBoredIntent(mem) {
 }
 
 function handleTiredIntent() {
-  const texts = [
-    `You've been working hard — a proper break is part of studying well, not cheating. 😌\n\nWhen you're back, just pick up where you left off. Even 20 minutes of focused study is better than two hours half-asleep.`,
-    `Totally get it. 😴 Rest is actually important for memory — your brain processes what you studied while you sleep.\n\nSet a 20-minute timer, rest, then come back. I'll be here.`,
-    `Take the break — seriously! Studying when you're exhausted doesn't stick anyway.\n\nWhen you're back, let's do something low-effort like flashcards or quick quiz questions to ease back in.`,
+  var texts = [
+    "You've been working hard — a proper break is part of studying well, not cheating.\n\nWhen you're back, just pick up where you left off. Even 20 minutes of focused study is better than two hours half-asleep.",
+    "Totally get it. Rest is actually important for memory — your brain processes what you studied while you sleep.\n\nSet a 20-minute timer, rest, then come back. I'll be here.",
+    "Take the break — seriously! Studying when you're exhausted doesn't stick anyway.\n\nWhen you're back, let's do something low-effort like quick quiz questions to ease back in.",
   ]
   return {
     parts: [
       { type:'text', text: pick(texts) },
-      { type:'suggestions', items:['I\'m back — let\'s continue','Quick easy quiz to ease back in','What should I study today?','Make me a study plan'] }
+      { type:'suggestions', items:["I'm back — let's continue",'Quick easy quiz to ease back in','What should I study today?','Make me a study plan'] }
     ]
   }
 }
 
 function handleEncourageIntent(profile, mem) {
-  const topic = mem.lastTopic?.replace(/_/g,' ')
-  const stats = profile?.summary
-  let text = ''
+  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
+  var stats = profile ? profile.summary : null
+  var text = ''
   if (stats && stats.totalCompleted > 0) {
-    const avg = stats.globalAvg
-    const done = stats.totalCompleted
-    text = `Look at what you've already done — **${done} lessons completed** and an average of **${avg}%**. That's real progress, not nothing.\n\nPeople who keep showing up, even when it's hard, are the ones who pass. You're already doing that. 💪\n\n${avg >= 60 ? `You're scoring above 60% — that means you're on track. Keep going.` : `Your scores will improve as you practice more. The brain literally gets better at this stuff the more you do it.`}`
+    var avg = stats.globalAvg
+    var done = stats.totalCompleted
+    var trackMsg = avg >= 60
+      ? "You're scoring above 60% — that means you're on track. Keep going."
+      : "Your scores will improve as you practice more. The brain literally gets better at this stuff the more you do it."
+    text = "Look at what you've already done — **" + done + " lessons completed** and an average of **" + avg + "%**. That's real progress.\n\nPeople who keep showing up, even when it's hard, are the ones who pass. You're already doing that.\n\n" + trackMsg
   } else {
-    text = `You can do this — I genuinely mean that. 🌟\n\nEvery student who prepared seriously gave themselves a real chance. The fact that you're studying now, not the night before, is already half the battle.\n\nLet's take it one topic at a time. ${topic ? `Start with **${topic}** — just one lesson, one quiz.` : 'Pick one topic and do one lesson today. That\'s all.'}`
+    var topicLine = topic ? ('Start with **' + topic + '** — just one lesson, one quiz.') : "Pick one topic and do one lesson today. That's all."
+    text = "You can do this — I genuinely mean that.\n\nEvery student who prepared seriously gave themselves a real chance. The fact that you're studying now, not the night before, is already half the battle.\n\nLet's take it one topic at a time. " + topicLine
   }
   return {
     parts: [
-      { type:'text', text },
+      { type:'text', text: text },
       { type:'suggestions', items: topic
-        ? [`Continue with ${topic}`, 'What should I study today?', 'Show my progress', 'Make me a study plan']
+        ? ['Continue with ' + topic, 'What should I study today?', 'Show my progress', 'Make me a study plan']
         : ['What should I study today?', 'Show my progress', 'Make me a study plan', 'Quiz me on forces']
       }
     ]
@@ -1961,119 +1951,70 @@ function handleEncourageIntent(profile, mem) {
 }
 
 function handleCasualChatIntent(input) {
-  const t = input.toLowerCase()
-  let text = ''
+  var t = input.toLowerCase()
+  var text = ''
   if (/are you (real|human|a robot|ai)/i.test(t)) {
-    text = `I'm an AI — no hiding that! 😄 But I know the S1–S6 curriculum inside out and I'm pretty good at explaining things. What do you want to work on?`
-  } else if (/how are you|how'?s? it going/i.test(t)) {
-    text = `Doing great — ready to help! 😊 More importantly, how are *you* doing? Lots on your plate with studying?`
-  } else if (/what'?s? up/i.test(t)) {
-    text = `Not much — just here waiting for your next question! 😄 What are we working on?`
+    text = "I'm an AI — no hiding that! But I know the S1-S6 curriculum inside out and I'm pretty good at explaining things. What do you want to work on?"
+  } else if (/how are you|how.s it going/i.test(t)) {
+    text = "Doing great — ready to help! More importantly, how are *you* doing? Lots on your plate with studying?"
+  } else if (/what.s up/i.test(t)) {
+    text = "Not much — just here waiting for your next question! What are we working on?"
   } else if (/do you (like|enjoy)/i.test(t)) {
-    text = `Ha! I don't really *like* things — but if I did, I think I'd enjoy a good maths problem. 😄 Anything I can help you with today?`
-  } else if (/^(lol|haha|😂|😅)/i.test(t)) {
-    text = `😄 Glad that landed well! Now — back to business. What are we studying?`
+    text = "Ha! I don't really *like* things — but if I did, I think I'd enjoy a good maths problem. Anything I can help you with today?"
+  } else if (/^(lol|haha)/i.test(t)) {
+    text = "Glad that landed well! Now — back to business. What are we studying?"
   } else {
-    text = `Ha! I'm mostly here for the studying side of things, but I appreciate the chat. 😊 What can I help you with?`
+    text = "Ha! I'm mostly here for the studying side of things, but I appreciate the chat. What can I help you with?"
   }
   return {
-    parts: [{ type:'text', text }],
+    parts: [{ type:'text', text: text }],
     suggestions: ['Explain photosynthesis','Quiz me on forces','What should I study today?','Make me a study plan']
   }
 }
 
-
-
-
-
+// ===================================================================
+// CONVERSATIONAL INTENT HANDLERS
+// ===================================================================
 
 // --- Smart fallback — pure offline ---
 function smartFallback(query) {
   const closest = findClosestTopic(query)
   const parts = []
-  const mem = conversationMemory
-
   if (closest) {
     const name = closest.title || closest.file.replace(/_/g,' ')
-    // Conversational, not a stiff heading
-    const openers = [
-      `Hmm, I'm not sure exactly what you mean by _"${query}"_ — are you thinking about **${name}**?`,
-      `I don't have _"${query}"_ specifically, but it sounds like you might mean **${name}** — is that right?`,
-      `That's a bit outside what I know directly. The closest I have is **${name}** — want me to cover that?`,
-    ]
-    parts.push({ type:'text', text: pick(openers) })
-    parts.push({ type:'suggestions', items:[`Yes, explain ${name}`, `Quiz me on ${name}`, `Exam tips for ${name}`, 'Actually, I meant something else'] })
+    parts.push({ type:'heading', text:'🤔 Did you mean...' })
+    parts.push({ type:'text', text:`I couldn't find _"${query}"_ exactly — did you mean **${name}**?` })
+    parts.push({ type:'suggestions', items:[`Explain ${name}`, `Quiz me on ${name}`, `How do I calculate ${name}?`, 'Show all topics'] })
   } else {
-    // Still warm and inviting, not a dead end
-    const lines = mem.lastTopic
-      ? `I'm not sure I understood that one — was it related to **${mem.lastTopic.replace(/_/g,' ')}**, or something different? Just rephrase it and I'll do my best.`
-      : `I didn't quite catch that — could you rephrase? I cover Maths, Physics, Biology and Chemistry for S1–S6. Try something like _"explain osmosis"_ or _"quiz me on forces"_.`
-    parts.push({ type:'text', text: lines })
-    parts.push({ type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','How do I calculate moles?','What should I study today?'] })
+    parts.push({ type:'heading', text:"🤔 I'm not sure about that" })
+    parts.push({ type:'text', text:`I specialise in the S1–S6 UNEB curriculum. Try asking about a specific topic:` })
+    parts.push({ type:'list', items:['"What is photosynthesis?"','"Explain quadratic equations"','"Quiz me on forces"','"How do I calculate moles?"','"Exam tips for genetics"'] })
+    parts.push({ type:'suggestions', items:['Explain photosynthesis','Quiz me on algebra','Explain electricity','How do I calculate force?'] })
   }
   return { parts }
 }
 
 // --- EXPLAIN ---
-// Conversational openers so the bot doesn't always sound the same
-const EXPLAIN_OPENERS = [
-  t => `Alright, let's talk about **${t}**.`,
-  t => `Good topic! Here's what you need to know about **${t}**:`,
-  t => `Sure — **${t}** is one of those topics that comes up a lot in UNEB, so it's worth knowing well.`,
-  t => `Let's break down **${t}** — I'll keep it clear and simple.`,
-  t => `**${t}** — great one to know. Here's the key idea:`,
-]
-const EXPLAIN_CLOSERS = [
-  t => `Does that make sense so far? You can ask me to go deeper on any part, or I can quiz you on **${t}** to see how well it's sticking.`,
-  t => `Want me to show you a worked example, or would you rather test yourself with a question on **${t}**?`,
-  t => `That's the core of it. If anything's unclear, just say _"simpler please"_ and I'll rephrase. Or try _"quiz me"_ when you feel ready.`,
-  t => `Any questions on this? I can give you more examples, go deeper, or just quiz you whenever you're ready.`,
-]
-
 export function generateExplainResponse(knowledge, query, simpler=false) {
-  if (!knowledge) return smartFallback(query)
+  if (!knowledge) return smartFallback(query, [])
   const parts = []
   const t = knowledge.title
-
-  // Personal note if the student has history with this topic
+  parts.push({ type:'heading', text:`📖 ${t}` })
   if (knowledge._personalNote)
     parts.push({ type:'text', text: knowledge._personalNote })
-
-  // Conversational opener — not a stiff heading every time
-  const opener = simpler
-    ? `Let me try that a different way. **${t}** in simple terms:`
-    : pick(EXPLAIN_OPENERS)(t)
-  parts.push({ type:'text', text: opener })
-
-  // Core definition or first key fact
   if (simpler && knowledge.simplerExplanation)
     parts.push({ type:'text', text: knowledge.simplerExplanation })
   else if (knowledge.definitions.length > 0)
     parts.push({ type:'text', text:`**${knowledge.definitions[0].term}**: ${knowledge.definitions[0].definition}` })
   else if (knowledge.keyFacts.length > 0)
     parts.push({ type:'text', text: knowledge.keyFacts[0] })
-
-  // Key points — but only if there's something useful to add
   if (knowledge.keyFacts.length > 1)
-    parts.push({ type:'list', title:'🔑 Key things to know:', items: knowledge.keyFacts.slice(1, simpler ? 3 : 4) })
-
-  // Formulas if relevant
+    parts.push({ type:'list', title:'🔑 Key Points', items: knowledge.keyFacts.slice(1, simpler?3:4) })
   if (knowledge.formulas.length > 0)
-    parts.push({ type:'formula', title:'📐 Formula', items: knowledge.formulas.slice(0, simpler ? 1 : 2).map(f=>`${f.label}: ${f.content}`) })
-
-  // One good example
+    parts.push({ type:'formula', title:'📐 Formula(s)', items: knowledge.formulas.slice(0,simpler?1:3).map(f=>`${f.label}: ${f.content}`) })
   if (knowledge.examples.length > 0)
-    parts.push({ type:'example', title:`💡 ${knowledge.examples[0].title}`, text: knowledge.examples[0].body })
-
-  // Conversational closer instead of a stiff suggestions block
-  parts.push({ type:'text', text: pick(EXPLAIN_CLOSERS)(t) })
-
-  parts.push({ type:'suggestions', items:[
-    `Quiz me on ${t}`,
-    `Give me another example of ${t}`,
-    `Why does ${t} matter?`,
-    `Exam tips for ${t}`,
-  ]})
+    parts.push({ type:'example', title:`💡 Example: ${knowledge.examples[0].title}`, text: knowledge.examples[0].body })
+  parts.push({ type:'suggestions', items:[`Quiz me on ${t}`, `Why is ${t} important?`, `Give me a real-life example of ${t}`, `Exam tips for ${t}`] })
   return { parts, topic: knowledge.topic, subject: knowledge.subject }
 }
 
@@ -2378,54 +2319,48 @@ function generateVoiceResponse() {
 
 // --- Greetings & small talk ---
 const GREETINGS = [
-  n=>`Hey${n?' '+n:''}! 👋 Good to have you here. What are we working on today — a topic you want explained, some practice questions, or something you're stuck on?`,
-  n=>`Hi${n?' '+n:''}! Ready when you are. 📚 Are you revising something specific, or do you want me to check your weak areas and suggest where to start?`,
-  n=>`Hello${n?' '+n:''}! 😊 Just say the word — what topic are we hitting today?`,
-  n=>`Welcome back${n?', '+n:''}! 🌟 Pick up where you left off, or start something new — what'll it be?`,
+  function(n){ return "Hey" + (n ? " " + n : "") + "! Ready when you are. What are we working on today?"; },
+  function(n){ return "Hi" + (n ? " " + n : "") + "! Just say the word — what topic are we hitting today?"; },
+  function(n){ return "Hello" + (n ? " " + n : "") + "! Are you revising something specific, or want me to suggest where to start?"; },
+  function(n){ return "Welcome back" + (n ? ", " + n : "") + "! Pick up where you left off, or start something new."; },
 ]
-
 const THANKS_MSGS = [
-  ()=>{
-    const mem = conversationMemory
-    const topic = mem.lastTopic?.replace(/_/g,' ')
-    return topic ? `Glad that made sense! 😊 Want to test yourself on **${topic}** while it's fresh?` : `Happy to help! 😊 Anything else you want to go through?`
+  function(){
+    var mem = conversationMemory;
+    var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null;
+    return topic ? "Glad that made sense! Want to test yourself on **" + topic + "** while it's fresh?" : "Happy to help! Anything else you want to go through?";
   },
-  ()=>`You're welcome! Now's a good time to try a quick question on this — want me to quiz you? 🎯`,
-  ()=>`Of course! 💪 Is there a part of it you'd like me to dig into more, or are we good to move on?`,
-  ()=>`Glad it clicked! 😄 The best way to lock it in is to do a few practice questions — shall I throw one at you?`,
-  ()=>`Any time! 🙌 What else is on your mind?`,
+  function(){ return "You're welcome! Now's a good time to try a quick question — want me to quiz you?"; },
+  function(){ return "Of course! Is there a part of it you'd like me to dig into more, or are we good to move on?"; },
+  function(){ return "Glad it clicked! The best way to lock it in is to do a few practice questions — shall I throw one at you?"; },
+  function(){ return "Any time! What else is on your mind?"; },
 ]
-
 const CORRECT_RESP = [
-  n=>`Yes${n?', '+n:''}! That's exactly right. 🎉 You're getting this — want another one?`,
-  ()=>`Correct! ✅ Good work. Keep that up in the exam and you'll be fine. Next question?`,
-  ()=>`That's it! ⭐ Nice — you clearly understand this. One more?`,
-  ()=>`Spot on! 💪 Not everyone gets that one. Ready for the next?`,
-  n=>`Right${n?', '+n:''}! 🔥 You're on a good run — shall we keep going?`,
+  function(n){ return "Yes" + (n ? ", " + n : "") + "! That's exactly right. You're getting this — want another one?"; },
+  function(){ return "Correct! Good work. Keep that up in the exam and you'll be fine. Next question?"; },
+  function(){ return "That's it! Nice — you clearly understand this. One more?"; },
+  function(){ return "Spot on! Not everyone gets that one. Ready for the next?"; },
+  function(n){ return "Right" + (n ? ", " + n : "") + "! You're on a good run — shall we keep going?"; },
 ]
-
 const WRONG_RESP = [
-  ()=>`Not quite this time — but that's fine, that's what practice is for. Here's where it went wrong:`,
-  ()=>`Close, but not exactly. Let me break down where the difference is:`,
-  ()=>`Hmm, not this one — don't worry though. Here's what the correct answer should look like:`,
-  ()=>`That one caught you out! It happens. Here's the reasoning:`,
+  function(){ return "Not quite this time — but that's fine, that's what practice is for. Here's where it went wrong:"; },
+  function(){ return "Close, but not exactly. Let me break down where the difference is:"; },
+  function(){ return "That one caught you out! It happens. Here's the correct answer:"; },
 ]
 
 export function generateGreetResponse(studentName) {
   const n = studentName || conversationMemory.studentName
   const mem = conversationMemory
-  // If they've been chatting a while, vary the greeting
   const text = mem.messageCount > 2
-    ? `Still here! 😄 What do you need — explain something, practice questions, or something you're stuck on?`
+    ? "Still here! What do you need — explain something, practice questions, or something you're stuck on?"
     : pick(GREETINGS)(n)
   return { parts:[{ type:'text', text }], suggestions:['Explain photosynthesis','Quiz me on forces','How do I calculate moles?','What should I study today?'] }
 }
-
 export function generateThanksResponse() {
   const mem = conversationMemory
   const text = pick(THANKS_MSGS)()
   const suggestions = mem.lastTopic
-    ? [`Quiz me on ${mem.lastTopic.replace(/_/g,' ')}`, `Tell me more about ${mem.lastTopic.replace(/_/g,' ')}`, 'Explain something else', 'What should I study next?']
+    ? ['Quiz me on ' + mem.lastTopic.replace(/_/g,' '), 'Tell me more about ' + mem.lastTopic.replace(/_/g,' '), 'Explain something else', 'What should I study next?']
     : ['Explain photosynthesis','Quiz me on algebra','How do I find force?','What should I study today?']
   return { parts:[{ type:'text', text }], suggestions }
 }
@@ -2773,6 +2708,12 @@ export async function processMessage(input, context={}) {
     return r
   }
   if (intent==='THANKS') { const r = generateThanksResponse(); addToHistory('assistant','Thanks acknowledged'); return r }
+  // --- Conversational / emotional intents ---
+  if (intent==='STRUGGLING') { const r = handleStrugglingIntent(input, mem); addToHistory('assistant','Offered help'); return r }
+  if (intent==='BORED') { const r = handleBoredIntent(mem); addToHistory('assistant','Re-engaged'); return r }
+  if (intent==='TIRED') { const r = handleTiredIntent(); addToHistory('assistant','Acknowledged tiredness'); return r }
+  if (intent==='ENCOURAGE') { const r = handleEncourageIntent(context.studentProfile || getCachedProfile(), mem); addToHistory('assistant','Motivated'); return r }
+  if (intent==='CASUAL_CHAT') { const r = handleCasualChatIntent(input); addToHistory('assistant','Casual chat'); return r }
   if (intent==='RECOMMEND') {
     const r = generateSmartRecommendation(context.studentProfile || getCachedProfile())
     addToHistory('assistant','Study recommendation given')
@@ -2783,34 +2724,6 @@ export async function processMessage(input, context={}) {
     return generateStudyPlan(profile, input)
   }
   if (intent==='VOICE') return generateVoiceResponse()
-
-  // --- Conversational / emotional intents ---
-  if (intent==='STRUGGLING') {
-    const r = handleStrugglingIntent(input, mem)
-    addToHistory('assistant', 'Offered encouragement and help')
-    return r
-  }
-  if (intent==='BORED') {
-    const r = handleBoredIntent(mem)
-    addToHistory('assistant', 'Responded to boredom with engagement')
-    return r
-  }
-  if (intent==='TIRED') {
-    const r = handleTiredIntent()
-    addToHistory('assistant', 'Acknowledged tiredness')
-    return r
-  }
-  if (intent==='ENCOURAGE') {
-    const profile = context.studentProfile || getCachedProfile()
-    const r = handleEncourageIntent(profile, mem)
-    addToHistory('assistant', 'Provided motivation')
-    return r
-  }
-  if (intent==='CASUAL_CHAT') {
-    const r = handleCasualChatIntent(input)
-    addToHistory('assistant', 'Casual conversation')
-    return r
-  }
 
   // --- IMPROVE ---
   if (intent==='IMPROVE') {
