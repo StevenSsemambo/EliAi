@@ -95,6 +95,73 @@ const PUZZLE_BANK = [
       'Vic is not Junior.',
     ],
   },
+
+  // Puzzle 6 – 4 people, 3 attributes (medium)
+  {
+    title: 'The Sports Team',
+    categories: ['Player', 'Sport', 'Rank', 'Country'],
+    items: [
+      ['Amos', 'Beatrice', 'Charles', 'Diana'],
+      ['Football', 'Swimming', 'Athletics', 'Tennis'],
+      ['1st', '2nd', '3rd', '4th'],
+      ['Uganda', 'Kenya', 'Tanzania', 'Rwanda'],
+    ],
+    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3] },
+    clues: [
+      'Amos does not play Tennis.',
+      'The Football player ranked 1st.',
+      'Beatrice is from Kenya.',
+      'The swimmer ranked 2nd.',
+      'Charles is not from Uganda.',
+      'Diana plays Tennis.',
+      'The Athletics player ranked 3rd.',
+    ],
+  },
+  // Puzzle 7 – 4 people, harder
+  {
+    title: 'The Science Lab',
+    categories: ['Scientist', 'Element', 'Discovery Year', 'Award'],
+    items: [
+      ['Prof. Ali', 'Dr. Bak', 'Ms. Cee', 'Mr. Dex'],
+      ['Carbon', 'Gold', 'Iron', 'Oxygen'],
+      ['2001', '2005', '2009', '2013'],
+      ['Medal', 'Trophy', 'Prize', 'Certificate'],
+    ],
+    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3] },
+    clues: [
+      'Prof. Ali discovered his element in 2001.',
+      'The Gold discoverer won a Trophy.',
+      'Dr. Bak won a Medal.',
+      'The Iron discoverer worked in 2009.',
+      'Ms. Cee won the Prize.',
+      'Mr. Dex discovered his element in 2013.',
+      'The Carbon discoverer won a Certificate.',
+    ],
+  },
+  // Puzzle 8 – 5 people (hard)
+  {
+    title: 'The School Prefects',
+    categories: ['Prefect', 'Subject', 'Class', 'House'],
+    items: [
+      ['Emma', 'Felix', 'Grace', 'Henry', 'Irene'],
+      ['Maths', 'English', 'Biology', 'Physics', 'Chemistry'],
+      ['S4A', 'S4B', 'S5A', 'S5B', 'S6A'],
+      ['Red', 'Blue', 'Green', 'Yellow', 'White'],
+    ],
+    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3], 4:[4,4,4,4] },
+    clues: [
+      'Emma is in S4A.',
+      'The Maths prefect is in Blue house.',
+      'Felix studies English.',
+      'The S5A student is in Green house.',
+      'Grace is not in Red or Yellow house.',
+      'Henry is in S6A.',
+      'The Chemistry prefect is in White house.',
+      'Irene is in Yellow house.',
+      'The Biology prefect is in S5B.',
+    ],
+  },
+
 ]
 
 // Simple 3×3 deduction grid (who→attribute mapping)
