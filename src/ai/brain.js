@@ -26,15 +26,20 @@ const UNEB_WEIGHTS = {
     geometry: 0.80, trigonometry: 0.78, statistics: 0.75, statistics_intro: 0.65,
     mensuration: 0.72, number_theory: 0.68, numbers: 0.60, ratio_indices: 0.65,
     sets: 0.70,
+    // New S1
+    commercial_arithmetic: 0.85, bearings_scale_drawing: 0.78,
     // S2-S3
     simultaneous: 0.82, logarithms: 0.80, coordinate_geometry: 0.75,
     vectors_intro: 0.68, vectors_2d: 0.65,
+    matrices_intro: 0.72,
     // S3
     matrices_probability: 0.80, differentiation: 0.85, integration: 0.83,
     functions: 0.72, coordinate_sequences: 0.70,
+    earth_geometry: 0.75, linear_programming: 0.80,
     // S4
     calculus: 0.88, vectors: 0.76, trigonometry_advanced: 0.80,
     permcomb: 0.75, financial_maths: 0.65, loci_construction: 0.60,
+    transformation_geometry: 0.82, inequalities: 0.80,
     // S5-S6
     probability_advanced: 0.78, further_calculus: 0.82, mechanics: 0.76,
     complex_numbers: 0.72, differential_equations: 0.70, numerical_methods: 0.65,
@@ -45,17 +50,19 @@ const UNEB_WEIGHTS = {
     // S1
     forces: 0.90, energy: 0.85, light: 0.80, measurement: 0.75,
     properties_matter: 0.72, density_flotation: 0.78,
+    simple_machines: 0.82,
     // S2
     waves_electricity: 0.88, current_electricity: 0.92, magnetism_heat: 0.82,
-    sound: 0.70, electronics: 0.72,
+    sound: 0.70, electronics: 0.72, heat_transfer: 0.80,
     // S3
     motion_kinematics: 0.90, kinematics: 0.88, radioactivity: 0.80,
     electromagnetic: 0.82, pressure_fluids: 0.75,
     // S4
     electricity_detail: 0.88, optics_full: 0.80, circular_gravitation: 0.76,
+    ac_circuits: 0.82,
     // S5
     thermal_physics: 0.82, waves_optics: 0.80, mechanics_advanced: 0.78,
-    nuclear_physics: 0.75,
+    nuclear_physics: 0.75, semiconductor_physics: 0.80,
     // S6
     modern_physics: 0.72, relativity: 0.65, astrophysics: 0.60,
     particle_physics: 0.65, quantum_mechanics: 0.68,
@@ -64,31 +71,36 @@ const UNEB_WEIGHTS = {
     // S1
     cells: 0.92, photosynthesis_respiration: 0.88, diffusion_osmosis: 0.85,
     classification: 0.72,
+    movement_in_plants: 0.78, nutrition_plants_animals: 0.80,
     // S2
     digestion_ecology: 0.80, nutrition: 0.78, transport: 0.82,
-    reproduction: 0.78, nervous_system: 0.76,
+    reproduction: 0.78, nervous_system: 0.76, gaseous_exchange: 0.85,
     // S3
     genetics: 0.90, ecology: 0.82, excretion: 0.75,
-    hormones_homeostasis: 0.78,
+    hormones_homeostasis: 0.78, support_and_movement: 0.78,
     // S4
     cell_division: 0.82, evolution_immunity: 0.80, disease_health: 0.78,
-    coordination: 0.72,
+    coordination: 0.72, biotechnology: 0.82,
     // S5
     biochemistry: 0.80, genetics_advanced: 0.85, cell_biology_advanced: 0.75,
-    microbiology: 0.70, ecology_advanced: 0.72,
+    microbiology: 0.70, ecology_advanced: 0.72, bioenergetics: 0.82,
     // S6
     molecular_biology: 0.82, immunology: 0.78, developmental_biology: 0.68,
+    bioethics: 0.70,
   },
   chemistry: {
     // S1
     atoms: 0.90, bonding: 0.88, matter: 0.80, water: 0.72,
+    separation_techniques: 0.82,
     // S2
     mole_calculations: 0.92, reactions_metals: 0.85, acids_periodic: 0.88,
-    gases_solutions: 0.78, energy_changes: 0.80,
+    gases_solutions: 0.78, energy_changes: 0.80, extraction_of_metals: 0.82,
     // S3
     stoichiometry: 0.88, organic_rates: 0.82, electrochemistry: 0.80, gases: 0.72,
+    nitrogen_compounds: 0.82,
     // S4
     organic_chemistry: 0.88, thermochemistry: 0.78, chemical_analysis: 0.75,
+    fuels_combustion: 0.78, halogens: 0.82,
     // S5
     equilibria: 0.82, advanced_organic: 0.80, transition_metals: 0.72,
     spectroscopy: 0.68, equilibrium: 0.80,
