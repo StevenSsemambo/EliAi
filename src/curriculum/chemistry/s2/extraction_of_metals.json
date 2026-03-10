@@ -1,0 +1,46 @@
+{
+  "topic_id": "extraction_of_metals",
+  "topic_title": "Extraction of Metals",
+  "subject": "chemistry",
+  "class_level": "s2",
+  "lessons": [
+    {
+      "id": "extraction_l1",
+      "title": "Reactivity Series and Metal Extraction",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"Metals are extracted from their ores using different methods depending on their position in the reactivity series."},
+        {"type":"text","body":"REACTIVITY SERIES (high→low): K, Na, Ca, Mg, Al, Zn, Fe, Pb, Cu, Ag, Au\nMnemonic: 'King Solomon Can Make A Zip Fastener, Like Copper Silver And Gold'"},
+        {"type":"text","body":"EXTRACTION METHODS:\n• Very reactive metals (K, Na, Ca, Mg, Al): Electrolysis\n• Moderately reactive (Zn, Fe, Pb): Reduction with carbon/coke\n• Unreactive metals (Cu, Ag, Au): Found native or simple heating"},
+        {"type":"formula","body":"Reduction with carbon: Metal oxide + Carbon → Metal + CO₂\nExample: ZnO + C → Zn + CO (at high temperature)"},
+        {"type":"example","title":"Iron from Blast Furnace","body":"Raw materials: iron ore (haematite Fe₂O₃), coke (C), limestone (CaCO₃), hot air\nKey reactions:\n1. C + O₂ → CO₂ (coke burns)\n2. CO₂ + C → 2CO (carbon monoxide formed)\n3. Fe₂O₃ + 3CO → 2Fe + 3CO₂ (iron reduced)\n4. CaCO₃ → CaO + CO₂ (limestone decomposes)\n5. CaO + SiO₂ → CaSiO₃ (slag removes impurities)"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Aluminium is extracted by electrolysis rather than carbon reduction because:","options":["Aluminium is cheap","Aluminium is more reactive than carbon","Carbon is too expensive","Aluminium is a gas"],"answer":"Aluminium is more reactive than carbon","explanation":"Carbon can only reduce metal oxides of metals LESS reactive than carbon. Al is more reactive than C."},
+          {"id":"q2","type":"multiple_choice","question":"Iron is extracted from its ore in a:","options":["Electrolysis cell","Blast furnace","Simple crucible","Test tube"],"answer":"Blast furnace","explanation":"The blast furnace uses coke (carbon) to reduce iron oxide (Fe₂O₃) to iron at very high temperatures."},
+          {"id":"q3","type":"multiple_choice","question":"The reducing agent in the blast furnace is:","options":["Limestone","Hot air","Carbon monoxide (CO)","Water"],"answer":"Carbon monoxide (CO)","explanation":"CO is the main reducing agent: Fe₂O₃ + 3CO → 2Fe + 3CO₂"},
+          {"id":"q4","type":"multiple_choice","question":"The purpose of limestone in the blast furnace is:","options":["To provide carbon","To remove acidic silica impurities as slag","To provide oxygen","To cool the furnace"],"answer":"To remove acidic silica impurities as slag","explanation":"CaCO₃ → CaO which reacts with SiO₂ → CaSiO₃ (slag). Slag floats on iron and is removed."},
+          {"id":"q5","type":"multiple_choice","question":"Which metal can be found in pure (native) form in the Earth's crust?","options":["Iron","Aluminium","Gold","Sodium"],"answer":"Gold","explanation":"Gold is unreactive — it doesn't combine with other elements, so it exists as pure gold in nature."},
+          {"id":"q6","type":"multiple_choice","question":"Electrolysis is used to extract:","options":["Iron and zinc","Copper and silver","Aluminium and sodium","All metals"],"answer":"Aluminium and sodium","explanation":"Very reactive metals (above carbon in reactivity series) require electrolysis: Na, K, Ca, Mg, Al."},
+          {"id":"q7","type":"multiple_choice","question":"In the reactivity series, which metal is MOST reactive?","options":["Iron","Copper","Gold","Potassium"],"answer":"Potassium","explanation":"Potassium (K) is at the top of the reactivity series — most reactive common metal."},
+          {"id":"q8","type":"multiple_choice","question":"Haematite is an ore of:","options":["Aluminium","Copper","Iron","Zinc"],"answer":"Iron","explanation":"Haematite = Fe₂O₃ (iron(III) oxide) — the main ore used in iron extraction."},
+          {"id":"q9","type":"multiple_choice","question":"Reduction of metal oxides with carbon works when:","options":["Metal is more reactive than carbon","Metal is less reactive than carbon","Metal is dissolved in acid","Temperature is below 100°C"],"answer":"Metal is less reactive than carbon","explanation":"Carbon reduces metals below it in reactivity. Carbon cannot reduce oxides of K, Na, Ca, Mg, Al."},
+          {"id":"q10","type":"multiple_choice","question":"The ore of aluminium is:","options":["Haematite","Bauxite","Malachite","Galena"],"answer":"Bauxite","explanation":"Bauxite (Al₂O₃·2H₂O) is the main ore from which aluminium is extracted by electrolysis."},
+          {"id":"q11","type":"multiple_choice","question":"Slag formed in blast furnace is:","options":["Pure iron","Calcium silicate (CaSiO₃)","Carbon dioxide","Limestone"],"answer":"Calcium silicate (CaSiO₃)","explanation":"CaO + SiO₂ → CaSiO₃ (slag). Slag is less dense than iron, floats on top, and is tapped off separately."},
+          {"id":"q12","type":"multiple_choice","question":"Which is NOT a raw material for the blast furnace?","options":["Iron ore (haematite)","Coke","Limestone","Sodium chloride"],"answer":"Sodium chloride","explanation":"The three raw materials are iron ore, coke (carbon), and limestone. NaCl has no role."},
+          {"id":"q13","type":"multiple_choice","question":"Iron produced from a blast furnace is called pig iron. It contains:","options":["Pure iron only","Iron with ~4% carbon impurity","Iron with no carbon","Iron with 50% carbon"],"answer":"Iron with ~4% carbon impurity","explanation":"Blast furnace iron (pig iron/cast iron) is hard but brittle, containing about 4% carbon."},
+          {"id":"q14","type":"multiple_choice","question":"To make steel from pig iron, you:","options":["Add more carbon","Remove most of the carbon","Add limestone","Cool rapidly"],"answer":"Remove most of the carbon","explanation":"Steel has 0.1–1.5% carbon. Excess carbon is removed by blowing oxygen through molten pig iron."},
+          {"id":"q15","type":"multiple_choice","question":"Malachite (Cu₂(OH)₂CO₃) is an ore of:","options":["Iron","Zinc","Copper","Lead"],"answer":"Copper","explanation":"Malachite is a green copper-containing mineral — an ore of copper."},
+          {"id":"q16","type":"multiple_choice","question":"During electrolysis of aluminium oxide (Al₂O₃), aluminium forms at the:","options":["Anode","Cathode","Both electrodes","In solution"],"answer":"Cathode","explanation":"Al³⁺ ions are attracted to cathode (negative electrode) and are reduced: Al³⁺ + 3e⁻ → Al"},
+          {"id":"q17","type":"multiple_choice","question":"Which gas is produced at the anode during electrolysis of Al₂O₃?","options":["Hydrogen","Nitrogen","Oxygen","Chlorine"],"answer":"Oxygen","explanation":"O²⁻ ions are oxidised at anode: 2O²⁻ → O₂ + 4e⁻"},
+          {"id":"q18","type":"multiple_choice","question":"Zinc oxide + carbon → zinc + carbon dioxide. This is:","options":["An oxidation reaction","A reduction reaction","An electrolysis","A neutralisation"],"answer":"A reduction reaction","explanation":"ZnO is reduced (loses O) by carbon. This is a redox reaction where carbon is the reducing agent."},
+          {"id":"q19","type":"multiple_choice","question":"Why is iron more commonly used than aluminium despite aluminium being stronger?","options":["Aluminium is heavier","Iron is cheaper to extract (blast furnace vs electrolysis)","Iron is more reactive","Aluminium rusts faster"],"answer":"Iron is cheaper to extract (blast furnace vs electrolysis)","explanation":"Electrolysis (for Al) uses huge amounts of electricity, making aluminium more expensive to produce than iron."},
+          {"id":"q20","type":"multiple_choice","question":"The reactivity series helps predict:","options":["The colour of metals","Which metals can be extracted by carbon and which need electrolysis","The melting points of metals","The density of metals"],"answer":"Which metals can be extracted by carbon and which need electrolysis","explanation":"Position in reactivity series directly determines the extraction method required."}
+        ]
+      }
+    }
+  ]
+}
