@@ -256,7 +256,7 @@ export default function ElimuChatbot() {
             // LLM path — simple greeting, LLM handles personalisation
             addBot(null, {
               parts: [{ type:'text',
-                text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — powered by an on-device AI model.\n\nI can explain any topic, solve equations step by step, quiz you and remember our whole conversation.\n\nWhat would you like to learn?`,
+                text:`Hello ${student?.name || 'there'}! 👋 I am **EqLa AI** — powered by an on-device AI model.\n\nI can explain any topic, solve equations step by step, quiz you and remember our whole conversation.\n\nWhat would you like to learn?`,
               }, { type:'suggestions', items:['What is osmosis?','Quiz me on forces','Solve 3x + 6 = 15','What should I study today?'] }],
             })
           } else if (profile && profile.summary.totalCompleted > 0) {
@@ -279,13 +279,13 @@ export default function ElimuChatbot() {
         }).catch(() => {
           // Fallback if DB fails
           addBot(null, {
-            parts: [{ type:'text', text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI**. Ask me anything about your S1–S6 curriculum!` },
+            parts: [{ type:'text', text:`Hello ${student?.name || 'there'}! 👋 I am **EqLa AI**. Ask me anything about your S1–S6 curriculum!` },
               { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 3x = 12','Explain probability'] }],
           })
         })
       } else {
         addBot(null, {
-          parts: [{ type:'text', text:`Hello! 👋 I am **Elimu AI** — your study assistant for S1–S6.\n\nAsk me to explain a topic, quiz you, solve a calculation, or give exam tips!` },
+          parts: [{ type:'text', text:`Hello! 👋 I am **EqLa AI** — your study assistant for S1–S6.\n\nAsk me to explain a topic, quiz you, solve a calculation, or give exam tips!` },
             { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 2x + 4 = 10','What should I study?'] }],
         })
       }
@@ -447,7 +447,7 @@ export default function ElimuChatbot() {
               {llmStatus === 'ready' ? '🤖' : '🧑‍🏫'}
             </div>
             <div className="flex-1">
-              <p className="font-black text-sm text-white">Elimu AI</p>
+              <p className="font-black text-sm text-white">EqLa AI</p>
               <p className="text-xs text-white/70">
                 {llmStatus === 'ready' ? '🟢 On-device LLM active' : '🔵 Rule-based mode'}
               </p>
