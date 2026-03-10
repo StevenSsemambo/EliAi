@@ -1,64 +1,88 @@
 {
   "subject": "chemistry",
   "icon": "\ud83e\uddea",
-  "color": "violet",
+  "total_lessons": 157,
+  "total_questions": 3140,
   "topics": {
     "s1": [
       {
         "id": "atoms",
-        "title": "Atomic Structure",
+        "title": "Atoms and the Periodic Table",
         "lessons": 6,
-        "file": "atoms"
+        "questions": 120,
+        "file": "atoms.json"
       },
       {
         "id": "bonding",
         "title": "Chemical Bonding",
         "lessons": 6,
-        "file": "bonding"
+        "questions": 120,
+        "file": "bonding.json"
       },
       {
         "id": "matter",
         "title": "States of Matter",
         "lessons": 6,
-        "file": "matter"
+        "questions": 120,
+        "file": "matter.json"
+      },
+      {
+        "id": "separation_techniques",
+        "title": "Separation Techniques",
+        "lessons": 2,
+        "questions": 40,
+        "file": "separation_techniques.json"
       },
       {
         "id": "water",
-        "title": "Water Chemistry",
+        "title": "Water",
         "lessons": 6,
-        "file": "water"
+        "questions": 120,
+        "file": "water.json"
       }
     ],
     "s2": [
       {
         "id": "acids_periodic",
-        "title": "Acids & the Periodic Table",
+        "title": "Acids, Bases & Salts",
         "lessons": 6,
-        "file": "acids_periodic"
+        "questions": 120,
+        "file": "acids_periodic.json"
       },
       {
         "id": "energy_changes",
         "title": "Energy Changes",
         "lessons": 6,
-        "file": "energy_changes"
+        "questions": 120,
+        "file": "energy_changes.json"
+      },
+      {
+        "id": "extraction_of_metals",
+        "title": "Extraction of Metals",
+        "lessons": 1,
+        "questions": 20,
+        "file": "extraction_of_metals.json"
       },
       {
         "id": "gases_solutions",
-        "title": "Gases & Solutions",
+        "title": "Gases Solutions",
         "lessons": 6,
-        "file": "gases_solutions"
+        "questions": 120,
+        "file": "gases_solutions.json"
       },
       {
         "id": "mole_calculations",
         "title": "Mole Calculations",
         "lessons": 6,
-        "file": "mole_calculations"
+        "questions": 120,
+        "file": "mole_calculations.json"
       },
       {
         "id": "reactions_metals",
-        "title": "Reactions of Metals",
+        "title": "Chemical Reactions & Metals",
         "lessons": 6,
-        "file": "reactions_metals"
+        "questions": 120,
+        "file": "reactions_metals.json"
       }
     ],
     "s3": [
@@ -66,25 +90,36 @@
         "id": "electrochemistry",
         "title": "Electrochemistry",
         "lessons": 6,
-        "file": "electrochemistry"
+        "questions": 120,
+        "file": "electrochemistry.json"
       },
       {
         "id": "gases",
-        "title": "Gas Laws",
+        "title": "Gases",
         "lessons": 6,
-        "file": "gases"
+        "questions": 120,
+        "file": "gases.json"
+      },
+      {
+        "id": "nitrogen_compounds",
+        "title": "Nitrogen and Its Compounds",
+        "lessons": 1,
+        "questions": 20,
+        "file": "nitrogen_compounds.json"
       },
       {
         "id": "organic_rates",
-        "title": "Organic Chemistry & Rates",
+        "title": "Organic Chemistry",
         "lessons": 6,
-        "file": "organic_rates"
+        "questions": 120,
+        "file": "organic_rates.json"
       },
       {
         "id": "stoichiometry",
         "title": "Stoichiometry",
         "lessons": 6,
-        "file": "stoichiometry"
+        "questions": 120,
+        "file": "stoichiometry.json"
       }
     ],
     "s4": [
@@ -92,19 +127,36 @@
         "id": "chemical_analysis",
         "title": "Chemical Analysis",
         "lessons": 6,
-        "file": "chemical_analysis"
+        "questions": 120,
+        "file": "chemical_analysis.json"
+      },
+      {
+        "id": "fuels_combustion",
+        "title": "Fuels and Combustion",
+        "lessons": 1,
+        "questions": 20,
+        "file": "fuels_combustion.json"
+      },
+      {
+        "id": "halogens",
+        "title": "Halogens \u2014 Group VII",
+        "lessons": 1,
+        "questions": 20,
+        "file": "halogens.json"
       },
       {
         "id": "organic_chemistry",
         "title": "Organic Chemistry",
         "lessons": 6,
-        "file": "organic_chemistry"
+        "questions": 120,
+        "file": "organic_chemistry.json"
       },
       {
         "id": "thermochemistry",
-        "title": "Thermochemistry",
+        "title": "Thermochemistry & Equilibrium",
         "lessons": 6,
-        "file": "thermochemistry"
+        "questions": 120,
+        "file": "thermochemistry.json"
       }
     ],
     "s5": [
@@ -112,57 +164,73 @@
         "id": "advanced_organic",
         "title": "Advanced Organic Chemistry",
         "lessons": 6,
-        "file": "advanced_organic"
+        "questions": 120,
+        "file": "advanced_organic.json"
       },
       {
         "id": "equilibria",
-        "title": "Chemical Equilibria",
+        "title": "Equilibria",
         "lessons": 6,
-        "file": "equilibria"
+        "questions": 120,
+        "file": "equilibria.json"
       },
       {
         "id": "equilibrium",
-        "title": "Equilibrium Basics",
+        "title": "Equilibrium",
         "lessons": 6,
-        "file": "equilibrium"
+        "questions": 120,
+        "file": "equilibrium.json"
       },
       {
         "id": "spectroscopy",
         "title": "Spectroscopy",
         "lessons": 6,
-        "file": "spectroscopy"
+        "questions": 120,
+        "file": "spectroscopy.json"
       },
       {
         "id": "transition_metals",
         "title": "Transition Metals",
         "lessons": 6,
-        "file": "transition_metals"
+        "questions": 120,
+        "file": "transition_metals.json"
       }
     ],
     "s6": [
       {
+        "id": "biochemistry",
+        "title": "Biochemistry \u2014 Carbohydrates, Proteins and Lipids",
+        "lessons": 1,
+        "questions": 20,
+        "file": "biochemistry.json"
+      },
+      {
         "id": "green_chemistry",
         "title": "Green Chemistry",
         "lessons": 6,
-        "file": "green_chemistry"
+        "questions": 120,
+        "file": "green_chemistry.json"
       },
       {
         "id": "industrial_chemistry",
         "title": "Industrial Chemistry",
         "lessons": 6,
-        "file": "industrial_chemistry"
+        "questions": 120,
+        "file": "industrial_chemistry.json"
       },
       {
         "id": "pharmaceuticals",
         "title": "Pharmaceuticals",
         "lessons": 6,
-        "file": "pharmaceuticals"
+        "questions": 120,
+        "file": "pharmaceuticals.json"
       },
       {
         "id": "polymers",
         "title": "Polymers",
         "lessons": 6,
-        "file": "polymers"
+        "questions": 120,
+        "file": "polymers.json"
       }
     ]
   }
