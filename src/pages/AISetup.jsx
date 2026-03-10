@@ -91,7 +91,7 @@ export default function AISetup() {
               <div className="text-4xl mb-3">📱</div>
               <p className="font-black text-base" style={{ color: '#06B6D4' }}>Rule-Based AI Active</p>
               <p className="text-sm mt-2" style={{ color: theme.muted }}>
-                Your device uses our fast built-in AI. It knows all 116 curriculum topics, can quiz you, explain concepts, and give hints — all offline.
+                Your device uses our fast built-in AI. It knows all 139 curriculum topics, can quiz you, explain concepts, and give hints — all offline.
               </p>
             </div>
             <div className="rounded-2xl p-4" style={{ background: theme.card, border: `1px solid ${theme.border}` }}>
