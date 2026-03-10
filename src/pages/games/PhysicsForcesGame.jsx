@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { SoundEngine } from '../../utils/soundEngine.js'
 
 const ALL_QUESTIONS = [
   { q:'A 10 kg box is pushed with 50 N. What is its acceleration?', answer:'5 m/s²', options:['5 m/s²','50 m/s²','0.5 m/s²','500 m/s²'], hint:'F = ma, so a = F/m = 50/10' },
@@ -41,6 +42,7 @@ export default function PhysicsForcesGame({ levelData, onFinish }) {
     if (phase !== 'question') return
     const t = setInterval(() => setTimeLeft(n => {
       if (n <= 1) { clearInterval(t); pick(null); return 0 }
+      if (n <= 8) SoundEngine.timerTick(n <= 3 ? 3 : 2)
       return n - 1
     }), 1000)
     return () => clearInterval(t)
@@ -53,10 +55,16 @@ export default function PhysicsForcesGame({ levelData, onFinish }) {
     const ok = ans === q.answer
     const newStreak = ok ? streak + 1 : 0
     setStreak(newStreak)
-    if (ok) setScore(s => s + Math.max(10, timeLeft * 3 + streak * 5))
+    if (ok) {
+      setScore(s => s + Math.max(10, timeLeft * 3 + streak * 5))
+      SoundEngine.gameCorrect()
+      if (newStreak >= 2) SoundEngine.combo(newStreak)
+    } else {
+      SoundEngine.gameWrong()
+    }
     setTimeout(() => {
       const next = idx + 1
-      if (next >= questions.length) { onFinish?.() }
+      if (next >= questions.length) { SoundEngine.levelComplete(); onFinish?.() }
       else { setIdx(next); setSelected(null); setPhase('question') }
     }, 1600)
   }
