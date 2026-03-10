@@ -72,6 +72,10 @@ const CURRICULUM_INDEX = [
     keys:['set','union','intersection','complement','subset','universal set','venn diagram','element','empty set'] },
   { file:'statistics_intro',    subject:'mathematics', level:'s1', title:'Statistics',
     keys:['statistics','mean','median','mode','average','range','frequency','histogram','bar chart','pie chart','data','tally'] },
+  { file:'commercial_arithmetic', subject:'mathematics', level:'s1', title:'Commercial Arithmetic',
+    keys:['profit','loss','discount','vat','tax','simple interest','compound interest','percentage profit','buying price','selling price','hire purchase','commission'] },
+  { file:'bearings_scale_drawing', subject:'mathematics', level:'s1', title:'Bearings and Scale Drawing',
+    keys:['bearing','compass','north','south','east','west','three figure bearing','scale drawing','scale','map','distance','direction'] },
 
   { file:'quadratic',           subject:'mathematics', level:'s2', title:'Quadratic Equations',
     keys:['quadratic','quadratic equation','x squared','parabola','factorisation','completing the square','discriminant','quadratic formula'] },
@@ -87,6 +91,8 @@ const CURRICULUM_INDEX = [
     keys:['chance','likelihood','event','outcome','sample space','tree diagram','equally likely','basic probability'] },
   { file:'vectors_intro',       subject:'mathematics', level:'s2', title:'Vectors',
     keys:['vector','scalar','magnitude','direction','resultant','position vector','column vector'] },
+  { file:'matrices_intro',      subject:'mathematics', level:'s2', title:'Introduction to Matrices',
+    keys:['matrix','matrices','order','rows','columns','matrix addition','matrix subtraction','scalar multiplication','square matrix','zero matrix','transpose'] },
 
   { file:'coordinate_sequences', subject:'mathematics', level:'s3', title:'Sequences & Series',
     keys:['sequence','series','arithmetic progression','geometric progression','ap','gp','nth term','common difference','common ratio'] },
@@ -98,6 +104,10 @@ const CURRICULUM_INDEX = [
     keys:['function','domain','range','inverse function','composite function','graph','f(x)','mapping','transformation'] },
   { file:'matrices_probability', subject:'mathematics', level:'s3', title:'Matrices',
     keys:['matrix','matrices','determinant','inverse matrix','2×2','2x2','identity matrix','transformation matrix','matrix multiplication'] },
+  { file:'earth_geometry',      subject:'mathematics', level:'s3', title:'Earth Geometry',
+    keys:['latitude','longitude','great circle','small circle','arc length','nautical mile','earth','meridian','equator','angular distance'] },
+  { file:'linear_programming',  subject:'mathematics', level:'s3', title:'Linear Programming',
+    keys:['linear programming','inequalities','feasible region','objective function','corner point','optimal solution','graph inequalities','shading','constraints'] },
 
   { file:'vectors',             subject:'mathematics', level:'s4', title:'Vectors',
     keys:['3d vector','dot product','cross product','three dimensional','unit vector','vector equation'] },
@@ -111,6 +121,10 @@ const CURRICULUM_INDEX = [
     keys:['simple interest','compound interest','profit','loss','tax','depreciation','currency','hire purchase','financial'] },
   { file:'loci_construction',   subject:'mathematics', level:'s4', title:'Loci & Construction',
     keys:['locus','loci','construction','compass','bearing','scale drawing','region','bisector','perpendicular bisector'] },
+  { file:'transformation_geometry', subject:'mathematics', level:'s4', title:'Transformation Geometry',
+    keys:['transformation','reflection','rotation','translation','enlargement','centre of rotation','line of symmetry','scale factor','image','object','congruent','similar'] },
+  { file:'inequalities',        subject:'mathematics', level:'s4', title:'Inequalities and Regions',
+    keys:['inequality','inequalities','region','shading','number line','solve inequality','quadratic inequality','linear inequality','graph region','satisfies'] },
 
   { file:'probability_advanced', subject:'mathematics', level:'s5', title:'Probability',
     keys:['probability','probability tree','probability problem','probability question','probability help','binomial distribution','probability distribution','normal distribution','poisson','expected value','random variable','hypothesis test','statistical test'] },
@@ -147,6 +161,8 @@ const CURRICULUM_INDEX = [
     keys:['elasticity','hooke','spring constant','elastic limit','deformation','solid','liquid','gas','state','change of state'] },
   { file:'density_flotation',   subject:'physics', level:'s1', title:'Density & Flotation',
     keys:['density','archimedes','upthrust','flotation','buoyancy','relative density','float','sink','fluid'] },
+  { file:'simple_machines',     subject:'physics', level:'s1', title:'Simple Machines',
+    keys:['machine','lever','pulley','inclined plane','wedge','screw','wheel','mechanical advantage','velocity ratio','efficiency','load','effort','fulcrum'] },
 
   { file:'waves_electricity',   subject:'physics', level:'s2', title:'Waves & Sound',
     keys:['wave','frequency','amplitude','wavelength','transverse','longitudinal','period','wavefront','sound','echo','resonance','doppler'] },
@@ -158,6 +174,8 @@ const CURRICULUM_INDEX = [
     keys:['sound wave','pitch','loudness','frequency of sound','ultrasound','noise','vibration','medium'] },
   { file:'electronics',         subject:'physics', level:'s2', title:'Electronics',
     keys:['diode','transistor','logic gate','semiconductor','rectification','and gate','or gate','not gate','digital'] },
+  { file:'heat_transfer',       subject:'physics', level:'s2', title:'Heat Transfer',
+    keys:['heat transfer','conduction','convection','radiation','thermal','insulation','conductor','insulator','vacuum flask','greenhouse effect','land breeze','sea breeze'] },
 
   { file:'motion_kinematics',   subject:'physics', level:'s3', title:'Motion & Kinematics',
     keys:['motion','velocity','acceleration','speed','distance','displacement','kinematics','uniform','retardation','deceleration','equations of motion','suvat','v=u+at','newton law'] },
@@ -176,9 +194,13 @@ const CURRICULUM_INDEX = [
     keys:['lens formula','mirror formula','magnification','optical instrument','microscope','telescope','eye defect','short sight','long sight'] },
   { file:'circular_gravitation', subject:'physics', level:'s4', title:'Circular Motion & Gravitation',
     keys:['circular motion','centripetal','centrifugal','universal gravitation','orbital','satellite','gravitational field'] },
+  { file:'ac_circuits',         subject:'physics', level:'s4', title:'AC Circuits & Transformers',
+    keys:['alternating current','ac','dc','transformer','primary coil','secondary coil','step up','step down','frequency','rms','peak voltage','rectifier','power transmission'] },
 
   { file:'thermal_physics',     subject:'physics', level:'s5', title:'Thermal Physics',
     keys:['thermodynamics','specific heat capacity','latent heat','gas law','ideal gas','boyle','charles','absolute zero','kelvin','thermal expansion'] },
+  { file:'semiconductor_physics', subject:'physics', level:'s5', title:'Semiconductor Physics',
+    keys:['semiconductor','silicon','germanium','p-type','n-type','doping','p-n junction','diode','transistor','forward bias','reverse bias','led','solar cell','integrated circuit','npn','pnp'] },
   { file:'waves_optics',        subject:'physics', level:'s5', title:'Waves & Optics (Advanced)',
     keys:['interference','diffraction','polarization','young double slit','coherent','wave-particle duality','photoelectric effect'] },
   { file:'mechanics_advanced',  subject:'physics', level:'s5', title:'Advanced Mechanics',
@@ -206,6 +228,10 @@ const CURRICULUM_INDEX = [
     keys:['diffusion','osmosis','active transport','concentration gradient','semi-permeable','turgor','plasmolysis','turgid','flaccid'] },
   { file:'photosynthesis_respiration', subject:'biology', level:'s1', title:'Photosynthesis & Respiration',
     keys:['photosynthesis','respiration','glucose','oxygen','carbon dioxide','chlorophyll','atp','light reaction','dark reaction','aerobic','anaerobic'] },
+  { file:'movement_in_plants',  subject:'biology', level:'s1', title:'Movement in Plants — Tropisms',
+    keys:['tropism','phototropism','geotropism','gravitropism','thigmotropism','hydrotropism','auxin','iaa','plant movement','shoot bends','root growth','plant response','stimulus'] },
+  { file:'nutrition_plants_animals', subject:'biology', level:'s1', title:'Nutrition in Plants and Animals',
+    keys:['autotroph','heterotroph','balanced diet','carbohydrate','protein','vitamin','mineral','fat','fibre','malnutrition','kwashiorkor','marasmus','iodine test','biuret','food test','photosynthesis nutrition','chloroplast nutrition'] },
 
   { file:'digestion_ecology',   subject:'biology', level:'s2', title:'Digestion & Nutrition',
     keys:['digestion','stomach','enzyme','intestine','absorption','bile','amylase','pepsin','peristalsis','villi','duodenum','oesophagus'] },
@@ -217,6 +243,8 @@ const CURRICULUM_INDEX = [
     keys:['reproduction','sexual','asexual','fertilisation','pollination','germination','seed','ovum','sperm','menstrual cycle','pregnancy'] },
   { file:'nervous_system',      subject:'biology', level:'s2', title:'Nervous System',
     keys:['nervous system','neuron','nerve','synapse','reflex arc','brain','spinal cord','receptor','effector','stimulus','response'] },
+  { file:'gaseous_exchange',    subject:'biology', level:'s2', title:'Gaseous Exchange',
+    keys:['gaseous exchange','alveoli','lung','breathing','ventilation','trachea','bronchus','diaphragm','gas exchange fish','gills','stomata','leaf gas exchange','diffusion surface'] },
 
   { file:'genetics',            subject:'biology', level:'s3', title:'Genetics & Inheritance',
     keys:['genetics','gene','dna','chromosome','allele','dominant','recessive','inheritance','mendel','genotype','phenotype','mutation','monohybrid','dihybrid','punnett'] },
@@ -226,6 +254,8 @@ const CURRICULUM_INDEX = [
     keys:['excretion','kidney','nephron','urine','osmoregulation','filtration','reabsorption','liver','urea','dialysis'] },
   { file:'hormones_homeostasis', subject:'biology', level:'s3', title:'Homeostasis & Hormones',
     keys:['homeostasis','hormone','insulin','glucagon','diabetes','thermoregulation','negative feedback','endocrine','pituitary','adrenal'] },
+  { file:'support_and_movement', subject:'biology', level:'s3', title:'Support and Movement',
+    keys:['skeleton','bone','joint','cartilage','ligament','tendon','muscle','antagonistic','synovial joint','exoskeleton','endoskeleton','support','locomotion'] },
   { file:'reproduction',        subject:'biology', level:'s3', title:'Reproduction (Advanced)',
     keys:['mitosis','meiosis','cell cycle','chromosome number','diploid','haploid','gamete formation'] },
 
@@ -237,11 +267,15 @@ const CURRICULUM_INDEX = [
     keys:['evolution','natural selection','darwin','adaptation','variation','mutation','immunity','vaccine','antibody','antigen','immune system'] },
   { file:'disease_health',      subject:'biology', level:'s4', title:'Disease & Health',
     keys:['disease','pathogen','bacteria','virus','infection','transmission','prevention','malaria','hiv','tuberculosis','epidemic'] },
+  { file:'biotechnology',       subject:'biology', level:'s4', title:'Biotechnology',
+    keys:['biotechnology','fermentation','yeast','brewing','enzyme immobilisation','genetic engineering','gm crops','insulin production','monoclonal antibody','recombinant dna','cloning','pcr','bioreactor'] },
   { file:'coordination',        subject:'biology', level:'s4', title:'Coordination',
     keys:['coordination','plant hormone','auxin','tropism','geotropism','phototropism','eye','ear','sense organ'] },
 
   { file:'biochemistry',        subject:'biology', level:'s5', title:'Biochemistry',
     keys:['biochemistry','enzyme kinetics','km','vmax','inhibitor','biological molecule','atp synthesis','metabolic pathway','enzyme active site'] },
+  { file:'bioenergetics',       subject:'biology', level:'s5', title:'Bioenergetics',
+    keys:['atp','glycolysis','krebs cycle','electron transport chain','oxidative phosphorylation','aerobic respiration','nadh','fadh2','pyruvate','acetyl coa','mitochondria','chemiosmosis','substrate level phosphorylation'] },
   { file:'genetics_advanced',   subject:'biology', level:'s5', title:'Advanced Genetics',
     keys:['dna replication','gene expression','transcription','translation','mrna','trna','codon','genetic code','biotechnology','genetic engineering','pcr'] },
   { file:'cell_biology_advanced', subject:'biology', level:'s5', title:'Advanced Cell Biology',
@@ -257,6 +291,8 @@ const CURRICULUM_INDEX = [
     keys:['immunology','b cell','t cell','lymphocyte','antibody production','immune response','humoral','autoimmune','monoclonal antibody'] },
   { file:'developmental_biology', subject:'biology', level:'s6', title:'Developmental Biology',
     keys:['developmental','embryo','gastrulation','morphogen','stem cell differentiation','hox gene','organogenesis','cloning'] },
+  { file:'bioethics',           subject:'biology', level:'s6', title:'Bioethics in Biology',
+    keys:['bioethics','ethics','gm crops','cloning','stem cell','designer baby','animal testing','genetic screening','3rs','crispr ethics','reproductive cloning','therapeutic cloning','informed consent','bioprospecting'] },
 
   // -- CHEMISTRY ----------------------------------------------------
   { file:'atoms',               subject:'chemistry', level:'s1', title:'Atoms & Periodic Table',
@@ -267,6 +303,8 @@ const CURRICULUM_INDEX = [
     keys:['state of matter','solid','liquid','gas','change of state','melting','boiling','sublimation','condensation','evaporation','kinetic theory'] },
   { file:'water',               subject:'chemistry', level:'s1', title:'Water',
     keys:['water','hard water','soft water','purification','distillation','filtration','chlorination','electrolysis of water','properties of water'] },
+  { file:'separation_techniques', subject:'chemistry', level:'s1', title:'Separation Techniques',
+    keys:['separation','filtration','evaporation','crystallisation','distillation','chromatography','decanting','magnetic separation','paper chromatography','rf value','simple distillation','fractional distillation','separating funnel'] },
 
   { file:'mole_calculations',   subject:'chemistry', level:'s2', title:'Mole Calculations',
     keys:['mole','molar mass','avogadro','molar','relative molecular mass','empirical formula','molecular formula','stoichiometry','limiting reagent','percentage yield'] },
@@ -278,6 +316,8 @@ const CURRICULUM_INDEX = [
     keys:['gas law','solution','solute','solvent','solubility','concentration','dissolve','saturated','boyle','charles','ideal gas','preparation of gases'] },
   { file:'energy_changes',      subject:'chemistry', level:'s2', title:'Energy Changes',
     keys:['exothermic','endothermic','enthalpy','bond energy','activation energy','catalyst','energy profile','hess law','combustion','calorimetry'] },
+  { file:'extraction_of_metals', subject:'chemistry', level:'s2', title:'Extraction of Metals',
+    keys:['reactivity series','extraction','blast furnace','iron extraction','smelting','electrolysis extraction','aluminium extraction','copper extraction','ore','reduction with carbon','coke','limestone','slag'] },
 
   { file:'stoichiometry',       subject:'chemistry', level:'s3', title:'Stoichiometry',
     keys:['stoichiometry','mole ratio','titration','volumetric analysis','molarity','concentration calculation','balanced equation'] },
@@ -287,6 +327,8 @@ const CURRICULUM_INDEX = [
     keys:['electrolysis','electrolyte','electrode','anode','cathode','electroplating','faraday','discharge of ions','copper refining'] },
   { file:'gases',               subject:'chemistry', level:'s3', title:'Gases',
     keys:['preparation of gas','collection of gas','oxygen preparation','hydrogen preparation','carbon dioxide preparation','nitrogen','chlorine gas'] },
+  { file:'nitrogen_compounds',  subject:'chemistry', level:'s3', title:'Nitrogen and its Compounds',
+    keys:['nitrogen','ammonia','haber process','ostwald process','nitric acid','fertiliser','nitrogen cycle','ammonium salt','nitrate','urea','nitrogen fixation'] },
 
   { file:'organic_chemistry',   subject:'chemistry', level:'s4', title:'Organic Chemistry',
     keys:['organic chemistry','homologous series','functional group','polymer','nylon','polyethylene','alkene reaction','markovnikov','cracking','petrochemical'] },
@@ -294,6 +336,10 @@ const CURRICULUM_INDEX = [
     keys:['thermochemistry','le chatelier','equilibrium constant','kc','kp','gibbs','entropy','spontaneous reaction','endothermic equilibrium'] },
   { file:'chemical_analysis',   subject:'chemistry', level:'s4', title:'Chemical Analysis',
     keys:['qualitative analysis','flame test','ion test','precipitation','identify ion','chemical test','spectroscopy basic','titration calculation'] },
+  { file:'fuels_combustion',    subject:'chemistry', level:'s4', title:'Fuels and Combustion',
+    keys:['combustion','complete combustion','incomplete combustion','fuel','fossil fuel','coal','petroleum','natural gas','carbon monoxide','soot','global warming','greenhouse gas','acid rain','fractional distillation of oil'] },
+  { file:'halogens',            subject:'chemistry', level:'s4', title:'Halogens — Group VII',
+    keys:['halogen','group 7','group vii','fluorine','chlorine','bromine','iodine','displacement reaction halogens','halide test','silver nitrate','bleaching','reactivity of halogens','trend','diatomic'] },
 
   { file:'equilibria',          subject:'chemistry', level:'s5', title:'Chemical Equilibria',
     keys:['equilibrium','le chatelier principle','acid-base equilibria','buffer solution','ksp','solubility product','ph calculation'] },
