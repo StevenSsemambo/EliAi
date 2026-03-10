@@ -388,6 +388,7 @@ function ExamResults({ results, test, onClose }) {
 // ── Main ExamCenter Page ─────────────────────────────────────────
 export default function ExamCenter() {
   const { student } = useUser()
+  const navigate = useNavigate()
   const [activeExam, setActiveExam] = useState(null)
   const [showTimetable, setShowTimetable] = useState(null)
   const [tab, setTab] = useState('mock') // mock | timetable | history
@@ -417,6 +418,7 @@ export default function ExamCenter() {
     <div className="min-h-screen pb-20" style={{background:'#0C0F1A'}}>
       {/* Header */}
       <div className="px-4 pt-8 pb-4">
+        <button onClick={() => navigate(-1)} className="text-slate-400 text-sm mb-4 block">← Back</button>
         <div className="flex items-center gap-3 mb-1">
           <span className="text-3xl">🎓</span>
           <h1 className="text-2xl font-black text-white">Exam Centre</h1>
