@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { SoundEngine } from '../../utils/soundEngine.js'
 
 const ALL_QUESTIONS = [
   { q:'Which organelle controls all cell activities?', answer:'Nucleus', options:['Nucleus','Ribosome','Vacuole','Mitochondria'], hint:'Contains DNA — the instruction manual of the cell', cat:'Cell Biology' },
@@ -47,6 +48,7 @@ export default function BiologyCellGame({ levelData, onFinish }) {
     if (phase !== 'question') return
     const t = setInterval(() => setTimeLeft(n => {
       if (n <= 1) { clearInterval(t); pick(null); return 0 }
+      if (n <= 8) SoundEngine.timerTick(n <= 3 ? 3 : 2)
       return n - 1
     }), 1000)
     return () => clearInterval(t)
@@ -59,10 +61,16 @@ export default function BiologyCellGame({ levelData, onFinish }) {
     const ok = ans === q.answer
     const newStreak = ok ? streak + 1 : 0
     setStreak(newStreak)
-    if (ok) setScore(s => s + Math.max(10, timeLeft * 3 + streak * 5))
+    if (ok) {
+      setScore(s => s + Math.max(10, timeLeft * 3 + streak * 5))
+      SoundEngine.gameCorrect()
+      if (newStreak >= 2) SoundEngine.combo(newStreak)
+    } else {
+      SoundEngine.gameWrong()
+    }
     setTimeout(() => {
       const next = idx + 1
-      if (next >= questions.length) { onFinish?.() }
+      if (next >= questions.length) { SoundEngine.levelComplete(); onFinish?.() }
       else { setIdx(next); setSelected(null); setPhase('question') }
     }, 1600)
   }
