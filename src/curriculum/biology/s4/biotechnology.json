@@ -1,0 +1,45 @@
+{
+  "topic_id": "biotechnology",
+  "topic_title": "Biotechnology",
+  "subject": "biology",
+  "class_level": "s4",
+  "lessons": [
+    {
+      "id": "biotech_l1",
+      "title": "Fermentation, Enzymes and Genetic Engineering",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Biotechnology is the use of living organisms or biological processes to develop products and processes for human benefit."},
+        {"type":"text","body":"FERMENTATION: Anaerobic breakdown of organic substances by microorganisms.\nYeast + glucose → ethanol + CO₂ (making bread, beer, wine)\nBacteria → lactic acid (making yoghurt, cheese)\nEquation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂"},
+        {"type":"text","body":"INDUSTRIAL ENZYMES: Extracted from microorganisms for industry.\n• Amylase — breaks starch to sugar (baking, brewing)\n• Protease — breaks proteins (washing powder, cheese)\n• Lipase — breaks fats (detergents)\n• Pectinase — clarifies fruit juices\n• Lactase — makes lactose-free milk"},
+        {"type":"text","body":"GENETIC ENGINEERING: Cutting and inserting specific genes into organisms.\nExample: Human insulin gene inserted into E. coli bacteria → bacteria produce human insulin for diabetics.\nGM crops: pest-resistant, drought-tolerant, higher yield crops (e.g. Bt maize)."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Fermentation by yeast produces:","options":["CO₂ only","Ethanol and CO₂","Glucose and O₂","Lactic acid only"],"answer":"Ethanol and CO₂","explanation":"Yeast: glucose → ethanol + CO₂ (anaerobic respiration/fermentation). Used in bread making (CO₂) and alcohol production."},
+          {"id":"q2","type":"multiple_choice","question":"Yoghurt is made by bacterial fermentation of milk. The product is:","options":["Ethanol","Citric acid","Lactic acid","Carbon dioxide"],"answer":"Lactic acid","explanation":"Lactobacillus bacteria ferment lactose in milk → lactic acid, which curdles and preserves milk as yoghurt."},
+          {"id":"q3","type":"multiple_choice","question":"Human insulin for diabetics is now produced using:","options":["Pigs only","Horses","Genetically engineered bacteria","Chemical synthesis only"],"answer":"Genetically engineered bacteria","explanation":"Human insulin gene inserted into E. coli → bacteria produce human insulin in large quantities for diabetes treatment."},
+          {"id":"q4","type":"multiple_choice","question":"Amylase enzyme breaks down:","options":["Proteins","Fats","Starch","DNA"],"answer":"Starch","explanation":"Amylase catalyses hydrolysis of starch to maltose/glucose. Used in baking, brewing, and food processing."},
+          {"id":"q5","type":"multiple_choice","question":"An advantage of using enzymes in biological washing powders is:","options":["Work at high temperature","Work at lower temperatures, saving energy","Only remove colours","Replace all washing chemicals"],"answer":"Work at lower temperatures, saving energy","explanation":"Enzymes (proteases, lipases) in washing powder remove protein/fat stains at low temperatures, saving energy."},
+          {"id":"q6","type":"multiple_choice","question":"What is a transgenic organism?","options":["An organism from two countries","An organism with a gene from another species","An organism without DNA","An extinct organism"],"answer":"An organism with a gene from another species","explanation":"Transgenic = trans (across) + gene. An organism that has had foreign DNA/genes inserted into its genome."},
+          {"id":"q7","type":"multiple_choice","question":"Penicillin antibiotic is produced by:","options":["Yeast","A mould (Penicillium fungus)","Bacteria","Plants"],"answer":"A mould (Penicillium fungus)","explanation":"Alexander Fleming discovered penicillin produced by Penicillium mould. Industrial production uses fermentation."},
+          {"id":"q8","type":"multiple_choice","question":"Cloning produces organisms that are:","options":["Genetically different from parent","Genetically identical to parent","Sexually reproduced","Always larger than parent"],"answer":"Genetically identical to parent","explanation":"Clones are genetically identical copies — produced asexually with no genetic variation."},
+          {"id":"q9","type":"multiple_choice","question":"Fermentation must be anaerobic (no oxygen) for yeast to produce:","options":["More CO₂","Ethanol","Glucose","Water only"],"answer":"Ethanol","explanation":"In the presence of O₂, yeast uses aerobic respiration → CO₂ + H₂O (no ethanol). No O₂ → ethanol is produced."},
+          {"id":"q10","type":"multiple_choice","question":"Lactase enzyme is used to produce:","options":["Cheese","Lactose-free milk","Yoghurt","Butter"],"answer":"Lactose-free milk","explanation":"Lactase breaks lactose (milk sugar) into glucose and galactose — makes milk digestible for lactose-intolerant people."},
+          {"id":"q11","type":"multiple_choice","question":"A concern about GM crops is:","options":["They grow too slowly","Possible unintended effects on ecosystems and non-target organisms","They are always smaller","They require more water"],"answer":"Possible unintended effects on ecosystems and non-target organisms","explanation":"GM genes could transfer to wild plants (gene flow) or affect non-target insects like pollinators."},
+          {"id":"q12","type":"multiple_choice","question":"Selective breeding differs from genetic engineering because selective breeding:","options":["Is faster","Only uses natural reproduction and selection over generations","Uses DNA directly","Creates transgenic organisms"],"answer":"Only uses natural reproduction and selection over generations","explanation":"Selective breeding works within a species over many generations. Genetic engineering directly manipulates genes."},
+          {"id":"q13","type":"multiple_choice","question":"In bread making, yeast produces CO₂ which:","options":["Adds flavour","Makes bread rise (leavening)","Kills bacteria","Produces the brown crust"],"answer":"Makes bread rise (leavening)","explanation":"CO₂ bubbles get trapped in dough, making it rise and giving bread its light, airy texture."},
+          {"id":"q14","type":"multiple_choice","question":"Pectinase is used in juice production to:","options":["Add flavour","Clarify juice by breaking down cloudy pectin","Add vitamin C","Increase sugar content"],"answer":"Clarify juice by breaking down cloudy pectin","explanation":"Pectin in cell walls makes fruit juice cloudy. Pectinase breaks down pectin → clear juice, higher yield."},
+          {"id":"q15","type":"multiple_choice","question":"Biofuels produced by fermentation use:","options":["Crude oil","Sugarcane and corn (crops)","Natural gas","Coal"],"answer":"Sugarcane and corn (crops)","explanation":"Sugar/starch crops fermented by yeast → ethanol biofuel. Brazil uses sugarcane ethanol as vehicle fuel."},
+          {"id":"q16","type":"multiple_choice","question":"Temperature of 37°C is ideal for most fermentation because:","options":["Yeast dies at lower temperatures","Optimal for enzyme activity without denaturation","Steam is produced","No other reason"],"answer":"Optimal for enzyme activity without denaturation","explanation":"37°C is close to body temperature — most microbial enzymes work fastest here without being denatured."},
+          {"id":"q17","type":"multiple_choice","question":"Which enzyme would you use to remove a grass protein stain from clothes?","options":["Amylase","Lipase","Protease","Lactase"],"answer":"Protease","explanation":"Grass stains contain chlorophyll (green) and proteins. Protease breaks down protein component."},
+          {"id":"q18","type":"multiple_choice","question":"Dolly the sheep was a famous example of:","options":["Selective breeding","Natural mutation","Cloning from adult somatic cell","Genetic engineering"],"answer":"Cloning from adult somatic cell","explanation":"Dolly (1996) was cloned by somatic cell nuclear transfer — nucleus from adult sheep cell placed in enucleated egg."},
+          {"id":"q19","type":"multiple_choice","question":"Cheese production relies on:","options":["Yeast only","Bacteria producing lactic acid and rennet-like enzymes","Chemical preservatives","Heating alone"],"answer":"Bacteria producing lactic acid and rennet-like enzymes","explanation":"Bacteria curdle milk (lactic acid) and produce enzymes to coagulate proteins. Different bacteria make different cheeses."},
+          {"id":"q20","type":"multiple_choice","question":"The main advantage of using microorganisms to produce medicines is:","options":["They are decorative","Large-scale production of identical human proteins (e.g. insulin) without animal welfare concerns","They are always cheaper","No safety testing needed"],"answer":"Large-scale production of identical human proteins (e.g. insulin) without animal welfare concerns","explanation":"Bacteria can produce billions of copies of human proteins. Insulin from bacteria is identical to human insulin."}
+        ]
+      }
+    }
+  ]
+}
