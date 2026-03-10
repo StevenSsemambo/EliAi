@@ -1,0 +1,87 @@
+{
+  "topic_id": "transformation_geometry",
+  "topic_title": "Transformation Geometry",
+  "subject": "mathematics",
+  "class_level": "s4",
+  "lessons": [
+    {
+      "id": "transformation_l1",
+      "title": "Reflection and Rotation",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"A transformation changes the position or size of a shape. The original shape is the object; the result is the image."},
+        {"type":"text","body":"REFLECTION: A mirror image of the shape in a line of reflection. Each point and its image are equal distances from the mirror line."},
+        {"type":"formula","body":"Reflection in x-axis: (x, y) → (x, −y)\nReflection in y-axis: (x, y) → (−x, y)\nReflection in y=x: (x, y) → (y, x)"},
+        {"type":"text","body":"ROTATION: Turning a shape about a fixed point (centre of rotation) by a given angle and direction (clockwise or anticlockwise)."},
+        {"type":"formula","body":"Rotation 90° anticlockwise about origin: (x,y) → (−y, x)\nRotation 180° about origin: (x,y) → (−x, −y)\nRotation 90° clockwise about origin: (x,y) → (y, −x)"},
+        {"type":"example","title":"Reflection Example","body":"Reflect point A(3, 2) in the y-axis.\nRule: (x,y) → (−x, y)\nImage A' = (−3, 2)"},
+        {"type":"example","title":"Rotation Example","body":"Rotate B(4, 1) by 90° anticlockwise about origin.\nRule: (x,y) → (−y, x)\nImage B' = (−1, 4)"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Reflection of point (5, −3) in the x-axis is:","options":["(−5, −3)","(5, 3)","(−5, 3)","(3, 5)"],"answer":"(5, 3)","explanation":"Reflection in x-axis: (x,y)→(x,−y). So (5,−3)→(5,3)."},
+          {"id":"q2","type":"multiple_choice","question":"Reflection in y-axis changes:","options":["Only y-coordinate","Only x-coordinate","Both x and y","Neither coordinate"],"answer":"Only x-coordinate","explanation":"y-axis reflection: (x,y)→(−x,y). Only x-coordinate changes sign."},
+          {"id":"q3","type":"multiple_choice","question":"Point P(2, 5) reflected in y=x gives:","options":["(−2, −5)","(5, 2)","(2, −5)","(−5, −2)"],"answer":"(5, 2)","explanation":"Reflection in y=x swaps coordinates: (x,y)→(y,x). So (2,5)→(5,2)."},
+          {"id":"q4","type":"multiple_choice","question":"Rotation 180° about origin maps (3, 4) to:","options":["(4, 3)","(−4, 3)","(−3, −4)","(3, −4)"],"answer":"(−3, −4)","explanation":"180° rotation: (x,y)→(−x,−y). So (3,4)→(−3,−4)."},
+          {"id":"q5","type":"multiple_choice","question":"90° anticlockwise rotation about origin maps (2, −3) to:","options":["(3, 2)","(−3, −2)","(−2, 3)","(2, 3)"],"answer":"(3, 2)","explanation":"Rule (x,y)→(−y,x): (2,−3)→(3,2)."},
+          {"id":"q6","type":"multiple_choice","question":"Which transformation produces a mirror image?","options":["Translation","Rotation","Reflection","Enlargement"],"answer":"Reflection","explanation":"Reflection creates a mirror image of the shape in a line."},
+          {"id":"q7","type":"multiple_choice","question":"After a rotation, the shape:","options":["Changes size","Changes orientation and position but not size","Changes size and shape","Moves only along x-axis"],"answer":"Changes orientation and position but not size","explanation":"Rotation is an isometry — size and shape are preserved, but orientation changes."},
+          {"id":"q8","type":"multiple_choice","question":"90° clockwise rotation maps (1, 4) to:","options":["(−4, 1)","(4, −1)","(1, −4)","(−1, 4)"],"answer":"(4, −1)","explanation":"90° clockwise: (x,y)→(y,−x). So (1,4)→(4,−1)."},
+          {"id":"q9","type":"multiple_choice","question":"The line of reflection of (3,5) and its image (3,−5) is:","options":["y-axis","x-axis","y=x","y=−x"],"answer":"x-axis","explanation":"y-coordinate changed sign, x stayed same → reflected in x-axis."},
+          {"id":"q10","type":"multiple_choice","question":"Rotation 270° anticlockwise is equivalent to:","options":["90° anticlockwise","90° clockwise","180° rotation","No rotation"],"answer":"90° clockwise","explanation":"270° anticlockwise = 360°−270° = 90° clockwise. Same result."},
+          {"id":"q11","type":"multiple_choice","question":"Triangle ABC has vertices A(1,1), B(3,1), C(2,3). After reflection in x-axis, B' is:","options":["(3,1)","(3,−1)","(−3,1)","(1,3)"],"answer":"(3,−1)","explanation":"(x,y)→(x,−y): B(3,1)→B'(3,−1)"},
+          {"id":"q12","type":"multiple_choice","question":"Centre of rotation is:","options":["Always the origin","A fixed point the shape rotates around","The midpoint of the shape","The line of reflection"],"answer":"A fixed point the shape rotates around","explanation":"The centre of rotation stays fixed; all other points rotate around it."},
+          {"id":"q13","type":"multiple_choice","question":"Point Q(−2, 4) reflected in y-axis gives:","options":["(2, 4)","(−2, −4)","(4, −2)","(−4, 2)"],"answer":"(2, 4)","explanation":"y-axis reflection: (x,y)→(−x,y). (−2,4)→(2,4)"},
+          {"id":"q14","type":"multiple_choice","question":"How many degrees is a full rotation?","options":["90°","180°","270°","360°"],"answer":"360°","explanation":"A complete turn is 360°."},
+          {"id":"q15","type":"multiple_choice","question":"180° rotation about origin maps (−3, 5) to:","options":["(3, 5)","(3, −5)","(−3, −5)","(5, −3)"],"answer":"(3, −5)","explanation":"(−x,−y): (−3,5)→(3,−5)"},
+          {"id":"q16","type":"multiple_choice","question":"Reflection and rotation both:","options":["Change the size of the shape","Preserve shape and size (isometries)","Only work on triangles","Move shape along a line"],"answer":"Preserve shape and size (isometries)","explanation":"Both are isometries — length and area are unchanged."},
+          {"id":"q17","type":"multiple_choice","question":"90° anticlockwise maps (5, 0) to:","options":["(0, 5)","(0, −5)","(5, 0)","(−5, 0)"],"answer":"(0, 5)","explanation":"(x,y)→(−y,x): (5,0)→(0,5)"},
+          {"id":"q18","type":"multiple_choice","question":"A shape and its reflection are:","options":["Always identical","Congruent but laterally reversed","Enlarged","Rotated"],"answer":"Congruent but laterally reversed","explanation":"Reflected shapes are mirror images — same size but flipped."},
+          {"id":"q19","type":"multiple_choice","question":"Which rule describes 90° clockwise rotation?","options":["(x,y)→(−y,x)","(x,y)→(y,−x)","(x,y)→(−x,−y)","(x,y)→(y,x)"],"answer":"(x,y)→(y,−x)","explanation":"90° clockwise: (x,y)→(y,−x). Remember: clockwise flips sign of second."},
+          {"id":"q20","type":"multiple_choice","question":"To describe a rotation fully you need:","options":["Only the angle","Centre, angle and direction","Only the centre","Direction only"],"answer":"Centre, angle and direction","explanation":"Three pieces of information: where (centre), how much (angle), which way (clockwise/anticlockwise)."}
+        ]
+      }
+    },
+    {
+      "id": "transformation_l2",
+      "title": "Translation and Enlargement",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"TRANSLATION: Slides a shape a fixed distance in a fixed direction. Every point moves the same amount. Described by a column vector."},
+        {"type":"formula","body":"Translation by vector (a/b): (x, y) → (x+a, y+b)"},
+        {"type":"text","body":"ENLARGEMENT: Changes the size of a shape by a scale factor from a centre of enlargement."},
+        {"type":"formula","body":"Image distance from centre = Scale factor × Object distance from centre\nScale factor k > 1: enlargement\nScale factor 0 < k < 1: reduction\nScale factor k < 0: enlargement on opposite side"},
+        {"type":"example","title":"Translation","body":"Translate point A(2, 3) by vector (4/−1).\nA' = (2+4, 3+(−1)) = (6, 2)"},
+        {"type":"example","title":"Enlargement","body":"Enlarge point P(3,2) from centre O(1,0), scale factor 2.\nVector from O to P = (2,2).\nNew vector = 2×(2,2) = (4,4).\nImage P' = O + (4,4) = (5,4)."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Translation vector (3/−2) moves point (1,4) to:","options":["(4,2)","(4,6)","(−2,6)","(3,2)"],"answer":"(4,2)","explanation":"(1+3, 4+(−2)) = (4,2)"},
+          {"id":"q2","type":"multiple_choice","question":"In a translation, all points move:","options":["Different distances","The same distance and direction","Only horizontally","Only vertically"],"answer":"The same distance and direction","explanation":"Translation is a slide — every point shifts by exactly the same vector."},
+          {"id":"q3","type":"multiple_choice","question":"Scale factor 3 enlargement makes a shape:","options":["3 times smaller","3 times larger (linear dimensions)","Same size","9 times larger in length"],"answer":"3 times larger (linear dimensions)","explanation":"Each length becomes 3 times longer. Area becomes 9 times (3²)."},
+          {"id":"q4","type":"multiple_choice","question":"Point A(2,1) translated by (−1/3) gives:","options":["(1,4)","(3,−2)","(−1,3)","(2,3)"],"answer":"(1,4)","explanation":"(2+(−1), 1+3) = (1,4)"},
+          {"id":"q5","type":"multiple_choice","question":"Enlargement with scale factor 0.5 produces:","options":["A larger image","A smaller image","Same size image","An inverted image"],"answer":"A smaller image","explanation":"Scale factor between 0 and 1 makes the image smaller than the object."},
+          {"id":"q6","type":"multiple_choice","question":"To describe a translation you need:","options":["A centre and angle","A column vector","A scale factor","A mirror line"],"answer":"A column vector","explanation":"Translation is fully described by a column vector showing horizontal and vertical shift."},
+          {"id":"q7","type":"multiple_choice","question":"A triangle with area 6cm² is enlarged by scale factor 3. New area =","options":["18cm²","27cm²","54cm²","9cm²"],"answer":"54cm²","explanation":"Area scale factor = k² = 9. New area = 6 × 9 = 54cm²"},
+          {"id":"q8","type":"multiple_choice","question":"Centre of enlargement O(0,0), scale factor 2. Point P(3,4) maps to:","options":["(1.5,2)","(6,8)","(5,6)","(3,8)"],"answer":"(6,8)","explanation":"Scale factor 2: P'=(2×3, 2×4)=(6,8)"},
+          {"id":"q9","type":"multiple_choice","question":"A translation preserves:","options":["Only shape","Only size","Shape, size, and orientation","Only orientation"],"answer":"Shape, size, and orientation","explanation":"Translation slides the shape — nothing changes except position."},
+          {"id":"q10","type":"multiple_choice","question":"If P(5,3) maps to P'(2,7) under a translation, the vector is:","options":["(3/−4)","(−3/4)","(7/−2)","(−3/−4)"],"answer":"(−3/4)","explanation":"Vector = P' − P = (2−5, 7−3) = (−3, 4)"},
+          {"id":"q11","type":"multiple_choice","question":"Negative scale factor in enlargement:","options":["Makes shape smaller only","Inverts image through centre","Has no effect","Makes shape the same size"],"answer":"Inverts image through centre","explanation":"Negative scale factor produces an image on the opposite side of the centre of enlargement."},
+          {"id":"q12","type":"multiple_choice","question":"Scale factor ½ enlargement from O(0,0) maps (8,6) to:","options":["(4,3)","(16,12)","(6,4)","(3,4)"],"answer":"(4,3)","explanation":"½×(8,6) = (4,3)"},
+          {"id":"q13","type":"multiple_choice","question":"Object length 4cm, image length 10cm. Scale factor =","options":["1.5","2","2.5","3"],"answer":"2.5","explanation":"k = image÷object = 10÷4 = 2.5"},
+          {"id":"q14","type":"multiple_choice","question":"To describe an enlargement fully you need:","options":["Centre and scale factor","Scale factor only","Centre only","Angle and centre"],"answer":"Centre and scale factor","explanation":"Enlargement requires: where (centre of enlargement) and how much (scale factor)."},
+          {"id":"q15","type":"multiple_choice","question":"Which transformation changes the size of a shape?","options":["Reflection","Rotation","Translation","Enlargement"],"answer":"Enlargement","explanation":"Only enlargement changes the size. Reflection, rotation and translation are isometries."},
+          {"id":"q16","type":"multiple_choice","question":"A(1,2), B(3,2), C(2,4) translated by (2/1). A' =","options":["(3,3)","(2,3)","(3,2)","(1,3)"],"answer":"(3,3)","explanation":"A(1,2)+(2,1)=(3,3)"},
+          {"id":"q17","type":"multiple_choice","question":"Centre O(2,1), scale factor 3. Object point P(3,2). Image P' =","options":["(5,4)","(7,4)","(9,6)","(11,4)"],"answer":"(5,4)","explanation":"Vector OP=(1,1). Scale ×3=(3,3). P'=O+(3,3)=(5,4)."},
+          {"id":"q18","type":"multiple_choice","question":"Scale factor −2 maps P(3,1) from origin to:","options":["(6,2)","(−6,−2)","(−3,−1)","(1.5,0.5)"],"answer":"(−6,−2)","explanation":"−2×(3,1)=(−6,−2). Negative scale factor inverts position."},
+          {"id":"q19","type":"multiple_choice","question":"A photo is enlarged from 5cm to 20cm wide. Scale factor =","options":["2","3","4","5"],"answer":"4","explanation":"20÷5 = 4"},
+          {"id":"q20","type":"multiple_choice","question":"Four transformations studied are:","options":["Add, subtract, multiply, divide","Reflection, rotation, translation, enlargement","Linear, quadratic, cubic, quartic","Congruent, similar, equal, parallel"],"answer":"Reflection, rotation, translation, enlargement","explanation":"These are the four standard geometric transformations in O-level Maths."}
+        ]
+      }
+    }
+  ]
+}

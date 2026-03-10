@@ -1,0 +1,46 @@
+{
+  "topic_id": "inequalities",
+  "topic_title": "Inequalities and Regions",
+  "subject": "mathematics",
+  "class_level": "s4",
+  "lessons": [
+    {
+      "id": "inequalities_l1",
+      "title": "Solving and Graphing Inequalities",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"An inequality states that one expression is greater than or less than another. Unlike equations, inequalities have a range of solutions."},
+        {"type":"formula","body":"Rules: Add/subtract same value to both sides: inequality sign stays same\nMultiply/divide by POSITIVE number: inequality sign stays same\nMultiply/divide by NEGATIVE number: inequality sign REVERSES\nExample: −2x > 6 → x < −3 (sign reversed when dividing by −2)"},
+        {"type":"text","body":"NUMBER LINE: Open circle (○) for strict inequality (< or >). Closed circle (●) for ≤ or ≥."},
+        {"type":"text","body":"REGIONS ON A GRAPH:\n• Dotted line for strict inequality (< or >)\n• Solid line for ≤ or ≥\n• Shade the region that satisfies the inequality\n• Test a point (e.g. origin) to check which side to shade"},
+        {"type":"example","title":"Solving an Inequality","body":"Solve: 3x − 7 > 8\n3x > 15\nx > 5\nNumber line: open circle at 5, arrow to the right"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Solve: 2x + 3 < 11","options":["x < 4","x > 4","x < 7","x > 7"],"answer":"x < 4","explanation":"2x < 8, x < 4"},
+          {"id":"q2","type":"multiple_choice","question":"When you multiply both sides of an inequality by a negative number:","options":["Sign stays same","Sign reverses","Inequality becomes equation","Sign becomes ="],"answer":"Sign reverses","explanation":"Multiplying or dividing by negative reverses the inequality direction. E.g. −x < 3 → x > −3"},
+          {"id":"q3","type":"multiple_choice","question":"Solve: −3x ≥ 12","options":["x ≥ −4","x ≤ −4","x ≥ 4","x ≤ 4"],"answer":"x ≤ −4","explanation":"Divide by −3 (negative): ≥ reverses to ≤. x ≤ −4"},
+          {"id":"q4","type":"multiple_choice","question":"Which represents x > 3 on a number line?","options":["Closed circle at 3, left arrow","Open circle at 3, right arrow","Closed circle at 3, right arrow","Open circle at 3, left arrow"],"answer":"Open circle at 3, right arrow","explanation":"x > 3 (strict): open circle at 3. Greater than = right arrow."},
+          {"id":"q5","type":"multiple_choice","question":"Solve: 5 − 2x < 1","options":["x < 2","x > 2","x < −2","x > −2"],"answer":"x > 2","explanation":"−2x < −4. Divide by −2 (reverse): x > 2"},
+          {"id":"q6","type":"multiple_choice","question":"The region y > 2x is found:","options":["Below the line y = 2x","Above the line y = 2x","On the line y = 2x","To the right of y = 2x"],"answer":"Above the line y = 2x","explanation":"y > 2x means y values are more than the line — above the line."},
+          {"id":"q7","type":"multiple_choice","question":"For the inequality x + y ≤ 5, the line is drawn:","options":["Dotted","Solid","Dashed","Not drawn"],"answer":"Solid","explanation":"≤ (less than OR equal to) means points on the line are included — draw solid line."},
+          {"id":"q8","type":"multiple_choice","question":"Solve: 4x − 5 ≥ 3x + 2","options":["x ≥ 7","x ≤ 7","x ≥ 3","x ≤ 3"],"answer":"x ≥ 7","explanation":"4x − 3x ≥ 2 + 5. x ≥ 7"},
+          {"id":"q9","type":"multiple_choice","question":"The solution to −1 < x ≤ 4 includes:","options":["x = −1","x = 5","x = 4","x = −2"],"answer":"x = 4","explanation":"−1 < x ≤ 4: x is strictly greater than −1 and up to and including 4. So x = 4 is included."},
+          {"id":"q10","type":"multiple_choice","question":"To find which region to shade for y < x + 1, test origin (0,0):","options":["0 < 1 ✓ shade origin side","0 > 1 ✗ shade other side","0 = 1 can't tell","Origin is always shaded"],"answer":"0 < 1 ✓ shade origin side","explanation":"Substitute (0,0): 0 < 0+1 = 1 ✓. Origin satisfies inequality → shade the side containing origin."},
+          {"id":"q11","type":"multiple_choice","question":"Solve the double inequality: 2 ≤ 3x − 1 < 8","options":["1 ≤ x < 3","1 < x ≤ 3","0 ≤ x < 3","1 ≤ x ≤ 3"],"answer":"1 ≤ x < 3","explanation":"Add 1: 3 ≤ 3x < 9. Divide by 3: 1 ≤ x < 3"},
+          {"id":"q12","type":"multiple_choice","question":"Which integers satisfy 2 < x ≤ 6?","options":["{2,3,4,5,6}","{3,4,5,6}","{2,3,4,5}","{3,4,5}"],"answer":"{3,4,5,6}","explanation":"x is strictly greater than 2 (so not 2) and up to and including 6. Integers: 3, 4, 5, 6."},
+          {"id":"q13","type":"multiple_choice","question":"The region satisfying x ≥ 0, y ≥ 0, and x + y ≤ 4 is:","options":["Infinite region","Triangle in first quadrant","Line only","Circle"],"answer":"Triangle in first quadrant","explanation":"Three constraints form a triangular feasible region in the first quadrant with vertices (0,0), (4,0), (0,4)."},
+          {"id":"q14","type":"multiple_choice","question":"Solve: (x − 2)/3 < 4","options":["x < 12","x < 14","x < 10","x < 6"],"answer":"x < 14","explanation":"Multiply both sides by 3: x − 2 < 12. x < 14"},
+          {"id":"q15","type":"multiple_choice","question":"What does the closed circle (●) mean on a number line?","options":["The value is excluded","The value is included (≤ or ≥)","Approximate value","No solution"],"answer":"The value is included (≤ or ≥)","explanation":"Closed/filled circle means the endpoint value IS part of the solution (≤ or ≥ inequality)."},
+          {"id":"q16","type":"multiple_choice","question":"The region ABOVE the line y = 3 satisfies:","options":["y < 3","y ≤ 3","y > 3","y = 3"],"answer":"y > 3","explanation":"Above the line y = 3 means y values are more than 3, i.e., y > 3."},
+          {"id":"q17","type":"multiple_choice","question":"Solve: 3(x + 2) ≤ 2(x + 5)","options":["x ≤ 4","x ≥ 4","x ≤ 2","x ≥ 2"],"answer":"x ≤ 4","explanation":"3x + 6 ≤ 2x + 10. x ≤ 4"},
+          {"id":"q18","type":"multiple_choice","question":"The region satisfying x > 2 AND y < 3 is:","options":["Above x=2 and below y=3","Right of x=2 and below y=3","Right of x=2 and above y=3","Left of x=2 and below y=3"],"answer":"Right of x=2 and below y=3","explanation":"x > 2 = right of vertical line x=2. y < 3 = below horizontal line y=3."},
+          {"id":"q19","type":"multiple_choice","question":"The difference between x > 5 and x ≥ 5 is:","options":["No difference","x > 5 excludes 5, x ≥ 5 includes 5","x ≥ 5 excludes 5","Same for integers"],"answer":"x > 5 excludes 5, x ≥ 5 includes 5","explanation":"Strict inequality x > 5 means x cannot equal 5. Non-strict x ≥ 5 includes x = 5."},
+          {"id":"q20","type":"multiple_choice","question":"Inequalities and the feasible region from linear programming both use:","options":["Simultaneous equations","Shaded regions to show solution sets","Quadratic formula","Trigonometry"],"answer":"Shaded regions to show solution sets","explanation":"Both topics use graphical regions — inequalities identify solution sets; linear programming finds optimal values within those regions."}
+        ]
+      }
+    }
+  ]
+}
