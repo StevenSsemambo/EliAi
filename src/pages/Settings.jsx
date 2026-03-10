@@ -235,7 +235,7 @@ export default function Settings() {
               <span className="font-black text-sm tracking-widest uppercase" style={{ color:'var(--text)' }}>SEMATECH</span>
               <span className="font-light text-sm tracking-widest uppercase" style={{ color:'var(--subtext)' }}>DEVELOPERS</span>
             </div>
-            <p className="text-xs" style={{ color:'var(--muted)' }}>Elimu Learn · Version 2.0</p>
+            <p className="text-xs" style={{ color:'var(--muted)' }}>EqLa App · Version 2.0</p>
             <p className="text-xs mt-0.5" style={{ color:'var(--muted)' }}>Built for Ugandan Students 🇺🇬</p>
           </div>
         </div>
