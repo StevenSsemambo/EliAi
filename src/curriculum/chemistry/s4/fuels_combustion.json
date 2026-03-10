@@ -1,0 +1,46 @@
+{
+  "topic_id": "fuels_combustion",
+  "topic_title": "Fuels and Combustion",
+  "subject": "chemistry",
+  "class_level": "s4",
+  "lessons": [
+    {
+      "id": "fuels_l1",
+      "title": "Combustion Reactions and Fossil Fuels",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"Combustion is the exothermic reaction of a fuel with oxygen to release heat and light energy."},
+        {"type":"text","body":"COMPLETE COMBUSTION: Excess oxygen. Products = CO₂ + H₂O only. Blue flame.\nINCOMPLETE COMBUSTION: Limited oxygen. Products = CO (toxic) + carbon (soot) + H₂O. Yellow/orange smoky flame."},
+        {"type":"formula","body":"Complete combustion of methane: CH₄ + 2O₂ → CO₂ + 2H₂O\nIncomplete combustion: CH₄ + 3/2 O₂ → CO + 2H₂O"},
+        {"type":"text","body":"FOSSIL FUELS: Coal, crude oil, natural gas — formed from ancient organisms over millions of years. Non-renewable resources.\nFRACTIONS OF CRUDE OIL (by fractional distillation): LPG, petrol/gasoline, naphtha, kerosene, diesel, fuel oil, bitumen"},
+        {"type":"text","body":"ENVIRONMENTAL IMPACTS: CO₂ → greenhouse effect/global warming. SO₂ → acid rain. CO → poisonous. Particulates (soot) → respiratory problems. NO_x → acid rain and smog."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Complete combustion of hydrocarbons produces:","options":["CO and H₂O","CO₂ and H₂O","C and H₂O","CO₂ and H₂"],"answer":"CO₂ and H₂O","explanation":"With excess oxygen: carbon → CO₂, hydrogen → H₂O. Complete combustion."},
+          {"id":"q2","type":"multiple_choice","question":"Carbon monoxide (CO) is dangerous because:","options":["It has a strong smell","It combines with haemoglobin preventing O₂ transport","It is heavier than air","It reacts with CO₂"],"answer":"It combines with haemoglobin preventing O₂ transport","explanation":"CO binds to haemoglobin 250× stronger than O₂, blocking oxygen delivery to cells."},
+          {"id":"q3","type":"multiple_choice","question":"Incomplete combustion occurs when there is:","options":["Too much oxygen","Too little oxygen","Too much fuel and excess oxygen","Too high a temperature"],"answer":"Too little oxygen","explanation":"Restricted air supply → incomplete combustion → CO and soot produced instead of CO₂."},
+          {"id":"q4","type":"multiple_choice","question":"Fossil fuels are non-renewable because:","options":["They are too expensive","They formed over millions of years and cannot be quickly replaced","They produce CO₂","They are found underground"],"answer":"They formed over millions of years and cannot be quickly replaced","explanation":"Fossil fuels take millions of years to form — once used, they cannot be replenished on human timescales."},
+          {"id":"q5","type":"multiple_choice","question":"Which fraction of crude oil has the lowest boiling point?","options":["Bitumen","Fuel oil","Diesel","LPG (liquefied petroleum gas)"],"answer":"LPG (liquefied petroleum gas)","explanation":"LPG (C3-C4) has very low boiling point — it comes off first at top of fractionating column."},
+          {"id":"q6","type":"multiple_choice","question":"Acid rain is mainly caused by:","options":["CO₂ only","SO₂ and NO_x combining with water in atmosphere","Soot particles","CO from cars"],"answer":"SO₂ and NO_x combining with water in atmosphere","explanation":"SO₂ + H₂O → H₂SO₃/H₂SO₄. NO₂ + H₂O → HNO₃. Both form acid rain."},
+          {"id":"q7","type":"multiple_choice","question":"The calorific value of a fuel measures:","options":["How colourful the flame is","Energy released per unit mass of fuel burned","Cost per litre","Carbon content"],"answer":"Energy released per unit mass of fuel burned","explanation":"Calorific value (kJ/kg or MJ/kg) is the heat energy released when 1 kg of fuel burns completely."},
+          {"id":"q8","type":"multiple_choice","question":"Natural gas is mainly composed of:","options":["Ethane","Propane","Methane","Butane"],"answer":"Methane","explanation":"Natural gas is predominantly methane (CH₄), with small amounts of ethane, propane, etc."},
+          {"id":"q9","type":"multiple_choice","question":"Which fuel produces the least CO₂ per unit of energy?","options":["Coal","Oil","Natural gas","Wood"],"answer":"Natural gas","explanation":"Natural gas (CH₄) has highest H:C ratio — produces more H₂O and less CO₂ per joule of energy."},
+          {"id":"q10","type":"multiple_choice","question":"Biofuels are considered carbon-neutral because:","options":["They contain no carbon","CO₂ released when burned was absorbed during plant growth","They are renewable","They produce no pollution"],"answer":"CO₂ released when burned was absorbed during plant growth","explanation":"Plants absorb CO₂ as they grow — burning biofuel releases that same CO₂ back. Net carbon = zero (approximately)."},
+          {"id":"q11","type":"multiple_choice","question":"Cracking of long-chain hydrocarbons produces:","options":["Only longer chains","Shorter chains and alkenes","Only alkanes","Water and CO₂"],"answer":"Shorter chains and alkenes","explanation":"Thermal or catalytic cracking breaks long chains → shorter, more useful hydrocarbons + alkenes."},
+          {"id":"q12","type":"multiple_choice","question":"Catalytic converters in car exhausts convert CO to:","options":["CO₂ (less harmful)","O₂","NO","CH₄"],"answer":"CO₂ (less harmful)","explanation":"Catalytic converter: 2CO + O₂ → 2CO₂. Converts toxic CO to less harmful CO₂."},
+          {"id":"q13","type":"multiple_choice","question":"Petrol engines produce NO_x because:","options":["Fuel contains nitrogen","High engine temperatures cause N₂ + O₂ → NO","Petrol contains sulphur","Oxygen reacts with CO"],"answer":"High engine temperatures cause N₂ + O₂ → NO","explanation":"At high combustion temperatures, atmospheric N₂ reacts with O₂ to form NO (nitrogen oxide)."},
+          {"id":"q14","type":"multiple_choice","question":"Coal is mainly composed of:","options":["Hydrogen","Oxygen","Carbon","Nitrogen"],"answer":"Carbon","explanation":"Coal is predominantly carbon (plus some H, S, N impurities)."},
+          {"id":"q15","type":"multiple_choice","question":"Energy from burning fuels is originally from:","options":["The Earth's core","Solar energy stored by photosynthesis","Nuclear reactions","Chemical bonds in oxygen"],"answer":"Solar energy stored by photosynthesis","explanation":"Ancient organisms stored solar energy through photosynthesis. Fossil fuels are this energy stored chemically over millions of years."},
+          {"id":"q16","type":"multiple_choice","question":"The greenhouse effect is mainly caused by:","options":["Ozone","CO₂ and CH₄ trapping infrared radiation","Nitrogen","Oxygen"],"answer":"CO₂ and CH₄ trapping infrared radiation","explanation":"Greenhouse gases (CO₂, CH₄, H₂O vapour) absorb infrared radiation re-emitted from Earth's surface, warming it."},
+          {"id":"q17","type":"multiple_choice","question":"Hydrogen fuel cells produce what as the only product?","options":["CO₂","CO","Water","Nitrogen"],"answer":"Water","explanation":"H₂ + ½O₂ → H₂O. Hydrogen fuel cells are zero-emission — water is the only product."},
+          {"id":"q18","type":"multiple_choice","question":"Which combustion product makes limewater turn milky?","options":["CO","H₂O","CO₂","SO₂"],"answer":"CO₂","explanation":"CO₂ + Ca(OH)₂ → CaCO₃ (white precipitate) + H₂O. This test confirms CO₂ in combustion products."},
+          {"id":"q19","type":"multiple_choice","question":"Petrol (octane C₈H₁₈) complete combustion: C₈H₁₈ + ?O₂ → 8CO₂ + 9H₂O. ? =","options":["10","12.5","15","25"],"answer":"12.5","explanation":"Balance: O needed = 8×2 + 9×1 = 25 atoms = 12.5 O₂ molecules."},
+          {"id":"q20","type":"multiple_choice","question":"A yellow sooty flame from a Bunsen burner indicates:","options":["Complete combustion","Incomplete combustion","Overheating","High air supply"],"answer":"Incomplete combustion","explanation":"Yellow flame = incomplete combustion (air hole partially closed). Carbon soot makes flame yellow."}
+        ]
+      }
+    }
+  ]
+}
