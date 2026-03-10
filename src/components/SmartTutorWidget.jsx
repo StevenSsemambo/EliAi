@@ -73,7 +73,7 @@ export default function SmartTutorWidget() {
           <span className="text-xl">🧠</span>
           <div>
             <p className="font-black text-sm" style={{ color: theme.text }}>AI Smart Tutor</p>
-            <p className="text-xs" style={{ color: theme.muted }}>Powered by Elimu AI · Rule-based</p>
+            <p className="text-xs" style={{ color: theme.muted }}>Powered by EqLa AI · Rule-based</p>
           </div>
         </div>
         <button onClick={() => navigate('/ai-tutor')}
