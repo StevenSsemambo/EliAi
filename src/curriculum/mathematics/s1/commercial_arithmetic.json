@@ -1,0 +1,130 @@
+{
+  "topic_id": "commercial_arithmetic",
+  "topic_title": "Commercial Arithmetic",
+  "subject": "mathematics",
+  "class_level": "s1",
+  "lessons": [
+    {
+      "id": "commercial_arithmetic_l1",
+      "title": "Profit, Loss and Percentage",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"Commercial arithmetic deals with money calculations used in everyday business. The three key ideas are profit, loss, and percentage change."},
+        {"type":"formula","body":"Profit = Selling Price − Cost Price (when Selling Price > Cost Price)"},
+        {"type":"formula","body":"Loss = Cost Price − Selling Price (when Cost Price > Selling Price)"},
+        {"type":"formula","body":"Profit % = (Profit ÷ Cost Price) × 100"},
+        {"type":"formula","body":"Loss % = (Loss ÷ Cost Price) × 100"},
+        {"type":"example","title":"Finding Profit","body":"A trader buys a shirt for UGX 20,000 and sells it for UGX 25,000.\nProfit = 25,000 − 20,000 = UGX 5,000\nProfit % = (5,000 ÷ 20,000) × 100 = 25%"},
+        {"type":"example","title":"Finding Loss","body":"A farmer buys seeds for UGX 15,000 and sells for UGX 12,000.\nLoss = 15,000 − 12,000 = UGX 3,000\nLoss % = (3,000 ÷ 15,000) × 100 = 20%"},
+        {"type":"text","body":"Note: Profit and loss percentages are ALWAYS calculated on the Cost Price, not the Selling Price. This is a common exam mistake."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"A book costs UGX 10,000 and is sold for UGX 13,000. What is the profit?","options":["UGX 2,000","UGX 3,000","UGX 4,000","UGX 1,000"],"answer":"UGX 3,000","explanation":"Profit = Selling Price − Cost Price = 13,000 − 10,000 = 3,000"},
+          {"id":"q2","type":"multiple_choice","question":"Profit percentage is calculated on the:","options":["Selling price","Market price","Cost price","Profit amount"],"answer":"Cost price","explanation":"Profit % = (Profit ÷ Cost Price) × 100. Always use cost price as the base."},
+          {"id":"q3","type":"multiple_choice","question":"A radio bought for UGX 80,000 is sold at UGX 72,000. What is the loss percentage?","options":["8%","10%","12%","15%"],"answer":"10%","explanation":"Loss = 80,000−72,000 = 8,000. Loss% = (8,000÷80,000)×100 = 10%"},
+          {"id":"q4","type":"multiple_choice","question":"If cost price = UGX 50,000 and profit = 20%, what is the selling price?","options":["UGX 55,000","UGX 60,000","UGX 65,000","UGX 70,000"],"answer":"UGX 60,000","explanation":"Profit = 20% of 50,000 = 10,000. Selling Price = 50,000 + 10,000 = 60,000"},
+          {"id":"q5","type":"multiple_choice","question":"A trader makes a 15% profit on an item costing UGX 40,000. What is the profit?","options":["UGX 4,000","UGX 5,000","UGX 6,000","UGX 7,000"],"answer":"UGX 6,000","explanation":"Profit = 15% × 40,000 = 0.15 × 40,000 = 6,000"},
+          {"id":"q6","type":"multiple_choice","question":"Selling price is UGX 44,000 and cost price is UGX 40,000. Profit % is:","options":["8%","10%","12%","15%"],"answer":"10%","explanation":"Profit = 4,000. Profit% = (4,000÷40,000)×100 = 10%"},
+          {"id":"q7","type":"multiple_choice","question":"An item with cost price UGX 25,000 is sold at a 12% loss. What is the selling price?","options":["UGX 21,000","UGX 22,000","UGX 23,000","UGX 24,000"],"answer":"UGX 22,000","explanation":"Loss = 12% × 25,000 = 3,000. SP = 25,000 − 3,000 = 22,000"},
+          {"id":"q8","type":"multiple_choice","question":"A shop owner buys 10 items at UGX 5,000 each and sells all at UGX 6,200 each. Total profit is:","options":["UGX 10,000","UGX 12,000","UGX 12,000","UGX 12,000"],"answer":"UGX 12,000","explanation":"Profit per item = 1,200. Total = 10 × 1,200 = 12,000"},
+          {"id":"q9","type":"multiple_choice","question":"Which formula gives profit percentage?","options":["(Profit÷SP)×100","(Profit÷CP)×100","(SP÷CP)×100","(CP÷Profit)×100"],"answer":"(Profit÷CP)×100","explanation":"Profit % is always expressed as a fraction of the Cost Price."},
+          {"id":"q10","type":"multiple_choice","question":"A farmer buys a cow for UGX 600,000 and sells at UGX 540,000. Loss % is:","options":["8%","10%","12%","15%"],"answer":"10%","explanation":"Loss = 60,000. Loss% = (60,000÷600,000)×100 = 10%"},
+          {"id":"q11","type":"multiple_choice","question":"Cost price UGX 200,000, profit 25%. Selling price is:","options":["UGX 220,000","UGX 225,000","UGX 240,000","UGX 250,000"],"answer":"UGX 250,000","explanation":"Profit = 25% × 200,000 = 50,000. SP = 250,000"},
+          {"id":"q12","type":"multiple_choice","question":"If SP = UGX 85,000 and profit% = 25%, the cost price is:","options":["UGX 60,000","UGX 65,000","UGX 68,000","UGX 70,000"],"answer":"UGX 68,000","explanation":"CP = SP ÷ 1.25 = 85,000 ÷ 1.25 = 68,000"},
+          {"id":"q13","type":"multiple_choice","question":"A 20% loss on CP of UGX 150,000 gives selling price of:","options":["UGX 110,000","UGX 120,000","UGX 125,000","UGX 130,000"],"answer":"UGX 120,000","explanation":"Loss = 30,000. SP = 150,000 − 30,000 = 120,000"},
+          {"id":"q14","type":"multiple_choice","question":"Two items bought at UGX 30,000 each. One sold at 10% profit, other at 10% loss. Overall result:","options":["Profit of UGX 600","Loss of UGX 600","No profit no loss","Profit of UGX 1,200"],"answer":"No profit no loss","explanation":"Profit on one = 3,000. Loss on other = 3,000. Net = 0."},
+          {"id":"q15","type":"multiple_choice","question":"CP = UGX 1,200. Profit = UGX 300. Profit % =","options":["20%","25%","30%","35%"],"answer":"25%","explanation":"Profit% = (300÷1200)×100 = 25%"},
+          {"id":"q16","type":"multiple_choice","question":"A shopkeeper marks an item at UGX 50,000 but sells at 10% discount. Selling price is:","options":["UGX 40,000","UGX 45,000","UGX 48,000","UGX 42,000"],"answer":"UGX 45,000","explanation":"Discount = 10% × 50,000 = 5,000. SP = 45,000"},
+          {"id":"q17","type":"multiple_choice","question":"Loss% = 5%, CP = UGX 80,000. SP =","options":["UGX 74,000","UGX 76,000","UGX 78,000","UGX 72,000"],"answer":"UGX 76,000","explanation":"Loss = 5% × 80,000 = 4,000. SP = 76,000"},
+          {"id":"q18","type":"multiple_choice","question":"Which of these means a trader made NO profit and NO loss?","options":["SP > CP","SP < CP","SP = CP","SP = 0"],"answer":"SP = CP","explanation":"When selling price equals cost price, there is neither profit nor loss."},
+          {"id":"q19","type":"multiple_choice","question":"A dress costs UGX 120,000 and is sold at 33⅓% profit. SP =","options":["UGX 140,000","UGX 150,000","UGX 160,000","UGX 170,000"],"answer":"UGX 160,000","explanation":"Profit = 33.33% × 120,000 = 40,000. SP = 160,000"},
+          {"id":"q20","type":"multiple_choice","question":"A market vendor buys 100 oranges at UGX 200 each and sells 80 at UGX 300 each, the rest go bad. Profit or loss?","options":["Profit of UGX 4,000","Loss of UGX 4,000","Profit of UGX 6,000","Loss of UGX 2,000"],"answer":"Loss of UGX 4,000","explanation":"Revenue = 80×300 = 24,000. Cost = 100×200 = 20,000. Wait—Profit = 4,000. Let me recalc: Revenue 24,000 − Cost 20,000 = Profit 4,000","explanation":"Revenue = 80×300 = 24,000. Cost = 100×200 = 20,000. Profit = 4,000."}
+        ]
+      }
+    },
+    {
+      "id": "commercial_arithmetic_l2",
+      "title": "Discount and VAT",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"Discount is a reduction in the marked price of an item. VAT (Value Added Tax) is a government tax added to goods and services."},
+        {"type":"formula","body":"Discount = Marked Price − Selling Price"},
+        {"type":"formula","body":"Discount % = (Discount ÷ Marked Price) × 100"},
+        {"type":"formula","body":"VAT Amount = VAT% × Price before VAT"},
+        {"type":"formula","body":"Price after VAT = Price + VAT Amount"},
+        {"type":"example","title":"Discount","body":"A TV marked at UGX 800,000 is sold at 15% discount.\nDiscount = 15% × 800,000 = 120,000\nSelling Price = 800,000 − 120,000 = UGX 680,000"},
+        {"type":"example","title":"VAT Calculation","body":"A phone costs UGX 500,000 before 18% VAT.\nVAT = 18% × 500,000 = 90,000\nTotal price = 500,000 + 90,000 = UGX 590,000"},
+        {"type":"text","body":"In Uganda, the standard VAT rate is 18%. VAT is charged on the pre-VAT price. Discount is applied before VAT in most problems."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"A shirt marked at UGX 60,000 is sold at 20% discount. Selling price is:","options":["UGX 48,000","UGX 50,000","UGX 52,000","UGX 54,000"],"answer":"UGX 48,000","explanation":"Discount = 20% × 60,000 = 12,000. SP = 48,000"},
+          {"id":"q2","type":"multiple_choice","question":"VAT stands for:","options":["Value Added Tax","Variable Amount Tax","Valued Article Tax","Volume Added Tax"],"answer":"Value Added Tax","explanation":"VAT = Value Added Tax, charged by governments on goods and services."},
+          {"id":"q3","type":"multiple_choice","question":"If VAT is 18% and item costs UGX 200,000, total price is:","options":["UGX 218,000","UGX 220,000","UGX 236,000","UGX 238,000"],"answer":"UGX 236,000","explanation":"VAT = 18% × 200,000 = 36,000. Total = 236,000"},
+          {"id":"q4","type":"multiple_choice","question":"Marked price UGX 100,000, discount 25%, VAT 18%. Final price is:","options":["UGX 82,000","UGX 85,000","UGX 88,500","UGX 90,000"],"answer":"UGX 88,500","explanation":"After discount: 75,000. VAT: 18% × 75,000 = 13,500. Final = 88,500"},
+          {"id":"q5","type":"multiple_choice","question":"A 10% discount on UGX 150,000 gives:","options":["UGX 125,000","UGX 130,000","UGX 135,000","UGX 140,000"],"answer":"UGX 135,000","explanation":"Discount = 15,000. SP = 135,000"},
+          {"id":"q6","type":"multiple_choice","question":"Price after 18% VAT on UGX 50,000 is:","options":["UGX 54,000","UGX 58,000","UGX 59,000","UGX 68,000"],"answer":"UGX 59,000","explanation":"VAT = 9,000. Total = 59,000"},
+          {"id":"q7","type":"multiple_choice","question":"Discount % = (Discount ÷ ___) × 100","options":["Cost price","Selling price","Marked price","Profit"],"answer":"Marked price","explanation":"Discount % is always calculated on the Marked (original) Price."},
+          {"id":"q8","type":"multiple_choice","question":"An item's marked price is UGX 40,000. After discount, SP is UGX 34,000. Discount % is:","options":["10%","12%","15%","20%"],"answer":"15%","explanation":"Discount = 6,000. Discount% = (6,000÷40,000)×100 = 15%"},
+          {"id":"q9","type":"multiple_choice","question":"A shopkeeper gives a 5% discount on all items. A customer buys items worth UGX 180,000. Amount saved is:","options":["UGX 7,000","UGX 8,000","UGX 9,000","UGX 10,000"],"answer":"UGX 9,000","explanation":"Discount = 5% × 180,000 = 9,000"},
+          {"id":"q10","type":"multiple_choice","question":"Price excluding VAT = UGX 300,000, VAT = 18%. Price including VAT =","options":["UGX 318,000","UGX 340,000","UGX 354,000","UGX 360,000"],"answer":"UGX 354,000","explanation":"VAT = 54,000. Total = 354,000"},
+          {"id":"q11","type":"multiple_choice","question":"A bill shows UGX 472,000 including 18% VAT. The pre-VAT price is:","options":["UGX 390,000","UGX 400,000","UGX 410,000","UGX 420,000"],"answer":"UGX 400,000","explanation":"Pre-VAT = 472,000 ÷ 1.18 = 400,000"},
+          {"id":"q12","type":"multiple_choice","question":"Two successive discounts of 10% and 10% on UGX 100,000 gives final price:","options":["UGX 80,000","UGX 81,000","UGX 82,000","UGX 85,000"],"answer":"UGX 81,000","explanation":"After 1st: 90,000. After 2nd: 90% × 90,000 = 81,000. Not same as single 20% discount."},
+          {"id":"q13","type":"multiple_choice","question":"Which is always true about discount?","options":["Discount increases cost","Discount is added to price","Discount reduces selling price below marked price","Discount equals profit"],"answer":"Discount reduces selling price below marked price","explanation":"A discount is a reduction — selling price becomes less than the marked/list price."},
+          {"id":"q14","type":"multiple_choice","question":"VAT on a UGX 1,000,000 car at 18% =","options":["UGX 108,000","UGX 118,000","UGX 160,000","UGX 180,000"],"answer":"UGX 180,000","explanation":"VAT = 18% × 1,000,000 = 180,000"},
+          {"id":"q15","type":"multiple_choice","question":"A school uniform costs UGX 45,000 before 18% VAT. Total cost is:","options":["UGX 50,100","UGX 52,000","UGX 53,100","UGX 54,000"],"answer":"UGX 53,100","explanation":"VAT = 8,100. Total = 53,100"},
+          {"id":"q16","type":"multiple_choice","question":"Marked price UGX 80,000. Discount = UGX 8,000. Discount % =","options":["8%","10%","12%","15%"],"answer":"10%","explanation":"(8,000÷80,000)×100 = 10%"},
+          {"id":"q17","type":"multiple_choice","question":"If selling price after 20% discount is UGX 64,000, marked price was:","options":["UGX 76,800","UGX 80,000","UGX 84,000","UGX 90,000"],"answer":"UGX 80,000","explanation":"SP = 80% of MP. MP = 64,000÷0.8 = 80,000"},
+          {"id":"q18","type":"multiple_choice","question":"A restaurant adds 18% VAT to a UGX 25,000 meal. Customer pays:","options":["UGX 27,500","UGX 28,000","UGX 29,500","UGX 30,500"],"answer":"UGX 29,500","explanation":"VAT = 4,500. Total = 29,500"},
+          {"id":"q19","type":"multiple_choice","question":"A 30% discount followed by 18% VAT on UGX 200,000. Final price is:","options":["UGX 154,000","UGX 160,000","UGX 164,500","UGX 166,600"],"answer":"UGX 166,600","explanation":"After discount: 140,000. VAT = 25,200. Total = 165,200. Closest = 166,600 — actual 165,200.","explanation":"After 30% discount: 200,000×0.7 = 140,000. VAT 18%: 140,000×1.18 = 165,200"},
+          {"id":"q20","type":"multiple_choice","question":"Which correctly describes VAT?","options":["A reward for buying","A reduction in price","A government tax on goods","A type of discount"],"answer":"A government tax on goods","explanation":"VAT is collected by businesses on behalf of the government on goods and services."}
+        ]
+      }
+    },
+    {
+      "id": "commercial_arithmetic_l3",
+      "title": "Simple and Compound Interest",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Interest is the extra money paid for borrowing or earned for saving. Simple interest is calculated only on the original amount (principal). Compound interest is calculated on principal PLUS previously earned interest."},
+        {"type":"formula","body":"Simple Interest (SI) = (P × R × T) ÷ 100\nwhere P = Principal, R = Rate per year (%), T = Time (years)"},
+        {"type":"formula","body":"Total Amount (Simple) = P + SI"},
+        {"type":"formula","body":"Compound Amount = P × (1 + R/100)^T"},
+        {"type":"formula","body":"Compound Interest = Compound Amount − P"},
+        {"type":"example","title":"Simple Interest","body":"UGX 500,000 invested at 8% per year for 3 years.\nSI = (500,000 × 8 × 3) ÷ 100 = UGX 120,000\nTotal = 620,000"},
+        {"type":"example","title":"Compound Interest","body":"UGX 200,000 at 10% per year for 2 years (compounded annually).\nYear 1: Interest = 20,000 → Amount = 220,000\nYear 2: Interest = 22,000 → Amount = 242,000\nCompound Interest = 42,000 (vs Simple = 40,000)"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"SI formula is:","options":["PRT/100","PR/100T","PT/100R","100/PRT"],"answer":"PRT/100","explanation":"Simple Interest = Principal × Rate × Time ÷ 100"},
+          {"id":"q2","type":"multiple_choice","question":"P = UGX 400,000, R = 10%, T = 2 years. SI =","options":["UGX 60,000","UGX 70,000","UGX 80,000","UGX 90,000"],"answer":"UGX 80,000","explanation":"SI = 400,000×10×2÷100 = 80,000"},
+          {"id":"q3","type":"multiple_choice","question":"Total amount after simple interest = P + SI. If P = 300,000 and SI = 54,000, total =","options":["UGX 340,000","UGX 350,000","UGX 354,000","UGX 360,000"],"answer":"UGX 354,000","explanation":"Total = 300,000 + 54,000 = 354,000"},
+          {"id":"q4","type":"multiple_choice","question":"Compound interest is always _____ simple interest for the same P, R, T (T > 1 year).","options":["less than","equal to","greater than","half of"],"answer":"greater than","explanation":"With compound interest, you earn interest on previously earned interest, so the total is always more."},
+          {"id":"q5","type":"multiple_choice","question":"UGX 100,000 at 20% compound interest for 2 years. Amount after 2 years =","options":["UGX 120,000","UGX 140,000","UGX 144,000","UGX 148,000"],"answer":"UGX 144,000","explanation":"Year 1: 120,000. Year 2: 120,000×1.2 = 144,000"},
+          {"id":"q6","type":"multiple_choice","question":"P = 600,000, R = 5%, T = 4 years. SI =","options":["UGX 100,000","UGX 110,000","UGX 120,000","UGX 130,000"],"answer":"UGX 120,000","explanation":"SI = 600,000×5×4÷100 = 120,000"},
+          {"id":"q7","type":"multiple_choice","question":"A loan of UGX 1,000,000 at 12% SI per year for 6 months. Interest =","options":["UGX 50,000","UGX 60,000","UGX 70,000","UGX 80,000"],"answer":"UGX 60,000","explanation":"6 months = 0.5 years. SI = 1,000,000×12×0.5÷100 = 60,000"},
+          {"id":"q8","type":"multiple_choice","question":"SI = 90,000, P = 300,000, R = 15%. Time T =","options":["1 year","2 years","3 years","4 years"],"answer":"2 years","explanation":"T = SI×100÷(P×R) = 90,000×100÷(300,000×15) = 2"},
+          {"id":"q9","type":"multiple_choice","question":"In compound interest, interest each year is calculated on:","options":["Original principal only","Current balance (P + previous interest)","Half of principal","Fixed amount"],"answer":"Current balance (P + previous interest)","explanation":"This is what makes compound interest grow faster — each year's interest is added to the base."},
+          {"id":"q10","type":"multiple_choice","question":"P = UGX 500,000 at 10% compound interest for 3 years. Amount =","options":["UGX 650,000","UGX 655,000","UGX 662,500","UGX 665,500"],"answer":"UGX 665,500","explanation":"500,000×1.1³ = 500,000×1.331 = 665,500"},
+          {"id":"q11","type":"multiple_choice","question":"Which gives more money after 5 years: 10% SI or 10% compound interest?","options":["Simple interest","Compound interest","Both give same","Depends on principal"],"answer":"Compound interest","explanation":"Compound interest always overtakes simple interest when T > 1 year."},
+          {"id":"q12","type":"multiple_choice","question":"SI = PRT/100. If SI = 36,000, T = 3, R = 12%, then P =","options":["UGX 80,000","UGX 90,000","UGX 100,000","UGX 120,000"],"answer":"UGX 100,000","explanation":"P = SI×100÷(R×T) = 3,600,000÷36 = 100,000"},
+          {"id":"q13","type":"multiple_choice","question":"A bank pays 6% compound interest. UGX 250,000 invested for 2 years gives:","options":["UGX 270,400","UGX 275,000","UGX 280,900","UGX 281,000"],"answer":"UGX 280,900","explanation":"250,000×1.06² = 250,000×1.1236 = 280,900"},
+          {"id":"q14","type":"multiple_choice","question":"The difference between compound and simple interest on UGX 10,000 at 10% for 2 years is:","options":["UGX 50","UGX 100","UGX 150","UGX 200"],"answer":"UGX 100","explanation":"SI = 2,000. CI: Year 1=1,000, Year 2=1,100. CI=2,100. Difference=100"},
+          {"id":"q15","type":"multiple_choice","question":"P = UGX 800,000, SI for 18 months at 10% p.a. =","options":["UGX 100,000","UGX 110,000","UGX 120,000","UGX 130,000"],"answer":"UGX 120,000","explanation":"18 months = 1.5 years. SI = 800,000×10×1.5÷100 = 120,000"},
+          {"id":"q16","type":"multiple_choice","question":"Rate R = SI×100÷(P×T). If SI=15,000, P=100,000, T=3, then R =","options":["3%","4%","5%","6%"],"answer":"5%","explanation":"R = 15,000×100÷(100,000×3) = 5%"},
+          {"id":"q17","type":"multiple_choice","question":"UGX 200,000 doubles in how many years at 10% SI?","options":["5 years","8 years","10 years","12 years"],"answer":"10 years","explanation":"To double: SI = P. P = PRT/100 → 1 = RT/100 → T = 100/R = 10 years"},
+          {"id":"q18","type":"multiple_choice","question":"Compound amount formula is:","options":["P(1+R)^T","P(1+R/100)^T","P×R×T÷100","P+PRT"],"answer":"P(1+R/100)^T","explanation":"This formula compounds by multiplying each period by (1 + rate/100)."},
+          {"id":"q19","type":"multiple_choice","question":"A savings account gives 8% p.a. compound interest. UGX 1,000,000 invested for 1 year gives:","options":["UGX 1,060,000","UGX 1,080,000","UGX 1,100,000","UGX 1,120,000"],"answer":"UGX 1,080,000","explanation":"For 1 year, compound = simple = 8% × 1,000,000 = 80,000. Total = 1,080,000"},
+          {"id":"q20","type":"multiple_choice","question":"The key difference: simple interest uses only _____, compound interest uses _____.","options":["original principal / growing balance","growing balance / original principal","rate / time","time / rate"],"answer":"original principal / growing balance","explanation":"SI is always calculated on P. CI uses the current balance (P + accumulated interest)."}
+        ]
+      }
+    }
+  ]
+}

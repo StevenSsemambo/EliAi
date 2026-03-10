@@ -1,0 +1,86 @@
+{
+  "topic_id": "bearings_scale_drawing",
+  "topic_title": "Bearings and Scale Drawing",
+  "subject": "mathematics",
+  "class_level": "s1",
+  "lessons": [
+    {
+      "id": "bearings_l1",
+      "title": "Compass Bearings and Direction",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"A bearing is a way of describing direction using angles measured clockwise from North. Bearings are always written as 3 digits (e.g. 045°, 090°, 270°)."},
+        {"type":"formula","body":"Cardinal directions: N=000°, E=090°, S=180°, W=270°"},
+        {"type":"formula","body":"Back bearing = Bearing + 180° (if result > 360°, subtract 360°)"},
+        {"type":"example","title":"Reading Bearings","body":"A bearing of 060° means 60° clockwise from North — this is between North and East (NE direction).\nA bearing of 225° is between South and West (SW direction)."},
+        {"type":"example","title":"Back Bearing","body":"If town B is on a bearing of 075° from town A, then town A is on a bearing of 075° + 180° = 255° from town B."},
+        {"type":"text","body":"The 8 compass points: N(000°), NE(045°), E(090°), SE(135°), S(180°), SW(225°), W(270°), NW(315°)"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Bearings are always measured from:","options":["South, clockwise","North, clockwise","East, clockwise","North, anticlockwise"],"answer":"North, clockwise","explanation":"By convention, all bearings start from North and are measured clockwise."},
+          {"id":"q2","type":"multiple_choice","question":"The bearing of East is:","options":["000°","045°","090°","180°"],"answer":"090°","explanation":"East is exactly 90° clockwise from North."},
+          {"id":"q3","type":"multiple_choice","question":"A bearing of 180° points in which direction?","options":["North","East","South","West"],"answer":"South","explanation":"180° clockwise from North points due South."},
+          {"id":"q4","type":"multiple_choice","question":"How many digits are used to write a bearing?","options":["1","2","3","4"],"answer":"3","explanation":"Bearings always use 3 digits: 005°, 045°, 270°, etc."},
+          {"id":"q5","type":"multiple_choice","question":"NE direction as a bearing is:","options":["030°","045°","060°","090°"],"answer":"045°","explanation":"NE is exactly halfway between N(000°) and E(090°) = 045°"},
+          {"id":"q6","type":"multiple_choice","question":"The back bearing of 110° is:","options":["180°","250°","290°","360°"],"answer":"290°","explanation":"Back bearing = 110° + 180° = 290°"},
+          {"id":"q7","type":"multiple_choice","question":"A bearing of 315° corresponds to which compass direction?","options":["SE","SW","NW","NE"],"answer":"NW","explanation":"NW = 315°"},
+          {"id":"q8","type":"multiple_choice","question":"Town Y is on bearing 240° from town X. Bearing of X from Y is:","options":["060°","040°","070°","080°"],"answer":"060°","explanation":"Back bearing = 240° + 180° = 420° − 360° = 060°"},
+          {"id":"q9","type":"multiple_choice","question":"Which bearing is in the SE quadrant?","options":["045°","125°","225°","315°"],"answer":"125°","explanation":"SE quadrant is between 090° and 180°. 125° falls there."},
+          {"id":"q10","type":"multiple_choice","question":"A ship travels on bearing 270°. Which direction is it heading?","options":["North","East","South","West"],"answer":"West","explanation":"270° = due West"},
+          {"id":"q11","type":"multiple_choice","question":"SW bearing is:","options":["180°","215°","225°","235°"],"answer":"225°","explanation":"SW = 225°, exactly halfway between S(180°) and W(270°)."},
+          {"id":"q12","type":"multiple_choice","question":"A bearing of 000° is:","options":["East","West","North","South"],"answer":"North","explanation":"000° or 360° both mean due North."},
+          {"id":"q13","type":"multiple_choice","question":"Back bearing of 350° is:","options":["160°","170°","175°","180°"],"answer":"170°","explanation":"350°+180°=530°. 530°−360°=170°"},
+          {"id":"q14","type":"multiple_choice","question":"A plane flies from A on bearing 060° for 100km to B. Direction from A to B is:","options":["NW","NE","SE","SW"],"answer":"NE","explanation":"060° is in the NE quadrant (between N=000° and E=090°)"},
+          {"id":"q15","type":"multiple_choice","question":"Bearing SE = ?","options":["115°","125°","135°","145°"],"answer":"135°","explanation":"SE = 135°, halfway between E(090°) and S(180°)."},
+          {"id":"q16","type":"multiple_choice","question":"Which statement about bearings is TRUE?","options":["They can be 2 digits","They are measured from South","They go anticlockwise","They always have 3 digits"],"answer":"They always have 3 digits","explanation":"Even 5° is written 005°. This is standard notation."},
+          {"id":"q17","type":"multiple_choice","question":"A hiker walks on bearing 090°. They turn to walk on back bearing. New bearing is:","options":["180°","270°","000°","090°"],"answer":"270°","explanation":"Back bearing of 090° = 090°+180° = 270° (West)"},
+          {"id":"q18","type":"multiple_choice","question":"If you face North then turn 135° clockwise, your bearing is:","options":["NE","SE","SW","NW"],"answer":"SE","explanation":"135° clockwise from North = SE direction"},
+          {"id":"q19","type":"multiple_choice","question":"A bearing between 180° and 270° is in which quadrant?","options":["NE","SE","SW","NW"],"answer":"SW","explanation":"180°=S, 270°=W, so between them is SW quadrant."},
+          {"id":"q20","type":"multiple_choice","question":"Back bearing of 045° is:","options":["215°","225°","235°","245°"],"answer":"225°","explanation":"045°+180° = 225°"}
+        ]
+      }
+    },
+    {
+      "id": "bearings_l2",
+      "title": "Scale Drawing",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"A scale drawing represents real objects at a reduced (or enlarged) size. The scale tells us the ratio between the drawing and reality."},
+        {"type":"formula","body":"Scale = Drawing length : Real length\nExample: 1:50,000 means 1cm on map = 50,000cm in reality"},
+        {"type":"formula","body":"Real distance = Drawing distance × Scale factor\nDrawing distance = Real distance ÷ Scale factor"},
+        {"type":"example","title":"Using a Map Scale","body":"A map has scale 1:200,000.\nTwo towns are 3.5cm apart on the map.\nReal distance = 3.5 × 200,000 = 700,000cm = 7km"},
+        {"type":"example","title":"Drawing to Scale","body":"A room is 6m long. Scale = 1:100.\nDrawing length = 6m ÷ 100 = 0.06m = 6cm"},
+        {"type":"text","body":"Scale drawings are used in maps, architectural plans, engineering drawings. Always state the scale clearly. Scales like 1:50 or 1cm = 50m are equivalent ways to express the same ratio."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"A scale of 1:100 means:","options":["1 real unit = 100 drawing units","1 drawing unit = 100 real units","100 real units = 100 drawing units","Drawing is 100 times bigger"],"answer":"1 drawing unit = 100 real units","explanation":"1:100 means every 1cm on drawing = 100cm in real life."},
+          {"id":"q2","type":"multiple_choice","question":"Map scale 1:50,000. Two towns are 4cm apart on map. Real distance =","options":["2km","2.5km","3km","4km"],"answer":"2km","explanation":"4 × 50,000 = 200,000cm = 2,000m = 2km"},
+          {"id":"q3","type":"multiple_choice","question":"A road is 5km long. On a 1:100,000 map, its length is:","options":["4cm","5cm","6cm","7cm"],"answer":"5cm","explanation":"5km = 500,000cm. Drawing = 500,000÷100,000 = 5cm"},
+          {"id":"q4","type":"multiple_choice","question":"Which scale gives the most detail?","options":["1:10,000","1:50,000","1:100,000","1:500,000"],"answer":"1:10,000","explanation":"Smaller scale factor = larger drawing relative to reality = more detail."},
+          {"id":"q5","type":"multiple_choice","question":"A scale drawing uses 1cm to represent 5m. Scale is:","options":["1:5","1:50","1:500","1:5000"],"answer":"1:500","explanation":"5m = 500cm. Scale = 1:500"},
+          {"id":"q6","type":"multiple_choice","question":"On a 1:200 scale plan, a wall is 3.5cm. Real length =","options":["600cm","700cm","750cm","800cm"],"answer":"700cm","explanation":"3.5 × 200 = 700cm = 7m"},
+          {"id":"q7","type":"multiple_choice","question":"A field is 300m long. At scale 1:6000, drawing length =","options":["3cm","4cm","5cm","6cm"],"answer":"5cm","explanation":"300m = 30,000cm. 30,000÷6,000 = 5cm"},
+          {"id":"q8","type":"multiple_choice","question":"A building 25m tall on a 1:500 drawing is shown as:","options":["4cm","5cm","6cm","7cm"],"answer":"5cm","explanation":"25m = 2500cm. 2500÷500 = 5cm"},
+          {"id":"q9","type":"multiple_choice","question":"What must every scale drawing include?","options":["Colour","The actual scale used","Artist name","Exact dimensions in metres"],"answer":"The actual scale used","explanation":"Without stating the scale, a drawing cannot be used to find real distances."},
+          {"id":"q10","type":"multiple_choice","question":"1cm on map = 2.5km in reality. Scale is:","options":["1:2,500","1:25,000","1:250,000","1:2,500,000"],"answer":"1:250,000","explanation":"2.5km = 250,000cm. Scale = 1:250,000"},
+          {"id":"q11","type":"multiple_choice","question":"Two cities are 120km apart. On a 1:3,000,000 map they are:","options":["2cm","3cm","4cm","5cm"],"answer":"4cm","explanation":"120km = 12,000,000cm. 12,000,000÷3,000,000 = 4cm"},
+          {"id":"q12","type":"multiple_choice","question":"A scale of 1:1 means:","options":["Drawing is twice real size","Drawing is half real size","Drawing is same size as real object","Scale is unknown"],"answer":"Drawing is same size as real object","explanation":"1:1 = true size drawing, used for very small objects."},
+          {"id":"q13","type":"multiple_choice","question":"Drawing shows 6.5cm. Scale 1:40,000. Real distance =","options":["2.4km","2.6km","3km","3.2km"],"answer":"2.6km","explanation":"6.5×40,000=260,000cm=2,600m=2.6km"},
+          {"id":"q14","type":"multiple_choice","question":"A room 8m × 5m is drawn at 1:100. Drawing dimensions are:","options":["4cm×2.5cm","8cm×5cm","80cm×50cm","0.8cm×0.5cm"],"answer":"8cm×5cm","explanation":"8m=800cm÷100=8cm. 5m=500cm÷100=5cm."},
+          {"id":"q15","type":"multiple_choice","question":"To convert from map distance to real distance, you:","options":["Divide by scale factor","Multiply by scale factor","Add scale factor","Subtract scale factor"],"answer":"Multiply by scale factor","explanation":"Real = Map × Scale factor"},
+          {"id":"q16","type":"multiple_choice","question":"A path is 7.2cm on a 1:25,000 map. Real length in km =","options":["1.2km","1.4km","1.6km","1.8km"],"answer":"1.8km","explanation":"7.2×25,000=180,000cm=1,800m=1.8km"},
+          {"id":"q17","type":"multiple_choice","question":"Which scale is used for detailed town plans?","options":["1:1,000,000","1:250,000","1:50,000","1:1,000"],"answer":"1:1,000","explanation":"Small-scale numbers (1:1,000) give most detail — used for town/building plans."},
+          {"id":"q18","type":"multiple_choice","question":"Real length 450m, scale 1:9000. Drawing length =","options":["4cm","5cm","6cm","7cm"],"answer":"5cm","explanation":"450m=45,000cm÷9,000=5cm"},
+          {"id":"q19","type":"multiple_choice","question":"A drawing shows a car 8cm long at scale 1:25. Real car length =","options":["1.5m","2m","2.5m","3m"],"answer":"2m","explanation":"8×25=200cm=2m"},
+          {"id":"q20","type":"multiple_choice","question":"Scale drawing and bearings are both used in:","options":["Cooking recipes","Navigation and mapping","Chemical equations","Musical notation"],"answer":"Navigation and mapping","explanation":"Maps use scale to show distance and bearings to show direction — both essential for navigation."}
+        ]
+      }
+    }
+  ]
+}
