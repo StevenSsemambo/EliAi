@@ -65,6 +65,7 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
 
 export default function QuasarChain({ game, levelData, studentId, onFinish }) {
   const { gridW: W, gridH: H, colors: numColors } = levelData
+  const initialMoves = levelData.moves || Math.max(15, 30 - Math.floor(levelData.level / 4))
   const nc = Math.min(numColors, ATOMS.length)
   const atoms = ATOMS.slice(0, nc)
 
@@ -73,7 +74,7 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
   const [lit, setLit]         = useState([])
   const [score, setScore]     = useState(0)
   const [combo, setCombo]     = useState(0)
-  const [moves, setMoves]     = useState(20)
+  const [moves, setMoves]     = useState(initialMoves)
   const [phase, setPhase]     = useState('playing')
   const [animating, setAnimating] = useState(false)
   const scoreRef = useRef(0)
@@ -136,7 +137,7 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
   function restart() {
     setGrid(makeGrid(W, H, nc)); setSel(null); setLit([])
     scoreRef.current = 0; setScore(0); setCombo(0)
-    setMoves(20); setPhase('playing'); setAnimating(false)
+    setMoves(initialMoves); setPhase('playing'); setAnimating(false)
   }
 
   const cellSize = Math.min(42, Math.floor(320 / W))
