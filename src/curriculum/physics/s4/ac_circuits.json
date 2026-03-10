@@ -1,0 +1,47 @@
+{
+  "topic_id": "ac_circuits",
+  "topic_title": "Alternating Current (AC) Circuits",
+  "subject": "physics",
+  "class_level": "s4",
+  "lessons": [
+    {
+      "id": "ac_l1",
+      "title": "AC vs DC and Transformers",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"DIRECT CURRENT (DC): Current flows in one direction only. From batteries. Constant voltage."},
+        {"type":"text","body":"ALTERNATING CURRENT (AC): Current reverses direction periodically. From generators and mains supply. In Uganda/UK: 50Hz frequency (50 cycles per second). 240V mains."},
+        {"type":"formula","body":"Frequency (f) = 1/Period (T) → f in Hz, T in seconds\nPeak voltage (V₀) = √2 × RMS voltage\nRMS voltage = Peak voltage ÷ √2 ≈ 0.707 × V₀"},
+        {"type":"text","body":"TRANSFORMER: Uses electromagnetic induction to change AC voltage.\nStep-up transformer: increases voltage (more secondary coils)\nStep-down transformer: decreases voltage (fewer secondary coils)"},
+        {"type":"formula","body":"Transformer equation: Vp/Vs = Np/Ns\nFor ideal transformer: Vp × Ip = Vs × Is (power conservation)\nwhere p = primary, s = secondary, V = voltage, N = turns, I = current"},
+        {"type":"example","title":"Transformer Calculation","body":"Primary: 240V, 1000 turns. Secondary: 12V.\nNs = Np × (Vs/Vp) = 1000 × (12/240) = 50 turns\nIf primary current = 0.1A: Is = Vp×Ip/Vs = 240×0.1/12 = 2A"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"AC mains in Uganda has frequency:","options":["25 Hz","50 Hz","100 Hz","60 Hz"],"answer":"50 Hz","explanation":"Uganda (and most of Africa/Europe) uses 50 Hz AC mains — 50 complete cycles per second."},
+          {"id":"q2","type":"multiple_choice","question":"RMS voltage is the ___ of AC that has the same heating effect as the same value of DC.","options":["Peak value","Average value","Equivalent DC value","Minimum value"],"answer":"Equivalent DC value","explanation":"RMS (Root Mean Square) is the effective AC voltage — it equals the DC value with same power output."},
+          {"id":"q3","type":"multiple_choice","question":"Vp/Vs = Np/Ns. If Np = 500, Ns = 100, Vp = 200V, then Vs =","options":["20V","40V","50V","100V"],"answer":"40V","explanation":"Vs = Vp × (Ns/Np) = 200 × (100/500) = 40V. Step-down transformer."},
+          {"id":"q4","type":"multiple_choice","question":"A step-up transformer:","options":["Increases voltage, decreases current","Decreases voltage, increases current","Increases both voltage and current","Increases voltage and current proportionally"],"answer":"Increases voltage, decreases current","explanation":"Power is conserved: V×I = constant. More V → less I. Step-up transformer increases V, decreases I."},
+          {"id":"q5","type":"multiple_choice","question":"Why is electricity transmitted at high voltage over long distances?","options":["High voltage is safer","Less current needed → less energy lost as heat in wires","Generators only produce high voltage","Low voltage is not allowed in cables"],"answer":"Less current needed → less energy lost as heat in wires","explanation":"Power loss = I²R. Less current at high V → much less power wasted as heat in transmission cables."},
+          {"id":"q6","type":"multiple_choice","question":"Transformers only work with:","options":["DC only","AC only","Both AC and DC","Neither — they use batteries"],"answer":"AC only","explanation":"Transformers need changing magnetic flux (from AC) to induce EMF. DC produces constant flux — no induction."},
+          {"id":"q7","type":"multiple_choice","question":"Peak voltage of 240V RMS mains supply is:","options":["240V","314V","339V","480V"],"answer":"339V","explanation":"V₀ = √2 × V_rms = 1.414 × 240 ≈ 339V"},
+          {"id":"q8","type":"multiple_choice","question":"Period T of 50 Hz AC =","options":["0.02 s","0.05 s","0.2 s","0.5 s"],"answer":"0.02 s","explanation":"T = 1/f = 1/50 = 0.02 seconds"},
+          {"id":"q9","type":"multiple_choice","question":"An ideal transformer has Np = 2000, Ns = 100, Is = 10A. Primary current Ip =","options":["0.5A","0.6A","1.0A","2.0A"],"answer":"0.5A","explanation":"Vp×Ip = Vs×Is. Also Np/Ns = Vs/Vp → Ip/Is = Ns/Np. Ip = 10×(100/2000) = 0.5A"},
+          {"id":"q10","type":"multiple_choice","question":"Electricity from power station goes through step-up transformer before transmission because:","options":["To make it AC","To reduce current and minimise power loss in cables","To increase current","To make it safer for homes"],"answer":"To reduce current and minimise power loss in cables","explanation":"Higher voltage → lower current → P_loss = I²R is minimised in long-distance cables."},
+          {"id":"q11","type":"multiple_choice","question":"Before entering homes, electricity passes through a step-___ transformer.","options":["up","down","lateral","reverse"],"answer":"down","explanation":"High transmission voltage (e.g. 33,000V) is stepped down to 240V (mains) for safe home use."},
+          {"id":"q12","type":"multiple_choice","question":"The core of a transformer is made of laminated iron to:","options":["Save cost","Reduce eddy current losses","Increase magnetic field","Make it lighter"],"answer":"Reduce eddy current losses","explanation":"Thin laminated (layered) iron reduces eddy currents that would otherwise waste energy as heat."},
+          {"id":"q13","type":"multiple_choice","question":"If transformer efficiency is 100%, power input equals:","options":["Zero","Half the output","Power output","Twice the output"],"answer":"Power output","explanation":"100% efficiency: all input power converts to output power. Vp×Ip = Vs×Is."},
+          {"id":"q14","type":"multiple_choice","question":"An oscilloscope shows AC as:","options":["Straight horizontal line","Sine wave","Vertical line","Random pattern"],"answer":"Sine wave","explanation":"AC voltage varies sinusoidally with time — an oscilloscope displays it as a smooth sine wave."},
+          {"id":"q15","type":"multiple_choice","question":"Np = 100 turns, Ns = 2000 turns. This is a:","options":["Step-down transformer","Step-up transformer","Isolation transformer","DC transformer"],"answer":"Step-up transformer","explanation":"More secondary turns than primary → Vs > Vp → step-up (increases voltage)."},
+          {"id":"q16","type":"multiple_choice","question":"The frequency of AC from a generator depends on:","options":["Voltage only","Speed of rotation of the generator","Wire resistance","Core material"],"answer":"Speed of rotation of the generator","explanation":"Faster rotation = more cycles per second = higher frequency."},
+          {"id":"q17","type":"multiple_choice","question":"A 12V, 3A device connected to 240V mains needs a transformer with turns ratio (Np:Ns) of:","options":["20:1","1:20","5:1","1:5"],"answer":"20:1","explanation":"Vp/Vs = Np/Ns. 240/12 = 20. So Np:Ns = 20:1 (step-down)."},
+          {"id":"q18","type":"multiple_choice","question":"Which device converts AC to DC?","options":["Transformer","Rectifier","Generator","Capacitor"],"answer":"Rectifier","explanation":"A rectifier (using diodes) converts AC to pulsating DC. Used in phone chargers and power supplies."},
+          {"id":"q19","type":"multiple_choice","question":"The power loss in a transmission cable with resistance R carrying current I is:","options":["IR","I²R","V²/R","I/R"],"answer":"I²R","explanation":"Power = I²R. This is why reducing current (by increasing voltage) dramatically reduces power loss in cables."},
+          {"id":"q20","type":"multiple_choice","question":"DC from batteries is used in preference to AC for:","options":["Long distance transmission","Electronic devices and portable equipment","Power stations","Street lighting"],"answer":"Electronic devices and portable equipment","explanation":"Electronic circuits (phones, laptops) need stable DC. Batteries provide portable, safe DC power."}
+        ]
+      }
+    }
+  ]
+}
