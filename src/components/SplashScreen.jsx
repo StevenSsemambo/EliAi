@@ -32,7 +32,7 @@ export default function SplashScreen({ onDone }) {
         </div>
         <div className="splash-wordmark text-center">
           <h1 className="text-3xl font-display font-extrabold tracking-tight">
-            <span className="text-white">Elimu </span><span style={{color:'#F59E0B'}}>Learn</span>
+            <span className="text-white">EqLa </span><span style={{color:'#F59E0B'}}>Learn</span>
           </h1>
           <p className="text-slate-500 text-sm mt-1">Offline · Everywhere · For You</p>
         </div>
