@@ -1,0 +1,46 @@
+{
+  "topic_id": "heat_transfer",
+  "topic_title": "Heat Transfer",
+  "subject": "physics",
+  "class_level": "s2",
+  "lessons": [
+    {
+      "id": "heat_transfer_l1",
+      "title": "Conduction, Convection and Radiation",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Heat energy transfers from regions of higher temperature to lower temperature by three methods: CONDUCTION, CONVECTION, and RADIATION."},
+        {"type":"text","body":"CONDUCTION: Transfer through direct contact. Particles vibrate and pass energy to neighbours. Best in solids (especially metals). Mechanism: free electrons in metals carry energy quickly."},
+        {"type":"text","body":"CONVECTION: Transfer by movement of a fluid (liquid or gas). Heated fluid expands, becomes less dense, rises. Cooler, denser fluid sinks to replace it — forming convection currents."},
+        {"type":"text","body":"RADIATION: Transfer as infrared electromagnetic waves. Does NOT need a medium — works in a vacuum (how we receive heat from the Sun). Dark/matt surfaces are best absorbers and emitters. Light/shiny surfaces are poor absorbers (good reflectors)."},
+        {"type":"example","title":"Real-life Examples","body":"Conduction: Metal spoon heats up in hot soup\nConvection: Sea breeze (land heats faster than sea during day)\nRadiation: Sun's heat reaching Earth through space"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Which method of heat transfer does NOT need a medium (can occur in a vacuum)?","options":["Conduction","Convection","Radiation","All three need a medium"],"answer":"Radiation","explanation":"Radiation travels as electromagnetic waves — it needs no particles, so it crosses a vacuum (like space)."},
+          {"id":"q2","type":"multiple_choice","question":"Metals are good conductors of heat because:","options":["They are shiny","Free electrons carry thermal energy quickly","They are dense","They reflect radiation"],"answer":"Free electrons carry thermal energy quickly","explanation":"Metals have delocalised (free) electrons that rapidly transfer kinetic energy through the material."},
+          {"id":"q3","type":"multiple_choice","question":"Convection currents occur because hot fluids:","options":["Become denser and sink","Become less dense and rise","Stay in one place","Conduct heat to solids"],"answer":"Become less dense and rise","explanation":"Hot fluid expands → lower density → rises. Cool fluid is denser → sinks. This creates circulation."},
+          {"id":"q4","type":"multiple_choice","question":"A black, matt surface compared to a white, shiny surface will:","options":["Absorb less radiation","Emit less radiation","Absorb and emit more radiation","Reflect more radiation"],"answer":"Absorb and emit more radiation","explanation":"Dark matt surfaces are best absorbers AND best emitters of infrared radiation."},
+          {"id":"q5","type":"multiple_choice","question":"Heat transfer in liquids and gases is mainly by:","options":["Conduction","Convection","Radiation","All equally"],"answer":"Convection","explanation":"Liquids and gases are poor conductors — heat mainly transfers by bulk movement (convection currents)."},
+          {"id":"q6","type":"multiple_choice","question":"Why does a metal feel colder than wood at the same room temperature?","options":["Metal has lower temperature","Metal conducts heat away from skin faster","Wood emits radiation","Metal is smoother"],"answer":"Metal conducts heat away from skin faster","explanation":"Both are at the same temperature, but metal is a better conductor — it draws heat from your skin faster, feeling colder."},
+          {"id":"q7","type":"multiple_choice","question":"A vacuum flask reduces heat transfer by:","options":["Conduction only","Convection only","All three methods","Radiation only"],"answer":"All three methods","explanation":"Vacuum flask: silvered walls (reduce radiation), vacuum between walls (no conduction/convection), stopper (reduces conduction/convection at top)."},
+          {"id":"q8","type":"multiple_choice","question":"Sea breeze during the day blows from:","options":["Land to sea","Sea to land","West to east","North to south always"],"answer":"Sea to land","explanation":"Land heats faster → hot air rises over land → cool sea air moves in to replace it = sea breeze blows onshore."},
+          {"id":"q9","type":"multiple_choice","question":"The Sun heats Earth by:","options":["Conduction","Convection","Radiation","All three equally"],"answer":"Radiation","explanation":"There is a vacuum (space) between Sun and Earth — only radiation can cross it."},
+          {"id":"q10","type":"multiple_choice","question":"Wool clothing keeps you warm because:","options":["Wool generates heat","Wool traps air — poor conductor — reduces heat loss","Wool reflects body heat","Wool absorbs radiation"],"answer":"Wool traps air — poor conductor — reduces heat loss","explanation":"Air is an excellent insulator. Trapped air in wool fibres prevents convection and conduction heat loss."},
+          {"id":"q11","type":"multiple_choice","question":"Hot water pipes have fins to:","options":["Look decorative","Increase surface area for better convection cooling","Reduce radiation","Support the pipe"],"answer":"Increase surface area for better convection cooling","explanation":"More surface area → more contact with air → more heat lost by convection and radiation."},
+          {"id":"q12","type":"multiple_choice","question":"The rate of conduction depends on:","options":["Colour of material only","Temperature difference, cross-section area, material type, thickness","Speed of particles only","Density only"],"answer":"Temperature difference, cross-section area, material type, thickness","explanation":"Rate of conduction ∝ ΔT × A ÷ thickness. Material type (conductivity) also matters."},
+          {"id":"q13","type":"multiple_choice","question":"Which is the best emitter of infrared radiation?","options":["Polished silver surface","White painted surface","Dull black surface","Mirror surface"],"answer":"Dull black surface","explanation":"Matt black surfaces are the best emitters AND absorbers of radiation. Shiny surfaces are poor emitters."},
+          {"id":"q14","type":"multiple_choice","question":"In central heating, water rises up pipes and hot air rises in rooms. This is:","options":["Conduction","Forced convection","Natural convection","Radiation"],"answer":"Natural convection","explanation":"Hot water/air naturally rises (less dense), cool sinks — natural convection currents distribute heat."},
+          {"id":"q15","type":"multiple_choice","question":"Why are cavity walls in houses filled with foam or mineral wool?","options":["To add weight","To trap air and reduce convection currents","To absorb sound only","To increase radiation"],"answer":"To trap air and reduce convection currents","explanation":"Foam/wool prevents air movement in cavity — stops convection. Still air is a good insulator."},
+          {"id":"q16","type":"multiple_choice","question":"Radiation travels at:","options":["Speed of sound","Speed of electrons","Speed of light (3×10⁸ m/s)","Speed depends on medium"],"answer":"Speed of light (3×10⁸ m/s)","explanation":"Infrared radiation is electromagnetic — it travels at the speed of light in vacuum."},
+          {"id":"q17","type":"multiple_choice","question":"Convection cannot occur in:","options":["Water","Air","Solids","Gases"],"answer":"Solids","explanation":"Convection requires fluid (liquid or gas) that can flow. Solid particles are fixed — they cannot move to create currents."},
+          {"id":"q18","type":"multiple_choice","question":"A solar water heater uses dark pipes because dark surfaces:","options":["Conduct heat better","Absorb more solar radiation","Reflect radiation","Are cheaper"],"answer":"Absorb more solar radiation","explanation":"Dark surfaces absorb more incoming infrared radiation — more efficient at collecting solar energy."},
+          {"id":"q19","type":"multiple_choice","question":"Thermal conductivity of air compared to glass is:","options":["Higher","The same","Lower","Depends on temperature"],"answer":"Lower","explanation":"Air is a poor conductor (good insulator). This is why double glazing (air gap) reduces heat loss."},
+          {"id":"q20","type":"multiple_choice","question":"Which method of heat transfer involves actual movement of matter?","options":["Conduction","Radiation","Convection","All three"],"answer":"Convection","explanation":"Convection involves bulk movement of fluid particles carrying heat energy. Conduction/radiation do not move matter."}
+        ]
+      }
+    }
+  ]
+}
