@@ -7,6 +7,29 @@ import { SoundEngine } from '../utils/soundEngine.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
 
+// Curriculum file map — used to look up lessons when navigating directly by URL
+const ALL_SUBJECT_FILES={
+  mathematics:{s1:['algebra','bearings_scale_drawing','commercial_arithmetic','geometry','linear_equations','mensuration','number_theory','numbers','ratio_indices','sets','statistics_intro'],s2:['coordinate_geometry','logarithms','matrices_intro','quadratic','simultaneous','statistics','trigonometry','vectors_2d','vectors_intro'],s3:['coordinate_sequences','differentiation','earth_geometry','functions','integration','linear_programming','matrices_probability'],s4:['calculus','financial_maths','inequalities','loci_construction','permcomb','transformation_geometry','trigonometry_advanced','vectors'],s5:['complex_numbers','differential_equations','further_calculus','mechanics','numerical_methods','probability_advanced'],s6:['applied_mathematics','further_pure','number_theory','pure_mathematics','statistics_probability']},
+  physics:{s1:['density_flotation','energy','forces','light','measurement','properties_matter','simple_machines'],s2:['current_electricity','electronics','heat_transfer','magnetism_heat','sound','waves_electricity'],s3:['electromagnetic','kinematics','motion_kinematics','pressure_fluids','radioactivity'],s4:['ac_circuits','circular_gravitation','electricity_detail','electronics','optics_full'],s5:['mechanics_advanced','nuclear_physics','optics_full','semiconductor_physics','thermal_physics','waves_optics'],s6:['astrophysics','modern_physics','particle_physics','quantum_mechanics','relativity']},
+  biology:{s1:['cells','classification','diffusion_osmosis','movement_in_plants','nutrition_plants_animals','photosynthesis_respiration'],s2:['digestion_ecology','gaseous_exchange','nervous_system','nutrition','reproduction','transport'],s3:['ecology','excretion','genetics','hormones_homeostasis','reproduction','support_and_movement'],s4:['biotechnology','cell_division','coordination','disease_health','ecology','evolution_immunity'],s5:['biochemistry','bioenergetics','cell_biology_advanced','ecology_advanced','genetics_advanced','microbiology'],s6:['bioethics','developmental_biology','immunology','molecular_biology']},
+  chemistry:{s1:['atoms','bonding','matter','separation_techniques','water'],s2:['acids_periodic','energy_changes','extraction_of_metals','gases_solutions','mole_calculations','reactions_metals'],s3:['electrochemistry','gases','nitrogen_compounds','organic_rates','stoichiometry'],s4:['chemical_analysis','fuels_combustion','halogens','organic_chemistry','thermochemistry'],s5:['advanced_organic','equilibria','equilibrium','spectroscopy','transition_metals'],s6:['biochemistry','green_chemistry','industrial_chemistry','pharmaceuticals','polymers']},
+}
+
+async function findLessonById(lessonId, classLevel){
+  const cls=(classLevel||'s1').toLowerCase()
+  for(const [subj,levels] of Object.entries(ALL_SUBJECT_FILES)){
+    for(const file of (levels[cls]||[])){
+      try{
+        const mod=await import(`../curriculum/${subj}/${cls}/${file}.json`)
+        const data=mod.default
+        const found=(data.lessons||[]).find(l=>l.id===lessonId)
+        if(found) return {lesson:found, subject:subj, topicId:data.topic_id}
+      }catch(e){}
+    }
+  }
+  return null
+}
+
 export default function Lesson(){
   const {lessonId}=useParams()
   const {state}=useLocation()
@@ -14,6 +37,9 @@ export default function Lesson(){
   const {student}=useUser()
   const {setSubject}=useSubjectTheme()
   const [lesson,setLesson]=useState(state?.lesson||null)
+  const [fallbackSubject,setFallbackSubject]=useState(null)
+  const [fallbackTopicId,setFallbackTopicId]=useState(null)
+  const [lookingUp,setLookingUp]=useState(!state?.lesson)
   const [scrollPct,setScrollPct]=useState(0)
   const [isBookmarked,setIsBookmarked]=useState(false)
   const [notes,setNotes]=useState('')
@@ -22,8 +48,22 @@ export default function Lesson(){
   const [progressDone,setProgressDone]=useState(false)
   const saveTimer=useRef(null)
   const startTime=useRef(Date.now())
-  const subject=state?.subject
-  const topicId=state?.topicId
+  const subject=state?.subject||fallbackSubject
+  const topicId=state?.topicId||fallbackTopicId
+
+  // Fallback: if page was loaded directly via URL with no router state, scan curriculum
+  useEffect(()=>{
+    if(state?.lesson||!lessonId)return
+    setLookingUp(true)
+    findLessonById(lessonId, student?.class_level).then(result=>{
+      if(result){
+        setLesson(result.lesson)
+        setFallbackSubject(result.subject)
+        setFallbackTopicId(result.topicId)
+      }
+      setLookingUp(false)
+    })
+  },[lessonId, student?.class_level])
 
   useEffect(()=>{
     if(subject)setSubject(subject)
@@ -56,7 +96,7 @@ export default function Lesson(){
     }
     window.addEventListener('scroll',onScroll)
     return()=>window.removeEventListener('scroll',onScroll)
-  },[progressDone])
+  },[progressDone, student, lesson, subject, topicId])
 
   function handleNotesChange(v){
     setNotes(v);setNotesSaved(false)
@@ -110,9 +150,23 @@ export default function Lesson(){
     }
   }
 
+  if(lookingUp)return(
+    <div className="min-h-screen flex items-center justify-center" style={{background:'#0C0F1A'}}>
+      <div className="text-center">
+        <div className="w-12 h-12 rounded-full border-4 animate-spin mx-auto mb-4" style={{borderColor:'#14B8A6',borderTopColor:'transparent'}}/>
+        <p className="text-slate-500 text-sm">Loading lesson…</p>
+      </div>
+    </div>
+  )
+
   if(!lesson)return(
     <div className="min-h-screen flex items-center justify-center" style={{background:'#0C0F1A'}}>
-      <div className="text-center px-6"><p className="text-slate-400 mb-4">Lesson not found.</p><button onClick={()=>navigate(-1)} className="acc-color">← Go back</button></div>
+      <div className="text-center px-6">
+        <p className="text-4xl mb-4">📚</p>
+        <p className="text-slate-300 font-semibold mb-2">Lesson not found</p>
+        <p className="text-slate-500 text-sm mb-6">This lesson may not be available for your class level.</p>
+        <button onClick={()=>navigate('/dashboard')} className="px-6 py-3 rounded-2xl font-bold text-white" style={{background:'linear-gradient(135deg,#0D9488,#0369A1)'}}>← Dashboard</button>
+      </div>
     </div>
   )
 
