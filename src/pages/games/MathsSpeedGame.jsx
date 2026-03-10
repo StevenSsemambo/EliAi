@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { SoundEngine } from '../../utils/soundEngine.js'
 
 function makeQuestion(level) {
   const tier = Math.min(Math.floor((level - 1) / 4), 4)
@@ -92,6 +93,7 @@ export default function MathsSpeedGame({ levelData, onFinish }) {
     if (phase !== 'question') return
     const t = setInterval(() => setTimeLeft(n => {
       if (n <= 1) { clearInterval(t); pick(null); return 0 }
+      if (n <= 8) SoundEngine.timerTick(n <= 3 ? 3 : 2)
       return n - 1
     }), 1000)
     return () => clearInterval(t)
@@ -104,10 +106,16 @@ export default function MathsSpeedGame({ levelData, onFinish }) {
     const ok = ans === q.answer
     const newStreak = ok ? streak + 1 : 0
     setStreak(newStreak)
-    if (ok) setScore(s => s + Math.max(10, timeLeft * 4) + streak * 8)
+    if (ok) {
+      setScore(s => s + Math.max(10, timeLeft * 4) + streak * 8)
+      SoundEngine.gameCorrect()
+      if (newStreak >= 2) SoundEngine.combo(newStreak)
+    } else {
+      SoundEngine.gameWrong()
+    }
     setTimeout(() => {
       const next = round + 1
-      if (next >= ROUNDS) { onFinish?.() }
+      if (next >= ROUNDS) { SoundEngine.levelComplete(); onFinish?.() }
       else { setRound(next); nextQuestion() }
     }, 1600)
   }
