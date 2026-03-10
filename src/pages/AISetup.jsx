@@ -101,7 +101,7 @@ export default function AISetup() {
               </p>
               <div className="mt-3 pt-3" style={{ borderTop: `1px solid ${theme.border}` }}>
                 <p className="text-xs font-bold" style={{ color: theme.accent }}>
-                  💻 Use Elimu on a desktop/laptop browser to download the full AI model.
+                  💻 Use EqLa on a desktop/laptop browser to download the full AI model.
                 </p>
               </div>
             </div>
