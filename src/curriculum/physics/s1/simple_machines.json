@@ -1,0 +1,85 @@
+{
+  "topic_id": "simple_machines",
+  "topic_title": "Simple Machines",
+  "subject": "physics",
+  "class_level": "s1",
+  "lessons": [
+    {
+      "id": "machines_l1",
+      "title": "Levers and Mechanical Advantage",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"A simple machine is a device that makes work easier by changing the size or direction of a force. The six simple machines are: lever, pulley, inclined plane, wheel & axle, wedge, and screw."},
+        {"type":"formula","body":"Mechanical Advantage (MA) = Load ÷ Effort\nVelocity Ratio (VR) = Distance moved by effort ÷ Distance moved by load\nEfficiency = (MA ÷ VR) × 100%"},
+        {"type":"text","body":"LEVERS have three parts: Fulcrum (pivot point), Load (force being moved), Effort (force applied).\nClass 1: Fulcrum between effort and load (e.g. seesaw, scissors)\nClass 2: Load between fulcrum and effort (e.g. wheelbarrow, bottle opener)\nClass 3: Effort between fulcrum and load (e.g. tweezers, fishing rod)"},
+        {"type":"example","title":"Lever Calculation","body":"A crowbar (class 1 lever): effort arm = 90cm, load arm = 30cm.\nVR = effort arm ÷ load arm = 90÷30 = 3\nThis means 1N effort can move 3N load (ignoring friction)."},
+        {"type":"formula","body":"For levers: Effort × Effort arm = Load × Load arm (Principle of moments)"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"Mechanical advantage is defined as:","options":["Effort ÷ Load","Load ÷ Effort","Load × Effort","Distance ÷ Load"],"answer":"Load ÷ Effort","explanation":"MA = Load/Effort. MA > 1 means effort is less than load — the machine helps you."},
+          {"id":"q2","type":"multiple_choice","question":"In a Class 2 lever, the load is:","options":["Between fulcrum and effort","At the fulcrum","Beyond the effort","Between fulcrum and effort... wait: between fulcrum and effort"],"answer":"Between fulcrum and effort","explanation":"Class 2: F—L—E. Load is between fulcrum and effort. Wheelbarrow is the classic example."},
+          {"id":"q3","type":"multiple_choice","question":"A seesaw is an example of a class ___ lever.","options":["1","2","3","4"],"answer":"1","explanation":"Class 1: fulcrum in the middle (F between L and E). Seesaw, scissors, crowbar."},
+          {"id":"q4","type":"multiple_choice","question":"Effort = 50N, Load = 200N. Mechanical Advantage =","options":["2","4","10","0.25"],"answer":"4","explanation":"MA = Load÷Effort = 200÷50 = 4"},
+          {"id":"q5","type":"multiple_choice","question":"Efficiency of a machine can never exceed:","options":["50%","75%","100%","200%"],"answer":"100%","explanation":"Due to friction, some energy is always lost. Efficiency < 100% in real machines."},
+          {"id":"q6","type":"multiple_choice","question":"Effort arm = 120cm, load arm = 40cm. VR of lever =","options":["1","2","3","4"],"answer":"3","explanation":"VR = effort arm ÷ load arm = 120÷40 = 3"},
+          {"id":"q7","type":"multiple_choice","question":"Tweezers are a class ___ lever.","options":["1","2","3","4"],"answer":"3","explanation":"Class 3: effort between fulcrum and load (E—F—L from one end). Tweezers, fishing rod."},
+          {"id":"q8","type":"multiple_choice","question":"A machine with MA = 5 and VR = 8 has efficiency:","options":["40%","62.5%","160%","80%"],"answer":"62.5%","explanation":"Efficiency = (MA÷VR)×100 = (5÷8)×100 = 62.5%"},
+          {"id":"q9","type":"multiple_choice","question":"A wheelbarrow is a class ___ lever.","options":["1","2","3","1 and 2"],"answer":"2","explanation":"Wheelbarrow: wheel=fulcrum, load in bucket=between fulcrum and hands(effort). Class 2."},
+          {"id":"q10","type":"multiple_choice","question":"Principle of moments states: Effort × effort arm =","options":["Load + load arm","Load × load arm","Load ÷ load arm","Effort ÷ load arm"],"answer":"Load × load arm","explanation":"Sum of clockwise moments = Sum of anticlockwise moments about the fulcrum."},
+          {"id":"q11","type":"multiple_choice","question":"A lever has effort arm 80cm, load 400N, effort 100N. Load arm is:","options":["10cm","20cm","30cm","40cm"],"answer":"20cm","explanation":"E×ea = L×la → 100×80 = 400×la → la = 20cm"},
+          {"id":"q12","type":"multiple_choice","question":"Which simple machine works on the same principle as a lever?","options":["Pulley only","Wheel and axle","Inclined plane","Wedge"],"answer":"Wheel and axle","explanation":"Wheel and axle acts like a lever with wheel radius as effort arm and axle radius as load arm."},
+          {"id":"q13","type":"multiple_choice","question":"Class 3 levers always have MA:","options":["Greater than 1","Equal to 1","Less than 1","Equal to 0"],"answer":"Less than 1","explanation":"In Class 3, effort is always closer to fulcrum than load, so you exert MORE force than load — MA < 1. They give speed advantage not force advantage."},
+          {"id":"q14","type":"multiple_choice","question":"The fulcrum of a pair of scissors is the:","options":["Blade","Handle","Pivot screw","Cutting edge"],"answer":"Pivot screw","explanation":"The screw/rivet at the centre is the fulcrum (pivot point) of the scissors."},
+          {"id":"q15","type":"multiple_choice","question":"VR of a machine is always:","options":["Less than MA","Equal to MA","Greater than or equal to MA","Independent of MA"],"answer":"Greater than or equal to MA","explanation":"VR ≥ MA always. Efficiency = MA/VR ≤ 1 (100%)."},
+          {"id":"q16","type":"multiple_choice","question":"A crowbar lifts a 600N rock with 120N effort. MA =","options":["3","4","5","6"],"answer":"5","explanation":"MA = 600÷120 = 5"},
+          {"id":"q17","type":"multiple_choice","question":"If efficiency = 80% and VR = 5, then MA =","options":["3","4","5","6"],"answer":"4","explanation":"Efficiency = MA/VR×100: 80 = MA/5×100 → MA = 4"},
+          {"id":"q18","type":"multiple_choice","question":"Which class of lever gives a mechanical advantage greater than 1?","options":["Class 1 only","Class 2 only","Class 3 only","Class 1 and Class 2"],"answer":"Class 1 and Class 2","explanation":"Class 1 and 2 can have effort arm > load arm, giving MA > 1. Class 3 always has MA < 1."},
+          {"id":"q19","type":"multiple_choice","question":"The work input to a machine is always ___ the work output.","options":["Less than","Equal to","Greater than or equal to","Half of"],"answer":"Greater than or equal to","explanation":"Some input energy is always wasted as heat due to friction (unless machine is 100% efficient)."},
+          {"id":"q20","type":"multiple_choice","question":"A bottle opener is a class ___ lever.","options":["1","2","3","4"],"answer":"2","explanation":"Bottle opener: fulcrum at bottle cap edge, load is the cap, effort at handle end. Class 2."}
+        ]
+      }
+    },
+    {
+      "id": "machines_l2",
+      "title": "Pulleys and Inclined Planes",
+      "duration_minutes": 25,
+      "xp_reward": 50,
+      "content": [
+        {"type":"text","body":"PULLEYS change the direction of a force and can reduce the effort needed to lift a load. The number of rope segments supporting the load equals the VR."},
+        {"type":"formula","body":"Pulley VR = number of rope segments supporting the load\nSingle fixed pulley: VR = 1 (only changes direction)\nSingle movable pulley: VR = 2"},
+        {"type":"text","body":"INCLINED PLANES (ramps): Make it easier to raise a load by spreading the work over a longer distance."},
+        {"type":"formula","body":"Inclined plane VR = Length of slope ÷ Height\nEffort = Load × (Height ÷ Length) [ideal, no friction]"},
+        {"type":"example","title":"Pulley System","body":"A block and tackle with 4 rope segments supporting the load.\nVR = 4. Load = 800N, efficiency = 75%.\nMA = efficiency × VR / 100 = 0.75 × 4 = 3\nEffort = Load ÷ MA = 800 ÷ 3 = 267N"},
+        {"type":"example","title":"Ramp","body":"A ramp is 5m long and 1m high.\nVR = 5÷1 = 5\nA 100N load needs ideal effort of 100÷5 = 20N to push up."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"A single fixed pulley has VR =","options":["0","1","2","3"],"answer":"1","explanation":"A single fixed pulley only changes the direction of force; it doesn't reduce effort. VR = 1."},
+          {"id":"q2","type":"multiple_choice","question":"A pulley system has 3 rope segments supporting the load. VR =","options":["1","2","3","4"],"answer":"3","explanation":"For pulleys, VR = number of rope segments holding the load."},
+          {"id":"q3","type":"multiple_choice","question":"An inclined plane is 8m long and 2m high. VR =","options":["2","4","6","10"],"answer":"4","explanation":"VR = Length÷Height = 8÷2 = 4"},
+          {"id":"q4","type":"multiple_choice","question":"The advantage of an inclined plane is that it:","options":["Reduces work done","Increases speed","Reduces effort needed to raise a load","Eliminates friction"],"answer":"Reduces effort needed to raise a load","explanation":"A ramp spreads the work over greater distance, reducing force required at any one moment."},
+          {"id":"q5","type":"multiple_choice","question":"A movable pulley attached to the load:","options":["Has VR = 1","Has VR = 2","Only changes direction","Makes load heavier"],"answer":"Has VR = 2","explanation":"A movable pulley has 2 rope segments supporting it, giving VR = 2 and halving the effort."},
+          {"id":"q6","type":"multiple_choice","question":"Load = 600N, VR = 4, efficiency = 50%. Effort needed =","options":["250N","300N","350N","400N"],"answer":"300N","explanation":"MA = Eff×VR/100 = 0.5×4 = 2. Effort = Load/MA = 600/2 = 300N"},
+          {"id":"q7","type":"multiple_choice","question":"Ramp length 10m, height 2m. A 500N crate needs ideal effort of:","options":["50N","100N","150N","200N"],"answer":"100N","explanation":"Ideal effort = Load×height/length = 500×2/10 = 100N"},
+          {"id":"q8","type":"multiple_choice","question":"Which has greater VR: ramp (length 6m, height 1m) or pulley with 4 rope segments?","options":["Ramp (VR=6)","Pulley (VR=4)","Both equal","Cannot compare"],"answer":"Ramp (VR=6)","explanation":"Ramp VR=6/1=6. Pulley VR=4. Ramp has higher VR."},
+          {"id":"q9","type":"multiple_choice","question":"Adding more pulleys to a block-and-tackle system:","options":["Decreases VR","Increases VR","Has no effect","Reduces load"],"answer":"Increases VR","explanation":"More pulleys = more rope segments supporting load = higher VR = less effort needed."},
+          {"id":"q10","type":"multiple_choice","question":"A single fixed pulley is useful because:","options":["It increases MA","It changes direction of force making work more convenient","It has high efficiency","It reduces load"],"answer":"It changes direction of force making work more convenient","explanation":"You can pull down instead of up — more comfortable, but no force advantage (VR=1)."},
+          {"id":"q11","type":"multiple_choice","question":"VR of block-and-tackle with 6 rope segments =","options":["3","4","5","6"],"answer":"6","explanation":"VR = number of rope segments = 6"},
+          {"id":"q12","type":"multiple_choice","question":"Screw jack, car ramp, loading bay — these are all examples of:","options":["Levers","Pulleys","Inclined planes","Wheel and axle"],"answer":"Inclined planes","explanation":"All use the principle of trading longer distance for less force — inclined plane principle."},
+          {"id":"q13","type":"multiple_choice","question":"Effort = 150N, VR = 6, MA = 4.5. Efficiency =","options":["60%","70%","75%","80%"],"answer":"75%","explanation":"Efficiency = MA/VR × 100 = 4.5/6 × 100 = 75%"},
+          {"id":"q14","type":"multiple_choice","question":"If ramp height is increased but length stays the same, effort needed:","options":["Decreases","Stays same","Increases","Becomes zero"],"answer":"Increases","explanation":"VR = L/H. More height = smaller VR = less mechanical advantage = more effort."},
+          {"id":"q15","type":"multiple_choice","question":"The work done by a machine:","options":["Always exceeds work input","Equals work input in ideal machine","Is always less than work input","Has nothing to do with work input"],"answer":"Equals work input in ideal machine","explanation":"Energy conservation: in ideal (frictionless) machine, work output = work input."},
+          {"id":"q16","type":"multiple_choice","question":"A pulley system has VR=5, load=1000N, efficiency=80%. Effort =","options":["200N","220N","240N","250N"],"answer":"250N","explanation":"MA=0.8×5=4. Effort=1000/4=250N"},
+          {"id":"q17","type":"multiple_choice","question":"The screw is a simple machine based on which principle?","options":["Lever","Pulley","Inclined plane wound around a cylinder","Wheel and axle"],"answer":"Inclined plane wound around a cylinder","explanation":"A screw is an inclined plane (ramp) wrapped into a spiral — each turn moves load a tiny height."},
+          {"id":"q18","type":"multiple_choice","question":"A block-and-tackle with VR=3 lifts 300N with what ideal effort?","options":["50N","75N","100N","150N"],"answer":"100N","explanation":"Ideal (100% efficiency): Effort = Load/VR = 300/3 = 100N"},
+          {"id":"q19","type":"multiple_choice","question":"Friction in simple machines:","options":["Increases efficiency","Decreases efficiency","Has no effect on efficiency","Only affects pulleys"],"answer":"Decreases efficiency","explanation":"Friction wastes energy as heat, so actual MA < VR and efficiency < 100%."},
+          {"id":"q20","type":"multiple_choice","question":"Which machine type is used in a bicycle's chain drive?","options":["Lever","Inclined plane","Wheel and axle","Pulley"],"answer":"Wheel and axle","explanation":"The pedals, chainring, and rear sprocket work as wheel-and-axle systems."}
+        ]
+      }
+    }
+  ]
+}
