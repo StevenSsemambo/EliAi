@@ -179,7 +179,7 @@ export async function initEngine(modelOverride = null) {
 
 // ── Generate response ─────────────────────────────────────────────
 function buildSystemPrompt(studentName, subject, topic) {
-  return `You are Elimu AI, a friendly expert tutor for Ugandan secondary school students (S1-S6).
+  return `You are EqLa AI, a friendly expert tutor for Ugandan secondary school students (S1-S6).
 You specialize in Mathematics, Physics, Biology, and Chemistry (UNEB curriculum).
 ${studentName ? `Student: ${studentName}.` : ''}
 ${subject ? `Subject: ${subject}.` : ''}
