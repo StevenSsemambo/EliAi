@@ -179,6 +179,161 @@ export const GAMES = [
       'Vectors I','Matrices I','Calculus I','UNEB Exam Prep',
     ], l => ({ req: gradual(l, { minL:0, maxL:0, minS:40, maxS:80, minE:0, maxE:0 }) })),
   },
+
+  // ── 5 NEW COGNITIVE GAMES ─────────────────────────────────────────
+  {
+    id: 'cipher_break', name: 'Cipher Break', icon: '🔐',
+    description: 'Decode encrypted messages using Caesar, Atbash, Rail Fence and number ciphers',
+    type: 'cipher', color: '#F97316', glow: 'rgba(249,115,22,0.4)',
+    category: 'Cryptic', cogSkill: 'Cryptographic Reasoning & Pattern Deduction',
+    levels: makeLevels([
+      'Caesar I','Caesar II','Caesar III','Caesar IV',
+      'Caesar + Reverse I','Caesar + Reverse II','Caesar + Reverse III','Caesar + Reverse IV',
+      'Atbash I','Atbash II','Atbash III','Atbash IV',
+      'Number Code I','Number Code II','Number Code III','Number Code IV',
+      'Rail Fence I','Rail Fence II','Rail Fence III','Rail Fence IV',
+      'Mixed I','Mixed II','Mixed III','Master Decoder',
+    ], l => ({ req: gradual(l, { minL:2, maxL:120, minS:0, maxS:75, minE:0, maxE:4 }) })),
+  },
+  {
+    id: 'balance_mind', name: 'Balance Mind', icon: '⚖️',
+    description: 'Solve algebraic balance puzzles — drag weights to make both scales equal',
+    type: 'balance', color: '#84CC16', glow: 'rgba(132,204,22,0.4)',
+    category: 'Algebra', cogSkill: 'Abstract Algebraic Thinking & Equation Solving',
+    levels: makeLevels([
+      'One Unknown I','One Unknown II','One Unknown III','One Unknown IV','One Unknown V',
+      'Two Unknowns I','Two Unknowns II','Two Unknowns III','Two Unknowns IV','Two Unknowns V',
+      'Multiplied I','Multiplied II','Multiplied III','Multiplied IV','Multiplied V',
+      'Both Sides I','Both Sides II','Both Sides III','Both Sides IV','Both Sides V',
+      'Expert I','Expert II','Expert III','Grand Balance',
+    ], l => ({ req: gradual(l, { minL:3, maxL:150, minS:0, maxS:78, minE:0, maxE:5 }) })),
+  },
+  {
+    id: 'path_finder', name: 'Path Finder', icon: '🗺️',
+    description: 'Navigate from A→B in minimum moves — avoid obstacles, use teleporters and boosts',
+    type: 'pathfind', color: '#06B6D4', glow: 'rgba(6,182,212,0.4)',
+    category: 'Strategic', cogSkill: 'Strategic Planning & Route Optimisation',
+    levels: makeLevels([
+      'Open Field I','Open Field II','Open Field III','Open Field IV','Open Field V',
+      'Mud Terrain I','Mud Terrain II','Mud Terrain III','Mud Terrain IV','Mud Terrain V',
+      'Teleport Zone I','Teleport Zone II','Teleport Zone III','Teleport Zone IV','Teleport Zone V',
+      'Boost Trails I','Boost Trails II','Boost Trails III','Boost Trails IV','Boost Trails V',
+      'Expert Maze I','Expert Maze II','Expert Maze III','Grand Navigator',
+    ], l => ({ req: gradual(l, { minL:4, maxL:180, minS:0, maxS:80, minE:0, maxE:5 }) })),
+  },
+  {
+    id: 'word_forge', name: 'Word Forge', icon: '🔤',
+    description: 'Unscramble letters to forge words against the clock — hints cost points',
+    type: 'wordforge', color: '#EC4899', glow: 'rgba(236,72,153,0.4)',
+    category: 'Verbal', cogSkill: 'Verbal Reasoning & Lexical Flexibility',
+    levels: makeLevels([
+      'Warm Up I','Warm Up II','Warm Up III','Warm Up IV','Warm Up V','Warm Up VI','Warm Up VII','Warm Up VIII',
+      'Challenge I','Challenge II','Challenge III','Challenge IV','Challenge V','Challenge VI','Challenge VII','Challenge VIII',
+      'Expert I','Expert II','Expert III','Expert IV','Expert V','Expert VI','Expert VII','Word Master',
+    ], l => ({ req: gradual(l, { minL:1, maxL:130, minS:0, maxS:76, minE:0, maxE:4 }) })),
+  },
+  {
+    id: 'mind_map', name: 'Mind Map', icon: '🧠',
+    description: 'Solve visual analogies: A is to B as C is to ? — across 9 relationship types',
+    type: 'mindmap', color: '#A855F7', glow: 'rgba(168,85,247,0.4)',
+    category: 'Analogical', cogSkill: 'Abstract Relational Reasoning & Lateral Thinking',
+    levels: makeLevels([
+      'Opposites I','Opposites II','Opposites III','Opposites IV',
+      'Function I','Function II','Function III','Function IV',
+      'Part-Whole I','Part-Whole II','Part-Whole III','Part-Whole IV',
+      'Cause-Effect I','Cause-Effect II','Cause-Effect III','Cause-Effect IV',
+      'Category I','Category II','Category III','Category IV',
+      'Mixed I','Mixed II','Mixed III','Grand Analogy',
+    ], l => ({ req: gradual(l, { minL:2, maxL:140, minS:0, maxS:77, minE:0, maxE:4 }) })),
+  },
+  // ── 5 NEW COGNITIVE GAMES ─────────────────────────────────────
+  {
+    id: 'mind_bridge', name: 'Mind Bridge', icon: '🧩',
+    description: 'Solve Einstein-style logic puzzles — use clues to deduce who does what',
+    type: 'deduction', color: '#8B5CF6', glow: 'rgba(139,92,246,0.4)',
+    category: 'Logic', cogSkill: 'Deductive Reasoning & Systematic Elimination',
+    levels: makeLevels([
+      'First Clue','Simple Logic','Three Variables','Four Clues I','Four Clues II',
+      'Five Clues I','Five Clues II','Six Clues I','Six Clues II','Category Clash I',
+      'Category Clash II','Cross Reference I','Cross Reference II','Elimination I','Elimination II',
+      'Deep Logic I','Deep Logic II','Deep Logic III','Multi-Layer I','Multi-Layer II',
+      'Expert Deduction I','Expert Deduction II','Grand Puzzle I','Grand Puzzle II',
+    ], (lvl) => {
+      const t = (lvl-1)/23
+      return { puzzleIdx: Math.floor(t*5), timeLimit: Math.round(300-t*120), req: gradual(lvl, { minL:5,maxL:200, minS:45,maxS:85, minE:0,maxE:6 }) }
+    }),
+  },
+  {
+    id: 'flow_state', name: 'Flow State', icon: '🌊',
+    description: 'Connect matching colours with paths — fill every cell without crossing',
+    type: 'flow', color: '#06B6D4', glow: 'rgba(6,182,212,0.4)',
+    category: 'Spatial', cogSkill: 'Route Planning & Spatial Problem-Solving',
+    levels: makeLevels([
+      'Trickle I','Trickle II','Trickle III','Trickle IV',
+      'Stream I','Stream II','Stream III','Stream IV',
+      'River I','River II','River III','River IV',
+      'Flood I','Flood II','Flood III','Flood IV',
+      'Torrent I','Torrent II','Torrent III','Torrent IV',
+      'Cascade I','Cascade II','Cascade III','The Abyss',
+    ], (lvl) => {
+      const t = (lvl-1)/23
+      const gs = lvl<=6?4:lvl<=14?5:6
+      return { gridSize: gs, puzzleSet: lvl%3, req: gradual(lvl, { minL:5,maxL:180, minS:40,maxS:84, minE:0,maxE:5 }) }
+    }),
+  },
+  {
+    id: 'tower_of_mind', name: 'Tower of Mind', icon: '🏗️',
+    description: 'Move all discs from peg A to peg C — never place a larger on a smaller',
+    type: 'hanoi', color: '#F59E0B', glow: 'rgba(245,158,11,0.4)',
+    category: 'Algorithmic', cogSkill: 'Recursive Thinking & Optimal Planning',
+    levels: makeLevels([
+      'Two Discs I','Two Discs II','Two Discs III','Two Discs IV',
+      'Three Discs I','Three Discs II','Three Discs III','Three Discs IV',
+      'Three Discs V','Three Discs VI','Four Discs I','Four Discs II',
+      'Four Discs III','Four Discs IV','Four Discs V','Four Discs VI',
+      'Five Discs I','Five Discs II','Five Discs III','Five Discs IV',
+      'Six Discs I','Six Discs II','Six Discs III','Master Tower',
+    ], (lvl) => {
+      const discs = lvl<=4?2:lvl<=10?3:lvl<=16?4:lvl<=22?5:6
+      const timeLimit = Math.round(60 + (discs-2)*90)
+      return { discs, timeLimit, req: gradual(lvl, { minL:3,maxL:160, minS:40,maxS:83, minE:0,maxE:5 }) }
+    }),
+  },
+  {
+    id: 'ripple_code', name: 'Ripple Code', icon: '🔢',
+    description: 'Crack the hidden rule in each number sequence — predict what comes next',
+    type: 'sequence', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
+    category: 'Pattern', cogSkill: 'Inductive Reasoning & Mathematical Pattern Recognition',
+    levels: makeLevels([
+      'Add/Subtract I','Add/Subtract II','Multiply I','Multiply II',
+      'Squares I','Squares II','Mix I','Mix II',
+      'Fibonacci I','Fibonacci II','Triangular I','Triangular II',
+      'Step Patterns I','Step Patterns II','Power Patterns I','Power Patterns II',
+      'Prime Numbers I','Prime Numbers II','Factorial I','Factorial II',
+      'Compound I','Compound II','Compound III','Grand Sequence',
+    ], (lvl) => {
+      const t = (lvl-1)/23
+      const tier = lvl<=4?1:lvl<=10?2:lvl<=18?3:4
+      return { tier, rounds:5, showCount:5, askCount:Math.min(2+Math.floor(t*2),4), timePerQ:Math.round(25-t*10), req: gradual(lvl, { minL:4,maxL:190, minS:42,maxS:85, minE:0,maxE:5 }) }
+    }),
+  },
+  {
+    id: 'shadow_match', name: 'Shadow Match', icon: '🎯',
+    description: 'Identify the correct 2D view of a 3D shape — top, front or side projection',
+    type: 'spatial', color: '#EC4899', glow: 'rgba(236,72,153,0.4)',
+    category: 'Spatial', cogSkill: '3D Spatial Visualisation & Mental Rotation',
+    levels: makeLevels([
+      'Simple Shapes I','Simple Shapes II','Simple Shapes III','Simple Shapes IV',
+      'L-Shapes I','L-Shapes II','L-Shapes III','L-Shapes IV',
+      'T-Shapes I','T-Shapes II','T-Shapes III','T-Shapes IV',
+      'Towers I','Towers II','Towers III','Towers IV',
+      'Complex I','Complex II','Complex III','Complex IV',
+      'Rotations I','Rotations II','Rotations III','3D Master',
+    ], (lvl) => {
+      const t = (lvl-1)/23
+      return { rounds:6, timePerQ:Math.round(20-t*8), difficulty:Math.ceil(t*3+1), req: gradual(lvl, { minL:5,maxL:210, minS:44,maxS:86, minE:0,maxE:5 }) }
+    }),
+  },
 ].filter(Boolean)
 
 export async function getUnlockStatus(studentId) {
