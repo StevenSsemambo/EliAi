@@ -1,0 +1,47 @@
+{
+  "topic_id": "nitrogen_compounds",
+  "topic_title": "Nitrogen and Its Compounds",
+  "subject": "chemistry",
+  "class_level": "s3",
+  "lessons": [
+    {
+      "id": "nitrogen_l1",
+      "title": "Nitrogen, Ammonia and the Haber Process",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Nitrogen makes up 78% of the atmosphere but is unreactive (very stable N≡N triple bond). It must be 'fixed' (combined with other elements) to be useful."},
+        {"type":"text","body":"AMMONIA (NH₃): A colourless gas with a pungent smell. It is alkaline, dissolves readily in water to form ammonium hydroxide."},
+        {"type":"text","body":"HABER PROCESS — Industrial manufacture of ammonia:\nN₂(g) + 3H₂(g) ⇌ 2NH₃(g) ΔH = −92 kJ/mol\nConditions: Temperature 450°C, Pressure 200 atmospheres, Iron catalyst"},
+        {"type":"text","body":"USES OF AMMONIA: Making fertilisers (ammonium sulphate, ammonium nitrate, urea), making nitric acid, making explosives, as a refrigerant."},
+        {"type":"formula","body":"Making ammonium nitrate fertiliser:\nNH₃ + HNO₃ → NH₄NO₃\n(ammonia + nitric acid → ammonium nitrate)"},
+        {"type":"example","title":"Why these conditions?","body":"• 450°C: compromise — higher temp gives more yield but reaction too slow at low temp; too high temp shifts equilibrium backwards (exothermic)\n• 200 atm: high pressure favours fewer moles of gas (4 moles → 2 moles), increasing yield\n• Iron catalyst: speeds up reaction without changing yield"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"What percentage of the atmosphere is nitrogen?","options":["21%","50%","78%","95%"],"answer":"78%","explanation":"Air is approximately 78% N₂, 21% O₂, 1% other gases."},
+          {"id":"q2","type":"multiple_choice","question":"The Haber process makes:","options":["Nitric acid","Ammonia","Urea","Nitrogen gas"],"answer":"Ammonia","explanation":"The Haber process: N₂ + 3H₂ → 2NH₃ (using iron catalyst, 450°C, 200 atm)."},
+          {"id":"q3","type":"multiple_choice","question":"The catalyst used in the Haber process is:","options":["Platinum","Vanadium pentoxide","Iron","Nickel"],"answer":"Iron","explanation":"Iron catalyst speeds up the equilibrium reaction without affecting the final yield."},
+          {"id":"q4","type":"multiple_choice","question":"Why is high pressure used in the Haber process?","options":["To speed up catalyst","Left side has more moles of gas — high pressure favours NH₃ production","To increase temperature","To dissolve nitrogen"],"answer":"Left side has more moles of gas — high pressure favours NH₃ production","explanation":"4 moles of gas → 2 moles. Le Chatelier: high pressure shifts equilibrium towards fewer moles = more NH₃."},
+          {"id":"q5","type":"multiple_choice","question":"Ammonia solution is:","options":["Acidic","Neutral","Alkaline","A strong acid"],"answer":"Alkaline","explanation":"NH₃ + H₂O ⇌ NH₄⁺ + OH⁻. Ammonium hydroxide releases OH⁻ ions → alkaline pH."},
+          {"id":"q6","type":"multiple_choice","question":"The main use of ammonia is:","options":["As a fuel","To make fertilisers","In food preservation","In steel making"],"answer":"To make fertilisers","explanation":"~80% of ammonia produced globally is used to make nitrogen fertilisers (ammonium nitrate, urea, etc)."},
+          {"id":"q7","type":"multiple_choice","question":"Ammonium nitrate is formed by:","options":["NH₃ + H₂SO₄","NH₃ + HNO₃","NH₃ + HCl","NH₃ + NaOH"],"answer":"NH₃ + HNO₃","explanation":"Ammonia + nitric acid → ammonium nitrate. NH₃ + HNO₃ → NH₄NO₃"},
+          {"id":"q8","type":"multiple_choice","question":"Why is 450°C used in the Haber process rather than a lower temperature?","options":["Higher temperature increases yield","Lower temperature is too slow even with catalyst","Iron catalyst only works at 450°C","To keep ammonia as a gas"],"answer":"Lower temperature is too slow even with catalyst","explanation":"Although lower temperature gives higher equilibrium yield, rate is too slow. 450°C is a compromise."},
+          {"id":"q9","type":"multiple_choice","question":"Which test confirms ammonia gas?","options":["Limewater turns milky","Damp red litmus turns blue","Glowing splint relights","Blue litmus turns red"],"answer":"Damp red litmus turns blue","explanation":"NH₃ is the only common alkaline gas — it turns damp red litmus blue."},
+          {"id":"q10","type":"multiple_choice","question":"The Haber process reaction is reversible because:","options":["Nitrogen is unreactive","The reaction can go in both directions at the same time","Iron catalyst reverses reactions","High pressure reverses reactions"],"answer":"The reaction can go in both directions at the same time","explanation":"The ⇌ symbol shows a reversible reaction reaching dynamic equilibrium."},
+          {"id":"q11","type":"multiple_choice","question":"Nitrogen 'fixation' means:","options":["Repairing nitrogen gas","Converting atmospheric N₂ into useful nitrogen compounds","Removing nitrogen from soil","Compressing nitrogen"],"answer":"Converting atmospheric N₂ into useful nitrogen compounds","explanation":"Nitrogen fixation converts unreactive N₂ gas into compounds plants and animals can use."},
+          {"id":"q12","type":"multiple_choice","question":"Urea [(NH₂)₂CO] is an important fertiliser because:","options":["It dissolves in acid","It has high nitrogen content (46%)","It is insoluble","It contains phosphorus"],"answer":"It has high nitrogen content (46%)","explanation":"Urea contains 46% nitrogen by mass — the highest nitrogen content of any solid fertiliser."},
+          {"id":"q13","type":"multiple_choice","question":"Nitrogen is unreactive because:","options":["It is a noble gas","It has a very strong triple bond (N≡N)","It is a metal","It dissolves in water"],"answer":"It has a very strong triple bond (N≡N)","explanation":"The N≡N triple bond requires very high energy to break, making nitrogen extremely stable and unreactive."},
+          {"id":"q14","type":"multiple_choice","question":"Hydrogen for the Haber process comes from:","options":["Electrolysis of water","Natural gas (methane) reacted with steam","Mining underground","Atmosphere"],"answer":"Natural gas (methane) reacted with steam","explanation":"CH₄ + H₂O → CO + 3H₂ (steam reforming of natural gas is the main source of H₂ for Haber process)."},
+          {"id":"q15","type":"multiple_choice","question":"Excess nitrogen fertiliser in soil can cause:","options":["Soil to become more fertile indefinitely","Eutrophication of water bodies","Crops to grow slower","Soil pH to decrease only"],"answer":"Eutrophication of water bodies","explanation":"Nitrates leach into rivers/lakes, causing algal bloom → death of aquatic life (eutrophication)."},
+          {"id":"q16","type":"multiple_choice","question":"Ammonia + sulphuric acid → ?","options":["Ammonium sulphate","Ammonium nitrate","Ammonium chloride","Nitrogen sulphate"],"answer":"Ammonium sulphate","explanation":"2NH₃ + H₂SO₄ → (NH₄)₂SO₄ (ammonium sulphate) — a common fertiliser."},
+          {"id":"q17","type":"multiple_choice","question":"The Ostwald process converts ammonia to:","options":["Urea","Ammonium nitrate","Nitric acid","Nitrogen gas"],"answer":"Nitric acid","explanation":"Ostwald process: NH₃ + O₂ (Pt catalyst, 850°C) → NO → NO₂ → HNO₃ (nitric acid)."},
+          {"id":"q18","type":"multiple_choice","question":"In the Haber process, unreacted gases are:","options":["Released to atmosphere","Recycled back into the reactor","Converted to slag","Dissolved in water"],"answer":"Recycled back into the reactor","explanation":"Unreacted N₂ and H₂ are recycled to increase overall yield and reduce waste."},
+          {"id":"q19","type":"multiple_choice","question":"Nitrogen gas (N₂) is used in food packaging because:","options":["It improves flavour","It is unreactive and prevents oxidation/spoilage","It is cheap","It preserves vitamins"],"answer":"It is unreactive and prevents oxidation/spoilage","explanation":"N₂ displaces O₂ in food packaging, preventing oxidation and bacterial growth."},
+          {"id":"q20","type":"multiple_choice","question":"The equation N₂ + 3H₂ ⇌ 2NH₃ shows that to make 2 moles of NH₃, you need:","options":["1 mole each of N₂ and H₂","1 mole N₂ and 3 moles H₂","3 moles N₂ and 1 mole H₂","2 moles each"],"answer":"1 mole N₂ and 3 moles H₂","explanation":"Molar ratio from equation: 1:3:2. One mole N₂ reacts with three moles H₂."}
+        ]
+      }
+    }
+  ]
+}
