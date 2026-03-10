@@ -1,56 +1,97 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { SoundEngine } from '../../utils/soundEngine.js'
 
 const REACTIONS = [
   { a:'HCl',    b:'NaOH',    product:'NaCl + H2O',     type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
   { a:'H2SO4',  b:'KOH',     product:'K2SO4 + H2O',    type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
   { a:'HNO3',   b:'Ca(OH)2', product:'Ca(NO3)2 + H2O', type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
+  { a:'HCl',    b:'Ca(OH)2', product:'CaCl2 + H2O',    type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
+  { a:'H2SO4',  b:'NaOH',    product:'Na2SO4 + H2O',   type:'Neutralisation', color:'#4ADE80', hint:'Acid + Base gives Salt + Water' },
   { a:'Zn',     b:'HCl',     product:'ZnCl2 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
   { a:'Fe',     b:'H2SO4',   product:'FeSO4 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
   { a:'Mg',     b:'HCl',     product:'MgCl2 + H2 gas', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
+  { a:'Al',     b:'H2SO4',   product:'Al2(SO4)3 + H2', type:'Metal + Acid',   color:'#FCD34D', hint:'Active metal + acid gives salt + hydrogen' },
+  { a:'Na',     b:'H2O',     product:'NaOH + H2 gas',  type:'Metal + Water',  color:'#FB923C', hint:'Very reactive metals react violently with water' },
+  { a:'Ca',     b:'H2O',     product:'Ca(OH)2 + H2',   type:'Metal + Water',  color:'#FB923C', hint:'Calcium reacts steadily with cold water' },
   { a:'C',      b:'O2',      product:'CO2',             type:'Combustion',     color:'#EF4444', hint:'Carbon burns in oxygen gives carbon dioxide' },
   { a:'CH4',    b:'O2',      product:'CO2 + H2O',       type:'Combustion',     color:'#EF4444', hint:'Hydrocarbon + oxygen gives CO2 + water' },
   { a:'H2',     b:'O2',      product:'H2O',             type:'Combustion',     color:'#EF4444', hint:'Hydrogen burns to form water' },
+  { a:'C3H8',   b:'O2',      product:'CO2 + H2O',       type:'Combustion',     color:'#EF4444', hint:'Propane combustion produces CO2 and water' },
   { a:'Fe',     b:'CuSO4',   product:'FeSO4 + Cu',      type:'Displacement',   color:'#A78BFA', hint:'More reactive metal displaces less reactive one' },
   { a:'Zn',     b:'CuSO4',   product:'ZnSO4 + Cu',      type:'Displacement',   color:'#A78BFA', hint:'Zinc is more reactive than copper' },
   { a:'Mg',     b:'ZnSO4',   product:'MgSO4 + Zn',      type:'Displacement',   color:'#A78BFA', hint:'Magnesium displaces zinc from solution' },
+  { a:'Cu',     b:'AgNO3',   product:'Cu(NO3)2 + Ag',   type:'Displacement',   color:'#A78BFA', hint:'Copper displaces silver — more reactive wins' },
+  { a:'Fe',     b:'S',       product:'FeS',             type:'Direct Combo',   color:'#38BDF8', hint:'Iron + sulfur heated gives iron sulfide' },
+  { a:'Na',     b:'Cl2',     product:'NaCl',            type:'Direct Combo',   color:'#38BDF8', hint:'Metal + non-metal gives ionic compound' },
+  { a:'CaCO3',  b:'heat',    product:'CaO + CO2',       type:'Decomposition',  color:'#F472B6', hint:'Thermal decomposition of limestone' },
+  { a:'2H2O2',  b:'MnO2',   product:'2H2O + O2',       type:'Decomposition',  color:'#F472B6', hint:'Catalyst speeds up hydrogen peroxide breakdown' },
 ]
 
 const WRONG = [
   'No reaction','H2SO4 + O2','NaOH + Cl2','CaCl2 + H2',
   'KNO3 + H2O','MgO + H2','FeO + CO2','Na2O + H2O',
   'CO + H2O','ZnO + HCl','CuO + H2SO4','Al2O3 + H2',
+  'NaHCO3 + O2','FeH2 + Cl','Cu2O + H2O','KOH + CO',
 ]
+
+function shuffleArray(arr) {
+  const a = [...arr]
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]]
+  }
+  return a
+}
+
+function buildQueue(level) {
+  const tier = Math.min(Math.floor((level - 1) / 3), 2)
+  const pool = tier === 0 ? REACTIONS.slice(0, 10) : tier === 1 ? REACTIONS.slice(5, 18) : REACTIONS
+  return shuffleArray(pool)
+}
 
 export default function ChemLabGame({ levelData, onFinish }) {
   const level = levelData?.level || 1
   const ROUNDS = Math.min(5 + Math.floor(level / 4), 10)
-  const reaction = REACTIONS[Math.min(Math.floor((level - 1) / 2), REACTIONS.length - 1)]
 
-  const [phase, setPhase]       = useState('mix')
-  const [selected, setSelected] = useState(null)
-  const [options, setOptions]   = useState([])
-  const [score, setScore]       = useState(0)
-  const [round, setRound]       = useState(0)
-  const [streak, setStreak]     = useState(0)
-  const [timeLeft, setTimeLeft] = useState(25)
-  const [lives, setLives]       = useState(3)
-  const [shaking, setShaking]   = useState(false)
+  const queueRef = useRef(buildQueue(level))
+  const queueIdxRef = useRef(0)
+
+  function nextReaction() {
+    if (queueIdxRef.current >= queueRef.current.length) {
+      queueRef.current = shuffleArray(queueRef.current)
+      queueIdxRef.current = 0
+    }
+    return queueRef.current[queueIdxRef.current++]
+  }
+
+  const [reaction, setReaction]   = useState(() => nextReaction())
+  const [phase, setPhase]         = useState('mix')
+  const [selected, setSelected]   = useState(null)
+  const [options, setOptions]     = useState([])
+  const [score, setScore]         = useState(0)
+  const [round, setRound]         = useState(0)
+  const [streak, setStreak]       = useState(0)
+  const [timeLeft, setTimeLeft]   = useState(25)
+  const [lives, setLives]         = useState(3)
+  const [shaking, setShaking]     = useState(false)
 
   useEffect(() => {
     const wrong = WRONG.filter(w => w !== reaction.product).sort(() => Math.random() - 0.5).slice(0, 3)
     setOptions([reaction.product, ...wrong].sort(() => Math.random() - 0.5))
-  }, [])
+  }, [reaction])
 
   useEffect(() => {
     if (phase !== 'answer') return
     const t = setInterval(() => setTimeLeft(n => {
       if (n <= 1) { clearInterval(t); pick(null); return 0 }
+      if (n <= 8) SoundEngine.timerTick(n <= 3 ? 3 : 2)
       return n - 1
     }), 1000)
     return () => clearInterval(t)
   }, [phase])
 
   function mix() {
+    SoundEngine.tap()
     setPhase('reacting')
     setShaking(true)
     setTimeout(() => { setShaking(false); setPhase('answer'); setTimeLeft(25) }, 1800)
@@ -68,12 +109,20 @@ export default function ChemLabGame({ levelData, onFinish }) {
     setScore(newScore)
     setStreak(newStreak)
     setLives(newLives)
+    if (ok) {
+      SoundEngine.gameCorrect()
+      if (newStreak >= 2) SoundEngine.combo(newStreak)
+    } else {
+      SoundEngine.gameWrong()
+    }
     const nextRound = round + 1
     setRound(nextRound)
     setTimeout(() => {
       if (newLives <= 0 || nextRound >= ROUNDS) {
+        SoundEngine.levelComplete()
         onFinish?.()
       } else {
+        setReaction(nextReaction())
         setPhase('mix'); setSelected(null); setTimeLeft(25)
       }
     }, 1600)
@@ -132,14 +181,12 @@ export default function ChemLabGame({ levelData, onFinish }) {
           <span style={{ color:'#5EEAD4', fontSize:12 }}>{reaction.hint}</span>
         </div>
 
-        {/* Mix phase */}
         {phase === 'mix' && (
           <button onClick={mix} style={{ padding:'13px 32px', borderRadius:14, fontWeight:800, color:'white', fontSize:15, background:`linear-gradient(135deg,${C},#7C3AED)`, border:'none', cursor:'pointer', marginTop:4 }}>
             ⚗️ Mix Chemicals!
           </button>
         )}
 
-        {/* Reacting phase */}
         {phase === 'reacting' && (
           <div style={{ textAlign:'center', marginTop:8 }}>
             <div style={{ fontSize:32, marginBottom:6 }}>⚗️</div>
@@ -147,7 +194,6 @@ export default function ChemLabGame({ levelData, onFinish }) {
           </div>
         )}
 
-        {/* Answer / Result phase */}
         {(phase === 'answer' || phase === 'result') && (
           <div style={{ width:'100%', maxWidth:340 }}>
             <div style={{ display:'flex', justifyContent:'space-between', marginBottom:10 }}>
