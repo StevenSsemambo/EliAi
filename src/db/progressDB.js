@@ -32,8 +32,8 @@ export const progressDB = {
         completed_at: new Date().toISOString(), synced: false
       })
     }
-    // Award XP
-    const xpGain = score >= 70 ? 50 : 20
+    // Award XP — tiers match scoring.js getXpForScore() so DB always matches the Results screen
+    const xpGain = score >= 90 ? 100 : score >= 70 ? 50 : score >= 50 ? 25 : 10
     const student = await db.students.get(studentId)
     if (student) {
       await db.students.update(studentId, {
