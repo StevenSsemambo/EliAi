@@ -1,0 +1,46 @@
+{
+  "topic_id": "linear_programming",
+  "topic_title": "Linear Programming",
+  "subject": "mathematics",
+  "class_level": "s3",
+  "lessons": [
+    {
+      "id": "linear_prog_l1",
+      "title": "Inequalities and Feasible Regions",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Linear programming finds the best (maximum or minimum) value of an objective function subject to constraints written as linear inequalities."},
+        {"type":"formula","body":"Inequality signs: < (less than), > (greater than), ≤ (less than or equal), ≥ (greater than or equal)"},
+        {"type":"text","body":"The feasible region is the set of all points that satisfy ALL constraints simultaneously. It is found by shading and identifying the overlapping region on a graph."},
+        {"type":"example","title":"Setting Up Constraints","body":"A factory makes chairs (x) and tables (y).\nConstraints: x ≥ 0, y ≥ 0 (can't make negative items)\nLabour: 2x + 3y ≤ 12\nMaterial: x + y ≤ 5\nObjective: Maximise profit P = 3x + 4y"},
+        {"type":"text","body":"Steps: 1) Draw each inequality on a graph. 2) Identify the feasible region. 3) Find corner points. 4) Test objective function at each corner. 5) Choose max or min."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"The feasible region in linear programming satisfies:","options":["Only one constraint","None of the constraints","All constraints simultaneously","The objective function only"],"answer":"All constraints simultaneously","explanation":"The feasible region is where ALL inequalities are satisfied at the same time."},
+          {"id":"q2","type":"multiple_choice","question":"The objective function in linear programming is:","options":["A constraint to be met","A function to be maximised or minimised","The feasible region","An inequality"],"answer":"A function to be maximised or minimised","explanation":"The objective function (like profit or cost) is what we want to optimise."},
+          {"id":"q3","type":"multiple_choice","question":"x ≥ 0 and y ≥ 0 means the solution must be in:","options":["Quadrant 1 (first quadrant)","Quadrant 2","Quadrant 3","All quadrants"],"answer":"Quadrant 1 (first quadrant)","explanation":"x ≥ 0 means right side, y ≥ 0 means upper side — this is the first quadrant."},
+          {"id":"q4","type":"multiple_choice","question":"The maximum/minimum of the objective function occurs at:","options":["The centre of the feasible region","A corner point of the feasible region","Any point inside the region","The origin"],"answer":"A corner point of the feasible region","explanation":"The optimal value always occurs at a vertex (corner point) of the feasible region."},
+          {"id":"q5","type":"multiple_choice","question":"Constraints 2x + y ≤ 10 and x + 2y ≤ 10 with x,y ≥ 0. Corner points include the origin (0,0) and:","options":["(5,0) and (0,5) and (10/3,10/3)","(10,0) and (0,10)","(2,2) and (3,3)","(5,5) only"],"answer":"(5,0) and (0,5) and (10/3,10/3)","explanation":"The vertices are at (0,0), (5,0), (10/3,10/3), (0,5)."},
+          {"id":"q6","type":"multiple_choice","question":"Objective function P = 5x + 3y. At (0,0): P=0, at (4,0): P=20, at (0,6): P=18. Maximum is:","options":["P=0","P=18","P=20","P=24"],"answer":"P=20","explanation":"Test each corner: highest value is P=20 at (4,0)."},
+          {"id":"q7","type":"multiple_choice","question":"The line 3x + 2y = 12 has x-intercept:","options":["(3,0)","(4,0)","(6,0)","(12,0)"],"answer":"(4,0)","explanation":"Set y=0: 3x=12, x=4. x-intercept is (4,0)."},
+          {"id":"q8","type":"multiple_choice","question":"For minimisation problems in linear programming, the optimal value is found at:","options":["The largest corner point","The corner point with minimum objective function value","The centre","Any point on the boundary"],"answer":"The corner point with minimum objective function value","explanation":"Just like maximisation, but we choose the corner with the LOWEST value."},
+          {"id":"q9","type":"multiple_choice","question":"x + y ≤ 6, x ≥ 1, y ≥ 2. Which point is in the feasible region?","options":["(0,0)","(1,2)","(5,5)","(0,7)"],"answer":"(1,2)","explanation":"Check (1,2): 1+2=3≤6✓, 1≥1✓, 2≥2✓. All constraints satisfied."},
+          {"id":"q10","type":"multiple_choice","question":"A farmer plants maize (x) and beans (y). Constraint: x + y ≤ 100. This means:","options":["At least 100 acres total","At most 100 acres total","Exactly 100 acres","No restriction"],"answer":"At most 100 acres total","explanation":"≤ means 'less than or equal to' — total land used cannot exceed 100 acres."},
+          {"id":"q11","type":"multiple_choice","question":"The number of corner points tested equals:","options":["The number of variables","The number of constraints","The number of vertices of the feasible region","Always 4"],"answer":"The number of vertices of the feasible region","explanation":"We test the objective function at every corner (vertex) of the feasible polygon."},
+          {"id":"q12","type":"multiple_choice","question":"Maximise P = 2x + y subject to x + y ≤ 4, x ≥ 0, y ≥ 0. Corners: (0,0),(4,0),(0,4). Max P =","options":["4","6","8","10"],"answer":"8","explanation":"At (4,0): P=2(4)+0=8. At (0,4): P=0+4=4. Max is 8."},
+          {"id":"q13","type":"multiple_choice","question":"Which point satisfies 2x + 3y ≤ 12 AND x + y ≤ 5?","options":["(3,3)","(2,2)","(4,2)","(5,1)"],"answer":"(2,2)","explanation":"(2,2): 2(2)+3(2)=10≤12✓, 2+2=4≤5✓. All others fail one constraint."},
+          {"id":"q14","type":"multiple_choice","question":"In linear programming, 'non-negativity constraints' mean:","options":["Variables must be negative","Variables must be zero","Variables must be zero or positive","Variables can be any value"],"answer":"Variables must be zero or positive","explanation":"x ≥ 0 and y ≥ 0 are non-negativity constraints — real quantities can't be negative."},
+          {"id":"q15","type":"multiple_choice","question":"A business minimises cost C = 3x + 5y. At corners: (2,4)→26, (0,6)→30, (4,2)→22. Minimum cost =","options":["22","24","26","30"],"answer":"22","explanation":"Minimum is the lowest value = 22 at corner (4,2)."},
+          {"id":"q16","type":"multiple_choice","question":"The y-intercept of 4x + 5y = 20 is:","options":["(0,4)","(0,5)","(0,8)","(0,20)"],"answer":"(0,4)","explanation":"Set x=0: 5y=20, y=4. y-intercept is (0,4)."},
+          {"id":"q17","type":"multiple_choice","question":"Feasible region with corners (0,0),(6,0),(0,4). Maximise P=x+2y. Best corner is:","options":["(0,0)","(6,0)","(0,4)","(3,2)"],"answer":"(0,4)","explanation":"At (0,4): P=0+8=8. At (6,0): P=6+0=6. At (0,0): P=0. Best is (0,4)."},
+          {"id":"q18","type":"multiple_choice","question":"The intersection of x + y = 8 and 2x + y = 12 is:","options":["(3,5)","(4,4)","(5,3)","(6,2)"],"answer":"(4,4)","explanation":"Subtract: x=4. Then y=4."},
+          {"id":"q19","type":"multiple_choice","question":"Linear programming is used in real life for:","options":["Weather forecasting","Resource allocation and profit maximisation","Chemical reactions","Measuring angles"],"answer":"Resource allocation and profit maximisation","explanation":"It optimises use of limited resources (labour, materials, land) to maximise profit or minimise cost."},
+          {"id":"q20","type":"multiple_choice","question":"If the feasible region is empty (no points satisfy all constraints), the linear program has:","options":["A unique solution","Infinitely many solutions","No solution","A minimum solution only"],"answer":"No solution","explanation":"An empty feasible region means the constraints are contradictory — no solution exists."}
+        ]
+      }
+    }
+  ]
+}

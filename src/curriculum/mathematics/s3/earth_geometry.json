@@ -1,0 +1,47 @@
+{
+  "topic_id": "earth_geometry",
+  "topic_title": "Earth Geometry",
+  "subject": "mathematics",
+  "class_level": "s3",
+  "lessons": [
+    {
+      "id": "earth_geo_l1",
+      "title": "Latitude, Longitude and Great Circles",
+      "duration_minutes": 30,
+      "xp_reward": 60,
+      "content": [
+        {"type":"text","body":"Earth is modelled as a sphere. Positions on Earth are described using latitude and longitude."},
+        {"type":"text","body":"LATITUDE: Angular distance north or south of the Equator (0° to 90° N or S). Lines of latitude are parallel circles. The Equator is the largest (a great circle). Latitude lines decrease in size as you move away from equator."},
+        {"type":"text","body":"LONGITUDE: Angular distance east or west of the Prime Meridian (0° to 180° E or W). Lines of longitude are half-circles (meridians) meeting at the poles. All meridians are great circles."},
+        {"type":"formula","body":"Arc length along a great circle = (θ/360) × 2πR\nwhere R = 6370 km (radius of Earth), θ = angle subtended at centre"},
+        {"type":"formula","body":"Arc length along a small circle (latitude φ) = (θ/360) × 2π × r\nwhere r = R cos(φ) = radius of that latitude circle"},
+        {"type":"example","title":"Distance Along Equator","body":"Find distance from (0°, 20°E) to (0°, 50°E).\nΔθ = 30°. On equator (great circle, r = R = 6370km)\nDistance = (30/360) × 2π × 6370 = 3,335 km"}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"The Equator has latitude:","options":["90°N","45°N","0°","90°S"],"answer":"0°","explanation":"The Equator is defined as 0° latitude — the reference line dividing Northern and Southern hemispheres."},
+          {"id":"q2","type":"multiple_choice","question":"Lines of longitude are:","options":["Parallel circles","Half-circles from pole to pole","Horizontal lines only","Curved but not semicircles"],"answer":"Half-circles from pole to pole","explanation":"Lines of longitude (meridians) are half-circles running from North Pole to South Pole."},
+          {"id":"q3","type":"multiple_choice","question":"The Prime Meridian passes through:","options":["Paris","New York","Greenwich, London","Kampala"],"answer":"Greenwich, London","explanation":"The Prime Meridian (0° longitude) passes through the Royal Observatory in Greenwich, London."},
+          {"id":"q4","type":"multiple_choice","question":"A great circle on Earth is:","options":["Any circle on Earth's surface","A circle whose centre is Earth's centre","The largest latitude circle","Any line of latitude"],"answer":"A circle whose centre is Earth's centre","explanation":"A great circle divides the Earth into two equal halves. Only the Equator and all meridians are great circles."},
+          {"id":"q5","type":"multiple_choice","question":"The shortest path between two points on Earth's surface lies along a:","options":["Line of latitude","Great circle","Small circle","Straight tunnel through Earth"],"answer":"Great circle","explanation":"Great circle routes are the shortest paths on a sphere's surface — used in aviation."},
+          {"id":"q6","type":"multiple_choice","question":"Two cities at latitude 60°N. The radius of the 60°N circle relative to Earth's radius R is:","options":["R","R/2","R cos60° = 0.5R","R sin60°"],"answer":"R cos60° = 0.5R","explanation":"Radius of latitude circle at φ = R cosφ = R cos60° = R × 0.5."},
+          {"id":"q7","type":"multiple_choice","question":"Point A is at (30°N, 40°E), point B is at (30°N, 100°E). Angular difference in longitude =","options":["40°","60°","70°","140°"],"answer":"60°","explanation":"100° − 40° = 60° difference in longitude."},
+          {"id":"q8","type":"multiple_choice","question":"A point at (45°S, 30°W) is in which hemisphere?","options":["Northern and Western","Southern and Eastern","Southern and Western","Northern and Eastern"],"answer":"Southern and Western","explanation":"S = Southern hemisphere. W = Western hemisphere."},
+          {"id":"q9","type":"multiple_choice","question":"The radius of Earth used in calculations is approximately:","options":["6370 km","3370 km","12740 km","637 km"],"answer":"6370 km","explanation":"Earth's mean radius ≈ 6370 km (sometimes written as 6400 km)."},
+          {"id":"q10","type":"multiple_choice","question":"Distance along Equator between 10°W and 70°W (take R=6400km, π=3.14):","options":["6,400 km","6,702 km","6,500 km","5,800 km"],"answer":"6,702 km","explanation":"Δθ=60°. Distance = (60/360)×2×3.14×6400 = (1/6)×40,192 ≈ 6,699km ≈ 6,702km"},
+          {"id":"q11","type":"multiple_choice","question":"Lines of latitude are also called:","options":["Meridians","Parallels","Diagonals","Perpendiculars"],"answer":"Parallels","explanation":"Lines of latitude are called parallels because they are parallel to each other."},
+          {"id":"q12","type":"multiple_choice","question":"The International Date Line is approximately at:","options":["0° longitude","90°E","90°W","180° longitude"],"answer":"180° longitude","explanation":"The International Date Line runs roughly along 180° longitude — crossing it changes the calendar date."},
+          {"id":"q13","type":"multiple_choice","question":"Kampala, Uganda is at approximately (0°N, 32°E). It lies on:","options":["The Equator","The Tropic of Cancer","The Arctic Circle","The Prime Meridian"],"answer":"The Equator","explanation":"Kampala is almost exactly on the Equator (actually ~0.3°N, virtually on the equator)."},
+          {"id":"q14","type":"multiple_choice","question":"Two points on same meridian, latitudes 20°N and 50°N. Angular distance =","options":["20°","30°","50°","70°"],"answer":"30°","explanation":"Both on same meridian → angular distance = 50° − 20° = 30°."},
+          {"id":"q15","type":"multiple_choice","question":"Why do aircraft fly great circle routes even though they curve on a flat map?","options":["To avoid storms","Great circles are the shortest paths on a sphere","Great circles are easier to navigate","To save fuel at high altitudes only"],"answer":"Great circles are the shortest paths on a sphere","explanation":"On a flat (Mercator) map, great circles appear curved, but they are shorter than straight map lines."},
+          {"id":"q16","type":"multiple_choice","question":"A ship sails from (0°, 20°E) to (0°, 80°E) along the Equator. Angular change =","options":["20°","60°","80°","100°"],"answer":"60°","explanation":"80° − 20° = 60° of longitude change along the Equator."},
+          {"id":"q17","type":"multiple_choice","question":"The Tropic of Capricorn is at latitude:","options":["23.5°N","23.5°S","66.5°N","66.5°S"],"answer":"23.5°S","explanation":"Tropic of Capricorn = 23.5°S. Tropic of Cancer = 23.5°N."},
+          {"id":"q18","type":"multiple_choice","question":"Time zones are based on:","options":["Latitude","Longitude","Distance from equator","Distance from prime meridian in km"],"answer":"Longitude","explanation":"Every 15° of longitude = 1 hour time difference (360° ÷ 24 hours = 15°/hour)."},
+          {"id":"q19","type":"multiple_choice","question":"At the North Pole, all directions point:","options":["North","East","South","Randomly"],"answer":"South","explanation":"At the North Pole, you are at the northernmost point — every direction from there is south."},
+          {"id":"q20","type":"multiple_choice","question":"Arc length = (θ/360) × 2πR. If θ = 45° and R = 6370km, arc length ≈","options":["3,185 km","4,992 km","6,370 km","7,985 km"],"answer":"4,992 km","explanation":"(45/360) × 2 × π × 6370 = (1/8) × 40,024 ≈ 5,003 km ≈ 4,992 km"}
+        ]
+      }
+    }
+  ]
+}
