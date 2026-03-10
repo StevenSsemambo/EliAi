@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { saveGameScore } from '../../utils/gameUnlocks.js'
 import { SoundEngine } from '../../utils/soundEngine.js'
 
 const REACTIONS = [
@@ -49,7 +50,7 @@ function buildQueue(level) {
   return shuffleArray(pool)
 }
 
-export default function ChemLabGame({ levelData, onFinish }) {
+export default function ChemLabGame({ game, levelData, studentId, onFinish }) {
   const level = levelData?.level || 1
   const ROUNDS = Math.min(5 + Math.floor(level / 4), 10)
 
@@ -120,6 +121,7 @@ export default function ChemLabGame({ levelData, onFinish }) {
     setTimeout(() => {
       if (newLives <= 0 || nextRound >= ROUNDS) {
         SoundEngine.levelComplete()
+        if (studentId) saveGameScore(studentId, game?.id || 'chem_lab', levelData.level, newScore)
         onFinish?.()
       } else {
         setReaction(nextReaction())
