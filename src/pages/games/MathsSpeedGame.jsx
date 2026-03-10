@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import { saveGameScore } from '../../utils/gameUnlocks.js'
 import { SoundEngine } from '../../utils/soundEngine.js'
 
 function makeQuestion(level) {
@@ -64,7 +65,7 @@ const TYPE_COLORS = {
   Quadratics:'#7C3AED', Trigonometry:'#F59E0B',
 }
 
-export default function MathsSpeedGame({ levelData, onFinish }) {
+export default function MathsSpeedGame({ game, levelData, studentId, onFinish }) {
   const level   = levelData?.level || 1
   const ROUNDS  = Math.min(5 + Math.floor(level / 3), 10)
   const BASE_TIME = Math.max(10, 30 - level)
@@ -115,7 +116,7 @@ export default function MathsSpeedGame({ levelData, onFinish }) {
     }
     setTimeout(() => {
       const next = round + 1
-      if (next >= ROUNDS) { SoundEngine.levelComplete(); onFinish?.() }
+      if (next >= ROUNDS) { SoundEngine.levelComplete(); if (studentId) saveGameScore(studentId, game?.id || 'maths_speed', levelData.level, score); onFinish?.() }
       else { setRound(next); nextQuestion() }
     }, 1600)
   }
