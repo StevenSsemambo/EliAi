@@ -64,7 +64,7 @@ export default function CosmosPuzzle({ game, levelData, studentId, onFinish }) {
   const [moves, setMoves] = useState(0)
   const [phase, setPhase] = useState('playing')
   const [score, setScore] = useState(0)
-  const [startTime] = useState(Date.now)
+  const [startTime] = useState(() => Date.now())
 
   const blankIdx = tiles.indexOf(total - 1)
 
@@ -84,7 +84,7 @@ export default function CosmosPuzzle({ game, levelData, studentId, onFinish }) {
     setMoves(nm)
     if (nt.every((v, i) => v === i)) {
       SoundEngine.levelComplete()
-      const elapsed = (Date.now() - startTime()) / 1000
+      const elapsed = (Date.now() - startTime) / 1000
       const fs = Math.max(50, Math.round(5000 - nm * 12 - elapsed * 4))
       setScore(fs)
       setPhase('won')
