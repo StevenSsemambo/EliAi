@@ -5,6 +5,11 @@ import { GAMES } from '../utils/gameUnlocks.js'
 import db from '../db/schema.js'
 
 import NebulaMemory   from './games/NebulaMemory.jsx'
+import MindBridge    from './games/MindBridge.jsx'
+import FlowState     from './games/FlowState.jsx'
+import TowerOfMind   from './games/TowerOfMind.jsx'
+import RippleCode    from './games/RippleCode.jsx'
+import ShadowMatch   from './games/ShadowMatch.jsx'
 import ChemLabGame    from './games/ChemLabGame.jsx'
 import PhysicsForcesGame from './games/PhysicsForcesGame.jsx'
 import BiologyCellGame from './games/BiologyCellGame.jsx'
@@ -14,6 +19,11 @@ import QuasarChain    from './games/QuasarChain.jsx'
 import NumberWarp     from './games/NumberWarp.jsx'
 import SequenceMemory from './games/SequenceMemory.jsx'
 import LogicGrid      from './games/LogicGrid.jsx'
+import CipherBreak    from './games/CipherBreak.jsx'
+import BalanceMind    from './games/BalanceMind.jsx'
+import PathFinder     from './games/PathFinder.jsx'
+import WordForge      from './games/WordForge.jsx'
+import MindMap        from './games/MindMap.jsx'
 
 const GAME_COMPONENTS = {
   memory:     NebulaMemory,
@@ -22,6 +32,17 @@ const GAME_COMPONENTS = {
   arithmetic: NumberWarp,
   sequence:   SequenceMemory,
   logic:      LogicGrid,
+  cipher:     CipherBreak,
+  balance:    BalanceMind,
+  pathfind:   PathFinder,
+  wordforge:  WordForge,
+  mindmap:    MindMap,
+  // ── 5 new cognitive games ──
+  deduction:  MindBridge,
+  flow:       FlowState,
+  hanoi:      TowerOfMind,
+  pattern:    RippleCode,
+  spatial:    ShadowMatch,
   // Subject-specific games
   subject: {
     chem_lab:       ChemLabGame,
@@ -34,6 +55,8 @@ const GAME_COMPONENTS = {
 const CATEGORY_COLORS = {
   Memory:'#7C3AED', Spatial:'#0891B2', Pattern:'#059669',
   Arithmetic:'#F59E0B', Logic:'#06B6D4',
+  Cryptic:'#F97316', Algebra:'#84CC16', Strategic:'#06B6D4',
+  Verbal:'#EC4899', Analogical:'#A855F7',
 }
 
 async function saveGameProgress(studentId, gameId, level, score) {
@@ -83,7 +106,7 @@ export default function GamePlayer() {
   const { student } = useUser()
   const [key, setKey] = useState(0)
 
-  const game = GAMES.find(g => g.id === gameId) || state?.game
+  const game = GAMES.find(g => g && g.id === gameId) || state?.game
   const levelData = game?.levels.find(l => l.level === parseInt(levelNum)) || state?.level
   const _comp = game ? GAME_COMPONENTS[game.type] : null
   const GameComponent = _comp && typeof _comp === 'object' ? _comp[game.id] : _comp
