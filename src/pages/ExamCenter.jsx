@@ -400,10 +400,9 @@ export default function ExamCenter() {
 
   useEffect(() => {
     if (student?.id) {
-      db.quiz_attempts.where('student_id').equals(student.id).toArray().then(attempts => {
-        const examAttempts = attempts.filter(a => a.lesson_id?.startsWith('exam_'))
-        setExamHistory(examAttempts.sort((a,b) => new Date(b.attempted_at)-new Date(a.attempted_at)).slice(0,10))
-      })
+      db.exam_results.where('student_id').equals(student.id).toArray().then(results => {
+        setExamHistory(results.sort((a,b) => new Date(b.attempted_at)-new Date(a.attempted_at)).slice(0,10))
+      }).catch(() => setExamHistory([]))
     }
   }, [student?.id])
 
@@ -528,8 +527,9 @@ export default function ExamCenter() {
                 <div key={i} className="p-4 rounded-xl" style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.07)'}}>
                   <div className="flex justify-between items-start">
                     <div>
-                      <div className="text-white font-semibold text-sm">{attempt.lesson_id}</div>
-                      <div className="text-slate-500 text-xs mt-0.5">{new Date(attempt.attempted_at).toLocaleDateString()}</div>
+                      <div className="text-white font-semibold text-sm">{attempt.title || attempt.exam_id}</div>
+                      <div className="text-slate-500 text-xs mt-0.5 capitalize">{attempt.subject} · {new Date(attempt.attempted_at).toLocaleDateString()}</div>
+                      <div className="text-slate-600 text-xs">{attempt.correct}/{attempt.total} correct</div>
                     </div>
                     <div className={`text-2xl font-black ${attempt.score>=70?'text-green-400':attempt.score>=50?'text-amber-400':'text-red-400'}`}>
                       {attempt.score}%
