@@ -1,0 +1,46 @@
+{
+  "topic_id": "bioenergetics",
+  "topic_title": "Bioenergetics — ATP and Cellular Respiration",
+  "subject": "biology",
+  "class_level": "s5",
+  "lessons": [
+    {
+      "id": "bioenergy_l1",
+      "title": "ATP, Glycolysis and Aerobic Respiration",
+      "duration_minutes": 35,
+      "xp_reward": 70,
+      "content": [
+        {"type":"text","body":"Bioenergetics is the study of energy flow in living organisms. ATP (Adenosine Triphosphate) is the universal energy currency of all cells."},
+        {"type":"formula","body":"ATP synthesis: ADP + Pi + energy → ATP (energy stored)\nATP hydrolysis: ATP + H₂O → ADP + Pi + energy released (for cell work)"},
+        {"type":"text","body":"AEROBIC RESPIRATION (4 stages):\n1. GLYCOLYSIS (cytoplasm): Glucose → 2 pyruvate + 2ATP (net) + 2NADH\n2. PYRUVATE OXIDATION (mitochondrial matrix): Pyruvate → Acetyl-CoA + CO₂\n3. KREBS CYCLE (matrix): Acetyl-CoA → CO₂ + ATP + NADH + FADH₂\n4. ELECTRON TRANSPORT CHAIN (inner mitochondrial membrane): NADH/FADH₂ → 32-34 ATP + H₂O"},
+        {"type":"formula","body":"Overall aerobic respiration:\nC₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ~36-38 ATP\n\nAnaerobic respiration (no O₂):\nIn yeast: Glucose → 2 ethanol + 2CO₂ + 2ATP\nIn muscle: Glucose → 2 lactic acid + 2ATP"},
+        {"type":"text","body":"Oxygen debt (EPOC): After intense anaerobic exercise, extra O₂ is needed to convert lactic acid back to glucose in the liver (Cori cycle) and restore ATP and creatine phosphate stores."}
+      ],
+      "quiz": {
+        "pass_score": 70,
+        "questions": [
+          {"id":"q1","type":"multiple_choice","question":"ATP stands for:","options":["Adenine Triphosphate","Adenosine Triphosphate","Amino Triphosphate","Adenosine Transphosphate"],"answer":"Adenosine Triphosphate","explanation":"ATP = Adenosine Triphosphate. Adenosine (adenine + ribose sugar) connected to 3 phosphate groups."},
+          {"id":"q2","type":"multiple_choice","question":"Glycolysis occurs in the:","options":["Mitochondrial matrix","Nucleus","Cytoplasm","Ribosome"],"answer":"Cytoplasm","explanation":"Glycolysis is in the cytoplasm (cytosol). All subsequent stages of aerobic respiration are in mitochondria."},
+          {"id":"q3","type":"multiple_choice","question":"Net ATP yield from glycolysis alone is:","options":["1 ATP","2 ATP","4 ATP","36 ATP"],"answer":"2 ATP","explanation":"Glycolysis uses 2 ATP and produces 4 ATP → net gain of 2 ATP per glucose."},
+          {"id":"q4","type":"multiple_choice","question":"The Krebs cycle produces CO₂ by:","options":["Burning glucose","Oxidative decarboxylation of organic acids","Anaerobic fermentation","Photosynthesis"],"answer":"Oxidative decarboxylation of organic acids","explanation":"In the Krebs cycle, 2-carbon acetyl groups are oxidised, releasing CO₂ at decarboxylation steps."},
+          {"id":"q5","type":"multiple_choice","question":"Most ATP is produced in aerobic respiration at:","options":["Glycolysis","Pyruvate oxidation","Krebs cycle","Electron transport chain"],"answer":"Electron transport chain","explanation":"ETC produces ~32-34 of the ~36-38 ATP — the vast majority. Driven by NADH and FADH₂ from earlier stages."},
+          {"id":"q6","type":"multiple_choice","question":"Lactic acid accumulates in muscles during vigorous exercise because:","options":["Too much oxygen available","Insufficient oxygen for aerobic respiration","Muscles are broken down","Glycogen runs out only"],"answer":"Insufficient oxygen for aerobic respiration","explanation":"Intense exercise demands more ATP than aerobic respiration can supply → anaerobic → lactic acid accumulates."},
+          {"id":"q7","type":"multiple_choice","question":"Total ATP yield from complete aerobic respiration of one glucose molecule is:","options":["2 ATP","4 ATP","12 ATP","36-38 ATP"],"answer":"36-38 ATP","explanation":"Complete aerobic respiration: glycolysis(2) + Krebs(2) + ETC(32-34) = 36-38 ATP total."},
+          {"id":"q8","type":"multiple_choice","question":"Anaerobic respiration in yeast produces:","options":["Lactic acid and CO₂","Ethanol and CO₂","Ethanol and O₂","Lactic acid and H₂O"],"answer":"Ethanol and CO₂","explanation":"Yeast: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂. This fermentation is used in brewing and baking."},
+          {"id":"q9","type":"multiple_choice","question":"NADH and FADH₂ function as:","options":["Energy storage molecules","Electron carriers that feed the ETC","Structural proteins","Final electron acceptors"],"answer":"Electron carriers that feed the ETC","explanation":"NADH and FADH₂ carry high-energy electrons from earlier stages to the electron transport chain."},
+          {"id":"q10","type":"multiple_choice","question":"Oxygen is the final electron acceptor in aerobic respiration, producing:","options":["CO₂","ATP","Water","Lactic acid"],"answer":"Water","explanation":"O₂ + 4H⁺ + 4e⁻ → 2H₂O. Oxygen accepts electrons at the end of the ETC."},
+          {"id":"q11","type":"multiple_choice","question":"Oxygen debt after exercise means:","options":["Oxygen has been permanently lost","Extra O₂ needed to restore normal metabolic state and remove lactic acid","Oxygen in blood decreases permanently","No oxygen enters lungs for some time"],"answer":"Extra O₂ needed to restore normal metabolic state and remove lactic acid","explanation":"EPOC (Excess Post-exercise O₂ Consumption) — extra O₂ converts lactate back to glucose (liver Cori cycle)."},
+          {"id":"q12","type":"multiple_choice","question":"Pyruvate from glycolysis enters which organelle for Krebs cycle?","options":["Chloroplast","Ribosome","Mitochondrion","Golgi apparatus"],"answer":"Mitochondrion","explanation":"Pyruvate crosses the inner mitochondrial membrane → matrix → converted to acetyl-CoA → Krebs cycle."},
+          {"id":"q13","type":"multiple_choice","question":"Aerobic respiration releases ___ energy than anaerobic from the same glucose.","options":["Less","The same","Much more","Twice as much"],"answer":"Much more","explanation":"Aerobic: ~36-38 ATP. Anaerobic: 2 ATP. Aerobic is ~18-19× more efficient per glucose."},
+          {"id":"q14","type":"multiple_choice","question":"ATP is described as the 'universal energy currency' because:","options":["It is found only in animals","All energy-requiring reactions in ALL organisms use ATP","It contains gold","It is the largest molecule"],"answer":"All energy-requiring reactions in ALL organisms use ATP","explanation":"From bacteria to humans, all living things use ATP to power cellular work — truly universal."},
+          {"id":"q15","type":"multiple_choice","question":"Carbon dioxide released during respiration comes from:","options":["Glucose carbon atoms","Oxygen molecules","Water molecules","ATP breakdown"],"answer":"Glucose carbon atoms","explanation":"Carbon atoms from glucose are oxidised and leave as CO₂ (during pyruvate oxidation and Krebs cycle)."},
+          {"id":"q16","type":"multiple_choice","question":"Which metabolic pathway does NOT require oxygen?","options":["Krebs cycle","Electron transport chain","Glycolysis","Oxidative phosphorylation"],"answer":"Glycolysis","explanation":"Glycolysis is anaerobic — it occurs in cytoplasm without oxygen. It was the first type of respiration evolutionarily."},
+          {"id":"q17","type":"multiple_choice","question":"Substrate-level phosphorylation (making ATP directly) occurs during:","options":["ETC only","Glycolysis and Krebs cycle","Pyruvate oxidation only","Chemiosmosis"],"answer":"Glycolysis and Krebs cycle","explanation":"Substrate-level phosphorylation directly transfers a phosphate group to ADP. ETC uses chemiosmosis (different mechanism)."},
+          {"id":"q18","type":"multiple_choice","question":"Why do mitochondria have folded inner membranes (cristae)?","options":["To make them look complex","To increase surface area for ETC and ATP synthesis","To store DNA","To produce ribosomes"],"answer":"To increase surface area for ETC and ATP synthesis","explanation":"Cristae dramatically increase inner membrane surface area — more ETC complexes and ATP synthase can fit, more ATP made."},
+          {"id":"q19","type":"multiple_choice","question":"Creatine phosphate in muscles functions to:","options":["Provide long-term energy","Quickly regenerate ATP during sudden intense bursts","Produce lactic acid","Replace glucose"],"answer":"Quickly regenerate ATP during sudden intense bursts","explanation":"Creatine phosphate rapidly donates phosphate to ADP → ATP. Provides energy for ~10 seconds of maximal effort."},
+          {"id":"q20","type":"multiple_choice","question":"The respiratory quotient (RQ) for carbohydrate is:","options":["0.7","0.8","1.0","1.2"],"answer":"1.0","explanation":"RQ = CO₂ produced ÷ O₂ consumed. For glucose: 6CO₂÷6O₂ = 1.0. Fat RQ ≈ 0.7; protein ≈ 0.8."}
+        ]
+      }
+    }
+  ]
+}
