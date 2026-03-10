@@ -4,26 +4,26 @@ import { useUser } from '../context/UserContext.jsx'
 import { GAMES } from '../utils/gameUnlocks.js'
 import db from '../db/schema.js'
 
-import NebulaMemory   from './games/NebulaMemory.jsx'
-import MindBridge    from './games/MindBridge.jsx'
-import FlowState     from './games/FlowState.jsx'
-import TowerOfMind   from './games/TowerOfMind.jsx'
-import RippleCode    from './games/RippleCode.jsx'
-import ShadowMatch   from './games/ShadowMatch.jsx'
-import ChemLabGame    from './games/ChemLabGame.jsx'
+// ── Existing games (already in repo) ────────────────────────────
+import NebulaMemory      from './games/NebulaMemory.jsx'
+import CosmosPuzzle      from './games/CosmosPuzzle.jsx'
+import QuasarChain       from './games/QuasarChain.jsx'
+import NumberWarp        from './games/NumberWarp.jsx'
+import SequenceMemory    from './games/SequenceMemory.jsx'
+import LogicGrid         from './games/LogicGrid.jsx'
+
+// ── Subject games (already in repo) ─────────────────────────────
+import ChemLabGame       from './games/ChemLabGame.jsx'
 import PhysicsForcesGame from './games/PhysicsForcesGame.jsx'
-import BiologyCellGame from './games/BiologyCellGame.jsx'
-import MathsSpeedGame  from './games/MathsSpeedGame.jsx'
-import CosmosPuzzle   from './games/CosmosPuzzle.jsx'
-import QuasarChain    from './games/QuasarChain.jsx'
-import NumberWarp     from './games/NumberWarp.jsx'
-import SequenceMemory from './games/SequenceMemory.jsx'
-import LogicGrid      from './games/LogicGrid.jsx'
-import CipherBreak    from './games/CipherBreak.jsx'
-import BalanceMind    from './games/BalanceMind.jsx'
-import PathFinder     from './games/PathFinder.jsx'
-import WordForge      from './games/WordForge.jsx'
-import MindMap        from './games/MindMap.jsx'
+import BiologyCellGame   from './games/BiologyCellGame.jsx'
+import MathsSpeedGame    from './games/MathsSpeedGame.jsx'
+
+// ── 5 NEW cognitive games (upload these with GamePlayer.jsx) ─────
+import MindBridge        from './games/MindBridge.jsx'
+import FlowState         from './games/FlowState.jsx'
+import TowerOfMind       from './games/TowerOfMind.jsx'
+import RippleCode        from './games/RippleCode.jsx'
+import ShadowMatch       from './games/ShadowMatch.jsx'
 
 const GAME_COMPONENTS = {
   memory:     NebulaMemory,
@@ -32,12 +32,7 @@ const GAME_COMPONENTS = {
   arithmetic: NumberWarp,
   sequence:   SequenceMemory,
   logic:      LogicGrid,
-  cipher:     CipherBreak,
-  balance:    BalanceMind,
-  pathfind:   PathFinder,
-  wordforge:  WordForge,
-  mindmap:    MindMap,
-  // ── 5 new cognitive games ──
+  // 5 new cognitive games
   deduction:  MindBridge,
   flow:       FlowState,
   hanoi:      TowerOfMind,
@@ -55,14 +50,12 @@ const GAME_COMPONENTS = {
 const CATEGORY_COLORS = {
   Memory:'#7C3AED', Spatial:'#0891B2', Pattern:'#059669',
   Arithmetic:'#F59E0B', Logic:'#06B6D4',
-  Cryptic:'#F97316', Algebra:'#84CC16', Strategic:'#06B6D4',
-  Verbal:'#EC4899', Analogical:'#A855F7',
+  Algorithmic:'#F59E0B', Analogical:'#A855F7',
 }
 
 async function saveGameProgress(studentId, gameId, level, score) {
   if (!studentId) return
   try {
-    // Upsert: update if exists, insert if not
     const existing = await db.game_progress
       .where('[student_id+game_id+level]')
       .equals([studentId, gameId, level])
@@ -81,7 +74,6 @@ async function saveGameProgress(studentId, gameId, level, score) {
       })
     }
   } catch(e) {
-    // Compound index may not exist — fall back to simple query
     try {
       const rows = await db.game_progress.where('student_id').equals(studentId).toArray()
       const existing = rows.find(r => r.game_id === gameId && r.level === level)
@@ -175,7 +167,6 @@ export default function GamePlayer() {
       <div className="flex-1 px-4 pt-4 pb-6 overflow-auto max-w-lg mx-auto w-full">
         <GameComponent key={key} game={game} levelData={levelData} studentId={student?.id}
           onFinish={async () => {
-            // Save a completion record for ProgressReport gameLevels count
             await saveGameProgress(student?.id, gameId, lv, levelData.level * 10)
             navigate('/games')
           }} />
