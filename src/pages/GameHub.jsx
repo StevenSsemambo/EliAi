@@ -5,7 +5,25 @@ import { SoundEngine } from '../utils/soundEngine.js'
 import { GAMES, getUnlockStatus } from '../utils/gameUnlocks.js'
 import Navbar from '../components/Navbar.jsx'
 
-// ── Starfield background ─────────────────────────────────────────
+// ── Category config ───────────────────────────────────────────────
+const CATEGORIES = [
+  { id: 'all',     label: 'All',     icon: '🌌' },
+  { id: 'memory',  label: 'Memory',  icon: '🧠' },
+  { id: 'logic',   label: 'Logic',   icon: '🌀' },
+  { id: 'spatial', label: 'Spatial', icon: '🔭' },
+  { id: 'pattern', label: 'Pattern', icon: '🔢' },
+  { id: 'subject', label: 'Subject', icon: '📚' },
+]
+
+// Map game type → category tab
+const TYPE_TO_CAT = {
+  memory: 'memory', sequence: 'memory',
+  logic: 'logic', deduction: 'logic',
+  sliding: 'spatial', flow: 'spatial', spatial: 'spatial',
+  arithmetic: 'pattern', pattern: 'pattern', chain: 'pattern', hanoi: 'pattern',
+  subject: 'subject',
+}
+
 function Starfield() {
   const canvasRef = useRef(null)
   useEffect(() => {
@@ -32,21 +50,6 @@ function Starfield() {
   return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" />
 }
 
-// ── Orbital ring decoration ──────────────────────────────────────
-function OrbitRing({ size, duration, color, delay = 0 }) {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ zIndex: 0 }}>
-      <div style={{
-        width: size, height: size, border: `1px solid ${color}`,
-        borderRadius: '50%', opacity: 0.15,
-        animation: `spin ${duration}s linear infinite`,
-        animationDelay: `${delay}s`
-      }} />
-    </div>
-  )
-}
-
-// ── Progress bar toward next unlock ─────────────────────────────
 function UnlockBar({ label, current, required, color }) {
   const pct = Math.min(100, Math.round((current / required) * 100))
   return (
@@ -63,7 +66,6 @@ function UnlockBar({ label, current, required, color }) {
   )
 }
 
-// ── Single game card ─────────────────────────────────────────────
 function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
   const [expanded, setExpanded] = useState(false)
   const maxUnlocked = unlockedLevels.length > 0 ? Math.max(...unlockedLevels) : 0
@@ -72,13 +74,12 @@ function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
   const pctUnlocked = Math.round((maxUnlocked / totalLevels) * 100)
 
   return (
-    <div className="rounded-2xl overflow-hidden mb-4" style={{
+    <div className="rounded-2xl overflow-hidden mb-3" style={{
       background: 'linear-gradient(135deg, #0F1629 0%, #131829 100%)',
       border: `1px solid ${maxUnlocked > 0 ? game.color + '55' : '#1A2035'}`,
       boxShadow: maxUnlocked > 0 ? `0 0 20px ${game.glow}` : 'none'
     }}>
-      {/* Header */}
-      <div className="p-4 flex items-center gap-4 cursor-pointer" onClick={() => setExpanded(e => !e)}>
+      <div className="p-4 flex items-center gap-4 cursor-pointer" onClick={() => { setExpanded(e => !e); SoundEngine.tap() }}>
         <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0 relative"
           style={{ background: maxUnlocked > 0 ? game.color + '22' : '#0C0F1A', border: `1px solid ${maxUnlocked > 0 ? game.color : '#252D45'}` }}>
           <span style={{ filter: maxUnlocked === 0 ? 'grayscale(1) opacity(0.4)' : 'none' }}>{game.icon}</span>
@@ -89,7 +90,7 @@ function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
           )}
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-0.5">
+          <div className="flex items-center gap-2 mb-0.5 flex-wrap">
             <span className="text-white font-bold text-base">{game.name}</span>
             {maxUnlocked > 0 && (
               <span className="text-xs px-2 py-0.5 rounded-full font-bold"
@@ -118,10 +119,8 @@ function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
         <span className="text-slate-600 text-lg">{expanded ? '▲' : '▼'}</span>
       </div>
 
-      {/* Expanded level list */}
       {expanded && (
         <div className="px-4 pb-4 border-t" style={{ borderColor: '#1A2035' }}>
-          {/* Next unlock progress */}
           {nextLevel && (
             <div className="mt-3 mb-4 p-3 rounded-xl" style={{ background: '#0C0F1A', border: '1px solid #1A2035' }}>
               <p className="text-xs font-bold mb-2" style={{ color: game.color }}>
@@ -136,8 +135,6 @@ function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
               )}
             </div>
           )}
-
-          {/* Level grid */}
           <div className="grid grid-cols-4 gap-2 mt-3">
             {game.levels.map(lvl => {
               const unlocked = unlockedLevels.includes(lvl.level)
@@ -167,7 +164,6 @@ function GameCard({ game, unlockedLevels, highScores, stats, onPlay }) {
   )
 }
 
-// ── Unlock popup ─────────────────────────────────────────────────
 function UnlockCelebration({ game, level, onClose }) {
   useEffect(() => { setTimeout(onClose, 4000) }, [])
   return (
@@ -189,13 +185,13 @@ function UnlockCelebration({ game, level, onClose }) {
   )
 }
 
-// ── Main Game Hub ────────────────────────────────────────────────
 export default function GameHub() {
   const { student } = useUser()
   const navigate = useNavigate()
   const [unlockData, setUnlockData] = useState(null)
   const [celebration, setCelebration] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [activeCategory, setActiveCategory] = useState('all')
 
   useEffect(() => {
     try {
@@ -227,20 +223,29 @@ export default function GameHub() {
   const totalUnlocked = unlockData
     ? Object.values(unlockData.status).reduce((s, g) => s + g.unlockedLevels.length, 0) : 0
 
+  const validGames = GAMES.filter(Boolean)
+  const cognitiveGames = validGames.filter(g => g.type !== 'subject')
+  const subjectGames   = validGames.filter(g => g.type === 'subject')
+
+  function matchesCategory(game) {
+    if (activeCategory === 'all') return true
+    if (activeCategory === 'subject') return game.type === 'subject'
+    return TYPE_TO_CAT[game.type] === activeCategory
+  }
+
+  const filteredCognitive = cognitiveGames.filter(matchesCategory)
+  const filteredSubject   = subjectGames.filter(matchesCategory)
+  const showSubjectSection = activeCategory === 'all' || activeCategory === 'subject'
+
   return (
     <div className="min-h-screen pb-24 relative overflow-hidden" style={{ background: '#050810' }}>
       <style>{`
         @keyframes spin { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
         @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
         @keyframes popIn { from { transform: scale(0.5); opacity: 0 } to { transform: scale(1); opacity: 1 } }
-        @keyframes pulse-glow { 0%,100% { opacity: 0.6 } 50% { opacity: 1 } }
-        @keyframes slideUp { from { transform: translateY(30px); opacity: 0 } to { transform: translateY(0); opacity: 1 } }
       `}</style>
 
-      {/* Starfield */}
       <Starfield />
-
-      {/* Deep space gradient */}
       <div className="absolute inset-0 pointer-events-none" style={{
         background: 'radial-gradient(ellipse at 20% 20%, rgba(124,58,237,0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 80%, rgba(8,145,178,0.12) 0%, transparent 50%)',
         zIndex: 1
@@ -248,7 +253,7 @@ export default function GameHub() {
 
       <div className="relative" style={{ zIndex: 2 }}>
         {/* Header */}
-        <div className="px-5 pt-12 pb-6">
+        <div className="px-5 pt-12 pb-4">
           <div className="flex items-center gap-3 mb-1">
             <button onClick={() => navigate('/dashboard')} className="text-slate-500 text-sm">← Back</button>
           </div>
@@ -286,16 +291,36 @@ export default function GameHub() {
           </div>
         </div>
 
-        {/* How it works banner */}
-        <div className="mx-5 mb-5 rounded-2xl p-4" style={{
-          background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(8,145,178,0.15))',
-          border: '1px solid rgba(124,58,237,0.25)'
-        }}>
-          <p className="text-xs font-bold text-white mb-1">🚀 How to Unlock Games</p>
-          <p className="text-xs leading-relaxed" style={{ color: '#94A3B8' }}>
-            Complete lessons <span style={{ color: '#7C3AED' }}>+</span> pass quizzes with good scores <span style={{ color: '#7C3AED' }}>+</span> sit exams → unlock higher game levels. The more you study, the further you explore the cosmos!
-          </p>
+        {/* ── Category filter tabs ─────────────────────────────── */}
+        <div className="px-5 mb-4">
+          <div className="flex gap-2 overflow-x-auto pb-1" style={{ scrollbarWidth: 'none' }}>
+            {CATEGORIES.map(cat => (
+              <button key={cat.id}
+                onClick={() => { setActiveCategory(cat.id); SoundEngine.tap() }}
+                className="flex-shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all active:scale-95"
+                style={{
+                  background: activeCategory === cat.id ? '#7C3AED' : '#0F1629',
+                  color: activeCategory === cat.id ? '#fff' : '#64748B',
+                  border: `1px solid ${activeCategory === cat.id ? '#7C3AED' : '#1A2035'}`,
+                }}>
+                <span>{cat.icon}</span>
+                <span>{cat.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
+
+        {/* How it works banner — only on All tab */}
+        {activeCategory === 'all' && (
+          <div className="mx-5 mb-4 rounded-2xl p-3" style={{
+            background: 'linear-gradient(135deg, rgba(124,58,237,0.15), rgba(8,145,178,0.15))',
+            border: '1px solid rgba(124,58,237,0.25)'
+          }}>
+            <p className="text-xs leading-relaxed" style={{ color: '#94A3B8' }}>
+              🚀 <span className="text-white font-bold">Unlock games</span> by completing lessons + passing quizzes + sitting exams. The more you study, the further you explore!
+            </p>
+          </div>
+        )}
 
         {/* Games */}
         <div className="px-5">
@@ -305,16 +330,62 @@ export default function GameHub() {
               <p className="text-slate-500 text-sm">Scanning the cosmos...</p>
             </div>
           ) : (
-            GAMES.filter(Boolean).map(game => (
-              <GameCard
-                key={game.id}
-                game={game}
-                unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
-                highScores={unlockData?.status[game.id]?.highScores || {}}
-                stats={stats}
-                onPlay={handlePlay}
-              />
-            ))
+            <>
+              {/* Cognitive games */}
+              {filteredCognitive.length > 0 && (
+                <>
+                  {activeCategory === 'all' && (
+                    <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#7C3AED' }}>
+                      🧠 Cognitive Games
+                    </p>
+                  )}
+                  {filteredCognitive.map(game => (
+                    <GameCard
+                      key={game.id}
+                      game={game}
+                      unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
+                      highScores={unlockData?.status[game.id]?.highScores || {}}
+                      stats={stats}
+                      onPlay={handlePlay}
+                    />
+                  ))}
+                </>
+              )}
+
+              {/* Subject games — separate section */}
+              {showSubjectSection && filteredSubject.length > 0 && (
+                <>
+                  <div className="flex items-center gap-3 my-4">
+                    <div className="flex-1 h-px" style={{ background: '#1A2035' }} />
+                    <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#0D9488' }}>
+                      📚 Subject Games
+                    </p>
+                    <div className="flex-1 h-px" style={{ background: '#1A2035' }} />
+                  </div>
+                  <p className="text-xs mb-3" style={{ color: '#3A4560' }}>
+                    Reinforce your curriculum knowledge with subject-specific challenges
+                  </p>
+                  {filteredSubject.map(game => (
+                    <GameCard
+                      key={game.id}
+                      game={game}
+                      unlockedLevels={unlockData?.status[game.id]?.unlockedLevels || [1]}
+                      highScores={unlockData?.status[game.id]?.highScores || {}}
+                      stats={stats}
+                      onPlay={handlePlay}
+                    />
+                  ))}
+                </>
+              )}
+
+              {/* Empty state for filtered view */}
+              {filteredCognitive.length === 0 && filteredSubject.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="text-4xl mb-3">🔭</div>
+                  <p className="text-slate-500 text-sm">No games in this category yet</p>
+                </div>
+              )}
+            </>
           )}
         </div>
 
@@ -323,7 +394,7 @@ export default function GameHub() {
           <div className="mx-5 mt-2 mb-4 rounded-2xl p-4 text-center" style={{ background: '#0F1629', border: '1px solid #1A2035' }}>
             <div className="text-2xl mb-2">🌠</div>
             <p className="text-sm font-bold text-white mb-1">Your journey begins!</p>
-            <p className="text-xs text-slate-500">Complete <strong style={{ color: '#7C3AED' }}>3 lessons</strong> to unlock your first game level. Start exploring your subjects now!</p>
+            <p className="text-xs text-slate-500">Complete <strong style={{ color: '#7C3AED' }}>3 lessons</strong> to unlock your first game level.</p>
           </div>
         )}
       </div>
