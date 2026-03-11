@@ -42,12 +42,13 @@ async function getLessonById(lessonId,classLevel){
 
 function XPBar({xp}){
   const level=Math.floor(xp/500)+1
+  const nextLevelXp=level*500
   const pct=(xp%500)/500*100
   return(
     <div>
       <div className="flex justify-between items-center mb-1.5">
         <span className="text-xs font-bold" style={{color:'#F59E0B'}}>Level {level}</span>
-        <span className="text-xs text-slate-500 font-mono">{xp} / {level*500} XP</span>
+        <span className="text-xs text-slate-500 font-mono">{xp} / {nextLevelXp} XP</span>
       </div>
       <div className="h-2.5 rounded-full overflow-hidden" style={{background:'#1A2035'}}>
         <div className="h-full rounded-full xp-fill" style={{width:`${pct}%`,background:'linear-gradient(90deg,#0D9488,#F59E0B)'}}/>
@@ -142,7 +143,7 @@ export default function Dashboard(){
   const [badgeOverlay,setBadgeOverlay]=useState(null)
   const prevXP=useRef(student?.total_xp||0)
 
-  useEffect(()=>{clearSubject()},[])
+  useEffect(()=>{clearSubject()},[] )
 
   useEffect(()=>{
     if(!student)return
@@ -187,9 +188,9 @@ export default function Dashboard(){
       )}
 
       {/* Header */}
-      <div className="px-5 pt-12 pb-6 relative overflow-hidden" style={{background:'linear-gradient(180deg,#131829 0%,#0C0F1A 100%)'}}>
+      <div className="px-5 pt-12 pb-5 relative overflow-hidden" style={{background:'linear-gradient(180deg,#131829 0%,#0C0F1A 100%)'}}>
         <div className="absolute top-0 right-0 w-56 h-56 pointer-events-none" style={{background:'radial-gradient(circle,rgba(13,148,136,0.1) 0%,transparent 70%)'}}/>
-        <div className="flex items-start justify-between mb-5">
+        <div className="flex items-start justify-between mb-4">
           <div>
             <p className="text-slate-500 text-sm mb-0.5">Welcome back,</p>
             <h1 className="text-2xl font-display font-extrabold text-white leading-tight">{student.name} {AVATARS[student.avatar||0]}</h1>
@@ -211,8 +212,9 @@ export default function Dashboard(){
         <XPBar xp={student.total_xp||0}/>
       </div>
 
-      <div className="px-5 space-y-4 mt-2">
-        {/* Stats */}
+      <div className="px-5 space-y-4 mt-3">
+
+        {/* ── 1. STATS STRIP ── */}
         <div className="grid grid-cols-3 gap-3 page-enter">
           {[{label:'Lessons',val:stats.completed,icon:'✅'},{label:'Avg Score',val:`${stats.avgScore}%`,icon:'🎯'},{label:'Total XP',val:<XPOdometer value={student.total_xp||0}/>,icon:'⭐'}].map(s=>(
             <div key={s.label} className="glass rounded-2xl p-3 text-center">
@@ -223,67 +225,54 @@ export default function Dashboard(){
           ))}
         </div>
 
-        {/* Goal */}
-        <div className="page-delay-1"><GoalWidget student={student}/></div>
-
-        {/* Quick actions */}
-        <div className="grid grid-cols-2 gap-3 page-delay-1">
-          <Link to="/quick-quiz" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
-            style={{background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)'}}>
-            <span className="text-2xl">🎲</span>
-            <div><div className="text-white font-bold text-sm">Quick Quiz</div><div className="text-slate-400 text-xs">Random revision</div></div>
-          </Link>
-          <Link to="/exam-center" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
-            style={{background:'linear-gradient(135deg,#F59E0B22,#EF444422)',border:'1px solid #F59E0B44'}}>
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{background:'#F59E0B22'}}>📋</div>
-            <div><div className="text-white font-bold text-sm">Exam Centre</div><div className="text-slate-400 text-xs">Mock exams &amp; tests</div></div>
-          </Link>
-        <Link to="/focus-timer" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
-            style={{background:'rgba(13,148,136,0.08)',border:'1px solid rgba(13,148,136,0.2)'}}>
-            <span className="text-2xl">⏱</span>
-            <div><div className="text-white font-bold text-sm">Focus Timer</div><div className="text-slate-400 text-xs">Earn bonus XP</div></div>
-          </Link>
+        {/* ── 2. SUBJECTS — primary CTA, moved up ── */}
+        <div className="page-delay-1">
+          <h2 className="text-white font-display font-extrabold text-lg mb-3">📚 Your Subjects</h2>
+          <div className="grid grid-cols-2 gap-3">
+            {SUBJECTS.map((s,i)=>(
+              <Link key={s.id} to={`/subject/${s.id}`} onClick={()=>SoundEngine.tap()}
+                className={`card-spring-${i} rounded-2xl p-5 active:scale-95 transition-all relative overflow-hidden ${s.glow}`}
+                style={{background:s.grad,border:'1px solid rgba(255,255,255,0.07)'}}>
+                <div className="absolute top-0 right-0 w-20 h-20 rounded-full pointer-events-none" style={{background:'radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%)',transform:'translate(30%,-30%)'}}/>
+                <div className="text-3xl mb-2">{s.icon}</div>
+                <div className="text-white font-display font-extrabold text-sm">{s.label}</div>
+                <div className="text-white/60 text-xs mt-0.5">{student.class_level} →</div>
+              </Link>
+            ))}
+          </div>
         </div>
 
-        {/* 🎮 Space Academy Game Hub Banner */}
-        <Link to="/games" onClick={()=>SoundEngine.tap()}
-          className="block rounded-2xl overflow-hidden active:scale-95 transition-all page-delay-1"
-          style={{background:'linear-gradient(135deg,#050810 0%,#0A0D1A 50%,#0F1629 100%)',border:'1px solid rgba(124,58,237,0.35)',boxShadow:'0 0 20px rgba(124,58,237,0.15)'}}>
-          <div className="p-4 relative overflow-hidden">
-            {/* Starfield dots */}
-            <div className="absolute inset-0 pointer-events-none" style={{backgroundImage:'radial-gradient(circle, rgba(200,220,255,0.4) 1px, transparent 1px)',backgroundSize:'20px 20px',opacity:0.3}}/>
-            <div className="relative flex items-center gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl"
-                  style={{background:'linear-gradient(135deg,rgba(124,58,237,0.3),rgba(8,145,178,0.3))',border:'1px solid rgba(124,58,237,0.4)'}}>
-                  🚀
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-0.5">
-                  <span className="text-white font-black text-base">Space Academy</span>
-                  <span className="text-xs px-2 py-0.5 rounded-full font-bold"
-                    style={{background:'rgba(124,58,237,0.2)',color:'#A78BFA',border:'1px solid rgba(124,58,237,0.3)'}}>
-                    6 GAMES
-                  </span>
-                </div>
-                <p className="text-xs leading-tight mb-2" style={{color:'#64748B'}}>
-                  Study to unlock cosmic game levels 🌌
-                </p>
-                <div className="flex gap-2 text-xs flex-wrap">
-                  {['🌌 Memory','🔭 Puzzle','🔢 Warp','🧠 Sequence','🌀 Logic','⚛️ Chain'].map(g=>(
-                    <span key={g} className="px-2 py-0.5 rounded-full" style={{background:'rgba(124,58,237,0.12)',color:'#A78BFA'}}>
-                      {g}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <span className="text-slate-600 text-lg flex-shrink-0">›</span>
-            </div>
+        {/* ── 3. QUICK ACTIONS ── */}
+        <div className="page-delay-1">
+          <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">⚡ Quick Actions</h2>
+          <div className="grid grid-cols-2 gap-3">
+            <Link to="/games" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
+              style={{background:'linear-gradient(135deg,rgba(124,58,237,0.15),rgba(8,145,178,0.15))',border:'1px solid rgba(124,58,237,0.3)'}}>
+              <span className="text-2xl">🎮</span>
+              <div><div className="text-white font-bold text-sm">Game Hub</div><div className="text-slate-400 text-xs">15 games · 360 levels</div></div>
+            </Link>
+            <Link to="/exam-center" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
+              style={{background:'linear-gradient(135deg,#F59E0B22,#EF444422)',border:'1px solid #F59E0B44'}}>
+              <span className="text-2xl">📋</span>
+              <div><div className="text-white font-bold text-sm">Exam Centre</div><div className="text-slate-400 text-xs">Mock exams &amp; tests</div></div>
+            </Link>
+            <Link to="/quick-quiz" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
+              style={{background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.2)'}}>
+              <span className="text-2xl">🎲</span>
+              <div><div className="text-white font-bold text-sm">Quick Quiz</div><div className="text-slate-400 text-xs">Random revision</div></div>
+            </Link>
+            <Link to="/focus-timer" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all"
+              style={{background:'rgba(13,148,136,0.08)',border:'1px solid rgba(13,148,136,0.2)'}}>
+              <span className="text-2xl">⏱</span>
+              <div><div className="text-white font-bold text-sm">Focus Timer</div><div className="text-slate-400 text-xs">Earn bonus XP</div></div>
+            </Link>
           </div>
-        </Link>
+        </div>
 
-        {/* Continue */}
+        {/* ── 4. DAILY GOAL ── */}
+        <div className="page-delay-2"><GoalWidget student={student}/></div>
+
+        {/* ── 5. CONTINUE LEARNING ── */}
         {cont&&(
           <div className="page-delay-2">
             <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">▶ Continue Learning</h2>
@@ -303,7 +292,7 @@ export default function Dashboard(){
           </div>
         )}
 
-        {/* Weak areas */}
+        {/* ── 6. NEEDS REVIEW ── */}
         {weak.length>0&&(
           <div className="page-delay-2">
             <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">⚠ Needs Review</h2>
@@ -322,25 +311,8 @@ export default function Dashboard(){
           </div>
         )}
 
-        {/* Subject cards */}
-        <div className="page-delay-3">
-          <h2 className="text-white font-display font-extrabold text-lg mb-3">📚 Your Subjects</h2>
-          <div className="grid grid-cols-2 gap-3">
-            {SUBJECTS.map((s,i)=>(
-              <Link key={s.id} to={`/subject/${s.id}`} onClick={()=>SoundEngine.tap()}
-                className={`card-spring-${i} rounded-2xl p-5 active:scale-95 transition-all relative overflow-hidden ${s.glow}`}
-                style={{background:s.grad,border:'1px solid rgba(255,255,255,0.07)'}}>
-                <div className="absolute top-0 right-0 w-20 h-20 rounded-full pointer-events-none" style={{background:'radial-gradient(circle,rgba(255,255,255,0.1) 0%,transparent 70%)',transform:'translate(30%,-30%)'}}/>
-                <div className="text-3xl mb-2">{s.icon}</div>
-                <div className="text-white font-display font-extrabold text-sm">{s.label}</div>
-                <div className="text-white/60 text-xs mt-0.5">{student.class_level} →</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Leaderboard */}
-        <Link to="/leaderboard" onClick={()=>SoundEngine.tap()} className="glass rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block page-delay-4">
+        {/* ── 7. LEADERBOARD ── */}
+        <Link to="/leaderboard" onClick={()=>SoundEngine.tap()} className="glass rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block page-delay-3">
           <span className="text-2xl">🏆</span>
           <div className="flex-1"><div className="text-white font-bold text-sm">Household Leaderboard</div><div className="text-slate-400 text-xs">Who's leading on this device?</div></div>
           <span className="text-slate-500">›</span>
