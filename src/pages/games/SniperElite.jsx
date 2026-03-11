@@ -328,7 +328,8 @@ export default function SniperElite({ game, levelData, studentId, onFinish }) {
     // mountains
     ctx.fillStyle=u.night?'#0a0f1a':'#1a3d2e'
     ctx.beginPath();ctx.moveTo(0,200)
-    ;[0,60,120,180,240,300,360,420,480].forEach((x,i)=>ctx.lineTo(x,150+Math.sin(i*0.8)*40))
+    const mountainX = [0,60,120,180,240,300,360,420,480]
+    mountainX.forEach((x,i)=>ctx.lineTo(x,150+Math.sin(i*0.8)*40))
     ctx.lineTo(W,200);ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.fill()
 
     // ground
@@ -456,9 +457,10 @@ export default function SniperElite({ game, levelData, studentId, onFinish }) {
       ctx.moveTo(cx+sx,cy+sy+20);ctx.lineTo(cx+sx,cy+sy+cr)
       ctx.stroke()
       // mil-dots
+      const milDots = [-3,-2,-1,0,1,2,3]
       ctx.fillStyle='rgba(255,60,60,0.8)'
-      ;[-3,-2,-1,0,1,2,3].forEach(d=>{if(d!==0){ctx.beginPath();ctx.arc(cx+sx+d*20,cy+sy,1.5,0,Math.PI*2);ctx.fill()}})
-      ;[-3,-2,-1,0,1,2,3].forEach(d=>{if(d!==0){ctx.beginPath();ctx.arc(cx+sx,cy+sy+d*20,1.5,0,Math.PI*2);ctx.fill()}})
+      milDots.forEach(d=>{if(d!==0){ctx.beginPath();ctx.arc(cx+sx+d*20,cy+sy,1.5,0,Math.PI*2);ctx.fill()}})
+      milDots.forEach(d=>{if(d!==0){ctx.beginPath();ctx.arc(cx+sx,cy+sy+d*20,1.5,0,Math.PI*2);ctx.fill()}})
       // center dot
       ctx.fillStyle='#ff3c3c'
       ctx.beginPath();ctx.arc(cx+sx,cy+sy,2,0,Math.PI*2);ctx.fill()
