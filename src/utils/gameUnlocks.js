@@ -122,7 +122,6 @@ export const GAMES = [
       return { gridSize:Math.min(9,4+Math.floor(t*5.5)), clueRatio:Math.round(55-t*25), timeLimit:lvl<=4?0:Math.round(t*300), req:r }
     })
   },
-,
   {
     id: 'chem_lab', name: 'Chem Lab', icon: '🧪',
     description: 'Mix chemicals and predict products — master Uganda Chemistry curriculum',
