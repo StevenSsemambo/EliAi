@@ -1,5 +1,5 @@
 /**
- * ELIMU LEARN - INTELLIGENT AI  v5.0  🧠
+ * EQLA LEARN - INTELLIGENT AI  v5.0  🧠
  * -----------------------------------------------------------------
  * The smartest offline study assistant for Uganda S1-S6 UNEB prep.
  *
@@ -25,7 +25,7 @@ import { analyseStudent } from './brain.js'
 
 
 /**
- * ELIMU LEARN - INTELLIGENT RULE-BASED AI  v5.0
+ * EQLA LEARN - INTELLIGENT RULE-BASED AI  v5.0
  * -----------------------------------------------------------------
  * 100% offline. Works on all devices.
  *
@@ -1827,12 +1827,6 @@ const INTENT_PATTERNS = [
   { intent:'HINT',      patterns: [/i('?m| am) stuck/i, /give me a hint/i, /i don'?t (understand|get)/i, /help me (with|understand)/i, /i need help/i, /i'?m? confused/i, /hint/i, /struggling with/i, /not sure (about|how)/i] },
   { intent:'EXAM_TIP',  patterns: [/exam tip/i, /how (do i|should i|to) (pass|study for|prepare for)/i, /uneb (tip|advice)/i, /common (mistake|error)s?/i, /how to revise/i, /revision tip/i] },
   { intent:'COMPARE',   patterns: [/difference between (.+) and (.+)/i, /compare (.+) (and|with|to) (.+)/i, /(.+) vs\.? (.+)/i, /distinguish between (.+) and (.+)/i, /similarities.*differences/i] },
-  { intent:'STRUGGLING',  patterns: [/i('?m| am) (struggling|failing|lost|hopeless|bad at|terrible at|no good at)/i, /i (can'?t|cannot) (understand|get|do|pass)/i, /this is (too hard|impossible)/i, /i give up/i, /i'?m? (scared|nervous|worried) (about|of) (the exam|uneb|results)/i] },
-  { intent:'BORED',       patterns: [/^(this is boring|i'?m? bored|not interested)[.!?]*$/i, /studying is (boring|hard|pointless)/i] },
-  { intent:'TIRED',       patterns: [/^(i'?m? tired|i'?m? exhausted|need a break|so tired)[.!?]*$/i] },
-  { intent:'ENCOURAGE',   patterns: [/^(motivate me|encourage me|i need motivation|cheer me up)[.!?]*$/i, /will i pass/i, /am i going to (pass|fail)/i] },
-  { intent:'CASUAL_CHAT', patterns: [/^(what'?s? up|how'?s? it going|how are you doing|are you (real|human|a robot|ai))[.!?]*$/i, /^(lol|haha|ok+|okay+|sure|yep|yeah|nah)[.!?]*$/i] },
-
   { intent:'GREET',     patterns: [/^(hi|hello|hey|good morning|good evening|good afternoon|helo|hi there|howdy)[\s!.]*$/i, /^(how are you|what can you do|who are you)[\s?]*$/i, /^(start|begin)[\s!.]*$/i] },
   { intent:'THANKS',    patterns: [/^(thanks?|thank you|ok thanks?|great|awesome|cool|perfect|got it|i see|understood)[\s!.]*$/i, /^(nice|brilliant|excellent|wonderful|fantastic|that helps?)[\s!.]*$/i] },
   { intent:'IMPROVE',   patterns: [/how (do i|can i|to) improve/i, /how (do i|can i) (get|score) better/i, /tips to improve/i, /improve my (score|marks|grade)/i, /how to (pass|get better|do better)/i, /i (keep|keep on) failing/i, /i scored (low|badly|poorly)/i] },
@@ -1866,115 +1860,6 @@ export function classifyIntent(input) {
 // ===================================================================
 
 function pick(arr) { return arr[Math.floor(Math.random() * arr.length)] }
-
-// ===================================================================
-// CONVERSATIONAL INTENT HANDLERS
-// ===================================================================
-
-function handleStrugglingIntent(input, mem) {
-  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
-  var followUp = topic ? ('Is it **' + topic + '** specifically, or something else?') : "Which topic is giving you trouble?"
-  var slowDown = topic ? ('We can go back over **' + topic + '** more slowly, or switch to something you feel more confident with.') : "Tell me which topic feels hardest and we'll start there."
-  var newAngle = topic ? ("Let's try **" + topic + "** from a different angle. Sometimes seeing it explained differently makes everything click.") : "Which part is confusing you? Give me a topic and we'll break it down properly."
-  var responses = [
-    "Hey, that feeling is completely normal — even the best students hit walls.\n\nThe fact that you're here means you're already doing something about it. Let's figure out what's tripping you up. " + followUp,
-    "Honestly? Most students feel this way at some point before UNEB. It doesn't mean you can't do it.\n\nLet's take it one step at a time. " + slowDown,
-    "I hear you. But struggling now is actually better than not knowing until the exam — at least we can fix it.\n\n" + newAngle,
-  ]
-  var parts = [
-    { type:'text', text: pick(responses) },
-    { type:'suggestions', items: topic
-      ? ['Explain ' + topic + ' more simply', 'Quiz me slowly on ' + topic, 'Give me a hint on ' + topic, 'Start a different topic']
-      : ['Explain photosynthesis simply','Quiz me on algebra','What should I study today?','Make me a study plan']
-    }
-  ]
-  return { parts: parts }
-}
-
-function handleBoredIntent(mem) {
-  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
-  var quizLine = topic ? ('Want a rapid-fire quiz on **' + topic + '**?') : "Pick a topic and let's see how many you can get right."
-  var texts = [
-    "Ha — fair enough. Let's make it more interesting.\n\nHow about we skip the explanations and I just throw questions at you? Sometimes competing against yourself is more fun than reading notes. " + quizLine,
-    "Studying can feel like that sometimes! Let's switch things up — have you tried the games section? It covers real curriculum content but feels less like studying. Or I can just quiz you — short, fast questions.",
-    "Understood. Tell you what — give me 5 minutes and 3 quick questions. If you get them right, you're done with this topic. Deal?",
-  ]
-  return {
-    parts: [
-      { type:'text', text: pick(texts) },
-      { type:'suggestions', items: topic
-        ? ['Quick quiz on ' + topic, 'Show me the games', 'Try a different topic', 'What should I study today?']
-        : ['Quick quiz on forces', 'Show me the games', 'Quiz me on algebra', 'What should I study today?']
-      }
-    ]
-  }
-}
-
-function handleTiredIntent() {
-  var texts = [
-    "You've been working hard — a proper break is part of studying well, not cheating.\n\nWhen you're back, just pick up where you left off. Even 20 minutes of focused study is better than two hours half-asleep.",
-    "Totally get it. Rest is actually important for memory — your brain processes what you studied while you sleep.\n\nSet a 20-minute timer, rest, then come back. I'll be here.",
-    "Take the break — seriously! Studying when you're exhausted doesn't stick anyway.\n\nWhen you're back, let's do something low-effort like quick quiz questions to ease back in.",
-  ]
-  return {
-    parts: [
-      { type:'text', text: pick(texts) },
-      { type:'suggestions', items:["I'm back — let's continue",'Quick easy quiz to ease back in','What should I study today?','Make me a study plan'] }
-    ]
-  }
-}
-
-function handleEncourageIntent(profile, mem) {
-  var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null
-  var stats = profile ? profile.summary : null
-  var text = ''
-  if (stats && stats.totalCompleted > 0) {
-    var avg = stats.globalAvg
-    var done = stats.totalCompleted
-    var trackMsg = avg >= 60
-      ? "You're scoring above 60% — that means you're on track. Keep going."
-      : "Your scores will improve as you practice more. The brain literally gets better at this stuff the more you do it."
-    text = "Look at what you've already done — **" + done + " lessons completed** and an average of **" + avg + "%**. That's real progress.\n\nPeople who keep showing up, even when it's hard, are the ones who pass. You're already doing that.\n\n" + trackMsg
-  } else {
-    var topicLine = topic ? ('Start with **' + topic + '** — just one lesson, one quiz.') : "Pick one topic and do one lesson today. That's all."
-    text = "You can do this — I genuinely mean that.\n\nEvery student who prepared seriously gave themselves a real chance. The fact that you're studying now, not the night before, is already half the battle.\n\nLet's take it one topic at a time. " + topicLine
-  }
-  return {
-    parts: [
-      { type:'text', text: text },
-      { type:'suggestions', items: topic
-        ? ['Continue with ' + topic, 'What should I study today?', 'Show my progress', 'Make me a study plan']
-        : ['What should I study today?', 'Show my progress', 'Make me a study plan', 'Quiz me on forces']
-      }
-    ]
-  }
-}
-
-function handleCasualChatIntent(input) {
-  var t = input.toLowerCase()
-  var text = ''
-  if (/are you (real|human|a robot|ai)/i.test(t)) {
-    text = "I'm an AI — no hiding that! But I know the S1-S6 curriculum inside out and I'm pretty good at explaining things. What do you want to work on?"
-  } else if (/how are you|how.s it going/i.test(t)) {
-    text = "Doing great — ready to help! More importantly, how are *you* doing? Lots on your plate with studying?"
-  } else if (/what.s up/i.test(t)) {
-    text = "Not much — just here waiting for your next question! What are we working on?"
-  } else if (/do you (like|enjoy)/i.test(t)) {
-    text = "Ha! I don't really *like* things — but if I did, I think I'd enjoy a good maths problem. Anything I can help you with today?"
-  } else if (/^(lol|haha)/i.test(t)) {
-    text = "Glad that landed well! Now — back to business. What are we studying?"
-  } else {
-    text = "Ha! I'm mostly here for the studying side of things, but I appreciate the chat. What can I help you with?"
-  }
-  return {
-    parts: [{ type:'text', text: text }],
-    suggestions: ['Explain photosynthesis','Quiz me on forces','What should I study today?','Make me a study plan']
-  }
-}
-
-// ===================================================================
-// CONVERSATIONAL INTENT HANDLERS
-// ===================================================================
 
 // --- Smart fallback — pure offline ---
 function smartFallback(query) {
@@ -2319,50 +2204,36 @@ function generateVoiceResponse() {
 
 // --- Greetings & small talk ---
 const GREETINGS = [
-  function(n){ return "Hey" + (n ? " " + n : "") + "! Ready when you are. What are we working on today?"; },
-  function(n){ return "Hi" + (n ? " " + n : "") + "! Just say the word — what topic are we hitting today?"; },
-  function(n){ return "Hello" + (n ? " " + n : "") + "! Are you revising something specific, or want me to suggest where to start?"; },
-  function(n){ return "Welcome back" + (n ? ", " + n : "") + "! Pick up where you left off, or start something new."; },
+  n=>`Hello${n?' '+n:''}! 👋 I am **Eqla AI v5** — your smartest study partner for UNEB S1-S6.\n\nI can:\n• **Explain** any topic — _"What is osmosis?"_\n• **Solve** problems step-by-step — _"Find force if mass=5kg acceleration=3m/s²"_\n• **Quiz** you — _"Quiz me on probability"_\n• **Compare** topics — _"Mitosis vs meiosis"_\n• **Build a study plan** — _"Make me a 30-day study plan"_\n• **Explain WHY** — _"Why is photosynthesis important?"_\n\nWhat are we studying today?`,
+  n=>`Hi${n?' '+n:''}! 🌟 Ready to level up? I know every topic in the S1–S6 curriculum.\n\nTry:\n• _"Explain logarithms"_\n• _"Quiz me on cells"_\n• _"How do I calculate moles?"_\n• _"Difference between mitosis and meiosis"_\n• _"Make me a study plan"_`,
+  n=>`Good to see you${n?', '+n:''}! 🚀 Let's make this session count.\n\nI cover Maths, Physics, Biology and Chemistry from S1 to S6 — and I can now escalate hard questions to real AI for better answers. What are we tackling today?`,
 ]
 const THANKS_MSGS = [
-  function(){
-    var mem = conversationMemory;
-    var topic = mem.lastTopic ? mem.lastTopic.replace(/_/g,' ') : null;
-    return topic ? "Glad that made sense! Want to test yourself on **" + topic + "** while it's fresh?" : "Happy to help! Anything else you want to go through?";
-  },
-  function(){ return "You're welcome! Now's a good time to try a quick question — want me to quiz you?"; },
-  function(){ return "Of course! Is there a part of it you'd like me to dig into more, or are we good to move on?"; },
-  function(){ return "Glad it clicked! The best way to lock it in is to do a few practice questions — shall I throw one at you?"; },
-  function(){ return "Any time! What else is on your mind?"; },
+  "You're welcome! 😊 Every question makes you stronger. What's next?",
+  "Happy to help! 🌟 Keep studying — consistency is the UNEB secret. What else?",
+  "Great! 🚀 Students who ask questions are the ones who pass. What else?",
+  "Glad that helped! 💪 Want to test yourself with a quick quiz?",
+  "Any time! 🎯 What topic next?",
 ]
 const CORRECT_RESP = [
-  function(n){ return "Yes" + (n ? ", " + n : "") + "! That's exactly right. You're getting this — want another one?"; },
-  function(){ return "Correct! Good work. Keep that up in the exam and you'll be fine. Next question?"; },
-  function(){ return "That's it! Nice — you clearly understand this. One more?"; },
-  function(){ return "Spot on! Not everyone gets that one. Ready for the next?"; },
-  function(n){ return "Right" + (n ? ", " + n : "") + "! You're on a good run — shall we keep going?"; },
+  n=>`✅ Correct${n?', '+n:''}! Well done! 🎉`,
+  ()=>`✅ That's right! Excellent! ⭐`,
+  ()=>`✅ Perfect! You clearly know this. 🚀`,
+  ()=>`✅ Spot on! Keep this up — you will ace UNEB. 💪`,
 ]
 const WRONG_RESP = [
-  function(){ return "Not quite this time — but that's fine, that's what practice is for. Here's where it went wrong:"; },
-  function(){ return "Close, but not exactly. Let me break down where the difference is:"; },
-  function(){ return "That one caught you out! It happens. Here's the correct answer:"; },
+  ()=>`❌ Not quite — but that's how we learn.`,
+  ()=>`❌ Good try! The correct answer is below.`,
+  ()=>`❌ Almost! Check the explanation below.`,
 ]
 
 export function generateGreetResponse(studentName) {
   const n = studentName || conversationMemory.studentName
-  const mem = conversationMemory
-  const text = mem.messageCount > 2
-    ? "Still here! What do you need — explain something, practice questions, or something you're stuck on?"
-    : pick(GREETINGS)(n)
-  return { parts:[{ type:'text', text }], suggestions:['Explain photosynthesis','Quiz me on forces','How do I calculate moles?','What should I study today?'] }
+  return { parts:[{ type:'text', text: pick(GREETINGS)(n) }], suggestions:['Explain photosynthesis','Quiz me on forces','How do I calculate moles?','Make me a study plan'] }
 }
 export function generateThanksResponse() {
   const mem = conversationMemory
-  const text = pick(THANKS_MSGS)()
-  const suggestions = mem.lastTopic
-    ? ['Quiz me on ' + mem.lastTopic.replace(/_/g,' '), 'Tell me more about ' + mem.lastTopic.replace(/_/g,' '), 'Explain something else', 'What should I study next?']
-    : ['Explain photosynthesis','Quiz me on algebra','How do I find force?','What should I study today?']
-  return { parts:[{ type:'text', text }], suggestions }
+  return { parts:[{ type:'text', text: pick(THANKS_MSGS) }], suggestions: mem.lastTopic ? [`Quiz me on ${mem.lastTopic.replace(/_/g,' ')}`, 'Explain another topic', 'Make me a study plan'] : ['Explain photosynthesis','Quiz me on algebra','How do I find force?'] }
 }
 
 export function checkQuizAnswer(userInput, currentQuestion) {
@@ -2545,27 +2416,13 @@ export function generateSmartRecommendation(profile) {
 // ===================================================================
 
 export const conversationMemory = {
-  // Basic state
   lastTopic: null, lastSubject: null, lastKnowledge: null,
   quizStreak: 0, quizTotal: 0, messageCount: 0,
   studentName: null,
-  sessionTopics: [],
-  conversationHistory: [],
-  teachMode: false,
-  milestone: 0,
-
-  // FEATURE 1: Context chain — full thread of topics this session
-  // Each entry: { topic, subject, title, turnIndex }
-  topicStack: [],
-
-  // FEATURE 2: Socratic state — multi-turn teaching conversation
-  // { topic, subject, knowledge, phase, turnCount, studentAnswers[] }
-  // phases: 'probe' -> 'build' -> 'challenge' -> 'consolidate'
-  socraticState: null,
-
-  // FEATURE 4: Per-topic difficulty tracking
-  // { [topic]: { correct: N, wrong: N, wrongTypes: ['definition','calculation',...] } }
-  difficultyMap: {},
+  sessionTopics: [],       // all topics covered this session
+  conversationHistory: [], // for API context: [{role, content}]
+  teachMode: false,        // Socratic questioning mode
+  milestone: 0,            // for streak celebration
 }
 
 export function resetMemory() {
@@ -2574,9 +2431,6 @@ export function resetMemory() {
     quizStreak: 0, quizTotal: 0, messageCount: 0,
     studentName: null, sessionTopics: [], conversationHistory: [],
     teachMode: false, milestone: 0,
-    topicStack: [],
-    socraticState: null,
-    difficultyMap: {},
   })
 }
 
@@ -2587,483 +2441,6 @@ function addToHistory(role, content) {
     conversationMemory.conversationHistory = conversationMemory.conversationHistory.slice(-12)
   }
 }
-
-
-// ===================================================================
-// FEATURE 1: CONTEXT CHAINING
-// Tracks full topic thread so "what about the next one?" or
-// "which law did you mean?" can resolve against conversation history
-// ===================================================================
-
-function pushTopicToStack(topic, subject, title) {
-  var mem = conversationMemory
-  // Avoid duplicating consecutive same topic
-  var last = mem.topicStack[mem.topicStack.length - 1]
-  if (last && last.topic === topic) return
-  mem.topicStack.push({ topic: topic, subject: subject, title: title, turnIndex: mem.messageCount })
-  // Keep only last 10 topics in the chain
-  if (mem.topicStack.length > 10) mem.topicStack = mem.topicStack.slice(-10)
-}
-
-// Resolve vague references like "that", "it", "this topic", "the one before"
-function resolveContextualReference(input) {
-  var mem = conversationMemory
-  var t = input.toLowerCase().trim()
-  var stack = mem.topicStack
-
-  // "the previous topic" / "the one before" / "go back"
-  if (/previous topic|one before|go back|last topic|before this/.test(t)) {
-    return stack.length >= 2 ? stack[stack.length - 2] : null
-  }
-
-  // "that topic" / "this" / "it" alone — use most recent
-  if (/^(that|this|it|the topic)[.!?]*$/.test(t)) {
-    return stack.length > 0 ? stack[stack.length - 1] : null
-  }
-
-  // Subject-level: "another physics topic" / "something else in chemistry"
-  var subjectMatch = t.match(/(?:another|next|more|something else)(?: in| on| about)? (physics|chemistry|biology|maths|math|mathematics)/)
-  if (subjectMatch) {
-    var subj = subjectMatch[1].replace('maths','mathematics').replace('math','mathematics')
-    // Find the last topic from that subject in the stack
-    for (var i = stack.length - 1; i >= 0; i--) {
-      if (stack[i].subject === subj) return stack[i]
-    }
-  }
-
-  // "what about X?" where X is vague but we recently covered it
-  var whatAbout = t.match(/what about (.+)\??$/)
-  if (whatAbout) {
-    var ref = whatAbout[1].trim()
-    for (var i = stack.length - 1; i >= 0; i--) {
-      if (stack[i].title && stack[i].title.toLowerCase().includes(ref)) return stack[i]
-      if (stack[i].topic && stack[i].topic.replace(/_/g,' ').includes(ref)) return stack[i]
-    }
-  }
-
-  return null
-}
-
-// ===================================================================
-// FEATURE 2: SOCRATIC BACK-AND-FORTH
-// Multi-turn teaching: probe -> build -> challenge -> consolidate
-// Each phase asks a different type of question and evaluates the answer
-// ===================================================================
-
-var SOCRATIC_PHASES = {
-  probe: {
-    label: 'probe',
-    // Ask what student already knows
-    questions: [
-      function(title) { return "Before I explain, tell me — what do you already know about **" + title + "**? Even a rough idea is fine." },
-      function(title) { return "Let's start with what you know. When you hear **" + title + "**, what comes to mind?" },
-      function(title) { return "Quick check before we dive in — have you come across **" + title + "** before? What do you remember?" },
-    ],
-    next: 'build'
-  },
-  build: {
-    label: 'build',
-    // Ask a foundational definition/concept question based on the knowledge
-    questions: null, // generated dynamically from knowledge
-    next: 'challenge'
-  },
-  challenge: {
-    label: 'challenge',
-    // Ask an application or "why" question
-    questions: null,
-    next: 'consolidate'
-  },
-  consolidate: {
-    label: 'consolidate',
-    // Ask student to summarise in their own words
-    questions: [
-      function(title) { return "Last step — explain **" + title + "** back to me in your own words, as if you're teaching it to a classmate." },
-      function(title) { return "Now you try: summarise **" + title + "** in 2-3 sentences. What are the key ideas?" },
-    ],
-    next: null
-  }
-}
-
-function startSocraticSession(knowledge) {
-  var mem = conversationMemory
-  mem.socraticState = {
-    topic: knowledge.topic,
-    subject: knowledge.subject,
-    knowledge: knowledge,
-    phase: 'probe',
-    turnCount: 0,
-    studentAnswers: []
-  }
-  var q = pick(SOCRATIC_PHASES.probe.questions)(knowledge.title)
-  return {
-    parts: [
-      { type: 'text', text: "Let's learn **" + knowledge.title + "** properly — I'll guide you through it step by step rather than just explaining everything at once." },
-      { type: 'text', text: q },
-    ],
-    socraticMode: true,
-    topic: knowledge.topic,
-    subject: knowledge.subject,
-    suggestions: ['I know nothing yet — start from scratch', 'I have a rough idea', 'Skip this — just explain it']
-  }
-}
-
-function advanceSocraticSession(userInput, ss) {
-  var knowledge = ss.knowledge
-  var title = knowledge.title
-  ss.studentAnswers.push({ phase: ss.phase, answer: userInput })
-  ss.turnCount++
-
-  // Student wants to bail out of Socratic mode
-  if (/skip|just explain|tell me|stop asking|forget it/i.test(userInput)) {
-    conversationMemory.socraticState = null
-    return generateExplainResponse(knowledge, '')
-  }
-
-  var nextPhase = SOCRATIC_PHASES[ss.phase].next
-
-  // --- PROBE phase response ---
-  if (ss.phase === 'probe') {
-    var hasKnowledge = userInput.length > 20 && !/nothing|don.t know|no idea|blank|scratch/i.test(userInput)
-    var ack = hasKnowledge
-      ? "Good — you already have something to build on. Let me fill in the gaps."
-      : "No problem at all — everyone starts somewhere. Let's build it up from scratch."
-
-    // Move to BUILD: ask about the core definition
-    ss.phase = 'build'
-    var buildQ = ''
-    if (knowledge.definitions.length > 0) {
-      buildQ = "So here's my first question: **How would you define " + knowledge.definitions[0].term + "?** Try in your own words."
-    } else if (knowledge.keyFacts.length > 0) {
-      buildQ = "Here's a question to get us started: **" + knowledge.keyFacts[0].split('.')[0] + "** — do you know why that is?"
-    } else {
-      buildQ = "Let me ask you: **What do you think " + title + " is mainly used for?**"
-    }
-
-    return {
-      parts: [
-        { type: 'text', text: ack },
-        { type: 'text', text: buildQ },
-      ],
-      socraticMode: true,
-      topic: knowledge.topic,
-      subject: knowledge.subject,
-      suggestions: ["I'm not sure — give me a hint", "Let me try: " + (knowledge.definitions[0]?.term || title)]
-    }
-  }
-
-  // --- BUILD phase response ---
-  if (ss.phase === 'build') {
-    // Evaluate against the definition
-    var evaluation = evaluateStudentAnswer(userInput, knowledge)
-    var feedback = ''
-    if (!evaluation || evaluation.verdict === 'incorrect') {
-      feedback = "Not quite yet — but that's the point of this exercise. Here's the key definition:\n\n"
-        + (knowledge.definitions[0] ? "**" + knowledge.definitions[0].term + "**: " + knowledge.definitions[0].definition : knowledge.keyFacts[0] || '')
-    } else if (evaluation.verdict === 'partial') {
-      feedback = "You've got part of it! " + evaluation.feedback
-    } else {
-      feedback = "That's it! " + evaluation.feedback
-    }
-
-    ss.phase = 'challenge'
-    // Challenge: ask a WHY or application question
-    var challengeQ = ''
-    if (knowledge.keyFacts.length > 1) {
-      challengeQ = "\n\nNow a harder one — **why does this matter?** What would happen if " + title.toLowerCase() + " didn't exist or didn't work?"
-    } else if (knowledge.examples.length > 0) {
-      challengeQ = "\n\nNow apply it: **" + knowledge.examples[0].title + "** — what do you think the answer is, before I show you?"
-    } else {
-      challengeQ = "\n\nHere's a trickier question: **Where do you see " + title.toLowerCase() + " in real life?** Give me one example."
-    }
-
-    return {
-      parts: [
-        { type: 'text', text: feedback + challengeQ },
-      ],
-      socraticMode: true,
-      topic: knowledge.topic,
-      subject: knowledge.subject,
-      suggestions: ["I'm not sure", 'Give me a hint', 'Skip to the explanation']
-    }
-  }
-
-  // --- CHALLENGE phase response ---
-  if (ss.phase === 'challenge') {
-    var tried = userInput.length > 5 && !/not sure|no idea|hint|skip|don.t know/i.test(userInput)
-    var ack2 = tried
-      ? "Good thinking! Here's how to look at it:\n\n"
-      : "Fair enough — here's the reasoning:\n\n"
-
-    var explanation = ''
-    if (knowledge.keyFacts.length > 1) explanation = knowledge.keyFacts.slice(1, 3).join(' ')
-    else if (knowledge.examples.length > 0) explanation = knowledge.examples[0].body
-    else explanation = knowledge.keyFacts[0] || ''
-
-    ss.phase = 'consolidate'
-    var consolidateQ = pick(SOCRATIC_PHASES.consolidate.questions)(title)
-
-    return {
-      parts: [
-        { type: 'text', text: ack2 + explanation },
-        { type: 'text', text: "\n" + consolidateQ },
-      ],
-      socraticMode: true,
-      topic: knowledge.topic,
-      subject: knowledge.subject,
-      suggestions: ["Here's my summary...", 'Skip the summary — quiz me instead']
-    }
-  }
-
-  // --- CONSOLIDATE phase response ---
-  if (ss.phase === 'consolidate') {
-    var hasGoodSummary = userInput.split(' ').length >= 8
-    var closingMsg = hasGoodSummary
-      ? "That's a solid summary — you've clearly worked through this. 🎉"
-      : "Good effort! You've now been through the whole topic actively rather than just reading it."
-
-    conversationMemory.socraticState = null // session complete
-
-    return {
-      parts: [
-        { type: 'text', text: closingMsg + "\n\nHere's the complete picture for your notes:" },
-        { type: 'text', text: knowledge.definitions.length > 0
-            ? "**" + knowledge.definitions[0].term + "**: " + knowledge.definitions[0].definition
-            : knowledge.keyFacts[0] || '' },
-        knowledge.formulas.length > 0
-          ? { type: 'formula', title: 'Key Formula', items: [knowledge.formulas[0].label + ': ' + knowledge.formulas[0].content] }
-          : null,
-        { type: 'text', text: "Want to lock this in with a quiz question?" },
-      ].filter(Boolean),
-      topic: knowledge.topic,
-      subject: knowledge.subject,
-      suggestions: ['Quiz me on ' + title, 'Exam tips for ' + title, 'Explain something else']
-    }
-  }
-
-  // Fallback — shouldn't reach here
-  conversationMemory.socraticState = null
-  return generateExplainResponse(knowledge, '')
-}
-
-// ===================================================================
-// FEATURE 3: MISCONCEPTION TRAPPING
-// Catches known-wrong patterns per topic and addresses them directly
-// rather than just keyword-matching the student's answer
-// ===================================================================
-
-// Map of topic -> array of { wrongPattern (regex), correction (string) }
-// Covers the most common UNEB student misconceptions
-var MISCONCEPTIONS = {
-  osmosis: [
-    { p: /water.*moves.*through.*membrane|particles.*move.*membrane/i,
-      c: "You're actually describing diffusion there. Osmosis is specifically the movement of **water molecules** through a **semi-permeable membrane** from a region of **higher water concentration to lower water concentration**. The key word is semi-permeable — only water gets through, not solutes." },
-    { p: /solut|salt|sugar.*move/i,
-      c: "Careful — it's the water that moves in osmosis, not the solute (salt/sugar). The solute stays on its side of the membrane. Water moves toward the higher solute concentration." },
-    { p: /low.*high|low concentration.*high concentration/i,
-      c: "Almost — but check the direction. Water moves from **high water concentration** (dilute solution) to **low water concentration** (concentrated solution). Think of it as water moving toward where there's more solute." },
-  ],
-  diffusion: [
-    { p: /water.*only|only water/i,
-      c: "Osmosis is water-only — diffusion is broader. Diffusion is the movement of **any** particles (gases, dissolved substances) from **high to low concentration**. It applies to oxygen, CO2, glucose, and many others." },
-    { p: /membrane|semi.permeable/i,
-      c: "You're thinking of osmosis, which needs a membrane. Diffusion doesn't require a membrane — particles just spread out on their own from high to low concentration." },
-  ],
-  photosynthesis: [
-    { p: /plant.*eat|plants.*food.*soil|absorb.*food/i,
-      c: "Plants don't 'eat' food or absorb it from soil — they **make** their own food! Photosynthesis is how they produce glucose using sunlight, CO2 from the air, and water from the soil. The soil provides minerals, not food." },
-    { p: /oxygen.*in|absorb.*oxygen|take in.*oxygen/i,
-      c: "It's the other way around for photosynthesis — plants take in **CO2** and release **oxygen** during photosynthesis. (They do absorb oxygen during respiration, but that's a separate process.)" },
-    { p: /happens.*dark|night.*photosynthes/i,
-      c: "Photosynthesis requires **light** — it cannot happen in the dark. The 'photo' in photosynthesis literally means light. At night, plants only respire." },
-  ],
-  respiration: [
-    { p: /breathing|breath|lungs/i,
-      c: "Breathing and respiration are different things — this is a very common mix-up! **Breathing** is the physical movement of air in and out of lungs. **Respiration** is the chemical process in cells that releases energy from glucose. It happens in every cell, even in plants." },
-    { p: /only.*animal|animals.*only/i,
-      c: "All living organisms respire — not just animals. Plants, fungi, and bacteria all respire to release energy from glucose. Even plant cells that are photosynthesising are also respiring simultaneously." },
-  ],
-  forces: [
-    { p: /heavier.*fall.*faster|heavy.*faster|mass.*fall/i,
-      c: "This is one of the most famous misconceptions in physics — Galileo disproved it! In the absence of air resistance, **all objects fall at the same rate** regardless of mass. The acceleration due to gravity (g ≈ 10 m/s²) is the same for everything." },
-    { p: /force.*speed|force.*velocity|force makes.*move faster/i,
-      c: "Force causes **acceleration** (change in velocity), not speed itself. An object can move at constant speed with zero net force (Newton's First Law). Force is needed to *change* motion, not to maintain it." },
-  ],
-  electricity: [
-    { p: /current.*used up|current.*smaller.*end|current.*decreases/i,
-      c: "Current is **not used up** as it flows around a circuit — this is one of the most common electricity misconceptions. In a series circuit, the same current flows through every component. What gets 'used up' is the **energy** (voltage drops across each component)." },
-    { p: /voltage.*same.*series|series.*same.*voltage/i,
-      c: "In a series circuit, voltage is **shared** (split) between components — it's not the same across each one. It's current that stays the same in series. In a parallel circuit, voltage is the same across each branch." },
-  ],
-  acids_periodic: [
-    { p: /acid.*burns.*always|all acids.*dangerous|acid.*always.*corrosive/i,
-      c: "Not all acids are dangerous — acid strength varies hugely. Citric acid (in lemons) and ethanoic acid (vinegar) are weak acids that are completely safe. The acids that burn, like sulfuric acid, are **strong concentrated** acids. Strength and concentration are different things." },
-    { p: /alkali.*acid.*neutral|mix.*neutral|neutralis.*always/i,
-      c: "Neutralisation produces a neutral solution only if you mix exact amounts. If you add too much acid or too much alkali, the result will still be acidic or alkaline. A salt and water are always produced, but pH = 7 only happens at the exact equivalence point." },
-  ],
-  cells: [
-    { p: /cell wall.*animal|animal.*cell wall/i,
-      c: "Animal cells do **not** have cell walls — this is a plant cell feature. Animal cells have a cell membrane only. Plant cells have both a cell membrane and a rigid cell wall made of cellulose." },
-    { p: /nucleus.*makes.*energy|nucleus.*energy|nucleus.*ATP/i,
-      c: "The nucleus doesn't make energy — it stores genetic information (DNA). Energy (ATP) is produced by the **mitochondria** through aerobic respiration." },
-  ],
-  algebra: [
-    { p: /minus.*minus.*minus|negative.*negative.*negative/i,
-      c: "When you multiply or divide two negatives, the answer is **positive** — not negative. (-3) × (-4) = +12. A common saying: 'two wrongs make a right' in multiplication. But adding two negatives stays negative: (-3) + (-4) = -7." },
-    { p: /x2|x\^2|x squared.*2x|expand.*x.*x.*2x/i,
-      c: "Be careful here — (x + 2)² ≠ x² + 4. You must expand properly: (x + 2)² = (x + 2)(x + 2) = x² + 4x + 4. The middle term '4x' is the one students most often miss." },
-  ],
-  quadratic: [
-    { p: /always.*two.*solutions|quadratic.*two.*answer|must.*two/i,
-      c: "A quadratic doesn't always have two solutions. It depends on the **discriminant** (b² - 4ac): if it's positive → 2 solutions; if zero → exactly 1 repeated solution; if negative → no real solutions at all." },
-  ],
-  genetics: [
-    { p: /dominant.*always.*appear|dominant.*always.*show/i,
-      c: "Dominant alleles only appear when present — but 'dominant' doesn't mean 'more common in the population'. A dominant allele can actually be rare. It just means it masks the recessive allele when both are present (heterozygous)." },
-    { p: /50.*percent.*chance|50.50|half.*half.*always/i,
-      c: "The 50% probability only applies to a cross between a heterozygous (Aa) parent and a homozygous recessive (aa) parent (a testcross). Other crosses give different ratios — for example, Aa × Aa gives a 3:1 ratio, not 50:50." },
-  ],
-  logarithms: [
-    { p: /log.*add.*multiply|log a.*log b.*multiply/i,
-      c: "Almost — but you have the rule slightly backwards. **log(a × b) = log a + log b** (multiplication inside the log becomes addition outside). And log(a + b) ≠ log a + log b — there's no log rule for a sum inside." },
-    { p: /log.*0|log.*zero/i,
-      c: "log(0) is undefined — you cannot take the log of zero. log(1) = 0 (because 10⁰ = 1). log of any negative number is also undefined in real numbers." },
-  ],
-}
-
-function checkMisconception(userInput, knowledge) {
-  if (!knowledge) return null
-  var topic = knowledge.topic
-  var rules = MISCONCEPTIONS[topic]
-  if (!rules) return null
-  for (var i = 0; i < rules.length; i++) {
-    if (rules[i].p.test(userInput)) {
-      return rules[i].c
-    }
-  }
-  return null
-}
-
-// ===================================================================
-// FEATURE 4: DIFFICULTY-ADAPTIVE QUIZ ENGINE
-// Tracks per-topic correct/wrong counts and question types
-// Serves easier or harder questions accordingly
-// ===================================================================
-
-function recordQuizResult(topic, correct, question) {
-  var mem = conversationMemory
-  if (!mem.difficultyMap[topic]) {
-    mem.difficultyMap[topic] = { correct: 0, wrong: 0, wrongTypes: [], recentResults: [] }
-  }
-  var d = mem.difficultyMap[topic]
-  if (correct) {
-    d.correct++
-  } else {
-    d.wrong++
-    // Infer question type from the question text
-    var qText = (question && question.question) ? question.question.toLowerCase() : ''
-    if (/calculate|find|how much|what is the value|solve/.test(qText)) d.wrongTypes.push('calculation')
-    else if (/define|what is|what are|state/.test(qText)) d.wrongTypes.push('definition')
-    else if (/why|explain|describe|how does/.test(qText)) d.wrongTypes.push('concept')
-    else d.wrongTypes.push('application')
-  }
-  // Keep a rolling window of last 5 results
-  d.recentResults.push(correct)
-  if (d.recentResults.length > 5) d.recentResults = d.recentResults.slice(-5)
-}
-
-function getAdaptiveDifficulty(topic) {
-  var mem = conversationMemory
-  var d = mem.difficultyMap[topic]
-  if (!d || d.correct + d.wrong < 2) return 'any' // not enough data yet
-  var recentCorrect = d.recentResults.filter(function(r){ return r }).length
-  var total = d.recentResults.length
-  if (recentCorrect / total >= 0.8) return 'hard'    // acing it — go harder
-  if (recentCorrect / total <= 0.4) return 'easy'    // struggling — go easier
-  return 'medium'
-}
-
-function getDominantWrongType(topic) {
-  var mem = conversationMemory
-  var d = mem.difficultyMap[topic]
-  if (!d || d.wrongTypes.length === 0) return null
-  var counts = {}
-  d.wrongTypes.forEach(function(t) { counts[t] = (counts[t] || 0) + 1 })
-  return Object.keys(counts).sort(function(a,b){ return counts[b]-counts[a] })[0]
-}
-
-// Adaptive quiz generator — selects question based on difficulty level
-// and prioritises question types the student struggles with
-function generateAdaptiveQuizResponse(knowledge, existingSession) {
-  if (!knowledge || knowledge.quizQuestions.length === 0) {
-    return {
-      parts: [
-        { type: 'text', text: "I don't have quiz questions for that topic yet. Try: _\"Explain " + (knowledge ? knowledge.title : 'the topic') + "\"_" },
-        { type: 'suggestions', items: ['Explain ' + (knowledge ? knowledge.title : 'algebra'), 'Quiz me on forces', 'Quiz me on cells'] },
-      ],
-      quizMode: false
-    }
-  }
-
-  var topic = knowledge.topic
-  var difficulty = getAdaptiveDifficulty(topic)
-  var weakType = getDominantWrongType(topic)
-  var used = existingSession ? existingSession.usedIds || new Set() : new Set()
-
-  var available = knowledge.quizQuestions.filter(function(q){ return !used.has(q.id) })
-  var pool = available.length > 0 ? available : knowledge.quizQuestions
-
-  // Score each question: prefer weak type, adjust for difficulty
-  function scoreQuestion(q) {
-    var score = 0
-    var qText = (q.question || '').toLowerCase()
-
-    // Weak type bonus — serve more of what they're getting wrong
-    if (weakType) {
-      if (weakType === 'calculation' && /calculate|find|how much|solve/.test(qText)) score += 10
-      else if (weakType === 'definition' && /define|what is|state/.test(qText)) score += 10
-      else if (weakType === 'concept' && /why|explain|how does/.test(qText)) score += 10
-    }
-
-    // Difficulty adjustment (heuristic: questions with numbers tend to be harder)
-    if (difficulty === 'easy' && !/\d/.test(qText)) score += 5
-    if (difficulty === 'hard' && /\d|calculate|formula|derive/.test(qText)) score += 5
-
-    // Small random element so it's not completely deterministic
-    score += Math.random() * 3
-    return score
-  }
-
-  var scored = pool.map(function(q){ return { q: q, s: scoreQuestion(q) } })
-  scored.sort(function(a,b){ return b.s - a.s })
-  var q = scored[0].q
-
-  // Build an adaptive preamble based on difficulty context
-  var preamble = ''
-  if (difficulty === 'hard') {
-    preamble = "You're doing well on this topic — here's a trickier one:"
-  } else if (difficulty === 'easy') {
-    preamble = "Let's build your confidence with this one:"
-  } else if (weakType) {
-    var typeLabels = { calculation: 'calculation question', definition: 'definition question', concept: 'concept question', application: 'application question' }
-    preamble = "Let's work on " + (typeLabels[weakType] || 'another question') + " — that's where you need more practice:"
-  } else {
-    preamble = pick([
-      "Here's a question on **" + knowledge.title + "**:",
-      "Let's test your knowledge of **" + knowledge.title + "**:",
-      "Ready? Here's a **" + knowledge.title + "** question:",
-    ])
-  }
-
-  return {
-    parts: [
-      { type: 'text', text: preamble },
-      { type: 'quiz_question', question: q.question, options: q.options, answer: q.answer, explanation: q.explanation, id: q.id },
-    ],
-    quizMode: true, currentQuestion: q, topic: knowledge.topic, subject: knowledge.subject, newUsedId: q.id,
-  }
-}
-
-
 
 // ===================================================================
 // ANSWER EVALUATOR  v5 — checks formulas + keywords
@@ -3143,9 +2520,6 @@ export async function processMessage(input, context={}) {
       if (result.explanation) parts.push({ type:'text', text:`💡 **Why:** ${result.explanation}` })
       const tn = context.topic?.replace(/_/g,' ') || 'this topic'
       parts.push({ type:'suggestions', items:[`Next question on ${tn}`,`Explain ${tn}`,'Quiz me on something else', `Exam tips for ${tn}`] })
-      // FEATURE 4: Record result for adaptive difficulty
-      if (context.topic) recordQuizResult(context.topic, result.correct, context.currentQuestion)
-
       const resp = { parts, quizMode:false, wasAnswer:true, correct:result.correct }
       addToHistory('assistant', result.correct ? 'Correct! ' + (result.explanation||'') : 'Wrong. Correct: ' + result.answer)
       return resp
@@ -3154,14 +2528,6 @@ export async function processMessage(input, context={}) {
 
   const lastK = mem.lastKnowledge
   const history = mem.conversationHistory
-
-  // FEATURE 2: Socratic mode interception — if we're mid-session, handle the turn
-  if (mem.socraticState) {
-    const ss = mem.socraticState
-    const r = advanceSocraticSession(input, ss)
-    addToHistory('assistant', 'Socratic turn: ' + ss.phase)
-    return r
-  }
 
   // --- Follow-ups (use last context) ---
   if (intent==='FOLLOWUP_MORE') {
@@ -3213,12 +2579,6 @@ export async function processMessage(input, context={}) {
     return r
   }
   if (intent==='THANKS') { const r = generateThanksResponse(); addToHistory('assistant','Thanks acknowledged'); return r }
-  // --- Conversational / emotional intents ---
-  if (intent==='STRUGGLING') { const r = handleStrugglingIntent(input, mem); addToHistory('assistant','Offered help'); return r }
-  if (intent==='BORED') { const r = handleBoredIntent(mem); addToHistory('assistant','Re-engaged'); return r }
-  if (intent==='TIRED') { const r = handleTiredIntent(); addToHistory('assistant','Acknowledged tiredness'); return r }
-  if (intent==='ENCOURAGE') { const r = handleEncourageIntent(context.studentProfile || getCachedProfile(), mem); addToHistory('assistant','Motivated'); return r }
-  if (intent==='CASUAL_CHAT') { const r = handleCasualChatIntent(input); addToHistory('assistant','Casual chat'); return r }
   if (intent==='RECOMMEND') {
     const r = generateSmartRecommendation(context.studentProfile || getCachedProfile())
     addToHistory('assistant','Study recommendation given')
@@ -3307,17 +2667,10 @@ export async function processMessage(input, context={}) {
   // --- Load knowledge for topic ---
   const topicResult = extractTopic(input)
   let knowledge = null
-
   if (topicResult) {
     knowledge = await loadTopicKnowledge(topicResult.topic, topicResult.subject, topicResult.level)
-  } else {
-    // FEATURE 1: Context chaining — try to resolve vague reference from topic stack
-    const contextRef = resolveContextualReference(input)
-    if (contextRef) {
-      knowledge = await loadTopicKnowledge(contextRef.topic, contextRef.subject)
-    } else if (mem.lastTopic && mem.lastSubject) {
-      knowledge = await loadTopicKnowledge(mem.lastTopic, mem.lastSubject)
-    }
+  } else if (mem.lastTopic && mem.lastSubject) {
+    knowledge = await loadTopicKnowledge(mem.lastTopic, mem.lastSubject)
   }
 
   if (knowledge) {
@@ -3325,27 +2678,6 @@ export async function processMessage(input, context={}) {
     mem.lastSubject = knowledge.subject
     mem.lastKnowledge = knowledge
     if (!mem.sessionTopics.includes(knowledge.title)) mem.sessionTopics.push(knowledge.title)
-    // FEATURE 1: Push to topic stack for context chaining
-    pushTopicToStack(knowledge.topic, knowledge.subject, knowledge.title)
-  }
-
-  // FEATURE 3: Misconception trapping — check before routing to main generator
-  // Only applies when student is writing their own explanation (not a command)
-  const looksLikeStudentExplanation = input.length > 15 && !/^(explain|quiz|what is|define|how|why|calculate|exam tip|tell me)/i.test(input.trim())
-  if (looksLikeStudentExplanation && knowledge) {
-    const misconception = checkMisconception(input, knowledge)
-    if (misconception) {
-      addToHistory('assistant', 'Misconception caught for ' + knowledge.topic)
-      return {
-        parts: [
-          { type: 'wrong', text: "Hold on — there's a common mix-up in what you've written. Let me clear it up:" },
-          { type: 'text', text: misconception },
-          { type: 'text', text: "This is one of the most frequent mistakes on this topic in UNEB. Make sure you have the correct version in your notes." },
-        ],
-        topic: knowledge.topic, subject: knowledge.subject,
-        suggestions: ['Give me the full correct explanation', 'Quiz me on this', 'Exam tips for ' + knowledge.title]
-      }
-    }
   }
 
   // --- Personalise with student profile ---
@@ -3371,8 +2703,7 @@ export async function processMessage(input, context={}) {
       response = generateCalculateResponse(knowledge, input)
       break
     case 'QUIZ':
-      // FEATURE 4: Use adaptive quiz engine instead of random selection
-      response = generateAdaptiveQuizResponse(knowledge, context.quizSession)
+      response = generateQuizResponse(knowledge, context.quizSession)
       break
     case 'HINT':
       response = generateHintResponse(knowledge, input)
@@ -3384,12 +2715,7 @@ export async function processMessage(input, context={}) {
       response = await generateCompareResponse(knowledge, input)
       break
     case 'TEACH':
-      // FEATURE 2: Start proper multi-turn Socratic session
-      if (knowledge) {
-        response = startSocraticSession(knowledge)
-      } else {
-        response = generateTeachResponse(knowledge, input)
-      }
+      response = generateTeachResponse(knowledge, input)
       break
     case 'MULTI':
       // Explain first, then quiz
