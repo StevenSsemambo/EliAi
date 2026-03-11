@@ -40,7 +40,7 @@ export default function Results(){
   },[])
 
   async function share(){
-    const text=`📚 ${student?.name} completed "${lesson?.title}" in ${subject} — scored ${score}%! Studying with Elimu Learn.`
+    const text=`📚 ${student?.name} completed "${lesson?.title}" in ${subject} — scored ${score}%! Studying with Eqla Learn.`
     try{if(navigator.share)await navigator.share({text});else await navigator.clipboard?.writeText(text)}catch(e){}
   }
 
@@ -77,11 +77,48 @@ export default function Results(){
           const ok=answers[i]===q.answer
           return(
             <div key={i} className="rounded-2xl p-4 page-delay-2"
-              style={{background:ok?'rgba(34,197,94,0.05)':'rgba(239,68,68,0.05)',border:`1px solid ${ok?'rgba(34,197,94,0.18)':'rgba(239,68,68,0.18)'}`}}>
-              <p className="text-white text-sm font-semibold mb-2">{i+1}. {q.question}</p>
-              <p className="text-xs mb-1 font-medium" style={{color:ok?'#4ADE80':'#FB7185'}}>Your answer: {answers[i]||'(no answer)'}</p>
-              {!ok&&<p className="text-xs mb-1 font-medium" style={{color:'#4ADE80'}}>Correct: {q.answer}</p>}
-              <p className="text-slate-500 text-xs">{q.explanation}</p>
+              style={{background:ok?'rgba(34,197,94,0.05)':'rgba(239,68,68,0.07)',border:`1px solid ${ok?'rgba(34,197,94,0.18)':'rgba(239,68,68,0.3)'}`}}>
+              {/* Status badge */}
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-base">{ok?'✅':'❌'}</span>
+                <span className="text-xs font-bold px-2 py-0.5 rounded-full"
+                  style={{background:ok?'rgba(34,197,94,0.15)':'rgba(239,68,68,0.15)',color:ok?'#4ADE80':'#FB7185'}}>
+                  {ok?'Correct':'Incorrect'}
+                </span>
+              </div>
+              {/* Question */}
+              <p className="text-white text-sm font-semibold mb-3">{i+1}. {q.question}</p>
+              {/* Options if available */}
+              {q.options&&(
+                <div className="space-y-1.5 mb-3">
+                  {q.options.map((opt,j)=>{
+                    const isCorrect=opt===q.answer
+                    const isChosen=opt===answers[i]
+                    let bg='rgba(255,255,255,0.03)', border='rgba(255,255,255,0.08)', color='#94A3B8'
+                    if(isCorrect){bg='rgba(34,197,94,0.12)';border='rgba(34,197,94,0.4)';color='#4ADE80'}
+                    else if(isChosen&&!ok){bg='rgba(239,68,68,0.12)';border='rgba(239,68,68,0.4)';color='#FB7185'}
+                    return(
+                      <div key={j} className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs"
+                        style={{background:bg,border:`1px solid ${border}`,color}}>
+                        <span className="font-bold">{isCorrect?'✓':isChosen&&!ok?'✗':'○'}</span>
+                        <span className={isCorrect||isChosen?'font-semibold':''}>{opt}</span>
+                        {isCorrect&&<span className="ml-auto font-bold">Correct answer</span>}
+                        {isChosen&&!ok&&<span className="ml-auto">Your answer</span>}
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+              {/* Explanation — prominent for wrong answers */}
+              {q.explanation&&(
+                <div className="rounded-xl px-3 py-2.5 mt-1"
+                  style={{background:ok?'rgba(255,255,255,0.03)':'rgba(245,158,11,0.08)',border:`1px solid ${ok?'rgba(255,255,255,0.06)':'rgba(245,158,11,0.25)'}`}}>
+                  <p className="text-xs font-bold mb-0.5" style={{color:ok?'#475569':'#F59E0B'}}>
+                    {ok?'💡 Note':'💡 Explanation'}
+                  </p>
+                  <p className="text-xs leading-relaxed" style={{color:ok?'#64748B':'#CBD5E1'}}>{q.explanation}</p>
+                </div>
+              )}
             </div>
           )
         })}
