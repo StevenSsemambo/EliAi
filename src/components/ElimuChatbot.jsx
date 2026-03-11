@@ -205,6 +205,7 @@ export default function ElimuChatbot() {
   const [llmStatus, setLlmStatus] = useState(() => getEngineStatus())
   const [llmProgress, setLlmProgress] = useState(0)
   const [studentProfile, setStudentProfile] = useState(null)
+  const [listening, setListening] = useState(false)
 
   // Chat context
   const ctx = useRef({
@@ -272,7 +273,7 @@ export default function ElimuChatbot() {
             // New student — standard welcome
             addBot(null, {
               parts: [{ type:'text',
-                text:`Hello ${student?.name || 'there'}! 👋 I am **Elimu AI** — your personal study assistant for S1–S6.\n\nI can **explain** any topic, **solve** equations step by step, **quiz** you, and give you **personalised study tips** based on your progress.\n\nWhat would you like to start with?`,
+                text:`Hello ${student?.name || 'there'}! 👋 I am **Eqla AI** — your personal study assistant for S1–S6.\n\nI can **explain** any topic, **solve** equations step by step, **quiz** you, and give you **personalised study tips** based on your progress.\n\nWhat would you like to start with?`,
               }, { type:'suggestions', items:['Explain photosynthesis','Quiz me on forces','Solve 2x + 4 = 10','What should I study today?'] }],
             })
           }
@@ -507,6 +508,36 @@ export default function ElimuChatbot() {
               </button>
             )}
             <div className="flex gap-2 items-center">
+              <button
+                onClick={() => {
+                  const SR = window.SpeechRecognition || window.webkitSpeechRecognition
+                  if (!SR) return
+                  const rec = new SR()
+                  rec.lang = 'en-UG'
+                  rec.interimResults = false
+                  rec.onstart = () => setListening(true)
+                  rec.onend   = () => setListening(false)
+                  rec.onerror = () => setListening(false)
+                  rec.onresult = (e) => {
+                    const transcript = e.results[0][0].transcript
+                    setInput(transcript)
+                    setTimeout(() => send(transcript), 100)
+                  }
+                  rec.start()
+                }}
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all active:scale-90 flex-shrink-0"
+                style={{
+                  background: listening ? 'rgba(239,68,68,0.2)' : theme.card,
+                  border: `1px solid ${listening ? '#EF4444' : theme.border}`,
+                  color: listening ? '#EF4444' : theme.muted,
+                  display: (window.SpeechRecognition || window.webkitSpeechRecognition) ? 'flex' : 'none'
+                }}
+                title="Voice input">
+                {listening
+                  ? <svg viewBox="0 0 24 24" width="14" height="14" fill="#EF4444"><circle cx="12" cy="12" r="8"/></svg>
+                  : <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                }
+              </button>
               <input ref={inputRef} value={input}
                 onChange={e=>setInput(e.target.value)} onKeyDown={handleKey}
                 placeholder={llmStatus==='ready' ? 'Ask anything...' : 'Ask me a question...'}
