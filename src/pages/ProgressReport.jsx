@@ -97,7 +97,7 @@ export default function ProgressReport() {
     if (!stats || !student) return
     SoundEngine.tap()
     const text = [
-      `📚 ELIMU LEARN — PROGRESS REPORT`,
+      `📚 EQLA LEARN — PROGRESS REPORT`,
       `Student: ${student.name} | Class: ${student.class_level}`,
       `Generated: ${stats.generatedAt}`,
       ``,
@@ -114,7 +114,7 @@ export default function ProgressReport() {
         return `• ${s.charAt(0).toUpperCase()+s.slice(1)}: ${b.lessons} lessons | Avg: ${b.avgScore}%`
       }),
       ``,
-      `Powered by Elimu Learn | Built by SEMATECH DEVELOPERS 🇺🇬`,
+      `Powered by Eqla Learn | Built by SEMATECH DEVELOPERS 🇺🇬`,
     ]
     if (analysis?.allWeakTopics?.length) {
       const weak = analysis.allWeakTopics.slice(0,3).map(t=>t.topic.replace(/_/g,' ')).join(', ')
@@ -122,7 +122,7 @@ export default function ProgressReport() {
     }
     const textStr = text.join('\n')
     try {
-      if (navigator.share) await navigator.share({ title: 'Elimu Progress Report', text: textStr })
+      if (navigator.share) await navigator.share({ title: 'Eqla Progress Report', text: textStr })
       else { await navigator.clipboard?.writeText(textStr); alert('Report copied to clipboard!') }
     } catch(e) {}
   }
@@ -165,7 +165,7 @@ export default function ProgressReport() {
                   style={{ background:'linear-gradient(135deg,#7C3AED,#0891B2)', color:'white' }}>S</div>
                 <div>
                   <p className="text-xs font-black tracking-widest uppercase" style={{ color:'#A78BFA' }}>SEMATECH DEVELOPERS</p>
-                  <p className="text-xs" style={{ color:'#3A4560' }}>Elimu Learn</p>
+                  <p className="text-xs" style={{ color:'#3A4560' }}>Eqla Learn</p>
                 </div>
               </div>
               <span className="text-xs" style={{ color:'#3A4560' }}>{stats.generatedAt}</span>
@@ -309,7 +309,7 @@ export default function ProgressReport() {
             style={{ background:'rgba(245,158,11,0.06)', border:'1px solid rgba(245,158,11,0.2)' }}>
             <p className="text-xs font-bold mb-1" style={{ color:'#F59E0B' }}>📝 Note for Parent/Teacher</p>
             <p className="text-xs leading-relaxed" style={{ color: theme.subtext }}>
-              {student.name} is using Elimu Learn to study Mathematics, Physics, Biology and Chemistry
+              {student.name} is using Eqla Learn to study Mathematics, Physics, Biology and Chemistry
               at {student.class_level} level. The app works offline and covers the full Uganda National
               Curriculum. Scores above 60% represent a passing grade. Encourage daily 20-minute sessions
               for best results.
@@ -337,7 +337,7 @@ export default function ProgressReport() {
                 style={{ background:'linear-gradient(135deg,#7C3AED,#0891B2)', color:'white' }}>S</div>
               <span className="font-black text-xs tracking-widest uppercase" style={{ color: theme.text }}>SEMATECH DEVELOPERS</span>
             </div>
-            <p className="text-xs" style={{ color: theme.muted }}>Elimu Learn · Empowering Ugandan Students 🇺🇬</p>
+            <p className="text-xs" style={{ color: theme.muted }}>Eqla Learn · Empowering Ugandan Students 🇺🇬</p>
           </div>
 
         </div>
