@@ -30,25 +30,27 @@ import KingdomDefense    from './games/KingdomDefense.jsx'
 import DungeonCrawler    from './games/DungeonCrawler.jsx'
 import EvolutionSim      from './games/EvolutionSim.jsx'
 import SniperElite       from './games/SniperElite.jsx'
+import StickmanFighter   from './games/StickmanFighter.jsx'
 
 const GAME_COMPONENTS = {
-  memory:     NebulaMemory,
-  sliding:    CosmosPuzzle,
-  chain:      QuasarChain,
-  arithmetic: NumberWarp,
-  sequence:   SequenceMemory,
-  logic:      LogicGrid,
+  memory:       NebulaMemory,
+  sliding:      CosmosPuzzle,
+  chain:        QuasarChain,
+  arithmetic:   NumberWarp,
+  sequence:     SequenceMemory,
+  logic:        LogicGrid,
   // 5 new cognitive games
-  deduction:  MindBridge,
-  flow:       FlowState,
-  hanoi:      TowerOfMind,
-  pattern:    RippleCode,
-  spatial:    ShadowMatch,
-  // 4 complex games
+  deduction:    MindBridge,
+  flow:         FlowState,
+  hanoi:        TowerOfMind,
+  pattern:      RippleCode,
+  spatial:      ShadowMatch,
+  // 5 complex games
   towerdefense: KingdomDefense,
   dungeon:      DungeonCrawler,
   evolution:    EvolutionSim,
   sniper:       SniperElite,
+  fighting:     StickmanFighter,
   // Subject-specific games
   subject: {
     chem_lab:       ChemLabGame,
