@@ -180,6 +180,72 @@ export const GAMES = [
     ], l => ({ req: gradual(l, { minL:0, maxL:0, minS:40, maxS:80, minE:0, maxE:0 }) })),
   },
 
+  // ── 4 COMPLEX GAMES ──────────────────────────────────────────
+  {
+    id: 'kingdom_defense', name: 'Kingdom Defense', icon: '🏰',
+    description: 'Build towers, defend your castle — real A* pathfinding tower defense with 6 tower types',
+    type: 'towerdefense', color: '#F59E0B', glow: 'rgba(245,158,11,0.4)',
+    category: 'Strategy', cogSkill: 'Strategic Planning & Resource Management',
+    levels: makeLevels([
+      'Outpost','Border Keep','Hill Fort','River Crossing','Mountain Pass',
+      'Forest Siege','Castle Gates','Rampart Defense','Citadel Wall','Iron Fortress',
+      'Dragon Pass','Volcano Ridge','Frozen Wastes','Storm Battlements','Obsidian Keep',
+      'Shadow Realm I','Shadow Realm II','Demon Horde I','Demon Horde II','Final Siege I',
+      'Final Siege II','Titan Assault','Apocalypse I','Last Stand',
+    ], (lvl) => {
+      const r = gradual(lvl, { minL:3,maxL:300, minS:0,maxS:85, minE:0,maxE:6 })
+      return { startGold:150+lvl*25, waves:3+lvl*2, lives:20-Math.floor(lvl/4), req:r }
+    }),
+  },
+  {
+    id: 'dungeon_crawler', name: 'Dungeon Crawler', icon: '⚔️',
+    description: 'Procedurally generated roguelike dungeon — fight, loot, level up, survive',
+    type: 'dungeon', color: '#7C3AED', glow: 'rgba(124,58,237,0.4)',
+    category: 'RPG', cogSkill: 'Tactical Decision-Making & Resource Management',
+    levels: makeLevels([
+      'Cellar','Sewers','Catacombs','Crypts','Haunted Halls',
+      'Orc Warrens','Goblin Den','Troll Lair','Dragon Nest','Dark Sanctum',
+      'Shadow Keep','Blood Dungeon','Death Maze','Cursed Vaults','Demon Pit',
+      'Infernal Depths','Hell Gate I','Hell Gate II','Abyss I','Abyss II',
+      'Void Realm I','Void Realm II','The Underworld','Final Darkness',
+    ], (lvl) => {
+      const r = gradual(lvl, { minL:2,maxL:280, minS:0,maxS:84, minE:0,maxE:6 })
+      return { enemyMult:1+lvl*0.15, roomCount:8+lvl, req:r }
+    }),
+  },
+  {
+    id: 'evolution_sim', name: 'Evolution Simulator', icon: '🧬',
+    description: 'Real genetic algorithm — watch creatures evolve, mutate and adapt in real time',
+    type: 'evolution', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
+    category: 'Science', cogSkill: 'Systems Thinking & Evolutionary Biology',
+    levels: makeLevels([
+      'Primordial Soup','First Cells','Early Life','Multicellular','Cambrian Burst',
+      'Land Colonisation','Age of Fish','Age of Amphibians','Reptile Rise','Dinosaur Era',
+      'Mass Extinction','Mammal Rise','Primate Evolution','Early Hominids','Homo Sapiens',
+      'Agricultural Rev','Industrial Age','Digital Age','Genetic Engineering','Post-Human',
+      'AI Life Forms','Synthetic Biology','Uploaded Minds','Singularity',
+    ], (lvl) => {
+      const r = gradual(lvl, { minL:1,maxL:220, minS:0,maxS:82, minE:0,maxE:5 })
+      return { startPop:20, mutationRate:0.1+lvl*0.005, predators:lvl>5, scarcity:lvl>10, req:r }
+    }),
+  },
+  {
+    id: 'sniper_elite', name: 'Sniper Elite', icon: '🎯',
+    description: 'Full ballistics simulation — wind, bullet drop, moving targets, slow-motion replays',
+    type: 'sniper', color: '#EF4444', glow: 'rgba(239,68,68,0.4)',
+    category: 'Precision', cogSkill: 'Physics Reasoning & Precision Focus',
+    levels: makeLevels([
+      'Training Range','Open Field','Light Breeze','Crosswind','Moving Target I',
+      'Moving Target II','Urban Rooftop','Forest Canopy','Night Mission I','Rain Storm',
+      'Extreme Range','Multi-Target I','Multi-Target II','Wind Gust','Boss Hunt I',
+      'Boss Hunt II','Typhoon','Darkness','Moving + Wind','Elite Hunt I',
+      'Elite Hunt II','Nightmare I','Nightmare II','Ghost Ops',
+    ], (lvl) => {
+      const r = gradual(lvl, { minL:2,maxL:250, minS:0,maxS:83, minE:0,maxE:5 })
+      return { targetCount:1+Math.floor((lvl-1)/23*4), wind:(lvl-1)/23*2, bulletDrop:true, night:lvl>8, rain:lvl>9, req:r }
+    }),
+  },
+
   // ── 5 NEW COGNITIVE GAMES ─────────────────────────────────────
   {
     id: 'mind_bridge', name: 'Mind Bridge', icon: '🧩',
@@ -236,7 +302,7 @@ export const GAMES = [
   {
     id: 'ripple_code', name: 'Ripple Code', icon: '🔢',
     description: 'Crack the hidden rule in each number sequence — predict what comes next',
-    type: 'pattern', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
+    type: 'sequence', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
     category: 'Pattern', cogSkill: 'Inductive Reasoning & Mathematical Pattern Recognition',
     levels: makeLevels([
       'Add/Subtract I','Add/Subtract II','Multiply I','Multiply II',
