@@ -236,7 +236,7 @@ export const GAMES = [
   {
     id: 'ripple_code', name: 'Ripple Code', icon: '🔢',
     description: 'Crack the hidden rule in each number sequence — predict what comes next',
-    type: 'sequence', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
+    type: 'pattern', color: '#10B981', glow: 'rgba(16,185,129,0.4)',
     category: 'Pattern', cogSkill: 'Inductive Reasoning & Mathematical Pattern Recognition',
     levels: makeLevels([
       'Add/Subtract I','Add/Subtract II','Multiply I','Multiply II',
