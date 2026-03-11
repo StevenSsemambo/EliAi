@@ -245,6 +245,24 @@ export const GAMES = [
     }),
   },
 
+  {
+    id: 'shadow_fight', name: 'Shadow Fight', icon: '🥋',
+    description: 'Stickman shadow fighting — punch, kick, combo, weapons, 10 bosses, survival mode',
+    type: 'fighting', color: '#9B00FF', glow: 'rgba(155,0,255,0.4)',
+    category: 'Fighting', cogSkill: 'Reaction Speed & Pattern Recognition',
+    levels: makeLevels([
+      'First Blood','Street Brawl','Iron Fist','The Blade','Speed Demon',
+      'Staff Master','Chain Dancer','Ghost Fighter','Warlord\'s Test','Phantom Gate',
+      'Shadow Initiate','Death Match I','Death Match II','Tournament I','Tournament II',
+      'Champion\'s Road','Elite Circuit','Shadow Trial I','Shadow Trial II','Legend\'s Path',
+      'Dark Warrior I','Dark Warrior II','Shadow Realm','Final Shadow',
+    ], (lvl) => {
+      const r = gradual(lvl, { minL:2,maxL:280, minS:0,maxS:85, minE:0,maxE:6 })
+      const difficulties = ['rookie','rookie','fighter','fighter','fighter','champion','champion','champion','legend','legend','legend','legend','master','master','master','master','master','master','master','master','master','master','master','master']
+      return { difficulty: difficulties[lvl-1] || 'master', bossIdx: Math.min(lvl-1, 9), req:r }
+    }),
+  },
+
   // ── 5 NEW COGNITIVE GAMES ─────────────────────────────────────
   {
     id: 'mind_bridge', name: 'Mind Bridge', icon: '🧩',
