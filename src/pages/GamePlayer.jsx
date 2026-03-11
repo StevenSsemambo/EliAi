@@ -25,6 +25,12 @@ import TowerOfMind       from './games/TowerOfMind.jsx'
 import RippleCode        from './games/RippleCode.jsx'
 import ShadowMatch       from './games/ShadowMatch.jsx'
 
+// ── 4 NEW complex games ──────────────────────────────────────────
+import KingdomDefense    from './games/KingdomDefense.jsx'
+import DungeonCrawler    from './games/DungeonCrawler.jsx'
+import EvolutionSim      from './games/EvolutionSim.jsx'
+import SniperElite       from './games/SniperElite.jsx'
+
 const GAME_COMPONENTS = {
   memory:     NebulaMemory,
   sliding:    CosmosPuzzle,
@@ -38,6 +44,11 @@ const GAME_COMPONENTS = {
   hanoi:      TowerOfMind,
   pattern:    RippleCode,
   spatial:    ShadowMatch,
+  // 4 complex games
+  towerdefense: KingdomDefense,
+  dungeon:      DungeonCrawler,
+  evolution:    EvolutionSim,
+  sniper:       SniperElite,
   // Subject-specific games
   subject: {
     chem_lab:       ChemLabGame,
