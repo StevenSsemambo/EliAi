@@ -89,7 +89,7 @@ export default function Welcome() {
               </svg>
             </div>
             <h1 className="text-4xl font-display font-extrabold text-white mb-2">
-              Elimu <span style={{color:'#F59E0B'}}>Learn</span>
+              Eqla <span style={{color:'#F59E0B'}}>Learn</span>
             </h1>
             <p className="text-slate-400 text-sm leading-relaxed">Science learning that works everywhere — even without internet.</p>
           </div>
