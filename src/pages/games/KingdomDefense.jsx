@@ -51,7 +51,8 @@ function makeMap() {
   ]
   path.forEach(([c,r]) => { if(r<ROWS&&c<COLS) m[r][c] = 0 })
   // add some terrain decorations
-  [[2,4],[6,2],[10,4],[13,5],[2,8],[6,11],[13,11]].forEach(([c,r])=>{
+  const terrain = [[2,4],[6,2],[10,4],[13,5],[2,8],[6,11],[13,11]]
+  terrain.forEach(([c,r])=>{
     if(r<ROWS&&c<COLS&&m[r][c]===1) m[r][c]=2
   })
   return { grid: m, path }
