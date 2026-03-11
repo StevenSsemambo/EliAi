@@ -1,5 +1,5 @@
 /**
- * ELIMU LEARN — ON-DEVICE LLM ENGINE
+ * EQLA LEARN — ON-DEVICE LLM ENGINE
  * Uses WebLLM to run AI models directly in the browser.
  * Desktop with WebGPU → real AI model (download once, works offline)
  * Mobile / no WebGPU → rule-based chatbot (instant, no download)
