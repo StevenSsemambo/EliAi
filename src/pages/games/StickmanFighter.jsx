@@ -5,7 +5,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 // ═══════════════════════════════════════════════════════════════════
 let _ac = null
 function AC() {
-  if (!_ac) try { _ac = new (window.AudioContext || window.webkitAudioContext)() } catch {}
+  if (!_ac) try { _ac = new (window.AudioContext || window.webkitAudioContext)() } catch(_e){}
   if (_ac?.state === 'suspended') _ac.resume()
   return _ac
 }
@@ -93,12 +93,12 @@ const SFX_SETS = [
     whoosh:  () => { noise(0.25,0.18,2400,800); osc(200,'sawtooth',0.1,0.15,0.05) },
     special: () => {
       noise(0.4,0.4,300,0,0.05)
-      const _a=[140,240,400,640,1000,1600];_a.forEach((f,i)=>osc(f,'sawtooth',0.35,0.24,i*0.04,i*10))
+      [140,240,400,640,1000,1600].forEach((f,i)=>osc(f,'sawtooth',0.35,0.24,i*0.04,i*10))
     },
     land:    () => { noise(0.5,0.10,160); osc(70,'sine',0.08,0.2,0.02) },
     ko:      () => {
       noise(0.6,0.8,200,0,0.05)
-      const _a=[240,190,145,100,60];_a.forEach((f,i)=>osc(f,'sawtooth',0.7,0.48,i*0.28))
+      [240,190,145,100,60].forEach((f,i)=>osc(f,'sawtooth',0.7,0.48,i*0.28))
     },
     victory: () => { [349,440,523,698,880].forEach((f,i)=>osc(f,'triangle',0.32,0.28,i*0.11)) },
     metal:   () => { noise(0.15,0.06,2000,800); osc(2200,'square',0.06,0.32,0,100); osc(1400,'square',0.05,0.2,0.05) },
@@ -113,16 +113,16 @@ const MUSIC_THEMES = [
   // Theme 0: Dojo — tense ceremonial drums + pentatonic
   (a,m) => {
     const bpm = 88, beat = 60/bpm
-    const sched = (fn, t) => { try { fn(t) } catch {} }
+    const sched = (fn, t) => { try { fn(t) } catch(_e){} }
     let t = a.currentTime + 0.1
     const loop = () => {
       // Kick on 1,3
-      const _a=[0,beat*2];_a.forEach(off=>{
+      [0,beat*2].forEach(off=>{
         noise(0.35,0.08,120,0, t+off)
         osc(60,'sine',0.2,0.3, t+off)
       })
       // Snare on 2,4
-      const _a=[beat,beat*3];_a.forEach(off=>{
+      [beat,beat*3].forEach(off=>{
         noise(0.2,0.06,800,200, t+off)
       })
       // Pentatonic arpeggio D minor pent
@@ -140,7 +140,7 @@ const MUSIC_THEMES = [
         noise(0.2,0.04,300,0,t+i*beat*0.5)
         if(i%2===0)osc(80,'sine',0.15,0.2,t+i*beat*0.5)
       }
-      const _a=[330,392,440,494,392,330,294,330];_a.forEach((f,i)=>osc(f,'square',0.4,0.03,t+i*beat*0.5))
+      [330,392,440,494,392,330,294,330].forEach((f,i)=>osc(f,'square',0.4,0.03,t+i*beat*0.5))
       t+=beat*4
     }
     const id=setInterval(loop,beat*4000); return id
@@ -149,7 +149,7 @@ const MUSIC_THEMES = [
   (a,m) => {
     const bpm=70,beat=60/bpm; let t=a.currentTime+0.1
     const loop=()=>{
-      const _a=[174,220,261];_a.forEach((f,i)=>osc(f,'sine',beat*4,0.04,t+i*beat*1.3))
+      [174,220,261].forEach((f,i)=>osc(f,'sine',beat*4,0.04,t+i*beat*1.3))
       noise(0.06,beat*4,400,50,t)
       t+=beat*4
     }
@@ -159,8 +159,8 @@ const MUSIC_THEMES = [
   (a,m) => {
     const bpm=100,beat=60/bpm; let t=a.currentTime+0.1
     const loop=()=>{
-      const _a=[0,beat,beat*1.5,beat*2,beat*3,beat*3.5];_a.forEach(off=>noise(0.3,0.07,200,0,t+off))
-      const _a=[55,55,65,55,73,65,55,49];_a.forEach((f,i)=>osc(f,'sawtooth',beat*0.9,0.05,t+i*beat*0.5))
+      [0,beat,beat*1.5,beat*2,beat*3,beat*3.5].forEach(off=>noise(0.3,0.07,200,0,t+off))
+      [55,55,65,55,73,65,55,49].forEach((f,i)=>osc(f,'sawtooth',beat*0.9,0.05,t+i*beat*0.5))
       t+=beat*4
     }
     const id=setInterval(loop,beat*4000); return id
@@ -175,7 +175,7 @@ function startMusic(themeIdx) {
   try {
     const id = MUSIC_THEMES[themeIdx % MUSIC_THEMES.length](a, master())
     _musicNodes.push(id)
-  } catch {}
+  } catch(_e){}
 }
 function stopMusic() {
   _musicNodes.forEach(id=>clearInterval(id))
@@ -909,7 +909,7 @@ function drawFighter(ctx, f, time) {
 
   // Joint highlights
   ctx.shadowBlur = 0; ctx.fillStyle = f.color
-  const _a=[J.LE,J.RE,J.LK,J.RK,J.LS,J.RS];_a.forEach(ji=>{
+  [J.LE,J.RE,J.LK,J.RK,J.LS,J.RS].forEach(ji=>{
     ctx.beginPath(); ctx.arc(sx(ji),sy(ji),3,0,Math.PI*2); ctx.fill()
   })
 
@@ -958,7 +958,7 @@ function drawWeapon(ctx, f, sx, sy, time) {
     ctx.beginPath(); ctx.moveTo(-26,0); ctx.lineTo(56,0); ctx.stroke()
     // Wood grain
     ctx.strokeStyle='rgba(60,20,0,0.3)'; ctx.lineWidth=1.5
-    const _a=[-8,8,24];_a.forEach(px=>{ctx.beginPath();ctx.moveTo(px,-2);ctx.lineTo(px+4,2);ctx.stroke()})
+    [-8,8,24].forEach(px=>{ctx.beginPath();ctx.moveTo(px,-2);ctx.lineTo(px+4,2);ctx.stroke()})
     const puls=Math.sin(time*4)*1.5
     ctx.fillStyle='#CC44FF'; ctx.shadowColor='#EE88FF'; ctx.shadowBlur=20+puls
     ctx.beginPath(); ctx.arc(58,0,7,0,Math.PI*2); ctx.fill()
@@ -978,7 +978,7 @@ function drawWeapon(ctx, f, sx, sy, time) {
     ctx.beginPath(); ctx.moveTo(c2x,c2y); ctx.lineTo(endX,endY); ctx.stroke()
     // Grip wraps
     ctx.strokeStyle='rgba(220,0,0,0.5)'; ctx.lineWidth=1.5
-    const _a=[5,10,15];_a.forEach(px=>{ctx.beginPath();ctx.moveTo(px,-2.5);ctx.lineTo(px,2.5);ctx.stroke()})
+    [5,10,15].forEach(px=>{ctx.beginPath();ctx.moveTo(px,-2.5);ctx.lineTo(px,2.5);ctx.stroke()})
   }
   ctx.restore()
 }
