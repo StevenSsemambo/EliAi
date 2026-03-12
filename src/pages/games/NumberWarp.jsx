@@ -20,7 +20,7 @@ function genQuestion(tier) {
   if (tier >= 10) ops.push(() => { const a=r(1,99); return { q:`${a}% of ${r(10,200)}`, ans: null, _a:a, _b:null,
     _gen: () => { const b=r(10,200); return { q:`${a}% of ${b}`, ans:Math.round(a*b/100) } } } })
   if (tier >= 11) ops.push(() => { const n=r(1,9),d=r(2,8); return { q:`½ of ${n*2*d}`, ans:n*d } })
-  if (tier >= 12) ops.push(() => { const a=r(10,99),b=r(1,9); return { q:`${a}.${b} + ${r(1,9)}.${r(1,9)}`, ans: parseFloat((a + r(1,9) + (b+r(1,9))/10).toFixed(1)) } })
+  if (tier >= 12) ops.push(() => { const a=r(10,99),b=r(1,9),c=r(1,9),d=r(1,9); return { q:`${a}.${b} + ${c}.${d}`, ans: parseFloat(((a+c) + (b+d)/10).toFixed(1)) } })
   if (tier >= 14) ops.push(() => { const a=r(2,5),b=r(2,4); return { q:`${a}^${b}`, ans:Math.pow(a,b) } })
   if (tier >= 15) ops.push(() => { const c=r(1,15),a=r(1,8); return { q:`${a}x = ${a*c}, x=?`, ans:c } })
   if (tier >= 16) ops.push(() => { const c=r(1,12),b=r(1,10); return { q:`2x+${b}=${2*c+b}, x=?`, ans:c } })
@@ -65,9 +65,47 @@ function WarpBg({ active }) {
   )
 }
 
+function HowToPlayWarp({ game, onStart, levelData }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🚀</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Number Warp</div>
+      </div>
+      {[
+        ['🔢', 'Read the question', 'A maths question appears — addition, subtraction, multiplication, division, and more as you level up.'],
+        ['⚡', 'Pick the answer fast', 'Tap the correct answer from 4 choices. Speed gives bonus points!'],
+        ['🔥', 'Build streaks', 'Chain correct answers to earn a streak multiplier. Every wrong answer resets it.'],
+        ['🏆', 'Hit the target', 'Reach the points target before running out of questions to win the level.'],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8, marginBottom: 16 }}>
+        {[['Target', `${levelData.target} pts`, '#F59E0B'], ['Questions', levelData.questionsPerRound, '#7C3AED'], ['Time/Q', `${levelData.timePerQ}s`, '#EC4899']].map(([l,v,c]) => (
+          <div key={l} style={{ background: '#0F1629', border: `1px solid ${c}33`, borderRadius: 10, padding: '8px', textAlign: 'center' }}>
+            <div style={{ fontWeight: 900, fontSize: 15, color: c }}>{v}</div>
+            <div style={{ fontSize: 10, color: '#475569' }}>{l}</div>
+          </div>
+        ))}
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #EF4444)` }}>
+        🚀 Start Warp
+      </button>
+    </div>
+  )
+}
+
 export default function NumberWarp({ game, levelData, studentId, onFinish }) {
   const { questionsPerRound, timePerQ, target, difficultyTier } = levelData
-  const [phase, setPhase] = useState('ready') // ready | playing | result
+  const [screen, setScreen] = useState('guide')
+  const [phase, setPhase] = useState('ready')
   const [qIndex, setQIndex] = useState(0)
   const [current, setCurrent] = useState(null)
   const [score, setScore] = useState(0)
@@ -147,6 +185,8 @@ export default function NumberWarp({ game, levelData, studentId, onFinish }) {
   const timerColor = timerPct > 50 ? '#4ADE80' : timerPct > 25 ? '#F59E0B' : '#EF4444'
   const correctCount = results.filter(r => r.correct).length
   const passed = score >= target
+
+  if (screen === 'guide') return <HowToPlayWarp game={game} onStart={() => setScreen('playing')} levelData={levelData} />
 
   return (
     <div className="relative min-h-64">
