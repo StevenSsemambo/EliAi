@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useMemo } from 'react'
 import { SoundEngine } from '../../utils/soundEngine.js'
 import { saveGameScore } from '../../utils/gameUnlocks.js'
 
@@ -162,9 +162,48 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
 
 function shuffle(arr) { const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}; return a }
 
+function HowToPlayShadow({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🎯</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Shadow Match</div>
+      </div>
+      {[
+        ['🧊', 'See the 3D shape', 'A 3D shape built from cubes is shown on the left. Spin it in your mind.'],
+        ['👁', 'Pick the correct shadow', '4 flat grid images are shown. One is the correct view (top, front or side) of that shape.'],
+        ['🔍', 'Read the question', 'The question tells you WHICH view to find — top, front or side.'],
+        ['⚡', 'Tap fast', 'Correct answers give time bonus points. Wrong answers show what\'s right.'],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(236,72,153,0.1)', border: '1px solid rgba(236,72,153,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#F9A8D4', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
+          • Top view = looking straight down<br/>
+          • Front view = looking from in front<br/>
+          • Side view = looking from the right<br/>
+          • Count rows and columns to eliminate wrong options
+        </div>
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #9333EA)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function ShadowMatch({ game, levelData, studentId, onFinish }) {
   const { rounds = 6, timePerQ = 20, difficulty = 1 } = levelData
 
+  const [screen, setScreen]       = useState('guide')
   const [shapeIdx, setShapeIdx]   = useState(() => Math.floor(Math.random()*SHAPES.length))
   const [selected, setSelected]   = useState(null)
   const [feedback, setFeedback]   = useState(null)
@@ -175,22 +214,20 @@ export default function ShadowMatch({ game, levelData, studentId, onFinish }) {
   const [phase, setPhase]         = useState('playing')
   const locked = useRef(false)
 
-  const shape   = SHAPES[shapeIdx]
-  // Build 4 answer options: correct + 3 distractors from other views
-  const [options] = useState(() => {
+  const shape = SHAPES[shapeIdx]
+  // Rebuild options every time shapeIdx changes (was broken: useState only runs once)
+  const options = useMemo(() => {
     const keys = Object.keys(shape.views)
     const correctKey = shape.correct
     const wrongs = shuffle(keys.filter(k => k !== correctKey)).slice(0, 2)
-    // Add one extra distractor: a rotated version (just another view from a different shape)
     const otherShape = SHAPES[(shapeIdx + 1) % SHAPES.length]
-    const extraKey = 'extra'
     const allOpts = [
       { key: correctKey, grid: shape.views[correctKey], label: `${correctKey.charAt(0).toUpperCase()+correctKey.slice(1)} View`, isCorrect: true },
       ...wrongs.map(k => ({ key: k, grid: shape.views[k], label: `${k.charAt(0).toUpperCase()+k.slice(1)} View`, isCorrect: false })),
-      { key: extraKey, grid: Object.values(otherShape.views)[0], label: 'Alternate', isCorrect: false },
+      { key: 'extra', grid: Object.values(otherShape.views)[0], label: 'Alternate', isCorrect: false },
     ]
     return shuffle(allOpts.slice(0, 4))
-  })
+  }, [shapeIdx])
 
   useEffect(() => {
     if (phase !== 'playing' || feedback) return
@@ -234,6 +271,8 @@ export default function ShadowMatch({ game, levelData, studentId, onFinish }) {
   }
 
   const tc = timeLeft > timePerQ * 0.6 ? '#4ADE80' : timeLeft > timePerQ * 0.3 ? '#F59E0B' : '#EF4444'
+
+  if (screen === 'guide') return <HowToPlayShadow game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
