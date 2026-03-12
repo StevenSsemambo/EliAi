@@ -91,48 +91,90 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
   )
 }
 
+// ── How To Play guide ─────────────────────────────────────────────
+function HowToPlay({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🔢</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Ripple Code</div>
+      </div>
+      {[
+        ['👀', 'Study the sequence', 'You\'ll see a series of numbers following a hidden rule — add, multiply, squares, Fibonacci, and more.'],
+        ['❓', 'Find the blanks', 'One or more numbers at the end are missing. Figure out what comes next.'],
+        ['⏱', 'Pick fast', 'Tap the correct answer from 4 choices before time runs out. Speed earns bonus points!'],
+        ['🔥', 'Chain correct answers', 'Each correct answer reveals the next blank. Complete the whole sequence to finish the round.'],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#4ADE80', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
+          • Look at the gap between each pair of numbers first<br/>
+          • If gaps grow, try squares or Fibonacci<br/>
+          • Wrong guesses show the correct answer so you can learn
+        </div>
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #059669)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function RippleCode({ game, levelData, studentId, onFinish }) {
   const { tier = 1, rounds = 5, showCount = 5, askCount = 2, timePerQ = 25 } = levelData
 
+  const [screen, setScreen]     = useState('guide')  // guide | playing
   const [seqData, setSeqData]   = useState(() => generateSequence(tier, showCount, askCount))
-  const [askIdx, setAskIdx]     = useState(0)       // which answer we're on
+  const [askIdx, setAskIdx]     = useState(0)
   const [options, setOptions]   = useState([])
   const [timeLeft, setTimeLeft] = useState(timePerQ)
+  const [timerKey, setTimerKey] = useState(0)   // ← increment to restart timer
   const [round, setRound]       = useState(1)
   const [score, setScore]       = useState(0)
   const [correct, setCorrect]   = useState(0)
   const [phase, setPhase]       = useState('playing')
-  const [feedback, setFeedback] = useState(null)    // null | 'right' | 'wrong'
-  const [revealed, setRevealed] = useState([])      // answers revealed so far
+  const [feedback, setFeedback] = useState(null)
+  const [revealed, setRevealed] = useState([])
   const [wrongOption, setWrongOption] = useState(null)
   const locked = useRef(false)
 
   useEffect(() => {
-    // Build options for current ask
     const ans = seqData.answers[askIdx]
     setOptions(makeOptions(ans, seqData.answers, askIdx))
   }, [seqData, askIdx])
 
+  // Timer only restarts when timerKey changes — NOT when feedback clears
   useEffect(() => {
-    if (phase !== 'playing' || feedback) return
+    if (phase !== 'playing' || screen !== 'playing') return
+    setTimeLeft(timePerQ)
     const t = setInterval(() => setTimeLeft(s => {
       if (s <= 1) { clearInterval(t); handleAnswer(null); return 0 }
       if (s <= 8) SoundEngine.timerTick(s <= 3 ? 3 : 2)
       return s - 1
     }), 1000)
     return () => clearInterval(t)
-  }, [phase, feedback, askIdx, round])
+  }, [timerKey, phase, screen])
 
   function handleAnswer(val) {
     if (locked.current || phase !== 'playing') return
     locked.current = true
     const ans = seqData.answers[askIdx]
     const ok  = val === ans
+    const pts = ok ? Math.round(10 + (timeLeft / timePerQ) * 20) : 0
 
     if (ok) {
       SoundEngine.gameCorrect()
       setFeedback('right')
-      setScore(s => s + Math.round(10 + (timeLeft / timePerQ) * 20))
+      setScore(s => s + pts)
       setCorrect(c => c + 1)
     } else {
       SoundEngine.gameWrong()
@@ -146,33 +188,36 @@ export default function RippleCode({ game, levelData, studentId, onFinish }) {
 
       const nextAskIdx = askIdx + 1
       if (nextAskIdx >= askCount) {
-        // Move to next round or end
         const nextRound = round + 1
         if (nextRound > rounds) {
           SoundEngine.levelComplete()
           setPhase('done')
-          if (studentId) saveGameScore(studentId, game.id, levelData.level, score + (ok ? Math.round(10 + (timeLeft/timePerQ)*20) : 0))
+          if (studentId) saveGameScore(studentId, game.id, levelData.level, score + pts)
           return
         }
         setSeqData(generateSequence(tier, showCount, askCount))
         setAskIdx(0); setRevealed([])
-        setRound(nextRound); setTimeLeft(timePerQ)
+        setRound(nextRound)
+        setTimerKey(k => k + 1)   // ← fresh timer for new round
       } else {
-        setAskIdx(nextAskIdx); setTimeLeft(timePerQ)
+        setAskIdx(nextAskIdx)
+        setTimerKey(k => k + 1)   // ← fresh timer for next blank
       }
     }, ok ? 600 : 1200)
   }
 
   function restart() {
     setSeqData(generateSequence(tier, showCount, askCount))
-    setAskIdx(0); setRevealed([]); setTimeLeft(timePerQ)
+    setAskIdx(0); setRevealed([])
     setRound(1); setScore(0); setCorrect(0)
     setPhase('playing'); setFeedback(null); locked.current = false
+    setTimerKey(k => k + 1)
   }
 
   const tc = timeLeft > timePerQ * 0.6 ? '#4ADE80' : timeLeft > timePerQ * 0.3 ? '#F59E0B' : '#EF4444'
   const currentAnswer = seqData.answers[askIdx]
-  const allShown = [...seqData.shown, ...revealed]
+
+  if (screen === 'guide') return <HowToPlay game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
