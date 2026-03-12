@@ -30,8 +30,43 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
   )
 }
 
+
+function HowToPlayGuide__NebulaMemory({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🌌</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Nebula Memory</div>
+      </div>
+      {[
+        ['🃏', 'Flip cards', `Cards are placed face-down. Tap any card to reveal the symbol underneath.`],
+        ['🔍', 'Find pairs', `Tap a second card — if the symbols match, the pair stays revealed!`],
+        ['🧠', 'Remember', `If they don't match, both cards flip back. Memorise their positions for next time.`],
+        ['⚡', 'Clear the grid', `Match all pairs before time runs out to complete the level.`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#A5B4FC', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Flip both cards in quick succession — the second one is visible longer<br/>• Start from the corners and work inward<br/>• If you see a card you've seen before, go for its pair first` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #4338CA)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function NebulaMemory({ game, levelData, studentId, onFinish }) {
   const { pairs, timeLimit } = levelData
+  const [screen, setScreen] = useState('guide')
   const makeCards = () => {
     const icons = shuffle([...SPACE_ICONS,...ATOM_ICONS]).slice(0,pairs)
     return shuffle([...icons,...icons].map((icon,i) => ({ id:i,icon,flipped:false,matched:false })))
@@ -110,6 +145,8 @@ export default function NebulaMemory({ game, levelData, studentId, onFinish }) {
   const cols = levelData.gridSize||4
   const pct  = (timeLeft/timeLimit)*100
   const tc   = timeLeft>timeLimit*0.5 ? '#4ADE80' : timeLeft>timeLimit*0.25 ? '#F59E0B' : '#EF4444'
+
+  if (screen === 'guide') return <HowToPlayGuide__NebulaMemory game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
