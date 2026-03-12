@@ -7,7 +7,8 @@ import { saveGameScore } from '../../utils/gameUnlocks.js'
 // Categories: People × Attributes. Use clues to deduce the full grid.
 
 const PUZZLE_BANK = [
-  // Puzzle 1 – 3 people, 2 attributes (starter)
+  // Puzzle 1 — 3 people, 2 attributes
+  // Solution: Alice→Maths→90, Bob→Physics→85, Carol→Biology→75
   {
     title: 'The Three Students',
     categories: ['Student', 'Subject', 'Score'],
@@ -16,9 +17,9 @@ const PUZZLE_BANK = [
       ['Maths', 'Physics', 'Biology'],
       ['90', '75', '85'],
     ],
-    solution: [[0,0,0],[1,1,2],[2,2,1]], // person i → attr[cat] = items[cat][solution[i][cat]]
-    // solution: Alice→Maths→90, Bob→Physics→85, Carol→Biology→75
-    solutionMap: { 0:[0,0,0], 1:[1,2,1], 2:[2,1,2] },
+    // solutionMap[personIdx] = [personIdx, subjectIdx, scoreIdx]
+    // Alice(0)→Maths(0)→90(0), Bob(1)→Physics(1)→85(2), Carol(2)→Biology(2)→75(1)
+    solutionMap: { 0:[0,0,0], 1:[1,1,2], 2:[2,2,1] },
     clues: [
       'Alice does not study Physics.',
       'The Biology student scored 75.',
@@ -26,6 +27,8 @@ const PUZZLE_BANK = [
       'Carol does not study Maths.',
     ],
   },
+  // Puzzle 2 — 3 people, 2 attributes
+  // Solution: David→Volcano→Gold, Eve→Robot→Silver, Frank→Plant→Bronze
   {
     title: 'The Science Fair',
     categories: ['Student', 'Project', 'Award'],
@@ -42,6 +45,8 @@ const PUZZLE_BANK = [
       'Frank built the Plant project.',
     ],
   },
+  // Puzzle 3 — 3 people, 2 attributes
+  // Solution: Grace→Football→1st, Henry→Running→3rd, Iris→Swimming→2nd
   {
     title: 'The Athletes',
     categories: ['Athlete', 'Sport', 'Position'],
@@ -50,15 +55,17 @@ const PUZZLE_BANK = [
       ['Football', 'Swimming', 'Running'],
       ['1st', '2nd', '3rd'],
     ],
-    solutionMap: { 0:[0,0,0], 1:[1,1,1], 2:[2,2,2] },
+    // Grace(0)→Football(0)→1st(0), Henry(1)→Running(2)→3rd(2), Iris(2)→Swimming(1)→2nd(1)
+    solutionMap: { 0:[0,0,0], 1:[1,2,2], 2:[2,1,1] },
     clues: [
       'Grace does not swim.',
       'The swimmer came 2nd.',
-      'Henry runs.',
+      'Henry does not swim.',
       'Iris did not come 1st.',
     ],
   },
-  // 4-person puzzle
+  // Puzzle 4 — 4 people, 2 attributes
+  // Solution: Ana→Novel→Mon, Ben→Poetry→Tue, Cara→History→Wed, Dan→Science→Thu
   {
     title: 'The Reading Club',
     categories: ['Member', 'Book', 'Day'],
@@ -77,6 +84,18 @@ const PUZZLE_BANK = [
       'Ana meets on Monday.',
     ],
   },
+  // Puzzle 5 — 4 people, 2 attributes
+  // Solution: Sam→Python→Junior, Tina→Swift→Lead, Uma→Java→Senior, Vic→React→Mid
+  // Wait - check clues: Tina is Lead. Swift is Junior. Uma uses Python. Vic not Junior.
+  // If Tina is Lead and Swift is Junior, Tina doesn't use Swift.
+  // Uma uses Python → Sam doesn't use Python → Sam uses Java or React or Swift
+  // React developer is Senior → Uma(Python)≠Senior → Uma is Junior,Mid,or Lead
+  // Tina is Lead → Uma ≠ Lead
+  // Swift is Junior → Vic not Junior → Vic doesn't use Swift
+  // Sam→Swift(Junior), Tina→React(Lead)? But React=Senior, Tina=Lead - contradiction
+  // Let's fix: Sam→React→Senior? But React=Senior and Sam≠Lead... 
+  // Corrected solution: Sam→React→Senior, Tina→Python→Lead, Uma→Java→Mid, Vic→Swift→Junior
+  // Check: Uma uses Python? NO — Uma uses Java. Need to fix Uma's clue.
   {
     title: 'The Tech Team',
     categories: ['Developer', 'Language', 'Level'],
@@ -85,18 +104,20 @@ const PUZZLE_BANK = [
       ['Python', 'Java', 'React', 'Swift'],
       ['Junior', 'Mid', 'Senior', 'Lead'],
     ],
-    solutionMap: { 0:[0,0,0], 1:[1,1,1], 2:[2,2,2], 3:[3,3,3] },
+    // Sam(0)→React(2)→Senior(2), Tina(1)→Python(0)→Lead(3), Uma(2)→Java(1)→Mid(1), Vic(3)→Swift(3)→Junior(0)
+    solutionMap: { 0:[0,2,2], 1:[1,0,3], 2:[2,1,1], 3:[3,3,0] },
     clues: [
       'Sam does not use Java.',
       'The React developer is Senior.',
       'Tina is Lead.',
       'The Swift developer is Junior.',
-      'Uma uses Python.',
-      'Vic is not Junior.',
+      'Uma does not use Python.',
+      'Vic is not Mid or Senior.',
     ],
   },
-
-  // Puzzle 6 – 4 people, 3 attributes (medium)
+  // Puzzle 6 — 4 people, 3 attributes
+  // Solution: Amos→Football→1st→Uganda, Beatrice→Swimming→2nd→Kenya,
+  //           Charles→Athletics→3rd→Tanzania, Diana→Tennis→4th→Rwanda
   {
     title: 'The Sports Team',
     categories: ['Player', 'Sport', 'Rank', 'Country'],
@@ -117,28 +138,36 @@ const PUZZLE_BANK = [
       'The Athletics player ranked 3rd.',
     ],
   },
-  // Puzzle 7 – 4 people, harder
+  // Puzzle 7 — 4 people, 3 attributes
+  // Solution: Prof. Ali→Carbon→2001→Certificate, Dr. Bak→Gold→2005→Medal,
+  //           Ms. Cee→Iron→2009→Prize, Mr. Dex→Oxygen→2013→Trophy
   {
     title: 'The Science Lab',
-    categories: ['Scientist', 'Element', 'Discovery Year', 'Award'],
+    categories: ['Scientist', 'Element', 'Year', 'Award'],
     items: [
       ['Prof. Ali', 'Dr. Bak', 'Ms. Cee', 'Mr. Dex'],
       ['Carbon', 'Gold', 'Iron', 'Oxygen'],
       ['2001', '2005', '2009', '2013'],
-      ['Medal', 'Trophy', 'Prize', 'Certificate'],
+      ['Certificate', 'Medal', 'Prize', 'Trophy'],
     ],
+    // Prof.Ali(0)→Carbon(0)→2001(0)→Certificate(0)
+    // Dr.Bak(1)→Gold(1)→2005(1)→Medal(1)
+    // Ms.Cee(2)→Iron(2)→2009(2)→Prize(2)
+    // Mr.Dex(3)→Oxygen(3)→2013(3)→Trophy(3)
     solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3] },
     clues: [
-      'Prof. Ali discovered his element in 2001.',
+      'Prof. Ali worked in 2001.',
       'The Gold discoverer won a Trophy.',
       'Dr. Bak won a Medal.',
       'The Iron discoverer worked in 2009.',
       'Ms. Cee won the Prize.',
-      'Mr. Dex discovered his element in 2013.',
+      'Mr. Dex worked in 2013.',
       'The Carbon discoverer won a Certificate.',
     ],
   },
-  // Puzzle 8 – 5 people (hard)
+  // Puzzle 8 — 5 people, 3 attributes
+  // Solution: Emma→Maths→S4A→Red, Felix→English→S4B→Blue,
+  //           Grace→Biology→S5A→Green, Henry→Physics→S5B→Yellow, Irene→Chemistry→S6A→White
   {
     title: 'The School Prefects',
     categories: ['Prefect', 'Subject', 'Class', 'House'],
@@ -151,17 +180,16 @@ const PUZZLE_BANK = [
     solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3], 4:[4,4,4,4] },
     clues: [
       'Emma is in S4A.',
-      'The Maths prefect is in Blue house.',
+      'The Maths prefect is in Red house.',
       'Felix studies English.',
       'The S5A student is in Green house.',
       'Grace is not in Red or Yellow house.',
-      'Henry is in S6A.',
+      'Henry is in S5B.',
       'The Chemistry prefect is in White house.',
-      'Irene is in Yellow house.',
-      'The Biology prefect is in S5B.',
+      'Irene is in White house.',
+      'The Biology prefect is in S5A.',
     ],
   },
-
 ]
 
 // Simple 3×3 deduction grid (who→attribute mapping)
@@ -188,14 +216,51 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
   )
 }
 
+function HowToPlayMind({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🧩</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>MindBridge Logic</div>
+      </div>
+      {[
+        ['📋', 'Read the clues', 'A set of logic clues describe relationships between people and their attributes.'],
+        ['🔲', 'Fill the grid', 'For each person, tap their row to cycle through possible attributes in each column.'],
+        ['🔍', 'Use elimination', 'If a clue rules something out, cross it off mentally. What\'s left must be the answer.'],
+        ['✅', 'Check your work', 'Press "Check" when done. Mistakes are highlighted. Use a hint if you\'re stuck.'],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#A5B4FC', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Strategy</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
+          • Start with "definite" clues (X is Y, X does Z)<br/>
+          • Then use "not" clues to eliminate options<br/>
+          • Each attribute is used exactly once per column
+        </div>
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #4F46E5)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function MindBridge({ game, levelData, studentId, onFinish }) {
   const { puzzleIdx = 0, timeLimit = 180 } = levelData
 
   const puzzle = PUZZLE_BANK[Math.min(puzzleIdx, PUZZLE_BANK.length - 1)]
-  const n = puzzle.items[0].length   // number of people
-  const numCats = puzzle.categories.length - 1  // exclude 'Person' row
+  const n = puzzle.items[0].length
+  const numCats = puzzle.categories.length - 1
 
-  // grid[personIdx][catIdx] = chosen attribute index (0..n-1) or null
+  const [screen, setScreen]   = useState('guide')
   const [grid, setGrid]       = useState(() => buildEmptyGrid(n, numCats))
   const [phase, setPhase]     = useState('playing')
   const [timeLeft, setTimeLeft] = useState(timeLimit)
@@ -280,6 +345,8 @@ export default function MindBridge({ game, levelData, studentId, onFinish }) {
   const tc = timeLeft > timeLimit * 0.5 ? '#4ADE80' : timeLeft > timeLimit * 0.2 ? '#F59E0B' : '#EF4444'
   const filled = grid.flat().filter(v => v !== null).length
   const total  = n * numCats
+
+  if (screen === 'guide') return <HowToPlayMind game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative', fontFamily:'system-ui,sans-serif' }}>
