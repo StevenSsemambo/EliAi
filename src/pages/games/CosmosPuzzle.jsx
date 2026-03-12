@@ -56,6 +56,40 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
   )
 }
 
+
+function HowToPlayGuide__CosmosPuzzle({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🧩</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Cosmos Puzzle</div>
+      </div>
+      {[
+        ['🔲', 'Slide tiles', `Tap any tile next to the empty space to slide it into that space.`],
+        ['🎯', 'Reach the goal', `Arrange all tiles into the correct order shown in the goal image.`],
+        ['↩', 'Undo moves', `Made a mistake? Use the Undo button to step back one move at a time.`],
+        ['⚡', 'Fewer moves = more points', `Efficient solutions earn bigger score bonuses.`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#C4B5FD', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Work on one row at a time, top to bottom<br/>• Fix the left column last<br/>• The empty space in the corner lets you rotate tiles without disturbing others` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #7C3AED)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function CosmosPuzzle({ game, levelData, studentId, onFinish }) {
   const n = levelData.gridSize || 3
   const total = n * n
@@ -98,6 +132,8 @@ export default function CosmosPuzzle({ game, levelData, studentId, onFinish }) {
 
   // Color tiles by their solved position
   const hues = Array.from({ length: total - 1 }, (_, i) => Math.round((i / (total - 1)) * 200 + 160))
+
+  if (screen === 'guide') return <HowToPlayGuide__CosmosPuzzle game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
