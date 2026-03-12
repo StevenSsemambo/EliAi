@@ -63,8 +63,43 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
   )
 }
 
+
+function HowToPlayGuide__QuasarChain({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🔗</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Quasar Chain</div>
+      </div>
+      {[
+        ['🎯', 'Match 3 in a row', `Tap a gem to select it, then tap another to swap them. Match 3+ of the same colour.`],
+        ['💥', 'Chain reactions', `Matches that create new matches automatically chain — maximise your combos!`],
+        ['⭐', 'Limited moves', `You have a fixed number of moves. Clear as many gems as possible before they run out.`],
+        ['🎚', 'Levels get harder', `Grid gets larger and move limits tighter as you progress.`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#FCD34D', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Look for moves that create chain reactions<br/>• Horizontal and vertical matches both count<br/>• Matches of 4+ clear an extra row or column` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #B45309)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function QuasarChain({ game, levelData, studentId, onFinish }) {
   const { gridW: W, gridH: H, colors: numColors } = levelData
+  const [screen, setScreen] = useState('guide')
   const initialMoves = levelData.moves || Math.max(15, 30 - Math.floor(levelData.level / 4))
   const nc = Math.min(numColors, ATOMS.length)
   const atoms = ATOMS.slice(0, nc)
@@ -141,6 +176,8 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
   }
 
   const cellSize = Math.min(42, Math.floor(320 / W))
+
+  if (screen === 'guide') return <HowToPlayGuide__QuasarChain game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
