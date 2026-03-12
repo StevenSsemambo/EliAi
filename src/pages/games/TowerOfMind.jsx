@@ -37,8 +37,43 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
   )
 }
 
+
+function HowToPlayGuide__TowerOfMind({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🗼</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Tower of Mind</div>
+      </div>
+      {[
+        ['📦', 'Move discs', `Tap a peg to pick up its top disc, then tap another peg to place it there.`],
+        ['📏', 'One rule', `You can never place a larger disc on top of a smaller disc.`],
+        ['🎯', 'Goal', `Move all discs from the left peg to the right peg using the middle as a helper.`],
+        ['💡', 'Minimum moves', `The fewest possible moves is 2ⁿ-1 (e.g. 3 discs = 7 moves minimum).`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#7DD3FC', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Always move the smallest disc first in a new cycle<br/>• For odd discs, move smallest to the target peg<br/>• For even discs, move smallest to the helper peg<br/>• Use Undo if you get stuck!` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #0369A1)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function TowerOfMind({ game, levelData, studentId, onFinish }) {
   const { discs = 3, timeLimit = 120 } = levelData
+  const [screen, setScreen] = useState('guide')
 
   const [pegs, setPegs]         = useState(() => makeState(discs))
   const [selected, setSelected] = useState(null)   // peg index being held
@@ -132,6 +167,8 @@ export default function TowerOfMind({ game, levelData, studentId, onFinish }) {
 
   const tc = timeLeft > timeLimit * 0.5 ? '#4ADE80' : timeLeft > timeLimit * 0.2 ? '#F59E0B' : '#EF4444'
   const efficiency = moves > 0 ? Math.round((optimal / moves) * 100) : 100
+
+  if (screen === 'guide') return <HowToPlayGuide__TowerOfMind game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative' }}>
