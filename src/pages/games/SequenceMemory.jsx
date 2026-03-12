@@ -30,8 +30,43 @@ const COLORS = [
   { bg: '#F97316', glow: 'rgba(249,115,22,0.8)',  dim: 'rgba(249,115,22,0.15)', icon: '🔥' },
 ]
 
+
+function HowToPlayGuide__SequenceMemory({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🧠</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Sequence Memory</div>
+      </div>
+      {[
+        ['👁', 'Watch the sequence', `Buttons flash one by one in a specific order. Pay attention!`],
+        ['🔁', 'Repeat it back', `Once the sequence ends, tap the buttons in exactly the same order.`],
+        ['📈', 'It grows', `Each successful round adds one more step to the sequence.`],
+        ['❤️', 'Lives', `You have limited lives. A wrong tap costs one life.`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(236,72,153,0.1)', border: '1px solid rgba(236,72,153,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#F9A8D4', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Try saying the colours/positions out loud as they flash<br/>• Group sequences in threes mentally<br/>• Don't rush — accuracy beats speed here` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #7C3AED)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function SequenceMemory({ game, levelData, studentId, onFinish }) {
   const { buttons: numButtons, startLen, flashMs, lives: maxLives } = levelData
+  const [screen, setScreen] = useState('guide')
 
   const [phase, setPhase]         = useState('ready')    // ready|watch|input|right|wrong|dead|win
   const [sequence, setSequence]   = useState([])
@@ -121,6 +156,8 @@ export default function SequenceMemory({ game, levelData, studentId, onFinish })
   }
 
   const CELL_SIZE = numButtons <= 4 ? 80 : numButtons <= 6 ? 72 : numButtons <= 8 ? 64 : 56
+
+  if (screen === 'guide') return <HowToPlayGuide__SequenceMemory game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div className="relative">
