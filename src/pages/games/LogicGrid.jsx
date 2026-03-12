@@ -15,25 +15,50 @@ function generateLatinSquare(n) {
   return rowOrder.map(r => colOrder.map(c => base[r][c]))
 }
 
+// Count how many valid solutions exist (stop at 2 — we only need to know if unique)
+function countSolutions(grid, n) {
+  function solve(pos, count) {
+    if (count > 1) return count
+    if (pos === n * n) return count + 1
+    const row = Math.floor(pos / n), col = pos % n
+    if (grid[row][col] !== 0) return solve(pos + 1, count)
+    for (let v = 1; v <= n; v++) {
+      let ok = true
+      for (let i = 0; i < n && ok; i++) {
+        if (grid[row][i] === v || grid[i][col] === v) ok = false
+      }
+      if (ok) {
+        grid[row][col] = v
+        count = solve(pos + 1, count)
+        grid[row][col] = 0
+      }
+    }
+    return count
+  }
+  return solve(0, 0)
+}
+
 function generatePuzzle(gridSize, clueRatio) {
   const solution = generateLatinSquare(gridSize)
   const total = gridSize * gridSize
-  const clueCount = Math.max(gridSize, Math.round(total * clueRatio / 100))
+  const targetClues = Math.max(gridSize * 2, Math.round(total * clueRatio / 100))
 
-  // Pick random cells to reveal
-  const positions = Array.from({ length: total }, (_, i) => i)
-  const revealed = new Set()
-  // Ensure each row/col has at least 1 clue
-  for (let r = 0; r < gridSize; r++) {
-    const c = Math.floor(Math.random() * gridSize)
-    revealed.add(r * gridSize + c)
-  }
-  for (let c = 0; c < gridSize; c++) {
-    const r = Math.floor(Math.random() * gridSize)
-    revealed.add(r * gridSize + c)
-  }
-  while (revealed.size < clueCount) {
-    revealed.add(positions[Math.floor(Math.random() * total)])
+  // Start with all cells revealed, then remove one by one while solution remains unique
+  const revealed = new Set(Array.from({ length: total }, (_, i) => i))
+
+  // Shuffle removal order
+  const removalOrder = [...revealed].sort(() => Math.random() - 0.5)
+
+  for (const pos of removalOrder) {
+    if (revealed.size <= targetClues) break
+    revealed.delete(pos)
+    // Check if still unique
+    const testGrid = solution.map((row, r) =>
+      row.map((val, c) => revealed.has(r * gridSize + c) ? val : 0)
+    )
+    if (countSolutions(testGrid.map(r => [...r]), gridSize) !== 1) {
+      revealed.add(pos) // put it back
+    }
   }
 
   const puzzle = solution.map((row, r) =>
@@ -45,6 +70,51 @@ function generatePuzzle(gridSize, clueRatio) {
     }))
   )
   return { puzzle, solution }
+}
+
+function HowToPlayGrid({ game, onStart, levelData }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🌀</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Logic Grid</div>
+      </div>
+      {[
+        ['🔣', 'Alien symbols', 'Each symbol ①②③ must appear exactly once in every row and every column — like Sudoku.'],
+        ['👁', 'Given clues', 'Some cells are pre-filled. Use them as your starting point.'],
+        ['🔢', 'Fill the blanks', 'Tap an empty cell to cycle through symbols until the grid is complete.'],
+        ['⚠️', 'No repeats', 'If a symbol already appears in the same row or column, you can\'t place it there.'],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(6,182,212,0.1)', border: '1px solid rgba(6,182,212,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#67E8F9', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
+          • Find rows or columns with only one empty cell — fill those first<br/>
+          • If a symbol appears in 2 of 3 rows in a column, the 3rd row must have it<br/>
+          • Wrong answers turn red — tap again to change
+        </div>
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginBottom: 16 }}>
+        {[['Grid', `${levelData.gridSize}×${levelData.gridSize}`, '#06B6D4'], ['Time', `${levelData.timeLimit}s`, '#F59E0B']].map(([l,v,c]) => (
+          <div key={l} style={{ background: '#0F1629', border: `1px solid ${c}33`, borderRadius: 10, padding: '10px', textAlign: 'center' }}>
+            <div style={{ fontWeight: 900, fontSize: 18, color: c }}>{v}</div>
+            <div style={{ fontSize: 10, color: '#475569' }}>{l}</div>
+          </div>
+        ))}
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #0369A1)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
 }
 
 function isComplete(puzzle, solution) {
@@ -69,6 +139,7 @@ const COLORS_BY_VAL = ['#7C3AED','#0891B2','#059669','#F59E0B','#EC4899','#EF444
 export default function LogicGrid({ game, levelData, studentId, onFinish }) {
   const { gridSize, clueRatio, timeLimit } = levelData
 
+  const [screen, setScreen]     = useState('guide')
   const [phase, setPhase]       = useState('ready')
   const [puzzle, setPuzzle]     = useState(null)
   const [solution, setSolution] = useState(null)
@@ -133,6 +204,8 @@ export default function LogicGrid({ game, levelData, studentId, onFinish }) {
 
   const timerPct = timeLimit ? (timeLeft / timeLimit) * 100 : 100
   const timerColor = timerPct > 50 ? '#4ADE80' : timerPct > 20 ? '#F59E0B' : '#EF4444'
+
+  if (screen === 'guide') return <HowToPlayGrid game={game} onStart={() => setScreen('playing')} levelData={levelData} />
 
   return (
     <div className="relative">
