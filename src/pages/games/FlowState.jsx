@@ -114,8 +114,43 @@ function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
   )
 }
 
+
+function HowToPlayGuide__FlowState({ game, onStart }) {
+  return (
+    <div style={{ padding: '4px 0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 16 }}>
+        <div style={{ fontSize: 48, marginBottom: 8 }}>🌊</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: '#94A3B8', fontSize: 13 }}>Flow State</div>
+      </div>
+      {[
+        ['🎨', 'Connect the dots', `Each colour has two dots. Draw a path connecting each matching pair.`],
+        ['📐', 'Fill every cell', `Your paths must fill the ENTIRE grid — no empty cells allowed!`],
+        ['🚫', "Don't cross", `Paths cannot cross each other. Plan your routes carefully.`],
+        ['✅', 'Auto-checks', `The puzzle solves automatically when all cells are filled correctly.`],
+      ].map(([icon, title, desc]) => (
+        <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
+          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div>
+            <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
+            <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
+          </div>
+        </div>
+      ))}
+      <div style={{ background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
+        <div style={{ color: '#6EE7B7', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
+        <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }} dangerouslySetInnerHTML={{ __html: `• Connect colours near edges first — they have fewer route options<br/>• Leave flexible colours (with many possible paths) for last<br/>• Drag from either dot to draw the path` }} />
+      </div>
+      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, game.color, #059669)` }}>
+        Start Game →
+      </button>
+    </div>
+  )
+}
+
 export default function FlowState({ game, levelData, studentId, onFinish }) {
   const { gridSize = 4, puzzleSet = 0 } = levelData
+  const [screen, setScreen] = useState('guide')
   const sz = Math.min(gridSize, 6)
   const puzzlePool = PUZZLES[sz] || PUZZLES[4]
   const puzzleData = puzzlePool[puzzleSet % puzzlePool.length]
@@ -259,6 +294,8 @@ export default function FlowState({ game, levelData, studentId, onFinish }) {
 
   const cellSz = Math.min(56, Math.floor(300 / sz))
   const filledCount = new Set(Object.values(paths).flat().map(([r,c])=>cellKey(r,c))).size
+
+  if (screen === 'guide') return <HowToPlayGuide__FlowState game={game} onStart={() => setScreen('playing')} />
 
   return (
     <div style={{ position:'relative', userSelect:'none' }}>
