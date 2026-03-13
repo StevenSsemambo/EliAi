@@ -5,6 +5,7 @@ import { progressDB } from '../db/progressDB.js'
 import { analyseStudent } from '../ai/brain.js'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 import Navbar from '../components/Navbar.jsx'
+import { ProgressSkeleton } from '../components/Skeletons.jsx'
 
 const SUBJECTS = ['mathematics', 'physics', 'biology', 'chemistry']
 const COLORS = { mathematics: '#0D9488', physics: '#0E7490', biology: '#15803D', chemistry: '#7C3AED' }
@@ -16,6 +17,7 @@ export default function Progress() {
   const [stats, setStats] = useState([])
   const [allProgress, setAllProgress] = useState([])
   const [analysis, setAnalysis] = useState(null)
+  const [dataReady, setDataReady] = useState(false)
 
   useEffect(() => {
     if (!student) return
@@ -31,6 +33,7 @@ export default function Progress() {
     })
     // Load brain.js analysis for rich AI insights
     analyseStudent(student.id).then(setAnalysis).catch(() => {})
+    progressDB.getAllProgress(student.id).then(() => setDataReady(true)).catch(() => setDataReady(true))
   }, [student])
 
   const totalCompleted = allProgress.filter(p => p.status === 'completed').length
@@ -49,6 +52,8 @@ export default function Progress() {
 
   // Dominant mistake
   const topMistake = analysis?.dominantMistakes?.[0]
+
+  if (!student || !dataReady) return <ProgressSkeleton />
 
   return (
     <div className="min-h-screen pb-24" style={{background:"#0C0F1A"}}>
