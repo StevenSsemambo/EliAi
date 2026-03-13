@@ -134,6 +134,22 @@ export default function Results(){
               🧠 Ask AI to explain what I got wrong
             </button>
           )}
+
+          {/* ── Weak-topic deep-link: only show when failed ── */}
+          {!passed && (
+            <div className="rounded-2xl p-4" style={{background:'rgba(239,68,68,0.06)',border:'1px solid rgba(239,68,68,0.2)'}}>
+              <p className="text-xs font-black mb-2" style={{color:'#F87171'}}>📖 Review the lesson first</p>
+              <p className="text-xs mb-3" style={{color:'#64748B'}}>
+                Re-reading <span style={{color:'#fff',fontWeight:700}}>"{lesson?.title}"</span> before retrying will help you score higher.
+              </p>
+              <button onClick={()=>navigate(`/lesson/${lesson.id}`,{state:{lesson,subject,topicId}})}
+                className="w-full py-2.5 rounded-xl font-bold text-sm transition-all active:scale-95"
+                style={{background:'rgba(239,68,68,0.15)',color:'#F87171',border:'1px solid rgba(239,68,68,0.3)'}}>
+                📚 Go back to "{lesson?.title}"
+              </button>
+            </div>
+          )}
+
           <button onClick={()=>navigate(`/quiz/${lesson.id}`,{state:{lesson,subject,topicId}})}
             className="w-full py-3 rounded-2xl font-bold transition-all active:scale-95"
             style={{background:'#1A2035',border:'1px solid #252D45',color:'#14B8A6'}}>
