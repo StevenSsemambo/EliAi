@@ -6,6 +6,7 @@ import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
 import { SoundEngine } from '../utils/soundEngine.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
+import { LessonSkeleton } from '../components/Skeletons.jsx'
 
 // Curriculum file map — used to look up lessons when navigating directly by URL
 const ALL_SUBJECT_FILES={
@@ -150,14 +151,7 @@ export default function Lesson(){
     }
   }
 
-  if(lookingUp)return(
-    <div className="min-h-screen flex items-center justify-center" style={{background:'#0C0F1A'}}>
-      <div className="text-center">
-        <div className="w-12 h-12 rounded-full border-4 animate-spin mx-auto mb-4" style={{borderColor:'#14B8A6',borderTopColor:'transparent'}}/>
-        <p className="text-slate-500 text-sm">Loading lesson…</p>
-      </div>
-    </div>
-  )
+  if(lookingUp)return <LessonSkeleton/>
 
   if(!lesson)return(
     <div className="min-h-screen flex items-center justify-center" style={{background:'#0C0F1A'}}>
