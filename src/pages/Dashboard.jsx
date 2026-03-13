@@ -5,20 +5,20 @@ import { useUser } from '../context/UserContext.jsx'
 import { progressDB, goalsDB, achievementsDB } from '../db/progressDB.js'
 import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
 import { SoundEngine } from '../utils/soundEngine.js'
+import { getDueForReview } from '../ai/learning.js'
 import XPOdometer from '../components/XPOdometer.jsx'
 import ParticleBurst from '../components/ParticleBurst.jsx'
 import Navbar from '../components/Navbar.jsx'
 import SmartTutorWidget from '../components/SmartTutorWidget.jsx'
+import { DashboardSkeleton } from '../components/Skeletons.jsx'
 
 const AVATARS=['🦁','🐯','🦊','🐺','🦅','🐘','🦒','🦓','🐬','🦋']
-
 const SUBJECTS=[
   {id:'mathematics',label:'Mathematics',icon:'📐',grad:'linear-gradient(135deg,#0D9488,#0F766E)',glow:'glow-teal'},
   {id:'physics',    label:'Physics',    icon:'⚡',grad:'linear-gradient(135deg,#06B6D4,#0369A1)',glow:'glow-cyan'},
   {id:'biology',    label:'Biology',    icon:'🧬',grad:'linear-gradient(135deg,#16A34A,#15803D)',glow:'glow-green'},
   {id:'chemistry',  label:'Chemistry',  icon:'🧪',grad:'linear-gradient(135deg,#7C3AED,#6D28D9)',glow:'glow-violet'},
 ]
-
 const ALL_SUBJECT_FILES={
   mathematics:{s1:['algebra','bearings_scale_drawing','commercial_arithmetic','geometry','linear_equations','mensuration','number_theory','numbers','ratio_indices','sets','statistics_intro'],s2:['coordinate_geometry','logarithms','matrices_intro','quadratic','simultaneous','statistics','trigonometry','vectors_2d','vectors_intro'],s3:['coordinate_sequences','differentiation','earth_geometry','functions','integration','linear_programming','matrices_probability'],s4:['calculus','financial_maths','inequalities','loci_construction','permcomb','transformation_geometry','trigonometry_advanced','vectors'],s5:['complex_numbers','differential_equations','further_calculus','mechanics','numerical_methods','probability_advanced'],s6:['applied_mathematics','further_pure','number_theory','pure_mathematics','statistics_probability']},
   physics:{s1:['density_flotation','energy','forces','light','measurement','properties_matter','simple_machines'],s2:['current_electricity','electronics','heat_transfer','magnetism_heat','sound','waves_electricity'],s3:['electromagnetic','kinematics','motion_kinematics','pressure_fluids','radioactivity'],s4:['ac_circuits','circular_gravitation','electricity_detail','electronics','optics_full'],s5:['mechanics_advanced','nuclear_physics','optics_full','semiconductor_physics','thermal_physics','waves_optics'],s6:['astrophysics','modern_physics','particle_physics','quantum_mechanics','relativity']},
@@ -57,6 +57,115 @@ function XPBar({xp}){
   )
 }
 
+function StreakHero({streak}){
+  const s=streak||0
+  const isHot=s>=3, isFire=s>=7
+  const msg=isFire?"You're on fire! Keep it up 🔥":isHot?'Great streak! Don\'t break it!':'Study daily to build your streak!'
+  const color=isFire?'#EF4444':isHot?'#F59E0B':'#0D9488'
+  const bg=isFire?'rgba(239,68,68,0.08)':isHot?'rgba(245,158,11,0.08)':'rgba(13,148,136,0.08)'
+  const border=isFire?'rgba(239,68,68,0.25)':isHot?'rgba(245,158,11,0.25)':'rgba(13,148,136,0.25)'
+  return(
+    <div className="rounded-2xl p-4 flex items-center gap-4" style={{background:bg,border:`1px solid ${border}`}}>
+      <div className="flex flex-col items-center flex-shrink-0">
+        <span className={`text-4xl leading-none${isFire?' streak-flame':''}`}>🔥</span>
+        <span className="text-2xl font-extrabold mt-1 font-display" style={{color}}>{s}</span>
+        <span className="text-xs text-slate-500">{s===1?'day':'days'}</span>
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="text-white font-extrabold text-sm mb-0.5">
+          {s===0?'Start your streak!':s===1?'Day 1 — great start!':s+'-day streak!'}
+        </div>
+        <div className="text-xs text-slate-400 leading-relaxed">{msg}</div>
+        {s>=7&&(
+          <div className="mt-2 flex gap-1 flex-wrap">
+            {Array.from({length:Math.min(s,10)}).map((_,i)=>(
+              <div key={i} className="w-4 h-4 rounded-full flex items-center justify-center"
+                style={{background:color,fontSize:9,color:'#fff'}}>✓</div>
+            ))}
+            {s>10&&<span className="text-xs text-slate-500 self-center ml-1">+{s-10}</span>}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function ReviewBanner({studentId}){
+  const [dueItems,setDueItems]=useState(null)
+  useEffect(()=>{
+    if(!studentId)return
+    getDueForReview(studentId,8).then(setDueItems).catch(()=>setDueItems([]))
+  },[studentId])
+  if(dueItems===null)return(
+    <div className="rounded-2xl p-4 h-16 animate-pulse" style={{background:'rgba(255,255,255,0.03)',border:'1px solid rgba(255,255,255,0.06)'}}/>
+  )
+  if(!dueItems||dueItems.length===0)return null
+  const critical=dueItems.filter(d=>d.urgency==='critical').length
+  const hasCritical=critical>0
+  const color=hasCritical?'#EF4444':'#F59E0B'
+  const bg=hasCritical?'rgba(239,68,68,0.09)':'rgba(245,158,11,0.09)'
+  const border=hasCritical?'rgba(239,68,68,0.28)':'rgba(245,158,11,0.28)'
+  return(
+    <Link to="/forgetting-curve" onClick={()=>SoundEngine.tap()}
+      className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block"
+      style={{background:bg,border:`1px solid ${border}`}}>
+      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+        style={{background:`${color}22`}}>🧠</div>
+      <div className="flex-1 min-w-0">
+        <div className="font-bold text-sm" style={{color}}>
+          {dueItems.length} lesson{dueItems.length>1?'s':''} due for review
+        </div>
+        <div className="text-xs text-slate-400 mt-0.5">
+          {hasCritical?`${critical} critical — you're forgetting these fast!`:'Spaced repetition keeps knowledge fresh'}
+        </div>
+      </div>
+      <div className="flex flex-col items-end gap-1 flex-shrink-0">
+        {hasCritical&&<span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{background:'rgba(239,68,68,0.2)',color:'#EF4444'}}>Urgent</span>}
+        <span className="text-slate-500 text-lg">›</span>
+      </div>
+    </Link>
+  )
+}
+
+function StudyInsightsCard({student}){
+  const [style,setStyle]=useState(null)
+  const [loaded,setLoaded]=useState(false)
+  useEffect(()=>{
+    if(!student)return
+    import('../ai/learning.js').then(({getSavedLearningStyle})=>{
+      getSavedLearningStyle(student.id).then(s=>{setStyle(s);setLoaded(true)}).catch(()=>setLoaded(true))
+    })
+  },[student])
+  if(!loaded)return null
+  const ICONS={visual:'👁️',analytical:'🔢',memory:'🧠',applied:'🔬',balanced:'⚖️'}
+  const COLORS={visual:'#06B6D4',analytical:'#7C3AED',memory:'#F59E0B',applied:'#16A34A',balanced:'#0D9488'}
+  const DESCS={
+    visual:'You learn best from diagrams and visual examples',
+    analytical:'You love breaking down problems step by step',
+    memory:'You excel at pattern recognition and recall',
+    applied:'You learn best by doing and experimenting',
+    balanced:'You adapt your style to the material',
+  }
+  const color=style?COLORS[style]||'#0D9488':'#0D9488'
+  const icon=style?ICONS[style]||'🧠':'🧠'
+  const desc=style?DESCS[style]||'Discover how you learn best':'Discover your personal learning style'
+  return(
+    <Link to="/study-insights" onClick={()=>SoundEngine.tap()}
+      className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block"
+      style={{background:`${color}11`,border:`1px solid ${color}33`}}>
+      <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+        style={{background:`${color}22`}}>{icon}</div>
+      <div className="flex-1 min-w-0">
+        <div className="font-bold text-sm text-white">
+          {style?`${style.charAt(0).toUpperCase()+style.slice(1)} learner`:'Your learning profile'}
+        </div>
+        <div className="text-xs text-slate-400 mt-0.5">{desc}</div>
+      </div>
+      <span className="text-slate-500 text-lg flex-shrink-0">›</span>
+    </Link>
+  )
+}
+
 function GoalWidget({student}){
   const [goal,setGoal]=useState(null)
   const [week,setWeek]=useState([])
@@ -91,9 +200,7 @@ function GoalWidget({student}){
           <div className="flex items-center gap-2">
             {[1,2,3,4,5].map(n=>(
               <button key={n} onClick={()=>setDraft(n)} className="w-9 h-9 rounded-xl text-sm font-extrabold transition-all active:scale-90"
-                style={{background:draft===n?'#F59E0B':'#1A2035',color:draft===n?'#0C0F1A':'#94A3B8'}}>
-                {n}
-              </button>
+                style={{background:draft===n?'#F59E0B':'#1A2035',color:draft===n?'#0C0F1A':'#94A3B8'}}>{n}</button>
             ))}
             <button onClick={save} className="ml-auto px-4 py-2 rounded-xl text-sm font-bold text-black" style={{background:'#F59E0B'}}>Save</button>
           </div>
@@ -135,32 +242,35 @@ export default function Dashboard(){
   const navigate=useNavigate()
   const {theme}=useTheme()
   const {clearSubject}=useSubjectTheme()
-  const [stats,setStats]=useState({completed:0,avgScore:0})
-  const [cont,setCont]=useState(null)
-  const [weak,setWeak]=useState([])
+  const [stats,setStats]=useState(null)
+  const [cont,setCont]=useState(undefined)
+  const [weak,setWeak]=useState(null)
   const [badgeCount,setBadgeCount]=useState(0)
   const [burst,setBurst]=useState(false)
   const [badgeOverlay,setBadgeOverlay]=useState(null)
+  const [dataReady,setDataReady]=useState(false)
   const prevXP=useRef(student?.total_xp||0)
 
   useEffect(()=>{clearSubject()},[] )
 
   useEffect(()=>{
     if(!student)return
-    progressDB.getStats(student.id).then(setStats)
-    progressDB.getAllProgress(student.id).then(async prog=>{
+    Promise.all([
+      progressDB.getStats(student.id),
+      progressDB.getAllProgress(student.id),
+    ]).then(async([s,prog])=>{
+      setStats(s)
       const fresh=await achievementsDB.checkAndAward(student.id,prog,student)
-      if(fresh.length>0){
-        setBadgeOverlay(fresh[0]);SoundEngine.badgeUnlocked()
-        setBurst(true);setTimeout(()=>setBurst(false),1200)
-      }
+      if(fresh.length>0){setBadgeOverlay(fresh[0]);SoundEngine.badgeUnlocked();setBurst(true);setTimeout(()=>setBurst(false),1200)}
       const all=await achievementsDB.getEarned(student.id)
       setBadgeCount(all.filter(b=>b.earned).length)
       const sorted=[...prog].sort((a,b)=>new Date(b.completed_at||0)-new Date(a.completed_at||0))
       const tgt=sorted.find(p=>p.status==='in_progress')||sorted.find(p=>p.status==='completed')
-      if(tgt){getLessonById(tgt.lesson_id,student.class_level).then(d=>{if(d)setCont({...d,status:tgt.status})})}
+      if(tgt){getLessonById(tgt.lesson_id,student.class_level).then(d=>setCont(d?{...d,status:tgt.status}:null))}
+      else setCont(null)
       const wk=prog.filter(p=>p.status==='completed'&&p.best_score<70).sort((a,b)=>a.best_score-b.best_score).slice(0,3)
-      Promise.all(wk.map(async p=>{const d=await getLessonById(p.lesson_id,student.class_level);return d?{...d,score:p.best_score,lessonId:p.lesson_id}:null})).then(r=>setWeak(r.filter(Boolean)))
+      Promise.all(wk.map(async p=>{const d=await getLessonById(p.lesson_id,student.class_level);return d?{...d,score:p.best_score,lessonId:p.lesson_id}:null}))
+        .then(r=>{setWeak(r.filter(Boolean));setDataReady(true)})
     })
   },[student])
 
@@ -168,13 +278,11 @@ export default function Dashboard(){
     if(student&&student.total_xp>prevXP.current){SoundEngine.xpEarned();prevXP.current=student.total_xp}
   },[student?.total_xp])
 
-  if(!student)return null
+  if(!student||!dataReady)return <DashboardSkeleton/>
 
   return(
     <div className="min-h-screen pb-24" style={{background:theme.bg}}>
       <ParticleBurst active={burst}/>
-
-      {/* Badge overlay */}
       {badgeOverlay&&(
         <div className="fixed inset-0 z-[9000] flex items-center justify-center" style={{background:'rgba(12,15,26,0.92)',backdropFilter:'blur(12px)'}} onClick={()=>setBadgeOverlay(null)}>
           <div className="text-center badge-reveal">
@@ -197,10 +305,7 @@ export default function Dashboard(){
             <div className="flex items-center gap-2 mt-1.5">
               <span className="text-sm font-bold" style={{color:'#F59E0B'}}>{student.class_level}</span>
               <span className="text-slate-700">·</span>
-              <span className="text-sm">
-                <span className="streak-flame">🔥</span>
-                <span className="text-slate-300 font-semibold ml-1">{student.streak_days||1} day streak</span>
-              </span>
+              <span className="text-xs text-slate-500">{new Date().toLocaleDateString('en-UG',{weekday:'long',day:'numeric',month:'short'})}</span>
             </div>
           </div>
           <Link to="/achievements" onClick={()=>SoundEngine.tap()}
@@ -214,9 +319,15 @@ export default function Dashboard(){
 
       <div className="px-5 space-y-4 mt-3">
 
-        {/* ── 1. STATS STRIP ── */}
+        {/* 1. STREAK HERO */}
+        <div className="page-enter"><StreakHero streak={student.streak_days||0}/></div>
+
+        {/* 2. REVIEW BANNER */}
+        <ReviewBanner studentId={student.id}/>
+
+        {/* 3. STATS STRIP */}
         <div className="grid grid-cols-3 gap-3 page-enter">
-          {[{label:'Lessons',val:stats.completed,icon:'✅'},{label:'Avg Score',val:`${stats.avgScore}%`,icon:'🎯'},{label:'Total XP',val:<XPOdometer value={student.total_xp||0}/>,icon:'⭐'}].map(s=>(
+          {[{label:'Lessons',val:stats?.completed||0,icon:'✅'},{label:'Avg Score',val:`${stats?.avgScore||0}%`,icon:'🎯'},{label:'Total XP',val:<XPOdometer value={student.total_xp||0}/>,icon:'⭐'}].map(s=>(
             <div key={s.label} className="glass rounded-2xl p-3 text-center">
               <div className="text-xl mb-1">{s.icon}</div>
               <div className="text-base font-display font-extrabold text-white">{s.val}</div>
@@ -225,7 +336,7 @@ export default function Dashboard(){
           ))}
         </div>
 
-        {/* ── 2. SUBJECTS — primary CTA, moved up ── */}
+        {/* 4. SUBJECTS */}
         <div className="page-delay-1">
           <h2 className="text-white font-display font-extrabold text-lg mb-3">📚 Your Subjects</h2>
           <div className="grid grid-cols-2 gap-3">
@@ -242,7 +353,7 @@ export default function Dashboard(){
           </div>
         </div>
 
-        {/* ── 3. QUICK ACTIONS ── */}
+        {/* 5. QUICK ACTIONS */}
         <div className="page-delay-1">
           <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">⚡ Quick Actions</h2>
           <div className="grid grid-cols-2 gap-3">
@@ -269,19 +380,23 @@ export default function Dashboard(){
           </div>
         </div>
 
-        {/* ── 4. DAILY GOAL ── */}
+        {/* 6. DAILY GOAL */}
         <div className="page-delay-2"><GoalWidget student={student}/></div>
 
-        {/* ── 5. CONTINUE LEARNING ── */}
+        {/* 7. STUDY INSIGHTS */}
+        <div className="page-delay-2">
+          <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">🧠 Your Profile</h2>
+          <StudyInsightsCard student={student}/>
+        </div>
+
+        {/* 8. CONTINUE LEARNING */}
         {cont&&(
           <div className="page-delay-2">
             <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">▶ Continue Learning</h2>
             <button onClick={()=>{SoundEngine.tap();navigate(`/lesson/${cont.lesson.id}`,{state:{lesson:cont.lesson,subject:cont.subject,topicId:cont.topicId}})}}
               className="w-full glass rounded-2xl p-4 text-left active:scale-95 transition-all" style={{border:'1px solid rgba(13,148,136,0.2)'}}>
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style={{background:'rgba(13,148,136,0.15)'}}>
-                  {cont.status==='in_progress'?'🔄':'🔁'}
-                </div>
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style={{background:'rgba(13,148,136,0.15)'}}>{cont.status==='in_progress'?'🔄':'🔁'}</div>
                 <div className="flex-1 min-w-0">
                   <div className="text-white font-bold text-sm truncate">{cont.lesson.title}</div>
                   <div className="text-xs mt-0.5 capitalize" style={{color:'#14B8A6'}}>{cont.subject} · {cont.status==='in_progress'?'In progress':'Review'}</div>
@@ -292,8 +407,8 @@ export default function Dashboard(){
           </div>
         )}
 
-        {/* ── 6. NEEDS REVIEW ── */}
-        {weak.length>0&&(
+        {/* 9. NEEDS REVIEW */}
+        {weak&&weak.length>0&&(
           <div className="page-delay-2">
             <h2 className="text-slate-400 font-bold text-xs uppercase tracking-wider mb-2">⚠ Needs Review</h2>
             <div className="space-y-2">
@@ -311,12 +426,13 @@ export default function Dashboard(){
           </div>
         )}
 
-        {/* ── 7. LEADERBOARD ── */}
+        {/* 10. LEADERBOARD */}
         <Link to="/leaderboard" onClick={()=>SoundEngine.tap()} className="glass rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block page-delay-3">
           <span className="text-2xl">🏆</span>
           <div className="flex-1"><div className="text-white font-bold text-sm">Household Leaderboard</div><div className="text-slate-400 text-xs">Who's leading on this device?</div></div>
           <span className="text-slate-500">›</span>
         </Link>
+
       </div>
       <Navbar/>
     </div>
