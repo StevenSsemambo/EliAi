@@ -93,38 +93,189 @@ export default function ProgressReport() {
     setTimeout(() => { window.print(); setPrinting(false) }, 300)
   }
 
+  function buildShareText() {
+    if (!stats || !student) return ''
+    const lines = [
+      `📚 *EQLA LEARN — PROGRESS REPORT*`,
+      `👤 *Student:* ${student.name} | Class: ${student.class_level}`,
+      `📅 *Generated:* ${stats.generatedAt}`,
+      ``,
+      `📊 *OVERALL PERFORMANCE*`,
+      `✅ Lessons Completed: ${stats.completed}`,
+      `🎯 Average Quiz Score: ${stats.avgScore}%`,
+      `🔥 Study Streak: ${stats.streak} days`,
+      `⭐ Total XP Earned: ${stats.totalXp.toLocaleString()}`,
+      stats.exams > 0 ? `🎓 Exams Taken: ${stats.exams} (avg ${stats.avgExamScore}%)` : null,
+      ``,
+      `📚 *BY SUBJECT*`,
+      ...SUBJECTS.map(s => {
+        const b = stats.bySubject[s]
+        const g = gradeLabel(b.avgScore)
+        return `${SUBJECT_ICONS[s]} ${s.charAt(0).toUpperCase()+s.slice(1)}: ${b.avgScore}% (${g.label}) — ${b.lessons} lessons`
+      }),
+    ].filter(l => l !== null)
+
+    if (analysis?.allWeakTopics?.length) {
+      const weak = analysis.allWeakTopics.slice(0,3).map(t=>t.topic.replace(/_/g,' ')).join(', ')
+      lines.push(``, `⚠️ *NEEDS REVISION*`, `• ${weak}`)
+    }
+    lines.push(``, `_Powered by Eqla Learn — Built for Ugandan Students 🇺🇬_`)
+    return lines.join('\n')
+  }
+
+  async function handleWhatsApp() {
+    if (!stats || !student) return
+    SoundEngine.tap()
+    const text = buildShareText()
+    const encoded = encodeURIComponent(text)
+    // Open WhatsApp with pre-filled message
+    const url = `https://wa.me/?text=${encoded}`
+    window.open(url, '_blank')
+  }
+
   async function handleShare() {
     if (!stats || !student) return
     SoundEngine.tap()
-    const text = [
-      `📚 EQLA LEARN — PROGRESS REPORT`,
-      `Student: ${student.name} | Class: ${student.class_level}`,
-      `Generated: ${stats.generatedAt}`,
-      ``,
-      `OVERALL PERFORMANCE`,
-      `• Lessons Completed: ${stats.completed}`,
-      `• Average Quiz Score: ${stats.avgScore}%`,
-      `• Study Streak: ${stats.streak} days`,
-      `• Total XP Earned: ${stats.totalXp}`,
-      `• Exams Taken: ${stats.exams}${stats.exams > 0 ? ` (avg ${stats.avgExamScore}%)` : ''}`,
-      ``,
-      `BY SUBJECT`,
-      ...SUBJECTS.map(s => {
-        const b = stats.bySubject[s]
-        return `• ${s.charAt(0).toUpperCase()+s.slice(1)}: ${b.lessons} lessons | Avg: ${b.avgScore}%`
-      }),
-      ``,
-      `Powered by Eqla Learn | Built by SEMATECH DEVELOPERS 🇺🇬`,
-    ]
-    if (analysis?.allWeakTopics?.length) {
-      const weak = analysis.allWeakTopics.slice(0,3).map(t=>t.topic.replace(/_/g,' ')).join(', ')
-      text.splice(text.length - 1, 0, ``, `NEEDS REVISION`, `• ${weak}`)
-    }
-    const textStr = text.join('\n')
+    const text = buildShareText()
     try {
-      if (navigator.share) await navigator.share({ title: 'Eqla Progress Report', text: textStr })
-      else { await navigator.clipboard?.writeText(textStr); alert('Report copied to clipboard!') }
+      if (navigator.share) await navigator.share({ title: 'Eqla Progress Report', text })
+      else { await navigator.clipboard?.writeText(text); alert('Report copied to clipboard! Paste it in WhatsApp.') }
     } catch(e) {}
+  }
+
+  function handleExportPDF() {
+    if (!stats || !student) return
+    SoundEngine.tap()
+    setPrinting(true)
+
+    const grade = gradeLabel(stats.avgScore)
+    const subjectRows = SUBJECTS.map(subj => {
+      const b = stats.bySubject[subj]
+      const g = gradeLabel(b.avgScore)
+      const barW = Math.round(b.avgScore * 2.2)
+      return `
+        <tr>
+          <td style="padding:8px 12px;font-size:13px;">${SUBJECT_ICONS[subj]} ${subj.charAt(0).toUpperCase()+subj.slice(1)}</td>
+          <td style="padding:8px 12px;font-size:13px;">${b.lessons}</td>
+          <td style="padding:8px 12px;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="flex:1;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden;">
+                <div style="width:${b.avgScore}%;height:100%;background:${SUBJECT_COLORS[subj]};border-radius:4px;"></div>
+              </div>
+              <span style="font-size:12px;font-weight:700;color:${g.color};min-width:40px;">${b.avgScore}%</span>
+            </div>
+          </td>
+          <td style="padding:8px 12px;"><span style="font-size:11px;padding:2px 8px;border-radius:20px;background:${g.color}22;color:${g.color};font-weight:700;">${g.label}</span></td>
+        </tr>`
+    }).join('')
+
+    const weakSection = analysis?.allWeakTopics?.length ? `
+      <div style="margin-bottom:20px;padding:16px;background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;">
+        <h3 style="margin:0 0 10px;font-size:14px;color:#c2410c;">⚠️ Topics Needing Revision</h3>
+        ${analysis.allWeakTopics.slice(0,5).map(t => `
+          <div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #fed7aa;font-size:12px;">
+            <span style="text-transform:capitalize;color:#374151;">${t.topic.replace(/_/g,' ')} <span style="color:#9ca3af;">(${t.subject})</span></span>
+            <span style="font-weight:700;color:#ef4444;">${t.score}%</span>
+          </div>`).join('')}
+      </div>` : ''
+
+    const html = `<!DOCTYPE html>
+<html><head><meta charset="UTF-8"/>
+<title>Eqla Learn — Progress Report — ${student.name}</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #1f2937; background: #fff; }
+  @media print {
+    body { font-size: 12px; }
+    .no-print { display: none !important; }
+    @page { margin: 15mm; size: A4; }
+  }
+  @media screen { body { max-width: 800px; margin: 0 auto; padding: 24px; background: #f9fafb; } }
+  table { width: 100%; border-collapse: collapse; }
+  th { background: #f3f4f6; text-align: left; padding: 10px 12px; font-size: 12px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { border-bottom: 1px solid #f3f4f6; }
+  tr:last-child td { border-bottom: none; }
+</style></head><body>
+
+<!-- Header -->
+<div style="background:linear-gradient(135deg,#0D9488,#0369A1);padding:28px 32px;border-radius:12px;margin-bottom:24px;color:white;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;opacity:0.8;margin-bottom:4px;">SEMATECH DEVELOPERS · EQLA LEARN</div>
+      <h1 style="font-size:24px;font-weight:800;margin-bottom:4px;">Progress Report</h1>
+      <p style="opacity:0.85;font-size:14px;">${student.name} · ${student.class_level} · Uganda Certificate of Education</p>
+    </div>
+    <div style="text-align:right;opacity:0.75;font-size:12px;">${stats.generatedAt}</div>
+  </div>
+</div>
+
+<!-- Grade banner -->
+<div style="background:${grade.color}18;border:2px solid ${grade.color}55;border-radius:10px;padding:16px 24px;margin-bottom:24px;display:flex;align-items:center;gap:20px;">
+  <div style="font-size:42px;font-weight:900;color:${grade.color};">${stats.avgScore}%</div>
+  <div>
+    <div style="font-size:20px;font-weight:800;color:${grade.color};">${grade.label}</div>
+    <div style="font-size:13px;color:#6b7280;">Overall average across all completed lessons</div>
+  </div>
+</div>
+
+<!-- Stats grid -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px;">
+  ${[
+    {icon:'✅', label:'Lessons Completed', value: stats.completed},
+    {icon:'🔥', label:'Study Streak', value: `${stats.streak} days`},
+    {icon:'⭐', label:'Total XP Earned', value: stats.totalXp.toLocaleString()},
+    {icon:'📅', label:'Lessons This Week', value: stats.weeklyLessons},
+    {icon:'🎓', label:'Exams Taken', value: stats.exams},
+    {icon:'🎮', label:'Game Levels', value: stats.gameLevels},
+  ].map(s => `
+    <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:12px 16px;">
+      <div style="font-size:12px;color:#9ca3af;margin-bottom:4px;">${s.icon} ${s.label}</div>
+      <div style="font-size:22px;font-weight:800;color:#1f2937;">${s.value}</div>
+    </div>`).join('')}
+</div>
+
+<!-- Subject table -->
+<div style="background:#fff;border:1px solid #e5e7eb;border-radius:10px;margin-bottom:20px;overflow:hidden;">
+  <div style="padding:14px 16px;border-bottom:1px solid #e5e7eb;">
+    <h2 style="font-size:15px;font-weight:700;">📚 Subject Performance</h2>
+  </div>
+  <table>
+    <thead><tr><th>Subject</th><th>Lessons</th><th>Score</th><th>Grade</th></tr></thead>
+    <tbody>${subjectRows}</tbody>
+  </table>
+</div>
+
+${weakSection}
+
+<!-- Parent note -->
+<div style="background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:16px;margin-bottom:20px;">
+  <h3 style="font-size:13px;font-weight:700;color:#b45309;margin-bottom:6px;">📝 Note for Parent / Teacher</h3>
+  <p style="font-size:12px;color:#374151;line-height:1.6;">
+    ${student.name} is using Eqla Learn to study Mathematics, Physics, Biology and Chemistry at ${student.class_level} level. 
+    The app works 100% offline and covers the full Uganda National Curriculum. 
+    Scores above 60% represent a passing grade. Encourage daily 20-minute study sessions for the best results.
+  </p>
+</div>
+
+<!-- Print button -->
+<div class="no-print" style="text-align:center;margin-top:20px;">
+  <button onclick="window.print()" style="background:linear-gradient(135deg,#0D9488,#0369A1);color:white;border:none;padding:12px 32px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;">
+    🖨️ Save as PDF / Print
+  </button>
+</div>
+
+<!-- Footer -->
+<div style="text-align:center;margin-top:28px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:11px;color:#9ca3af;">
+  Generated by Eqla Learn · Empowering Ugandan Students 🇺🇬 · ${stats.generatedAt}
+</div>
+
+</body></html>`
+
+    const win = window.open('', '_blank')
+    if (!win) { alert('Please allow pop-ups to export the PDF.'); setPrinting(false); return }
+    win.document.write(html)
+    win.document.close()
+    setTimeout(() => setPrinting(false), 400)
   }
 
   if (!student) return null
@@ -317,16 +468,25 @@ export default function ProgressReport() {
           </div>
 
           {/* Action buttons */}
-          <div className="flex gap-3 mb-4 no-print">
-            <button onClick={handlePrint}
-              className="flex-1 py-3 rounded-2xl font-bold text-sm text-white transition-all active:scale-95"
-              style={{ background:'linear-gradient(135deg,#7C3AED,#0891B2)' }}>
-              {printing ? '⏳ Preparing...' : '🖨️ Print Report'}
+          <div className="space-y-2 mb-4 no-print">
+            {/* WhatsApp — primary CTA */}
+            <button onClick={handleWhatsApp}
+              className="w-full py-3.5 rounded-2xl font-extrabold text-sm text-white transition-all active:scale-95 flex items-center justify-center gap-2"
+              style={{ background:'linear-gradient(135deg,#25D366,#128C7E)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Send to Parent via WhatsApp
             </button>
+            {/* PDF Export */}
+            <button onClick={handleExportPDF}
+              className="w-full py-3 rounded-2xl font-bold text-sm text-white transition-all active:scale-95"
+              style={{ background:'linear-gradient(135deg,#0D9488,#0369A1)' }}>
+              {printing ? '⏳ Building PDF...' : '📄 Export as PDF'}
+            </button>
+            {/* Native share / copy */}
             <button onClick={handleShare}
-              className="flex-1 py-3 rounded-2xl font-bold text-sm transition-all active:scale-95"
+              className="w-full py-3 rounded-2xl font-bold text-sm transition-all active:scale-95"
               style={{ background: theme.card, color:'#F59E0B', border:`1px solid rgba(245,158,11,0.3)` }}>
-              📤 Share Report
+              📤 Share / Copy Report Text
             </button>
           </div>
 
