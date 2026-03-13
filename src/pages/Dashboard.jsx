@@ -9,6 +9,8 @@ import { getDueForReview } from '../ai/learning.js'
 import XPOdometer from '../components/XPOdometer.jsx'
 import ParticleBurst from '../components/ParticleBurst.jsx'
 import Navbar from '../components/Navbar.jsx'
+import OnboardingTour, { hasSeenTour } from '../components/OnboardingTour.jsx'
+import OnboardingTour, { hasSeenTour } from '../components/OnboardingTour.jsx'
 import SmartTutorWidget from '../components/SmartTutorWidget.jsx'
 import { DashboardSkeleton } from '../components/Skeletons.jsx'
 
@@ -249,6 +251,7 @@ export default function Dashboard(){
   const [burst,setBurst]=useState(false)
   const [badgeOverlay,setBadgeOverlay]=useState(null)
   const [dataReady,setDataReady]=useState(false)
+  const [showTour,setShowTour]=useState(false)
   const prevXP=useRef(student?.total_xp||0)
 
   useEffect(()=>{clearSubject()},[] )
@@ -270,7 +273,12 @@ export default function Dashboard(){
       else setCont(null)
       const wk=prog.filter(p=>p.status==='completed'&&p.best_score<70).sort((a,b)=>a.best_score-b.best_score).slice(0,3)
       Promise.all(wk.map(async p=>{const d=await getLessonById(p.lesson_id,student.class_level);return d?{...d,score:p.best_score,lessonId:p.lesson_id}:null}))
-        .then(r=>{setWeak(r.filter(Boolean));setDataReady(true)})
+        .then(r=>{setWeak(r.filter(Boolean));setDataReady(true)
+          // Show onboarding tour once for new students
+          if(!hasSeenTour()){
+            prog.length < 3 ? setShowTour(true) : null
+          }
+        })
     })
   },[student])
 
@@ -446,6 +454,7 @@ export default function Dashboard(){
         </Link>
 
       </div>
+      {showTour && <OnboardingTour onDone={()=>setShowTour(false)}/>}
       <Navbar/>
     </div>
   )
