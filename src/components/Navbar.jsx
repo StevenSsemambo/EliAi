@@ -15,7 +15,8 @@ export default function Navbar() {
   const { theme } = useTheme()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t"
+    // md:hidden — hidden on desktop, sidebar takes over
+    <nav className="fixed bottom-0 left-0 right-0 z-40 border-t md:hidden"
       style={{ background: theme.navBg, backdropFilter:'blur(20px)', borderColor: theme.border }}>
       <div className="flex items-center justify-around py-2 max-w-lg mx-auto">
         {LINKS.map(l => {
