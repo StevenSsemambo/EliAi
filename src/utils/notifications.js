@@ -148,6 +148,7 @@ export async function scheduleSmartNotifications(studentId, studyHabits) {
   cancelNotification('streak_risk')
   cancelNotification('mission_remind')
   cancelNotification('leaderboard')
+  cancelNotification('forgetting_curve')
 
   // ── 1. Daily study reminder at peak hour ──────────────────────
   const peakHour = studyHabits?.peakHour?.hour ?? 19  // default 7PM
@@ -207,6 +208,41 @@ export async function scheduleSmartNotifications(studentId, studyHabits) {
     monday.getTime(),
     { tag: 'leaderboard' }
   )
+}
+
+// ── Schedule forgetting curve review nudge ────────────────────────
+// Call this separately after checking getDueForReview so we only
+// notify when there are genuinely overdue lessons.
+export async function scheduleReviewNudge(dueItems = []) {
+  if (Notification.permission !== 'granted') return
+  const settings = getNotifSettings()
+  if (!settings.forgettingCurve) return
+  cancelNotification('forgetting_curve')
+  if (!dueItems || dueItems.length === 0) return
+
+  const critical = dueItems.filter(d => d.urgency === 'critical').length
+  const hasCritical = critical > 0
+
+  // Fire at 4PM today, or in 30 minutes if already past 4PM
+  const fireAt = new Date()
+  fireAt.setHours(16, 0, 0, 0)
+  if (fireAt <= new Date()) {
+    // Already past 4PM — nudge in 30 minutes instead
+    fireAt.setTime(Date.now() + 30 * 60 * 1000)
+  }
+
+  const title = hasCritical
+    ? `🧠 ${critical} lesson${critical > 1 ? 's' : ''} fading fast!`
+    : `📖 ${dueItems.length} lesson${dueItems.length > 1 ? 's' : ''} ready for review`
+  const body = hasCritical
+    ? `You're about to forget ${critical} topic${critical > 1 ? 's' : ''}. Open Elimu Learn and do a quick review to lock in your knowledge!`
+    : `Spaced repetition time! Reviewing now takes 5 minutes and keeps knowledge fresh for weeks.`
+
+  scheduleNotification('forgetting_curve', title, body, fireAt.getTime(), {
+    tag: 'forgetting-curve',
+    renotify: true,
+    data: { url: '/forgetting-curve' },
+  })
 }
 
 // ── Record study activity (call after each quiz/lesson) ──────────
