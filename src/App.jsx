@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { UserProvider, useUser } from './context/UserContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { SubjectThemeProvider } from './context/SubjectThemeContext.jsx'
-import { checkPendingNotifications } from './utils/notifications.js'
+import { checkPendingNotifications, scheduleReviewNudge } from './utils/notifications.js'
+import { getDueForReview } from './ai/learning.js'
 import SplashScreen          from './components/SplashScreen.jsx'
 import OfflineIndicator      from './components/OfflineIndicator.jsx'
 import ElimuChatbot          from './components/ElimuChatbot.jsx'
@@ -33,6 +34,8 @@ import ForgettingCurve       from './pages/ForgettingCurve.jsx'
 import StudyInsights         from './pages/StudyInsights.jsx'
 import Flashcards            from './pages/Flashcards.jsx'
 import NotificationSettings  from './pages/NotificationSettings.jsx'
+import QuestionGenerator    from './pages/QuestionGenerator.jsx'
+import StudyPack            from './pages/StudyPack.jsx'
 
 function AppRoutes() {
   const { student, loading } = useUser()
@@ -81,6 +84,8 @@ function AppRoutes() {
         <Route path="/study-insights"                  element={guard(<StudyInsights />)} />
         <Route path="/notifications"                   element={guard(<NotificationSettings />)} />
         <Route path="/report"                          element={guard(<ProgressReport />)} />
+        <Route path="/question-generator"              element={guard(<QuestionGenerator />)} />
+        <Route path="/study-pack"                       element={guard(<StudyPack />)} />
         <Route path="*"                                element={<Navigate to="/" replace />} />
       </Routes>
       <ElimuChatbot />
@@ -95,6 +100,13 @@ export default function App() {
   useEffect(() => {
     // Fire any notifications that were scheduled while app was closed
     checkPendingNotifications().catch(() => {})
+    // Schedule forgetting curve nudge based on current due items
+    const studentId = localStorage.getItem('elimu_student_id')
+    if (studentId) {
+      getDueForReview(studentId, 20)
+        .then(due => scheduleReviewNudge(due))
+        .catch(() => {})
+    }
   }, [])
 
   return (
