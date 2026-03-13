@@ -377,6 +377,11 @@ export default function Dashboard(){
               <span className="text-2xl">⏱</span>
               <div><div className="text-white font-bold text-sm">Focus Timer</div><div className="text-slate-400 text-xs">Earn bonus XP</div></div>
             </Link>
+            <Link to="/question-generator" onClick={()=>SoundEngine.tap()} className="rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all col-span-2"
+              style={{background:'linear-gradient(135deg,rgba(245,158,11,0.12),rgba(239,68,68,0.08))',border:'1px solid rgba(245,158,11,0.3)'}}>
+              <span className="text-2xl">🎯</span>
+              <div><div className="text-white font-bold text-sm">Question Generator</div><div className="text-slate-400 text-xs">Practice any topic · instant quiz</div></div>
+            </Link>
           </div>
         </div>
 
@@ -430,6 +435,13 @@ export default function Dashboard(){
         <Link to="/leaderboard" onClick={()=>SoundEngine.tap()} className="glass rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block page-delay-3">
           <span className="text-2xl">🏆</span>
           <div className="flex-1"><div className="text-white font-bold text-sm">Household Leaderboard</div><div className="text-slate-400 text-xs">Who's leading on this device?</div></div>
+          <span className="text-slate-500">›</span>
+        </Link>
+
+        {/* 11. STUDY PACK */}
+        <Link to="/study-pack" onClick={()=>SoundEngine.tap()} className="glass rounded-2xl p-4 flex items-center gap-3 active:scale-95 transition-all block page-delay-3">
+          <span className="text-2xl">📄</span>
+          <div className="flex-1"><div className="text-white font-bold text-sm">Study Pack</div><div className="text-slate-400 text-xs">Export bookmarks &amp; notes as PDF</div></div>
           <span className="text-slate-500">›</span>
         </Link>
 
