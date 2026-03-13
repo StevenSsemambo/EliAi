@@ -157,7 +157,33 @@
 /* ─── FOCUS TIMER RING ─── */
 .timer-ring { transform-origin:50% 50%; transform:rotate(-90deg); transition:stroke-dashoffset 1s linear; }
 
-/* ─── LIGHT MODE ─── */
+/* ─── LIGHT MODE (data-theme="light") ─── */
+[data-theme="light"] body { color: var(--text); }
+[data-theme="light"] body::after { opacity: 0.08; }
+
+/* glass utility — opaque white card in light mode */
+[data-theme="light"] .glass {
+  background: rgba(255,255,255,0.85) !important;
+  border-color: rgba(0,0,0,0.08) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Text that uses hardcoded white needs to flip in light mode */
+[data-theme="light"] .text-white        { color: var(--text) !important; }
+[data-theme="light"] .text-slate-400,
+[data-theme="light"] .text-slate-500    { color: var(--subtext) !important; }
+
+/* Inputs / textareas */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder { color: var(--muted); }
+
+/* Keep legacy class working for anything that still uses it */
 html.light-mode body { background:#F0F2F8; color:#1A2035; }
-html.light-mode body::after { opacity:0.15; }
 html.light-mode .glass { background:rgba(255,255,255,0.75) !important; border-color:rgba(0,0,0,0.06) !important; }
