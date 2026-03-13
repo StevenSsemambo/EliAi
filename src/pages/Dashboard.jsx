@@ -10,7 +10,6 @@ import XPOdometer from '../components/XPOdometer.jsx'
 import ParticleBurst from '../components/ParticleBurst.jsx'
 import Navbar from '../components/Navbar.jsx'
 import OnboardingTour, { hasSeenTour } from '../components/OnboardingTour.jsx'
-import OnboardingTour, { hasSeenTour } from '../components/OnboardingTour.jsx'
 import SmartTutorWidget from '../components/SmartTutorWidget.jsx'
 import { DashboardSkeleton } from '../components/Skeletons.jsx'
 
