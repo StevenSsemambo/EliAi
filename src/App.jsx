@@ -7,6 +7,7 @@ import { checkPendingNotifications } from './utils/notifications.js'
 import SplashScreen          from './components/SplashScreen.jsx'
 import OfflineIndicator      from './components/OfflineIndicator.jsx'
 import ElimuChatbot          from './components/ElimuChatbot.jsx'
+import ErrorBoundary         from './components/ErrorBoundary.jsx'
 import Welcome               from './pages/Welcome.jsx'
 import Dashboard             from './pages/Dashboard.jsx'
 import SubjectHome           from './pages/SubjectHome.jsx'
@@ -46,19 +47,22 @@ function AppRoutes() {
     </div>
   )
 
-  const guard = el => student ? el : <Navigate to="/" replace />
+  const guard = (el, title='Something went wrong', msg='This section ran into a problem. Your progress is safe.') =>
+    student
+      ? <ErrorBoundary fallbackTitle={title} fallbackMessage={msg}>{el}</ErrorBoundary>
+      : <Navigate to="/" replace />
 
   return (
     <>
       <OfflineIndicator />
       <Routes>
         <Route path="/"                                element={student ? <Navigate to="/dashboard" replace /> : <Welcome />} />
-        <Route path="/dashboard"                       element={guard(<Dashboard />)} />
-        <Route path="/subject/:subject"                element={guard(<SubjectHome />)} />
-        <Route path="/subject/:subject/topic/:topicId" element={guard(<TopicList />)} />
-        <Route path="/lesson/:lessonId"                element={guard(<Lesson />)} />
-        <Route path="/quiz/:lessonId"                  element={guard(<Quiz />)} />
-        <Route path="/results/:lessonId"               element={guard(<Results />)} />
+        <Route path="/dashboard"                       element={guard(<Dashboard />, 'Dashboard error', 'The dashboard hit a problem. Your data is safe.')} />
+        <Route path="/subject/:subject"                element={guard(<SubjectHome />, 'Subject unavailable', 'This subject could not load. Please go back.')} />
+        <Route path="/subject/:subject/topic/:topicId" element={guard(<TopicList />, 'Topic unavailable', 'This topic could not load. Please go back.')} />
+        <Route path="/lesson/:lessonId"                element={guard(<Lesson />, 'Lesson unavailable', 'This lesson could not load. The content file may be missing.')} />
+        <Route path="/quiz/:lessonId"                  element={guard(<Quiz />, 'Quiz unavailable', 'This quiz could not load. Please try again.')} />
+        <Route path="/results/:lessonId"               element={guard(<Results />, 'Results unavailable', 'Could not load results. Your score was saved.')} />
         <Route path="/progress"                        element={guard(<Progress />)} />
         <Route path="/settings"                        element={guard(<Settings />)} />
         <Route path="/search"                          element={guard(<Search />)} />
@@ -69,8 +73,8 @@ function AppRoutes() {
         <Route path="/leaderboard"                     element={guard(<Leaderboard />)} />
         <Route path="/exam-center"                     element={guard(<ExamCenter />)} />
         <Route path="/games"                           element={guard(<GameHub />)} />
-        <Route path="/games/:gameId/:levelNum"         element={guard(<GamePlayer />)} />
-        <Route path="/ai-tutor"                        element={guard(<AITutor />)} />
+        <Route path="/games/:gameId/:levelNum"         element={guard(<GamePlayer />, 'Game unavailable', 'This game could not load. Try a different one.')} />
+        <Route path="/ai-tutor"                        element={guard(<AITutor />, 'AI Tutor unavailable', 'The AI Tutor could not load. Try reloading the app.')} />
         <Route path="/ai-setup"                        element={guard(<AISetup />)} />
         <Route path="/flashcards"                      element={guard(<Flashcards />)} />
         <Route path="/forgetting-curve"                element={guard(<ForgettingCurve />)} />
