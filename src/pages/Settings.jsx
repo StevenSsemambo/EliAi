@@ -98,8 +98,10 @@ export default function Settings() {
 
         {/* ── Theme ── */}
         <Section title="🎨 App Theme">
-          <div className="grid grid-cols-2 gap-2">
-            {Object.values(THEMES).map(t => (
+          {/* Dark themes */}
+          <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: theme.muted }}>🌙 Dark</p>
+          <div className="grid grid-cols-2 gap-2 mb-4">
+            {Object.values(THEMES).filter(t => t.dark !== false).map(t => (
               <button key={t.id} onClick={() => { SoundEngine.tap(); setTheme(t.id) }}
                 className="rounded-xl p-3 transition-all active:scale-95 text-left"
                 style={{
@@ -118,6 +120,38 @@ export default function Settings() {
                 <div className="flex gap-1 mt-1.5">
                   {[t.bg, t.surface, t.accent, t.subtext].map((c,i) => (
                     <div key={i} className="w-3 h-3 rounded-full" style={{ background: c }} />
+                  ))}
+                </div>
+              </button>
+            ))}
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex-1 h-px" style={{ background: theme.border }} />
+            <p className="text-xs font-black uppercase tracking-widest" style={{ color: theme.muted }}>☀️ Light</p>
+            <div className="flex-1 h-px" style={{ background: theme.border }} />
+          </div>
+          <div className="grid grid-cols-2 gap-2">
+            {Object.values(THEMES).filter(t => t.dark === false).map(t => (
+              <button key={t.id} onClick={() => { SoundEngine.tap(); setTheme(t.id) }}
+                className="rounded-xl p-3 transition-all active:scale-95 text-left"
+                style={{
+                  background: t.grad,
+                  border: `2px solid ${themeId === t.id ? t.accent : t.border}`,
+                  boxShadow: themeId === t.id ? `0 0 12px ${t.accent}44` : 'none',
+                }}>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-lg">{t.icon}</span>
+                  {themeId === t.id && (
+                    <span className="text-xs font-bold px-1.5 py-0.5 rounded-full"
+                      style={{ background: t.accent + '33', color: t.accent }}>✓</span>
+                  )}
+                </div>
+                <p className="text-xs font-bold" style={{ color: t.text }}>{t.name}</p>
+                <div className="flex gap-1 mt-1.5">
+                  {[t.bg, t.surface, t.accent, t.subtext].map((c,i) => (
+                    <div key={i} className="w-3 h-3 rounded-full border" style={{ background: c, borderColor: t.border }} />
                   ))}
                 </div>
               </button>
