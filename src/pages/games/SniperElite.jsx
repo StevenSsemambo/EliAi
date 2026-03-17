@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from 'react';
 const W = 800;
 const H = 500;
 const SCOPE_R = 130;
-
 const TARGET_TYPES = [
   { type: 'static', icon: '👤', label: 'Guard', points: 100, size: 38, color: '#4b5563' },
   { type: 'running', icon: '🏃', label: 'Runner', points: 150, size: 34, color: '#ef4444', spd: 95 },
@@ -12,18 +11,19 @@ const TARGET_TYPES = [
   { type: 'peek', icon: '🕵️', label: 'Sniper', points: 220, size: 32, color: '#22c55e' },
   { type: 'boss', icon: '🪖', label: 'Boss', points: 350, size: 48, color: '#8b00ff', spd: 28, hp: 3 },
 ];
-
 const RIFLE_STATS = [
   { name: 'M82 Bolt', magazine: 5, reloadTime: 2.8, sway: 7.5, accuracy: 0.98 },
   { name: 'M110 Semi', magazine: 10, reloadTime: 1.1, sway: 11, accuracy: 0.89 },
 ];
 
 // ── Audio (much more realistic) ───────────────────────────────────────
-const _ac = { ref: null as AudioContext | null };
+const _ac = { ref: null };
+
 function ac() {
   if (!_ac.ref) {
     try {
-      _ac.ref = new (window.AudioContext || (window as any).webkitAudioContext)();
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      _ac.ref = new AudioContextClass();
     } catch {}
   }
   if (_ac.ref?.state === 'suspended') _ac.ref.resume();
@@ -32,7 +32,6 @@ function ac() {
 
 function playShot() {
   const a = ac(); if (!a) return;
-  // Main bang
   const o = a.createOscillator(); o.type = 'sawtooth'; o.frequency.value = 180;
   const g = a.createGain(); g.gain.value = 0;
   const f = a.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 800;
@@ -43,7 +42,6 @@ function playShot() {
   g.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
   o.start(t); o.stop(t + 0.4);
 
-  // Click + echo
   const noise = a.createBufferSource();
   const buf = a.createBuffer(1, a.sampleRate * 0.12, a.sampleRate);
   const data = buf.getChannelData(0);
@@ -75,7 +73,7 @@ function playMiss() {
 }
 
 // ── Environment & Targets ────────────────────────────────────────────
-function makeEnvironment(level: number) {
+function makeEnvironment(level) {
   const windSpeed = 1.8 + Math.random() * (level * 0.7);
   const windDir = Math.random() > 0.5 ? 1 : -1;
   const distance = 280 + level * 35;
@@ -84,7 +82,7 @@ function makeEnvironment(level: number) {
   return { windSpeed, windDir, distance, rain, night };
 }
 
-function makeTargets(level: number) {
+function makeTargets(level) {
   const count = Math.min(2 + Math.floor(level / 2), 6);
   return Array.from({ length: count }, (_, i) => {
     const typeIdx = Math.min(Math.floor(level / 2 + Math.random() * 2.2), TARGET_TYPES.length - 1);
@@ -97,8 +95,8 @@ function makeTargets(level: number) {
       x: 110 + Math.random() * (W - 220),
       y: yPos,
       vx: t.type === 'patrol' || t.type === 'boss'
-        ? (i % 2 === 0 ? t.spd! : -t.spd!) 
-        : t.type === 'running' ? t.spd! * (Math.random() < 0.5 ? 1 : -1) : 0,
+        ? (i % 2 === 0 ? t.spd : -t.spd)
+        : t.type === 'running' ? t.spd * (Math.random() < 0.5 ? 1 : -1) : 0,
       hp,
       maxHp: hp,
       alive: true,
@@ -111,16 +109,14 @@ function makeTargets(level: number) {
   });
 }
 
-// ── Main Component (fully improved) ──────────────────────────────────
-export default function SniperElite({ levelData, onFinish }: { levelData?: { level: number }; onFinish?: () => void }) {
+// ── Main Component ───────────────────────────────────────────────────
+export default function SniperElite({ levelData, onFinish }) {
   const level = levelData?.level || 1;
+  const canvasRef = useRef(null);
+  const stateRef = useRef(null);
+  const rafRef = useRef(null);
+  const lastRef = useRef(0);
 
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const stateRef = useRef<any>(null);
-  const rafRef = useRef<number | null>(null);
-  const lastRef = useRef<number>(0);
-
-  // Single source of truth (no constant re-renders)
   const gameRef = useRef({
     scoped: false,
     ammo: 5,
@@ -128,7 +124,7 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     score: 0,
     shots: 0,
     hits: 0,
-    phase: 'playing' as 'playing' | 'replay' | 'victory' | 'gameover',
+    phase: 'playing',
     wind: { speed: 1, dir: 1 },
     distance: 300,
     rifle: RIFLE_STATS[0],
@@ -146,7 +142,9 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
   const isDragging = useRef(false);
   const lastPointer = useRef({ x: 0, y: 0 });
   const breathHeld = useRef(false);
-  const replayRef = useRef<any>(null);
+  const replayRef = useRef(null);
+
+  const [, forceUpdate] = useState(0);
 
   // ── Init ───────────────────────────────────────────────────────────
   function initGame(rifleIdx = 0) {
@@ -158,8 +156,8 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       env,
       targets,
       rifle,
-      particles: [] as any[],
-      bulletTrails: [] as any[],
+      particles: [],
+      bulletTrails: [],
       swayX: 0,
       swayY: 0,
       swayVX: 0.35,
@@ -168,7 +166,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     };
 
     scopePos.current = { x: W / 2, y: H / 2 };
-
     gameRef.current = {
       scoped: false,
       ammo: rifle.magazine,
@@ -189,44 +186,35 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       highestStreak: 0,
       muzzleFlash: 0,
     };
-
     forceUpdate();
   }
-
-  const [, forceUpdate] = useState(0); // only call when UI must change
 
   // ── Game Loop ──────────────────────────────────────────────────────
   useEffect(() => {
     initGame(0);
     lastRef.current = performance.now();
-
-    const loop = (now: number) => {
+    const loop = (now) => {
       const dt = Math.min((now - (lastRef.current || now)) / 1000, 0.05);
       lastRef.current = now;
-
       update(dt);
       draw();
-
       rafRef.current = requestAnimationFrame(loop);
     };
-
     rafRef.current = requestAnimationFrame(loop);
-
-    return () => cancelAnimationFrame(rafRef.current!);
+    return () => cancelAnimationFrame(rafRef.current);
   }, [level]);
 
   // ── Core Update ────────────────────────────────────────────────────
-  function update(dt: number) {
+  function update(dt) {
     const s = stateRef.current;
     if (!s) return;
     const g = gameRef.current;
     if (g.phase !== 'playing') return;
 
-    // Target movement
+    // Target movement + logic (unchanged)
     for (const t of s.targets) {
       if (!t.alive) continue;
       if (t.hitFlash > 0) t.hitFlash -= dt;
-
       if (t.type === 'patrol' || t.type === 'boss' || t.type === 'running') {
         t.x += t.vx * dt;
         if (t.x < 60) { t.x = 60; t.vx *= -1; }
@@ -242,7 +230,7 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       }
     }
 
-    // Scope sway
+    // Scope sway, breath, replay, particles, trails (unchanged - same as original)
     if (g.scoped) {
       const amp = s.rifle.sway * (breathHeld.current ? 0.18 : 1);
       s.swayX += s.swayVX * dt * 2.8;
@@ -251,7 +239,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       if (Math.abs(s.swayY) > amp) s.swayVY *= -1;
     }
 
-    // Breath hold
     if (breathHeld.current) {
       s.breathTimer += dt;
       const breath = Math.max(0, 1 - s.breathTimer / 3.8);
@@ -265,7 +252,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       g.breath = Math.max(0, 1 - s.breathTimer / 3.8);
     }
 
-    // Replay slow-mo
     if (replayRef.current) {
       const r = replayRef.current;
       r.progress += dt * 0.65;
@@ -273,7 +259,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       r.bullet.y += r.bullet.vy * dt * 0.65;
       r.bullet.vy += (9.8 * g.distance / 420) * dt * 0.45;
       r.bullet.vx += g.wind.speed * g.wind.dir * dt * 0.35;
-
       if (r.progress > r.duration) {
         replayRef.current = null;
         g.phase = 'playing';
@@ -281,7 +266,7 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       }
     }
 
-    // Particles
+    // Particles & trails
     for (let i = s.particles.length - 1; i >= 0; i--) {
       const p = s.particles[i];
       p.x += p.vx; p.y += p.vy;
@@ -289,15 +274,12 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       p.life -= p.decay;
       if (p.life <= 0) s.particles.splice(i, 1);
     }
-
-    // Trails fade
     for (let i = s.bulletTrails.length - 1; i >= 0; i--) {
       s.bulletTrails[i].alpha -= dt * 1.1;
       if (s.bulletTrails[i].alpha <= 0) s.bulletTrails.splice(i, 1);
     }
 
-    // All targets dead?
-    const alive = s.targets.filter((t: any) => t.alive);
+    const alive = s.targets.filter(t => t.alive);
     if (alive.length === 0 && g.targetsLeft > 0) {
       g.phase = 'victory';
       setTimeout(() => onFinish?.(), 2800);
@@ -305,40 +287,33 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     }
   }
 
-  // ── Shooting Logic (with headshot + recoil) ─────────────────────────
+  // ── Shooting Logic ─────────────────────────────────────────────────
   function shoot() {
     const g = gameRef.current;
     const s = stateRef.current;
     if (!s || g.phase !== 'playing' || g.ammo <= 0) return;
 
     playShot();
-
     const bx = scopePos.current.x + s.swayX;
     const by = scopePos.current.y + s.swayY;
 
-    // Ballistics
     const windDrift = s.env.windSpeed * s.env.windDir * (s.env.distance / 480) * 19;
     const bulletDrop = (s.env.distance / 380) * 15 * (breathHeld.current ? 0.45 : 1);
     const hitX = bx + windDrift;
     const hitY = by + bulletDrop;
 
-    // Trail
     s.bulletTrails.push({ x1: bx, y1: by, x2: hitX, y2: hitY, alpha: 1 });
 
-    // Recoil + muzzle
-    scopePos.current.y -= 28; // kick up
+    scopePos.current.y -= 28;
     g.muzzleFlash = 0.18;
 
-    // Hit detection
-    let hitTarget: any = null;
+    let hitTarget = null;
     let isHeadshot = false;
-
     for (const t of s.targets) {
       if (!t.alive || !t.visible) continue;
       const dist = Math.hypot(hitX - t.x, hitY - t.y);
       if (dist < t.size) {
         hitTarget = t;
-        // Headshot if hit is in top 35% of target
         if (hitY < t.y - t.size * 0.32) isHeadshot = true;
         break;
       }
@@ -350,23 +325,19 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     let newHits = g.hits;
 
     if (hitTarget) {
-      playShot(); // extra hit sound
+      playShot();
       hitTarget.hitFlash = 0.35;
       hitTarget.hp -= 1;
       newHits++;
-
       if (hitTarget.hp <= 0) {
         hitTarget.alive = false;
         const streakBonus = newStreak > 1 ? newStreak * 45 : 0;
         const headBonus = isHeadshot ? 180 : 0;
         const distBonus = Math.round(s.env.distance / 9) * 6;
         const points = hitTarget.points + streakBonus + headBonus + distBonus;
-
         newScore += points;
         newStreak++;
-        msg = isHeadshot 
-          ? `🎯 HEADSHOT! +${points}` 
-          : `💥 ${hitTarget.label} DOWN +${points}`;
+        msg = isHeadshot ? `🎯 HEADSHOT! +${points}` : `💥 ${hitTarget.label} DOWN +${points}`;
         spawnParticles(hitX, hitY, isHeadshot ? '#fef08c' : '#f59e0b', 38, 6.5);
       } else {
         msg = '⚡ HIT!';
@@ -380,7 +351,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       spawnParticles(hitX, hitY, '#64748b', 11, 2.5);
     }
 
-    // Start replay
     replayRef.current = {
       bullet: { x: bx, y: by, vx: (hitX - bx) * 1.9, vy: (hitY - by) * 1.9 },
       progress: 0,
@@ -398,7 +368,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     g.phase = 'replay';
     g.message = msg;
 
-    // Auto reload
     if (newAmmo === 0) {
       playReload();
       setTimeout(() => {
@@ -411,7 +380,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
 
     forceUpdate();
 
-    // Return to playing after replay
     setTimeout(() => {
       if (!replayRef.current) {
         g.phase = 'playing';
@@ -421,7 +389,7 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     }, 1950);
   }
 
-  function spawnParticles(x: number, y: number, color: string, count: number, speed: number) {
+  function spawnParticles(x, y, color, count, speed) {
     const s = stateRef.current;
     for (let i = 0; i < count; i++) {
       s.particles.push({
@@ -436,19 +404,19 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     }
   }
 
-  // ── Drawing (much richer graphics) ─────────────────────────────────
+  // ── Drawing ────────────────────────────────────────────────────────
   function draw() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
-
     const g = gameRef.current;
     const s = stateRef.current;
     if (!s) return;
 
     ctx.clearRect(0, 0, W, H);
-
+    // (all drawing code exactly as before - background, targets, scope, particles, etc.)
+    // ... [I kept the entire draw function identical to your original - only removed the final forceUpdate()]
     // Background sky
     const sky = ctx.createLinearGradient(0, 0, 0, 220);
     sky.addColorStop(0, g.night ? '#0a0f1f' : '#1e3a5f');
@@ -456,11 +424,9 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     ctx.fillStyle = sky;
     ctx.fillRect(0, 0, W, 220);
 
-    // Hills / ground
     ctx.fillStyle = g.night ? '#0c150f' : '#1a3a1f';
     ctx.fillRect(0, 185, W, H - 185);
 
-    // Rain
     if (g.rain) {
       ctx.strokeStyle = 'rgba(180,220,255,0.45)';
       ctx.lineWidth = 1.1;
@@ -474,39 +440,28 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       }
     }
 
-    // Targets (drawn bodies + heads)
     for (const t of s.targets) {
       if (!t.alive || !t.visible) continue;
-
       const bob = t.type === 'static' ? 0 : Math.sin(Date.now() * 0.0035 + t.id) * 4;
       const tx = t.x;
       const ty = t.y + bob;
-
       ctx.save();
       if (t.hitFlash > 0) {
         ctx.shadowColor = '#ef4444';
         ctx.shadowBlur = 22;
       }
-
-      // Body
       ctx.fillStyle = t.color;
       ctx.fillRect(tx - t.size * 0.38, ty - 8, t.size * 0.76, t.size * 1.1);
-
-      // Head
       ctx.beginPath();
       ctx.arc(tx, ty - t.size * 0.45, t.size * 0.38, 0, Math.PI * 2);
       ctx.fill();
-
-      // Helmet / cap for boss
       if (t.type === 'boss') {
         ctx.fillStyle = '#111';
         ctx.fillRect(tx - t.size * 0.45, ty - t.size * 0.82, t.size * 0.9, 12);
       }
-
       ctx.restore();
     }
 
-    // Bullet trails
     for (const tr of s.bulletTrails) {
       ctx.save();
       ctx.globalAlpha = tr.alpha * 0.75;
@@ -520,7 +475,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.restore();
     }
 
-    // Replay bullet
     if (replayRef.current) {
       const rb = replayRef.current.bullet;
       ctx.save();
@@ -533,26 +487,22 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.restore();
     }
 
-    // Scope (only when scoped)
     if (g.scoped) {
       const cx = scopePos.current.x + s.swayX;
       const cy = scopePos.current.y + s.swayY;
 
-      // Vignette
       const vignette = ctx.createRadialGradient(cx, cy, SCOPE_R * 0.6, cx, cy, SCOPE_R * 1.35);
       vignette.addColorStop(0, 'rgba(0,0,0,0)');
       vignette.addColorStop(1, 'rgba(0,0,0,0.92)');
       ctx.fillStyle = vignette;
       ctx.fillRect(0, 0, W, H);
 
-      // Scope ring
       ctx.save();
       ctx.strokeStyle = '#1e293b';
       ctx.lineWidth = 14;
       ctx.beginPath();
       ctx.arc(cx, cy, SCOPE_R, 0, Math.PI * 2);
       ctx.stroke();
-
       ctx.strokeStyle = '#64748b';
       ctx.lineWidth = 3;
       ctx.beginPath();
@@ -560,7 +510,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.stroke();
       ctx.restore();
 
-      // Crosshair
       ctx.strokeStyle = '#ef4444';
       ctx.lineWidth = 2;
       ctx.beginPath();
@@ -570,32 +519,24 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.lineTo(cx, cy + 38);
       ctx.stroke();
 
-      // Mil-dots
       ctx.fillStyle = '#f1f5f9';
       for (let i = -3; i <= 3; i++) {
         if (i === 0) continue;
-        ctx.beginPath();
-        ctx.arc(cx + i * 19, cy, 1.8, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.beginPath();
-        ctx.arc(cx, cy + i * 19, 1.8, 0, Math.PI * 2);
-        ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + i * 19, cy, 1.8, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx, cy + i * 19, 1.8, 0, Math.PI * 2); ctx.fill();
       }
 
-      // Center dot
       ctx.fillStyle = '#ef4444';
       ctx.beginPath();
       ctx.arc(cx, cy, 2.5, 0, Math.PI * 2);
       ctx.fill();
 
-      // Wind & distance text inside scope
       ctx.fillStyle = 'rgba(163,230,187,0.9)';
       ctx.font = '10px monospace';
       ctx.textAlign = 'left';
       ctx.fillText(`WIND ${g.wind.speed.toFixed(1)}${g.wind.dir > 0 ? '→' : '←'}`, cx - SCOPE_R + 14, cy + SCOPE_R - 34);
       ctx.fillText(`DIST ${g.distance}m`, cx - SCOPE_R + 14, cy + SCOPE_R - 20);
 
-      // Breath arc
       ctx.save();
       ctx.strokeStyle = g.breath > 0.35 ? '#22c55e' : '#f59e0b';
       ctx.lineWidth = 4;
@@ -604,7 +545,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.stroke();
       ctx.restore();
 
-      // Muzzle flash
       if (g.muzzleFlash > 0) {
         ctx.save();
         ctx.globalAlpha = g.muzzleFlash * 1.6;
@@ -615,11 +555,10 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         ctx.arc(cx - 12, cy - 8, 18, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
-        g.muzzleFlash -= 0.055; // will be clamped in next frame
+        g.muzzleFlash -= 0.055;
       }
     }
 
-    // Particles
     for (const p of s.particles) {
       ctx.save();
       ctx.globalAlpha = p.life;
@@ -627,13 +566,11 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
       ctx.fillRect(p.x - p.size / 2, p.y - p.size / 2, p.size, p.size);
       ctx.restore();
     }
-
-    // HUD (React-managed)
-    forceUpdate(); // only once per frame if needed - but we keep it light
+    // ←←← forceUpdate() REMOVED HERE (was causing 60fps re-renders)
   }
 
-  // ── Pointer Controls (drag to aim) ─────────────────────────────────
-  const handlePointerDown = (e: React.PointerEvent) => {
+  // ── Pointer Controls (plain JS) ────────────────────────────────────
+  const handlePointerDown = (e) => {
     const g = gameRef.current;
     if (!g.scoped) return;
     isDragging.current = true;
@@ -641,15 +578,12 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
     canvasRef.current?.setPointerCapture(e.pointerId);
   };
 
-  const handlePointerMove = (e: React.PointerEvent) => {
+  const handlePointerMove = (e) => {
     if (!isDragging.current || !gameRef.current.scoped) return;
-
     const dx = e.clientX - lastPointer.current.x;
     const dy = e.clientY - lastPointer.current.y;
-
     scopePos.current.x = Math.max(60, Math.min(W - 60, scopePos.current.x + dx * 1.05));
     scopePos.current.y = Math.max(80, Math.min(H - 80, scopePos.current.y + dy * 1.05));
-
     lastPointer.current = { x: e.clientX, y: e.clientY };
   };
 
@@ -673,7 +607,7 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         onPointerLeave={handlePointerUp}
       />
 
-      {/* Top HUD */}
+      {/* Top HUD, Ammo, Message, Controls, Victory Screen - exactly as before */}
       <div className="absolute top-4 left-4 right-4 flex justify-between text-white text-sm font-mono">
         <div>⭐ {g.score.toLocaleString()}</div>
         <div className="flex gap-6">
@@ -686,7 +620,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         <div>🎯 {g.targetsLeft} LEFT</div>
       </div>
 
-      {/* Ammo */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1">
         {Array.from({ length: g.maxAmmo }).map((_, i) => (
           <div
@@ -696,14 +629,12 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         ))}
       </div>
 
-      {/* Message */}
       {g.message && (
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 bg-black/70 text-white px-8 py-3 rounded-xl font-mono text-xl shadow-xl">
           {g.message}
         </div>
       )}
 
-      {/* Controls */}
       <div className="absolute bottom-6 right-6 flex flex-col gap-3">
         <button
           onClick={() => {
@@ -719,7 +650,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         >
           🔭 {g.scoped ? 'UNSCOPE' : 'SCOPE IN'}
         </button>
-
         {g.scoped && (
           <>
             <button
@@ -732,7 +662,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
             >
               💨 HOLD BREATH
             </button>
-
             <button
               onClick={shoot}
               disabled={g.ammo <= 0}
@@ -744,7 +673,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         )}
       </div>
 
-      {/* Victory Screen */}
       {g.phase === 'victory' && (
         <div className="absolute inset-0 bg-black/90 flex flex-col items-center justify-center text-white">
           <div className="text-5xl mb-6">🎯 MISSION COMPLETE</div>
@@ -759,7 +687,6 @@ export default function SniperElite({ levelData, onFinish }: { levelData?: { lev
         </div>
       )}
 
-      {/* Instructions */}
       <div className="absolute bottom-4 left-4 text-xs text-slate-400 font-mono">
         DRAG to aim • HOLD BREATH • FIRE<br />
         Account for wind + drop
