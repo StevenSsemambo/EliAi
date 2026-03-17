@@ -23,7 +23,6 @@ import TowerOfMind       from './games/TowerOfMind.jsx'
 import ShadowMatch       from './games/ShadowMatch.jsx'
 
 // ── 4 NEW complex games ──────────────────────────────────────────
-import KingdomDefense    from './games/KingdomDefense.jsx'
 import DungeonCrawler    from './games/DungeonCrawler.jsx'
 import StickmanFighter   from './games/StickmanFighter.jsx'
 
@@ -41,8 +40,7 @@ const GAME_COMPONENTS = {
   
   spatial:      ShadowMatch,
   // 5 complex games
-  towerdefense: KingdomDefense,
-  dungeon:      DungeonCrawler,
+   dungeon:      DungeonCrawler,
   evolution:    EvolutionSim, 
   fighting:     StickmanFighter,
   // Subject-specific games
