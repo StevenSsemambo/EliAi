@@ -40,8 +40,7 @@ const GAME_COMPONENTS = {
   
   spatial:      ShadowMatch,
   // 5 complex games
-   dungeon:      DungeonCrawler,
-  evolution:    EvolutionSim, 
+   dungeon:      DungeonCrawler,   
   fighting:     StickmanFighter,
   // Subject-specific games
   subject: {
