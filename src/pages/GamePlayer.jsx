@@ -14,22 +14,17 @@ import LogicGrid         from './games/LogicGrid.jsx'
 
 // ── Subject games (already in repo) ─────────────────────────────
 import ChemLabGame       from './games/ChemLabGame.jsx'
-import PhysicsForcesGame from './games/PhysicsForcesGame.jsx'
-import BiologyCellGame   from './games/BiologyCellGame.jsx'
 import MathsSpeedGame    from './games/MathsSpeedGame.jsx'
 
 // ── 5 NEW cognitive games (upload these with GamePlayer.jsx) ─────
 import MindBridge        from './games/MindBridge.jsx'
 import FlowState         from './games/FlowState.jsx'
 import TowerOfMind       from './games/TowerOfMind.jsx'
-import RippleCode        from './games/RippleCode.jsx'
 import ShadowMatch       from './games/ShadowMatch.jsx'
 
 // ── 4 NEW complex games ──────────────────────────────────────────
 import KingdomDefense    from './games/KingdomDefense.jsx'
 import DungeonCrawler    from './games/DungeonCrawler.jsx'
-import EvolutionSim      from './games/EvolutionSim.jsx'
-import SniperElite       from './games/SniperElite.jsx'
 import StickmanFighter   from './games/StickmanFighter.jsx'
 
 const GAME_COMPONENTS = {
@@ -43,19 +38,16 @@ const GAME_COMPONENTS = {
   deduction:    MindBridge,
   flow:         FlowState,
   hanoi:        TowerOfMind,
-  pattern:      RippleCode,
+  
   spatial:      ShadowMatch,
   // 5 complex games
   towerdefense: KingdomDefense,
   dungeon:      DungeonCrawler,
-  evolution:    EvolutionSim,
-  sniper:       SniperElite,
+  evolution:    EvolutionSim, 
   fighting:     StickmanFighter,
   // Subject-specific games
   subject: {
-    chem_lab:       ChemLabGame,
-    physics_forces: PhysicsForcesGame,
-    biology_cells:  BiologyCellGame,
+    chem_lab:       ChemLabGame,    
     maths_speed:    MathsSpeedGame,
   },
 }
