@@ -7,7 +7,7 @@ import {
   TEST_TYPE_META, SUBJECT_META
 } from '../data/exams.js'
 import db from '../db/schema.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 import { recordStudySession } from '../ai/learning.js'
 import { Speaker } from '../utils/soundEngine.js'
 
