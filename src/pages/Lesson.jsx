@@ -6,7 +6,7 @@ import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
 import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import { AmbientEngine, AMBIENT_SOUNDS } from '../utils/ambientSounds.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 import { LessonSkeleton } from '../components/Skeletons.jsx'
 
 // Curriculum file map — used to look up lessons when navigating directly by URL
