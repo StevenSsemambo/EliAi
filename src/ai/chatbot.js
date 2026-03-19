@@ -2229,6 +2229,51 @@ const WRONG_RESP = [
 
 
 // ===================================================================
+// ===================================================================
+// ANSWER EVALUATOR  v5 — checks formulas + keywords
+// ===================================================================
+
+export function evaluateStudentAnswer(studentAnswer, knowledge) {
+  if (!knowledge) return null
+  const ans = studentAnswer.toLowerCase().trim()
+
+  // Check formulas first (for calculate questions)
+  for (const formula of knowledge.formulas) {
+    const fContent = formula.content.toLowerCase()
+    const fWords = fContent.split(/\s+/).filter(w => w.length > 1)
+    const matched = fWords.filter(w => ans.includes(w)).length
+    if (matched / Math.max(fWords.length, 1) >= 0.6) {
+      return { verdict: 'good', score: 90, feedback: `✅ Correct formula! ${formula.label}: ${formula.content}`, missing: [] }
+    }
+  }
+
+  // Check definitions
+  for (const def of knowledge.definitions) {
+    const correct = def.definition.toLowerCase()
+    const keyWords = correct.split(/\s+/).filter(w => w.length > 4)
+    const matched = keyWords.filter(w => ans.includes(w)).length
+    const score = Math.round((matched / Math.max(keyWords.length, 1)) * 100)
+    if (score >= 70) {
+      return { verdict:'good', score, feedback:`✅ Good definition! Full answer: **${def.definition}**`, missing: keyWords.filter(w=>!ans.includes(w)).slice(0,3) }
+    } else if (score >= 40) {
+      const missing = keyWords.filter(w=>!ans.includes(w)).slice(0,3)
+      return { verdict:'partial', score, feedback:`🟡 Partially correct — key terms missing: **${missing.join(', ')}**\n\nFull definition: **${def.definition}**`, missing }
+    } else {
+      return { verdict:'incorrect', score, feedback:`❌ Not quite. The correct definition: **${def.definition}**\n\nKey terms: **${keyWords.slice(0,4).join(', ')}**`, missing: keyWords }
+    }
+  }
+
+  // Check key facts
+  if (knowledge.keyFacts.length > 0) {
+    const factWords = knowledge.keyFacts.join(' ').toLowerCase().split(/\s+/).filter(w=>w.length>4)
+    const matched = factWords.filter(w => ans.includes(w)).length
+    const score = Math.round((matched / Math.max(factWords.length * 0.3, 1)) * 100)
+    if (score >= 60) return { verdict:'good', score: Math.min(score,100), feedback:`✅ Correct! Good understanding of ${knowledge.title}.` }
+    else return { verdict:'incorrect', score, feedback:`❌ Not quite right. Here's the key fact:\n\n${knowledge.keyFacts[0]}` }
+  }
+  return null
+}
+
 // REAL TEACHER ENGINE v1
 // Makes the AI behave like a real teacher:
 //   - Uses student's name naturally
@@ -2594,51 +2639,6 @@ function addToHistory(role, content) {
   if (conversationMemory.conversationHistory.length > 12) {
     conversationMemory.conversationHistory = conversationMemory.conversationHistory.slice(-12)
   }
-}
-
-// ===================================================================
-// ANSWER EVALUATOR  v5 — checks formulas + keywords
-// ===================================================================
-
-export function evaluateStudentAnswer(studentAnswer, knowledge) {
-  if (!knowledge) return null
-  const ans = studentAnswer.toLowerCase().trim()
-
-  // Check formulas first (for calculate questions)
-  for (const formula of knowledge.formulas) {
-    const fContent = formula.content.toLowerCase()
-    const fWords = fContent.split(/\s+/).filter(w => w.length > 1)
-    const matched = fWords.filter(w => ans.includes(w)).length
-    if (matched / Math.max(fWords.length, 1) >= 0.6) {
-      return { verdict: 'good', score: 90, feedback: `✅ Correct formula! ${formula.label}: ${formula.content}`, missing: [] }
-    }
-  }
-
-  // Check definitions
-  for (const def of knowledge.definitions) {
-    const correct = def.definition.toLowerCase()
-    const keyWords = correct.split(/\s+/).filter(w => w.length > 4)
-    const matched = keyWords.filter(w => ans.includes(w)).length
-    const score = Math.round((matched / Math.max(keyWords.length, 1)) * 100)
-    if (score >= 70) {
-      return { verdict:'good', score, feedback:`✅ Good definition! Full answer: **${def.definition}**`, missing: keyWords.filter(w=>!ans.includes(w)).slice(0,3) }
-    } else if (score >= 40) {
-      const missing = keyWords.filter(w=>!ans.includes(w)).slice(0,3)
-      return { verdict:'partial', score, feedback:`🟡 Partially correct — key terms missing: **${missing.join(', ')}**\n\nFull definition: **${def.definition}**`, missing }
-    } else {
-      return { verdict:'incorrect', score, feedback:`❌ Not quite. The correct definition: **${def.definition}**\n\nKey terms: **${keyWords.slice(0,4).join(', ')}**`, missing: keyWords }
-    }
-  }
-
-  // Check key facts
-  if (knowledge.keyFacts.length > 0) {
-    const factWords = knowledge.keyFacts.join(' ').toLowerCase().split(/\s+/).filter(w=>w.length>4)
-    const matched = factWords.filter(w => ans.includes(w)).length
-    const score = Math.round((matched / Math.max(factWords.length * 0.3, 1)) * 100)
-    if (score >= 60) return { verdict:'good', score: Math.min(score,100), feedback:`✅ Correct! Good understanding of ${knowledge.title}.` }
-    else return { verdict:'incorrect', score, feedback:`❌ Not quite right. Here's the key fact:\n\n${knowledge.keyFacts[0]}` }
-  }
-  return null
 }
 
 // ===================================================================
