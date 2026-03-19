@@ -233,6 +233,25 @@ export default function ElimuChatbot() {
   const [listening, setListening] = useState(false)
   const [speakingMsgId, setSpeakingMsgId] = useState(null)
 
+  function speakMessage(id, text) {
+    if (speakingMsgId === id) { Speaker.stop(); setSpeakingMsgId(null); return }
+    Speaker.stop()
+    const plain = typeof text === 'string' ? text : (Array.isArray(text)
+      ? text.map(p => {
+          if (p.type === 'text' || p.type === 'heading') return p.text || ''
+          if (p.type === 'list') return (p.title || '') + '. ' + (p.items || []).join('. ')
+          if (p.type === 'formula') return (p.title || '') + '. ' + (p.items || []).join('. ')
+          return ''
+        }).filter(Boolean).join('. ')
+      : '')
+    if (!plain.trim()) return
+    Speaker.speak(plain)
+    setSpeakingMsgId(id)
+    const poll = setInterval(() => {
+      if (!Speaker.isSpeaking()) { setSpeakingMsgId(null); clearInterval(poll) }
+    }, 500)
+  }
+
   // Chat context
   const ctx = useRef({
     quizMode: false, currentQuestion: null, topic: null, subject: null,
