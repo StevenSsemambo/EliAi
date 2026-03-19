@@ -7,12 +7,23 @@
   to = "/index.html"
   status = 200
 
+# Assets - long cache, they're content-hashed by Vite
 [[headers]]
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# Curriculum JSON files
 [[headers]]
   for = "/*.json"
   [headers.values]
     Content-Type = "application/json; charset=utf-8"
+
+# COEP/COOP headers ONLY on the AI setup page
+# These are required for SharedArrayBuffer (WebLLM model download on desktop)
+# Applying them globally breaks mobile browsers — so scoped to /ai-setup only
+[[headers]]
+  for = "/ai-setup"
+  [headers.values]
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
