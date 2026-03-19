@@ -219,10 +219,9 @@ function ExamSession({ test, onFinish }) {
               <p className="text-white text-base leading-relaxed flex-1">{q.question}</p>
               {Speaker.isSupported() && (
                 <button onClick={speakQuestion}
-                  title={qSpeaking ? 'Stop' : 'Read question aloud'}
                   className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
-                  style={{background:qSpeaking?'rgba(245,158,11,0.2)':'rgba(255,255,255,0.06)',border:`1px solid ${qSpeaking?'rgba(245,158,11,0.5)':'rgba(255,255,255,0.1)'}`,color:qSpeaking?'#F59E0B':'#64748B'}}>
-                  <span style={{fontSize:15}}>{qSpeaking ? '⏹' : '🔊'}</span>
+                  style={{background:qSpeaking?"rgba(245,158,11,0.2)":"rgba(255,255,255,0.06)",border:`1px solid ${qSpeaking?"rgba(245,158,11,0.5)":"rgba(255,255,255,0.1)"}`,color:qSpeaking?"#F59E0B":"#64748B"}}>
+                  <span style={{fontSize:15}}>{qSpeaking ? "⏹" : "🔊"}</span>
                 </button>
               )}
             </div>
@@ -345,7 +344,7 @@ function ExamResults({ results, test, onClose }) {
               <div className="text-xs text-green-400 mb-2">✓ Correct: {q.answer}</div>
               <div className="text-xs text-slate-400 p-2 rounded-lg" style={{background:'rgba(255,255,255,0.04)'}}>{q.explanation}</div>
               {Speaker.isSupported() && (
-                <button onClick={() => Speaker.speak(`${q.question}. ${q.correct ? 'Correct.' : `Incorrect. Correct answer: ${q.answer}.`} ${q.explanation||''}`)}
+                <button onClick={() => Speaker.speak(q.question+'. '+(q.correct?'Correct.':('Incorrect. Correct answer: '+q.answer+'. '))+(q.explanation||""))}
                   className="mt-2 flex items-center gap-1 text-xs transition-all active:scale-90"
                   style={{color:'#475569'}}>
                   <span style={{fontSize:11}}>🔊</span>
