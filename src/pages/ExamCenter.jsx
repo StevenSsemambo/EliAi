@@ -117,6 +117,7 @@ function ExamSession({ test, onFinish }) {
   const [submitted, setSubmitted] = useState(false)
   const [results, setResults]     = useState(null)
   const [showNav, setShowNav]     = useState(false)
+  const [qSpeaking, setQSpeaking]  = useState(false)
   const startTime = useRef(Date.now())
 
   useEffect(() => {
@@ -129,6 +130,15 @@ function ExamSession({ test, onFinish }) {
   const handleTimeUp = useCallback(() => { if (!submitted) doSubmit() }, [submitted, answers, questions])
   useEffect(() => { Speaker.stop(); setQSpeaking(false) }, [current])
   useEffect(() => { return () => Speaker.stop() }, [])
+
+  function speakQuestion() {
+    const q = questions[current]
+    if (!q) return
+    if (qSpeaking) { Speaker.stop(); setQSpeaking(false); return }
+    const text = q.question + '. ' + (q.options||[]).map((o,i) => ['A','B','C','D'][i]+': '+o).join('. ')
+    Speaker.speak(text); setQSpeaking(true)
+    const poll = setInterval(() => { if (!Speaker.isSpeaking()) { setQSpeaking(false); clearInterval(poll) } }, 500)
+  }
 
   function doSubmit() {
     if (submitted) return
