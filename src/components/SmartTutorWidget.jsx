@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
 import { analyseStudent, getSmartRecommendations, generateDailyMission, getMissionProgress } from '../ai/brain.js'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 
 const SUBJECT_ICONS = { mathematics:'📐', physics:'⚡', biology:'🧬', chemistry:'🧪' }
 const DIFF_LABELS   = ['', 'Foundation', 'Developing', 'Intermediate', 'Advanced', 'Expert']
@@ -39,6 +39,12 @@ export default function SmartTutorWidget() {
       setLoading(false)
     })
   }, [student])
+
+  function speakRec(text) {
+    if (speaking && speakText === text) { Speaker.stop(); setSpeaking(false); setSpeakText(''); return }
+    Speaker.stop(); Speaker.speak(text); setSpeaking(true); setSpeakText(text)
+    const poll = setInterval(()=>{ if(!Speaker.isSpeaking()){setSpeaking(false);setSpeakText('');clearInterval(poll)} },500)
+  }
 
   if (loading) return (
     <div className="rounded-2xl p-4 mb-4" style={{ background: theme.card, border:`1px solid ${theme.border}` }}>
