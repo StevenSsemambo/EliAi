@@ -2227,6 +2227,159 @@ const WRONG_RESP = [
   ()=>`❌ Almost! Check the explanation below.`,
 ]
 
+
+// ===================================================================
+// REAL TEACHER ENGINE v1
+// Makes the AI behave like a real teacher:
+//   - Uses student's name naturally
+//   - Progressive explanations (simple → detailed)
+//   - Checks understanding after explaining
+//   - Connects new topics to ones already studied
+//   - Gives real encouragement based on actual data
+// ===================================================================
+
+const TEACHER_CHECK_PROMPTS = [
+  (name, topic) => `Before I go on, ${name ? name+' — ' : ''}can you tell me in your own words what **${topic}** means so far?`,
+  (name, topic) => `Let me pause here. ${name ? name+', ' : ''}what do you think happens when ${topic}? Take a guess.`,
+  (name, topic) => `Quick check — ${name ? name+' ' : ''}what's the key thing you remember about **${topic}**?`,
+  (name, topic) => `So ${name ? name+', ' : ''}if I asked you to explain **${topic}** to a friend right now, what would you say?`,
+]
+
+const TEACHER_ENCOURAGEMENT = {
+  correct: [
+    (name, score) => `${name ? '✅ '+name+' — ' : '✅ '}that is exactly right! ${score ? 'You scored '+score+'% on this topic — you clearly understand it.' : 'Well done.'}`,
+    (name) => `${name ? name+', ' : ''}perfect answer! You are getting this.`,
+    (name) => `${name ? 'Great work, '+name+'! ' : 'Great! '}That is the correct understanding.`,
+  ],
+  partial: [
+    (name) => `${name ? name+', ' : ''}you are on the right track! Let me fill in the gaps.`,
+    (name) => `Almost there${name ? ', '+name : ''}! You got the main idea. Here is what was missing:`,
+  ],
+  incorrect: [
+    (name) => `${name ? name+', ' : ''}not quite — but that is a common mistake. Let me show you why:`,
+    (name) => `Good try${name ? ', '+name : ''}! This one trips many students up. Here is the correct thinking:`,
+  ],
+  lowScore: (name, topic, score) => `${name ? name+', ' : ''}I can see you scored ${score}% on ${topic} last time — let us fix that today. I will go step by step.`,
+  firstTime: (name, topic) => `${name ? 'Welcome, '+name+'! ' : ''}Let us start with **${topic}**. I will build from the basics — stop me anytime if something is unclear.`,
+  connected: (prevTopic, newTopic) => `This links directly to **${prevTopic}** that we ${prevTopic ? 'covered earlier' : 'just discussed'}. Understanding ${prevTopic} will help you grasp ${newTopic} much faster.`,
+}
+
+// Build a progressive 3-stage explanation: basic → detailed → application
+function buildProgressiveExplanation(knowledge, studentName, profile) {
+  if (!knowledge) return null
+  const name = studentName || conversationMemory.studentName || ''
+  const mem = conversationMemory
+
+  // Check if student has weak score on this topic
+  const weakEntry = profile?.allWeakTopics?.find(t => t.topic === knowledge.topic)
+  const prevScore = weakEntry?.score
+
+  // Check if a related topic was covered in this session
+  const relatedSession = mem.sessionTopics.find(t => t !== knowledge.topic && knowledge.keyFacts.some(f => f.toLowerCase().includes(t.replace(/_/g,' '))))
+
+  const parts = []
+
+  // Personalised opener
+  if (prevScore !== undefined && prevScore < 70) {
+    parts.push({ type:'text', text: TEACHER_ENCOURAGEMENT.lowScore(name, knowledge.title, prevScore) })
+  } else if (!mem.sessionTopics.includes(knowledge.topic)) {
+    parts.push({ type:'text', text: TEACHER_ENCOURAGEMENT.firstTime(name, knowledge.title) })
+  }
+
+  // Connection to previous topic
+  if (relatedSession) {
+    parts.push({ type:'text', text: TEACHER_ENCOURAGEMENT.connected(relatedSession.replace(/_/g,' '), knowledge.title) })
+  }
+
+  // Stage 1: Simple hook
+  parts.push({ type:'heading', text:`🎯 The Big Idea` })
+  if (knowledge.keyFacts.length > 0) {
+    const simpleFact = knowledge.keyFacts[0]
+    parts.push({ type:'text', text: `In simple terms: **${simpleFact}**` })
+  }
+
+  // Stage 2: Proper definition
+  if (knowledge.definitions.length > 0) {
+    parts.push({ type:'heading', text:`📖 The Full Definition` })
+    parts.push({ type:'text', text: knowledge.definitions[0].definition })
+  }
+
+  // Stage 3: Key facts
+  if (knowledge.keyFacts.length > 1) {
+    parts.push({ type:'heading', text:`⚡ Key Points to Remember` })
+    parts.push({ type:'list', items: knowledge.keyFacts.slice(0, 4) })
+  }
+
+  // Formulas if any
+  if (knowledge.formulas.length > 0) {
+    parts.push({ type:'heading', text:`📐 Formula` })
+    parts.push({ type:'formula', items: knowledge.formulas.slice(0,2).map(f => `${f.label}: ${f.content}`) })
+  }
+
+  // Understanding check (Socratic)
+  const checkPromptFn = TEACHER_CHECK_PROMPTS[Math.floor(Math.random() * TEACHER_CHECK_PROMPTS.length)]
+  parts.push({ type:'text', text: `\n---\n${checkPromptFn(name, knowledge.title)}` })
+  parts.push({ type:'suggestions', items:[
+    `I understand ${knowledge.title}`,
+    `Quiz me on ${knowledge.title}`,
+    `Give me an example`,
+    `I need more explanation`,
+  ]})
+
+  return { parts, topic: knowledge.topic, subject: knowledge.subject, awaitingCheck: true }
+}
+
+// Evaluate "I understand" or typed answer after a check prompt
+function handleUnderstandingCheck(input, knowledge, studentName) {
+  const name = studentName || conversationMemory.studentName || ''
+  const lower = input.toLowerCase()
+  const isPositive = /understand|got it|yes|i know|makes sense|clear|okay|ok|sure/i.test(lower)
+  const isNegative = /no|don.t|confused|lost|not sure|help|again|unclear|still|what/i.test(lower)
+
+  if (isNegative || lower.length < 15) {
+    // Re-explain differently
+    const parts = [
+      { type:'text', text:`No problem${name ? ', '+name : ''}! Let me try a different approach.` },
+    ]
+    if (knowledge?.examples?.length > 0) {
+      parts.push({ type:'heading', text:'📝 Real Example' })
+      parts.push({ type:'text', text: knowledge.examples[0] })
+    } else if (knowledge?.keyFacts?.length > 0) {
+      parts.push({ type:'text', text:`Here is the simplest way to think about it:\n\n${knowledge.keyFacts[0]}` })
+    }
+    parts.push({ type:'suggestions', items:[`Quiz me on ${knowledge?.title || 'this topic'}`, 'Try explaining it to me', 'Move to next topic'] })
+    return { parts }
+  }
+
+  // Evaluate typed answer if substantial
+  if (!isPositive && lower.length > 20 && knowledge) {
+    const eval_ = evaluateStudentAnswer(input, knowledge)
+    if (eval_) {
+      const parts = [{ type:'text', text: eval_.feedback }]
+      if (eval_.verdict === 'good') {
+        const enc = TEACHER_ENCOURAGEMENT.correct[Math.floor(Math.random()*3)](name, null)
+        parts.unshift({ type:'text', text: enc })
+        parts.push({ type:'suggestions', items:[`Quiz me on ${knowledge.title}`, 'Explain next topic', 'Make me a study plan'] })
+      } else {
+        parts.push({ type:'suggestions', items:[`Explain ${knowledge.title} again`, `Quiz me on ${knowledge.title}`, 'Move on'] })
+      }
+      return { parts }
+    }
+  }
+
+  // Student says they understand — offer quiz
+  const enc = TEACHER_ENCOURAGEMENT.correct[Math.floor(Math.random()*TEACHER_ENCOURAGEMENT.correct.length)](name, null)
+  return {
+    parts: [
+      { type:'text', text: enc },
+      { type:'text', text:`Now let me test you with a quick question to make sure it sticks.` },
+      { type:'suggestions', items:[`Quiz me on ${knowledge?.title || 'this'}`, 'Explain more examples', 'Move to next topic', 'Make me a study plan'] }
+    ]
+  }
+}
+
+export { buildProgressiveExplanation, handleUnderstandingCheck, TEACHER_ENCOURAGEMENT }
+
 export function generateGreetResponse(studentName) {
   const n = studentName || conversationMemory.studentName
   return { parts:[{ type:'text', text: pick(GREETINGS)(n) }], suggestions:['Explain photosynthesis','Quiz me on forces','How do I calculate moles?','Make me a study plan'] }
@@ -2422,6 +2575,7 @@ export const conversationMemory = {
   sessionTopics: [],       // all topics covered this session
   conversationHistory: [], // for API context: [{role, content}]
   teachMode: false,        // Socratic questioning mode
+  awaitingCheck: false,    // waiting for student's understanding response
   milestone: 0,            // for streak celebration
 }
 
@@ -2430,7 +2584,7 @@ export function resetMemory() {
     lastTopic: null, lastSubject: null, lastKnowledge: null,
     quizStreak: 0, quizTotal: 0, messageCount: 0,
     studentName: null, sessionTopics: [], conversationHistory: [],
-    teachMode: false, milestone: 0,
+    teachMode: false, milestone: 0, awaitingCheck: false,
   })
 }
 
@@ -2498,6 +2652,19 @@ export async function processMessage(input, context={}) {
 
   // Add user message to history for API context
   addToHistory('user', input)
+
+  // ── Real teacher: handle understanding check response ──
+  if (mem.awaitingCheck && mem.lastKnowledge) {
+    const skipTriggers = /quiz|explain|next|move|study plan|help|another/i
+    if (!skipTriggers.test(input)) {
+      const checkResponse = handleUnderstandingCheck(input, mem.lastKnowledge, mem.studentName)
+      if (checkResponse) {
+        mem.awaitingCheck = false
+        return checkResponse
+      }
+    }
+    mem.awaitingCheck = false
+  }
 
   const { intent } = classifyIntent(input)
 
@@ -2696,9 +2863,19 @@ export async function processMessage(input, context={}) {
   // --- Route to generator ---
   let response
   switch (intent) {
-    case 'EXPLAIN':
-      response = generateExplainResponse(knowledge, input)
+    case 'EXPLAIN': {
+      // Use progressive teacher explanation if we have profile data
+      const profile = cachedProfile
+      const teachResp = buildProgressiveExplanation(knowledge, mem.studentName, profile)
+      if (teachResp) {
+        mem.lastKnowledge = knowledge
+        mem.awaitingCheck = true
+        response = teachResp
+      } else {
+        response = generateExplainResponse(knowledge, input)
+      }
       break
+    }
     case 'CALCULATE':
       response = generateCalculateResponse(knowledge, input)
       break
