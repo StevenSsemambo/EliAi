@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { goalsDB, quizDB } from '../db/progressDB.js'
 import { calculateScore } from '../utils/scoring.js'
-import { SoundEngine, Haptics } from '../utils/soundEngine.js'
+import { SoundEngine, Haptics, Speaker } from '../utils/soundEngine.js'
 import { saveDetailedAttempt } from '../ai/brain.js'
 import { recordStudySession } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
@@ -49,6 +49,7 @@ export default function QuickQuiz(){
   const [score,setScore]=useState(0)
   const timerRef=useRef(null)
   const confirmRef=useRef(null)
+  const [qSpeaking,setQSpeaking]=useState(false)
 
   function load(){
     setLoading(true);setDone(false);setAnswers([]);setCur(0);setSelected(null);setConfirmed(false)
@@ -56,12 +57,26 @@ export default function QuickQuiz(){
   }
   useEffect(()=>{load()},[])
 
+  useEffect(()=>{ Speaker.stop(); setQSpeaking(false) },[cur])
+  useEffect(()=>{ return ()=>Speaker.stop() },[])
+
   useEffect(()=>{
     if(loading||confirmed||done)return
     setTimeLeft(Q_TIME)
     timerRef.current=setInterval(()=>{setTimeLeft(t=>{if(t<=1){clearInterval(timerRef.current);confirmRef.current?.('__timeout__');return 0}return t-1})},1000)
     return()=>clearInterval(timerRef.current)
   },[cur,loading,confirmed])
+
+  function speakQuestion() {
+    if (!q) return
+    if (qSpeaking) { Speaker.stop(); setQSpeaking(false); return }
+    const text = q.question + '. ' + (q.options||[]).map((o,i)=>`${['A','B','C','D'][i]}: ${o}`).join('. ')
+    Speaker.speak(text)
+    setQSpeaking(true)
+    const poll = setInterval(()=>{
+      if(!Speaker.isSpeaking()){setQSpeaking(false);clearInterval(poll)}
+    },500)
+  }
 
   async function confirm(forced){
     const ans=forced||selected
@@ -144,7 +159,17 @@ export default function QuickQuiz(){
               <span className="text-xl">{q.icon}</span>
               <span className="text-xs text-slate-500 font-medium">{q.lessonTitle}</span>
             </div>
-            <p className="text-white font-display font-extrabold text-lg leading-snug mb-6">{q.question}</p>
+            <div className="flex items-start gap-2 mb-6">
+              <p className="text-white font-display font-extrabold text-lg leading-snug flex-1">{q.question}</p>
+              {Speaker.isSupported() && (
+                <button onClick={speakQuestion}
+                  title={qSpeaking?'Stop':'Read aloud'}
+                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
+                  style={{background:qSpeaking?'rgba(13,148,136,0.2)':'#1A2035',border:`1px solid ${qSpeaking?'#14B8A6':'#252D45'}`,color:qSpeaking?'#14B8A6':'#475569'}}>
+                  <span style={{fontSize:15}}>{qSpeaking?'⏹':'🔊'}</span>
+                </button>
+              )}
+            </div>
             <div className="space-y-3">
               {q.options?.map((opt,i)=>{
                 let style={background:'#1A2035',border:'1px solid #252D45'},cls=''
