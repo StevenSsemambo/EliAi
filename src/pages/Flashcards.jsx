@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
 import { generateFlashcards, sortFlashcardsForReview } from '../ai/brain.js'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import Navbar from '../components/Navbar.jsx'
 
 const SUBJECTS  = ['mathematics','physics','biology','chemistry']
@@ -79,6 +79,15 @@ function FlipCard({ card, onMastered, onNeedsPractice, color }) {
             <div className="text-4xl mb-4">🃏</div>
             <p className="text-white font-bold text-base leading-relaxed">{card.front}</p>
             <p className="text-xs mt-4" style={{ color:'#3A4560' }}>Tap to reveal answer</p>
+            {Speaker.isSupported() && (
+              <button
+                onClick={e => { e.stopPropagation(); Speaker.speak(card.front) }}
+                title="Read question aloud"
+                className="mt-3 w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-90"
+                style={{ background:'rgba(255,255,255,0.07)', border:'1px solid rgba(255,255,255,0.12)', color:'#94A3B8' }}>
+                <span style={{fontSize:14}}>🔊</span>
+              </button>
+            )}
           </>
         ) : (
           <>
@@ -88,6 +97,15 @@ function FlipCard({ card, onMastered, onNeedsPractice, color }) {
               <p className="text-xs mt-3 px-2 leading-relaxed" style={{ color:'#64748B' }}>💡 {card.hint}</p>
             )}
             <p className="text-xs mt-4" style={{ color:'#3A4560' }}>Swipe right ✓ · Swipe left ✗</p>
+            {Speaker.isSupported() && (
+              <button
+                onClick={e => { e.stopPropagation(); Speaker.speak(card.back + (card.hint ? '. Hint: ' + card.hint : '')) }}
+                title="Read answer aloud"
+                className="mt-3 w-8 h-8 rounded-full flex items-center justify-center transition-all active:scale-90"
+                style={{ background:`${color}22`, border:`1px solid ${color}44`, color }}>
+                <span style={{fontSize:14}}>🔊</span>
+              </button>
+            )}
           </>
         )}
       </div>
