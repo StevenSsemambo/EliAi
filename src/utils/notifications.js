@@ -1,23 +1,15 @@
 /**
- * ELIMU LEARN — PUSH NOTIFICATION SERVICE
- * ─────────────────────────────────────────────────────────────────
- * PWA notifications using the Web Notifications API + ServiceWorker.
- * Works on Android. iOS 16.4+ with PWA installed.
- *
- * Notification types:
- *   1. Daily study reminder (at student's personal peak hour)
- *   2. Streak-at-risk alert (if no study by 8PM)
- *   3. Daily mission reminder (if mission not completed by 6PM)
- *   4. Forgetting curve alert (topics about to be forgotten)
- *   5. Weekly leaderboard update (Monday morning)
+ * EQLA LEARN — Smart Notification Service v2
+ * Contextual, data-driven notifications based on actual student behaviour.
+ * 100% offline — uses localStorage + Web Notifications API.
  */
 
-const NOTIF_KEY        = 'elimu_notif_permission'
-const SCHEDULE_KEY     = 'elimu_notif_schedule'
-const LAST_STUDY_KEY   = 'elimu_last_study_date'
-const STREAK_REMIND_KEY= 'elimu_streak_remind'
+const NOTIF_KEY         = 'elimu_notif_permission'
+const SCHEDULE_KEY      = 'elimu_notif_schedule'
+const LAST_STUDY_KEY    = 'elimu_last_study_date'
+const STUDY_HISTORY_KEY = 'elimu_study_history'  // array of {date, subjects, scores}
 
-// ── Permission handling ───────────────────────────────────────────
+// ── Permission ────────────────────────────────────────────────────
 export async function requestNotificationPermission() {
   if (!('Notification' in window)) return 'unsupported'
   if (Notification.permission === 'granted') return 'granted'
@@ -26,73 +18,47 @@ export async function requestNotificationPermission() {
   localStorage.setItem(NOTIF_KEY, result)
   return result
 }
-
 export function getNotificationPermission() {
   if (!('Notification' in window)) return 'unsupported'
   return Notification.permission
 }
-
 export function isNotificationsSupported() {
   return 'Notification' in window && 'serviceWorker' in navigator
 }
 
-// ── Show a notification immediately ──────────────────────────────
+// ── Show notification ─────────────────────────────────────────────
 export async function showNotification(title, body, options = {}) {
   if (Notification.permission !== 'granted') return false
-
-  const notifOptions = {
-    body,
-    icon: '/icons/icon-192.png',
-    badge: '/icons/icon-192.png',
-    vibrate: [200, 100, 200],
-    tag: options.tag || 'elimu-general',
-    renotify: options.renotify || false,
-    data: options.data || {},
-    actions: options.actions || [],
-    ...options,
+  const opts = {
+    body, icon:'/icons/icon-192.png', badge:'/icons/icon-192.png',
+    vibrate:[200,100,200], tag:options.tag||'elimu-general',
+    renotify:options.renotify||false, data:options.data||{},
+    actions:options.actions||[], ...options,
   }
-
   try {
-    // Use ServiceWorker for persistent notifications
     const reg = await navigator.serviceWorker?.ready
-    if (reg?.showNotification) {
-      await reg.showNotification(title, notifOptions)
-    } else {
-      new Notification(title, notifOptions)
-    }
+    if (reg?.showNotification) { await reg.showNotification(title, opts) }
+    else new Notification(title, opts)
     return true
-  } catch (e) {
-    // Fallback to basic Notification
-    try { new Notification(title, notifOptions); return true } catch { return false }
+  } catch(e) {
+    try { new Notification(title, opts); return true } catch { return false }
   }
 }
 
-// ── Notification scheduler (uses setTimeout + localStorage) ──────
-// Since we can't run a background server, we schedule using:
-// 1. Page visibility events (when app is open)
-// 2. Stored schedule checked on every app load
-// 3. ServiceWorker periodic sync where supported
-
+// ── Scheduler ────────────────────────────────────────────────────
 const schedules = []
 
-export function scheduleNotification(id, title, body, scheduledTime, options = {}) {
+export function scheduleNotification(id, title, body, scheduledTime, options={}) {
   const now = Date.now()
   const delay = scheduledTime - now
-  if (delay < 0) return  // Past time
-
-  // Store in localStorage for persistence
+  if (delay < 0) return
   const stored = getStoredSchedules()
   stored[id] = { title, body, scheduledTime, options }
   saveStoredSchedules(stored)
-
-  // Also set a live timeout if within 24 hours
   if (delay < 86400000) {
     const timeout = setTimeout(() => {
       showNotification(title, body, options)
-      // Remove from stored
-      const s = getStoredSchedules()
-      delete s[id]
-      saveStoredSchedules(s)
+      const s = getStoredSchedules(); delete s[id]; saveStoredSchedules(s)
     }, delay)
     schedules.push({ id, timeout })
   }
@@ -101,184 +67,208 @@ export function scheduleNotification(id, title, body, scheduledTime, options = {
 export function cancelNotification(id) {
   const idx = schedules.findIndex(s => s.id === id)
   if (idx >= 0) { clearTimeout(schedules[idx].timeout); schedules.splice(idx, 1) }
-  const stored = getStoredSchedules()
-  delete stored[id]
-  saveStoredSchedules(stored)
+  const stored = getStoredSchedules(); delete stored[id]; saveStoredSchedules(stored)
 }
 
 function getStoredSchedules() {
   try { return JSON.parse(localStorage.getItem(SCHEDULE_KEY) || '{}') } catch { return {} }
 }
-function saveStoredSchedules(s) {
-  localStorage.setItem(SCHEDULE_KEY, JSON.stringify(s))
-}
+function saveStoredSchedules(s) { localStorage.setItem(SCHEDULE_KEY, JSON.stringify(s)) }
 
-// ── Check stored schedules on app load ───────────────────────────
 export async function checkPendingNotifications() {
   if (Notification.permission !== 'granted') return
   const stored = getStoredSchedules()
-  const now    = Date.now()
-  const updated = {}
-
+  const now = Date.now(); const updated = {}
   for (const [id, notif] of Object.entries(stored)) {
     if (notif.scheduledTime <= now) {
-      // Fire immediately (was scheduled while app was closed)
-      await showNotification(notif.title, notif.body, notif.options || {})
+      await showNotification(notif.title, notif.body, notif.options||{})
     } else {
       updated[id] = notif
-      // Re-schedule timeout
       const delay = notif.scheduledTime - now
-      if (delay < 86400000) {
-        setTimeout(() => showNotification(notif.title, notif.body, notif.options || {}), delay)
-      }
+      if (delay < 86400000) setTimeout(() => showNotification(notif.title, notif.body, notif.options||{}), delay)
     }
   }
   saveStoredSchedules(updated)
 }
 
-// ── Smart notification scheduler ─────────────────────────────────
-export async function scheduleSmartNotifications(studentId, studyHabits) {
-  if (Notification.permission !== 'granted') return
+// ── Study history tracking ────────────────────────────────────────
+function getStudyHistory() {
+  try { return JSON.parse(localStorage.getItem(STUDY_HISTORY_KEY) || '[]') } catch { return [] }
+}
+function saveStudyHistory(h) { localStorage.setItem(STUDY_HISTORY_KEY, JSON.stringify(h.slice(-60))) } // keep 60 days
 
-  const now   = new Date()
+export function recordStudyActivity(subject, score, lessonId) {
+  const today = new Date().toDateString()
+  localStorage.setItem(LAST_STUDY_KEY, today)
+  cancelNotification('streak_risk')
+  const history = getStudyHistory()
+  const todayEntry = history.find(h => h.date === today)
+  if (todayEntry) {
+    if (subject && !todayEntry.subjects.includes(subject)) todayEntry.subjects.push(subject)
+    if (score !== undefined) todayEntry.scores.push({ subject, score, lessonId, ts: Date.now() })
+  } else {
+    history.push({
+      date: today,
+      subjects: subject ? [subject] : [],
+      scores: score !== undefined ? [{ subject, score, lessonId, ts: Date.now() }] : [],
+    })
+  }
+  saveStudyHistory(history)
+}
+
+// ── SMART contextual notifications ───────────────────────────────
+export async function scheduleSmartNotifications(studentId, profile, studyHabits) {
+  if (Notification.permission !== 'granted') return
+  const now = new Date()
   const today = now.toDateString()
 
-  // Cancel all existing study reminders before rescheduling
-  cancelNotification('daily_study')
-  cancelNotification('streak_risk')
-  cancelNotification('mission_remind')
-  cancelNotification('leaderboard')
-  cancelNotification('forgetting_curve')
+  // Cancel all existing
+  ['daily_study','streak_risk','mission_remind','leaderboard',
+   'forgetting_curve','weak_topic','exam_countdown','score_drill'].forEach(id => cancelNotification(id))
 
-  // ── 1. Daily study reminder at peak hour ──────────────────────
-  const peakHour = studyHabits?.peakHour?.hour ?? 19  // default 7PM
+  const history = getStudyHistory()
+  const lastStudy = localStorage.getItem(LAST_STUDY_KEY)
+
+  // ── 1. CONTEXTUAL DAILY REMINDER ─────────────────────────────
+  // Message depends on what the student actually needs
+  const peakHour = studyHabits?.peakHour?.hour ?? 19
   const reminderTime = new Date()
   reminderTime.setHours(peakHour, 0, 0, 0)
   if (reminderTime <= now) reminderTime.setDate(reminderTime.getDate() + 1)
 
-  const studyMessages = [
-    { title: '📚 Time to Study!', body: `It's your peak study time — you score ${studyHabits?.peakHour?.avgScore || 75}% at this hour. Open Elimu Learn now!` },
-    { title: '🧠 Your Brain is Ready!', body: 'Studies show this is your best learning time. Don\'t miss it!' },
-    { title: '⚡ Study Reminder', body: 'Your daily mission is waiting. Complete it to keep your streak alive!' },
-  ]
-  const sm = studyMessages[now.getDay() % studyMessages.length]
-  scheduleNotification('daily_study', sm.title, sm.body, reminderTime.getTime(), {
-    tag: 'study-reminder', actions: [{ action: 'open', title: 'Study Now' }],
+  let reminderTitle = '📚 Time to Study!'
+  let reminderBody = 'Your daily study session is waiting.'
+
+  if (profile) {
+    const { allWeakTopics, summary, examPredictions } = profile
+    // Find the highest-risk exam topic
+    const topRisk = Object.values(examPredictions || {}).flat()
+      .sort((a,b) => b.riskScore - a.riskScore)[0]
+    // Days since last study
+    const daysSinceStudy = lastStudy
+      ? Math.floor((Date.now() - new Date(lastStudy).getTime()) / 86400000) : 99
+
+    if (daysSinceStudy >= 3 && allWeakTopics?.[0]) {
+      const t = allWeakTopics[0]
+      reminderTitle = `⚠️ You haven't studied in ${daysSinceStudy} days!`
+      reminderBody = `Your forgetting curve shows you're about to lose retention on ${t.topic.replace(/_/g,' ')}. Quick 10-min revision now?`
+    } else if (topRisk && topRisk.mastery < 50) {
+      reminderTitle = `🎓 UNEB Risk: ${topRisk.topic.replace(/_/g,' ')}`
+      reminderBody = `This is a high-frequency exam topic and you've only mastered ${topRisk.mastery}%. Open Eqla to revise it now.`
+    } else if (allWeakTopics?.[0]) {
+      const t = allWeakTopics[0]
+      reminderTitle = `📖 Revise ${t.topic.replace(/_/g,' ')}`
+      reminderBody = `You scored ${t.score}% on this topic last time. A quick review now will boost your UNEB score.`
+    } else if (summary?.globalAvg) {
+      reminderTitle = `🧠 Keep your ${summary.globalAvg}% average going!`
+      reminderBody = `You've studied ${summary.studyDaysThisWeek}/7 days this week. Don't break the momentum!`
+    }
+  }
+
+  scheduleNotification('daily_study', reminderTitle, reminderBody, reminderTime.getTime(), {
+    tag:'study-reminder', actions:[{ action:'open', title:'Study Now' }]
   })
 
-  // ── 2. Streak-at-risk alert at 8PM ────────────────────────────
-  const lastStudy = localStorage.getItem(LAST_STUDY_KEY)
+  // ── 2. STREAK AT RISK (8PM if not studied today) ──────────────
   if (lastStudy !== today) {
-    const streakRisk = new Date()
-    streakRisk.setHours(20, 0, 0, 0)
-    if (streakRisk <= now) streakRisk.setDate(streakRisk.getDate() + 1)
-
+    const streakTime = new Date(); streakTime.setHours(20,0,0,0)
+    if (streakTime <= now) streakTime.setDate(streakTime.getDate()+1)
     scheduleNotification('streak_risk',
-      '🔥 Streak at Risk!',
-      'You haven\'t studied today. Log in now to protect your streak before midnight!',
-      streakRisk.getTime(),
-      { tag: 'streak-risk', renotify: true }
+      '🔥 Study streak at risk!',
+      "You haven't studied today. Log in now to protect your streak before midnight!",
+      streakTime.getTime(), { tag:'streak-risk', renotify:true }
     )
   }
 
-  // ── 3. Mission reminder at 6PM ────────────────────────────────
+  // ── 3. WEAK TOPIC DRILL — fires 30 min after daily reminder ──
+  if (profile?.allWeakTopics?.[0]) {
+    const t = profile.allWeakTopics[0]
+    const drillTime = new Date(reminderTime.getTime() + 30 * 60 * 1000)
+    scheduleNotification('weak_topic',
+      `⚡ Quick drill: ${t.topic.replace(/_/g,' ')}`,
+      `You scored ${t.score}% on ${t.topic.replace(/_/g,' ')} in ${t.subject}. A 5-minute drill now can push that above 80%.`,
+      drillTime.getTime(), { tag:'weak-topic' }
+    )
+  }
+
+  // ── 4. SCORE IMPROVEMENT NUDGE — fires if recent score was low ──
+  const recentScores = history.slice(-3).flatMap(h => h.scores || [])
+  const lowScore = recentScores.find(s => s.score < 50)
+  if (lowScore) {
+    const drillAt = new Date(); drillAt.setHours(15, 0, 0, 0)
+    if (drillAt <= now) drillAt.setDate(drillAt.getDate()+1)
+    scheduleNotification('score_drill',
+      `📉 You scored ${lowScore.score}% — let's fix that`,
+      `You got ${lowScore.score}% on ${lowScore.subject || 'your last quiz'}. Open Eqla for a targeted drill on exactly what you missed.`,
+      drillAt.getTime(), { tag:'score-drill' }
+    )
+  }
+
+  // ── 5. MISSION REMINDER (6PM if not done) ───────────────────
   const missionDone = localStorage.getItem(`elimu_mission_${today}`)
   if (!missionDone) {
-    const missionTime = new Date()
-    missionTime.setHours(18, 0, 0, 0)
-    if (missionTime <= now) missionTime.setDate(missionTime.getDate() + 1)
-
+    const missionTime = new Date(); missionTime.setHours(18,0,0,0)
+    if (missionTime <= now) missionTime.setDate(missionTime.getDate()+1)
     scheduleNotification('mission_remind',
-      '🎯 Daily Mission Waiting',
-      'You haven\'t completed today\'s AI-generated missions. Earn bonus XP before midnight!',
-      missionTime.getTime(),
-      { tag: 'mission-remind' }
+      '🎯 Daily Mission waiting',
+      "You haven't completed today's AI missions. Earn bonus XP before midnight!",
+      missionTime.getTime(), { tag:'mission-remind' }
     )
   }
 
-  // ── 4. Weekly leaderboard (Monday 9AM) ────────────────────────
+  // ── 6. WEEKLY LEADERBOARD (Monday 9AM) ──────────────────────
   const monday = new Date()
   const daysUntilMonday = (8 - monday.getDay()) % 7 || 7
   monday.setDate(monday.getDate() + daysUntilMonday)
-  monday.setHours(9, 0, 0, 0)
-
+  monday.setHours(9,0,0,0)
   scheduleNotification('leaderboard',
-    '🏆 New Leaderboard Week!',
-    'A fresh week of competition begins. Study hard to reach the top!',
-    monday.getTime(),
-    { tag: 'leaderboard' }
+    '🏆 New week, new leaderboard!',
+    'Fresh competition starts now. Study hard to reach the top this week.',
+    monday.getTime(), { tag:'leaderboard' }
   )
 }
 
-// ── Schedule forgetting curve review nudge ────────────────────────
-// Call this separately after checking getDueForReview so we only
-// notify when there are genuinely overdue lessons.
-export async function scheduleReviewNudge(dueItems = []) {
+// ── Forgetting curve review nudge ─────────────────────────────────
+export async function scheduleReviewNudge(dueItems=[]) {
   if (Notification.permission !== 'granted') return
   const settings = getNotifSettings()
   if (!settings.forgettingCurve) return
   cancelNotification('forgetting_curve')
-  if (!dueItems || dueItems.length === 0) return
-
-  const critical = dueItems.filter(d => d.urgency === 'critical').length
-  const hasCritical = critical > 0
-
-  // Fire at 4PM today, or in 30 minutes if already past 4PM
-  const fireAt = new Date()
-  fireAt.setHours(16, 0, 0, 0)
-  if (fireAt <= new Date()) {
-    // Already past 4PM — nudge in 30 minutes instead
-    fireAt.setTime(Date.now() + 30 * 60 * 1000)
-  }
-
-  const title = hasCritical
-    ? `🧠 ${critical} lesson${critical > 1 ? 's' : ''} fading fast!`
-    : `📖 ${dueItems.length} lesson${dueItems.length > 1 ? 's' : ''} ready for review`
-  const body = hasCritical
-    ? `You're about to forget ${critical} topic${critical > 1 ? 's' : ''}. Open Elimu Learn and do a quick review to lock in your knowledge!`
+  if (!dueItems?.length) return
+  const critical = dueItems.filter(d=>d.urgency==='critical').length
+  const fireAt = new Date(); fireAt.setHours(16,0,0,0)
+  if (fireAt <= new Date()) fireAt.setTime(Date.now() + 30*60*1000)
+  const title = critical
+    ? `🧠 ${critical} topic${critical>1?'s':''} fading fast!`
+    : `📖 ${dueItems.length} topic${dueItems.length>1?'s':''} ready for review`
+  const body = critical
+    ? `You're about to forget ${critical} topic${critical>1?'s':''}. Quick review to lock in your knowledge!`
     : `Spaced repetition time! Reviewing now takes 5 minutes and keeps knowledge fresh for weeks.`
-
   scheduleNotification('forgetting_curve', title, body, fireAt.getTime(), {
-    tag: 'forgetting-curve',
-    renotify: true,
-    data: { url: '/forgetting-curve' },
+    tag:'forgetting-curve', renotify:true, data:{ url:'/forgetting-curve' }
   })
 }
 
-// ── Record study activity (call after each quiz/lesson) ──────────
-export function recordStudyActivity() {
-  const today = new Date().toDateString()
-  localStorage.setItem(LAST_STUDY_KEY, today)
-  // Cancel streak-risk notification since student studied today
-  cancelNotification('streak_risk')
-}
-
-// ── Notification settings storage ────────────────────────────────
+// ── Notification settings ─────────────────────────────────────────
 const SETTINGS_KEY = 'elimu_notif_settings'
 
 export function getNotifSettings() {
   try {
     return JSON.parse(localStorage.getItem(SETTINGS_KEY) || JSON.stringify({
-      studyReminder: true,
-      streakAlert: true,
-      missionRemind: true,
-      leaderboard: true,
-      forgettingCurve: true,
+      studyReminder:true, streakAlert:true, missionRemind:true,
+      leaderboard:true, forgettingCurve:true, weakTopic:true, scoreDrill:true,
     }))
   } catch {
-    return { studyReminder:true, streakAlert:true, missionRemind:true, leaderboard:true, forgettingCurve:true }
+    return { studyReminder:true, streakAlert:true, missionRemind:true,
+             leaderboard:true, forgettingCurve:true, weakTopic:true, scoreDrill:true }
   }
 }
+export function saveNotifSettings(s) { localStorage.setItem(SETTINGS_KEY, JSON.stringify(s)) }
 
-export function saveNotifSettings(settings) {
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings))
-}
-
-// ── Test notification (for settings page) ────────────────────────
 export async function sendTestNotification() {
   return showNotification(
     '✅ Notifications Working!',
-    'Elimu Learn will now remind you to study at your peak time. Keep learning! 🧠',
-    { tag: 'test', vibrate: [300, 100, 300, 100, 300] }
+    'Eqla will now send smart study reminders based on your progress. Keep learning! 🧠',
+    { tag:'test', vibrate:[300,100,300,100,300] }
   )
 }
