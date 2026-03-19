@@ -11,16 +11,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['@mlc-ai/web-llm'],
-      output: {
-        manualChunks: {
-          // Split heavy AI files into separate lazy-loaded chunks
-          // Mobile loads only what it needs, not the whole bundle at startup
-          'ai-chatbot':  ['./src/ai/chatbot.js'],
-          'ai-brain':    ['./src/ai/brain.js'],
-          'ai-learning': ['./src/ai/learning.js'],
-          'ai-engine':   ['./src/ai/llmEngine.js'],
-        }
-      }
+      // No manualChunks needed — React.lazy() in App.jsx handles code splitting automatically
     },
   },
   plugins: [
