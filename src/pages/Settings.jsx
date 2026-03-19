@@ -4,7 +4,7 @@ import { useUser } from '../context/UserContext.jsx'
 import { useTheme, THEMES, BACKGROUNDS } from '../context/ThemeContext.jsx'
 import { useOffline } from '../hooks/useOffline.js'
 import { syncDB } from '../db/syncDB.js'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import Navbar from '../components/Navbar.jsx'
 
 const AVATARS = ['🦁','🐯','🦊','🐺','🦅','🐘','🦒','🦓','🐬','🦋']
@@ -48,6 +48,18 @@ export default function Settings() {
   const navigate = useNavigate()
 
   const [soundOn, setSoundOn]     = useState(SoundEngine.isEnabled())
+  const [ttsOn, setTtsOn]         = useState(Speaker.isEnabled())
+  const [ttsRate, setTtsRate]     = useState(Speaker.getRate())
+  const [ttsVoiceIdx, setTtsVoiceIdx] = useState(Speaker.getVoiceIdx())
+  const [voices, setVoices]       = useState([])
+  // Load available voices (may load async in some browsers)
+  useState(() => {
+    if (!Speaker.isSupported()) return
+    const load = () => setVoices(Speaker.getVoices())
+    load()
+    window.speechSynthesis?.addEventListener('voiceschanged', load)
+    return () => window.speechSynthesis?.removeEventListener('voiceschanged', load)
+  })
   const [syncing, setSyncing]     = useState(false)
   const [syncMsg, setSyncMsg]     = useState('')
   const [notifPerm, setNotifPerm] = useState(
@@ -61,6 +73,21 @@ export default function Settings() {
   function toggleSound() {
     const next = !soundOn; setSoundOn(next); SoundEngine.setEnabled(next)
     if (next) SoundEngine.tap()
+  }
+
+  function toggleTts() {
+    const next = !ttsOn; setTtsOn(next); Speaker.setEnabled(next)
+    if (next) Speaker.speak('Text to speech is now on')
+  }
+
+  function changeTtsRate(r) {
+    setTtsRate(r); Speaker.setRate(r)
+  }
+
+  function changeTtsVoice(i) {
+    setTtsVoiceIdx(i); Speaker.setVoiceIdx(i)
+    const v = Speaker.getVoices()[i]
+    if (v) Speaker.speak('This is ' + v.name)
   }
 
   function toggleReminder(key) {
@@ -187,6 +214,61 @@ export default function Settings() {
             value={soundOn} onChange={toggleSound} color="#14B8A6"
           />
         </Section>
+
+        {/* ── Text to Speech ── */}
+        {Speaker.isSupported() && (
+          <Section title="🗣️ Text to Speech">
+            <Toggle
+              label="Read content aloud" sub="Lessons, questions, flashcards, AI replies"
+              value={ttsOn} onChange={toggleTts} color="#7C3AED"
+            />
+            {ttsOn && (
+              <div className="mt-3 space-y-3">
+                {/* Speed slider */}
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <p className="text-xs font-medium" style={{ color:'var(--subtext)' }}>Reading speed</p>
+                    <p className="text-xs font-bold" style={{ color:'var(--accent)' }}>{ttsRate.toFixed(1)}×</p>
+                  </div>
+                  <input type="range" min="0.5" max="2" step="0.1"
+                    value={ttsRate}
+                    onChange={e => changeTtsRate(parseFloat(e.target.value))}
+                    className="w-full accent-purple-500"
+                    style={{ accentColor:'#7C3AED' }}
+                  />
+                  <div className="flex justify-between text-xs mt-0.5" style={{ color:'var(--muted)' }}>
+                    <span>Slow</span><span>Normal</span><span>Fast</span>
+                  </div>
+                </div>
+                {/* Voice selector */}
+                {voices.length > 1 && (
+                  <div>
+                    <p className="text-xs font-medium mb-1" style={{ color:'var(--subtext)' }}>Voice</p>
+                    <div className="space-y-1 max-h-32 overflow-y-auto">
+                      {voices.slice(0, 8).map((v, i) => (
+                        <button key={i} onClick={() => changeTtsVoice(i)}
+                          className="w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-all"
+                          style={{
+                            background: ttsVoiceIdx === i ? 'rgba(124,58,237,0.15)' : 'var(--surface)',
+                            color: ttsVoiceIdx === i ? '#A78BFA' : 'var(--subtext)',
+                            border: `1px solid ${ttsVoiceIdx === i ? 'rgba(124,58,237,0.4)' : 'var(--border)'}`,
+                          }}>
+                          {ttsVoiceIdx === i ? '✓ ' : ''}{v.name}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Test button */}
+                <button onClick={() => Speaker.speak('Hello! I am your EqLa study assistant. Text to speech is working correctly.')}
+                  className="w-full py-2.5 rounded-xl text-sm font-bold transition-all active:scale-95"
+                  style={{ background:'rgba(124,58,237,0.1)', color:'#A78BFA', border:'1px solid rgba(124,58,237,0.25)' }}>
+                  🔊 Test Voice
+                </button>
+              </div>
+            )}
+          </Section>
+        )}
 
         {/* ── Notifications ── */}
         <Section title="🔔 Study Reminders">
