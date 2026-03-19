@@ -138,6 +138,7 @@ export default function Quiz() {
   const subject = state?.subject
   const topicId = state?.topicId
   const isRetry = state?.isRetry || false
+  const autoHandsFree = state?.handsFree || false
 
   const [cur, setCur]             = useState(0)
   const [answers, setAnswers]     = useState([])
@@ -153,6 +154,7 @@ export default function Quiz() {
   const [curCog, setCurCog]       = useState(null)
   const [retryData, setRetryData] = useState(null)
   const [showRetry, setShowRetry] = useState(false)
+  const [handsFree, setHandsFree] = useState(false)
   const [qSpeaking, setQSpeaking] = useState(false)
 
   const startTime  = useRef(Date.now())
@@ -173,6 +175,20 @@ export default function Quiz() {
 
   useEffect(() => { setQStart(Date.now()); setCurCog(null); Speaker.stop(); setQSpeaking(false) }, [cur])
   useEffect(() => { return () => Speaker.stop() }, [])
+  // Auto-enable hands-free if launched from lesson hands-free mode
+  useEffect(() => { if (autoHandsFree) setHandsFree(true) }, [autoHandsFree])
+  // Auto-speak question when in hands-free mode
+  useEffect(() => {
+    if (!handsFree || !questions.length) return
+    const q = questions[cur]
+    if (!q) return
+    const delay = cur === 0 ? 800 : 400
+    const t = setTimeout(() => {
+      const text = `Question ${cur+1} of ${questions.length}. ${q.question}. A: ${q.options[0]}. B: ${q.options[1]}. C: ${q.options[2]}. D: ${q.options[3]}.`
+      Speaker.speak(text)
+    }, delay)
+    return () => clearTimeout(t)
+  }, [cur, handsFree, questions.length])
 
   useEffect(() => {
     if (!active || confirmed) return
@@ -215,6 +231,14 @@ export default function Quiz() {
     const qCog    = { questionId:q.id, question:q.question, timeSpent:spent, isCorrect:ok, ...cog }
     const newCog  = [...cogData, qCog]; setCogData(newCog)
     ok ? (SoundEngine.correct(), Haptics.correct()) : (SoundEngine.wrong(), Haptics.wrong())
+    // Hands-free: speak result
+    if (handsFree) {
+      const q2 = questions[cur]
+      const resultText = ok
+        ? `Correct! ${q2.explanation || ''}`
+        : `Incorrect. The correct answer was ${q2.answer}. ${q2.explanation || ''}`
+      setTimeout(() => Speaker.speak(resultText), 300)
+    }
     const newAns  = [...answers, final]; setAnswers(newAns); setConfirmed(true)
     if (!ok && final !== null) {
       setExplanations(p => ({ ...p, [cur]: generateExplanation(q, final, q.answer) }))
@@ -300,6 +324,13 @@ export default function Quiz() {
         <div className="flex items-center justify-between mb-3">
           <button onClick={() => navigate(-1)} className="text-sm" style={{ color:theme.muted }}>✕ Exit</button>
           <div className="flex items-center gap-1">
+            {Speaker.isSupported() && (
+              <button onClick={() => { setHandsFree(h => !h); if (handsFree) Speaker.stop() }}
+                className="text-xs px-2 py-1 rounded-lg font-bold transition-all"
+                style={{ background: handsFree ? 'rgba(13,148,136,0.2)' : theme.card, color: handsFree ? '#5EEAD4' : theme.muted, border:`1px solid ${handsFree ? '#14B8A6' : theme.border}` }}>
+                {handsFree ? '🎧 On' : '🎧'}
+              </button>
+            )}
             {isRetry && <span className="text-xs px-2 py-0.5 rounded-full font-bold"
               style={{ background:'rgba(239,68,68,0.15)', color:'#EF4444' }}>🔁 Retry</span>}
             <span className="text-sm font-semibold" style={{ color:theme.muted }}>{cur+1} / {questions.length}</span>
@@ -354,7 +385,24 @@ export default function Quiz() {
           )}
         </div>
 
-        <div className="space-y-3">
+        {/* Hands-free mode: big tap buttons */}
+        {handsFree && !confirmed && (
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            {q.options.map((opt, i) => (
+              <button key={i} onClick={() => { pick(opt); setTimeout(() => confirm(opt), 200) }}
+                className="rounded-2xl flex flex-col items-center justify-center gap-2 transition-all active:scale-95"
+                style={{ background: theme.card, border:`2px solid ${theme.border}`, minHeight:100, padding:16 }}>
+                <span className="w-10 h-10 rounded-full flex items-center justify-center text-lg font-extrabold"
+                  style={{ background:`${theme.accent}22`, color:theme.accent }}>
+                  {['A','B','C','D'][i]}
+                </span>
+                <span className="text-sm font-semibold text-center leading-snug" style={{ color:theme.text }}>{opt}</span>
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="space-y-3" style={{ display: handsFree && !confirmed ? 'none' : undefined }}>
           {q.options.map((opt, i) => {
             let bg, border, opacity = 1
             if (!confirmed) {
