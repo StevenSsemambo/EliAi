@@ -14,7 +14,7 @@ const SUBJECT_COLORS = { mathematics:'#0D9488', physics:'#06B6D4', biology:'#16A
 const DIFF_LABELS    = ['','Foundation','Developing','Intermediate','Advanced','Expert']
 const DIFF_COLORS    = ['','#94A3B8','#F59E0B','#06B6D4','#7C3AED','#EF4444']
 
-function Section({ title, sub, children, accent }) {
+function Section({ title, sub, children }) {
   const { theme } = useTheme()
   return (
     <div className="rounded-2xl overflow-hidden mb-4" style={{ background: theme.card, border:`1px solid ${theme.border}` }}>
@@ -37,6 +37,20 @@ function ProgressBar({ value, color, height = 6 }) {
   )
 }
 
+// Small reusable speak button
+function SpeakBtn({ text, speakFn, size = 8 }) {
+  if (!Speaker.isSupported()) return null
+  return (
+    <button
+      onClick={e => { e.stopPropagation(); speakFn(text) }}
+      title="Read aloud"
+      className={`w-${size} h-${size} rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90`}
+      style={{ background:'rgba(255,255,255,0.06)', border:'1px solid rgba(255,255,255,0.12)', color:'#64748B' }}>
+      <span style={{fontSize: size === 6 ? 11 : 13}}>🔊</span>
+    </button>
+  )
+}
+
 export default function AITutor() {
   const { student } = useUser()
   const { theme }   = useTheme()
@@ -47,8 +61,6 @@ export default function AITutor() {
   const [mission, setMission]   = useState(null)
   const [missionDone, setMissionDone] = useState([])
   const [loading, setLoading]   = useState(true)
-  const [speaking, setSpeaking]   = useState(false)
-  const [speakText, setSpeakText] = useState('')
 
   useEffect(() => {
     if (!student) { setLoading(false); return }
@@ -65,14 +77,9 @@ export default function AITutor() {
       .catch(() => { clearTimeout(timeout); setLoading(false) })
   }, [student])
 
-  function speakContent(text) {
-    if (speaking && speakText === text) { Speaker.stop(); setSpeaking(false); setSpeakText(''); return }
+  function speakText(text) {
     Speaker.stop()
     Speaker.speak(text)
-    setSpeaking(true); setSpeakText(text)
-    const poll = setInterval(() => {
-      if (!Speaker.isSpeaking()) { setSpeaking(false); setSpeakText(''); clearInterval(poll) }
-    }, 500)
   }
 
   async function completeTask(task) {
@@ -94,7 +101,6 @@ export default function AITutor() {
     <div className="min-h-screen pb-28" style={{ background: theme.bg }}>
       <style>{`@keyframes slideUp{from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}}`}</style>
 
-      {/* Header */}
       <div className="px-5 pt-12 pb-4 relative overflow-hidden"
         style={{ background: theme.surface, borderBottom:`1px solid ${theme.border}` }}>
         <div className="absolute inset-0 pointer-events-none"
@@ -102,9 +108,7 @@ export default function AITutor() {
         <button onClick={() => navigate('/dashboard')} className="text-sm mb-3 block" style={{ color: theme.muted }}>← Dashboard</button>
         <div className="flex items-center gap-3">
           <div className="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl"
-            style={{ background:'linear-gradient(135deg,#7C3AED22,#0891B222)', border:'1px solid #7C3AED44' }}>
-            🧠
-          </div>
+            style={{ background:'linear-gradient(135deg,#7C3AED22,#0891B222)', border:'1px solid #7C3AED44' }}>🧠</div>
           <div>
             <h1 className="text-2xl font-black" style={{ color: theme.text }}>AI Smart Tutor</h1>
             <p className="text-xs" style={{ color: theme.muted }}>
@@ -114,7 +118,6 @@ export default function AITutor() {
         </div>
       </div>
 
-      {/* Tabs */}
       <div className="flex gap-1.5 px-5 pt-4 pb-2 overflow-x-auto">
         {TABS.map(t => (
           <button key={t.id} onClick={() => { SoundEngine.tap(); setTab(t.id) }}
@@ -152,17 +155,16 @@ export default function AITutor() {
           </div>
         )}
 
-        {/* ─── SMART TUTOR TAB ─── */}
+        {/* TUTOR TAB */}
         {!loading && analysis?.summary.totalCompleted > 0 && tab === 'tutor' && (
           <>
-            {/* Subject strength overview */}
             <Section title="📊 Your Learning Profile" sub="AI-calculated from your quiz performance">
               <div className="grid grid-cols-2 gap-2 mb-3">
                 {[
                   ['Global Average', `${analysis.summary.globalAvg}%`, '#4ADE80'],
-                  ['Lessons Done',   analysis.summary.totalCompleted, '#F59E0B'],
-                  ['Days Active',    `${analysis.summary.studyDaysThisWeek}/7`, '#06B6D4'],
-                  ['Streak Risk',    analysis.summary.streakRisk ? '⚠ Low' : '✓ Good', analysis.summary.streakRisk ? '#EF4444' : '#4ADE80'],
+                  ['Lessons Done', analysis.summary.totalCompleted, '#F59E0B'],
+                  ['Days Active', `${analysis.summary.studyDaysThisWeek}/7`, '#06B6D4'],
+                  ['Streak Risk', analysis.summary.streakRisk ? '⚠ Low' : '✓ Good', analysis.summary.streakRisk ? '#EF4444' : '#4ADE80'],
                 ].map(([l,v,c]) => (
                   <div key={l} className="rounded-xl p-3" style={{ background: theme.surface }}>
                     <div className="font-black text-lg" style={{ color:c }}>{v}</div>
@@ -170,7 +172,6 @@ export default function AITutor() {
                   </div>
                 ))}
               </div>
-
               {Object.entries(analysis.subjectStrength).map(([subj, str]) => {
                 const diff = analysis.adaptiveDifficulty[subj]
                 const col = SUBJECT_COLORS[subj]
@@ -182,12 +183,8 @@ export default function AITutor() {
                         <span className="text-sm font-bold capitalize" style={{ color: theme.text }}>{subj}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-xs font-bold" style={{ color: DIFF_COLORS[diff] }}>
-                          {DIFF_LABELS[diff]}
-                        </span>
-                        <span className="text-xs" style={{ color: theme.muted }}>
-                          {analysis.bySubject[subj].avgScore}% avg
-                        </span>
+                        <span className="text-xs font-bold" style={{ color: DIFF_COLORS[diff] }}>{DIFF_LABELS[diff]}</span>
+                        <span className="text-xs" style={{ color: theme.muted }}>{analysis.bySubject[subj].avgScore}% avg</span>
                       </div>
                     </div>
                     <ProgressBar value={str} color={col} height={8} />
@@ -202,39 +199,31 @@ export default function AITutor() {
               })}
             </Section>
 
-            {/* Smart recommendations */}
+            {/* Recommendations — nav button + speak button side by side */}
             <Section title="🎯 Recommended Next" sub="Personalised based on your weak areas and UNEB priorities">
               {recs.map((rec, i) => (
-                <button key={i}
-                  onClick={() => { SoundEngine.tap(); if(rec.subject) navigate(`/subject/${rec.subject}`) }}
-                  className="w-full text-left rounded-xl p-3 flex items-center gap-3 mb-2 last:mb-0 transition-all active:scale-95"
-                  style={{ background: theme.surface, border:`1px solid ${theme.border}`, animation:`slideUp 0.3s ease both`, animationDelay:`${i*0.05}s` }}>
-                  <span className="text-2xl flex-shrink-0">{rec.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm font-bold capitalize truncate" style={{ color: theme.text }}>
-                      {rec.topic ? rec.topic.replace(/_/g,' ') : rec.subject}
-                    </p>
-                    <p className="text-xs" style={{ color: theme.muted }}>{rec.reason}</p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <span className="text-xs px-2 py-0.5 rounded-full capitalize"
+                <div key={i} className="flex items-center gap-2 mb-2 last:mb-0">
+                  <button
+                    onClick={() => { SoundEngine.tap(); if(rec.subject) navigate(`/subject/${rec.subject}`) }}
+                    className="flex-1 text-left rounded-xl p-3 flex items-center gap-3 transition-all active:scale-95"
+                    style={{ background: theme.surface, border:`1px solid ${theme.border}`, animation:`slideUp 0.3s ease both`, animationDelay:`${i*0.05}s` }}>
+                    <span className="text-2xl flex-shrink-0">{rec.icon}</span>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-bold capitalize truncate" style={{ color: theme.text }}>
+                        {rec.topic ? rec.topic.replace(/_/g,' ') : rec.subject}
+                      </p>
+                      <p className="text-xs" style={{ color: theme.muted }}>{rec.reason}</p>
+                    </div>
+                    <span className="text-xs px-2 py-0.5 rounded-full capitalize flex-shrink-0"
                       style={{ background:`${SUBJECT_COLORS[rec.subject]}22`, color: SUBJECT_COLORS[rec.subject] }}>
                       {rec.subject}
                     </span>
-                  </div>
-                </button>
-                  {Speaker.isSupported() && (
-                    <button onClick={() => speakContent((rec.topic ? rec.topic.replace(/_/g,' ') : rec.subject) + '. ' + rec.reason)}
-                      className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
-                      style={{ background: theme.card, color: theme.muted, border:`1px solid ${theme.border}` }}>
-                      <span style={{fontSize:13}}>🔊</span>
-                    </button>
-                  )}
-                  </div>
+                  </button>
+                  <SpeakBtn text={(rec.topic ? rec.topic.replace(/_/g,' ') : rec.subject) + '. ' + rec.reason} speakFn={speakText} />
+                </div>
               ))}
             </Section>
 
-            {/* Adaptive difficulty info */}
             <Section title="📈 Your Adaptive Level" sub="Quiz difficulty auto-adjusts to keep you challenged">
               {Object.entries(analysis.adaptiveDifficulty).map(([subj, lvl]) => (
                 <div key={subj} className="flex items-center gap-3 mb-2 last:mb-0 p-2 rounded-xl"
@@ -262,10 +251,10 @@ export default function AITutor() {
           </>
         )}
 
-        {/* ─── DAILY MISSION TAB ─── */}
+        {/* MISSION TAB */}
         {!loading && tab === 'mission' && mission && (
           <>
-            <Section title="📅 Today's Mission" sub={`Personalised for you · Resets at midnight`}>
+            <Section title="📅 Today's Mission" sub="Personalised for you · Resets at midnight">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-bold" style={{ color: theme.text }}>
                   {missionDone.length}/{mission.tasks.length} complete
@@ -294,13 +283,7 @@ export default function AITutor() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
                             <p className="font-bold text-sm" style={{ color: done ? '#4ADE80' : theme.text }}>{task.title}</p>
-                            {Speaker.isSupported() && (
-                              <button onClick={e => { e.stopPropagation(); speakContent(task.title + '. ' + task.subtitle) }}
-                                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
-                                style={{ background: theme.surface, color: theme.muted, border:`1px solid ${theme.border}` }}>
-                                <span style={{fontSize:11}}>🔊</span>
-                              </button>
-                            )}
+                            <SpeakBtn text={task.title + '. ' + task.subtitle} speakFn={speakText} size={6} />
                           </div>
                           <p className="text-xs mt-0.5" style={{ color: theme.muted }}>{task.subtitle}</p>
                           <div className="flex items-center gap-2 mt-2">
@@ -338,7 +321,7 @@ export default function AITutor() {
           </>
         )}
 
-        {/* ─── EXAM PREDICTOR TAB ─── */}
+        {/* EXAM TAB */}
         {!loading && tab === 'exam' && analysis && (
           <Section title="🎓 UNEB Exam Predictor" sub="Rule-based analysis of past paper frequency × your mastery gap">
             <div className="rounded-xl p-3 mb-4" style={{ background:'rgba(245,158,11,0.08)', border:'1px solid rgba(245,158,11,0.2)' }}>
@@ -386,7 +369,7 @@ export default function AITutor() {
           </Section>
         )}
 
-        {/* ─── MISTAKE ENGINE TAB ─── */}
+        {/* MISTAKES TAB */}
         {!loading && tab === 'mistakes' && analysis && (
           <Section title="⚡ Mistake Pattern Engine" sub="Analyses your wrong answers to find patterns in your errors">
             {analysis.dominantMistakes.length === 0 ? (
@@ -418,8 +401,6 @@ export default function AITutor() {
                     </div>
                   )
                 })}
-
-                {/* Drill recommendation */}
                 <div className="mt-4 rounded-xl p-3"
                   style={{ background:`rgba(124,58,237,0.08)`, border:'1px solid rgba(124,58,237,0.25)' }}>
                   <p className="text-xs font-bold mb-1" style={{ color:'#A78BFA' }}>
