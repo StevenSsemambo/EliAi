@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import Navbar from '../components/Navbar.jsx'
 
 // ── Full curriculum map (mirrors Lesson.jsx / Dashboard.jsx) ──────
