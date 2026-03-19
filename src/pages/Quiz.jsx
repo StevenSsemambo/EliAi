@@ -11,7 +11,7 @@ import {
 } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
 import { calculateScore } from '../utils/scoring.js'
-import { SoundEngine, Haptics } from '../utils/soundEngine.js'
+import { SoundEngine, Haptics, Speaker } from '../utils/soundEngine.js'
 import { recordStudyActivity } from '../utils/notifications.js'
 
 const QUESTION_TIME = 30
@@ -153,6 +153,7 @@ export default function Quiz() {
   const [curCog, setCurCog]       = useState(null)
   const [retryData, setRetryData] = useState(null)
   const [showRetry, setShowRetry] = useState(false)
+  const [qSpeaking, setQSpeaking] = useState(false)
 
   const startTime  = useRef(Date.now())
   const timerRef   = useRef(null)
@@ -170,7 +171,8 @@ export default function Quiz() {
     })
   }, [student?.id])
 
-  useEffect(() => { setQStart(Date.now()); setCurCog(null) }, [cur])
+  useEffect(() => { setQStart(Date.now()); setCurCog(null); Speaker.stop(); setQSpeaking(false) }, [cur])
+  useEffect(() => { return () => Speaker.stop() }, [])
 
   useEffect(() => {
     if (!active || confirmed) return
@@ -186,6 +188,17 @@ export default function Quiz() {
     }, 1000)
     return () => clearInterval(timerRef.current)
   }, [cur, active])
+
+  function speakQuestion() {
+    if (!q) return
+    if (qSpeaking) { Speaker.stop(); setQSpeaking(false); return }
+    const text = q.question + '. ' + q.options.map((o,i) => ['A','B','C','D'][i]+': '+o).join('. ')
+    Speaker.speak(text)
+    setQSpeaking(true)
+    const poll = setInterval(() => {
+      if (!Speaker.isSpeaking()) { setQSpeaking(false); clearInterval(poll) }
+    }, 500)
+  }
 
   function pick(opt) { if (confirmed) return; SoundEngine.tap(); Haptics.tap(); setSelected(opt) }
 
@@ -329,7 +342,17 @@ export default function Quiz() {
           </div>
         )}
 
-        <p className="font-extrabold text-lg leading-snug mb-6" style={{ color:theme.text }}>{q.question}</p>
+        <div className="flex items-start gap-2 mb-6">
+          <p className="font-extrabold text-lg leading-snug flex-1" style={{ color:theme.text }}>{q.question}</p>
+          {Speaker.isSupported() && (
+            <button onClick={speakQuestion}
+              title={qSpeaking ? 'Stop' : 'Read question aloud'}
+              className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center transition-all active:scale-90"
+              style={{ background: qSpeaking ? `${theme.accent}33` : theme.card, border:`1px solid ${qSpeaking ? theme.accent : theme.border}`, color: qSpeaking ? theme.accent : theme.muted }}>
+              <span style={{fontSize:16}}>{qSpeaking ? '⏹' : '🔊'}</span>
+            </button>
+          )}
+        </div>
 
         <div className="space-y-3">
           {q.options.map((opt, i) => {
