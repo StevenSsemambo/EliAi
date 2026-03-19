@@ -6,7 +6,7 @@ import { calculateScore } from '../utils/scoring.js'
 import { SoundEngine, Haptics, Speaker } from '../utils/soundEngine.js'
 import { saveDetailedAttempt } from '../ai/brain.js'
 import { recordStudySession } from '../ai/learning.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 
 const SUBJ_FILES={
   mathematics:{s1:['algebra','bearings_scale_drawing','commercial_arithmetic','geometry','linear_equations','mensuration','number_theory','numbers','ratio_indices','sets','statistics_intro'],s2:['coordinate_geometry','logarithms','matrices_intro','quadratic','simultaneous','statistics','trigonometry','vectors_2d','vectors_intro'],s3:['coordinate_sequences','differentiation','earth_geometry','functions','integration','linear_programming','matrices_probability'],s4:['calculus','financial_maths','inequalities','loci_construction','permcomb','transformation_geometry','trigonometry_advanced','vectors'],s5:['complex_numbers','differential_equations','further_calculus','mechanics','numerical_methods','probability_advanced'],s6:['applied_mathematics','further_pure','number_theory','pure_mathematics','statistics_probability']},
