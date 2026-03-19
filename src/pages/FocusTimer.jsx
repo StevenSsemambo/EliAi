@@ -39,7 +39,7 @@ export default function FocusTimer(){
   async function finish(){
     setRunning(false);setDone(true)
     SoundEngine.timerComplete();Haptics.timerDone()
-    if(Speaker.isSupported()&&Speaker.isEnabled()) Speaker.speak('Focus session complete! Great work. Take a short break.')
+    if(Speaker.isSupported()&&Speaker.isEnabled())Speaker.speak('Focus session complete! Great work. Take a short break.')
     setBurst(true);setTimeout(()=>setBurst(false),1400)
     if(student){
       await studentDB.update(student.id,{total_xp:(student.total_xp||0)+sess.xp})
