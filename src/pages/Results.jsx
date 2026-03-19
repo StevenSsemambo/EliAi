@@ -21,12 +21,11 @@ export default function Results(){
 
   useEffect(()=>{
     if(passed){setBurst(true);setTimeout(()=>setBurst(false),1200)}
-    // Auto-speak result summary
-    if(Speaker.isSupported() && Speaker.isEnabled()) {
-      const summary = passed
-        ? `Congratulations! You scored ${score}%, getting ${correct} out of ${questions.length} correct. Well done!`
-        : `You scored ${score}%, getting ${correct} out of ${questions.length} correct. Review the explanations below and try again.`
-      setTimeout(() => Speaker.speak(summary), 800)
+    if(Speaker.isSupported()&&Speaker.isEnabled()){
+      const s=passed
+        ?`Congratulations! You scored ${score}%, getting ${correct} out of ${questions.length} correct. Well done!`
+        :`You scored ${score}%, getting ${correct} out of ${questions.length} correct. Review the explanations below and try again.`
+      setTimeout(()=>Speaker.speak(s),800)
     }
     // Check for newly unlocked game levels
     if(student && passed){
@@ -48,16 +47,13 @@ export default function Results(){
     }
   },[])
 
-  function speakReview(q, i, userAnswer) {
-    if (speakingIdx === i) { Speaker.stop(); setSpeakingIdx(null); return }
+  function speakReview(q,i,userAns){
+    if(speakingIdx===i){Speaker.stop();setSpeakingIdx(null);return}
     Speaker.stop()
-    const ok = userAnswer === q.answer
-    const text = `Question ${i+1}. ${q.question}. ${ok ? 'Correct.' : `Incorrect. You answered ${userAnswer || 'nothing'}. The correct answer is ${q.answer}.`} ${q.explanation || ''}`
-    Speaker.speak(text)
-    setSpeakingIdx(i)
-    const poll = setInterval(() => {
-      if (!Speaker.isSpeaking()) { setSpeakingIdx(null); clearInterval(poll) }
-    }, 500)
+    const ok=userAns===q.answer
+    const t=`Question ${i+1}. ${q.question}. ${ok?'Correct.':('Incorrect. '+(userAns?`You answered ${userAns}. `:'')+(q.answer?`The correct answer is ${q.answer}. `:''))}${q.explanation||''}`
+    Speaker.speak(t);setSpeakingIdx(i)
+    const poll=setInterval(()=>{if(!Speaker.isSpeaking()){setSpeakingIdx(null);clearInterval(poll)}},500)
   }
 
   async function share(){
@@ -99,7 +95,6 @@ export default function Results(){
           return(
             <div key={i} className="rounded-2xl p-4 page-delay-2"
               style={{background:ok?'rgba(34,197,94,0.05)':'rgba(239,68,68,0.07)',border:`1px solid ${ok?'rgba(34,197,94,0.18)':'rgba(239,68,68,0.3)'}`}}>
-              {/* Status badge + speak button */}
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <span className="text-base">{ok?'✅':'❌'}</span>
@@ -108,9 +103,8 @@ export default function Results(){
                     {ok?'Correct':'Incorrect'}
                   </span>
                 </div>
-                {Speaker.isSupported() && (
-                  <button onClick={() => speakReview(q, i, answers[i])}
-                    title={speakingIdx===i ? 'Stop' : 'Read aloud'}
+                {Speaker.isSupported()&&(
+                  <button onClick={()=>speakReview(q,i,answers[i])}
                     className="w-7 h-7 rounded-full flex items-center justify-center transition-all active:scale-90"
                     style={{background:'rgba(255,255,255,0.06)',border:'1px solid rgba(255,255,255,0.1)',color:speakingIdx===i?'#14B8A6':'#475569'}}>
                     <span style={{fontSize:12}}>{speakingIdx===i?'⏹':'🔊'}</span>
