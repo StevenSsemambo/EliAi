@@ -67,15 +67,12 @@ export default function QuickQuiz(){
     return()=>clearInterval(timerRef.current)
   },[cur,loading,confirmed])
 
-  function speakQuestion() {
-    if (!q) return
-    if (qSpeaking) { Speaker.stop(); setQSpeaking(false); return }
-    const text = q.question + '. ' + (q.options||[]).map((o,i)=>`${['A','B','C','D'][i]}: ${o}`).join('. ')
-    Speaker.speak(text)
-    setQSpeaking(true)
-    const poll = setInterval(()=>{
-      if(!Speaker.isSpeaking()){setQSpeaking(false);clearInterval(poll)}
-    },500)
+  function speakQuestion(){
+    if(!q)return
+    if(qSpeaking){Speaker.stop();setQSpeaking(false);return}
+    const t=q.question+'. '+(q.options||[]).map((o,i)=>['A','B','C','D'][i]+': '+o).join('. ')
+    Speaker.speak(t);setQSpeaking(true)
+    const poll=setInterval(()=>{if(!Speaker.isSpeaking()){setQSpeaking(false);clearInterval(poll)}},500)
   }
 
   async function confirm(forced){
@@ -161,12 +158,11 @@ export default function QuickQuiz(){
             </div>
             <div className="flex items-start gap-2 mb-6">
               <p className="text-white font-display font-extrabold text-lg leading-snug flex-1">{q.question}</p>
-              {Speaker.isSupported() && (
+              {Speaker.isSupported()&&(
                 <button onClick={speakQuestion}
-                  title={qSpeaking?'Stop':'Read aloud'}
                   className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
-                  style={{background:qSpeaking?'rgba(13,148,136,0.2)':'#1A2035',border:`1px solid ${qSpeaking?'#14B8A6':'#252D45'}`,color:qSpeaking?'#14B8A6':'#475569'}}>
-                  <span style={{fontSize:15}}>{qSpeaking?'⏹':'🔊'}</span>
+                  style={{background:qSpeaking?"rgba(13,148,136,0.2)":"#1A2035",border:`1px solid ${qSpeaking?"#14B8A6":"#252D45"}`,color:qSpeaking?"#14B8A6":"#475569"}}>
+                  <span style={{fontSize:15}}>{qSpeaking?"⏹":"🔊"}</span>
                 </button>
               )}
             </div>
