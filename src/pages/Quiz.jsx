@@ -9,7 +9,7 @@ import {
   generateExplanation, getSocraticPrompt,
   buildRetryQuiz, recordLessonLearned, recordStudySession,
 } from '../ai/learning.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 import { calculateScore } from '../utils/scoring.js'
 import { SoundEngine, Haptics, Speaker } from '../utils/soundEngine.js'
 import { recordStudyActivity } from '../utils/notifications.js'
