@@ -9,6 +9,7 @@ import {
 import db from '../db/schema.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
 import { recordStudySession } from '../ai/learning.js'
+import { Speaker } from '../utils/soundEngine.js'
 
 // ── Load curriculum questions ─────────────────────────────────────
 async function loadQuestions(subject, topics) {
@@ -126,6 +127,8 @@ function ExamSession({ test, onFinish }) {
   }, [test])
 
   const handleTimeUp = useCallback(() => { if (!submitted) doSubmit() }, [submitted, answers, questions])
+  useEffect(() => { Speaker.stop(); setQSpeaking(false) }, [current])
+  useEffect(() => { return () => Speaker.stop() }, [])
 
   function doSubmit() {
     if (submitted) return
@@ -212,7 +215,17 @@ function ExamSession({ test, onFinish }) {
           {/* Question */}
           <div className="mb-5 p-5 rounded-xl" style={{background:'rgba(255,255,255,0.04)',border:'1px solid rgba(255,255,255,0.08)'}}>
             <p className="text-slate-300 text-xs mb-2 uppercase tracking-wide">{q.lesson_title}</p>
-            <p className="text-white text-base leading-relaxed">{q.question}</p>
+            <div className="flex items-start gap-3">
+              <p className="text-white text-base leading-relaxed flex-1">{q.question}</p>
+              {Speaker.isSupported() && (
+                <button onClick={speakQuestion}
+                  title={qSpeaking ? 'Stop' : 'Read question aloud'}
+                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
+                  style={{background:qSpeaking?'rgba(245,158,11,0.2)':'rgba(255,255,255,0.06)',border:`1px solid ${qSpeaking?'rgba(245,158,11,0.5)':'rgba(255,255,255,0.1)'}`,color:qSpeaking?'#F59E0B':'#64748B'}}>
+                  <span style={{fontSize:15}}>{qSpeaking ? '⏹' : '🔊'}</span>
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Options */}
@@ -331,6 +344,14 @@ function ExamResults({ results, test, onClose }) {
               {!q.correct && <div className="text-xs text-red-400 mb-1">Your answer: {q.userAnswer||'Not answered'}</div>}
               <div className="text-xs text-green-400 mb-2">✓ Correct: {q.answer}</div>
               <div className="text-xs text-slate-400 p-2 rounded-lg" style={{background:'rgba(255,255,255,0.04)'}}>{q.explanation}</div>
+              {Speaker.isSupported() && (
+                <button onClick={() => Speaker.speak(`${q.question}. ${q.correct ? 'Correct.' : `Incorrect. Correct answer: ${q.answer}.`} ${q.explanation||''}`)}
+                  className="mt-2 flex items-center gap-1 text-xs transition-all active:scale-90"
+                  style={{color:'#475569'}}>
+                  <span style={{fontSize:11}}>🔊</span>
+                  <span>Read explanation</span>
+                </button>
+              )}
             </div>
           ))}
         </div>
