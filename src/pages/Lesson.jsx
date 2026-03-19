@@ -3,7 +3,7 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { progressDB, bookmarkDB, notesDB } from '../db/progressDB.js'
 import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/chatbot.js'
 import { LessonSkeleton } from '../components/Skeletons.jsx'
@@ -47,9 +47,13 @@ export default function Lesson(){
   const [notesOpen,setNotesOpen]=useState(false)
   const [notesSaved,setNotesSaved]=useState(false)
   const [progressDone,setProgressDone]=useState(false)
+  const [speaking,setSpeaking]=useState(false)
   const saveTimer=useRef(null)
   const startTime=useRef(Date.now())
   const subject=state?.subject||fallbackSubject
+
+  // Stop TTS when leaving lesson
+  useEffect(()=>{ return ()=>{ Speaker.stop(); setSpeaking(false) } },[])
   const topicId=state?.topicId||fallbackTopicId
 
   // Fallback: if page was loaded directly via URL with no router state, scan curriculum
@@ -113,6 +117,24 @@ export default function Lesson(){
     SoundEngine.tap()
     const result=await bookmarkDB.toggle(student.id,lesson.id)
     setIsBookmarked(result)
+  }
+
+  function speakLesson(){
+    if(!lesson)return
+    if(speaking){ Speaker.stop(); setSpeaking(false); return }
+    // Build full text from all content items
+    const parts=[lesson.title]
+    ;(lesson.content||[]).forEach(item=>{
+      if(item.body) parts.push(item.body)
+      if(item.title) parts.push(item.title)
+    })
+    const fullText=parts.join('. ')
+    Speaker.speak(fullText)
+    setSpeaking(true)
+    // Poll until done
+    const poll=setInterval(()=>{
+      if(!Speaker.isSpeaking()){ setSpeaking(false); clearInterval(poll) }
+    },500)
   }
 
   function renderContent(item,i){
@@ -182,6 +204,14 @@ export default function Lesson(){
               style={notesOpen?{color:'#F59E0B'}:{}}>
               📝 Notes
             </button>
+            {Speaker.isSupported()&&(
+              <button onClick={speakLesson}
+                title={speaking?'Stop reading':'Read lesson aloud'}
+                className="text-xl transition-all active:scale-125"
+                style={{color:speaking?'#14B8A6':'#475569'}}>
+                {speaking?'⏹':'🔊'}
+              </button>
+            )}
             <button onClick={toggleBookmark}
               className={`text-xl transition-all active:scale-125 ${isBookmarked?'':'text-slate-600'}`}
               style={isBookmarked?{color:'#F59E0B'}:{}}>
