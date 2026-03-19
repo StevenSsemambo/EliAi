@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['@mlc-ai/web-llm'],
+      external: ['@mlc-ai/web-llm', '@supabase/supabase-js'],
       // No manualChunks needed — React.lazy() in App.jsx handles code splitting automatically
     },
   },
