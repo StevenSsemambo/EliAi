@@ -184,3 +184,87 @@ export const Haptics = {
   badgeUnlocked() { try{navigator.vibrate?.(180)}catch(e){} },
   timerDone()     { try{navigator.vibrate?.([80,40,80,40,160])}catch(e){} },
 }
+
+
+// ================================================================
+// Speaker — Text-to-Speech Engine
+// Uses browser Web Speech API (window.speechSynthesis)
+// Import: import { Speaker } from '../utils/soundEngine.js'
+// ================================================================
+
+let _ttsEnabled = (() => {
+  try { return localStorage.getItem('elimu_tts') !== 'false' } catch { return true }
+})()
+let _ttsRate = (() => {
+  try { return parseFloat(localStorage.getItem('elimu_tts_rate') || '1') } catch { return 1 }
+})()
+let _ttsVoiceIdx = (() => {
+  try { return parseInt(localStorage.getItem('elimu_tts_voice') || '0') } catch { return 0 }
+})()
+
+export const Speaker = {
+  isSupported() {
+    return typeof window !== 'undefined' && 'speechSynthesis' in window
+  },
+
+  isEnabled() { return _ttsEnabled },
+
+  setEnabled(v) {
+    _ttsEnabled = v
+    try { localStorage.setItem('elimu_tts', String(v)) } catch {}
+    if (!v) this.stop()
+  },
+
+  getRate() { return _ttsRate },
+
+  setRate(r) {
+    _ttsRate = r
+    try { localStorage.setItem('elimu_tts_rate', String(r)) } catch {}
+  },
+
+  getVoices() {
+    if (!this.isSupported()) return []
+    return window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'))
+  },
+
+  getVoiceIdx() { return _ttsVoiceIdx },
+
+  setVoiceIdx(i) {
+    _ttsVoiceIdx = i
+    try { localStorage.setItem('elimu_tts_voice', String(i)) } catch {}
+  },
+
+  // Speak any text. Strips markdown/HTML before speaking.
+  speak(text) {
+    if (!this.isSupported() || !_ttsEnabled || !text) return
+    this.stop()
+    // Strip markdown bold/italic, HTML tags, formulas, excess whitespace
+    const clean = text
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\*\*(.+?)\*\*/g, '$1')
+      .replace(/\*(.+?)\*/g, '$1')
+      .replace(/#{1,6}\s/g, '')
+      .replace(/[•→←↑↓]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+    if (!clean) return
+    const utter = new window.SpeechSynthesisUtterance(clean)
+    utter.rate  = _ttsRate
+    utter.pitch = 1
+    utter.lang  = 'en-UG'
+    const voices = this.getVoices()
+    if (voices[_ttsVoiceIdx]) utter.voice = voices[_ttsVoiceIdx]
+    window.speechSynthesis.speak(utter)
+  },
+
+  stop() {
+    if (!this.isSupported()) return
+    window.speechSynthesis.cancel()
+  },
+
+  // Returns true if currently speaking
+  isSpeaking() {
+    if (!this.isSupported()) return false
+    return window.speechSynthesis.speaking
+  },
+}
