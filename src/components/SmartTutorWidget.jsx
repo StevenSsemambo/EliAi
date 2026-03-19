@@ -41,9 +41,8 @@ export default function SmartTutorWidget() {
   }, [student])
 
   function speakRec(text) {
-    if (speaking && speakText === text) { Speaker.stop(); setSpeaking(false); setSpeakText(''); return }
-    Speaker.stop(); Speaker.speak(text); setSpeaking(true); setSpeakText(text)
-    const poll = setInterval(()=>{ if(!Speaker.isSpeaking()){setSpeaking(false);setSpeakText('');clearInterval(poll)} },500)
+    Speaker.stop()
+    Speaker.speak(text)
   }
 
   if (loading) return (
