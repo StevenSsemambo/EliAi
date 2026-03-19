@@ -6,7 +6,7 @@ import {
   analyseStudent, getSmartRecommendations, generateDailyMission,
   getMissionProgress, markMissionTaskDone
 } from '../ai/brain.js'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 import Navbar from '../components/Navbar.jsx'
 
 const SUBJECT_ICONS  = { mathematics:'📐', physics:'⚡', biology:'🧬', chemistry:'🧪' }
@@ -47,6 +47,8 @@ export default function AITutor() {
   const [mission, setMission]   = useState(null)
   const [missionDone, setMissionDone] = useState([])
   const [loading, setLoading]   = useState(true)
+  const [speaking, setSpeaking]   = useState(false)
+  const [speakText, setSpeakText] = useState('')
 
   useEffect(() => {
     if (!student) { setLoading(false); return }
@@ -62,6 +64,16 @@ export default function AITutor() {
       })
       .catch(() => { clearTimeout(timeout); setLoading(false) })
   }, [student])
+
+  function speakContent(text) {
+    if (speaking && speakText === text) { Speaker.stop(); setSpeaking(false); setSpeakText(''); return }
+    Speaker.stop()
+    Speaker.speak(text)
+    setSpeaking(true); setSpeakText(text)
+    const poll = setInterval(() => {
+      if (!Speaker.isSpeaking()) { setSpeaking(false); setSpeakText(''); clearInterval(poll) }
+    }, 500)
+  }
 
   async function completeTask(task) {
     SoundEngine.gameCorrect()
@@ -211,6 +223,14 @@ export default function AITutor() {
                     </span>
                   </div>
                 </button>
+                  {Speaker.isSupported() && (
+                    <button onClick={() => speakContent((rec.topic ? rec.topic.replace(/_/g,' ') : rec.subject) + '. ' + rec.reason)}
+                      className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
+                      style={{ background: theme.card, color: theme.muted, border:`1px solid ${theme.border}` }}>
+                      <span style={{fontSize:13}}>🔊</span>
+                    </button>
+                  )}
+                  </div>
               ))}
             </Section>
 
@@ -272,7 +292,16 @@ export default function AITutor() {
                       <div className="flex items-start gap-3">
                         <span className="text-2xl flex-shrink-0">{done ? '✅' : task.icon}</span>
                         <div className="flex-1">
-                          <p className="font-bold text-sm" style={{ color: done ? '#4ADE80' : theme.text }}>{task.title}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="font-bold text-sm" style={{ color: done ? '#4ADE80' : theme.text }}>{task.title}</p>
+                            {Speaker.isSupported() && (
+                              <button onClick={e => { e.stopPropagation(); speakContent(task.title + '. ' + task.subtitle) }}
+                                className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 transition-all active:scale-90"
+                                style={{ background: theme.surface, color: theme.muted, border:`1px solid ${theme.border}` }}>
+                                <span style={{fontSize:11}}>🔊</span>
+                              </button>
+                            )}
+                          </div>
                           <p className="text-xs mt-0.5" style={{ color: theme.muted }}>{task.subtitle}</p>
                           <div className="flex items-center gap-2 mt-2">
                             <span className="text-xs font-bold px-2 py-0.5 rounded-full"
