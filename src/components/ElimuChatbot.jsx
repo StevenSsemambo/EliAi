@@ -4,7 +4,7 @@ import { useUser } from '../context/UserContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
 import { processMessage, QUICK_TOPICS, loadStudentProfile } from '../ai/chatbot.js'
 import { generateResponse, getEngineStatus, onProgress, initEngine } from '../ai/llmEngine.js'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
 
 // ── Streaming text renderer ───────────────────────────────────────
 function StreamingText({ text, theme }) {
@@ -110,8 +110,20 @@ function MessagePart({ part, theme, onSuggestion }) {
 }
 
 // ── Single message bubble ─────────────────────────────────────────
-function Message({ msg, theme, onSuggestion }) {
+function Message({ msg, theme, onSuggestion, onSpeak, speakingId }) {
   const isBot = msg.role === 'bot'
+  // Build plain text for TTS from parts or text
+  function getPlainText() {
+    if (msg.parts) {
+      return msg.parts.map(p => {
+        if (p.type === 'text' || p.type === 'heading') return p.text || ''
+        if (p.type === 'list') return (p.title||'') + '. ' + (p.items||[]).join('. ')
+        if (p.type === 'formula') return (p.title||'') + '. ' + (p.items||[]).join('. ')
+        return ''
+      }).join('. ')
+    }
+    return msg.streamText || msg.text || ''
+  }
   return (
     <div className={`flex gap-2 mb-3 ${isBot ? 'items-start' : 'items-end justify-end'}`}
       style={{ animation:'msgIn 0.25s ease' }}>
@@ -119,27 +131,40 @@ function Message({ msg, theme, onSuggestion }) {
         <div className="w-8 h-8 rounded-full flex items-center justify-center text-base flex-shrink-0 mt-0.5"
           style={{ background:'linear-gradient(135deg,#7C3AED,#0891B2)' }}>🧑‍🏫</div>
       )}
-      <div className={`rounded-2xl px-3 py-2.5 ${isBot ? 'rounded-tl-sm' : 'rounded-br-sm'}`}
-        style={{
-          background: isBot ? theme.card : `linear-gradient(135deg,${theme.accent},#7C3AED)`,
-          border: isBot ? `1px solid ${theme.border}` : 'none',
-          maxWidth: '88%',
-        }}>
-        {/* LLM streaming message */}
-        {isBot && msg.streaming ? (
-          <div>
-            <StreamingText text={msg.streamText || ''} theme={theme}/>
-            {msg.streamDone === false && (
-              <span className="inline-block w-2 h-4 ml-1 rounded-sm"
-                style={{ background: theme.accent, animation:'blink 0.8s ease infinite', verticalAlign:'middle' }}/>
-            )}
-          </div>
-        ) : isBot && msg.parts ? (
-          msg.parts.map((part,i) => <MessagePart key={i} part={part} theme={theme} onSuggestion={onSuggestion}/>)
-        ) : (
-          <p className="text-sm leading-relaxed" style={{ color: isBot ? theme.text : 'white' }}>
-            {msg.text}
-          </p>
+      <div>
+        <div className={`rounded-2xl px-3 py-2.5 ${isBot ? 'rounded-tl-sm' : 'rounded-br-sm'}`}
+          style={{
+            background: isBot ? theme.card : `linear-gradient(135deg,${theme.accent},#7C3AED)`,
+            border: isBot ? `1px solid ${theme.border}` : 'none',
+            maxWidth: '88%',
+          }}>
+          {/* LLM streaming message */}
+          {isBot && msg.streaming ? (
+            <div>
+              <StreamingText text={msg.streamText || ''} theme={theme}/>
+              {msg.streamDone === false && (
+                <span className="inline-block w-2 h-4 ml-1 rounded-sm"
+                  style={{ background: theme.accent, animation:'blink 0.8s ease infinite', verticalAlign:'middle' }}/>
+              )}
+            </div>
+          ) : isBot && msg.parts ? (
+            msg.parts.map((part,i) => <MessagePart key={i} part={part} theme={theme} onSuggestion={onSuggestion}/>)
+          ) : (
+            <p className="text-sm leading-relaxed" style={{ color: isBot ? theme.text : 'white' }}>
+              {msg.text}
+            </p>
+          )}
+        </div>
+        {/* 🔊 Speak button — only on bot messages, not streaming */}
+        {isBot && !msg.streaming && Speaker.isSupported() && onSpeak && (
+          <button
+            onClick={() => onSpeak(msg.id, getPlainText())}
+            title={speakingId === msg.id ? 'Stop speaking' : 'Read aloud'}
+            className="mt-1 ml-1 flex items-center gap-1 text-xs transition-all active:scale-90"
+            style={{ color: speakingId === msg.id ? theme.accent : theme.muted }}>
+            <span style={{fontSize:12}}>{speakingId === msg.id ? '⏹' : '🔊'}</span>
+            <span>{speakingId === msg.id ? 'Stop' : 'Read'}</span>
+          </button>
         )}
       </div>
     </div>
@@ -206,6 +231,7 @@ export default function ElimuChatbot() {
   const [llmProgress, setLlmProgress] = useState(0)
   const [studentProfile, setStudentProfile] = useState(null)
   const [listening, setListening] = useState(false)
+  const [speakingMsgId, setSpeakingMsgId] = useState(null)
 
   // Chat context
   const ctx = useRef({
@@ -491,7 +517,7 @@ export default function ElimuChatbot() {
               </div>
             )}
             {messages.map(msg=>(
-              <Message key={msg.id} msg={msg} theme={theme} onSuggestion={send}/>
+              <Message key={msg.id} msg={msg} theme={theme} onSuggestion={send} onSpeak={speakMessage} speakingId={speakingMsgId}/>
             ))}
             {typing && <TypingIndicator theme={theme}/>}
             <div ref={bottomRef}/>
