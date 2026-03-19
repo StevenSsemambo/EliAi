@@ -5,7 +5,7 @@ import { studentDB } from '../db/progressDB.js'
 import { SoundEngine, Haptics, Speaker } from '../utils/soundEngine.js'
 import { recordStudySession } from '../ai/learning.js'
 import { recordStudyActivity } from '../utils/notifications.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 import ParticleBurst from '../components/ParticleBurst.jsx'
 
 const SESSIONS=[{label:'15 min',secs:15*60,xp:30},{label:'25 min',secs:25*60,xp:50},{label:'45 min',secs:45*60,xp:80}]
