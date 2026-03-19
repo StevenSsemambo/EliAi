@@ -4,7 +4,6 @@ import { UserProvider, useUser } from './context/UserContext.jsx'
 import { ThemeProvider } from './context/ThemeContext.jsx'
 import { SubjectThemeProvider } from './context/SubjectThemeContext.jsx'
 import { checkPendingNotifications, scheduleReviewNudge } from './utils/notifications.js'
-import { getDueForReview } from './ai/learning.js'
 import SplashScreen     from './components/SplashScreen.jsx'
 import OfflineIndicator from './components/OfflineIndicator.jsx'
 import ErrorBoundary    from './components/ErrorBoundary.jsx'
@@ -124,9 +123,13 @@ export default function App() {
     checkPendingNotifications().catch(() => {})
     const studentId = localStorage.getItem('elimu_student_id')
     if (studentId) {
-      getDueForReview(studentId, 20)
-        .then(due => scheduleReviewNudge(due))
-        .catch(() => {})
+      // Defer loading learning.js until after app has rendered
+      setTimeout(() => {
+        import('./ai/learning.js')
+          .then(({ getDueForReview }) => getDueForReview(studentId, 20))
+          .then(due => scheduleReviewNudge(due))
+          .catch(() => {})
+      }, 3000)
     }
   }, [])
 
