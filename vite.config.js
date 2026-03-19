@@ -5,10 +5,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   base: '/',
   server: {
-    headers: {
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Embedder-Policy': 'require-corp',
-    },
+    // COEP/COOP removed — these headers break mobile browsers via the service worker.
+    // They are now scoped only to /ai-setup in netlify.toml where SharedArrayBuffer is needed.
   },
   build: {
     rollupOptions: {
