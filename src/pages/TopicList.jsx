@@ -10,8 +10,8 @@ const SUBJECT_FILES = {
     s2: ['coordinate_geometry','logarithms','matrices_intro','quadratic','simultaneous','statistics','trigonometry','vectors_2d','vectors_intro'],
     s3: ['coordinate_sequences','differentiation','earth_geometry','functions','integration','linear_programming','matrices_probability'],
     s4: ['calculus','financial_maths','inequalities','loci_construction','permcomb','transformation_geometry','trigonometry_advanced','vectors'],
-    s5: ['complex_numbers','differential_equations','further_calculus','mechanics','numerical_methods','probability_advanced'],
-    s6: ['applied_mathematics','further_pure','number_theory','pure_mathematics','statistics_probability'],
+    s5: ['maths_s5_t1_numerical_concepts','maths_s5_t2_equations_inequalities','maths_s5_t3_coordinate_geometry_1','maths_s5_t4_partial_fractions','maths_s5_t5_trigonometry','maths_s5_t6_descriptive_statistics','maths_s5_t7_scatter_correlations','maths_s5_t8_dynamics_1','maths_s5_t9_probability_theory','maths_s5_t10_differentiation_1','maths_s5_t11_integration_1','maths_s5_t12_permutations_combinations','maths_s5_t13_series','maths_s5_t14_random_variables','maths_s5_t15_probability_distributions','maths_s5_t16_error_analysis'],
+    s6: ['maths_s6_t17_vectors','maths_s6_t18_differentiation_2','maths_s6_t19_integration_2','maths_s6_t20_dynamics_2','maths_s6_t21_trapezium_rule','maths_s6_t22_sampling_distribution','maths_s6_t23_iterative_methods','maths_s6_t24_coordinate_geometry_2','maths_s6_t25_complex_numbers'],
   },
   physics: {
     s1: ['density_flotation','energy','forces','light','measurement','properties_matter','simple_machines'],
@@ -26,8 +26,8 @@ const SUBJECT_FILES = {
     s2: ['digestion_ecology','gaseous_exchange','nervous_system','nutrition','reproduction','transport'],
     s3: ['ecology','excretion','genetics','hormones_homeostasis','reproduction','support_and_movement'],
     s4: ['biotechnology','cell_division','coordination','disease_health','ecology','evolution_immunity'],
-    s5: ['biochemistry','bioenergetics','cell_biology_advanced','ecology_advanced','genetics_advanced','microbiology'],
-    s6: ['bioethics','developmental_biology','immunology','molecular_biology'],
+    s5: ['biology_s5_cell_biology','biology_s5_homeostasis','biology_s5_nutrition_plants','biology_s5_respiration','biology_s5_transport_humans'],
+    s6: ['biology_s6_coordination','biology_s6_ecology','biology_s6_growth_development','biology_s6_inheritance_evolution'],
   },
   chemistry: {
     s1: ['atoms','bonding','matter','separation_techniques','water'],
