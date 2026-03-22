@@ -777,8 +777,12 @@ export default function StickmanFighterPremium({ game, levelData, studentId, onF
           {isChamp?'CHAMPION!':win?'VICTORY!':'DEFEATED'}
         </div>
         <div style={{color:'#664488',fontSize:11,marginBottom:8,lineHeight:1.8,textAlign:'center'}}>
-          {mode==='story'?(win?`${BOSSES[bossIdx].name} defeated!${isChamp?' You are the Shadow King!':''}`):`Fell to ${BOSSES[bossIdx].name}.`}
-          {mode==='survival'&&`\n${survRoundRef.current-1} rounds · Score: ${score}`}
+          {mode === 'story' ? (
+            win
+              ? `${BOSSES[bossIdx].name} defeated!${isChamp ? ' You are the Shadow King!' : ''}`
+              : `Fell to ${BOSSES[bossIdx].name}.`
+          ) : null}
+          {mode === 'survival' && `${survRoundRef.current - 1} rounds · Score: ${score}`}
         </div>
         {mode==='survival'&&<div style={{color:'#ffd700',fontSize:14,fontWeight:900,marginBottom:8}}>SCORE: {score}</div>}
         {highScore>0&&<div style={{color:'#441166',fontSize:9,marginBottom:16}}>Best: {highScore}</div>}
