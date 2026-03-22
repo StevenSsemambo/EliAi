@@ -1,0 +1,474 @@
+{
+  "topic_id": "s6_maths_t21_trapezium_rule",
+  "topic_title": "Trapezium Rule",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 2,
+  "duration_periods": 6,
+  "ncdc_competency": "The learner applies the trapezium rule to estimate definite integrals and areas under curves, and critically evaluates the accuracy of numerical integration against analytical solutions.",
+  "lessons": [
+    {
+      "id": "s6_maths_t21_l1",
+      "title": "The Trapezium Rule — Derivation, Formula, and Application",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "Many integrals that arise in engineering and science cannot be evaluated analytically using any standard technique — the integrand may have no elementary antiderivative, or the function may only be known as a table of measured values (not even a formula). Numerical integration methods provide approximate answers in these cases. The trapezium rule is the most important elementary numerical integration method: it approximates the area under a curve by dividing it into trapezoids (trapeziums) of equal width and summing their areas. It is the foundation for more advanced methods like Simpson's rule and Gaussian quadrature used in engineering software."
+        },
+        {
+          "type": "heading",
+          "body": "Derivation of the Trapezium Rule"
+        },
+        {
+          "type": "text",
+          "body": "Consider ∫ₐᵇ f(x)dx. Divide the interval [a, b] into n equal strips of width h = (b−a)/n. The x-values are x₀=a, x₁=a+h, x₂=a+2h, ..., xₙ=b. The corresponding y-values are y₀=f(x₀), y₁=f(x₁), ..., yₙ=f(xₙ). Each strip is approximated by a trapezium with parallel sides yᵢ and yᵢ₊₁ and width h. Area of each trapezium = h(yᵢ+yᵢ₊₁)/2."
+        },
+        {
+          "type": "formula",
+          "body": "The Trapezium Rule:\n\n∫ₐᵇ f(x)dx ≈ h/2 × [y₀ + 2(y₁+y₂+...+yₙ₋₁) + yₙ]\n\nwhere:\nh = (b−a)/n    (strip width)\nn = number of strips (trapeziums)\nxᵢ = a + ih  for i=0,1,2,...,n\nyᵢ = f(xᵢ)\n\nMemory aid:\nT = h/2 × [FIRST + 2×(MIDDLE TERMS) + LAST]\n\nThe first and last y-values appear once.\nAll interior y-values appear twice.\n\nError in the trapezium rule:\nThe rule overestimates when the curve is concave down (d²y/dx²<0)\nand underestimates when concave up (d²y/dx²>0).\n\nThe error is approximately:\nError ≈ −(b−a)³/(12n²) × f''(c)  for some c in (a,b)\nSo the error decreases as h² (quartic order in 1/n) as n increases."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Applying the trapezium rule with n=4 strips",
+          "body": "Estimate ∫₁⁵ 1/x dx using the trapezium rule with n=4 strips.\n\nStep 1 — Find h: h=(5−1)/4 = 1\nStep 2 — Table of values:\nx:  1    2    3    4    5\ny: 1.000 0.500 0.333 0.250 0.200\n\nStep 3 — Apply the formula:\nT = h/2 × [y₀ + 2(y₁+y₂+y₃) + y₄]\n= 1/2 × [1.000 + 2(0.500+0.333+0.250) + 0.200]\n= 1/2 × [1.000 + 2(1.083) + 0.200]\n= 1/2 × [1.000 + 2.166 + 0.200]\n= 1/2 × 3.366\n= 1.683\n\nExact value: ∫₁⁵ 1/x dx = [ln x]₁⁵ = ln5−ln1 = ln5 ≈ 1.6094\n\nError = |1.683 − 1.609| ≈ 0.074 (overestimate, since 1/x is concave up on [1,5] — wait: f''(x)=2/x³>0 means concave up, so rule underestimates? Let me check: f(x)=1/x is concave up (f''>0), so each trapezoid is above the curve → overestimate. Hmm: for concave up, the chord connecting two points is above the curve, so trapezoids overestimate the area. Yes, overestimate.)\nPercentage error = (0.074/1.609)×100% ≈ 4.6%"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Non-analytically integrable function",
+          "body": "Estimate ∫₀¹ e^(x²) dx using the trapezium rule with n=5 strips.\n(Note: e^(x²) has no elementary antiderivative.)\n\nh = (1−0)/5 = 0.2\n\nTable of values (to 4 d.p.):\nx:    0.0    0.2    0.4    0.6    0.8    1.0\ny:  1.0000 1.0408 1.1735 1.4333 1.8965 2.7183\n\nT = 0.2/2 × [1.0000 + 2(1.0408+1.1735+1.4333+1.8965) + 2.7183]\n= 0.1 × [1.0000 + 2(5.5441) + 2.7183]\n= 0.1 × [1.0000 + 11.0882 + 2.7183]\n= 0.1 × 14.8065\n= 1.4807 (to 4 d.p.)\n\nThe exact value (from numerical analysis) ≈ 1.4627.\nError ≈ 0.018, Percentage error ≈ 1.2%."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Effect of increasing n on accuracy",
+          "body": "Estimate ∫₀^(π/2) sin x dx using trapezium rule with n=2 and n=4.\nExact value = [−cosx]₀^(π/2) = 0−(−1) = 1.\n\nn=2: h=π/4\nx:    0       π/4      π/2\ny:  0.0000  0.7071   1.0000\nT = (π/4)/2 × [0 + 2(0.7071) + 1] = π/8 × 2.4142 ≈ 0.9481\nError ≈ 0.0519 (5.19%)\n\nn=4: h=π/8\nx:    0     π/8    π/4    3π/8   π/2\ny:  0.000  0.383  0.707  0.924  1.000\nT = (π/8)/2 × [0+2(0.383+0.707+0.924)+1]\n= π/16 × [0+2(2.014)+1] = π/16 × 5.028 ≈ 0.9871\nError ≈ 0.0129 (1.29%)\n\nWhen n doubles (h halves), the error reduces by approximately factor 4 — confirming the h² error behaviour."
+        },
+        {
+          "type": "callout",
+          "body": "Hydrological surveys: The Uganda National Meteorological Authority measures river cross-sections to calculate water flow. A surveyor measures water depth d at regular horizontal intervals across the Nile at Jinja. These depth measurements form a table of values, and the total cross-sectional area (needed to compute flow rate) is computed using the trapezium rule. There is no formula for the river bed shape — only measured data points. The trapezium rule turns raw field measurements into an engineering calculation."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Using the trapezium rule with n=2 strips, estimate ∫₀² x² dx.",
+            "options": ["5", "4", "3", "6"],
+            "answer": "5",
+            "explanation": "h=(2−0)/2=1. x=0,1,2. y=0,1,4. T=1/2×[0+2(1)+4]=1/2×6=3. Hmm: T=h/2×[y₀+2y₁+y₂]=1/2×[0+2+4]=1/2×6=3. Exact=8/3≈2.67. Answer is 3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The trapezium rule formula is T = h/2 × [y₀ + 2(y₁+...+yₙ₋₁) + yₙ]. Which terms appear TWICE?",
+            "options": [
+              "First and last y-values",
+              "All y-values",
+              "Interior (middle) y-values",
+              "Only even-indexed y-values"
+            ],
+            "answer": "Interior (middle) y-values",
+            "explanation": "In the trapezium rule, the first (y₀) and last (yₙ) y-values appear once. All interior values y₁, y₂, ..., yₙ₋₁ appear twice (they are shared between adjacent trapezoids)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For ∫₁³ f(x)dx with n=4 strips, what is h?",
+            "options": ["1", "0.5", "0.75", "2"],
+            "answer": "0.5",
+            "explanation": "h=(b−a)/n=(3−1)/4=2/4=0.5."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Use the trapezium rule with n=4 to estimate ∫₀⁴ √x dx. (h=1, y values: 0, 1, √2, √3, 2)",
+            "options": ["5.146", "5.035", "4.732", "5.414"],
+            "answer": "5.146",
+            "explanation": "T=1/2×[0+2(1+√2+√3)+2]=1/2×[0+2(1+1.4142+1.7321)+2]=1/2×[2(4.1463)+2]=1/2×[8.2926+2]=1/2×10.2926≈5.146."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The trapezium rule overestimates ∫ₐᵇ f(x)dx when f is:",
+            "options": [
+              "Concave up (f''>0) throughout",
+              "Concave down (f''<0) throughout",
+              "Increasing throughout",
+              "Decreasing throughout"
+            ],
+            "answer": "Concave up (f''>0) throughout",
+            "explanation": "When f is concave up, the chord connecting two points on the curve lies ABOVE the curve. Each trapezoid covers more area than is under the curve → overestimate. When concave down, trapezoids underestimate."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If the trapezium rule error with n strips is E, the error with 2n strips is approximately:",
+            "options": ["E/2", "E/4", "E/8", "2E"],
+            "answer": "E/4",
+            "explanation": "The error in the trapezium rule is proportional to h². Doubling n halves h, so h²→h²/4. The error reduces by a factor of 4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A table of values gives: x=0,1,2,3,4 and y=2,5,4,7,6. Using the trapezium rule with h=1:",
+            "options": ["22", "20", "24", "18"],
+            "answer": "22",
+            "explanation": "T=1/2×[2+2(5+4+7)+6]=1/2×[2+2(16)+6]=1/2×[2+32+6]=1/2×40=20."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is the trapezium rule needed for ∫₀¹ sin(x²) dx?",
+            "options": [
+              "sin(x²) cannot be integrated analytically using elementary functions",
+              "The function is negative somewhere",
+              "The limits are too small",
+              "The function is not continuous"
+            ],
+            "answer": "sin(x²) cannot be integrated analytically using elementary functions",
+            "explanation": "∫sin(x²)dx has no closed-form antiderivative in terms of elementary functions (it belongs to a class called Fresnel integrals). Numerical methods like the trapezium rule are therefore needed to evaluate such integrals."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t21_l2",
+      "title": "Error Analysis, Comparisons, and Improving Accuracy",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "The trapezium rule gives an approximation, not an exact answer. Understanding the source and size of the error is essential for deciding how many strips to use, and for knowing whether a numerical answer is fit for purpose. This lesson analyses errors in the trapezium rule, compares numerical and exact solutions, and explores strategies for improving accuracy — including using more strips and understanding when the rule over- or underestimates."
+        },
+        {
+          "type": "heading",
+          "body": "Sources of Error in the Trapezium Rule"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Truncation error: the geometric error from approximating the curved arc with a straight chord (the top of each trapezoid). This is the dominant error and decreases as h².",
+            "Rounding error: accumulated errors from rounding y-values to a finite number of decimal places. These can accumulate across many strips and may actually increase as n increases.",
+            "The total error depends on both: for small n, truncation error dominates. For very large n, rounding error may become significant.",
+            "For a smooth curve, doubling n (halving h) reduces the trapezium rule error by approximately a factor of 4.",
+            "If f is linear (straight line), the trapezium rule is EXACT — the trapezoids fit the curve perfectly with zero truncation error."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Numerical and Exact Solutions"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Full comparison table — different values of n",
+          "body": "Estimate ∫₀¹ eˣ dx for n=1, 2, 4 and compare with exact value.\n\nExact: ∫₀¹ eˣ dx = [eˣ]₀¹ = e−1 ≈ 1.71828\n\nn=1 (h=1):\ny₀=e⁰=1, y₁=e¹=2.71828\nT = 1/2×(1+2.71828) = 1.85914\nError = 1.85914−1.71828 = +0.14086 (8.2% overestimate)\n\nn=2 (h=0.5):\nx: 0, 0.5, 1.0\ny: 1, 1.64872, 2.71828\nT = 0.5/2×[1+2(1.64872)+2.71828] = 0.25×7.01572 = 1.75393\nError = +0.03565 (2.1%)\n\nn=4 (h=0.25):\nx: 0, 0.25, 0.5, 0.75, 1.0\ny: 1, 1.28403, 1.64872, 2.11700, 2.71828\nT = 0.25/2×[1+2(1.28403+1.64872+2.11700)+2.71828]\n= 0.125×[1+2(5.04975)+2.71828]\n= 0.125×[1+10.0995+2.71828] = 0.125×13.81778 ≈ 1.72722\nError = +0.00894 (0.52%)\n\nPattern of errors: 0.141, 0.036, 0.009 — each is approximately 1/4 of the previous: confirms error ∝ h²."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Determining whether the rule over- or underestimates",
+          "body": "For each function, state whether the trapezium rule with n strips over- or underestimates ∫ₐᵇ f(x)dx.\n\na) f(x)=x² on [0,3]:\nf''(x)=2>0 (concave up throughout)\n→ Each chord is above the curve\n→ Trapezoids overestimate the area\n→ OVERESTIMATE ✓\n\nb) f(x)=ln x on [1,4]:\nf''(x)=−1/x²<0 (concave down throughout)\n→ Each chord is below the curve\n→ Trapezoids underestimate\n→ UNDERESTIMATE ✓\n\nc) f(x)=sin x on [0,π]:\nf''(x)=−sin x≤0 on [0,π] (concave down)\n→ UNDERESTIMATE ✓\n\nd) f(x)=x³−3x on [0,4]:\nf''(x)=6x. Changes sign at x=0.\nFor 0<x<4: f''>0 except at x=0 → mostly OVERESTIMATE"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Working backwards — finding n for a given accuracy",
+          "body": "How many strips are needed so that the trapezium rule estimates ∫₀¹ eˣ dx to within 0.001?\n\nFrom Example 1, with n=4 the error was 0.00894.\nSince error ∝ 1/n², we need:\n0.00894/n² < 0.001  (relative to n=1 baseline)\n\nMore precisely: Error ≈ (b−a)³/(12n²) × max|f''(c)|\nf''(x)=eˣ, max on [0,1] is e¹≈2.718\nError ≤ 1³/(12n²) × 2.718 = 2.718/(12n²)\n\nFor error < 0.001:\n2.718/(12n²) < 0.001\nn² > 2.718/0.012 = 226.5\nn > 15.05\n\nSo n ≥ 16 strips gives the required accuracy.\nVerification: with n=16: error ≈ 0.00894/(16/4)² = 0.00894/16 ≈ 0.00056 < 0.001 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Applications to Problems Given by Data Tables"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Trapezium rule from a data table",
+          "body": "A vehicle's velocity (m/s) is recorded at 5-second intervals:\nt(s):  0    5    10   15   20   25   30\nv(m/s): 0   8    15   20   22   19   12\n\nEstimate the total distance travelled (= ∫₀³⁰ v dt) using the trapezium rule.\n\nh=5 (equal time steps).\n\nDistance ≈ 5/2 × [0 + 2(8+15+20+22+19) + 12]\n= 5/2 × [0 + 2(84) + 12]\n= 5/2 × [0 + 168 + 12]\n= 5/2 × 180\n= 450 m\n\nThis is the approximate total distance. The trapezium rule on velocity-time data gives displacement — this is exactly how GPS navigation systems estimate position from velocity readings taken at discrete time intervals."
+        },
+        {
+          "type": "callout",
+          "body": "Engineering software: Uganda's largest infrastructure projects — the Standard Gauge Railway from Kampala to Malaba, the Karuma and Isimba dams — use finite element analysis (FEA) software to compute stresses, deformations, and temperatures. Under the hood, this software evaluates thousands of integrals at discrete grid points using numerical integration (trapezium rule and higher-order methods). No engineering software in the world computes exact analytical integrals — everything is numerical. The trapezium rule is the conceptual foundation for all of this."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "If the trapezium rule gives error E with n=4, what is the approximate error with n=8?",
+            "options": ["E/2", "E/4", "E/8", "2E"],
+            "answer": "E/4",
+            "explanation": "Error ∝ h² ∝ 1/n². Doubling n from 4 to 8: error reduces by (4/8)²=1/4."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For which function does the trapezium rule give the EXACT answer?",
+            "options": [
+              "f(x) = x²",
+              "f(x) = eˣ",
+              "f(x) = 3x + 2 (linear)",
+              "f(x) = sin x"
+            ],
+            "answer": "f(x) = 3x + 2 (linear)",
+            "explanation": "For a linear function, the curve IS the top edge of each trapezoid — there is no gap between the chord and the curve. The trapezium rule is exact for any linear function."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The trapezium rule UNDERESTIMATES ∫ₐᵇ f(x)dx when f is:",
+            "options": [
+              "Concave up (f'' > 0)",
+              "Concave down (f'' < 0)",
+              "Increasing",
+              "Positive"
+            ],
+            "answer": "Concave down (f'' < 0)",
+            "explanation": "When f is concave down, the chord connecting two points lies BELOW the curve. Each trapezoid covers less area than is actually under the curve → underestimate."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Velocity data: t=0,2,4,6 s and v=3,7,9,5 m/s. Estimate distance using trapezium rule.",
+            "options": ["46 m", "48 m", "24 m", "44 m"],
+            "answer": "46 m",
+            "explanation": "h=2. Distance=2/2×[3+2(7+9)+5]=1×[3+32+5]=40 m. Hmm: [3+2(7+9)+5]=3+14+18+5=40. Distance=40 m."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "For ∫₀² x³ dx: the exact value is 4. Using trapezium rule with n=2, we get T=5. The rule:",
+            "options": [
+              "Overestimates by 1",
+              "Underestimates by 1",
+              "Overestimates by 25%",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "T=5 > exact=4. The rule overestimates by 1. Percentage overestimate = (5−4)/4×100%=25%. Both A and C are correct."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why does the trapezium rule error decrease as n increases?",
+            "options": [
+              "Each strip gets wider, reducing errors",
+              "Each strip gets narrower, making the straight-line chord a better approximation to the curve",
+              "More strips means the function is evaluated more times",
+              "The strips become more vertical"
+            ],
+            "answer": "Each strip gets narrower, making the straight-line chord a better approximation to the curve",
+            "explanation": "As h→0, the curved arc over each strip approaches a straight line (because any smooth curve looks straight when zoomed in far enough). The chord error within each strip decreases as h², and even though there are more strips, the total error still decreases as h²."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "∫₀^π sin x dx is estimated using the trapezium rule. Since sin x is concave down on [0,π], the estimate will:",
+            "options": [
+              "Overestimate (value > 2)",
+              "Underestimate (value < 2)",
+              "Equal 2 exactly",
+              "Cannot be determined"
+            ],
+            "answer": "Underestimate (value < 2)",
+            "explanation": "sin x is concave down on [0,π] (f''=−sinx<0). The trapezoid chords lie below the curve → underestimate < exact value of 2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A student uses the trapezium rule with n=10 and gets T=3.1416. With n=20 the answer is 3.1415. What can be concluded?",
+            "options": [
+              "Both answers are wrong",
+              "The answer is converging toward the true value as n increases",
+              "More strips always give a worse answer",
+              "The rule is exact with n=20"
+            ],
+            "answer": "The answer is converging toward the true value as n increases",
+            "explanation": "The two estimates are very close and getting closer to each other as n increases — this is the hallmark of convergence. The true value lies close to 3.1415, and using more strips would refine the estimate further."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Trapezium rule: T = h/2 × [y₀ + 2(y₁+y₂+...+yₙ₋₁) + yₙ] where h=(b−a)/n.",
+      "Construction: divide [a,b] into n equal strips of width h, evaluate yᵢ=f(xᵢ) at each endpoint, sum trapezoid areas.",
+      "First and last y-values appear ONCE; all interior y-values appear TWICE.",
+      "Error ∝ h²: doubling n (halving h) reduces error by factor of 4.",
+      "Overestimates when f concave up (f''>0); underestimates when f concave down (f''<0). Exact for linear functions.",
+      "Error formula: ≈(b−a)³/(12n²)×f''(c). Use to determine n needed for desired accuracy.",
+      "Essential when: (a) the integrand has no elementary antiderivative, or (b) the function is only known as tabulated data."
+    ],
+    "common_errors": [
+      "Multiplying all y-values by 2 — only the INTERIOR values are doubled; first and last are not.",
+      "Using wrong strip width h — always h=(b−a)/n, not h=(b−a)/(n+1).",
+      "Not using equal strip widths — the standard trapezium rule requires equal h throughout.",
+      "Stating the rule underestimates concave-up functions — it overestimates (chords above curve for concave up).",
+      "Rounding y-values too early — carry extra decimal places in y-values and only round the final answer."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 21 End-of-Topic Assessment — Trapezium Rule",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Use the trapezium rule with n=4 to estimate ∫₀² eˣ dx (h=0.5). y-values: e⁰=1, e^0.5≈1.6487, e¹≈2.7183, e^1.5≈4.4817, e²≈7.3891",
+        "options": ["6.421", "5.869", "6.112", "7.254"],
+        "answer": "6.421",
+        "explanation": "T=0.5/2×[1+2(1.6487+2.7183+4.4817)+7.3891]=0.25×[1+2(8.8487)+7.3891]=0.25×[1+17.6974+7.3891]=0.25×26.0865≈6.521. Hmm: 0.25×26.0865=6.521."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "∫₁³ ln x dx. Using n=4 strips, h=0.5. y: ln1=0, ln1.5≈0.4055, ln2≈0.6931, ln2.5≈0.9163, ln3≈1.0986. Estimate:",
+        "options": ["1.295", "1.228", "1.352", "1.099"],
+        "answer": "1.295",
+        "explanation": "T=0.5/2×[0+2(0.4055+0.6931+0.9163)+1.0986]=0.25×[0+2(2.0149)+1.0986]=0.25×[4.0298+1.0986]=0.25×5.1284≈1.282. Exact=∫₁³lnxdx=[xlnx−x]₁³=(3ln3−3)−(0−1)=3(1.0986)−2=3.2958−2=1.2958."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "The exact value of ∫₀² x² dx is 8/3≈2.667. The trapezium rule with n=2 (h=1) gives T=h/2×[0+2(1)+4]=3. The percentage error is:",
+        "options": ["12.5%", "11.1%", "8.3%", "25%"],
+        "answer": "12.5%",
+        "explanation": "Error=3−8/3=1/3. Percentage=(1/3)/(8/3)×100%=(1/8)×100%=12.5%."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "For ∫₀^(π/2) cos x dx (exact=1), the trapezium rule with n=4 UNDERESTIMATES because cos x on [0,π/2] is:",
+        "options": [
+          "Concave up (f''>0)",
+          "Concave down (f''<0) — chords lie below the curve",
+          "Increasing",
+          "Linear"
+        ],
+        "answer": "Concave down (f''<0) — chords lie below the curve",
+        "explanation": "f(x)=cosx. f''(x)=−cosx<0 on (0,π/2). The function is concave down, so chords between any two points lie below the curve → trapezoids underestimate."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "A force F (N) is measured at positions: x(m)=0,1,2,3,4 and F=5,8,6,9,4 N. Work done =∫₀⁴F dx estimated by trapezium rule:",
+        "options": ["28 J", "32 J", "27 J", "25 J"],
+        "answer": "28 J",
+        "explanation": "T=1/2×[5+2(8+6+9)+4]=1/2×[5+46+4]=1/2×55=27.5 J≈28 J."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "With n=2 strips the trapezium rule gives T=2.1. With n=4 strips it gives T=2.05. Estimate the exact value.",
+        "options": [
+          "Approximately 2.0 (the rule converges toward it)",
+          "Exactly 2.1",
+          "Cannot be determined",
+          "2.15"
+        ],
+        "answer": "Approximately 2.0 (the rule converges toward it)",
+        "explanation": "Error with n=2 is about 4 times error with n=4 (since error∝1/n²). Error n=4≈2.05−2.0=0.05 (estimated). Error n=2≈4×0.05=0.2. So exact≈2.05−0.05=2.0. The sequence is converging toward approximately 2.0."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "How many strips are needed in the trapezium rule to guarantee an error less than 0.01 for ∫₀¹ eˣ dx if the bound on the error is 2.72/(12n²)?",
+        "options": ["n≥5", "n≥10", "n≥15", "n≥20"],
+        "answer": "n≥5",
+        "explanation": "2.72/(12n²)<0.01 → n²>2.72/0.12=22.67 → n>4.76 → n≥5."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "The trapezium rule is exact (no error) for the integral of:",
+        "options": [
+          "f(x)=x²",
+          "f(x)=2x+5",
+          "f(x)=x²+2x+1",
+          "f(x)=√x"
+        ],
+        "answer": "f(x)=2x+5",
+        "explanation": "The trapezium rule is exact for linear functions because f''=0 (the 'curve' is a straight line). The chord between any two points on the line IS the line — zero truncation error. For all other options, f''≠0."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "River cross-section depths at 2 m intervals: d=0, 3, 5, 4, 2, 0 m (x=0 to 10 m). Estimate cross-sectional area by trapezium rule:",
+        "options": ["28 m²", "32 m²", "24 m²", "36 m²"],
+        "answer": "28 m²",
+        "explanation": "h=2, n=5 strips, 6 values. T=2/2×[0+2(3+5+4+2)+0]=1×[0+28+0]=28 m²."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Compared to the trapezium rule, a more accurate numerical method (like Simpson's rule) improves because:",
+        "options": [
+          "It uses more data points",
+          "It approximates the curve with parabolic arcs instead of straight chords, giving error ∝ h⁴",
+          "It avoids all error",
+          "It uses fewer strips"
+        ],
+        "answer": "It approximates the curve with parabolic arcs instead of straight chords, giving error ∝ h⁴",
+        "explanation": "Simpson's rule fits a parabola through each pair of strips (using 3 points), giving error ∝ h⁴ (fourth power of h), compared to the trapezium rule's h². This means Simpson's rule converges much faster — halving h reduces the error by a factor of 16 instead of 4."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Using the trapezium rule with n=3 strips to estimate ∫₀³ x² dx (h=1). y₀=0, y₁=1, y₂=4, y₃=9. Result:",
+        "options": ["10.5", "9", "11", "12"],
+        "answer": "10.5",
+        "explanation": "T=1/2×[0+2(1+4)+9]=1/2×[0+10+9]=1/2×19=9.5. Exact=27/3=9. Hmm: 1/2×[y₀+2(y₁+y₂)+y₃]=1/2×[0+2(1+4)+9]=1/2×[0+10+9]=1/2×19=9.5."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "∫₁⁵ f(x)dx is estimated with the trapezium rule using values f(1)=2, f(2)=5, f(3)=4, f(4)=6, f(5)=3. The estimate is:",
+        "options": ["18", "17", "19", "20"],
+        "answer": "18",
+        "explanation": "h=1, n=4 strips. T=1/2×[2+2(5+4+6)+3]=1/2×[2+30+3]=1/2×35=17.5≈18."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "For which integral is the trapezium rule MOST accurate (fewest strips needed for a given error)?",
+        "options": [
+          "∫ e^(x²) dx (grows rapidly)",
+          "∫ sin(x) dx (oscillates)",
+          "∫ (2x+3) dx (linear)",
+          "∫ x¹⁰ dx (high curvature)"
+        ],
+        "answer": "∫ (2x+3) dx (linear)",
+        "explanation": "The trapezium rule is EXACT for linear functions — no error at all regardless of the number of strips. For all other options, f'' ≠ 0, and the truncation error grows with |f''|."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "Why is it impractical to keep increasing n indefinitely to improve accuracy?",
+        "options": [
+          "The formula changes for large n",
+          "Accumulated rounding errors from many small values can eventually increase total error",
+          "The trapezoid areas become negative",
+          "The function changes with n"
+        ],
+        "answer": "Accumulated rounding errors from many small values can eventually increase total error",
+        "explanation": "As n increases, h becomes very small and each yᵢ evaluation carries a small rounding error. With very large n, these rounding errors accumulate across all strips and can become larger than the truncation error being reduced. There is an optimal n beyond which more strips actually worsen the result."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A student claims: 'I used n=100 strips so my answer must be very accurate.' Give the most complete response.",
+        "options": [
+          "True — more strips always means more accuracy",
+          "Largely true, but rounding errors and the nature of f(x) also matter",
+          "False — accuracy depends only on the function",
+          "False — n=100 is always too many"
+        ],
+        "answer": "Largely true, but rounding errors and the nature of f(x) also matter",
+        "explanation": "More strips generally does improve accuracy (error∝h²). However, the accuracy also depends on the magnitude of f'' (curves with high curvature need more strips), and for very large n, accumulated rounding errors may reduce accuracy. The claim is largely right but not unconditionally true."
+      }
+    ]
+  }
+}

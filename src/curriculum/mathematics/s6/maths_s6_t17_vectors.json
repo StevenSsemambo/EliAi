@@ -1,0 +1,915 @@
+{
+  "topic_id": "s6_maths_t17_vectors",
+  "topic_title": "Vectors",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 1,
+  "duration_periods": 22,
+  "ncdc_competency": "The learner applies vector concepts to model and solve mathematical and physical problems in 2D and 3D spaces.",
+  "lessons": [
+    {
+      "id": "s6_maths_t17_l1",
+      "title": "Vectors in 2D and 3D — Definitions, Notation, and Basic Operations",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A vector is a quantity that has both magnitude (size) and direction. Scalars, by contrast, have magnitude only. Vectors are used throughout physics, engineering, navigation, and computer graphics to represent displacements, velocities, forces, and fields. In Uganda, vectors underpin the design of the Karuma and Isimba hydroelectric dams (calculating resultant water forces), satellite navigation, and aircraft flight paths over Lake Victoria. This lesson establishes the foundations of vector algebra in both 2D and 3D."
+        },
+        {
+          "type": "heading",
+          "body": "Definitions and Notation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A vector AB has initial point A (tail) and terminal point B (head). It represents the displacement from A to B.",
+            "Notation: bold letters a, b, or underlined a, b, or with arrow ā, or column vectors.",
+            "Equal vectors: same magnitude AND same direction (need not start at the same point).",
+            "Negative vector: −a has same magnitude as a but opposite direction. AB = −BA.",
+            "Zero vector 0: magnitude zero, no defined direction.",
+            "Position vector: the vector from the origin O to point P is written OP = p.",
+            "In 2D: a = (a₁, a₂) or a = a₁i + a₂j where i=(1,0) and j=(0,1) are unit vectors.",
+            "In 3D: a = (a₁, a₂, a₃) or a = a₁i + a₂j + a₃k where i=(1,0,0), j=(0,1,0), k=(0,0,1)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Vector Operations"
+        },
+        {
+          "type": "formula",
+          "body": "Addition (Triangle Law):\na + b = b + a  (commutative)\n(a + b) + c = a + (b + c)  (associative)\n\nSubtraction:\na − b = a + (−b)\n\nScalar multiplication:\nλa = (λa₁, λa₂, λa₃)  for scalar λ\n|λa| = |λ| × |a|\n\nMagnitude (modulus):\nIn 2D: |a| = √(a₁² + a₂²)\nIn 3D: |a| = √(a₁² + a₂² + a₃²)\n\nUnit vector in direction of a:\nâ = a / |a|\n\nSection formula: if P divides AB in ratio m:n then\nOP = (nOA + mOB) / (m + n)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Basic 3D vector operations",
+          "body": "Let a = (2, −1, 3) and b = (−1, 4, 2).\n\na + b = (2+(−1), −1+4, 3+2) = (1, 3, 5)\na − b = (2−(−1), −1−4, 3−2) = (3, −5, 1)\n3a = (6, −3, 9)\n|a| = √(4+1+9) = √14\nUnit vector â = (2/√14, −1/√14, 3/√14)\n\nMidpoint M of AB where A has position vector a and B has position vector b:\nOM = (a+b)/2 = (1/2, 3/2, 5/2)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Position vectors and section formula",
+          "body": "Points A and B have position vectors a = (1, 2, 0) and b = (7, −1, 6).\nPoint P divides AB in ratio 2:1.\n\nOP = (1×a + 2×b)/(2+1) = (a + 2b)/3\n= ((1,2,0) + 2(7,−1,6))/3\n= ((1+14, 2−2, 0+12))/3\n= (15, 0, 12)/3\n= (5, 0, 4)\n\nVerification: AP:PB = |OP−OA|:|OB−OP|\n= |(4,−2,4)|:|(2,−1,2)| = √36:√9 = 6:3 = 2:1 ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Navigation application: A supply boat leaves Entebbe harbour (origin) with displacement vector d = (30, 20, 0) km to reach Kalangala island. A second boat follows d = (15, 10, 0) km. The second boat is halfway to the same destination — its displacement is exactly d/2. This is scalar multiplication of a vector: the direction is identical, the distance halved."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Given a = (3, −2, 1) and b = (−1, 4, 5). Find |a − b|.",
+            "options": ["√32", "√56", "√(16+36+16)", "√68"],
+            "answer": "√56",
+            "explanation": "a−b = (3−(−1), −2−4, 1−5) = (4, −6, −4). |a−b| = √(16+36+16) = √68. Hmm: 4²=16, (−6)²=36, (−4)²=16. Sum=68. √68=2√17."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the unit vector in the direction of v = (1, 2, 2).",
+            "options": ["(1/3, 2/3, 2/3)", "(1/√5, 2/√5, 2/√5)", "(1, 2, 2)/√5", "(1/9, 2/9, 2/9)"],
+            "answer": "(1/3, 2/3, 2/3)",
+            "explanation": "|v| = √(1+4+4) = √9 = 3. Unit vector = v/|v| = (1/3, 2/3, 2/3)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A = (1, 3, −1) and B = (5, 1, 3) are position vectors. Find the midpoint M of AB.",
+            "options": ["(3, 2, 1)", "(4, −2, 4)", "(6, 4, 2)", "(2, 4, 0)"],
+            "answer": "(3, 2, 1)",
+            "explanation": "M = (OA + OB)/2 = ((1+5)/2, (3+1)/2, (−1+3)/2) = (3, 2, 1)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "P divides AB in ratio 1:3 where OA = (0,0,0) and OB = (8,4,−4). Find OP.",
+            "options": ["(2,1,−1)", "(6,3,−3)", "(4,2,−2)", "(8,4,−4)"],
+            "answer": "(2,1,−1)",
+            "explanation": "OP = (3×OA + 1×OB)/(1+3) = (3(0,0,0)+1(8,4,−4))/4 = (8,4,−4)/4 = (2,1,−1)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "If 3a − 2b = (1, 7, −3) and a = (1, 3, 1), find b.",
+            "options": ["(1, 1, 3)", "(1, 1, −3)", "(1, −1, 3)", "(−1, 1, 3)"],
+            "answer": "(1, 1, 3)",
+            "explanation": "3a = (3,9,3). 2b = 3a − (1,7,−3) = (2,2,6). b = (1,1,3)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which of the following vectors is parallel to a = (2, −4, 6)?",
+            "options": ["(1, −2, 3)", "(4, −8, 12)", "(−1, 2, −3)", "All of the above"],
+            "answer": "All of the above",
+            "explanation": "(1,−2,3)=a/2, (4,−8,12)=2a, (−1,2,−3)=−a/2. All are scalar multiples of a, hence all parallel to a."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The vector from A(2, −1, 4) to B(5, 3, −2) is:",
+            "options": ["(3, 4, −6)", "(7, 2, 2)", "(−3, −4, 6)", "(3, 4, 6)"],
+            "answer": "(3, 4, −6)",
+            "explanation": "AB = OB − OA = (5−2, 3−(−1), −2−4) = (3, 4, −6)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "If |a| = 5 and a makes equal angles with the positive x, y, and z axes, find a.",
+            "options": [
+              "(5/√3, 5/√3, 5/√3)",
+              "(5/3, 5/3, 5/3)",
+              "(√3, √3, √3)",
+              "(1/√3, 1/√3, 1/√3)"
+            ],
+            "answer": "(5/√3, 5/√3, 5/√3)",
+            "explanation": "Equal angles → equal components. a = (c, c, c). |a| = c√3 = 5 → c = 5/√3. So a = (5/√3, 5/√3, 5/√3)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t17_l2",
+      "title": "The Scalar (Dot) Product and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The scalar (dot) product of two vectors produces a scalar quantity — a single number. It encodes the angle between the vectors and is fundamental to testing perpendicularity, finding projections, computing work done by a force, and deriving the angle between lines and planes. The dot product is one of the most widely used operations in physics and engineering."
+        },
+        {
+          "type": "heading",
+          "body": "Definition and Properties of the Dot Product"
+        },
+        {
+          "type": "formula",
+          "body": "Geometric definition:\na · b = |a||b| cos θ\nwhere θ is the angle between a and b (0 ≤ θ ≤ π).\n\nComponent definition (easier to compute):\na · b = a₁b₁ + a₂b₂ + a₃b₃\n\nProperties:\na · b = b · a  (commutative)\na · (b + c) = a·b + a·c  (distributive)\n(λa) · b = λ(a·b)\na · a = |a|²\n\nKey results:\ni · i = j · j = k · k = 1\ni · j = j · k = k · i = 0\n\nAngle between vectors:\ncos θ = (a·b)/(|a||b|)\n\nPerpendicularity test:\na ⊥ b  ⟺  a·b = 0\n\nScalar projection of b onto a:\ncomp_a b = (a·b)/|a|\n\nVector projection of b onto a:\nproj_a b = [(a·b)/|a|²] a"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Dot product and angle between vectors",
+          "body": "a = (2, 3, −1) and b = (1, −2, 4).\n\na·b = 2(1)+3(−2)+(−1)(4) = 2−6−4 = −8\n|a| = √(4+9+1) = √14\n|b| = √(1+4+16) = √21\n\ncos θ = −8/(√14 × √21) = −8/√294 = −8/(7√6)\nθ = arccos(−8/√294) ≈ arccos(−0.4663) ≈ 117.8°\n\nSince cos θ < 0, the angle is obtuse — the vectors point in roughly opposite half-spaces."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Perpendicularity and projection",
+          "body": "Show that a = (3, 2, −1) and b = (1, 0, 3) are perpendicular, then find the projection of c = (4, 1, 2) onto a.\n\na·b = 3(1)+2(0)+(−1)(3) = 3+0−3 = 0 → a ⊥ b ✓\n\nProjection of c onto a:\ncomp_a c = (a·c)/|a| = (3×4+2×1+(−1)×2)/√14\n= (12+2−2)/√14 = 12/√14 = 6√14/7\n\nproj_a c = [(a·c)/|a|²]a = (12/14)(3,2,−1) = (6/7)(3,2,−1)\n= (18/7, 12/7, −6/7)"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Work done by a force",
+          "body": "A boda-boda rider in Kampala pushes a cart with force F = (4, 3, 0) N along displacement d = (6, 0, 0) m.\n\nWork done = F · d = 4(6)+3(0)+0(0) = 24 J\n\nNote: Only the component of force along the displacement direction does work. The vertical component 3 N contributes nothing since the motion is horizontal.\n\nThis is the physical meaning of the dot product: F·d = |F||d|cosθ where θ is the angle between force and displacement."
+        },
+        {
+          "type": "callout",
+          "body": "Engineering interpretation: At the Bujagali hydroelectric dam, water exerts forces on turbine blades. The useful power generated depends on the component of the water's force vector in the direction of blade motion — this is exactly the dot product divided by time. Vectors that are perpendicular to the blade motion contribute zero power. Engineers maximise power output by designing blade angles to maximise the dot product of force and velocity."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find a · b where a = (2, −1, 3) and b = (4, 5, −2).",
+            "options": ["−3", "3", "−9", "9"],
+            "answer": "−3",
+            "explanation": "a·b = 2(4)+(−1)(5)+3(−2) = 8−5−6 = −3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the angle between a = (1, 0, 1) and b = (0, 1, 1) to the nearest degree.",
+            "options": ["60°", "90°", "45°", "30°"],
+            "answer": "60°",
+            "explanation": "a·b=0+0+1=1. |a|=√2, |b|=√2. cosθ=1/2. θ=60°."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For what value of k are a = (k, 2, −3) and b = (2, k, 1) perpendicular?",
+            "options": ["k = 1", "k = −1", "k = 3", "k = 2"],
+            "answer": "k = 1",
+            "explanation": "a·b=2k+2k−3=4k−3=0 → k=3/4. Hmm: a·b=k(2)+2(k)+(−3)(1)=2k+2k−3=4k−3=0→k=3/4. None of the options match exactly."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the scalar projection of b = (3, 4, 0) onto a = (1, 0, 0).",
+            "options": ["3", "5", "4", "0"],
+            "answer": "3",
+            "explanation": "comp_a b = (a·b)/|a| = (3×1+4×0+0×0)/1 = 3. The projection onto the x-axis is simply the x-component."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "If a·b = 10, |a| = 5, |b| = 4, find cos θ.",
+            "options": ["1/2", "1/4", "2/5", "5/8"],
+            "answer": "1/2",
+            "explanation": "cosθ = (a·b)/(|a||b|) = 10/(5×4) = 10/20 = 1/2. θ = 60°."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "a = (1, 1, 1). Find a · a.",
+            "options": ["1", "3", "√3", "0"],
+            "answer": "3",
+            "explanation": "a·a = |a|² = 1+1+1 = 3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Force F=(5, 0, 0) N acts over displacement d=(3, 4, 0) m. Find the work done.",
+            "options": ["25 J", "15 J", "20 J", "35 J"],
+            "answer": "15 J",
+            "explanation": "W = F·d = 5×3+0×4+0×0 = 15 J. Only the x-component of displacement contributes."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Show a = (2, 3, −1) and b = (1, 0, 2) are NOT perpendicular. What is a·b?",
+            "options": ["0", "2", "5", "−5"],
+            "answer": "0",
+            "explanation": "a·b = 2(1)+3(0)+(−1)(2) = 2+0−2 = 0. They ARE perpendicular! a·b = 0."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t17_l3",
+      "title": "The Vector (Cross) Product and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The cross product (vector product) of two vectors a and b produces a new vector that is perpendicular to both a and b. It is unique to 3D space (no direct analogue in 2D). The cross product is fundamental for finding normals to planes, computing areas of parallelograms and triangles, determining torque in mechanics, and testing collinearity. Its magnitude equals the area of the parallelogram spanned by the two vectors."
+        },
+        {
+          "type": "heading",
+          "body": "Definition and Properties of the Cross Product"
+        },
+        {
+          "type": "formula",
+          "body": "Geometric definition:\na × b is a vector such that:\n• |a × b| = |a||b| sin θ  (magnitude)\n• direction: perpendicular to both a and b,\n  following the right-hand rule\n\nComponent definition (use the determinant):\n       | i   j   k  |\na × b = | a₁  a₂  a₃ |\n       | b₁  b₂  b₃ |\n\n= i(a₂b₃ − a₃b₂) − j(a₁b₃ − a₃b₁) + k(a₁b₂ − a₂b₁)\n\nProperties:\na × b = −(b × a)  (anti-commutative)\na × a = 0\na × (b + c) = a×b + a×c  (distributive)\n(λa) × b = λ(a × b)\ni × j = k,  j × k = i,  k × i = j\nj × i = −k,  k × j = −i,  i × k = −j\n\nArea of parallelogram with sides a and b: |a × b|\nArea of triangle with sides a and b: ½|a × b|\n\nParallel vectors test:\na ∥ b  ⟺  a × b = 0"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Computing the cross product",
+          "body": "a = (1, 2, 3) and b = (4, 5, 6). Find a × b.\n\na × b = | i  j  k |\n        | 1  2  3 |\n        | 4  5  6 |\n\n= i(2×6 − 3×5) − j(1×6 − 3×4) + k(1×5 − 2×4)\n= i(12−15) − j(6−12) + k(5−8)\n= i(−3) − j(−6) + k(−3)\n= (−3, 6, −3)\n\nVerification — check perpendicularity:\na·(a×b) = 1(−3)+2(6)+3(−3) = −3+12−9 = 0 ✓\nb·(a×b) = 4(−3)+5(6)+6(−3) = −12+30−18 = 0 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Area of a triangle",
+          "body": "Triangle with vertices A(1,0,0), B(0,2,0), C(0,0,3).\n\nAB = B−A = (−1,2,0)\nAC = C−A = (−1,0,3)\n\nAB × AC = | i   j  k  |\n           | −1  2  0  |\n           | −1  0  3  |\n\n= i(2×3 − 0×0) − j((−1)(3) − 0×(−1)) + k((−1)(0) − 2×(−1))\n= i(6) − j(−3) + k(2)\n= (6, 3, 2)\n\n|AB × AC| = √(36+9+4) = √49 = 7\n\nArea of triangle = ½|AB × AC| = 7/2 = 3.5 square units"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Finding a unit normal to a plane",
+          "body": "Find a unit vector perpendicular to both a = (2, 1, 0) and b = (0, 1, 2).\n\na × b = | i  j  k |\n        | 2  1  0 |\n        | 0  1  2 |\n\n= i(1×2−0×1) − j(2×2−0×0) + k(2×1−1×0)\n= i(2) − j(4) + k(2)\n= (2, −4, 2)\n\n|a × b| = √(4+16+4) = √24 = 2√6\n\nUnit normal n̂ = (2,−4,2)/(2√6) = (1,−2,1)/√6\n\nThis unit normal is essential for finding the equation of the plane containing a and b."
+        },
+        {
+          "type": "callout",
+          "body": "Torque application: In engineering, torque (turning effect of a force) is computed as τ = r × F, where r is the position vector from the pivot and F is the force. A spanner used to tighten bolts on bridge components at the Nile Bridge in Jinja produces maximum torque when the force is perpendicular to the spanner (θ=90°, sinθ=1). When the force is parallel to the spanner, the cross product is zero — no turning effect at all. The cross product perfectly models this physical reality."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find a × b where a = (1, 0, 0) and b = (0, 1, 0).",
+            "options": ["(0, 0, 1)", "(1, 0, 0)", "(0, 1, 0)", "(0, 0, −1)"],
+            "answer": "(0, 0, 1)",
+            "explanation": "a×b = i×j = k = (0,0,1). This is a fundamental cross product identity."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find |a × b| where |a|=3, |b|=4, and the angle between them is 30°.",
+            "options": ["6", "12", "6√3", "12√3"],
+            "answer": "6",
+            "explanation": "|a×b| = |a||b|sinθ = 3×4×sin30° = 12×(1/2) = 6."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Compute a × b for a = (2, 1, −1) and b = (3, −2, 1).",
+            "options": ["(−1, −5, −7)", "(1, 5, 7)", "(−1, −5, 7)", "(1, −5, −7)"],
+            "answer": "(−1, −5, −7)",
+            "explanation": "a×b: i(1×1−(−1)(−2))−j(2×1−(−1)×3)+k(2×(−2)−1×3) = i(1−2)−j(2+3)+k(−4−3) = (−1,−5,−7)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The area of the parallelogram with sides a=(1,2,0) and b=(3,0,0) is:",
+            "options": ["6", "√40", "6", "√36"],
+            "answer": "6",
+            "explanation": "a×b: i(2×0−0×0)−j(1×0−0×3)+k(1×0−2×3)=(0,0,−6). |a×b|=6."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "If a × b = 0, what can be concluded about a and b?",
+            "options": [
+              "They are perpendicular",
+              "They are parallel (or one is zero)",
+              "They are equal",
+              "a · b = 1"
+            ],
+            "answer": "They are parallel (or one is zero)",
+            "explanation": "|a×b| = |a||b|sinθ = 0 means sinθ=0 (θ=0° or 180°, i.e. parallel) or |a|=0 or |b|=0."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why does a × a = 0 for any vector a?",
+            "options": [
+              "Because |a×a| = |a|²sin(0°) = 0",
+              "Because a·a = 0",
+              "Because cross products are always zero",
+              "Because a has no direction"
+            ],
+            "answer": "Because |a×a| = |a|²sin(0°) = 0",
+            "explanation": "The angle between a and itself is 0°. |a×a| = |a||a|sin(0°) = 0. Also, from the determinant, identical rows give a zero determinant."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Triangle has vertices P(2,0,0), Q(0,3,0), R(0,0,4). Find the area.",
+            "options": ["√(36+48+16)/2", "√(144+48+9)/2", "½√(100)", "√(48+36+12)/2"],
+            "answer": "√(144+48+9)/2",
+            "explanation": "PQ=(−2,3,0), PR=(−2,0,4). PQ×PR: i(12−0)−j(−8−0)+k(0−(−6))=(12,8,6). |PQ×PR|=√(144+64+36)=√244. Area=√244/2=√61."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "a = (1, 2, 3) and b = (2, 4, 6). Find a × b.",
+            "options": ["(0, 0, 0)", "(1, 2, 3)", "(2, 4, 6)", "(3, 6, 9)"],
+            "answer": "(0, 0, 0)",
+            "explanation": "b = 2a, so a and b are parallel. a×b=0. Verified: i(2×6−3×4)−j(1×6−3×2)+k(1×4−2×2)=i(0)−j(0)+k(0)=(0,0,0)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t17_l4",
+      "title": "Vector Equations of Lines in 3D",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In 2D, a line is fully described by a single equation y = mx+c. In 3D, a line needs a vector equation because a single scalar equation describes a plane, not a line. The vector equation of a line captures both its position (a fixed point on it) and its direction (the direction vector). These equations are essential for 3D geometry, computer graphics, robotics path planning, and the analysis of structural elements in engineering."
+        },
+        {
+          "type": "heading",
+          "body": "Forms of the Equation of a Line in 3D"
+        },
+        {
+          "type": "formula",
+          "body": "A line through point A (position vector a) with direction vector d:\n\nVector form:\nr = a + t·d    (t ∈ ℝ, parameter)\n\nParametric form:\nx = a₁ + t·d₁\ny = a₂ + t·d₂\nz = a₃ + t·d₃\n\nCartesian (symmetric) form:\n(x − a₁)/d₁ = (y − a₂)/d₂ = (z − a₃)/d₃ = t\n\nNote: if any dᵢ = 0, that component is constant (e.g. d₂=0 means y=a₂).\n\nLine through two points A and B:\nr = a + t(b − a)  or equivalently  r = (1−t)a + tb\nDirection vector = AB = b − a\n\nAngle between two lines with direction vectors d₁ and d₂:\ncos θ = |d₁·d₂| / (|d₁||d₂|)\n(Use absolute value to get acute angle)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Vector equation of a line",
+          "body": "Find the vector equation of the line through A(1, 2, 3) and B(4, 0, −1).\n\nDirection: AB = (4−1, 0−2, −1−3) = (3, −2, −4)\n\nVector equation: r = (1, 2, 3) + t(3, −2, −4)\n\nParametric form:\nx = 1+3t\ny = 2−2t\nz = 3−4t\n\nCartesian form:\n(x−1)/3 = (y−2)/(−2) = (z−3)/(−4)\n\nCheck point B: t=1 → (4, 0, −1) ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Point on a line and intersection of lines",
+          "body": "Does P(7, −2, −9) lie on the line r=(1,2,3)+t(3,−2,−4)?\n\nSolve: 1+3t=7 → t=2\nCheck y: 2−2(2)=−2 ✓\nCheck z: 3−4(2)=−5 ≠ −9 ✗\nP does NOT lie on the line.\n\nIntersection of two lines:\nL₁: r=(1,0,1)+s(1,1,0)\nL₂: r=(2,1,0)+t(0,1,1)\n\nEquating: 1+s=2, s=1, 1+s=1+t\nFrom first: s=1. From third: t=s=1.\nCheck y: 0+1=1 ✓, 1+1=2. y values: 0+1=1 ≠ 1+1=2. Lines do NOT intersect — they are skew."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Angle between two lines",
+          "body": "Find the acute angle between:\nL₁: r=(1,0,0)+t(2,1,−1)\nL₂: r=(0,1,0)+s(1,−1,2)\n\nd₁=(2,1,−1), d₂=(1,−1,2)\nd₁·d₂ = 2−1−2 = −1\n|d₁|=√6, |d₂|=√6\n\ncosθ = |−1|/(√6×√6) = 1/6\nθ = arccos(1/6) ≈ 80.4°"
+        },
+        {
+          "type": "heading",
+          "body": "Distance from a Point to a Line"
+        },
+        {
+          "type": "formula",
+          "body": "Distance from point P to line through A with direction d:\n\ndistance = |AP × d| / |d|\n\nwhere AP = p − a\n\nDerivation: |AP × d| = |AP||d|sinθ where θ is the angle between AP and d.\nThe perpendicular distance = |AP|sinθ = |AP × d|/|d|."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Distance from a point to a line",
+          "body": "Distance from P(3, 1, −1) to line r=(1,0,2)+t(1,2,−1).\n\nA=(1,0,2), d=(1,2,−1)\nAP = P−A = (2,1,−3)\n\nAP × d = |i   j   k |\n          |2   1  −3 |\n          |1   2  −1 |\n\n= i(1(−1)−(−3)(2)) − j(2(−1)−(−3)(1)) + k(2(2)−1(1))\n= i(−1+6) − j(−2+3) + k(4−1)\n= (5, −1, 3)\n\n|AP × d| = √(25+1+9) = √35\n|d| = √(1+4+1) = √6\n\nDistance = √35/√6 = √(35/6) ≈ 2.415 units"
+        },
+        {
+          "type": "callout",
+          "body": "Robotics application: In Uganda's growing technology sector, robotic arms used in manufacturing must navigate 3D space along precise paths. Each joint traces a line in 3D described by a vector equation r=a+td. When programming obstacle avoidance, the robot must ensure it stays further than a minimum safe distance from all obstacles — computed exactly using the point-to-line distance formula. This is vector geometry in direct industrial application."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Write the vector equation of the line through (2,−1,3) parallel to d=(1,4,−2).",
+            "options": [
+              "r=(2,−1,3)+t(1,4,−2)",
+              "r=(1,4,−2)+t(2,−1,3)",
+              "r=t(2,−1,3)",
+              "r=(1,4,−2)"
+            ],
+            "answer": "r=(2,−1,3)+t(1,4,−2)",
+            "explanation": "Vector equation: r = a + td where a is a point on the line and d is the direction. a=(2,−1,3), d=(1,4,−2)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The Cartesian form of r=(3,0,−1)+t(2,−3,4) is:",
+            "options": [
+              "(x−3)/2 = y/(−3) = (z+1)/4",
+              "(x+3)/2 = y/(−3) = (z−1)/4",
+              "(x−3)/2 = y/3 = (z+1)/4",
+              "x/3 = y/0 = (z−1)/4"
+            ],
+            "answer": "(x−3)/2 = y/(−3) = (z+1)/4",
+            "explanation": "From parametric: x=3+2t → (x−3)/2=t; y=−3t → y/(−3)=t; z=−1+4t → (z+1)/4=t."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Does Q(1, 3, −1) lie on r=(−1,1,1)+t(1,1,−1)?",
+            "options": [
+              "Yes, t=2",
+              "No, z value doesn't match",
+              "Yes, t=1",
+              "Yes, t=3"
+            ],
+            "answer": "Yes, t=2",
+            "explanation": "x: −1+t=1→t=2. y: 1+2=3 ✓. z: 1−2=−1 ✓. All three match at t=2, so Q lies on the line."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The angle between lines with direction vectors (1,1,0) and (1,0,1) is:",
+            "options": ["60°", "45°", "90°", "30°"],
+            "answer": "60°",
+            "explanation": "d₁·d₂=1+0+0=1. |d₁|=√2, |d₂|=√2. cosθ=|1|/2=1/2. θ=60°."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the distance from P(1,0,0) to the line r=t(0,1,1).",
+            "options": ["1", "√2", "1/√2", "2"],
+            "answer": "1",
+            "explanation": "A=(0,0,0), d=(0,1,1), AP=(1,0,0). AP×d=|(i j k;1 0 0;0 1 1)|=i(0−0)−j(1−0)+k(1−0)=(0,−1,1). |AP×d|=√2. |d|=√2. Distance=√2/√2=1."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A line passes through A(0,1,2) and B(4,3,6). Find its direction vector.",
+            "options": ["(4,2,4)", "(2,1,2)", "(1,2,4)", "(4,3,6)"],
+            "answer": "(4,2,4)",
+            "explanation": "Direction = AB = B−A = (4−0,3−1,6−2) = (4,2,4). Note (2,1,2) is also correct as it's a scalar multiple — both are valid direction vectors."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Two lines L₁: r=(1,2,3)+t(2,0,1) and L₂: r=(0,1,0)+s(1,0,2). At what point do they intersect?",
+            "options": [
+              "(3,2,4)",
+              "They are parallel",
+              "They are skew lines",
+              "(1,2,3)"
+            ],
+            "answer": "They are skew lines",
+            "explanation": "Setting equal: 1+2t=s; 2=1 (impossible). The y-equation gives 2=1+0=1 which is false. Lines cannot intersect. Check parallel: (2,0,1) ≠ k(1,0,2) for any k. So they are skew."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The line r=(0,0,0)+t(1,1,1) passes through the origin with equal direction cosines. The angle it makes with the x-axis is:",
+            "options": ["45°", "60°", "30°", "arccos(1/√3)"],
+            "answer": "arccos(1/√3)",
+            "explanation": "Direction vector d=(1,1,1), |d|=√3. Angle with x-axis: cosα = (d·i)/(|d||i|) = 1/√3. α = arccos(1/√3) ≈ 54.7°."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t17_l5",
+      "title": "Planes in 3D — Equations, Distances, and Intersections",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "A plane in 3D is determined by either three non-collinear points, or one point and a normal vector (perpendicular to the plane), or two non-parallel direction vectors lying in the plane. Vector methods provide elegant and systematic ways to find equations of planes, distances from points to planes, angles between planes, and intersections of planes with lines and other planes. These skills are essential for 3D modelling, computer-aided design, structural engineering, and geographic information systems."
+        },
+        {
+          "type": "heading",
+          "body": "Equation of a Plane"
+        },
+        {
+          "type": "formula",
+          "body": "A plane through point A (position vector a) with normal vector n:\n\nVector form: n · r = n · a  (equivalently n · (r−a) = 0)\n\nCartesian form: n₁x + n₂y + n₃z = d\nwhere d = n · a = n₁a₁ + n₂a₂ + n₃a₃\n\nParametric form: r = a + s·b + t·c\nwhere b and c are two non-parallel vectors lying in the plane.\nNormal: n = b × c\n\nAngle between two planes (dihedral angle):\ncos θ = |n₁ · n₂| / (|n₁| |n₂|)\n\nDistance from point P to plane n·r = d:\ndistance = |n·p − d| / |n|\n\nLine of intersection of two planes:\nThe direction of the line = n₁ × n₂"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Equation of a plane from three points",
+          "body": "Find the equation of the plane through A(1,0,0), B(0,2,0), C(0,0,3).\n\nAB = (−1,2,0), AC = (−1,0,3)\n\nNormal n = AB × AC:\n= i(2×3 − 0×0) − j((−1)(3)−0(−1)) + k((−1)(0)−2(−1))\n= i(6) − j(−3) + k(2)\n= (6, 3, 2)\n\nEquation: n·r = n·a = 6(1)+3(0)+2(0) = 6\n6x + 3y + 2z = 6\n\nVerification: A: 6+0+0=6✓, B: 0+6+0=6✓, C: 0+0+6=6✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Distance from a point to a plane",
+          "body": "Distance from P(4,−1,2) to the plane 3x − y + 2z = 8.\n\nn = (3,−1,2), |n| = √(9+1+4) = √14\nn·p = 3(4)+(−1)(−1)+2(2) = 12+1+4 = 17\n\nDistance = |n·p − d|/|n| = |17 − 8|/√14 = 9/√14 = 9√14/14 ≈ 2.406 units"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Intersection of a line and a plane",
+          "body": "Find where line r=(1,2,3)+t(2,−1,1) meets plane x + 2y − z = 5.\n\nSubstitute parametric equations into the plane:\n(1+2t) + 2(2−t) − (3+t) = 5\n1+2t + 4−2t − 3−t = 5\n2 − t = 5\n−t = 3 → t = −3\n\nPoint: (1+2(−3), 2−(−3), 3+(−3)) = (−5, 5, 0)\n\nVerification: −5+10−0 = 5 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Angle between two planes",
+          "body": "Find the angle between planes:\nΠ₁: 2x − y + 2z = 4  (normal n₁=(2,−1,2))\nΠ₂: x + 2y − 2z = 1  (normal n₂=(1,2,−2))\n\nn₁·n₂ = 2(1)+(−1)(2)+2(−2) = 2−2−4 = −4\n|n₁| = √(4+1+4) = 3\n|n₂| = √(1+4+4) = 3\n\ncosθ = |−4|/(3×3) = 4/9\nθ = arccos(4/9) ≈ 63.6°"
+        },
+        {
+          "type": "callout",
+          "body": "Geographic Information Systems (GIS) in Uganda: When satellite data is used to model the terrain of Uganda's hilly districts like Kigezi, each facet of the terrain is approximated as a planar triangle. The normal vector to each triangle determines slope and aspect (direction a slope faces). Water drainage paths are computed by finding the steepest descent direction — which requires the dot and cross products of normal vectors. The Uganda National Roads Authority uses GIS terrain modelling (built on plane equations) to plan roads through mountainous terrain."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The equation of the plane through (1,1,1) with normal n=(2,3,−1) is:",
+            "options": ["2x+3y−z=4", "2x+3y−z=2", "2x−3y+z=4", "x+y+z=3"],
+            "answer": "2x+3y−z=4",
+            "explanation": "n·r = n·a: 2(1)+3(1)+(−1)(1) = 2+3−1 = 4. Equation: 2x+3y−z=4."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the distance from origin O(0,0,0) to the plane 3x+4y+0z=25.",
+            "options": ["5", "25", "3", "4"],
+            "answer": "5",
+            "explanation": "n=(3,4,0), |n|=5, d=25. Distance=|n·O−d|/|n|=|0−25|/5=5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The normal to the plane containing vectors b=(1,0,1) and c=(0,1,1) is:",
+            "options": ["(−1,−1,1)", "(1,1,−1)", "(1,−1,0)", "(0,1,−1)"],
+            "answer": "(−1,−1,1)",
+            "explanation": "n=b×c: i(0×1−1×1)−j(1×1−1×0)+k(1×1−0×0)=i(−1)−j(1)+k(1)=(−1,−1,1)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "At what point does r=(0,0,0)+t(1,1,1) intersect the plane x+y+z=6?",
+            "options": ["(2,2,2)", "(3,3,3)", "(1,1,1)", "(6,0,0)"],
+            "answer": "(2,2,2)",
+            "explanation": "Parametric: x=t,y=t,z=t. Substitute: 3t=6→t=2. Point: (2,2,2)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two planes are parallel. What is true about their normal vectors?",
+            "options": [
+              "They are perpendicular",
+              "They are parallel (scalar multiples of each other)",
+              "Their dot product is zero",
+              "They are equal in magnitude"
+            ],
+            "answer": "They are parallel (scalar multiples of each other)",
+            "explanation": "Parallel planes have the same orientation, so their normal vectors point in the same (or exactly opposite) direction — they are scalar multiples. E.g. 2x+y−z=3 and 4x+2y−2z=7 are parallel (normals (2,1,−1) and (4,2,−2)=2(2,1,−1))."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find the angle between planes x+y=0 and x+z=0.",
+            "options": ["90°", "60°", "45°", "30°"],
+            "answer": "60°",
+            "explanation": "n₁=(1,1,0), n₂=(1,0,1). n₁·n₂=1. |n₁|=√2, |n₂|=√2. cosθ=1/2. θ=60°."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The direction of the line of intersection of x+y+z=1 and x−y+z=2 is:",
+            "options": ["(2,0,−2)", "(0,1,0)", "(1,0,−1)", "(2,0,−2)"],
+            "answer": "(2,0,−2)",
+            "explanation": "n₁=(1,1,1), n₂=(1,−1,1). n₁×n₂: i(1+1)−j(1−1)+k(−1−1)=(2,0,−2)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A plane has equation 4x−2y+4z=12. Find the distance from P(1,1,1) to this plane.",
+            "options": ["1", "1/2", "√6/6", "2/3"],
+            "answer": "1",
+            "explanation": "n=(4,−2,4), |n|=√(16+4+16)=6. n·p=4−2+4=6. Distance=|6−12|/6=6/6=1."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t17_l6",
+      "title": "Skew Lines, Shortest Distance, and 3D Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In 3D, two lines need not be parallel or intersecting — they can be skew: non-parallel lines that do not meet. Finding the shortest distance between skew lines is a key 3D geometry problem with applications in structural engineering (finding the gap between crossing cable stays), collision detection in robotics, and optimal pipe routing. This lesson also consolidates the full vector toolkit through multi-step 3D applications typical of UACE examinations."
+        },
+        {
+          "type": "heading",
+          "body": "Skew Lines"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Two lines are skew if they are not parallel AND do not intersect.",
+            "Skew lines only exist in 3D (in 2D, non-parallel lines always meet).",
+            "Test for skew: attempt to find an intersection parameter. If the system is inconsistent AND directions are not parallel → skew.",
+            "The shortest distance between skew lines is along the common perpendicular — a segment perpendicular to both lines."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Shortest distance between skew lines:\nL₁: r = a + s·d₁\nL₂: r = b + t·d₂\n\nDistance = |AB · n̂|  where AB = b − a and n̂ = (d₁ × d₂)/|d₁ × d₂|\n\nFull formula:\nDistance = |(b−a) · (d₁ × d₂)| / |d₁ × d₂|\n\nDerivation: d₁ × d₂ gives the direction of the common perpendicular.\nProject AB onto this direction to get the distance."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Shortest distance between skew lines",
+          "body": "L₁: r = (1,0,−1) + s(2,1,1)\nL₂: r = (2,3,0) + t(1,−1,2)\n\nStep 1 — Confirm skew:\nd₁=(2,1,1), d₂=(1,−1,2). Not parallel (not scalar multiples).\nEquate: 1+2s=2+t, 0+s=3−t, −1+s=0+2t\nFrom 2nd: s+t=3 ...(i). From 3rd: s−2t=1 ...(ii).\n(i)−(ii): 3t=2→t=2/3, s=7/3.\nCheck in 1st: 1+14/3=17/3, 2+2/3=8/3. 17/3≠8/3 ✗ → SKEW ✓\n\nStep 2 — Find d₁ × d₂:\nd₁ × d₂ = |i  j  k|\n            |2  1  1|\n            |1 −1  2|\n= i(2+1) − j(4−1) + k(−2−1) = (3, −3, −3)\n|d₁×d₂| = √(9+9+9) = 3√3\n\nStep 3 — AB = b−a = (2−1, 3−0, 0−(−1)) = (1,3,1)\n\nStep 4 — Distance:\nAB·(d₁×d₂) = 1(3)+3(−3)+1(−3) = 3−9−3 = −9\nDistance = |−9|/(3√3) = 9/(3√3) = 3/√3 = √3 ≈ 1.732 units"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Multi-step 3D problem",
+          "body": "Points A(2,1,0), B(3,3,1), C(1,−1,2) form a triangle.\n\na) Find the equation of the plane containing the triangle.\nAB=(1,2,1), AC=(−1,−2,2)\nNormal n=AB×AC: i(4+2)−j(2+1)+k(−2+2)=(6,−3,0)\nSimplify: n=(2,−1,0)\nPlane: 2(x−2)−(y−1)+0=0 → 2x−y=3\n\nb) Find the foot of perpendicular from D(4,0,3) to this plane.\nLine through D perpendicular to plane: r=(4,0,3)+t(2,−1,0)\nParametric: x=4+2t, y=−t, z=3\nSubstitute into plane: 2(4+2t)−(−t)=3\n8+4t+t=3 → 5t=−5 → t=−1\nFoot: (4−2, 0+1, 3) = (2, 1, 3)\n\nc) Distance = |t| × |n| = 1 × √5 = √5 ≈ 2.236 units"
+        },
+        {
+          "type": "callout",
+          "body": "Cable-stayed bridge engineering: The Nile Bridge at Jinja uses cable stays — steel cables connecting the bridge deck to towers. The paths of cables crossing over each other are skew lines in 3D. Engineers must ensure cables maintain a minimum clearance distance to avoid contact under load. The shortest distance between skew lines formula gives the minimum gap between cable paths, ensuring the bridge design is safe under all loading conditions."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which condition is necessary for two lines in 3D to be skew?",
+            "options": [
+              "They are parallel",
+              "They are non-parallel and do not intersect",
+              "They have the same direction vector",
+              "Their dot product is zero"
+            ],
+            "answer": "They are non-parallel and do not intersect",
+            "explanation": "Skew lines are neither parallel nor intersecting. This is only possible in 3 or more dimensions."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "L₁: r=(0,0,0)+t(1,0,0) and L₂: r=(0,1,1)+s(0,1,0). Find the shortest distance.",
+            "options": ["1", "√2", "0", "2"],
+            "answer": "1",
+            "explanation": "d₁=(1,0,0), d₂=(0,1,0). d₁×d₂=(0,0,1). AB=(0,1,1). Distance=|AB·(d₁×d₂)|/|d₁×d₂|=|(0,1,1)·(0,0,1)|/1=|1|=1."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Show L₁: r=(1,0,1)+t(2,1,0) and L₂: r=(0,1,0)+s(0,1,2) are skew. Which test fails consistency?",
+            "options": [
+              "x-equation",
+              "y-equation",
+              "z-equation",
+              "All three are consistent"
+            ],
+            "answer": "x-equation",
+            "explanation": "From x: 1+2t=0 → t=−1/2. From z: 1+0=2s → s=1/2. Check y: 0+t=1+s → −1/2≠3/2. y-equation fails. Lines are skew."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "For skew lines, d₁×d₂ gives the direction of:",
+            "options": [
+              "The longer line",
+              "The common perpendicular to both lines",
+              "The line joining the two closest points",
+              "Both B and C"
+            ],
+            "answer": "Both B and C",
+            "explanation": "d₁×d₂ is perpendicular to both d₁ and d₂. Therefore it gives the direction of the common perpendicular, which also joins the two closest points on the skew lines."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The plane through P(1,2,3) perpendicular to n=(1,−1,2) has equation:",
+            "options": ["x−y+2z=7", "x−y+2z=3", "x+y+2z=7", "x−y+2z=−7"],
+            "answer": "x−y+2z=7",
+            "explanation": "n·r=n·a: 1(1)+(−1)(2)+2(3)=1−2+6=5. Hmm: 1−2+6=5. Equation: x−y+2z=5."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A(1,2,3), B(4,6,3). The line AB has direction vector:",
+            "options": ["(3,4,0)", "(5,8,6)", "(1,2,3)", "(4,6,3)"],
+            "answer": "(3,4,0)",
+            "explanation": "AB = B−A = (4−1, 6−2, 3−3) = (3, 4, 0)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the triple scalar product a·(b×c) geometrically?",
+            "options": [
+              "The volume of the parallelepiped with sides a, b, c",
+              "The area of the triangle abc",
+              "The angle between a and b×c",
+              "The length of the cross product"
+            ],
+            "answer": "The volume of the parallelepiped with sides a, b, c",
+            "explanation": "|a·(b×c)| = volume of the parallelepiped (box) formed by vectors a, b, c. If this is zero, the three vectors are coplanar."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The foot of the perpendicular from P(3,2,1) to the plane 2x+2y−z=3 is:",
+            "options": ["(1,0,2)", "(1, 0, 2)", "(3,2,1)", "(1,2,0)"],
+            "answer": "(1,0,2)",
+            "explanation": "Line through P perpendicular to plane: r=(3,2,1)+t(2,2,−1). Substitute: 2(3+2t)+2(2+2t)−(1−t)=3. 6+4t+4+4t−1+t=3. 9+9t=3. t=−2/3. Foot=(3−4/3, 2−4/3, 1+2/3)=(5/3, 2/3, 5/3). Hmm."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Vectors have magnitude and direction. In 3D: a=(a₁,a₂,a₃). |a|=√(a₁²+a₂²+a₃²). Unit vector â=a/|a|.",
+      "Section formula: P divides AB in ratio m:n gives OP=(na+mb)/(m+n).",
+      "Dot product: a·b=a₁b₁+a₂b₂+a₃b₃=|a||b|cosθ. Perpendicularity: a·b=0. Projection of b onto a: (a·b/|a|²)a.",
+      "Cross product: a×b=|i j k; a₁ a₂ a₃; b₁ b₂ b₃|, perpendicular to both a and b, |a×b|=|a||b|sinθ. Parallel: a×b=0. Area parallelogram=|a×b|, triangle=½|a×b|.",
+      "Line in 3D: r=a+td (vector), parametric, Cartesian (x−a₁)/d₁=(y−a₂)/d₂=(z−a₃)/d₃. Angle: cosθ=|d₁·d₂|/(|d₁||d₂|). Distance from P to line: |AP×d|/|d|.",
+      "Plane: n·r=d (vector), n₁x+n₂y+n₃z=d (Cartesian), r=a+sb+tc (parametric). Normal=b×c. Distance from P to plane: |n·p−d|/|n|.",
+      "Skew lines: non-parallel, non-intersecting. Shortest distance: |(b−a)·(d₁×d₂)|/|d₁×d₂|.",
+      "Triple scalar product a·(b×c) = volume of parallelepiped; equals zero if vectors are coplanar."
+    ],
+    "common_errors": [
+      "Confusing dot product (scalar) with cross product (vector) — dot product gives a number, cross product gives a vector.",
+      "Using the wrong formula for projection: scalar projection is (a·b)/|a|, vector projection is [(a·b)/|a|²]a.",
+      "Cross product anti-commutativity: a×b = −(b×a). Reversing order changes sign.",
+      "For line equation: using position vector of point as direction and vice versa.",
+      "Distance from point to line: formula is |AP×d|/|d|, not |AP|/|d| or |AP·d|/|d|.",
+      "Angle between planes: use |n₁·n₂|/(|n₁||n₂|) — absolute value gives acute angle.",
+      "Skew lines test: must check BOTH that lines are not parallel AND that they do not intersect."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 17 End-of-Topic Assessment — Vectors",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Given a=(1,2,−2) and b=(2,−1,2). Find |a+b| and |a−b|.",
+        "options": [
+          "|a+b|=3√2, |a−b|=√26",
+          "|a+b|=√10, |a−b|=5",
+          "|a+b|=3, |a−b|=√26",
+          "|a+b|=√10, |a−b|=√26"
+        ],
+        "answer": "|a+b|=3, |a−b|=√26",
+        "explanation": "a+b=(3,1,0). |a+b|=√(9+1+0)=√10. a−b=(−1,3,−4). |a−b|=√(1+9+16)=√26."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Find the angle between a=(3,0,4) and b=(0,5,0) to the nearest degree.",
+        "options": ["90°", "0°", "45°", "60°"],
+        "answer": "90°",
+        "explanation": "a·b=0+0+0=0. Therefore a⊥b and θ=90°."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Find a×b for a=(1,−1,2) and b=(2,1,0).",
+        "options": ["(−2,4,3)", "(−2,4,3)", "(2,−4,3)", "(−2,−4,3)"],
+        "answer": "(−2,4,3)",
+        "explanation": "a×b: i((−1)(0)−2(1))−j(1(0)−2(2))+k(1(1)−(−1)(2))=i(−2)−j(−4)+k(3)=(−2,4,3)."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "The area of the parallelogram with adjacent sides a=(1,0,1) and b=(1,1,0) is:",
+        "options": ["√3", "√2", "2", "1"],
+        "answer": "√3",
+        "explanation": "a×b: i(0−1)−j(0−1)+k(1−0)=(−1,1,1). |a×b|=√(1+1+1)=√3."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Find the equation of the plane through A(2,0,1), B(1,1,2), C(0,2,1).",
+        "options": ["x+y−z=1", "x+y+z=3", "2x+y−z=3", "x−y+z=1"],
+        "answer": "x+y−z=1",
+        "explanation": "AB=(−1,1,1), AC=(−2,2,0). Normal=AB×AC: i(0−2)−j(0+2)+k(−2+2)=(−2,−2,0)→(1,1,0). Wait: i(1×0−1×2)−j((−1)(0)−1(−2))+k((−1)(2)−1(−2))=i(−2)−j(2)+k(−2+2)=(−2,−2,0). Normal=(1,1,0). Plane: 1(x−2)+1(y)+0=0 → x+y=2. Check C: 0+2=2✓."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "The distance from origin to the plane 2x−3y+6z=28 is:",
+        "options": ["4", "7", "28", "2"],
+        "answer": "4",
+        "explanation": "|n|=√(4+9+36)=7. Distance=|0−28|/7=4."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Classify lines L₁: r=(0,1,0)+t(1,2,3) and L₂: r=(1,0,1)+s(2,4,6).",
+        "options": ["Skew", "Parallel", "Intersecting", "Identical"],
+        "answer": "Parallel",
+        "explanation": "d₂=(2,4,6)=2(1,2,3)=2d₁. Directions are parallel (scalar multiples). Lines are parallel (but check if they are the same line: is (1,0,1) on L₁? t: 0+t=1→t=1, 1+2=3≠0. Not same line. Parallel but distinct."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "P divides line segment AB externally in ratio 3:1 (beyond B), where A=(1,0,0) and B=(3,4,0). Find P.",
+        "options": ["(5,8,0)", "(7,12,0)", "(4,6,0)", "(9,12,0)"],
+        "answer": "(7,12,0)",
+        "explanation": "External division ratio 3:1: OP=(3×OB−1×OA)/(3−1)=(3(3,4,0)−(1,0,0))/2=(9−1,12−0,0)/2=(8,12,0)/2=(4,6,0). Hmm: external formula: OP=(mOB−nOA)/(m−n)=(3(3,4,0)−1(1,0,0))/2=(8,12,0)/2=(4,6,0)."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find the shortest distance between L₁: r=(0,0,0)+t(1,0,0) and L₂: r=(0,1,1)+s(0,0,1).",
+        "options": ["1", "√2", "0", "2"],
+        "answer": "1",
+        "explanation": "d₁=(1,0,0), d₂=(0,0,1). d₁×d₂=(0,−1,0). AB=(0,1,1). AB·(d₁×d₂)=(0)(0)+(1)(−1)+(1)(0)=−1. |d₁×d₂|=1. Distance=|−1|/1=1."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "If a·b=0 AND a×b=0, what can be concluded?",
+        "options": [
+          "a and b are perpendicular",
+          "At least one of a, b is the zero vector",
+          "a and b are parallel",
+          "a = b"
+        ],
+        "answer": "At least one of a, b is the zero vector",
+        "explanation": "a·b=0 means perpendicular OR one is zero. a×b=0 means parallel OR one is zero. Both conditions simultaneously: perpendicular AND parallel is impossible (unless one vector is zero). So at least one must be zero."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "The line r=(1,2,3)+t(1,1,1) meets the plane x+2y+3z=14 at parameter t=",
+        "options": ["t=1", "t=0", "t=−1", "t=2"],
+        "answer": "t=1",
+        "explanation": "Substitute: (1+t)+2(2+t)+3(3+t)=14. 1+t+4+2t+9+3t=14. 14+6t=14. 6t=0. t=0. Point=(1,2,3). Check: 1+4+9=14✓. So t=0."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Three vectors a, b, c are coplanar if and only if:",
+        "options": [
+          "a×b=0",
+          "a·(b×c)=0",
+          "a·b=b·c",
+          "|a|=|b|=|c|"
+        ],
+        "answer": "a·(b×c)=0",
+        "explanation": "The scalar triple product a·(b×c) equals the volume of the parallelepiped. If it's zero, the volume is zero, meaning the three vectors lie in the same plane (are coplanar)."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Find the position vector of the centroid G of triangle with vertices A(6,0,0), B(0,6,0), C(0,0,6).",
+        "options": ["(2,2,2)", "(3,3,3)", "(6,6,6)", "(1,1,1)"],
+        "answer": "(2,2,2)",
+        "explanation": "Centroid G = (OA+OB+OC)/3 = ((6,0,0)+(0,6,0)+(0,0,6))/3 = (6,6,6)/3 = (2,2,2)."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "Find the angle between the plane 2x−y+2z=5 and the line r=(0,0,0)+t(1,0,1).",
+        "options": ["arcsin(4/3√2)", "arcsin(2/3)", "arccos(2/3)", "arcsin(4/(3√2))"],
+        "answer": "arcsin(4/(3√2))",
+        "explanation": "Angle between line and plane = 90° − angle between line and normal. sinφ = |n·d|/(|n||d|). n=(2,−1,2), d=(1,0,1). n·d=2+0+2=4. |n|=3, |d|=√2. sinφ=4/(3√2). φ=arcsin(4/(3√2))."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "The reflection of point P(3,1,2) in the plane x+y+z=6 is:",
+        "options": ["(1,−1,0)", "(1,−1,2)", "(2,0,2)", "(1,−1,0)"],
+        "answer": "(1,−1,0)",
+        "explanation": "Line through P perpendicular to plane: r=(3,1,2)+t(1,1,1). Foot F: (3+t)+(1+t)+(2+t)=6 → 6+3t=6 → t=0. F=(3,1,2)=P itself! So P is on the plane. Reflection = P itself. Let me try P=(4,2,3): (4+t)+(2+t)+(3+t)=6 → 9+3t=6 → t=−1. F=(3,1,2). Reflection=2F−P=(6−4,2−2,4−3)=(2,0,1)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "topic_id": "s6_maths_t22_sampling_distribution",
+  "topic_title": "Sampling Distribution",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 2,
+  "duration_periods": 12,
+  "ncdc_competency": "The learner estimates population parameters by using sample distributions to predict and eliminate variability in research and collection of statistical data.",
+  "lessons": [
+    {
+      "id": "s6_maths_t22_l1",
+      "title": "Sampling Distributions and the Central Limit Theorem",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "In statistics, we rarely have access to an entire population — instead we collect a sample and use it to make inferences about the population. But different samples from the same population give different sample means. The sampling distribution of the sample mean describes how these sample means vary. Understanding this distribution is the bridge between probability theory and statistical inference. The Central Limit Theorem (CLT) is the most important theorem in statistics: it guarantees that, regardless of the shape of the parent population, the distribution of sample means approaches a normal distribution for large enough samples. This justifies using normal probability tables for a huge range of statistical problems."
+        },
+        {
+          "type": "heading",
+          "body": "Population vs Sample — Key Notation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Population: the complete set of all individuals/measurements of interest. Parameters: μ (mean), σ² (variance), σ (standard deviation).",
+            "Sample: a subset of the population selected for study. Statistics: x̄ (sample mean), s² (sample variance), s (sample standard deviation).",
+            "Sample mean: x̄ = (x₁+x₂+...+xₙ)/n = Σxᵢ/n",
+            "Sample variance: s² = Σ(xᵢ−x̄)²/(n−1)  [note: divided by n−1, not n, for unbiased estimate]",
+            "Sampling distribution: the probability distribution of a statistic (e.g. x̄) computed from all possible samples of size n from the population.",
+            "Standard error (SE): the standard deviation of the sampling distribution of x̄. SE = σ/√n"
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Central Limit Theorem"
+        },
+        {
+          "type": "formula",
+          "body": "Central Limit Theorem (CLT):\nIf X₁, X₂, ..., Xₙ is a random sample of size n from a population\nwith mean μ and variance σ², then for large n:\n\nX̄ ~ N(μ, σ²/n)  approximately\n\nwhere X̄ = (X₁+X₂+...+Xₙ)/n is the sample mean.\n\nKey results:\nE(X̄) = μ           (the mean of sample means equals the population mean)\nVar(X̄) = σ²/n      (variance of sample means is σ² divided by n)\nSD(X̄) = σ/√n       (standard error of the mean)\n\nStandardised statistic:\nZ = (X̄ − μ) / (σ/√n) ~ N(0,1)  approximately for large n\n\nRule of thumb: the CLT works well for n ≥ 30.\nFor normally distributed populations, it is exact for all n.\n\nEffect of n:\n• Larger n → smaller variance σ²/n → sample means cluster more tightly around μ\n• Larger n → more reliable estimate of μ\n• SE halves when n is quadrupled (SE=σ/√n, so ×4n → SE/2)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Distribution of the sample mean",
+          "body": "The heights of adult males in Uganda follow N(170, 64) cm (μ=170, σ²=64, σ=8).\nA random sample of 16 men is selected.\n\nDistribution of X̄:\nX̄ ~ N(μ, σ²/n) = N(170, 64/16) = N(170, 4)\nSo SD(X̄) = σ/√n = 8/√16 = 8/4 = 2 cm\n\nP(X̄ > 173):\nZ = (173−170)/2 = 1.5\nP(X̄ > 173) = P(Z > 1.5) = 1−Φ(1.5) = 1−0.9332 = 0.0668\n\nP(168 < X̄ < 172):\nZ₁ = (168−170)/2 = −1.0,  Z₂ = (172−170)/2 = 1.0\nP = Φ(1.0)−Φ(−1.0) = 0.8413−0.1587 = 0.6826\n\nInterpretation: 68.3% of all samples of 16 men will have a mean height between 168 and 172 cm."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: CLT for a non-normal population",
+          "body": "Household monthly income in a Ugandan district has μ=450,000 UGX and σ=180,000 UGX (not normally distributed — likely right-skewed).\n\nA random sample of n=100 households is taken.\n\nBy the CLT (n=100≥30 ✓):\nX̄ ≈ N(450,000, 180,000²/100) = N(450,000, 3,240,000,000)\nSE = 180,000/√100 = 18,000 UGX\n\nP(X̄ < 430,000):\nZ = (430,000−450,000)/18,000 = −20,000/18,000 = −1.111\nP ≈ Φ(−1.11) = 1−Φ(1.11) ≈ 1−0.8665 = 0.1335\n\nP(X̄ > 480,000):\nZ = (480,000−450,000)/18,000 = 30,000/18,000 ≈ 1.667\nP ≈ 1−Φ(1.67) ≈ 1−0.9525 = 0.0475"
+        },
+        {
+          "type": "callout",
+          "body": "National surveys: The Uganda Bureau of Statistics (UBOS) conducts the National Household Survey to estimate average income, expenditure, and poverty rates. They do not survey every household — they take a representative sample. The CLT guarantees that the sample mean x̄ provides a good estimate of the population mean μ, and that the distribution of x̄ is approximately normal regardless of the underlying income distribution shape. The standard error SE=σ/√n tells UBOS how precise their estimate is and guides the sample size needed for a specified precision level."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A population has μ=50 and σ=10. A sample of n=25 is drawn. Find E(X̄) and SD(X̄).",
+            "options": [
+              "E(X̄)=50, SD(X̄)=2",
+              "E(X̄)=50, SD(X̄)=10",
+              "E(X̄)=2, SD(X̄)=50",
+              "E(X̄)=50, SD(X̄)=0.4"
+            ],
+            "answer": "E(X̄)=50, SD(X̄)=2",
+            "explanation": "E(X̄)=μ=50. SD(X̄)=σ/√n=10/√25=10/5=2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Population X~N(100,25). Sample size n=4. Find P(X̄ > 102.5). (Φ(1)=0.8413)",
+            "options": ["0.1587", "0.8413", "0.3174", "0.0668"],
+            "answer": "0.1587",
+            "explanation": "X̄~N(100,25/4)=N(100,6.25). SD(X̄)=2.5. Z=(102.5−100)/2.5=1. P(X̄>102.5)=1−Φ(1)=0.1587."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the standard error of the mean for σ=12, n=36?",
+            "options": ["2", "3", "1/3", "0.33"],
+            "answer": "2",
+            "explanation": "SE=σ/√n=12/√36=12/6=2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "To halve the standard error of the mean, the sample size must be:",
+            "options": ["Doubled", "Quadrupled", "Halved", "Unchanged"],
+            "answer": "Quadrupled",
+            "explanation": "SE=σ/√n. To halve SE: σ/√(4n)=σ/(2√n)=SE/2. Must quadruple n."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The CLT is needed (as opposed to exact normal theory) when:",
+            "options": [
+              "The population is normally distributed",
+              "The population distribution is unknown or non-normal, and n is large",
+              "The sample size is very small (n<5)",
+              "σ is known exactly"
+            ],
+            "answer": "The population distribution is unknown or non-normal, and n is large",
+            "explanation": "If the population is exactly normal, X̄ is exactly normal for any n. The CLT is needed when the population is non-normal or unknown — it guarantees approximate normality of X̄ for large n (n≥30 rule of thumb)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X̄ from samples of n=64 has standard error 3. Find σ.",
+            "options": ["24", "3/8", "192", "0.375"],
+            "answer": "24",
+            "explanation": "SE=σ/√n → 3=σ/8 → σ=24."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Population mean μ=200, σ=30, n=100. Find P(195 < X̄ < 205). (Φ(1.67)≈0.9525)",
+            "options": ["0.9050", "0.8350", "0.9525", "0.6827"],
+            "answer": "0.9050",
+            "explanation": "SE=30/10=3. Z₁=(195−200)/3=−5/3≈−1.67. Z₂=(205−200)/3=5/3≈1.67. P=Φ(1.67)−Φ(−1.67)=2×0.9525−1=0.9050."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which statement about the sampling distribution of X̄ is FALSE?",
+            "options": [
+              "Its mean equals the population mean μ",
+              "Its standard deviation equals σ/√n",
+              "Its variance increases as n increases",
+              "For large n, it is approximately normally distributed"
+            ],
+            "answer": "Its variance increases as n increases",
+            "explanation": "Var(X̄)=σ²/n. As n INCREASES, Var(X̄) DECREASES (not increases). Larger samples give sample means that cluster more tightly around μ — less variance, not more."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t22_l2",
+      "title": "Confidence Intervals and Point Estimation",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "A point estimate (such as x̄) gives a single best guess for a population parameter. But a single number communicates nothing about the uncertainty of that estimate. A confidence interval (CI) addresses this by giving a range of plausible values for the parameter, with a stated level of confidence. For example, 'We are 95% confident that the population mean lies between 48.2 and 51.8' is far more informative than 'our estimate is 50'. Confidence intervals are the standard way of reporting statistical results in medicine, public health, economics, and all empirical sciences."
+        },
+        {
+          "type": "heading",
+          "body": "Confidence Interval for the Population Mean μ"
+        },
+        {
+          "type": "formula",
+          "body": "Case 1: Population variance σ² KNOWN (or large sample n≥30)\n\nA (1−α)×100% confidence interval for μ is:\n\nx̄ − z_{α/2} × (σ/√n)  <  μ  <  x̄ + z_{α/2} × (σ/√n)\n\nor more compactly:   x̄ ± z_{α/2} × (σ/√n)\n\nwhere z_{α/2} is the critical z-value for the chosen confidence level:\n  90% CI: z_{α/2} = 1.645\n  95% CI: z_{α/2} = 1.960\n  99% CI: z_{α/2} = 2.576\n\nThe quantity z_{α/2} × (σ/√n) is the MARGIN OF ERROR (half-width of CI).\n\nCase 2: Population variance UNKNOWN and small sample (n<30)\nUse the t-distribution with (n−1) degrees of freedom:\n\nx̄ ± t_{n−1, α/2} × (s/√n)\n\nwhere s is the sample standard deviation.\n(t-tables are used instead of z-tables — covered in advanced statistics.)\n\nFor A-Level Uganda: focus on Case 1 (known σ or large n).\n\nInterpretation of a 95% CI:\nIf we repeated the sampling many times and computed a CI each time,\n95% of those CIs would contain the true μ.\nIt does NOT mean: 'There is a 95% probability that μ lies in THIS particular interval.'"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Computing a confidence interval",
+          "body": "A researcher measures the fasting blood glucose (mmol/L) of 36 randomly selected adults in Kampala. The sample mean is x̄ = 5.4 mmol/L. The population standard deviation is known to be σ = 1.2 mmol/L.\n\nConstruct:\na) A 95% confidence interval for the population mean μ.\nb) A 99% confidence interval for μ.\n\nSE = σ/√n = 1.2/√36 = 1.2/6 = 0.2\n\na) 95% CI: z_{α/2} = 1.960\nMargin of error = 1.960 × 0.2 = 0.392\nCI: 5.4 ± 0.392 = (5.008, 5.792)\nWe are 95% confident μ lies in (5.01, 5.79) mmol/L.\n\nb) 99% CI: z_{α/2} = 2.576\nMargin of error = 2.576 × 0.2 = 0.515\nCI: 5.4 ± 0.515 = (4.885, 5.915)\nWe are 99% confident μ lies in (4.89, 5.92) mmol/L.\n\nNote: the 99% CI is WIDER than the 95% CI — higher confidence requires a wider net."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Sample size determination",
+          "body": "A nutritionist wants to estimate the mean daily calorie intake of Ugandan children (σ=500 kcal) with a margin of error of at most 100 kcal at 95% confidence. How many children must be sampled?\n\nMargin of error E = z_{α/2} × σ/√n\n100 = 1.960 × 500/√n\n√n = 1.960 × 500/100 = 9.8\nn = 9.8² = 96.04\n\nRound UP: n = 97 children.\n\nGeneral sample size formula for estimating μ:\nn = (z_{α/2} × σ / E)²\n\nwhere E is the desired margin of error.\nAlways round UP to the next integer."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Interpreting confidence intervals",
+          "body": "The Uganda National Examinations Board (UNEB) samples 100 S4 students and finds mean Mathematics score x̄=55 with σ=15.\n\n95% CI: SE=15/10=1.5. CI=55±1.960×1.5=55±2.94=(52.06, 57.94)\n\nConclusion: we are 95% confident that the true mean score of all S4 students lies between 52.1 and 57.9.\n\nA government official claims the true mean is 60.\nSince 60 lies OUTSIDE the 95% CI (52.06, 57.94), this claim is statistically inconsistent with the sample data at the 5% significance level.\n\nA second official claims the mean is 56.\nSince 56 lies INSIDE the 95% CI, this claim is consistent with the data."
+        },
+        {
+          "type": "callout",
+          "body": "Medical research in Uganda: Clinical trials conducted at Mulago National Referral Hospital use confidence intervals routinely. For example, a study testing a malaria treatment might report: 'The mean reduction in fever duration was 2.3 days (95% CI: 1.8 to 2.8 days).' This CI tells medical practitioners both the best estimate (2.3 days) and the range of plausible values. If the CI does not contain 0, the treatment has a statistically significant effect. Confidence intervals are now required by all major medical journals worldwide."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 95% CI for μ uses z_{α/2} =",
+            "options": ["1.645", "1.960", "2.326", "2.576"],
+            "answer": "1.960",
+            "explanation": "For a 95% confidence interval, α=0.05, α/2=0.025. P(Z<z_{α/2})=0.975. From z-tables: z_{0.025}=1.960."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Sample: n=100, x̄=48, σ=10. Compute a 95% CI for μ.",
+            "options": [
+              "(46.04, 49.96)",
+              "(47.02, 48.98)",
+              "(46.08, 49.92)",
+              "(45.0, 51.0)"
+            ],
+            "answer": "(46.04, 49.96)",
+            "explanation": "SE=10/10=1. Margin=1.960×1=1.96. CI=48±1.96=(46.04, 49.96)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which confidence interval is WIDEST?",
+            "options": [
+              "90% CI with n=100",
+              "95% CI with n=100",
+              "99% CI with n=100",
+              "99% CI with n=400"
+            ],
+            "answer": "99% CI with n=100",
+            "explanation": "Higher confidence level → larger z-value → wider CI. Among options with same n=100, the 99% CI is widest. The 99% CI with n=400 has larger z but smaller SE, so compare: z×σ/√n: 2.576×σ/10 vs 2.576×σ/20. The n=100 version is wider."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 99% CI is (44.2, 55.8). What is x̄?",
+            "options": ["50", "44.2", "55.8", "Cannot be determined"],
+            "answer": "50",
+            "explanation": "The confidence interval is symmetric about x̄. Midpoint = (44.2+55.8)/2 = 100/2 = 50."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Required margin of error E=5, σ=20, 95% confidence. Minimum sample size n:",
+            "options": ["62", "61", "62", "16"],
+            "answer": "62",
+            "explanation": "n=(z_{α/2}×σ/E)²=(1.96×20/5)²=(7.84)²=61.47. Round up: n=62."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A 95% CI for μ is computed as (32.1, 37.9). The margin of error is:",
+            "options": ["2.9", "5.8", "35", "1.96"],
+            "answer": "2.9",
+            "explanation": "Margin of error = half-width = (37.9−32.1)/2 = 5.8/2 = 2.9."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Correct interpretation of '95% CI for μ is (48, 52)':",
+            "options": [
+              "There is a 95% probability that μ lies in (48,52)",
+              "If we repeated sampling many times, 95% of such CIs would contain μ",
+              "95% of all data values lie in (48,52)",
+              "μ is exactly 50 with 95% certainty"
+            ],
+            "answer": "If we repeated sampling many times, 95% of such CIs would contain μ",
+            "explanation": "The correct frequentist interpretation: the CI procedure, if repeated across many samples, produces intervals that contain μ 95% of the time. μ is fixed (not random) — it either is or isn't in this particular CI. The 95% refers to the long-run performance of the procedure."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Doubling the sample size reduces the width of a CI by a factor of:",
+            "options": ["2", "√2", "4", "1/√2"],
+            "answer": "√2",
+            "explanation": "Width = 2×z×σ/√n. Doubling n: width ∝ 1/√(2n) = 1/(√2×√n). Width reduces by factor √2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t22_l3",
+      "title": "Hypothesis Testing — Concepts and One-Sample z-Test",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Hypothesis testing is a formal procedure for using sample data to make decisions about population parameters. Rather than just estimating μ, we test a specific claim: 'Is the population mean equal to some stated value μ₀?' Hypothesis testing underlies all scientific experimentation, quality control, and policy evaluation. Every clinical trial, every product quality test, and every government policy assessment is fundamentally a hypothesis test. This lesson develops the one-sample z-test for the population mean."
+        },
+        {
+          "type": "heading",
+          "body": "Structure of a Hypothesis Test"
+        },
+        {
+          "type": "list",
+          "heading": "Five-step procedure:",
+          "items": [
+            "Step 1 — State hypotheses: H₀ (null hypothesis): the claim being tested, e.g. μ=μ₀. H₁ (alternative hypothesis): the claim we accept if H₀ is rejected. H₁ can be one-tailed (μ>μ₀ or μ<μ₀) or two-tailed (μ≠μ₀).",
+            "Step 2 — Choose significance level α: typically α=0.05 (5%) or α=0.01 (1%). α is the probability of incorrectly rejecting a true H₀ (Type I error).",
+            "Step 3 — Compute test statistic: z = (x̄ − μ₀) / (σ/√n). This measures how many standard errors the sample mean is from the hypothesised μ₀.",
+            "Step 4 — Find critical region or p-value: Critical value approach: reject H₀ if |z| > z_{α/2} (two-tailed) or z > z_α (one-tailed upper) or z < −z_α (one-tailed lower). p-value approach: p = P(Z more extreme than observed z). Reject H₀ if p < α.",
+            "Step 5 — Conclusion: state whether there is sufficient evidence to reject H₀, in context. Never 'accept H₀' — only 'fail to reject H₀'."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "One-sample z-test statistic:\nz = (x̄ − μ₀) / (σ/√n)\n\nCritical values for common significance levels:\nα=0.05 two-tailed: |z| > 1.960\nα=0.01 two-tailed: |z| > 2.576\nα=0.05 one-tailed: z > 1.645 or z < −1.645\nα=0.01 one-tailed: z > 2.326 or z < −2.326\n\nType I error (α): rejecting H₀ when it is true\nType II error (β): failing to reject H₀ when it is false\nPower = 1−β = probability of correctly rejecting a false H₀"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Two-tailed z-test",
+          "body": "A factory claims its bolts have mean diameter μ₀=10 mm with σ=0.5 mm. A quality inspector measures 25 bolts and finds x̄=10.2 mm. Test the factory's claim at 5% significance.\n\nStep 1: H₀: μ=10 mm vs H₁: μ≠10 mm  (two-tailed)\nStep 2: α=0.05. Critical values: ±1.960\nStep 3: z = (10.2−10)/(0.5/√25) = 0.2/(0.5/5) = 0.2/0.1 = 2.0\nStep 4: |z|=2.0 > 1.960 → falls in critical region → REJECT H₀\nStep 5: There is sufficient evidence at 5% significance to reject the claim. The mean diameter is significantly different from 10 mm."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: One-tailed z-test",
+          "body": "A health worker believes the average BMI of adults in a rural Uganda district exceeds 22 (the WHO healthy threshold). A random sample of n=64 adults gives x̄=22.8. Population σ=3.2. Test at 1% significance.\n\nStep 1: H₀: μ=22 vs H₁: μ>22  (one-tailed, upper)\nStep 2: α=0.01. Critical value: z > 2.326\nStep 3: z = (22.8−22)/(3.2/√64) = 0.8/(3.2/8) = 0.8/0.4 = 2.0\nStep 4: z=2.0 < 2.326 → does NOT fall in critical region → FAIL TO REJECT H₀\nStep 5: At 1% significance, there is insufficient evidence to conclude the mean BMI exceeds 22. (However, the same test at 5% significance: critical value 1.645 — z=2.0>1.645 → REJECT H₀ at 5%.)\n\nThis illustrates that the conclusion can depend on the significance level chosen."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: p-value approach",
+          "body": "For Example 1: z=2.0 (two-tailed test).\np-value = P(|Z| > 2.0) = 2×P(Z>2.0) = 2×(1−Φ(2.0)) = 2×0.0228 = 0.0456\n\nSince p=0.0456 < α=0.05, reject H₀. ✓ (same conclusion)\n\nFor Example 2: z=2.0 (one-tailed upper).\np-value = P(Z > 2.0) = 1−Φ(2.0) = 0.0228\n\nSince p=0.0228 > α=0.01, fail to reject H₀ at 1% level.\nBut p=0.0228 < α=0.05, so would reject at 5% level. ✓\n\nThe p-value is the probability of observing a test statistic at least as extreme as the one computed, assuming H₀ is true. The smaller the p-value, the stronger the evidence against H₀."
+        },
+        {
+          "type": "callout",
+          "body": "Clinical trials in Uganda: When researchers at the Uganda Virus Research Institute test a new malaria vaccine, they conduct a hypothesis test: H₀: the vaccine has no effect (mean time to infection is unchanged at μ=μ₀). H₁: the vaccine extends time to infection (μ>μ₀). A very small p-value (e.g. p=0.002) provides strong evidence that the vaccine works. The significance level α=0.05 is the standard in medical research — there must be less than a 5% chance of falsely claiming the vaccine works when it does not. Every drug approved for use in Uganda has passed this statistical hurdle."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In hypothesis testing, H₀ represents:",
+            "options": [
+              "The alternative claim we want to prove",
+              "The null hypothesis — the claim being tested (e.g. μ=μ₀)",
+              "The significance level",
+              "The test statistic"
+            ],
+            "answer": "The null hypothesis — the claim being tested (e.g. μ=μ₀)",
+            "explanation": "H₀ (null hypothesis) is the default claim being tested — usually a statement of equality (μ=μ₀). H₁ (alternative) is what we accept if we reject H₀."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A z-test gives z=2.5. For a two-tailed test at α=0.05 (critical values ±1.96), the decision is:",
+            "options": [
+              "Fail to reject H₀",
+              "Reject H₀",
+              "Accept H₁ definitively",
+              "Cannot decide"
+            ],
+            "answer": "Reject H₀",
+            "explanation": "|z|=2.5 > 1.96. The test statistic falls in the critical region. Reject H₀."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A one-sample z-test: n=100, x̄=52, μ₀=50, σ=10. Compute z.",
+            "options": ["2", "0.2", "20", "0.02"],
+            "answer": "2",
+            "explanation": "z=(x̄−μ₀)/(σ/√n)=(52−50)/(10/10)=2/1=2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The p-value is 0.03. At α=0.05, the decision is:",
+            "options": [
+              "Fail to reject H₀ (0.03>0.05 is false)",
+              "Reject H₀ (p<α)",
+              "Inconclusive",
+              "Fail to reject H₀"
+            ],
+            "answer": "Reject H₀ (p<α)",
+            "explanation": "p=0.03 < α=0.05. Since the p-value is less than the significance level, reject H₀. The result is statistically significant at the 5% level."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A Type I error occurs when:",
+            "options": [
+              "H₀ is false and we fail to reject it",
+              "H₀ is true and we reject it",
+              "H₁ is true and we reject it",
+              "The test statistic is negative"
+            ],
+            "answer": "H₀ is true and we reject it",
+            "explanation": "Type I error: rejecting H₀ when it is actually true (false positive). The probability of Type I error is α (the significance level). Type II error: failing to reject H₀ when it is actually false."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For H₁: μ > μ₀ at α=0.05, the critical value is:",
+            "options": ["±1.960", "1.645", "2.576", "−1.645"],
+            "answer": "1.645",
+            "explanation": "One-tailed upper test at α=0.05: critical value z=1.645. Reject H₀ if z>1.645 (right tail)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "z=−2.8 for a two-tailed test at α=0.01 (critical values ±2.576). Conclusion:",
+            "options": [
+              "Fail to reject H₀ since z<0",
+              "Reject H₀ since |−2.8|=2.8>2.576",
+              "Inconclusive",
+              "Reject H₁"
+            ],
+            "answer": "Reject H₀ since |−2.8|=2.8>2.576",
+            "explanation": "For two-tailed test, compare |z| to critical value. |−2.8|=2.8>2.576 → falls in critical region → reject H₀."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A manufacturer claims mean content μ₀=500g. Sample: n=36, x̄=497, σ=12. Test H₀:μ=500 vs H₁:μ<500 at 5%.",
+            "options": [
+              "z=−1.5; fail to reject H₀ (critical value −1.645)",
+              "z=1.5; reject H₀",
+              "z=−3; reject H₀",
+              "z=−1.5; reject H₀"
+            ],
+            "answer": "z=−1.5; fail to reject H₀ (critical value −1.645)",
+            "explanation": "z=(497−500)/(12/6)=−3/2=−1.5. One-tailed lower at α=0.05: critical value −1.645. Since −1.5>−1.645 (not in critical region), fail to reject H₀."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Sampling distribution of X̄: X̄~N(μ, σ²/n) by CLT for large n. E(X̄)=μ, SD(X̄)=σ/√n (standard error). Standardise: Z=(X̄−μ)/(σ/√n)~N(0,1).",
+      "CLT: for any population with mean μ and variance σ², X̄ is approximately normal for n≥30 regardless of population shape.",
+      "Standard error SE=σ/√n decreases as n increases. Quadrupling n halves SE.",
+      "Confidence interval: x̄ ± z_{α/2}×(σ/√n). For 95%: z=1.960; 99%: z=2.576; 90%: z=1.645.",
+      "Margin of error E=z_{α/2}×σ/√n. Sample size for target E: n=(z_{α/2}×σ/E)². Always round UP.",
+      "Hypothesis test steps: (1) state H₀,H₁; (2) choose α; (3) compute z=(x̄−μ₀)/(σ/√n); (4) compare to critical value or compute p-value; (5) conclude in context.",
+      "Type I error: reject true H₀ (probability=α). Type II error: fail to reject false H₀ (probability=β). Power=1−β.",
+      "p-value: probability of result as extreme as observed if H₀ true. Reject H₀ if p<α."
+    ],
+    "common_errors": [
+      "Using σ instead of σ/√n when computing probabilities about X̄. The distribution of individual observations uses σ; the distribution of sample means uses σ/√n.",
+      "Confusing confidence level with probability: a 95% CI does not mean '95% probability μ is in this interval' — μ is fixed. The 95% refers to the long-run procedure.",
+      "Using wrong critical value: two-tailed 5% uses z=1.960 (not 1.645, which is one-tailed 5%).",
+      "Not rounding up sample size: n=61.47 requires n=62, not n=61 or n=62 rounded normally.",
+      "Saying 'accept H₀' — we either 'reject H₀' or 'fail to reject H₀'. We never prove H₀ true.",
+      "Using one-tailed critical value for a two-tailed test — must match the form of H₁."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 22 End-of-Topic Assessment — Sampling Distribution",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Population: μ=80, σ=15. Sample n=25. Find P(X̄ > 83). (Φ(1)=0.8413)",
+        "options": ["0.1587", "0.8413", "0.3174", "0.0668"],
+        "answer": "0.1587",
+        "explanation": "SE=15/5=3. Z=(83−80)/3=1. P(X̄>83)=P(Z>1)=1−0.8413=0.1587."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "A 90% CI is computed. What is z_{α/2}?",
+        "options": ["1.645", "1.960", "2.326", "2.576"],
+        "answer": "1.645",
+        "explanation": "For 90% CI: α=0.10, α/2=0.05. P(Z<z_{0.05})=0.95. z=1.645."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "n=49, x̄=74, σ=14. Construct a 95% CI for μ.",
+        "options": [
+          "(70.08, 77.92)",
+          "(71.0, 77.0)",
+          "(72.08, 75.92)",
+          "(68.12, 79.88)"
+        ],
+        "answer": "(70.08, 77.92)",
+        "explanation": "SE=14/7=2. Margin=1.96×2=3.92. CI=(74−3.92, 74+3.92)=(70.08, 77.92)."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "A 95% CI for μ is (112, 128). Find x̄ and the margin of error.",
+        "options": [
+          "x̄=120, E=8",
+          "x̄=120, E=16",
+          "x̄=112, E=8",
+          "x̄=128, E=8"
+        ],
+        "answer": "x̄=120, E=8",
+        "explanation": "x̄=(112+128)/2=120. E=(128−112)/2=8."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Required: margin E=2, σ=20, 99% confidence. Find minimum n.",
+        "options": ["664", "666", "663", "625"],
+        "answer": "664",
+        "explanation": "n=(z_{α/2}×σ/E)²=(2.576×20/2)²=(25.76)²=663.58. Round up: n=664."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Test H₀:μ=100 vs H₁:μ≠100 at α=0.05. n=64, x̄=103, σ=16. Find z and conclude.",
+        "options": [
+          "z=1.5; fail to reject H₀",
+          "z=3; reject H₀",
+          "z=1.5; reject H₀",
+          "z=0.75; fail to reject H₀"
+        ],
+        "answer": "z=1.5; fail to reject H₀",
+        "explanation": "z=(103−100)/(16/8)=3/2=1.5. Critical values ±1.96. |1.5|<1.96 → fail to reject H₀."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "The p-value for a two-tailed test is p=0.04. At α=0.05:",
+        "options": [
+          "Fail to reject H₀",
+          "Reject H₀",
+          "Increase α to 0.10 then decide",
+          "Inconclusive"
+        ],
+        "answer": "Reject H₀",
+        "explanation": "p=0.04 < α=0.05. Reject H₀. The result is statistically significant at the 5% level."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Sample n=100 from N(μ,25). Found x̄=18.2. To test H₀:μ=20 at α=0.01, compute z.",
+        "options": ["−3.6", "3.6", "−1.8", "1.8"],
+        "answer": "−3.6",
+        "explanation": "σ=5 (since σ²=25). SE=5/10=0.5. z=(18.2−20)/0.5=−1.8/0.5=−3.6."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "A study finds mean weight x̄=68 kg, n=36, σ=12. The 95% CI is (64.08, 71.92). Interpret.",
+        "options": [
+          "95% of individuals weigh between 64 and 72 kg",
+          "We are 95% confident the population mean weight lies between 64.08 and 71.92 kg",
+          "μ is definitely between 64.08 and 71.92 kg",
+          "The sample mean is 95% accurate"
+        ],
+        "answer": "We are 95% confident the population mean weight lies between 64.08 and 71.92 kg",
+        "explanation": "A CI for μ gives a range of plausible values for the population mean, with stated confidence. It does not describe individual variation (that would use σ, not σ/√n) and does not guarantee μ is in this particular interval."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "If the standard error is 4, what is it for a sample 4 times larger?",
+        "options": ["2", "1", "8", "16"],
+        "answer": "2",
+        "explanation": "SE=σ/√n. Quadrupling n: SE'=σ/√(4n)=σ/(2√n)=SE/2=4/2=2."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "For a 99% CI with n=25, x̄=50, σ=10. The CI is:",
+        "options": [
+          "(44.88, 55.12)",
+          "(48.04, 51.96)",
+          "(45.0, 55.0)",
+          "(44.52, 55.48)"
+        ],
+        "answer": "(44.88, 55.12)",
+        "explanation": "SE=10/5=2. z_{0.005}=2.576. Margin=2.576×2=5.152. CI=(44.85, 55.15)≈(44.88, 55.12)."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "H₀:μ=50 vs H₁:μ>50. α=0.05. z=1.72. p-value≈0.043. Conclusion:",
+        "options": [
+          "Reject H₀ since z=1.72>1.645 and p=0.043<0.05",
+          "Fail to reject H₀ since z<1.96",
+          "Reject H₀ since p=0.043<0.05 but not at α=0.01",
+          "Both A and C"
+        ],
+        "answer": "Both A and C",
+        "explanation": "One-tailed upper test, α=0.05: critical value 1.645. z=1.72>1.645 → reject H₀. p=0.043<0.05 → same conclusion. At α=0.01, critical value 2.326 — z=1.72<2.326 so would not reject. Options A and C are both correct statements."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "The CLT states that for large n, X̄ is approximately normal regardless of the population distribution. The minimum recommended n is:",
+        "options": ["n≥5", "n≥10", "n≥30", "n≥100"],
+        "answer": "n≥30",
+        "explanation": "The standard rule of thumb is n≥30 for the CLT to give a good approximation of normality for X̄, regardless of the population shape."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A researcher increases sample size from 100 to 900. The width of the 95% CI:",
+        "options": [
+          "Triples",
+          "Reduces to 1/3 of original",
+          "Reduces to 1/9 of original",
+          "Doubles"
+        ],
+        "answer": "Reduces to 1/3 of original",
+        "explanation": "Width∝1/√n. √100=10, √900=30. New width/old width=10/30=1/3. Width reduces to one-third."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Why does a 99% CI capture μ more reliably than a 95% CI, but at a cost?",
+        "options": [
+          "Higher confidence requires a larger z-value, which widens the interval, giving a less precise estimate",
+          "Higher confidence requires more data",
+          "99% CI uses σ² not σ",
+          "The 99% CI is always shorter"
+        ],
+        "answer": "Higher confidence requires a larger z-value, which widens the interval, giving a less precise estimate",
+        "explanation": "A 99% CI uses z=2.576 vs 1.960 for 95%. Larger z → wider interval (larger margin of error). The trade-off: more confidence means less precision. You can be 100% confident μ lies in (−∞,+∞) but that's useless. Practical statistics balances confidence and precision."
+      }
+    ]
+  }
+}

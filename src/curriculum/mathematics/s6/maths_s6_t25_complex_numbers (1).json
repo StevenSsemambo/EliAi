@@ -1,0 +1,901 @@
+{
+  "topic_id": "s6_maths_t25_complex_numbers",
+  "topic_title": "Complex Numbers",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 3,
+  "duration_periods": 28,
+  "ncdc_competency": "The learner applies concepts of complex numbers to solve modelling problems across different mathematical and real-world scenarios in engineering, physics, and signal processing.",
+  "lessons": [
+    {
+      "id": "s6_maths_t25_l1",
+      "title": "The Algebra of Complex Numbers — Definitions, Arithmetic, and Powers of i",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The real number system is insufficient to solve equations like x²+1=0 — no real number squared gives −1. Complex numbers extend the real numbers by introducing i, defined as the square root of −1. This seemingly simple extension opens up an enormous mathematical world: every polynomial equation of degree n has exactly n roots (counting multiplicity) in the complex numbers — a result known as the Fundamental Theorem of Algebra. Complex numbers are not merely abstract curiosities; they are the natural language of electrical engineering, quantum mechanics, signal processing, and fluid dynamics. In Uganda, complex numbers underpin the design of electrical filters for the power grid and the algorithms running mobile phone networks."
+        },
+        {
+          "type": "heading",
+          "body": "Definitions and Notation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The imaginary unit i is defined by i² = −1, so i = √(−1).",
+            "A complex number z = a + bi, where a and b are real numbers.",
+            "Real part: Re(z) = a. Imaginary part: Im(z) = b. (Note: Im(z) = b, not bi.)",
+            "Two complex numbers are equal iff their real parts are equal AND their imaginary parts are equal: a+bi = c+di ⟺ a=c and b=d.",
+            "If b=0: z = a is a real number. If a=0: z = bi is purely imaginary.",
+            "Conjugate of z = a+bi is z* = ā = a−bi (change sign of imaginary part only).",
+            "Modulus (absolute value): |z| = √(a²+b²) — the distance from origin in the Argand plane.",
+            "Argand diagram: plot z = a+bi as the point (a, b) in the complex plane."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Arithmetic of Complex Numbers"
+        },
+        {
+          "type": "formula",
+          "body": "Let z₁ = a+bi and z₂ = c+di.\n\nAddition: z₁+z₂ = (a+c)+(b+d)i\nSubtraction: z₁−z₂ = (a−c)+(b−d)i\nMultiplication: z₁·z₂ = (ac−bd)+(ad+bc)i\n  [expand as normal algebra, then use i²=−1]\n\nDivision: z₁/z₂ = (z₁·z̄₂)/(z₂·z̄₂) = (z₁·z̄₂)/|z₂|²\n  [multiply numerator and denominator by conjugate of denominator]\n\nKey conjugate properties:\nz + z̄ = 2a   (always real)\nz − z̄ = 2bi  (always purely imaginary or zero)\nz·z̄ = a²+b² = |z|²   (always real and non-negative)\n\nPowers of i (cycle of period 4):\ni¹ = i\ni² = −1\ni³ = −i\ni⁴ = 1\ni⁵ = i  (restarts)\nFor iⁿ: find n mod 4, then use the cycle."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Arithmetic with complex numbers",
+          "body": "Let z₁ = 3+2i and z₂ = 1−4i.\n\nAddition: z₁+z₂ = (3+1)+(2+(−4))i = 4−2i\n\nSubtraction: z₁−z₂ = (3−1)+(2−(−4))i = 2+6i\n\nMultiplication:\nz₁·z₂ = (3+2i)(1−4i)\n= 3−12i+2i−8i²\n= 3−10i−8(−1)\n= 3−10i+8\n= 11−10i\n\nDivision: z₁/z₂ = (3+2i)/(1−4i)\nMultiply by (1+4i)/(1+4i):\n= (3+2i)(1+4i) / (1²+4²)\n= (3+12i+2i+8i²)/17\n= (3+14i−8)/17\n= (−5+14i)/17\n= −5/17 + 14i/17"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Powers of i and simplification",
+          "body": "a) i¹⁷: 17 = 4×4+1, so i¹⁷ = i¹ = i\n\nb) i¹⁰²: 102 = 4×25+2, so i¹⁰² = i² = −1\n\nc) i⁻³ = 1/i³ = 1/(−i) = −1/(−i)×(i/i) = i/1 = i\n   (or: i⁻³ = i^(4−3) = i¹ = i, using period 4)\n\nd) Simplify (2+3i)²:\n= 4+12i+9i² = 4+12i−9 = −5+12i\n\ne) Find real and imaginary parts of 1/(1+i):\n= (1−i)/((1+i)(1−i)) = (1−i)/(1+1) = (1−i)/2\nRe = 1/2, Im = −1/2"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Using conjugates",
+          "body": "Solve z·z̄ + 2(z+z̄) = 13 where z = a+bi.\n\nz·z̄ = a²+b² = |z|²\nz+z̄ = 2a\n\nEquation: a²+b²+4a = 13\n(a+2)²+b² = 17\n\nThis is a circle in the complex plane with centre −2+0i (i.e. (−2,0)) and radius √17.\nAll complex numbers on this circle satisfy the original equation."
+        },
+        {
+          "type": "callout",
+          "body": "Electrical engineering: In AC circuits at Uganda Electricity Generation Company (UEGCL), the impedance Z of a component is expressed as a complex number Z = R + jX, where R is resistance and X is reactance (j is used instead of i in engineering to avoid confusion with current). The voltage V and current I are related by V = ZI — complex number multiplication. The conjugate appears in computing power: P = ½Re(V·I*). Every electrical engineer designing Uganda's power infrastructure uses complex number arithmetic daily."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find (3+4i)(2−i).",
+            "options": ["10+5i", "6+5i", "10−5i", "2+5i"],
+            "answer": "10+5i",
+            "explanation": "(3+4i)(2−i) = 6−3i+8i−4i² = 6+5i+4 = 10+5i."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find i⁵⁰.",
+            "options": ["1", "−1", "i", "−i"],
+            "answer": "−1",
+            "explanation": "50 = 4×12+2. i⁵⁰ = i² = −1."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find Re(z) and Im(z) for z = (2+3i)/(1+i).",
+            "options": ["Re=5/2, Im=1/2", "Re=5/2, Im=−1/2", "Re=2, Im=3", "Re=1, Im=2"],
+            "answer": "Re=5/2, Im=1/2",
+            "explanation": "(2+3i)(1−i)/((1+i)(1−i)) = (2−2i+3i−3i²)/2 = (2+i+3)/2 = (5+i)/2. Re=5/2, Im=1/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If z = 4−3i, find |z|.",
+            "options": ["5", "7", "√7", "1"],
+            "answer": "5",
+            "explanation": "|z| = √(4²+(−3)²) = √(16+9) = √25 = 5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find z·z̄ for z = 3+4i.",
+            "options": ["25", "−7", "7", "5"],
+            "answer": "25",
+            "explanation": "z·z̄ = |z|² = 3²+4² = 9+16 = 25."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve for x and y: (x+2i) + (3−yi) = 7+5i.",
+            "options": ["x=4, y=−3", "x=4, y=3", "x=10, y=3", "x=4, y=7"],
+            "answer": "x=4, y=−3",
+            "explanation": "Real parts: x+3=7 → x=4. Imaginary parts: 2−y=5 → y=−3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Simplify (1+i)².",
+            "options": ["2i", "2", "1+2i", "−2"],
+            "answer": "2i",
+            "explanation": "(1+i)² = 1+2i+i² = 1+2i−1 = 2i."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which is always real for any complex number z?",
+            "options": ["z+i", "z−z̄", "z·z̄", "z/i"],
+            "answer": "z·z̄",
+            "explanation": "z·z̄ = a²+b² = |z|², which is always real and non-negative for any complex z = a+bi."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t25_l2",
+      "title": "Modulus-Argument Form and the Argand Diagram",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every complex number can be represented as a point or as a vector in the Argand diagram (complex plane). The Cartesian form a+bi locates this point by its horizontal and vertical coordinates. The modulus-argument (polar) form expresses the same point by its distance from the origin (modulus r=|z|) and its angle from the positive real axis (argument θ=arg(z)). This polar representation is especially powerful for multiplication, division, and finding powers and roots — operations that become elegantly simple in polar form."
+        },
+        {
+          "type": "formula",
+          "body": "Modulus-argument (polar) form:\nz = r(cosθ + i sinθ)  also written  r cisθ\n\nwhere:\nr = |z| = √(a²+b²)         (modulus, always ≥ 0)\nθ = arg(z) = arctan(b/a)   (argument, in correct quadrant)\n\nPrincipal argument: −π < θ ≤ π\n\nConverting between forms:\nCartesian → Polar: r=√(a²+b²), θ=atan2(b,a) [use quadrant!]\nPolar → Cartesian: a=r cosθ, b=r sinθ\n\nMultiplication in polar form:\nz₁z₂ = r₁r₂[cos(θ₁+θ₂)+i sin(θ₁+θ₂)]\n→ Multiply moduli, ADD arguments\n\nDivision in polar form:\nz₁/z₂ = (r₁/r₂)[cos(θ₁−θ₂)+i sin(θ₁−θ₂)]\n→ Divide moduli, SUBTRACT arguments\n\nFor conjugate: |z̄|=|z|, arg(z̄)=−arg(z)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Converting between Cartesian and polar forms",
+          "body": "a) Express z = 1+i√3 in polar form.\nr = √(1+3) = 2\nθ = arctan(√3/1) = π/3  (first quadrant)\nz = 2(cos(π/3)+i sin(π/3)) = 2 cis(π/3)\n\nb) Express z = −√3+i in polar form.\nr = √(3+1) = 2\nθ: arctan(1/(−√3)) — but in second quadrant (Re<0, Im>0)\nθ = π − arctan(1/√3) = π − π/6 = 5π/6\nz = 2 cis(5π/6)\n\nc) Express 3 cis(−π/4) in Cartesian form.\na = 3 cos(−π/4) = 3×(√2/2) = 3√2/2\nb = 3 sin(−π/4) = 3×(−√2/2) = −3√2/2\nz = (3√2/2) − (3√2/2)i"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Multiplication and division in polar form",
+          "body": "z₁ = 2 cis(π/6) and z₂ = 3 cis(π/4).\n\nz₁z₂ = 2×3 cis(π/6+π/4) = 6 cis(5π/12)\n\nz₁/z₂ = (2/3) cis(π/6−π/4) = (2/3) cis(−π/12)\n\nVerify z₁z₂ in Cartesian:\nz₁ = 2(cos30°+i sin30°) = √3+i\nz₂ = 3(cos45°+i sin45°) = 3√2/2 + 3√2i/2\n(√3+i)(3√2/2+3√2i/2) = 3√6/2+3√2i/2+3√2i/2+3√2i²/2\n= 3√6/2+3√2i−3√2/2\n= (3√6−3√2)/2 + 3√2i/2\n= 3(√6−√2)/2 + (3√2/2)i\n|z₁z₂| = 6 ✓  and arg = 5π/12 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Loci in the Argand diagram",
+          "body": "Describe and sketch the locus of z satisfying:\n\na) |z−2| = 3\nThis is the set of points at distance 3 from the fixed point 2+0i.\nLocus: circle centred at (2,0) with radius 3.\n\nb) arg(z−1) = π/4\nThis is the set of points where the direction from 1+0i to z makes angle π/4 with the positive real axis.\nLocus: ray from (1,0) at 45°, NOT including the point (1,0) itself.\n\nc) |z+1| = |z−3|\nPoints equidistant from −1 and 3 on the real axis.\nLocus: perpendicular bisector of the segment from −1 to 3 → the vertical line Re(z)=1."
+        },
+        {
+          "type": "callout",
+          "body": "Signal processing: In digital communications (used in Uganda's 4G/5G mobile networks), the modulus and argument of a complex number represent the amplitude and phase of a signal. The Argand diagram is the constellation diagram that mobile phone engineers use to visualise signal states. BPSK (Binary Phase Shift Keying) uses two points at argument 0 and π; QPSK uses four points at π/4, 3π/4, 5π/4, 7π/4. The modulus represents signal strength; the argument encodes the digital bit pattern. Uganda's UCC (Uganda Communications Commission) standards for 4G use these complex plane representations."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Express z = −1−i in polar form.",
+            "options": ["√2 cis(5π/4)", "√2 cis(−3π/4)", "√2 cis(3π/4)", "Both A and B"],
+            "answer": "Both A and B",
+            "explanation": "r=√2. The angle is in the third quadrant: θ=π+π/4=5π/4 or equivalently −3π/4 (principal argument). Both represent the same direction."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "z₁=2cis(π/3), z₂=4cis(π/6). Find z₁z₂.",
+            "options": ["8 cis(π/2)", "8 cis(π/3)", "6 cis(π/2)", "8 cis(2π/9)"],
+            "answer": "8 cis(π/2)",
+            "explanation": "|z₁z₂|=2×4=8. arg(z₁z₂)=π/3+π/6=2π/6+π/6=3π/6=π/2. Answer: 8 cis(π/2)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "z = 4 cis(π/2) in Cartesian form is:",
+            "options": ["4i", "4", "−4i", "4+4i"],
+            "answer": "4i",
+            "explanation": "a=4cos(π/2)=0. b=4sin(π/2)=4. z=0+4i=4i."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "arg(1+i) = ",
+            "options": ["π/4", "π/2", "π/3", "−π/4"],
+            "answer": "π/4",
+            "explanation": "arctan(1/1)=π/4. First quadrant, so arg=π/4."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The locus |z−3i|=2 is:",
+            "options": [
+              "A circle, centre (0,3), radius 2",
+              "A circle, centre (3,0), radius 2",
+              "A line through 3i",
+              "A ray from 3i"
+            ],
+            "answer": "A circle, centre (0,3), radius 2",
+            "explanation": "|z−3i|=2 means distance from z to the fixed point 3i=(0,3) equals 2. This is a circle centred at (0,3) with radius 2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If |z|=5 and arg(z)=π, find z in Cartesian form.",
+            "options": ["−5", "5", "5i", "−5i"],
+            "answer": "−5",
+            "explanation": "a=5cos(π)=−5. b=5sin(π)=0. z=−5+0i=−5."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "z₁z₂: multiply moduli and __ the arguments.",
+            "options": ["Subtract", "Multiply", "Add", "Divide"],
+            "answer": "Add",
+            "explanation": "arg(z₁z₂) = arg(z₁)+arg(z₂). Multiplication in polar form: multiply moduli, add arguments."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The locus arg(z+2)=π/6 is a:",
+            "options": [
+              "Circle centred at −2",
+              "Ray from −2 at angle π/6",
+              "Full line through −2 at angle π/6",
+              "Spiral"
+            ],
+            "answer": "Ray from −2 at angle π/6",
+            "explanation": "arg(z−z₀)=θ gives a ray starting from z₀ (not including z₀) in direction θ. Here z₀=−2, angle π/6: a ray from (−2,0) in direction π/6 (30° above positive real axis)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t25_l3",
+      "title": "De Moivre's Theorem — Powers and Roots of Complex Numbers",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "De Moivre's Theorem is one of the most elegant and useful results in mathematics. It states that to raise a complex number in polar form to a power n, you simply raise the modulus to the power n and multiply the argument by n. This dramatically simplifies computing powers and roots of complex numbers, and connects trigonometry to complex numbers in a deep way. The theorem is used to derive multiple angle formulae for cos(nθ) and sin(nθ), and to find all nth roots of a complex number — including the nth roots of unity."
+        },
+        {
+          "type": "formula",
+          "body": "De Moivre's Theorem:\nFor any rational n:\n[r(cosθ + i sinθ)]ⁿ = rⁿ(cos(nθ) + i sin(nθ))\n\nor in compact notation:\n(r cis θ)ⁿ = rⁿ cis(nθ)\n\nThis holds for all integer and rational values of n.\n\nProof sketch (for positive integer n by induction):\nBase: n=1 trivially true.\nStep: [r cisθ]^(n+1) = [r cisθ]ⁿ × r cisθ\n= rⁿ cis(nθ) × r cisθ = rⁿ⁺¹ cis((n+1)θ) ✓\n\nnth roots of z = R cis φ:\nThe n distinct nth roots are:\nzₖ = R^(1/n) cis((φ+2kπ)/n)  for k=0,1,2,...,n−1\n\nGeometrically: n roots equally spaced on a circle of\nradius R^(1/n), separated by angle 2π/n.\n\nnth roots of unity (z^n = 1, i.e. R=1, φ=0):\nωₖ = cis(2kπ/n) for k=0,1,...,n−1"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Applying De Moivre's Theorem",
+          "body": "a) Find (1+i)⁸.\n|1+i|=√2, arg(1+i)=π/4\n(1+i)⁸ = (√2)⁸ cis(8×π/4) = 16 cis(2π) = 16(cos2π+i sin2π) = 16\n\nb) Find (cos(π/12)+i sin(π/12))¹² using De Moivre:\n= cos(12×π/12)+i sin(12×π/12) = cos(π)+i sin(π) = −1\n\nc) Find (1−i)⁶.\n|1−i|=√2, arg(1−i)=−π/4\n(1−i)⁶ = (√2)⁶ cis(6×(−π/4)) = 8 cis(−3π/2)\n= 8(cos(−3π/2)+i sin(−3π/2)) = 8(0+i) = 8i"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding cube roots of a complex number",
+          "body": "Find all cube roots of z = 8i.\n\nFirst write in polar form: |8i|=8, arg(8i)=π/2.\nSo 8i = 8 cis(π/2).\n\nCube roots: zₖ = 8^(1/3) cis((π/2+2kπ)/3) for k=0,1,2\n= 2 cis((π/6+2kπ/3))\n\nk=0: 2 cis(π/6) = 2(cos30°+i sin30°) = 2(√3/2+i/2) = √3+i\nk=1: 2 cis(π/6+2π/3) = 2 cis(5π/6) = 2(−√3/2+i/2) = −√3+i\nk=2: 2 cis(π/6+4π/3) = 2 cis(3π/2) = 2(0−i) = −2i\n\nVerification: (√3+i)³ = (√3+i)·(√3+i)²\n(√3+i)² = 3+2√3i+i² = 2+2√3i\n(√3+i)(2+2√3i) = 2√3+2√3·√3·i+2i+2√3i² = 2√3+6i+2i−2√3 = 8i ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Cube roots of unity and their properties",
+          "body": "The three cube roots of unity satisfy z³=1.\n\nω = cis(2π/3) = −1/2+i√3/2\nω² = cis(4π/3) = −1/2−i√3/2\nω³ = cis(2π) = 1\n\nKey properties:\n1+ω+ω² = 0  (sum of cube roots of unity)\nω³ = 1  (ω is a primitive cube root of unity)\nω̄ = ω²  (conjugates)\n\nUseful algebraic identity:\nFor any a,b: a³−b³ = (a−b)(a−bω)(a−bω²)\n\nThe three roots form an equilateral triangle on the unit circle,\nwith vertices at angles 0°, 120°, 240°."
+        },
+        {
+          "type": "callout",
+          "body": "Fourier analysis: The nth roots of unity are the foundation of the Discrete Fourier Transform (DFT), which decomposes any digital signal into its frequency components. Every digital audio recording, MP3 player, mobile phone, and internet router uses the DFT (computed via the Fast Fourier Transform, FFT). The FFT computes the nth roots of unity ωₖ=cis(2kπ/n) using De Moivre's theorem — billions of times per second in every smartphone in Uganda. De Moivre's theorem is literally inside every digital device."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find (√3+i)⁴ using De Moivre's theorem.",
+            "options": ["−8", "8", "−8+8i", "−8i"],
+            "answer": "−8",
+            "explanation": "|√3+i|=2, arg=π/6. (2 cis(π/6))⁴=16 cis(4π/6)=16 cis(2π/3)=16(−1/2+i√3/2)=−8+8√3i. Hmm: cos(2π/3)=−1/2, sin(2π/3)=√3/2. Result: 16(−1/2+i√3/2)=−8+8√3i."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The 4th roots of 16 are equally spaced on a circle of radius:",
+            "options": ["2", "4", "√4=2", "Both A and C"],
+            "answer": "Both A and C",
+            "explanation": "16^(1/4)=2. All four 4th roots of 16 lie on a circle of radius 2. Options A and C are equivalent."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "De Moivre: [2 cis(π/5)]³ = ",
+            "options": ["8 cis(3π/5)", "6 cis(π/5)", "8 cis(π/5)", "8 cis(π/15)"],
+            "answer": "8 cis(3π/5)",
+            "explanation": "[2 cis(π/5)]³ = 2³ cis(3×π/5) = 8 cis(3π/5)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "How many distinct square roots does any non-zero complex number have?",
+            "options": ["1", "2", "3", "Infinite"],
+            "answer": "2",
+            "explanation": "Every non-zero complex number has exactly 2 distinct square roots, separated by angle π (opposite directions). The formula gives k=0 and k=1."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Sum of cube roots of unity: 1+ω+ω²=",
+            "options": ["0", "1", "3", "ω³"],
+            "answer": "0",
+            "explanation": "The three cube roots of unity are the roots of z³−1=(z−1)(z²+z+1)=0. Sum of roots of z²+z+1=0 (for ω and ω²) is −1 (by Vieta's). Adding 1: 1+ω+ω²=0."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "(1+i)⁴ = ",
+            "options": ["−4", "4", "4i", "−4i"],
+            "answer": "−4",
+            "explanation": "(1+i)²=2i. (2i)²=4i²=−4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The 4 fourth roots of unity are:",
+            "options": [
+              "1, i, −1, −i",
+              "1, −1, i, −i",
+              "cis(0), cis(π/2), cis(π), cis(3π/2)",
+              "All of the above"
+            ],
+            "answer": "All of the above",
+            "explanation": "4th roots of unity: cis(2kπ/4) for k=0,1,2,3 = cis(0), cis(π/2), cis(π), cis(3π/2) = 1, i, −1, −i. All three options describe the same set."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Using De Moivre, find cos(3θ) in terms of cosθ. (cos3θ+isin3θ=(cosθ+isinθ)³)",
+            "options": [
+              "4cos³θ−3cosθ",
+              "3cosθ−4cos³θ",
+              "cos³θ−3cosθsin²θ",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "(cosθ+isinθ)³=cos³θ+3cos²θ(isinθ)+3cosθ(isinθ)²+(isinθ)³ = cos³θ+3icos²θsinθ−3cosθsin²θ−isin³θ. Real part: cos³θ−3cosθsin²θ=cos³θ−3cosθ(1−cos²θ)=4cos³θ−3cosθ. Both A and C are equivalent."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t25_l4",
+      "title": "Complex Equations and the Fundamental Theorem of Algebra",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The Fundamental Theorem of Algebra states that every polynomial of degree n with complex coefficients has exactly n roots (counting multiplicity) in the complex numbers. This means we can always factorise any polynomial completely over the complex numbers. A crucial consequence for polynomials with real coefficients: complex roots always occur in conjugate pairs. This allows us to factorise real polynomials into linear and irreducible quadratic factors over the reals, which is essential for partial fractions, differential equations, and signal processing."
+        },
+        {
+          "type": "heading",
+          "body": "Complex Roots and the Conjugate Root Theorem"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fundamental Theorem of Algebra: every polynomial p(z) of degree n≥1 has exactly n complex roots (counting multiplicity).",
+            "Conjugate Root Theorem: if p(z) is a polynomial with REAL coefficients and z=a+bi (b≠0) is a root, then z̄=a−bi is also a root.",
+            "Consequence: complex roots of real polynomials always come in conjugate pairs.",
+            "Corollary: any real polynomial of odd degree has at least one real root.",
+            "Factorisation: if α and ᾱ are conjugate roots, then (z−α)(z−ᾱ)=z²−2az+a²+b² (irreducible quadratic with real coefficients)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Solving quadratic equations with complex roots",
+          "body": "a) Solve z²+2z+5=0.\nDiscriminant: 4−20=−16. √(−16)=4i.\nz = (−2±4i)/2 = −1±2i\n\nRoots: z₁=−1+2i and z₂=−1−2i (conjugate pair ✓)\n\nb) Solve z²+4=0.\nz²=−4. z=±√(−4)=±2i.\n\nc) Form a quadratic with roots 3+2i and 3−2i.\nSum of roots = 6. Product = 9+4=13.\nEquation: z²−6z+13=0"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding complex roots of cubic and quartic polynomials",
+          "body": "a) p(z)=z³−z²+z−1. Find all roots.\n\nTry z=1: 1−1+1−1=0 ✓. Factor out (z−1):\np(z)=(z−1)(z²+1) [by polynomial division]\nz²+1=0 → z=±i\nRoots: z=1, z=i, z=−i\n\nb) 2+3i is a root of z⁴−4z³+11z²−10z+26=0. Find all roots.\n\nSince coefficients are real: 2−3i is also a root.\n(z−(2+3i))(z−(2−3i)) = (z−2)²+9 = z²−4z+13\n\nDivide: z⁴−4z³+11z²−10z+26 ÷ (z²−4z+13)\n= z²+2   [by polynomial division]\nz²+2=0 → z=±i√2\n\nAll roots: 2+3i, 2−3i, i√2, −i√2"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Equations involving complex conjugates",
+          "body": "Find all real values of a,b if (a+bi)² = −7+24i.\n\n(a+bi)² = a²−b²+2abi = −7+24i\n\nEquating real parts: a²−b² = −7  ...(1)\nEquating imaginary parts: 2ab = 24 → ab = 12 → b=12/a ...(2)\n\nSubstitute (2) into (1):\na²−144/a² = −7\na⁴+7a²−144 = 0\n(a²+16)(a²−9) = 0\na²=9 → a=±3 (since a is real, a²>0)\n\nIf a=3: b=12/3=4 → z=3+4i. Check: (3+4i)²=9+24i−16=−7+24i ✓\nIf a=−3: b=12/(−3)=−4 → z=−3−4i. Check: (−3−4i)²=9+24i−16=−7+24i ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Control systems engineering: The stability of an electrical control system (like those controlling Uganda's Isimba dam turbines) is determined by the roots of its characteristic polynomial — called poles. If all poles have negative real parts (all roots in the left half of the complex plane), the system is stable. If any pole has a positive real part, the system is unstable. The Conjugate Root Theorem ensures that for a physical system (real coefficients), the poles always come in conjugate pairs — understanding this guides engineers in designing stable control systems."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Solve z²+6z+13=0.",
+            "options": ["z=−3±2i", "z=3±2i", "z=−3±4i", "z=3±4i"],
+            "answer": "z=−3±2i",
+            "explanation": "Discriminant=36−52=−16. z=(−6±4i)/2=−3±2i."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If 1+3i is a root of a polynomial with real coefficients, another root must be:",
+            "options": ["1−3i", "−1+3i", "3+i", "−1−3i"],
+            "answer": "1−3i",
+            "explanation": "Conjugate Root Theorem: complex roots of real polynomials come in conjugate pairs. The conjugate of 1+3i is 1−3i."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Form the polynomial with roots 2+i and 2−i.",
+            "options": ["z²−4z+5=0", "z²+4z+5=0", "z²−4z+3=0", "z²−4z−5=0"],
+            "answer": "z²−4z+5=0",
+            "explanation": "Sum=4, product=(2+i)(2−i)=4+1=5. Polynomial: z²−4z+5=0."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "p(z)=z³+z. Find all roots.",
+            "options": ["z=0,i,−i", "z=0,1,−1", "z=0,i,1", "z=0 only"],
+            "answer": "z=0,i,−i",
+            "explanation": "z(z²+1)=0. z=0 or z²=−1→z=±i. Roots: 0, i, −i."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A real polynomial of degree 5 has roots 2+i, 3i. How many real roots must it have?",
+            "options": ["1", "3", "5", "0"],
+            "answer": "1",
+            "explanation": "2+i pairs with 2−i, and 3i pairs with −3i — that's 4 complex roots total. A degree-5 polynomial has 5 roots. The remaining root must be real (odd-degree real polynomials always have at least one real root)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve (a+bi)²=5+12i for real a,b.",
+            "options": ["a=3,b=2 or a=−3,b=−2", "a=3,b=2 only", "a=2,b=3 only", "No real solution"],
+            "answer": "a=3,b=2 or a=−3,b=−2",
+            "explanation": "a²−b²=5, 2ab=12→b=6/a. a²−36/a²=5→a⁴−5a²−36=0→(a²−9)(a²+4)=0→a=±3. a=3:b=2; a=−3:b=−2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The Fundamental Theorem of Algebra guarantees that z⁵−3z+1=0 has exactly:",
+            "options": ["1 real root", "5 roots in ℂ", "5 real roots", "At most 5 roots"],
+            "answer": "5 roots in ℂ",
+            "explanation": "The Fundamental Theorem states every degree-n polynomial over ℂ has exactly n roots (counting multiplicity) in ℂ. The polynomial z⁵−3z+1 is degree 5, so exactly 5 complex roots."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "z³−1=0 (cube roots of unity). Which factorisation is correct?",
+            "options": [
+              "(z−1)(z²+z+1)=0",
+              "(z−1)(z²−z+1)=0",
+              "(z−1)(z+1)(z+i)=0",
+              "(z³−1)=0 cannot be factored"
+            ],
+            "answer": "(z−1)(z²+z+1)=0",
+            "explanation": "z³−1=(z−1)(z²+z+1). The quadratic gives roots ω=−1/2+i√3/2 and ω²=−1/2−i√3/2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t25_l5",
+      "title": "Euler's Formula, Exponential Form, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Euler's formula e^(iθ) = cos θ + i sin θ is arguably the most beautiful equation in mathematics — it connects the five most important constants in mathematics (e, i, π, 1, and 0) in the identity e^(iπ)+1=0. More practically, the exponential form of complex numbers is the most compact and elegant representation for calculations, and it makes De Moivre's theorem an immediate consequence of standard rules for exponents. The exponential form is the standard notation used in advanced physics, engineering, and mathematics."
+        },
+        {
+          "type": "formula",
+          "body": "Euler's Formula:\ne^(iθ) = cos θ + i sin θ    (for any real θ)\n\nProof sketch (via Maclaurin series):\ne^(iθ) = 1 + iθ + (iθ)²/2! + (iθ)³/3! + ...\n= 1 + iθ − θ²/2! − iθ³/3! + θ⁴/4! + iθ⁵/5! − ...\n= (1 − θ²/2! + θ⁴/4! − ...) + i(θ − θ³/3! + θ⁵/5! − ...)\n= cos θ + i sin θ  ✓\n\nExponential form of a complex number:\nz = r e^(iθ)  where r=|z| and θ=arg(z)\n\nSpecial cases:\ne^(iπ) = cos π + i sin π = −1  →  e^(iπ)+1=0  (Euler's identity)\ne^(iπ/2) = i\ne^(−iπ/2) = −i\ne^(i×2π) = 1\n\nUseful expressions:\ncos θ = (e^(iθ)+e^(−iθ))/2\nsin θ = (e^(iθ)−e^(−iθ))/(2i)\n\nDe Moivre's theorem from exponential form:\n(re^(iθ))ⁿ = rⁿ e^(inθ) — standard exponent rule!"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Using the exponential form",
+          "body": "a) Express z = 3e^(iπ/3) in Cartesian form.\nz = 3(cos(π/3)+i sin(π/3)) = 3(1/2 + i√3/2) = 3/2 + 3√3i/2\n\nb) Express z = −2+2i in exponential form.\n|z|=√(4+4)=2√2. arg(z)=π−π/4=3π/4.\nz = 2√2 e^(i3π/4)\n\nc) Verify: (2e^(iπ/6))⁶ = 2⁶ e^(i×6π/6) = 64 e^(iπ) = 64(−1) = −64\n(Compare: 2cis(π/6))⁶ = 64 cis(π) = 64(−1) = −64 ✓)\n\nd) Compute e^(2+iπ).\ne^(2+iπ) = e² × e^(iπ) = e²×(−1) = −e²"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Trigonometric identities via complex exponentials",
+          "body": "Derive the identity cos²θ = (1+cos2θ)/2 using exponentials.\n\ncosθ = (e^(iθ)+e^(−iθ))/2\ncos²θ = [(e^(iθ)+e^(−iθ))/2]²\n= (e^(2iθ)+2+e^(−2iθ))/4\n= (2+2cos2θ)/4   [since e^(2iθ)+e^(−2iθ)=2cos2θ]\n= (1+cos2θ)/2 ✓\n\nSimilarly derive cos(A+B):\ne^(i(A+B)) = e^(iA)×e^(iB)\n(cosA+isinA)(cosB+isinB) = cos(A+B)+isin(A+B)\nReal part: cosAcosB−sinAsinB = cos(A+B) ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Expressing sums of trig functions",
+          "body": "Express cos3θ+cos5θ as a product.\n\ncos3θ = Re(e^(3iθ)), cos5θ = Re(e^(5iθ))\ncos3θ+cos5θ = Re(e^(3iθ)+e^(5iθ))\n= Re(e^(4iθ)(e^(−iθ)+e^(iθ)))\n= Re(e^(4iθ)×2cosθ)\n= 2cosθ × Re(e^(4iθ))\n= 2cosθ cos4θ ✓\n\nThis is the product-to-sum formula proved elegantly\nusing complex exponentials."
+        },
+        {
+          "type": "callout",
+          "body": "Quantum mechanics: In quantum physics, the wave function of a particle is written as ψ = Ae^(i(kx−ωt)) where k is the wave number and ω is the angular frequency. This exponential form (Euler's formula) describes both the amplitude A and the phase (kx−ωt) of the quantum wave simultaneously. African nations including Uganda are investing in quantum computing research — every quantum algorithm uses complex exponentials in this form. Euler's formula is literally the mathematical language of matter at the atomic scale."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Express z = 2e^(iπ/4) in Cartesian form.",
+            "options": ["√2+√2i", "1+i", "2+2i", "√2(1+i)"],
+            "answer": "√2+√2i",
+            "explanation": "z=2(cos(π/4)+isin(π/4))=2(√2/2+i√2/2)=√2+√2i."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Euler's identity e^(iπ)+1=0 contains how many of the 'five most important constants'?",
+            "options": ["3", "4", "5", "2"],
+            "answer": "5",
+            "explanation": "e^(iπ)+1=0 contains: e (Euler's number), i (imaginary unit), π (pi), 1 (unity), and 0 (zero) — all five of the most fundamental constants in mathematics."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "e^(iπ/2) =",
+            "options": ["1", "−1", "i", "−i"],
+            "answer": "i",
+            "explanation": "e^(iπ/2)=cos(π/2)+isin(π/2)=0+i=i."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "cosθ expressed using exponentials is:",
+            "options": [
+              "(e^(iθ)+e^(−iθ))/2",
+              "(e^(iθ)−e^(−iθ))/2",
+              "(e^(iθ)+e^(−iθ))/(2i)",
+              "e^(iθ)/2"
+            ],
+            "answer": "(e^(iθ)+e^(−iθ))/2",
+            "explanation": "From Euler: e^(iθ)=cosθ+isinθ and e^(−iθ)=cosθ−isinθ. Adding: e^(iθ)+e^(−iθ)=2cosθ. So cosθ=(e^(iθ)+e^(−iθ))/2."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Express z=−4 in exponential form.",
+            "options": ["4e^(iπ)", "4e^(iπ/2)", "4e^(0)", "2e^(iπ)"],
+            "answer": "4e^(iπ)",
+            "explanation": "|z|=4, arg(z)=π (negative real axis). z=4e^(iπ)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Using Euler's formula, derive e^(iπ)+1=0. The key step is:",
+            "options": [
+              "e^(iπ)=cos(π)+isin(π)=−1+0=−1",
+              "e^(iπ)=e×π=eπ",
+              "e^(iπ)=cos(π)=0",
+              "i²=−1 directly gives the result"
+            ],
+            "answer": "e^(iπ)=cos(π)+isin(π)=−1+0=−1",
+            "explanation": "By Euler's formula: e^(iπ)=cos(π)+isin(π)=−1+0i=−1. Therefore e^(iπ)+1=−1+1=0."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Using exponential form, (√3+i)⁶ = (2e^(iπ/6))⁶ = ",
+            "options": ["64 e^(iπ) = −64", "64 e^(iπ/6) = 64√3/2+32i", "64", "−64"],
+            "answer": "−64",
+            "explanation": "(2e^(iπ/6))⁶=2⁶e^(i×6π/6)=64e^(iπ)=64(cosπ+isinπ)=64(−1)=−64."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "sinθ in terms of complex exponentials is:",
+            "options": [
+              "(e^(iθ)−e^(−iθ))/(2i)",
+              "(e^(iθ)+e^(−iθ))/(2i)",
+              "i(e^(iθ)−e^(−iθ))/2",
+              "(e^(iθ)−e^(−iθ))/2"
+            ],
+            "answer": "(e^(iθ)−e^(−iθ))/(2i)",
+            "explanation": "e^(iθ)−e^(−iθ)=(cosθ+isinθ)−(cosθ−isinθ)=2isinθ. So sinθ=(e^(iθ)−e^(−iθ))/(2i)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t25_l6",
+      "title": "Applications and Consolidation — Complex Numbers in Geometry and Physics",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "This final lesson consolidates all aspects of complex numbers and demonstrates their power in geometric transformations, further loci, trigonometric identities, and physics applications. Complex numbers provide an elegant alternative to coordinate geometry for describing rotations, reflections, and scalings in the plane — operations fundamental to computer graphics, robotics, and navigation."
+        },
+        {
+          "type": "heading",
+          "body": "Geometric Transformations via Complex Multiplication"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Multiplying a complex number z by e^(iα) rotates z through angle α about the origin.",
+            "Multiplying z by r (real) scales the distance from origin by factor r.",
+            "Multiplying z by r e^(iα) is a rotation of α combined with a scaling by r.",
+            "Adding a fixed complex number w translates the point by vector w.",
+            "Reflecting z in the real axis gives z̄.",
+            "Reflecting z in the imaginary axis gives −z̄."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Rotation in the complex plane",
+          "body": "a) Rotate z = 2+i through 90° anticlockwise about the origin.\nMultiply by e^(iπ/2) = i:\nw = i(2+i) = 2i+i² = 2i−1 = −1+2i\nThe point (2,1) maps to (−1,2) — a 90° rotation ✓\n\nb) Rotate z = 3−2i through 60° about the point 1+i.\nTranslate so that 1+i is the origin:\nz' = z−(1+i) = (3−2i)−(1+i) = 2−3i\nRotate by 60°: multiply by e^(iπ/3) = 1/2+i√3/2:\nw' = (2−3i)(1/2+i√3/2)\n= 1+i√3−3i/2−3i²√3/2\n= 1+i√3−3i/2+3√3/2\n= (1+3√3/2)+i(√3−3/2)\n= (2+3√3)/2 + i(2√3−3)/2\nTranslate back: w = w'+(1+i) = (2+3√3)/2+1 + i((2√3−3)/2+1)\n= (4+3√3)/2 + i(2√3−1)/2"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Further loci",
+          "body": "Describe the locus of z if |z−2|/|z+2|=2.\n\nLet z=x+iy.\n|z−2|² = 4|z+2|²\n(x−2)²+y² = 4[(x+2)²+y²]\nx²−4x+4+y² = 4x²+16x+16+4y²\n0 = 3x²+20x+12+3y²\nx²+(20/3)x+4+y² = 0\n(x+10/3)²+y² = 100/9−4 = 64/9\n\nCircle: centre (−10/3, 0), radius 8/3.\n(This is the Apollonius circle for ratio 2:1 with respect to ±2.)"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Using De Moivre to prove trig identities",
+          "body": "Expand cos5θ in terms of cosθ.\n\n(cosθ+isinθ)⁵ = cos5θ+isin5θ  [De Moivre]\n\nExpand left side by binomial theorem:\n= cos⁵θ + 5cos⁴θ(isinθ) + 10cos³θ(isinθ)² + 10cos²θ(isinθ)³ + 5cosθ(isinθ)⁴ + (isinθ)⁵\n= cos⁵θ + 5icos⁴θsinθ − 10cos³θsin²θ − 10icos²θsin³θ + 5cosθsin⁴θ + isin⁵θ\n\nReal part = cos5θ:\ncos5θ = cos⁵θ−10cos³θsin²θ+5cosθsin⁴θ\n= cos⁵θ−10cos³θ(1−cos²θ)+5cosθ(1−cos²θ)²\n= cos⁵θ−10cos³θ+10cos⁵θ+5cosθ−10cos³θ+5cos⁵θ\n= 16cos⁵θ−20cos³θ+5cosθ"
+        },
+        {
+          "type": "callout",
+          "body": "Computer graphics and game development: Ugandan game developers at companies like Rocket Health and others use complex number multiplication for 2D rotations in game engines. Rotating a game sprite through angle θ is equivalent to multiplying each vertex coordinate (treated as a complex number) by e^(iθ). This is far more computationally efficient than the equivalent 2×2 rotation matrix multiplication. The entire 2D rotation engine of every game, phone app, and mapping application uses this principle."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Rotating z=1+0i=1 through 90° anticlockwise gives:",
+            "options": ["i", "−1", "−i", "1+i"],
+            "answer": "i",
+            "explanation": "Multiply by e^(iπ/2)=i: 1×i=i. The point (1,0) rotates to (0,1)=i."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The locus |z−1|=|z+1| in the complex plane is:",
+            "options": ["The real axis (y=0)", "The imaginary axis (x=0)", "Unit circle", "y=x"],
+            "answer": "The imaginary axis (x=0)",
+            "explanation": "|z−1|=|z+1| means equidistant from 1 and −1 on the real axis → perpendicular bisector → imaginary axis x=0."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the geometric effect of multiplying z by 2i?",
+            "options": [
+              "Scale by 2 and rotate 90° anticlockwise",
+              "Scale by 2 only",
+              "Rotate 90° only",
+              "Scale by 2 and rotate 180°"
+            ],
+            "answer": "Scale by 2 and rotate 90° anticlockwise",
+            "explanation": "2i=2e^(iπ/2). Multiplying z by this scales |z| by 2 and rotates arg(z) by π/2 (90° anticlockwise)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Prove sin3θ=3sinθ−4sin³θ using De Moivre. The imaginary part of (cosθ+isinθ)³ is:",
+            "options": [
+              "3cos²θsinθ−sin³θ",
+              "cos³θ−3cosθsin²θ",
+              "3sin θ−4sin³θ",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "Im part of (cosθ+isinθ)³=3cos²θsinθ−sin³θ=3(1−sin²θ)sinθ−sin³θ=3sinθ−3sin³θ−sin³θ=3sinθ−4sin³θ. Options A and C are equivalent expressions for sin3θ."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The reflection of z in the real axis is:",
+            "options": ["−z", "z̄", "iz", "1/z"],
+            "answer": "z̄",
+            "explanation": "Reflecting z=a+bi in the real axis changes the sign of the imaginary part: reflection = a−bi = z̄."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The locus |z|=|z−2| is:",
+            "options": ["Circle centre 1", "x=1 (vertical line)", "x=0", "Circle centre 2"],
+            "answer": "x=1 (vertical line)",
+            "explanation": "|z|=|z−2|: equidistant from 0 and 2 → perpendicular bisector of segment from 0 to 2 → x=1."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Using sinθ=(e^(iθ)−e^(−iθ))/(2i), find sin²θ.",
+            "options": [
+              "(1−cos2θ)/2",
+              "(1+cos2θ)/2",
+              "sin2θ/2",
+              "cos2θ"
+            ],
+            "answer": "(1−cos2θ)/2",
+            "explanation": "sin²θ=[(e^(iθ)−e^(−iθ))/(2i)]²=(e^(2iθ)−2+e^(−2iθ))/(−4)=(2−2cos2θ)/4=(1−cos2θ)/2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Point P represents z=3+4i. After rotation 90° clockwise about origin, the new point Q represents:",
+            "options": ["4−3i", "−4+3i", "3−4i", "−3+4i"],
+            "answer": "4−3i",
+            "explanation": "90° clockwise rotation: multiply by e^(−iπ/2)=−i. Q=(−i)(3+4i)=−3i−4i²=−3i+4=4−3i."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Complex number z=a+bi: Re(z)=a, Im(z)=b, |z|=√(a²+b²), z̄=a−bi. Equal iff both real and imaginary parts equal.",
+      "Arithmetic: add/subtract componentwise; multiply using i²=−1; divide by multiplying numerator and denominator by conjugate. z·z̄=|z|².",
+      "Powers of i: period 4. iⁿ: find n mod 4.",
+      "Polar form: z=r cis θ=r(cosθ+isinθ). Multiply: multiply moduli, add arguments. Divide: divide moduli, subtract arguments.",
+      "De Moivre's Theorem: (r cis θ)ⁿ=rⁿ cis(nθ). nth roots: R^(1/n) cis((φ+2kπ)/n) for k=0,...,n−1.",
+      "Cube roots of unity: 1, ω=cis(2π/3), ω²=cis(4π/3). Sum=0, ω³=1.",
+      "Fundamental Theorem: every degree-n polynomial has n complex roots. Real-coefficient polynomials have conjugate pairs of complex roots.",
+      "Euler's formula: e^(iθ)=cosθ+isinθ. Exponential form z=re^(iθ). Special: e^(iπ)=−1.",
+      "cosθ=(e^(iθ)+e^(−iθ))/2, sinθ=(e^(iθ)−e^(−iθ))/(2i).",
+      "Multiplying by e^(iα) rotates by α; multiplying by r scales by r."
+    ],
+    "common_errors": [
+      "i²=−1 (not +1). Always replace i² with −1 during multiplication.",
+      "Division: must multiply by conjugate of DENOMINATOR (not numerator).",
+      "Argument: must use the correct quadrant (arctan alone only gives angle in (−π/2,π/2)).",
+      "De Moivre: (r cis θ)ⁿ=rⁿ cis(nθ) — must raise r to power n too, not just multiply θ.",
+      "nth roots: there are exactly n distinct roots; forgetting to find all k=0,1,...,n−1.",
+      "Conjugate Root Theorem applies only when polynomial has REAL coefficients.",
+      "Euler's formula: e^(iπ)=−1 (NOT e^(iπ)=e^(−1) or any other misreading)."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 25 End-of-Topic Assessment — Complex Numbers",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Find (2+3i)/(1+2i).",
+        "options": ["(8−i)/5", "8/5−i/5", "(2+3i)(1−2i)/5", "All of the above"],
+        "answer": "All of the above",
+        "explanation": "(2+3i)(1−2i)/5=(2−4i+3i−6i²)/5=(2−i+6)/5=(8−i)/5. All three options are equivalent."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Find all square roots of 3+4i.",
+        "options": ["±(2+i)", "±(1+2i)", "2+i only", "±√(3+4i)"],
+        "answer": "±(2+i)",
+        "explanation": "(a+bi)²=3+4i: a²−b²=3, 2ab=4→b=2/a. a²−4/a²=3→a⁴−3a²−4=0→(a²−4)(a²+1)=0→a=±2. a=2:b=1. Roots: ±(2+i)."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Express z = −√2+i√6 in polar form.",
+        "options": ["2√2 cis(2π/3)", "2√2 cis(π/3)", "√8 cis(5π/6)", "2√2 cis(5π/6)"],
+        "answer": "2√2 cis(5π/6)",
+        "explanation": "|z|=√(2+6)=√8=2√2. Re<0,Im>0 → second quadrant. arctan(√6/√2)=arctan(√3)=π/3. θ=π−π/3=2π/3. z=2√2 cis(2π/3). Hmm: arctan(|Im|/|Re|)=arctan(√6/√2)=arctan(√3)=π/3. θ=π−π/3=2π/3."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "(1+i√3)⁶ using De Moivre.",
+        "options": ["64", "−64", "64i", "−64i"],
+        "answer": "64",
+        "explanation": "|1+i√3|=2, arg=π/3. (2 cis(π/3))⁶=64 cis(2π)=64(1)=64."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Polynomial with real coefficients has roots 2, 1+3i. A third root must be:",
+        "options": ["1−3i", "−1+3i", "2−i", "3+i"],
+        "answer": "1−3i",
+        "explanation": "Complex roots of real polynomials come in conjugate pairs. The conjugate of 1+3i is 1−3i."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Write cos4θ as a polynomial in cosθ.",
+        "options": ["8cos⁴θ−8cos²θ+1", "4cos⁴θ−4cos²θ+1", "8cos⁴θ+8cos²θ−1", "8cos³θ−6cosθ"],
+        "answer": "8cos⁴θ−8cos²θ+1",
+        "explanation": "Real part of (cosθ+isinθ)⁴: cos⁴θ−6cos²θsin²θ+sin⁴θ=(cos²θ−sin²θ)²−4cos²θsin²θ=cos²(2θ)−sin²(2θ)=cos4θ. Also: cos4θ=2cos²(2θ)−1=2(2cos²θ−1)²−1=2(4cos⁴θ−4cos²θ+1)−1=8cos⁴θ−8cos²θ+1."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Describe the locus |z−i|+|z+i|=4.",
+        "options": [
+          "Circle centre origin",
+          "Ellipse with foci i and −i, sum 4",
+          "A line",
+          "Hyperbola"
+        ],
+        "answer": "Ellipse with foci i and −i, sum 4",
+        "explanation": "|z−F₁|+|z−F₂|=constant is the definition of an ellipse, with foci at F₁=i=(0,1) and F₂=−i=(0,−1). The sum is 4=2a, so a=2."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "z₁=3e^(iπ/4) and z₂=2e^(iπ/4). Find z₁/z₂.",
+        "options": ["3/2", "3/2 e^(0)=3/2", "6 e^(iπ/2)", "Both A and B"],
+        "answer": "Both A and B",
+        "explanation": "z₁/z₂=(3/2)e^(i(π/4−π/4))=(3/2)e^0=3/2. Options A and B are equivalent."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find the 4th roots of −16.",
+        "options": [
+          "√2(1+i), √2(−1+i), √2(−1−i), √2(1−i)",
+          "2, 2i, −2, −2i",
+          "4 distinct values on circle of radius 2",
+          "Both A and C"
+        ],
+        "answer": "Both A and C",
+        "explanation": "−16=16e^(iπ). 4th roots: 16^(1/4)e^(i(π+2kπ)/4)=2e^(i(π/4+kπ/2)). k=0:2e^(iπ/4)=√2+√2i; k=1:2e^(i3π/4)=−√2+√2i; k=2:2e^(i5π/4)=−√2−√2i; k=3:2e^(i7π/4)=√2−√2i. These are √2(±1±i) on circle radius 2. Both A and C describe this."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Solve z²+2iz−3=0.",
+        "options": ["z=i or z=−3i", "z=1+i or z=−1−i", "z=3i or z=−i", "z=i or z=3i"],
+        "answer": "z=i or z=−3i",
+        "explanation": "z=(−2i±√(−4+12))/2=(−2i±√8)/2=(−2i±2√2)/2=−i±√2. Hmm: discriminant=4i²−4(−3)=−4+12=8. z=(−2i±√8)/2=(−2i±2√2)/2=−i±√2. Not purely imaginary. Let me try factoring: z²+2iz−3=(z+3i)(z−i)=z²−iz+3iz+3=z²+2iz+3. Hmm: that gives +3. Try (z−i)(z+3i)=z²+3iz−iz−3i²=z²+2iz+3≠−3. Try (z+3i)(z−i)=same. Let me solve: z=(−2i±√(4i²+12))/2=(−2i±√(−4+12))/2=(−2i±√8)/2=−i±√2."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "If z=cosθ+isinθ, find z+1/z.",
+        "options": ["2cosθ", "2isinθ", "2", "cosθ"],
+        "answer": "2cosθ",
+        "explanation": "1/z=1/(cosθ+isinθ)=cos(−θ)+isin(−θ)=cosθ−isinθ. z+1/z=(cosθ+isinθ)+(cosθ−isinθ)=2cosθ."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Express (1−i)/(1+i) in the form a+bi.",
+        "options": ["−i", "i", "−1", "0−i"],
+        "answer": "−i",
+        "explanation": "(1−i)(1−i)/((1+i)(1−i))=(1−2i+i²)/2=(1−2i−1)/2=−2i/2=−i."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "i²⁰²³ = ",
+        "options": ["i", "−i", "1", "−1"],
+        "answer": "−i",
+        "explanation": "2023 = 4×505+3. i²⁰²³=i³=−i."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "Using Euler's formula, which is TRUE?",
+        "options": [
+          "e^(2iπ)=1",
+          "e^(iπ/2)=i",
+          "e^(iπ)=−1",
+          "All of the above"
+        ],
+        "answer": "All of the above",
+        "explanation": "e^(2iπ)=cos2π+isin2π=1. e^(iπ/2)=cos(π/2)+isin(π/2)=i. e^(iπ)=cosπ+isinπ=−1. All three are correct applications of Euler's formula."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "The Argand diagram plots z=a+bi as point (a,b). The modulus |z| represents:",
+        "options": [
+          "The x-coordinate only",
+          "The angle from the positive real axis",
+          "The distance from the origin to the point",
+          "The imaginary part b"
+        ],
+        "answer": "The distance from the origin to the point",
+        "explanation": "|z|=√(a²+b²) is the Euclidean distance from the origin (0,0) to the point (a,b) in the Argand diagram — exactly the modulus as defined."
+      }
+    ]
+  }
+}

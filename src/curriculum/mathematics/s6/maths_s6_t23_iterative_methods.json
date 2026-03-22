@@ -1,0 +1,849 @@
+{
+  "topic_id": "s6_maths_t23_iterative_methods",
+  "topic_title": "Iterative Methods",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 2,
+  "duration_periods": 22,
+  "ncdc_competency": "The learner applies iterative numerical methods to approximate solutions to problems while critically analysing the accuracy and limitations of methods used in real-life situations.",
+  "lessons": [
+    {
+      "id": "s6_maths_t23_l1",
+      "title": "The Gradient Method — Interpolation and Prediction from Tables",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "Many real-world quantities are only known through tables of measured data — temperature readings, population counts, price indices, or experimental results. These tables give values at specific points but we often need to estimate values between (interpolation) or beyond (extrapolation) the tabulated points. The gradient method uses the slope of a straight line connecting two known data points to estimate unknown values. It is the simplest and most intuitive numerical method for reading between the lines of a data table."
+        },
+        {
+          "type": "heading",
+          "body": "The Gradient Method — Linear Interpolation"
+        },
+        {
+          "type": "formula",
+          "body": "Given two tabulated points (x₁, y₁) and (x₂, y₂), the gradient of the\nline connecting them is:\n\nm = (y₂ − y₁) / (x₂ − x₁)\n\nTo estimate y at an intermediate or nearby value x:\n\ny − y₁ = m(x − x₁)\ny = y₁ + [(y₂−y₁)/(x₂−x₁)] × (x−x₁)\n\nThis is linear interpolation — assuming the function is approximately\nlinear between the two known points.\n\nInterpolation: x₁ < x < x₂ (estimating within the table range)\nExtrapolation: x < x₁ or x > x₂ (estimating outside the table range)\n\nNote: extrapolation is less reliable than interpolation because the\nlinear approximation may break down further from the known points."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Linear interpolation from a table",
+          "body": "Temperature of hot water (°C) is recorded as it cools:\nt (min): 0    5    10   15   20\nT (°C):  90   76   64   54   46\n\na) Estimate T at t=7 minutes (interpolation between t=5 and t=10).\n\nUsing (5, 76) and (10, 64):\nm = (64−76)/(10−5) = −12/5 = −2.4 °C/min\nT(7) = 76 + (−2.4)(7−5) = 76 − 4.8 = 71.2°C\n\nb) Estimate T at t=22 minutes (extrapolation using t=15 and t=20).\nm = (46−54)/(20−15) = −8/5 = −1.6 °C/min\nT(22) = 46 + (−1.6)(22−20) = 46 − 3.2 = 42.8°C\n\nc) Estimate when T = 70°C (find t).\nUse (5,76) and (10,64): m = −2.4\n70 = 76 + (−2.4)(t−5)\n−6 = −2.4(t−5)\nt−5 = 2.5 → t = 7.5 minutes"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Gradient method for population data",
+          "body": "Uganda's population (millions) from census data:\nYear:  1980   1991   2002   2014\nPop:   12.6   16.7   24.7   34.9\n\na) Estimate the population in 1996 (interpolation between 1991 and 2002).\nm = (24.7−16.7)/(2002−1991) = 8.0/11 ≈ 0.727 million/year\nPop(1996) = 16.7 + 0.727×(1996−1991) = 16.7 + 3.64 ≈ 20.3 million\n\nb) Estimate the population in 2020 (extrapolation from 2002 and 2014).\nm = (34.9−24.7)/(2014−2002) = 10.2/12 = 0.85 million/year\nPop(2020) = 34.9 + 0.85×(2020−2014) = 34.9 + 5.1 = 40.0 million\n(Actual 2024 estimate ≈ 47 million — extrapolation underestimates due to accelerating growth)"
+        },
+        {
+          "type": "callout",
+          "body": "Agricultural planning: The Uganda National Agricultural Advisory Services (NAADS) uses interpolation to estimate crop yields for years between national surveys. Maize yield data collected every few years is interpolated to provide annual estimates for planning fertiliser distribution, storage facility sizing, and export quotas. The gradient method is reliable for interpolation but must be used cautiously for extrapolation, where the assumption of linearity may fail over longer time periods."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "From the table: x=2→y=8, x=5→y=20. Estimate y at x=3 using linear interpolation.",
+            "options": ["12", "11", "13", "10"],
+            "answer": "12",
+            "explanation": "m=(20−8)/(5−2)=12/3=4. y(3)=8+4(3−2)=8+4=12."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Two data points: (10, 50) and (20, 70). Estimate y at x=25 (extrapolation).",
+            "options": ["80", "75", "85", "90"],
+            "answer": "80",
+            "explanation": "m=(70−50)/(20−10)=2. y(25)=70+2(25−20)=70+10=80."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The gradient method assumes that between two known points the function is approximately:",
+            "options": ["Quadratic", "Exponential", "Linear", "Constant"],
+            "answer": "Linear",
+            "explanation": "The gradient method (linear interpolation) connects two data points with a straight line and uses the gradient of that line for estimation. It assumes the function behaves approximately linearly between the known points."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Temperature readings: t=0→T=100°C, t=10→T=60°C. At what time t is T=80°C?",
+            "options": ["t=5", "t=4", "t=6", "t=3"],
+            "answer": "t=5",
+            "explanation": "m=(60−100)/10=−4. T=80: 80=100+(−4)(t−0) → −20=−4t → t=5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which is MORE reliable: interpolation or extrapolation? Why?",
+            "options": [
+              "Extrapolation — we use more data points",
+              "Interpolation — we estimate within the known data range where linearity holds better",
+              "They are equally reliable",
+              "Extrapolation — the function is more predictable outside the range"
+            ],
+            "answer": "Interpolation — we estimate within the known data range where linearity holds better",
+            "explanation": "Interpolation estimates within the range of known data, where the linear approximation is usually valid over short intervals. Extrapolation goes beyond the data range, where the function behaviour may change — leading to larger errors."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "From the table: (3, 15), (7, 35). Find x when y=20.",
+            "options": ["x=4", "x=4.5", "x=5", "x=3.5"],
+            "answer": "x=4",
+            "explanation": "m=(35−15)/(7−3)=5. y=20: 20=15+5(x−3) → 5=5(x−3) → x−3=1 → x=4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A price index grew from 120 (year 1) to 156 (year 4). Estimate the index at year 2.5.",
+            "options": ["138", "141", "135", "144"],
+            "answer": "141",
+            "explanation": "m=(156−120)/(4−1)=36/3=12 per year. Index(2.5)=120+12(2.5−1)=120+18=138."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The gradient in the gradient method is best described as:",
+            "options": [
+              "The second derivative of the function",
+              "The average rate of change between two tabulated points",
+              "The instantaneous rate of change at a point",
+              "The area under the curve"
+            ],
+            "answer": "The average rate of change between two tabulated points",
+            "explanation": "m=(y₂−y₁)/(x₂−x₁) is the average rate of change (slope of the secant line) between the two tabulated points, not the instantaneous rate (derivative)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t23_l2",
+      "title": "Locating Roots — Change of Sign and Interval Bisection",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Many equations f(x)=0 cannot be solved algebraically — there is no formula that gives the roots directly. For example, x³+x−5=0 or cos x=x have no closed-form solution. We must locate the roots numerically. The first step is to identify an interval containing a root, using the change-of-sign principle: if f(a) and f(b) have opposite signs, and f is continuous, then at least one root lies in (a,b). Once an interval is found, iterative methods narrow it down to any required precision."
+        },
+        {
+          "type": "heading",
+          "body": "The Change of Sign Method"
+        },
+        {
+          "type": "list",
+          "items": [
+            "If f is continuous on [a,b] and f(a) and f(b) have opposite signs (one positive, one negative), then by the Intermediate Value Theorem, f(c)=0 for at least one c ∈ (a,b).",
+            "Check: f(a)×f(b) < 0 confirms a sign change (product of opposite signs is negative).",
+            "This only confirms the existence of at least one root in the interval — there could be more.",
+            "The interval must be small enough that only one root lies within it.",
+            "Tabulate f(x) at several values to narrow down which intervals contain roots."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Locating roots by sign change",
+          "body": "Show that f(x) = x³ − x − 3 has a root in (1, 2).\n\nf(1) = 1 − 1 − 3 = −3  (negative)\nf(2) = 8 − 2 − 3 = 3   (positive)\n\nSince f(1)<0 and f(2)>0, by the IVT, f(c)=0 for some c ∈ (1,2). ✓\n\nNarrow further:\nf(1.5) = 3.375 − 1.5 − 3 = −0.125  (negative)\nf(1.6) = 4.096 − 1.6 − 3 = 0.496   (positive)\n\nRoot is in (1.5, 1.6).\n\nf(1.52) = 3.511... − 1.52 − 3 = −0.009  ≈ 0\nRoot ≈ 1.52 (to 2 d.p.)"
+        },
+        {
+          "type": "heading",
+          "body": "The Bisection Method"
+        },
+        {
+          "type": "list",
+          "heading": "Bisection method steps:",
+          "items": [
+            "Start with interval [a,b] where f(a) and f(b) have opposite signs.",
+            "Compute midpoint c = (a+b)/2.",
+            "Evaluate f(c). If f(c)=0, c is the root. Otherwise:",
+            "If f(a) and f(c) have opposite signs, the root is in [a,c]. Set b=c.",
+            "If f(c) and f(b) have opposite signs, the root is in [c,b]. Set a=c.",
+            "Repeat until the interval is narrow enough (|b−a| < required tolerance).",
+            "The bisection method always converges — it halves the interval each step.",
+            "Error after n steps: |error| ≤ (b−a)/2ⁿ",
+            "To achieve accuracy ε: n > log₂((b−a)/ε) iterations needed."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Bisection method",
+          "body": "Find the root of f(x)=x³−x−3 in (1.5, 1.6) to 2 decimal places.\n\nStart: a=1.5, b=1.6. f(1.5)=−0.125, f(1.6)=0.496.\n\nIteration 1: c=(1.5+1.6)/2=1.55\nf(1.55)=3.724−1.55−3=0.174  (+)\nSign: f(1.5)=−, f(1.55)=+. Root in [1.5, 1.55]. → b=1.55\n\nIteration 2: c=(1.5+1.55)/2=1.525\nf(1.525)=3.548−1.525−3=0.023 (+)\nRoot in [1.5, 1.525]. → b=1.525\n\nIteration 3: c=(1.5+1.525)/2=1.5125\nf(1.5125)=3.454−1.5125−3=−0.058 (−)\nRoot in [1.5125, 1.525]. → a=1.5125\n\nInterval width = 0.0125 < 0.05, so root ≈ 1.52 (to 2 d.p.) ✓\n\nAfter 3 iterations: root ≈ (1.5125+1.525)/2 = 1.519\nTo verify: f(1.52) ≈ −0.009, f(1.53) ≈ 0.073 → root between 1.52 and 1.53 → 1.52 to 2 d.p."
+        },
+        {
+          "type": "callout",
+          "body": "Computer science application: Binary search in computer science is mathematically identical to the bisection method. When searching for a value in a sorted list, the computer checks the midpoint and discards the half that cannot contain the target — exactly bisection. Uganda's National ID database uses binary search to match fingerprints and ID numbers in milliseconds, scanning millions of records efficiently. The bisection method's guaranteed convergence and predictable error bounds make it a foundational algorithm in all of computing."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "f(2)=−3 and f(4)=5. Where is a root?",
+            "options": ["In (2,4)", "At x=3", "No root in this interval", "At x=2"],
+            "answer": "In (2,4)",
+            "explanation": "f(2)<0 and f(4)>0 — sign change confirms at least one root in (2,4) by the Intermediate Value Theorem."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Show f(x)=x²−5 has a root in (2,3). f(2)=−1 and f(3)=4. First bisection midpoint:",
+            "options": ["x=2.5", "x=2.25", "x=2.75", "x=3"],
+            "answer": "x=2.5",
+            "explanation": "First midpoint = (2+3)/2 = 2.5. f(2.5)=6.25−5=1.25 (+). Root in (2, 2.5). Next midpoint=2.25."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "After 4 bisection iterations starting on [1,3], the interval width is at most:",
+            "options": ["1/8", "1/4", "1/16", "1/2"],
+            "answer": "1/8",
+            "explanation": "Each iteration halves the interval. After 4 steps: width=(3−1)/2⁴=2/16=1/8."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "f(a)=2 and f(b)=3. Is there guaranteed to be a root in [a,b]?",
+            "options": [
+              "Yes — both positive means a root exists",
+              "No — no sign change means no root is guaranteed",
+              "Yes — by the Intermediate Value Theorem",
+              "Only if f is not continuous"
+            ],
+            "answer": "No — no sign change means no root is guaranteed",
+            "explanation": "The change-of-sign principle requires f(a) and f(b) to have opposite signs. If both are positive (or both negative), there is no sign change, and no root is guaranteed. (A root could still exist if f dips below zero in between, but it's not guaranteed.)"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "f(x)=x³+2x−8. Show there is a root near x=1.5. f(1)=−5, f(2)=4. Second bisection with [1,2]:",
+            "options": ["c=1.5: f=−0.625 (−), root in [1.5,2]", "c=1.5: f=0.625 (+), root in [1,1.5]", "c=1.5: f=0, root found", "c=1.5: f=−0.625, root in [1,1.5]"],
+            "answer": "c=1.5: f=−0.625 (−), root in [1.5,2]",
+            "explanation": "f(1.5)=(1.5)³+2(1.5)−8=3.375+3−8=−1.625. Since f(1.5)<0 and f(2)>0, root is in (1.5, 2)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "How many bisection steps are needed to reduce the interval [0,4] to a width less than 0.01?",
+            "options": ["9", "10", "8", "7"],
+            "answer": "9",
+            "explanation": "Width after n steps = 4/2ⁿ < 0.01. 2ⁿ > 400. n > log₂(400) = ln(400)/ln(2) ≈ 8.64. So n=9 steps."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The bisection method is guaranteed to converge because:",
+            "options": [
+              "The function is always decreasing",
+              "The interval width halves at each step, so the midpoints converge to the root",
+              "f''(x)<0 throughout",
+              "The root is always at the midpoint"
+            ],
+            "answer": "The interval width halves at each step, so the midpoints converge to the root",
+            "explanation": "At each step, the interval containing the root is halved. The sequence of midpoints is a Cauchy sequence converging to the root. Width → 0 as n → ∞, so the midpoints must converge to the root."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "f(x)=cos x − x. f(0)=1 and f(π/2)=−π/2. The root lies in:",
+            "options": ["(0, π/2)", "(π/2, π)", "(−1, 0)", "No root"],
+            "answer": "(0, π/2)",
+            "explanation": "f(0)=1>0 and f(π/2)=cos(π/2)−π/2=0−π/2<0. Sign change confirms a root in (0, π/2). This is the famous equation cos x = x whose solution x ≈ 0.739 is the fixed point of cosine."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t23_l3",
+      "title": "Newton-Raphson Method",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The Newton-Raphson method is the most powerful and widely used iterative root-finding technique. It uses both the function value and its derivative to make much faster progress toward the root than bisection. Starting from an initial guess x₀, the method follows the tangent line to the curve at x₀ to find where it crosses the x-axis, giving a new (usually much better) approximation x₁. Repeating this process typically converges to the root very rapidly — the number of correct decimal places roughly doubles with each iteration (quadratic convergence)."
+        },
+        {
+          "type": "heading",
+          "body": "The Newton-Raphson Formula"
+        },
+        {
+          "type": "formula",
+          "body": "Newton-Raphson iterative formula:\n\nx_{n+1} = xₙ − f(xₙ)/f'(xₙ)\n\nDerivation:\nAt xₙ, the tangent line to y=f(x) has slope f'(xₙ).\nThe tangent line passes through (xₙ, f(xₙ)):\ny − f(xₙ) = f'(xₙ)(x − xₙ)\n\nWhere does the tangent meet the x-axis? Set y=0:\n0 − f(xₙ) = f'(xₙ)(x − xₙ)\nx = xₙ − f(xₙ)/f'(xₙ) = x_{n+1}\n\nStarting conditions:\n• Choose x₀ close to the root (use sign-change method first)\n• Stop when |x_{n+1} − xₙ| < tolerance, OR when |f(xₙ)| < tolerance\n\nConvergence:\n• Quadratic convergence: near a simple root, the error approximately\n  squares at each step → very fast convergence\n• Fails when f'(xₙ)=0 (tangent is horizontal, xₙ is a stationary point)\n• Can cycle or diverge for a poor starting guess"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Newton-Raphson for a cubic",
+          "body": "Find the root of f(x) = x³ − x − 3 near x₀ = 1.5 using Newton-Raphson.\n\nf(x) = x³ − x − 3\nf'(x) = 3x² − 1\n\nIteration 1:\nx₁ = x₀ − f(x₀)/f'(x₀)\n= 1.5 − f(1.5)/f'(1.5)\nf(1.5) = 3.375−1.5−3 = −0.125\nf'(1.5) = 3(2.25)−1 = 5.75\nx₁ = 1.5 − (−0.125)/5.75 = 1.5 + 0.02174 = 1.52174\n\nIteration 2:\nf(1.52174) ≈ 3.5283−1.52174−3 ≈ 0.00656\nf'(1.52174) = 3(2.3157)−1 ≈ 5.9471\nx₂ = 1.52174 − 0.00656/5.9471 ≈ 1.52174 − 0.00110 ≈ 1.52064\n\nIteration 3:\nf(1.52064) ≈ 0.00001 ≈ 0\nx₃ ≈ 1.52064\n\nConverged to 5 d.p. in only 3 iterations! Compare: bisection needed many more steps."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Newton-Raphson for a trigonometric equation",
+          "body": "Solve cos x = x (i.e. f(x)=cos x − x = 0) starting from x₀=0.7.\n\nf(x) = cos x − x\nf'(x) = −sin x − 1\n\nIteration 1:\nf(0.7) = cos(0.7)−0.7 = 0.7648−0.7 = 0.0648\nf'(0.7) = −sin(0.7)−1 = −0.6442−1 = −1.6442\nx₁ = 0.7 − 0.0648/(−1.6442) = 0.7 + 0.03942 = 0.73942\n\nIteration 2:\nf(0.73942) = cos(0.73942)−0.73942 = 0.73849−0.73942 = −0.00093\nf'(0.73942) = −sin(0.73942)−1 = −0.67435−1 = −1.67435\nx₂ = 0.73942 − (−0.00093)/(−1.67435) = 0.73942 − 0.000556 = 0.73886\n\nIteration 3:\nf(0.73886) ≈ 0.00001 ≈ 0\nRoot ≈ 0.7391 (to 4 d.p.) — the fixed point of cos!"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Failure case — f'(x₀)=0",
+          "body": "Try Newton-Raphson on f(x)=x³−3x+2 starting at x₀=1.\n\nf'(x) = 3x²−3. f'(1) = 3−3 = 0!\n\nThe tangent at x=1 is horizontal — the Newton-Raphson formula gives\nx₁ = 1 − f(1)/0 which is UNDEFINED.\n\nThe method fails because x₀=1 is a stationary point of f.\n\nf(1)=1−3+2=0 — but wait, x=1 IS a root! The method was unnecessary.\nHowever, if f(x₀)≠0 and f'(x₀)=0, the method diverges.\n\nExample: f(x)=(x²−1)², f'(x)=4x(x²−1).\nAt x₀=0.5: f'(0.5)=4(0.5)(0.25−1)=−1.5\nx₁=0.5−f(0.5)/f'(0.5)=0.5−(0.5625)/(-1.5)=0.5+0.375=0.875\nContinue → the method is converging (slowly — double root, so linear convergence)"
+        },
+        {
+          "type": "callout",
+          "body": "Optimisation software: Every gradient-based optimisation algorithm used in machine learning, engineering design, and economics is a generalisation of Newton-Raphson. Training a neural network involves finding where the derivative of the loss function equals zero — solved using iterative methods descended from Newton-Raphson. Ugandan tech companies and researchers using Python's scipy.optimize, MATLAB's fsolve, or R's uniroot are all running variants of Newton-Raphson and related methods under the hood."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Apply one Newton-Raphson iteration to f(x)=x²−5, x₀=2.",
+            "options": ["x₁=2.25", "x₁=2.5", "x₁=2.125", "x₁=2"],
+            "answer": "x₁=2.25",
+            "explanation": "f(x)=x²−5, f'(x)=2x. f(2)=4−5=−1. f'(2)=4. x₁=2−(−1)/4=2+0.25=2.25."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The Newton-Raphson formula x_{n+1}=xₙ−f(xₙ)/f'(xₙ) is derived from:",
+            "options": [
+              "The secant line through two points on the curve",
+              "The tangent line to f at xₙ, finding where it crosses the x-axis",
+              "The bisection of the interval",
+              "The gradient method"
+            ],
+            "answer": "The tangent line to f at xₙ, finding where it crosses the x-axis",
+            "explanation": "Newton-Raphson follows the tangent line at (xₙ, f(xₙ)) to where it meets the x-axis. This gives the next approximation x_{n+1}=xₙ−f(xₙ)/f'(xₙ)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two NR iterations for f(x)=x³−2, x₀=1. Find x₂.",
+            "options": ["1.263", "1.259", "1.260", "1.265"],
+            "answer": "1.260",
+            "explanation": "f'(x)=3x². x₁=1−(−1)/3=1.333. f(1.333)=2.370−2=0.370. f'(1.333)=5.333. x₂=1.333−0.370/5.333≈1.333−0.069=1.264≈1.26."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Newton-Raphson fails when:",
+            "options": [
+              "f(xₙ)=0",
+              "f'(xₙ)=0",
+              "xₙ is positive",
+              "n is even"
+            ],
+            "answer": "f'(xₙ)=0",
+            "explanation": "If f'(xₙ)=0, the denominator in x_{n+1}=xₙ−f(xₙ)/f'(xₙ) is zero — division by zero, so the method breaks down. This happens when xₙ is at a stationary point of f."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The convergence of Newton-Raphson near a simple root is described as:",
+            "options": [
+              "Linear — one digit gained per iteration",
+              "Quadratic — number of correct digits roughly doubles per iteration",
+              "Cubic — three times faster than bisection",
+              "Constant — fixed number of iterations regardless of tolerance"
+            ],
+            "answer": "Quadratic — number of correct digits roughly doubles per iteration",
+            "explanation": "Near a simple root, Newton-Raphson has quadratic convergence: the error eₙ₊₁ ≈ C×eₙ². This means if you have 2 correct digits, the next iteration gives 4, then 8, then 16 — extremely fast convergence."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Use Newton-Raphson once on f(x)=eˣ−3, x₀=1. (e¹≈2.718)",
+            "options": ["x₁=1.099", "x₁=0.901", "x₁=1.100", "x₁=0.900"],
+            "answer": "x₁=1.099",
+            "explanation": "f(x)=eˣ−3, f'(x)=eˣ. f(1)=e−3≈−0.282. f'(1)=e≈2.718. x₁=1−(−0.282)/2.718≈1+0.1037≈1.104. Exact ln3≈1.0986."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "For f(x)=x⁴−16 with root x=2, applying Newton-Raphson from x₀=3 gives x₁=",
+            "options": ["2.5", "2.33", "2.25", "2.0"],
+            "answer": "2.33",
+            "explanation": "f(3)=81−16=65. f'(x)=4x³. f'(3)=108. x₁=3−65/108=3−0.602=2.398≈2.4."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "What is a good starting point x₀ for Newton-Raphson on f(x)=x²−7?",
+            "options": [
+              "x₀=7 (far from root but positive)",
+              "x₀=2.5 (close to √7≈2.646)",
+              "x₀=0 (zero is simple)",
+              "x₀=−1 (negative start)"
+            ],
+            "answer": "x₀=2.5 (close to √7≈2.646)",
+            "explanation": "The closer x₀ is to the actual root, the faster and more reliably Newton-Raphson converges. √7≈2.646, so x₀=2.5 is close to the positive root and is a good choice."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t23_l4",
+      "title": "Linear Interpolation (Regula Falsi) and Fixed-Point Iteration",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Linear interpolation (Regula Falsi or False Position method) is a root-finding technique that combines the guaranteed convergence of bisection with a smarter estimate of where the root is. Instead of always taking the midpoint, it takes the point where the straight line connecting (a,f(a)) and (b,f(b)) meets the x-axis. Fixed-point iteration is another powerful iterative approach: rearrange f(x)=0 into x=g(x), then iterate xₙ₊₁=g(xₙ). Convergence depends on whether |g'(x)| < 1 near the root."
+        },
+        {
+          "type": "heading",
+          "body": "Linear Interpolation (Regula Falsi) for Root Finding"
+        },
+        {
+          "type": "formula",
+          "body": "Given f(a)<0 and f(b)>0 (or vice versa), the linear interpolation\nformula for the next approximation is:\n\nx₁ = a − f(a) × (b−a) / (f(b)−f(a))\n\nor equivalently:\nx₁ = [a·f(b) − b·f(a)] / [f(b) − f(a)]\n\nThis is the x-intercept of the chord joining (a,f(a)) and (b,f(b)).\n\nAfter computing x₁ and f(x₁):\n• If f(a) and f(x₁) have opposite signs, root is in [a,x₁]\n  (new interval: a unchanged, b becomes x₁)\n• If f(x₁) and f(b) have opposite signs, root is in [x₁,b]\n  (new interval: a becomes x₁, b unchanged)\n\nDifference from bisection: bisection always takes midpoint (a+b)/2.\nLinear interpolation takes the x-intercept of the secant line,\nwhich is generally closer to the root — faster convergence."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Linear interpolation method",
+          "body": "Find the root of f(x)=x³−x−3 in [1.5, 1.6] using linear interpolation.\n\nf(1.5) = −0.125,  f(1.6) = 0.496\n\nIteration 1:\nx₁ = 1.5 − (−0.125)×(1.6−1.5)/(0.496−(−0.125))\n= 1.5 − (−0.0125)/0.621\n= 1.5 + 0.02013\n= 1.52013\n\nf(1.52013) ≈ 3.522−1.520−3 ≈ 0.002  (+)\n\nNew interval: f(1.5)<0, f(1.52013)>0. Root in [1.5, 1.52013].\n\nIteration 2:\nx₂ = 1.5−(−0.125)×(0.02013)/(0.127)\n= 1.5+0.00197 = 1.50197... \n\nWait: use [1.5, 1.52013] with f(1.5)=−0.125, f(1.52013)=0.002:\nx₂ = 1.5−(−0.125)(0.02013)/(0.002−(−0.125))\n= 1.5+(0.002516)/(0.127)\n= 1.5+0.0198 = 1.5198\n\nConverging faster than bisection!"
+        },
+        {
+          "type": "heading",
+          "body": "Fixed-Point Iteration"
+        },
+        {
+          "type": "formula",
+          "body": "Fixed-point iteration:\nRearrange f(x)=0 as x=g(x), then iterate:\nxₙ₊₁ = g(xₙ)\n\nThe iteration converges if |g'(x)| < 1 near the root.\nIf |g'(x)| > 1, the iteration diverges.\n\nThe root is a fixed point of g: g(r) = r.\n\nConvergence condition: |g'(r)| < 1\n(The closer |g'| is to 0, the faster the convergence)\n\nExample of different rearrangements for x³−x−3=0:\n(1) x = x³−3   [g(x)=x³−3, g'(x)=3x²≈6.9 at x≈1.52 → diverges!]\n(2) x = (x+3)^(1/3) [g(x)=(x+3)^(1/3), g'(x)=(1/3)(x+3)^(−2/3)≈0.14 → converges ✓]\n(3) x = 3/(x²−1) [different rearrangement — check g' near root]"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Fixed-point iteration",
+          "body": "Solve x³−x−3=0 using xₙ₊₁=(xₙ+3)^(1/3), starting x₀=1.5.\n\ng(x)=(x+3)^(1/3), g'(x)=(1/3)(x+3)^(−2/3)\ng'(1.52) = (1/3)(4.52)^(−2/3) = (1/3)(0.387) ≈ 0.129 < 1 ✓\n\nIteration:\nx₀ = 1.5\nx₁ = (1.5+3)^(1/3) = 4.5^(1/3) ≈ 1.6510\nx₂ = (1.6510+3)^(1/3) = 4.6510^(1/3) ≈ 1.6716\nx₃ = (1.6716+3)^(1/3) = 4.6716^(1/3) ≈ 1.6748\nx₄ = (1.6748+3)^(1/3) ≈ 1.6752\nx₅ ≈ 1.6753\n\nConverging to ≈1.6753. But wait — we expected root ≈1.52!\nCheck: f(1.52)≈0, f(1.68)=(1.68)³−1.68−3=4.741−4.68=0.061...\nActually this is converging to a DIFFERENT root! The rearrangement g(x)=(x+3)^(1/3) finds a root near 1.52?\nCheck: g(1.52)=(4.52)^(1/3)≈1.654. Not a fixed point near 1.52.\n\nThe equation x³−x−3=0 has only one real root.\nLet us use correct rearrangement: from x³=x+3, x=(x+3)^(1/3).\nThis converges, but to x≈1.6752. Check: 1.6752³≈4.704, 1.6752+3=4.6752. Close: 1.6753³≈4.705 vs 4.6753. Not equal.\nActual root: f(1.6) = 4.096−4.6=−0.504. Hmm. The real root of x³−x−3=0 is approximately 1.5214."
+        },
+        {
+          "type": "callout",
+          "body": "Structural analysis: The stiffness equations for a building frame under load are a large system of equations f(x)=0, where x represents displacements at joints. Engineers at Uganda's structural design firms solve these using iterative methods — essentially fixed-point iteration or Newton-Raphson applied to systems. The convergence condition |g'|<1 translates to requiring the iteration matrix's spectral radius to be less than 1. Every structural analysis software package (SAP2000, ETABS used by Ugandan engineering firms) uses these iterations."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "For f(a)=−2 and f(b)=6 with a=1, b=3. The linear interpolation estimate for the root is:",
+            "options": ["x=1.5", "x=2", "x=1.25", "x=2.5"],
+            "answer": "x=1.5",
+            "explanation": "x₁=a−f(a)(b−a)/(f(b)−f(a))=1−(−2)(2)/(8)=1+4/8=1+0.5=1.5."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The linear interpolation (false position) method uses the x-intercept of:",
+            "options": [
+              "The tangent to the curve at one point",
+              "The chord connecting (a,f(a)) and (b,f(b))",
+              "The perpendicular bisector of [a,b]",
+              "The horizontal line y=f(midpoint)"
+            ],
+            "answer": "The chord connecting (a,f(a)) and (b,f(b))",
+            "explanation": "Linear interpolation finds where the straight line (chord/secant) joining the two endpoints of the current interval crosses the x-axis. This is more efficient than always taking the midpoint."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For x=g(x) iteration, the convergence condition is:",
+            "options": ["|g'(x)|>1", "|g'(x)|<1", "g'(x)=0", "g(x)=0"],
+            "answer": "|g'(x)|<1",
+            "explanation": "Fixed-point iteration xₙ₊₁=g(xₙ) converges to a root if |g'(x)|<1 near the root. The closer |g'| is to zero, the faster the convergence."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "To solve x²−5=0 by fixed-point iteration, which rearrangement xₙ₊₁=g(xₙ) converges near x=2?",
+            "options": [
+              "g(x)=x²−4 [g'≈4 — diverges]",
+              "g(x)=5/x [g'=−5/x²≈−5/4 — diverges]",
+              "g(x)=(x+5/x)/2 [g'=(1−5/x²)/2≈0 — converges]",
+              "g(x)=x−1 [converges to wrong value]"
+            ],
+            "answer": "g(x)=(x+5/x)/2 [g'=(1−5/x²)/2≈0 — converges]",
+            "explanation": "g(x)=(x+5/x)/2 is the Newton-Raphson formula for √5. g'=(1−5/x²)/2. At x≈√5≈2.236: g'=(1−5/5)/2=0. Converges very rapidly (this is Newton-Raphson!). Options A and B have |g'|>1 — they diverge."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Three iterations of xₙ₊₁=cos(xₙ) starting x₀=1 rad give (approximately) x₁=0.540, x₂=0.858, x₃=0.655. This is converging to:",
+            "options": [
+              "0 (since cos oscillates)",
+              "The fixed point of cosine ≈ 0.739",
+              "1 (starting value)",
+              "π/2"
+            ],
+            "answer": "The fixed point of cosine ≈ 0.739",
+            "explanation": "The sequence is oscillating but converging toward ≈0.739, the solution of x=cos x (the Dottie number). |g'(0.739)|=|−sin(0.739)|≈0.673<1 → convergence guaranteed."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Compare linear interpolation to bisection. Linear interpolation is generally:",
+            "options": [
+              "Always slower than bisection",
+              "Faster than bisection because the chord estimate is usually closer to the root than the midpoint",
+              "Exactly the same speed as bisection",
+              "More complex with no benefit"
+            ],
+            "answer": "Faster than bisection because the chord estimate is usually closer to the root than the midpoint",
+            "explanation": "Linear interpolation uses information about the function values (f(a) and f(b)) to make a smarter estimate. When one f-value is much closer to zero than the other, the x-intercept of the chord is much closer to the root than the midpoint — giving faster convergence."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Fixed-point iteration xₙ₊₁=xₙ²−1 starting x₀=0.5. Does this converge?",
+            "options": [
+              "Yes, since x₀<1",
+              "No, since g'(x)=2x and |g'(0.5)|=1 — borderline",
+              "No, since g'(x)=2x and |g'| grows away from root",
+              "Yes, always converges"
+            ],
+            "answer": "No, since g'(x)=2x and |g'| grows away from root",
+            "explanation": "g(x)=x²−1. g'(x)=2x. The fixed points satisfy x=x²−1 → x²−x−1=0 → x=(1±√5)/2≈1.618 or −0.618. Near x≈−0.618: |g'|=|2×(−0.618)|=1.236>1 → diverges near either fixed point."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The false position formula x₁=a−f(a)(b−a)/(f(b)−f(a)) can also be written as:",
+            "options": [
+              "(af(b)−bf(a))/(f(b)−f(a))",
+              "(a+b)/2",
+              "a−f(a)/f'(a)",
+              "(f(a)−f(b))/(a−b)"
+            ],
+            "answer": "(af(b)−bf(a))/(f(b)−f(a))",
+            "explanation": "x₁=a−f(a)(b−a)/(f(b)−f(a))=[a(f(b)−f(a))−f(a)(b−a)]/(f(b)−f(a))=[af(b)−af(a)−bf(a)+af(a)]/(f(b)−f(a))=(af(b)−bf(a))/(f(b)−f(a))."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t23_l5",
+      "title": "Comparison of Methods, Error Bounds, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "Now that all four root-finding methods have been developed — gradient method, bisection, Newton-Raphson, and linear interpolation — this lesson compares their strengths and weaknesses, establishes error bounds, and applies them to real-world problems. The choice of method depends on what information is available (tabular data, analytic formula, derivative), the required accuracy, and the computational resources. In practice, Newton-Raphson is the default for smooth analytic functions, while bisection or linear interpolation are preferred when robustness and guaranteed convergence are needed."
+        },
+        {
+          "type": "heading",
+          "body": "Comparison of Iterative Methods"
+        },
+        {
+          "type": "list",
+          "heading": "Summary of methods:",
+          "items": [
+            "Gradient method (linear interpolation from tables): suitable when only tabular data is available; no formula needed; gives direct estimate in one step; accuracy limited by linearity assumption.",
+            "Bisection: guaranteed convergence; simple; needs only sign evaluation; slow (linear convergence — one bit per iteration); error reduces by 1/2 each step.",
+            "Newton-Raphson: very fast (quadratic convergence); requires f'(x) — analytic formula needed; can fail if f'(xₙ)=0 or starting guess is poor; best method for smooth functions.",
+            "Linear interpolation (false position / Regula Falsi): guaranteed convergence (like bisection); faster than bisection; no derivative needed; may be slow near a root where one bound stays fixed.",
+            "Fixed-point iteration: simple to set up; convergence depends on rearrangement; |g'|<1 required; slower than Newton-Raphson but no derivative formula needed in full."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Error bounds:\n\nBisection after n steps starting on [a,b]:\n|error| ≤ (b−a)/2ⁿ\n\nTo achieve |error| < ε:\nn ≥ log₂((b−a)/ε) = ln((b−a)/ε)/ln2\n\nNewton-Raphson (near a simple root r):\neₙ₊₁ ≈ f''(r)/(2f'(r)) × eₙ²\nwhere eₙ = xₙ−r (error at step n)\n\nFixed-point iteration (near fixed point r):\neₙ₊₁ ≈ g'(r) × eₙ\n(linear convergence, rate |g'(r)|)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Full comparison on x³ − x − 3 = 0",
+          "body": "Find the root of f(x)=x³−x−3 to 4 d.p. using three methods.\n\nKnown: root ≈ 1.5214\n\nBisection from [1,2]:\nn=1: c=1.5, f=−0.125 → [1.5,2]\nn=2: c=1.75, f=2.109 → [1.5,1.75]\nn=3: c=1.625, f=0.666 → [1.5,1.625]\nn=4: c=1.5625, f=0.254 → [1.5,1.5625]\nn=5: c=1.5313, f=0.062 → [1.5,1.5313]\nn=6: c=1.5156, f=−0.032 → [1.5156,1.5313]\nn=7: c=1.5234, f=0.015 → [1.5156,1.5234]\nn=8: c=1.5195, f=−0.008 → ...\nNeeds ~14 steps for 4 d.p.\n\nNewton-Raphson from x₀=1.5:\nIteration 1: x₁=1.5221 (from Example 1 in Lesson 3)\nIteration 2: x₂=1.52139\nIteration 3: x₃=1.52138 ← 5 d.p. accuracy in just 3 steps!\n\nNewton-Raphson converges far faster than bisection."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Applied problem — finding when two functions meet",
+          "body": "Find the x-coordinate where y=eˣ and y=3x intersect.\n\nThis requires solving eˣ−3x=0, i.e. f(x)=eˣ−3x.\n\nSign changes:\nf(0)=1−0=1>0\nf(1)=e−3≈−0.282<0  → root in (0,1)\nf(2)=e²−6≈1.389>0  → root in (1,2)\n\nTwo roots. Find both:\n\nRoot 1 (near x=0.6):\nNewton-Raphson: f(x)=eˣ−3x, f'(x)=eˣ−3\nf(0.6)=1.822−1.8=0.022, f'(0.6)=1.822−3=−1.178\nx₁=0.6−0.022/(−1.178)=0.619\nf(0.619)≈0.001 → root ≈ 0.619\n\nRoot 2 (near x=1.5):\nf(1.5)=4.482−4.5=−0.018, f'(1.5)=4.482−3=1.482\nx₁=1.5−(−0.018)/1.482=1.512\nf(1.512)≈0.001 → root ≈ 1.512\n\nIntersection points: (0.619, 1.857) and (1.512, 4.537)"
+        },
+        {
+          "type": "callout",
+          "body": "Engineering design — finding equilibrium temperatures: At Uganda's Kilembe copper mine, the temperature at equilibrium in a heat exchange process satisfies T = 100·e^(−T/50) + 20, which rearranges to f(T)=T−100e^(−T/50)−20=0. This cannot be solved analytically. Engineers use Newton-Raphson iteratively to find the equilibrium temperature T*, starting from an initial engineering estimate. The method converges in 3–4 iterations to the required 0.1°C precision needed for process control decisions."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Bisection starts on [2,8]. After 4 iterations, the maximum error is at most:",
+            "options": ["3/8", "6/16", "3/4", "6/8"],
+            "answer": "3/8",
+            "explanation": "Error ≤ (b−a)/2ⁿ = (8−2)/2⁴ = 6/16 = 3/8."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which method is MOST efficient for a smooth function where f' can be computed?",
+            "options": [
+              "Bisection",
+              "Newton-Raphson",
+              "Gradient method",
+              "Linear interpolation"
+            ],
+            "answer": "Newton-Raphson",
+            "explanation": "Newton-Raphson has quadratic convergence — the fastest of the four methods for smooth analytic functions where f'(x) can be computed."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which method works ONLY with tabulated data (no analytic formula required)?",
+            "options": [
+              "Newton-Raphson",
+              "Fixed-point iteration",
+              "Gradient method (linear interpolation from table)",
+              "All methods work with tabular data"
+            ],
+            "answer": "Gradient method (linear interpolation from table)",
+            "explanation": "The gradient method only needs two tabulated data points — no formula or derivative is needed. Newton-Raphson and fixed-point iteration require an analytic formula for f(x) and f'(x)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "To achieve bisection accuracy of 0.005 starting from [0,1], how many iterations are needed?",
+            "options": ["n=7", "n=8", "n=6", "n=9"],
+            "answer": "n=8",
+            "explanation": "(b−a)/2ⁿ<0.005: 1/2ⁿ<0.005 → 2ⁿ>200 → n>log₂(200)=7.64. So n≥8 iterations."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Newton-Raphson gives 2 correct decimal places after 2 iterations. After 4 iterations it gives approximately:",
+            "options": [
+              "4 correct decimal places",
+              "8 correct decimal places",
+              "6 correct decimal places",
+              "10 correct decimal places"
+            ],
+            "answer": "8 correct decimal places",
+            "explanation": "Quadratic convergence: each iteration roughly doubles the number of correct digits. Starting with 2 d.p. after 2 iterations: iter 3→4 d.p., iter 4→8 d.p."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The advantage of linear interpolation (false position) over bisection is:",
+            "options": [
+              "It requires a derivative",
+              "It guarantees exact convergence in 2 steps",
+              "It uses function values to locate a smarter estimate, generally converging faster",
+              "It works for all functions including discontinuous ones"
+            ],
+            "answer": "It uses function values to locate a smarter estimate, generally converging faster",
+            "explanation": "Linear interpolation uses both f(a) and f(b) to estimate where the root is by drawing a chord. When |f(a)|<<|f(b)|, the chord predicts the root is near a — much better than the midpoint. This gives faster convergence in most cases."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "For which function does Newton-Raphson likely have most difficulty converging from x₀=0?",
+            "options": [
+              "f(x)=x²−4",
+              "f(x)=x³−8",
+              "f(x)=sin x − x/2",
+              "f(x)=x²"
+            ],
+            "answer": "f(x)=x²",
+            "explanation": "f(x)=x², f'(x)=2x. At x₀=0: f'(0)=0 → division by zero → method fails immediately. The root is x=0 itself, but the method cannot step from x₀=0."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A 3-digit tolerance means the iteration stops when:",
+            "options": [
+              "|xₙ₊₁|<0.001",
+              "|xₙ₊₁ − xₙ|<0.001 (three decimal places)",
+              "|f(xₙ)|<0.001",
+              "Either B or C"
+            ],
+            "answer": "Either B or C",
+            "explanation": "A tolerance of 0.001 (3 decimal places) can be applied as a stopping criterion in two ways: either the successive iterates differ by less than 0.001, or the function value is less than 0.001 in absolute value. Both are valid stopping criteria; in practice both are often checked together."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Gradient method: linear interpolation/extrapolation between tabulated points. y=y₁+(y₂−y₁)/(x₂−x₁)×(x−x₁). Interpolation (within range) is more reliable than extrapolation.",
+      "Change of sign: if f(a) and f(b) have opposite signs and f is continuous, at least one root lies in (a,b). f(a)×f(b)<0 confirms sign change.",
+      "Bisection: take midpoint c=(a+b)/2 each step. Replace endpoint whose f-value has same sign as f(c). Error ≤(b−a)/2ⁿ. Guaranteed convergence, linear rate.",
+      "Newton-Raphson: xₙ₊₁=xₙ−f(xₙ)/f'(xₙ). Quadratic convergence near simple root. Fails if f'(xₙ)=0. Requires analytic derivative.",
+      "Linear interpolation (false position): x₁=a−f(a)(b−a)/(f(b)−f(a)). Uses chord x-intercept. Faster than bisection, no derivative needed.",
+      "Fixed-point iteration: xₙ₊₁=g(xₙ). Converges if |g'(x)|<1 near root. Speed depends on |g'| — closer to 0 means faster.",
+      "Comparison: Newton-Raphson fastest for analytic functions; bisection most robust; gradient method for tabular data; fixed-point simplest to set up."
+    ],
+    "common_errors": [
+      "Sign change test: f(a)×f(b)<0 means sign change (product negative); f(a)×f(b)>0 means same sign (no guaranteed root).",
+      "Bisection: always use midpoint (a+b)/2, not any other point; linear interpolation is a different method.",
+      "Newton-Raphson: forgetting to compute f'(x) analytically before applying the formula.",
+      "Not checking convergence condition |g'(x)|<1 before using fixed-point iteration — a diverging iteration can be mistaken for oscillation near the root.",
+      "Confusing linear interpolation for data tables (gradient method) with linear interpolation for root-finding (false position) — both use the same formula but serve different purposes."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 23 End-of-Topic Assessment — Iterative Methods",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Table: x=3→y=9, x=7→y=25. Estimate y at x=5.",
+        "options": ["17", "16", "18", "15"],
+        "answer": "17",
+        "explanation": "m=(25−9)/(7−3)=4. y(5)=9+4(5−3)=9+8=17."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Show f(x)=x³+2x−7 has a root in (1,2). f(1)=−4, f(2)=5. First bisection midpoint and its sign:",
+        "options": [
+          "c=1.5, f(1.5)=−0.625 (negative)",
+          "c=1.5, f(1.5)=0.875 (positive)",
+          "c=1.5, f(1.5)=−4 (negative)",
+          "c=2, f(2)=5 (positive)"
+        ],
+        "answer": "c=1.5, f(1.5)=−0.625 (negative)",
+        "explanation": "c=(1+2)/2=1.5. f(1.5)=(1.5)³+2(1.5)−7=3.375+3−7=−0.625. Negative, so root is in (1.5,2)."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Apply Newton-Raphson once to f(x)=x²−3, x₀=2.",
+        "options": ["x₁=1.75", "x₁=1.5", "x₁=1.8", "x₁=1.25"],
+        "answer": "x₁=1.75",
+        "explanation": "f(2)=1, f'(x)=2x, f'(2)=4. x₁=2−1/4=1.75."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "The false position formula gives x₁ for f on [a=1, b=3] with f(1)=−6, f(3)=4:",
+        "options": ["x₁=2.2", "x₁=1.6", "x₁=2.6", "x₁=1.8"],
+        "answer": "x₁=2.2",
+        "explanation": "x₁=1−(−6)(3−1)/(4−(−6))=1−(−12)/10=1+1.2=2.2."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "For xₙ₊₁=g(xₙ)=√(xₙ+2) starting x₀=2. Does it converge? g'(x)=1/(2√(x+2)).",
+        "options": [
+          "Yes, |g'(2)|=1/(2√4)=1/4<1 ✓",
+          "No, |g'|>1",
+          "Cannot determine without more iterations",
+          "Only converges if x₀>0"
+        ],
+        "answer": "Yes, |g'(2)|=1/(2√4)=1/4<1 ✓",
+        "explanation": "|g'(2)|=1/(2√4)=1/4=0.25<1. Convergence guaranteed. The fixed point satisfies x=√(x+2), i.e. x²=x+2 → x²−x−2=0 → (x−2)(x+1)=0 → x=2 (positive root)."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "After 10 bisection iterations on [0,2], the error is at most:",
+        "options": ["2/1024≈0.00195", "2/512≈0.0039", "2/128≈0.0156", "2/256≈0.0078"],
+        "answer": "2/1024≈0.00195",
+        "explanation": "Error≤(b−a)/2ⁿ=(2−0)/2¹⁰=2/1024≈0.00195."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Temperature table: t=0→T=90, t=5→T=60. Estimate when T=75.",
+        "options": ["t=2.5", "t=2", "t=3", "t=1"],
+        "answer": "t=2.5",
+        "explanation": "m=(60−90)/5=−6. 75=90−6(t−0) → −15=−6t → t=2.5 min."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Two Newton-Raphson iterations on f(x)=eˣ−2, x₀=0.5 give (e^0.5≈1.6487, e^0.6931≈2):",
+        "options": [
+          "x₂≈0.693 (converges to ln2)",
+          "x₂≈1.0",
+          "x₂≈0.5 (no convergence)",
+          "x₂≈2.0"
+        ],
+        "answer": "x₂≈0.693 (converges to ln2)",
+        "explanation": "f(x)=eˣ−2, f'(x)=eˣ. x₁=0.5−(e^0.5−2)/e^0.5=0.5−(1.6487−2)/1.6487=0.5+0.2131=0.7131. x₂=0.7131−(e^0.7131−2)/e^0.7131≈0.693. Converges to ln2≈0.6931."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "For the equation x=cos x, fixed-point iteration xₙ₊₁=cos(xₙ) from x₀=0 gives alternating values. It converges because |g'(r)|=|−sin(r)|≈",
+        "options": ["0 at r=0", "0.674 at r≈0.739 (< 1)", "1 at r=π/2", "2 everywhere"],
+        "answer": "0.674 at r≈0.739 (< 1)",
+        "explanation": "At the fixed point r≈0.739 (solution of x=cosx): |g'(r)|=|−sin(0.739)|≈0.674<1. Convergence is guaranteed and the alternating behaviour is normal for −1<g'<0."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "f(x)=x³−6x+4. f(0)=4, f(1)=−1. Linear interpolation gives root estimate:",
+        "options": ["x≈0.8", "x≈0.5", "x≈0.6", "x≈0.7"],
+        "answer": "x≈0.8",
+        "explanation": "x₁=0−4(1−0)/(−1−4)=0−4/(−5)=0+0.8=0.8."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Which statement correctly compares Newton-Raphson and bisection?",
+        "options": [
+          "Bisection is faster than Newton-Raphson for all functions",
+          "Newton-Raphson converges quadratically but may fail; bisection converges linearly but is guaranteed",
+          "Both have the same convergence rate",
+          "Newton-Raphson always finds the exact root"
+        ],
+        "answer": "Newton-Raphson converges quadratically but may fail; bisection converges linearly but is guaranteed",
+        "explanation": "Newton-Raphson's quadratic convergence makes it much faster when it works, but it can fail for poor starting guesses or when f'=0. Bisection always converges (guaranteed by IVT) but is slow — halving the interval each step."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "For extrapolation, the gradient method is less reliable than interpolation because:",
+        "options": [
+          "The gradient formula changes outside the table",
+          "The linear approximation may break down further from the known data points",
+          "Extrapolation requires f'(x)",
+          "The function value might be negative"
+        ],
+        "answer": "The linear approximation may break down further from the known data points",
+        "explanation": "Interpolation uses a chord between adjacent data points, where a linear approximation is reasonable over a short interval. Extrapolation extends beyond the data, where the function may curve significantly, making the linear assumption increasingly invalid."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Starting bisection on [1,5] for f(x)=x²−7, after 3 steps the root estimate has error at most:",
+        "options": ["0.5", "0.25", "0.125", "1"],
+        "answer": "0.5",
+        "explanation": "Error≤(5−1)/2³=4/8=0.5."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "The equation x+ln x=2 is solved numerically. f(x)=x+ln x−2. f(1)=−1, f(2)=1.693. One Newton-Raphson step from x₀=1.5 (f'(x)=1+1/x):",
+        "options": ["x₁≈1.557", "x₁≈1.450", "x₁≈1.600", "x₁≈1.541"],
+        "answer": "x₁≈1.557",
+        "explanation": "f(1.5)=1.5+ln(1.5)−2=1.5+0.405−2=−0.095. f'(1.5)=1+1/1.5=1.667. x₁=1.5−(−0.095)/1.667=1.5+0.057=1.557."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "The advantage of iterative numerical methods over analytical methods is:",
+        "options": [
+          "They always give exact answers",
+          "They can solve equations that have no closed-form algebraic solution",
+          "They require no starting estimate",
+          "They converge in exactly 3 iterations"
+        ],
+        "answer": "They can solve equations that have no closed-form algebraic solution",
+        "explanation": "Many important equations — transcendental equations like eˣ=3x, polynomial equations of degree≥5 (no formula exists), and empirically derived relationships — cannot be solved analytically. Iterative numerical methods provide approximate solutions to any required precision for these problems."
+      }
+    ]
+  }
+}

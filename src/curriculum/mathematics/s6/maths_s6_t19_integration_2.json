@@ -1,0 +1,1019 @@
+{
+  "topic_id": "s6_maths_t19_integration_2",
+  "topic_title": "Integration 2",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 1,
+  "duration_periods": 34,
+  "ncdc_competency": "The learner applies appropriate methods of integration to solve real-world problems involving areas, volumes, and accumulated quantities in engineering, economics, population dynamics, and statistical modelling.",
+  "lessons": [
+    {
+      "id": "s6_maths_t19_l1",
+      "title": "Integration of Trigonometric, Exponential, and Logarithmic Functions",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "S5 Integration 1 covered the power rule, basic substitution, and integrals of sin x, cos x, and sec²x. S6 Integration 2 extends the toolkit to the complete family of standard integrals including all six trigonometric functions, exponential functions of all bases, logarithmic functions, and the inverse trigonometric integrals that arise from the derivatives established in Topic 18. These standard results are the building blocks for all integration in UACE examinations and in engineering applications."
+        },
+        {
+          "type": "heading",
+          "body": "Standard Integrals — Full Table"
+        },
+        {
+          "type": "formula",
+          "body": "Trigonometric integrals:\n∫ sin x dx = −cos x + C\n∫ cos x dx = sin x + C\n∫ sec²x dx = tan x + C\n∫ cosec²x dx = −cot x + C\n∫ sec x tan x dx = sec x + C\n∫ cosec x cot x dx = −cosec x + C\n∫ tan x dx = ln|sec x| + C  = −ln|cos x| + C\n∫ cot x dx = ln|sin x| + C\n∫ sec x dx = ln|sec x + tan x| + C\n∫ cosec x dx = −ln|cosec x + cot x| + C\n         = ln|cosec x − cot x| + C\n\nExponential integrals:\n∫ eˣ dx = eˣ + C\n∫ eᵃˣ dx = eᵃˣ/a + C\n∫ aˣ dx = aˣ/(ln a) + C\n∫ e^(f(x)) · f'(x) dx = e^(f(x)) + C\n\nLogarithmic / rational integrals:\n∫ 1/x dx = ln|x| + C\n∫ f'(x)/f(x) dx = ln|f(x)| + C\n\nInverse trigonometric integrals (from Topic 18 derivatives):\n∫ 1/√(1−x²) dx = arcsin x + C\n∫ −1/√(1−x²) dx = arccos x + C\n∫ 1/(1+x²) dx = arctan x + C\n\nGeneralised forms:\n∫ 1/√(a²−x²) dx = arcsin(x/a) + C\n∫ 1/(a²+x²) dx = (1/a)arctan(x/a) + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Direct application of standard integrals",
+          "body": "a) ∫ tan(3x) dx\nLet u=3x, du=3dx:\n= (1/3)∫ tan u du = (1/3)ln|sec u| + C = (1/3)ln|sec(3x)| + C\n\nb) ∫ (2eˣ − 3/x + 4sec²x) dx\n= 2eˣ − 3ln|x| + 4tan x + C\n\nc) ∫ 1/√(9−x²) dx\n= ∫ 1/√(9(1−x²/9)) dx = ∫ 1/(3√(1−(x/3)²)) dx\n= arcsin(x/3) + C   [using ∫1/√(a²−x²)=arcsin(x/a)+C, a=3]\n\nd) ∫ 1/(4+x²) dx\n= ∫ 1/(4(1+x²/4)) dx = (1/4)∫ 1/(1+(x/2)²) dx\n= (1/4)·2 arctan(x/2) + C = (1/2)arctan(x/2) + C\n[using ∫1/(a²+x²)=(1/a)arctan(x/a)+C, a=2]"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Integration using the f'/f pattern",
+          "body": "Recall: ∫ f'(x)/f(x) dx = ln|f(x)| + C.\n\na) ∫ 2x/(x²+5) dx\nf(x)=x²+5, f'(x)=2x. Exactly f'/f form.\n= ln|x²+5| + C = ln(x²+5) + C  (since x²+5>0)\n\nb) ∫ cos x / (2+sin x) dx\nf(x)=2+sinx, f'(x)=cosx.\n= ln|2+sin x| + C\n\nc) ∫ (3x²−1)/(x³−x+4) dx\nf(x)=x³−x+4, f'(x)=3x²−1.\n= ln|x³−x+4| + C\n\nd) ∫ tan x dx = ∫ sin x/cos x dx\nf(x)=cosx, f'(x)=−sinx. Numerator is −f'.\n= −∫ (−sin x)/cos x dx = −ln|cos x|+C = ln|sec x|+C ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Electrical engineering: AC current through a resistor is I(t) = I₀sin(ωt). The total charge transferred over one half-cycle (0 to π/ω) is Q = ∫₀^(π/ω) I₀sin(ωt)dt = I₀[-cos(ωt)/ω]₀^(π/ω) = I₀(2/ω). Uganda Electricity Transmission Company engineers use such integrals to compute charge transfer, energy storage in capacitors, and the average power delivered to loads across the national grid."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find ∫ sec²(5x) dx.",
+            "options": [
+              "tan(5x)/5 + C",
+              "5tan(5x) + C",
+              "sec(5x)tan(5x) + C",
+              "tan(5x) + C"
+            ],
+            "answer": "tan(5x)/5 + C",
+            "explanation": "∫sec²(ax)dx = tan(ax)/a + C. Here a=5: tan(5x)/5 + C."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫ 5e^(2x) dx.",
+            "options": [
+              "5e^(2x)/2 + C",
+              "10e^(2x) + C",
+              "5e^(2x) + C",
+              "5e^(2x+1) + C"
+            ],
+            "answer": "5e^(2x)/2 + C",
+            "explanation": "∫e^(ax)dx=e^(ax)/a+C. ∫5e^(2x)dx=5·e^(2x)/2+C."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find ∫ 1/√(16−x²) dx.",
+            "options": [
+              "arcsin(x/4) + C",
+              "arcsin(x/16) + C",
+              "(1/4)arcsin(x/4) + C",
+              "arcsin(4x) + C"
+            ],
+            "answer": "arcsin(x/4) + C",
+            "explanation": "∫1/√(a²−x²)dx=arcsin(x/a)+C. Here a=4: arcsin(x/4)+C."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find ∫ 6x/(x²+1) dx.",
+            "options": [
+              "3ln(x²+1) + C",
+              "6arctan x + C",
+              "6ln(x²+1) + C",
+              "3ln|2x| + C"
+            ],
+            "answer": "3ln(x²+1) + C",
+            "explanation": "Numerator=6x, derivative of x²+1 is 2x. So 6x/(x²+1)=3·(2x/(x²+1))=3·f'/f. ∫=3ln(x²+1)+C."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫ cot(2x) dx.",
+            "options": [
+              "(1/2)ln|sin(2x)| + C",
+              "ln|sin(2x)| + C",
+              "−(1/2)ln|cos(2x)| + C",
+              "(1/2)ln|cos(2x)| + C"
+            ],
+            "answer": "(1/2)ln|sin(2x)| + C",
+            "explanation": "∫cot u du=ln|sin u|+C. With u=2x, du=2dx: (1/2)∫cot u du = (1/2)ln|sin(2x)|+C."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find ∫ 1/(9+4x²) dx.",
+            "options": [
+              "(1/6)arctan(2x/3) + C",
+              "(1/3)arctan(2x/3) + C",
+              "(2/3)arctan(2x/3) + C",
+              "(1/6)arctan(x/3) + C"
+            ],
+            "answer": "(1/6)arctan(2x/3) + C",
+            "explanation": "Write as 1/(9(1+(4x²/9)))=1/(9(1+(2x/3)²)). Let u=2x/3, du=2/3 dx. ∫=(1/9)·(3/2)arctan(2x/3)+C=(1/6)arctan(2x/3)+C."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find ∫ 3^x dx.",
+            "options": [
+              "3^x/ln3 + C",
+              "3^x · ln3 + C",
+              "x·3^(x−1) + C",
+              "3^(x+1)/(x+1) + C"
+            ],
+            "answer": "3^x/ln3 + C",
+            "explanation": "∫aˣdx = aˣ/(ln a)+C. For a=3: 3^x/(ln 3)+C."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "∫ cos x / sin x dx simplifies to:",
+            "options": [
+              "ln|sin x| + C",
+              "−ln|cos x| + C",
+              "ln|cos x| + C",
+              "sin x/cos x + C"
+            ],
+            "answer": "ln|sin x| + C",
+            "explanation": "cos x/sin x = cot x. ∫cot x dx = ln|sin x|+C. Also: f(x)=sin x, f'(x)=cos x — direct f'/f form."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t19_l2",
+      "title": "Integration by Parts",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Integration by parts is the integration counterpart of the product rule for differentiation. It transforms the integral of a product into a simpler integral, and is the key technique for integrals involving products of polynomials with exponentials, logarithms, or trigonometric functions. It is also essential for integrating ln x, arcsin x, and arctan x — functions that have no obvious anti-derivative from the standard table but yield to integration by parts with a clever choice of components."
+        },
+        {
+          "type": "formula",
+          "body": "Integration by parts formula:\n∫ u dv = uv − ∫ v du\n\nEquivalently (using the Leibniz notation):\n∫ f(x)g'(x) dx = f(x)g(x) − ∫ f'(x)g(x) dx\n\nChoosing u and dv — the LIATE rule:\nChoose u as whichever comes first in the list:\nL — Logarithmic functions (ln x, log x)\nI — Inverse trig functions (arcsin, arctan, ...)\nA — Algebraic functions (polynomials: xⁿ)\nT — Trigonometric functions (sin, cos, ...)\nE — Exponential functions (eˣ, aˣ)\n\nThe function lower in the list becomes dv.\nFor example: ∫ x eˣ dx → u=x (A), dv=eˣdx (E).\n\nRepeated integration by parts:\nSometimes needed multiple times (e.g. ∫ x² eˣ dx).\nTabular method (DI method) speeds up repeated applications."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Integration by parts — basic cases",
+          "body": "a) ∫ x eˣ dx\nu=x → du=dx;  dv=eˣdx → v=eˣ\n∫x eˣdx = xeˣ − ∫eˣdx = xeˣ − eˣ + C = eˣ(x−1) + C\n\nVerification: d/dx[eˣ(x−1)] = eˣ(x−1)+eˣ = xeˣ ✓\n\nb) ∫ x sin x dx\nu=x → du=dx;  dv=sin x dx → v=−cos x\n∫x sin x dx = −x cos x − ∫(−cos x)dx\n= −x cos x + sin x + C\n\nc) ∫ ln x dx\nu=ln x → du=1/x dx;  dv=dx → v=x\n∫ln x dx = x ln x − ∫x · (1/x) dx = x ln x − ∫1 dx\n= x ln x − x + C = x(ln x − 1) + C\n\nVerification: d/dx[x ln x − x] = ln x + 1 − 1 = ln x ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Repeated integration by parts and tabular method",
+          "body": "∫ x² eˣ dx  (requires integration by parts twice)\n\nTabular (DI) method — differentiate u column, integrate v column:\n    D (differentiate)  |  I (integrate)\n    x²                |  eˣ\n    2x                |  eˣ\n    2                 |  eˣ\n    0                 |  eˣ\n\nResult: (+)(x²)(eˣ) + (−)(2x)(eˣ) + (+)(2)(eˣ)\n= x²eˣ − 2xeˣ + 2eˣ + C = eˣ(x²−2x+2) + C\n\nVerification: d/dx[eˣ(x²−2x+2)]\n= eˣ(x²−2x+2) + eˣ(2x−2) = eˣ(x²) = x²eˣ ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Cyclic integration by parts",
+          "body": "∫ eˣ sin x dx — the integral reappears!\n\nu=eˣ, dv=sin x dx → v=−cos x:\nI = −eˣcos x + ∫eˣcos x dx\n\nApply parts again to ∫eˣcos x dx:\nu=eˣ, dv=cos x dx → v=sin x:\n∫eˣcos x dx = eˣsin x − ∫eˣsin x dx = eˣsin x − I\n\nSubstitute back:\nI = −eˣcos x + eˣsin x − I\n2I = eˣ(sin x − cos x)\nI = eˣ(sin x − cos x)/2 + C\n\nVerification: d/dx[eˣ(sin x−cos x)/2]\n= eˣ(sin x−cos x)/2 + eˣ(cos x+sin x)/2 = eˣ sin x ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Integrating inverse trig functions",
+          "body": "∫ arctan x dx\nu=arctan x → du=1/(1+x²)dx;  dv=dx → v=x\n\n∫arctan x dx = x arctan x − ∫ x/(1+x²) dx\n= x arctan x − (1/2)ln(1+x²) + C\n\n∫ arcsin x dx\nu=arcsin x → du=1/√(1−x²)dx;  dv=dx → v=x\n\n∫arcsin x dx = x arcsin x − ∫ x/√(1−x²) dx\n\nFor ∫ x/√(1−x²) dx: let w=1−x², dw=−2x dx:\n= −(1/2)∫w^(−1/2)dw = −√w = −√(1−x²)\n\n∴ ∫arcsin x dx = x arcsin x + √(1−x²) + C"
+        },
+        {
+          "type": "callout",
+          "body": "Signal processing: In electrical engineering, the Laplace transform of a function f(t) involves ∫₀^∞ f(t)e^(−st)dt — an integral of a product that is evaluated by integration by parts (repeatedly for polynomial × exponential combinations). Uganda's mobile network infrastructure transmits digital signals whose mathematical analysis relies on these transforms. Integration by parts is the computational engine behind signal processing, filter design, and communication systems."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find ∫ x cos x dx.",
+            "options": [
+              "x sin x + cos x + C",
+              "x sin x − cos x + C",
+              "sin x + x cos x + C",
+              "x cos x − sin x + C"
+            ],
+            "answer": "x sin x + cos x + C",
+            "explanation": "u=x, dv=cos x dx → v=sin x. ∫x cos x dx = x sin x − ∫sin x dx = x sin x + cos x + C."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find ∫ x² sin x dx using the tabular method.",
+            "options": [
+              "−x² cos x + 2x sin x + 2cos x + C",
+              "x² cos x − 2x sin x − 2cos x + C",
+              "−x² cos x + 2x sin x − 2cos x + C",
+              "x² sin x − 2x cos x − 2sin x + C"
+            ],
+            "answer": "−x² cos x + 2x sin x + 2cos x + C",
+            "explanation": "Tabular: D col: x²,2x,2,0; I col: sin x,−cos x,−sin x,cos x. Signs +,−,+,−: (+)(x²)(−cos x)+(−)(2x)(−sin x)+(+)(2)(cos x) = −x²cosx+2x sinx+2cosx+C."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find ∫ ln(x²) dx.",
+            "options": [
+              "2x ln x − 2x + C",
+              "x ln(x²) − 2x + C",
+              "2x(ln x − 1) + C",
+              "Both B and C"
+            ],
+            "answer": "Both B and C",
+            "explanation": "ln(x²)=2ln x. ∫2ln x dx = 2(x ln x − x)+C = 2x ln x − 2x +C = x(2ln x)−2x+C = x ln(x²)−2x+C. Both B and C are equivalent."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find ∫ eˣ cos x dx.",
+            "options": [
+              "eˣ(sin x + cos x)/2 + C",
+              "eˣ(sin x − cos x)/2 + C",
+              "eˣ(cos x + sin x) + C",
+              "eˣ sin x + C"
+            ],
+            "answer": "eˣ(sin x + cos x)/2 + C",
+            "explanation": "By cyclic parts (similar to Example 3 but starting with cos): Let I=∫eˣcosx dx. Parts: eˣsinx−∫eˣsinx dx. For ∫eˣsinx dx: −eˣcosx+∫eˣcosx dx=−eˣcosx+I. So I=eˣsinx+eˣcosx−I → 2I=eˣ(sinx+cosx) → I=eˣ(sinx+cosx)/2+C."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₁² x ln x dx.",
+            "options": [
+              "2ln2 − 3/4",
+              "ln2 − 3/4",
+              "2ln2 + 3/4",
+              "ln4 − 3/4"
+            ],
+            "answer": "2ln2 − 3/4",
+            "explanation": "Parts: u=ln x, dv=x dx → v=x²/2. [x²ln x/2−x²/4]₁². At 2: 2ln2−1. At 1: 0−1/4=−1/4. Answer=(2ln2−1)−(−1/4)=2ln2−3/4."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For ∫ x³ eˣ dx, how many times must parts be applied?",
+            "options": ["Once", "Twice", "Three times", "Four times"],
+            "answer": "Three times",
+            "explanation": "Each application reduces the power of x by 1. Starting with x³: first gives x³eˣ−3∫x²eˣdx, second gives −3(x²eˣ−2∫xeˣdx), third gives 6(xeˣ−∫eˣdx)=6(xeˣ−eˣ). Three applications needed."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find ∫ arctan x dx.",
+            "options": [
+              "x arctan x − (1/2)ln(1+x²) + C",
+              "x arctan x + (1/2)ln(1+x²) + C",
+              "x/(1+x²) + C",
+              "arctan x + x/(1+x²) + C"
+            ],
+            "answer": "x arctan x − (1/2)ln(1+x²) + C",
+            "explanation": "u=arctan x, dv=dx. ∫arctan x dx = x arctan x − ∫x/(1+x²)dx = x arctan x − (1/2)ln(1+x²)+C."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Using integration by parts, ∫ x e^(2x) dx equals:",
+            "options": [
+              "e^(2x)(x/2 − 1/4) + C",
+              "e^(2x)(x − 1)/2 + C",
+              "xe^(2x)/2 + C",
+              "e^(2x)(2x−1)/4 + C"
+            ],
+            "answer": "e^(2x)(x/2 − 1/4) + C",
+            "explanation": "u=x, dv=e^(2x)dx → v=e^(2x)/2. ∫=xe^(2x)/2−∫e^(2x)/2 dx=xe^(2x)/2−e^(2x)/4+C=e^(2x)(x/2−1/4)+C=e^(2x)(2x−1)/4+C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t19_l3",
+      "title": "Integration by Substitution — Advanced Techniques",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "S5 introduced basic substitution u=g(x). S6 extends this to trigonometric substitutions for integrals involving √(a²−x²), √(a²+x²), and √(x²−a²), and to more sophisticated algebraic substitutions including hyperbolic substitutions. Trig substitution is the key technique for integrals that arise in computing arc lengths, areas of ellipses, and gravitational and electromagnetic field calculations."
+        },
+        {
+          "type": "heading",
+          "body": "Trigonometric Substitution"
+        },
+        {
+          "type": "formula",
+          "body": "When the integrand contains:\n\n√(a²−x²): substitute x = a sin θ\n  → dx = a cos θ dθ, √(a²−x²) = a cos θ\n\n√(a²+x²): substitute x = a tan θ\n  → dx = a sec²θ dθ, √(a²+x²) = a sec θ\n\n√(x²−a²): substitute x = a sec θ\n  → dx = a sec θ tan θ dθ, √(x²−a²) = a tan θ\n\nAfter integrating in θ, convert back to x using:\n• If x = a sin θ: θ = arcsin(x/a), cos θ = √(a²−x²)/a\n• If x = a tan θ: θ = arctan(x/a), sec θ = √(a²+x²)/a\n• Draw a right triangle to convert all trig functions back to x."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Trigonometric substitution",
+          "body": "a) ∫ 1/√(4−x²) dx  (use x=2sinθ)\ndx=2cosθdθ, √(4−x²)=2cosθ\n∫ 1/(2cosθ)·2cosθdθ = ∫ dθ = θ + C = arcsin(x/2)+C ✓\n\nb) ∫ √(1−x²) dx  (use x=sinθ)\ndx=cosθdθ, √(1−x²)=cosθ\n∫ cos²θ dθ = ∫(1+cos2θ)/2 dθ = θ/2+sin2θ/4+C\n\nBack-substituting: θ=arcsinx, sin2θ=2sinθcosθ=2x√(1−x²)\n= arcsinx/2 + x√(1−x²)/2 + C\n(This is the formula for the area of a circular segment)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: The integral ∫ 1/(a²+x²) dx verified by trig sub",
+          "body": "∫ 1/(a²+x²) dx  (use x=a tanθ)\ndx=a sec²θ dθ, a²+x²=a²+a²tan²θ=a²sec²θ\n\n∫ 1/(a²sec²θ) · a sec²θ dθ = ∫ 1/a dθ = θ/a + C\n= (1/a)arctan(x/a) + C ✓\n\nThis confirms the standard result from Lesson 1."
+        },
+        {
+          "type": "heading",
+          "body": "Completing the Square Before Integration"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Completing the square to match standard forms",
+          "body": "a) ∫ 1/(x²+4x+5) dx\nComplete the square: x²+4x+5=(x+2)²+1\n∫ 1/((x+2)²+1) dx = arctan(x+2) + C\n\nb) ∫ 1/√(3+2x−x²) dx\nComplete: 3+2x−x²=−(x²−2x−3)=−((x−1)²−4)=4−(x−1)²\n∫ 1/√(4−(x−1)²) dx = arcsin((x−1)/2) + C\n\nc) ∫ (2x+3)/(x²+4x+5) dx\nWrite 2x+3=2x+4−1=(2x+4)−1.\n= ∫(2x+4)/(x²+4x+5)dx − ∫1/(x²+4x+5)dx\n= ln(x²+4x+5) − arctan(x+2) + C\n(First integral is f'/f form; second is standard arctan)"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Advanced substitution",
+          "body": "∫ √(x²+1) dx  (use x=tanθ, so √(x²+1)=secθ)\ndx=sec²θ dθ\n\n∫ secθ · sec²θ dθ = ∫ sec³θ dθ\n\nUsing the reduction formula ∫sec³θ dθ = (1/2)[secθ tanθ + ln|secθ+tanθ|]+C:\n\nBack-substituting (tanθ=x, secθ=√(x²+1)):\n= (1/2)[x√(x²+1) + ln|x+√(x²+1)|] + C\n\nThis result appears in computing arc lengths."
+        },
+        {
+          "type": "callout",
+          "body": "Arc length in engineering: The length of a curve y=f(x) from x=a to x=b is L=∫ₐᵇ√(1+(dy/dx)²)dx. For a parabolic arch like those used in the design of Ugandan road bridges, dy/dx is linear, making the integrand of the form √(1+c²x²) — exactly the type handled by trigonometric substitution. Structural engineers use arc length integrals to compute the exact length of curved structural members, cable suspensions, and arch bridges."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find ∫ x²/√(1−x²) dx using x=sinθ.",
+            "options": [
+              "arcsin x/2 − x√(1−x²)/2 + C",
+              "arcsin x − x√(1−x²) + C",
+              "x²arcsin x + C",
+              "−x√(1−x²) + C"
+            ],
+            "answer": "arcsin x/2 − x√(1−x²)/2 + C",
+            "explanation": "x=sinθ: x²/√(1−x²)=sin²θ/cosθ, dx=cosθdθ. ∫sin²θ dθ=∫(1−cos2θ)/2 dθ=θ/2−sin2θ/4+C. Back-sub: θ/2=arcsin(x)/2, sin2θ/4=sinθcosθ/2=x√(1−x²)/2. Answer: arcsin(x)/2 − x√(1−x²)/2+C."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "∫ 1/(x²+2x+2) dx by completing the square gives:",
+            "options": [
+              "arctan(x+1) + C",
+              "arctan(x) + C",
+              "(1/2)arctan(x+1) + C",
+              "ln(x²+2x+2) + C"
+            ],
+            "answer": "arctan(x+1) + C",
+            "explanation": "x²+2x+2=(x+1)²+1. ∫1/((x+1)²+1)dx = arctan(x+1)+C."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For ∫√(a²−x²)dx, the appropriate substitution is:",
+            "options": ["x=a tanθ", "x=a sinθ", "x=a secθ", "x=a cosecθ"],
+            "answer": "x=a sinθ",
+            "explanation": "When the integrand contains √(a²−x²), use x=a sinθ, giving √(a²−x²)=a cosθ, which eliminates the square root."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find ∫ 1/(x²−6x+13) dx.",
+            "options": [
+              "(1/2)arctan((x−3)/2) + C",
+              "arctan(x−3) + C",
+              "(1/2)arctan(x/2−3) + C",
+              "ln(x²−6x+13) + C"
+            ],
+            "answer": "(1/2)arctan((x−3)/2) + C",
+            "explanation": "x²−6x+13=(x−3)²+4=(x−3)²+2². ∫1/((x−3)²+4)dx=(1/2)arctan((x−3)/2)+C using ∫1/(u²+a²)du=(1/a)arctan(u/a)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₀¹ 1/√(4−x²) dx.",
+            "options": ["π/6", "π/4", "π/3", "π/2"],
+            "answer": "π/6",
+            "explanation": "[arcsin(x/2)]₀¹ = arcsin(1/2)−arcsin(0) = π/6−0 = π/6."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫(3x−1)/(x²−2x+5)dx. Write as A·(2x−2)/(x²−2x+5) + B/(x²−2x+5) to split. Find A.",
+            "options": ["A=3/2", "A=3", "A=1", "A=−1/2"],
+            "answer": "A=3/2",
+            "explanation": "3x−1=A(2x−2)+B. Match x coefficient: 3=2A → A=3/2. Match constant: −1=−2A+B=−3+B → B=2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What does x=3 secθ substitute into ∫1/√(x²−9)dx?",
+            "options": [
+              "∫(1/(3tanθ))·3secθtanθdθ = ∫secθdθ = ln|secθ+tanθ|+C",
+              "∫(1/(3cosθ))·3secθdθ",
+              "∫sinθdθ",
+              "∫dθ = θ+C"
+            ],
+            "answer": "∫(1/(3tanθ))·3secθtanθdθ = ∫secθdθ = ln|secθ+tanθ|+C",
+            "explanation": "x=3secθ: √(x²−9)=3tanθ, dx=3secθtanθdθ. ∫1/(3tanθ)·3secθtanθdθ=∫secθdθ=ln|secθ+tanθ|+C=ln|x/3+√(x²−9)/3|+C."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Find ∫(2x+5)/(x²+4x+8)dx splitting into f'/f and arctan parts.",
+            "options": [
+              "ln(x²+4x+8) + (1/2)arctan((x+2)/2) + C",
+              "ln(x²+4x+8) + arctan(x+2) + C",
+              "2ln(x²+4x+8) + arctan((x+2)/2) + C",
+              "ln(x²+4x+8) + (3/2)arctan((x+2)/2) + C"
+            ],
+            "answer": "ln(x²+4x+8) + (1/2)arctan((x+2)/2) + C",
+            "explanation": "2x+5=(2x+4)+1. ∫(2x+4)/(x²+4x+8)dx=ln(x²+4x+8). x²+4x+8=(x+2)²+4. ∫1/((x+2)²+4)dx=(1/2)arctan((x+2)/2). Total: ln(x²+4x+8)+(1/2)arctan((x+2)/2)+C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t19_l4",
+      "title": "Integration of Partial Fractions — Repeated and Irreducible Factors",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Partial fractions (S5 Topic 4) decompose rational functions into simpler fractions. Integration then becomes straightforward using the standard results from Lesson 1. S6 extends partial fractions to all four types and applies them to definite integrals, areas, and volume problems. The combination of partial fractions with integration is a powerful tool for solving differential equations (Topic 26) and for computing exact areas under rational curves."
+        },
+        {
+          "type": "heading",
+          "body": "Integrating Partial Fractions — All Four Types"
+        },
+        {
+          "type": "formula",
+          "body": "After decomposing into partial fractions, integrate each term:\n\nType 1 — Distinct linear factors: A/(x−a) + B/(x−b)\n∫A/(x−a)dx = A ln|x−a| + C\n\nType 2 — Repeated linear factor: A/(x−a) + B/(x−a)²\n∫B/(x−a)²dx = −B/(x−a) + C\n\nType 3 — Irreducible quadratic: (Ax+B)/(x²+px+q)\nComplete the square, then split into:\n  C·(2x+p)/(x²+px+q) + D/((x+p/2)²+(q−p²/4))\n  → C·ln(x²+px+q) + D·arctan(...) + C\n\nType 4 — Improper fraction: must divide first before decomposing."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Integration with Type 1 and 2 partial fractions",
+          "body": "a) ∫ (3x+1)/((x−1)(x+2)) dx\n\nPartial fractions: (3x+1)/((x−1)(x+2)) = A/(x−1) + B/(x+2)\nAt x=1: 4=3A → A=4/3\nAt x=−2: −5=−3B → B=5/3\n\n∫ = (4/3)ln|x−1| + (5/3)ln|x+2| + C\n\nb) ∫ 1/(x²(x+1)) dx\n1/(x²(x+1)) = A/x + B/x² + C/(x+1)\nAt x=0: 1=B·1 → B=1. Multiply through, compare: A=−1, C=1.\n\n∫ = −ln|x| − 1/x + ln|x+1| + C = ln|x+1/x| − 1/x + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Integration with irreducible quadratic factor",
+          "body": "∫ (x+3)/((x+1)(x²+4)) dx\n\nDecompose: (x+3)/((x+1)(x²+4)) = A/(x+1) + (Bx+C)/(x²+4)\nAt x=−1: 2=5A → A=2/5\nCompare x²: 0=A+B → B=−2/5\nCompare constant: 3=4A+C → C=3−8/5=7/5\n\n∫ = (2/5)ln|x+1| + ∫(−2x/5+7/5)/(x²+4) dx\n\nSplit: = (2/5)ln|x+1| − (1/5)∫2x/(x²+4)dx + (7/5)∫1/(x²+4)dx\n= (2/5)ln|x+1| − (1/5)ln(x²+4) + (7/5)·(1/2)arctan(x/2) + C\n= (2/5)ln|x+1| − (1/5)ln(x²+4) + (7/10)arctan(x/2) + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Definite integral via partial fractions",
+          "body": "Evaluate ∫₁² (5x−4)/((x−2)(x+1)) dx\n\nNote: discontinuity at x=2 is at the upper limit! Re-examine — wait, x=2 is a vertical asymptote. The integrand is improper at x=2. This integral diverges.\n\nNow try: ∫₀¹ (5x−4)/((x−3)(x+2)) dx\n\nDecompose: A/(x−3)+B/(x+2).\nAt x=3: 11=5A → A=11/5. At x=−2: −14=−5B → B=14/5.\n\n∫₀¹ = [(11/5)ln|x−3|+(14/5)ln|x+2|]₀¹\n= [(11/5)ln2+(14/5)ln3] − [(11/5)ln3+(14/5)ln2]\n= (11/5−14/5)ln2 + (14/5−11/5)ln3\n= −(3/5)ln2 + (3/5)ln3\n= (3/5)ln(3/2)"
+        },
+        {
+          "type": "callout",
+          "body": "Chemical reaction rates: In chemistry, the rate of a second-order reaction follows d[A]/dt = −k[A]², which after separation of variables gives ∫d[A]/[A]² = −k∫dt. This integrates to −1/[A] = −kt + C. More complex reactions yield partial fraction integrals. At Makerere University's Chemistry Department and at Uganda's pharmaceutical manufacturing companies, these integrals determine reaction completion times, drug shelf lives, and optimal processing conditions."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "∫ 3/((x−1)(x+2)) dx. After partial fractions A/(x−1)+B/(x+2), find A and B.",
+            "options": ["A=1, B=−1", "A=1, B=1", "A=−1, B=1", "A=3, B=3"],
+            "answer": "A=1, B=−1",
+            "explanation": "3=A(x+2)+B(x−1). At x=1: 3=3A→A=1. At x=−2: 3=−3B→B=−1."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find ∫ 1/(x(x+1)) dx.",
+            "options": [
+              "ln|x/(x+1)| + C",
+              "ln|x+1/x| + C",
+              "ln|x| − ln|x+1| + C",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "1/(x(x+1))=1/x−1/(x+1). ∫=ln|x|−ln|x+1|+C=ln|x/(x+1)|+C. Both A and C are equivalent."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "∫ 1/(x−2)² dx = ",
+            "options": [
+              "−1/(x−2) + C",
+              "2/(x−2)³ + C",
+              "ln|x−2|² + C",
+              "1/(x−2) + C"
+            ],
+            "answer": "−1/(x−2) + C",
+            "explanation": "∫(x−2)⁻²dx = (x−2)⁻¹/(−1)+C = −1/(x−2)+C."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₀¹ 1/((x+1)(x+2)) dx.",
+            "options": ["ln(4/3)", "ln(2)", "ln(3/4)", "ln(4/3)"],
+            "answer": "ln(4/3)",
+            "explanation": "1/((x+1)(x+2))=1/(x+1)−1/(x+2). [ln|x+1|−ln|x+2|]₀¹=(ln2−ln3)−(0−ln2)=2ln2−ln3=ln(4/3)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "For ∫(2x+1)/(x²+x+1)dx, recognise that d/dx(x²+x+1)=2x+1. This gives:",
+            "options": [
+              "ln(x²+x+1) + C",
+              "arctan(x+1/2) + C",
+              "(2x+1)²/2 + C",
+              "2ln(x²+x+1) + C"
+            ],
+            "answer": "ln(x²+x+1) + C",
+            "explanation": "The numerator 2x+1 is exactly the derivative of the denominator x²+x+1. ∫f'/f dx = ln|f|+C = ln(x²+x+1)+C (denominator>0 always)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫ x/(x²+1) dx + ∫ 1/(x²+1) dx = ",
+            "options": [
+              "(1/2)ln(x²+1) + arctan x + C",
+              "ln(x²+1) + arctan x + C",
+              "(1/2)ln(x²+1) + (1/2)arctan x + C",
+              "arctan x + C"
+            ],
+            "answer": "(1/2)ln(x²+1) + arctan x + C",
+            "explanation": "∫x/(x²+1)dx=(1/2)ln(x²+1)+C. ∫1/(x²+1)dx=arctan x+C. Sum=(1/2)ln(x²+1)+arctan x+C."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Decompose (x²+2x+3)/((x+1)(x²+2x+2)) = A/(x+1)+(Bx+C)/(x²+2x+2). Find A.",
+            "options": ["A=2", "A=1", "A=−1", "A=3"],
+            "answer": "A=2",
+            "explanation": "At x=−1: 1−2+3=A(1+1−2+2) → 2=A(2). A=1. Hmm: x=−1: (1−2+3)=A((−1)²+2(−1)+2)=A(1−2+2)=A(1). So 2=A. A=2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Before integrating (x³+1)/(x²−1), the first step is:",
+            "options": [
+              "Factorise the numerator",
+              "Perform polynomial long division since deg(num)>deg(denom)",
+              "Complete the square in denominator",
+              "Use integration by parts"
+            ],
+            "answer": "Perform polynomial long division since deg(num)>deg(denom)",
+            "explanation": "The degree of the numerator (3) exceeds the degree of the denominator (2). This is an improper fraction — must divide first to get a polynomial plus a proper fraction before partial fraction decomposition."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t19_l5",
+      "title": "Further Areas, Volumes, and the Mean Value Theorem",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "With the full integration toolkit now in place — substitution, parts, partial fractions, and inverse trig integrals — we can tackle the complete range of area and volume problems that appear in UACE examinations. This lesson extends S5 area and volume work to curves defined parametrically and implicitly, volume of revolution about lines other than the axes, and the formal statement and applications of the Mean Value Theorem for integration."
+        },
+        {
+          "type": "heading",
+          "body": "Areas and Volumes with Advanced Integration"
+        },
+        {
+          "type": "formula",
+          "body": "Area between curve and x-axis:\nA = ∫ₐᵇ |f(x)| dx  (absolute value for areas below x-axis)\n\nArea with parametric equations x=f(t), y=g(t):\nA = ∫ y dx = ∫ g(t)·f'(t) dt  (change limits accordingly)\n\nVolume of revolution about x-axis (disk method):\nV = π∫ₐᵇ y² dx\n\nVolume of revolution about y-axis (shell method):\nV = 2π∫ₐᵇ x·y dx\n\nVolume about a horizontal line y=k:\nV = π∫ₐᵇ (y−k)² dx\n\nVolume between two curves (washer method):\nV = π∫ₐᵇ [f(x)² − g(x)²] dx  (outer² − inner²)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Area under a curve involving ln and e",
+          "body": "Find the area enclosed by y=ln x, the x-axis, and x=e.\n\nA = ∫₁ᵉ ln x dx  (note y=0 at x=1)\n= [x ln x − x]₁ᵉ   (from integration by parts in L2)\n= (e·1 − e) − (1·0 − 1)\n= 0 − (−1)\n= 1 square unit\n\nNote: the area from x=0 to x=1 would be below the x-axis (ln x<0 there).\nIf we wanted the total area from x=1/e to x=e:\n∫_{1/e}^{1} |ln x|dx + ∫₁ᵉ ln x dx\n= [x−x ln x]_{1/e}^{1} + 1\n= [(1−0)−(1/e−(1/e)(−1))] + 1\n= [1 − 2/e] + 1 = 2 − 2/e"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Volume of revolution involving exponential",
+          "body": "Find the volume generated when y=eˣ is rotated about the x-axis from x=0 to x=1.\n\nV = π∫₀¹ (eˣ)² dx = π∫₀¹ e^(2x) dx\n= π[e^(2x)/2]₀¹\n= π(e²/2 − 1/2)\n= π(e²−1)/2 ≈ π(7.389−1)/2 ≈ 10.036 cubic units"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Area with partial fractions",
+          "body": "Find the area under y=1/((x+1)(x+3)) between x=0 and x=2.\n\n1/((x+1)(x+3)) = A/(x+1)+B/(x+3)\nAt x=−1: 1=2A→A=1/2. At x=−3: 1=−2B→B=−1/2.\n\nA = ∫₀² [1/(2(x+1)) − 1/(2(x+3))] dx\n= (1/2)[ln|x+1| − ln|x+3|]₀²\n= (1/2)[ln(3) − ln(5)] − (1/2)[ln(1) − ln(3)]\n= (1/2)[ln(3/5)] − (1/2)[−ln3]\n= (1/2)ln(3/5) + (1/2)ln3\n= (1/2)ln(9/5) = (1/2)ln(1.8)"
+        },
+        {
+          "type": "heading",
+          "body": "The Mean Value Theorem for Integration"
+        },
+        {
+          "type": "formula",
+          "body": "Mean Value Theorem for Integration:\nIf f is continuous on [a,b], there exists c ∈ (a,b) such that:\n\nf(c) = (1/(b−a)) ∫ₐᵇ f(x) dx\n\nThis says: there exists a point c where the function takes its average (mean) value.\n\nGeometrically: the rectangle with height f(c) and base (b−a)\nhas the same area as the region under the curve from a to b.\n\nApplication: mean value of f(x) over [a,b] is (1/(b−a))∫ₐᵇ f(x) dx."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Mean value of a function",
+          "body": "Find the mean value of f(x) = eˣ over [0, 2].\n\nMean = (1/(2−0))∫₀² eˣ dx = (1/2)[eˣ]₀²\n= (1/2)(e² − 1) ≈ (1/2)(7.389−1) ≈ 3.19\n\nFind c: f(c)=3.19 → eᶜ=3.19 → c=ln(3.19)≈1.16\n\nVerification: c=1.16 ∈ (0,2) ✓\nNote that c is closer to x=2 than to x=0 — makes sense since\nexponential growth makes the function larger near x=2."
+        },
+        {
+          "type": "callout",
+          "body": "Average temperature application: The temperature in Kampala follows an approximately sinusoidal pattern T(t)=25+5sin(πt/12) °C over a 24-hour cycle (t in hours from midnight). The mean daily temperature is (1/24)∫₀²⁴T(t)dt=(1/24)[25t−(60/π)cos(πt/12)]₀²⁴=(1/24)(600)=25°C. The cosine terms cancel over a complete period. The Uganda Meteorological Authority uses such integrals to compute seasonal temperature averages for agricultural planning and climate monitoring."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the area enclosed by y=1/x, the x-axis, x=1, x=e².",
+            "options": ["2", "e²−1", "1", "e"],
+            "answer": "2",
+            "explanation": "A=∫₁^(e²)(1/x)dx=[ln x]₁^(e²)=ln(e²)−ln1=2−0=2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the volume when y=√x (0≤x≤4) is rotated about the x-axis.",
+            "options": ["8π", "16π", "4π", "32π"],
+            "answer": "8π",
+            "explanation": "V=π∫₀⁴(√x)²dx=π∫₀⁴x dx=π[x²/2]₀⁴=π(8)=8π."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The area between y=e^x and y=eˣ−1 from x=0 to x=1 is:",
+            "options": ["0", "1", "e−2", "e−1"],
+            "answer": "1",
+            "explanation": "The difference y₁−y₂=(eˣ)−(eˣ−1)=1. Area=∫₀¹1 dx=1."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the mean value of sin x over [0, π].",
+            "options": ["0", "2/π", "1/π", "1"],
+            "answer": "2/π",
+            "explanation": "Mean=(1/π)∫₀^π sin x dx=(1/π)[−cos x]₀^π=(1/π)(1+1)=2/π."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Volume of revolution of y=1/x about the x-axis from x=1 to x=3.",
+            "options": ["2π/3", "π(1−1/9)=8π/9", "2π", "π/3"],
+            "answer": "2π/3",
+            "explanation": "V=π∫₁³(1/x)²dx=π∫₁³x⁻²dx=π[−1/x]₁³=π(−1/3+1)=2π/3."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Area between y²=x and y=x² (the parabola curves) is:",
+            "options": ["1/3", "1/2", "1/6", "2/3"],
+            "answer": "1/3",
+            "explanation": "Intersections: y=x² and x=y² → x=(x²)² → x=x⁴ → x=0,1. Upper curve: y=√x. A=∫₀¹(√x−x²)dx=[2x^(3/2)/3−x³/3]₀¹=2/3−1/3=1/3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Volume when y=e^x is rotated about x-axis from x=0 to x=ln2.",
+            "options": ["3π/2", "π(e^(2ln2)−1)/2 = 3π/2", "π(4−1)/2=3π/2", "All of the above"],
+            "answer": "All of the above",
+            "explanation": "V=π∫₀^(ln2)e^(2x)dx=π[e^(2x)/2]₀^(ln2)=π(e^(2ln2)/2−1/2)=π(4/2−1/2)=3π/2. All three options express the same answer."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The mean value theorem for integrals guarantees that for a continuous f on [a,b], there exists c in (a,b) such that f(c) equals:",
+            "options": [
+              "(f(a)+f(b))/2",
+              "(1/(b−a))∫ₐᵇf(x)dx",
+              "f((a+b)/2)",
+              "The maximum of f"
+            ],
+            "answer": "(1/(b−a))∫ₐᵇf(x)dx",
+            "explanation": "The Mean Value Theorem for Integration states f(c)=(1/(b−a))∫ₐᵇf(x)dx — f achieves its average (mean) value at some point c in (a,b)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t19_l6",
+      "title": "Applications — Forces and Moments, Population Dynamics, and Statistical Integrals",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "This consolidating lesson applies the complete integration toolkit to real-world problems drawn from mechanics (forces and moments), biology (population dynamics), economics (consumer surplus, present value), and statistics (normal distribution integrals). These applications appear directly in UACE past papers and represent the highest-level integration skills expected at A-Level."
+        },
+        {
+          "type": "heading",
+          "body": "Forces, Moments, and Work Done"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Work done by a variable force",
+          "body": "A spring obeys Hooke's law: F = kx where k=500 N/m (stiffness).\nFind the work done stretching the spring from x=0 to x=0.2 m.\n\nW = ∫₀^0.2 F dx = ∫₀^0.2 500x dx = 500[x²/2]₀^0.2 = 500(0.02) = 10 J\n\nMore complex: A force F = 3eˣ N acts along a line.\nWork done from x=0 to x=2:\nW = ∫₀² 3eˣ dx = 3[eˣ]₀² = 3(e²−1) ≈ 3(7.389−1) ≈ 19.17 J"
+        },
+        {
+          "type": "heading",
+          "body": "Population Dynamics"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Population growth integral",
+          "body": "Uganda's population growth rate is modelled as dP/dt = 0.03P.\nThis separates to dP/P = 0.03 dt.\n∫dP/P = ∫0.03 dt → ln P = 0.03t + C → P = P₀e^(0.03t)\n\nLogistic model (more realistic): dP/dt = rP(1−P/K)\nwhere K is the carrying capacity.\n\nSeparating: ∫dP/(P(1−P/K)) = ∫r dt\n\nUsing partial fractions: 1/(P(1−P/K)) = 1/P + (1/K)/(1−P/K)\nHmm: 1/(P(K−P)/K)=K/(P(K−P))=1/P+1/(K−P) by partial fractions.\n\n∫[1/P + 1/(K−P)]dP = ∫r dt\nln|P| − ln|K−P| = rt + C\nln|P/(K−P)| = rt + C\nP/(K−P) = Ae^(rt) → P = KAe^(rt)/(1+Ae^(rt))\n\nAt t=0, P=P₀: A=P₀/(K−P₀)\nFinal logistic equation: P(t)=K·P₀/(P₀+(K−P₀)e^(−rt))"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Consumer surplus via integration",
+          "body": "The demand curve for maize flour in Uganda is p = 100 − 0.5x² (price in UGX per kg, x in thousands of tonnes). The market equilibrium is at p=50.\n\nAt p=50: 100−0.5x²=50 → x²=100 → x=10 (thousand tonnes).\n\nConsumer surplus = ∫₀¹⁰ [f(x) − 50] dx where f(x)=100−0.5x²\n= ∫₀¹⁰ (50 − 0.5x²) dx\n= [50x − x³/6]₀¹⁰\n= 500 − 1000/6\n= 500 − 166.67\n≈ 333.33 thousand UGX · thousand tonnes\n\nConsumer surplus represents the economic benefit consumers receive from buying at the equilibrium price below what they were willing to pay."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Normal distribution integral",
+          "body": "The normal distribution PDF is f(x) = (1/√(2π))e^(−x²/2).\n\nThis integral cannot be evaluated in closed form by elementary methods.\nHowever, using Maclaurin series:\ne^(−x²/2) = 1 − x²/2 + x⁴/8 − x⁶/48 + ...\n\nSo ∫₀¹ (1/√(2π)) e^(−x²/2) dx\n≈ (1/√(2π)) ∫₀¹ (1 − x²/2 + x⁴/8 − ...) dx\n= (1/√(2π)) [x − x³/6 + x⁵/40 − ...]₀¹\n= (1/√(2π)) (1 − 1/6 + 1/40 − ...)\n≈ (1/√(2π)) × 0.8556...\n≈ 0.3413\n\nThis means P(0<Z<1) ≈ 0.3413, consistent with the z-table value.\nAll z-table probabilities are computed this way — the Maclaurin\nseries of e^(−x²/2) makes the normal distribution tractable numerically."
+        },
+        {
+          "type": "callout",
+          "body": "Economics integration — present value: The present value of a continuous income stream I(t) over T years at discount rate r is PV = ∫₀ᵀ I(t)e^(−rt)dt. For a Ugandan business earning I(t) = 50,000,000 × e^(0.05t) UGX per year (growing at 5%) at discount rate r=10%, PV = 50,000,000∫₀^5 e^(−0.05t)dt = 50,000,000[−e^(−0.05t)/0.05]₀^5 = 50,000,000×(1−e^(−0.25))/0.05 ≈ UGX 220 million. Every business valuation, infrastructure investment decision, and loan assessment by Uganda Development Bank involves exactly this type of discounted cash flow integral."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Work done by F=2x+3 (Newtons) from x=0 to x=4 m is:",
+            "options": ["28 J", "16 J", "28 J", "20 J"],
+            "answer": "28 J",
+            "explanation": "W=∫₀⁴(2x+3)dx=[x²+3x]₀⁴=16+12=28 J."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The separable ODE dP/dt=kP integrates to give P(t)=",
+            "options": ["kt+C", "P₀e^(kt)", "P₀+kt", "e^(kt)+C"],
+            "answer": "P₀e^(kt)",
+            "explanation": "dP/P=kdt. ∫dP/P=∫kdt. ln P=kt+C. P=e^(kt+C)=Ae^(kt). At t=0: P=A=P₀. So P(t)=P₀e^(kt)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Consumer surplus when demand p=12−x and equilibrium p=4 is:",
+            "options": ["32", "16", "64", "8"],
+            "answer": "32",
+            "explanation": "p=4: 12−x=4→x=8. CS=∫₀⁸(12−x−4)dx=∫₀⁸(8−x)dx=[8x−x²/2]₀⁸=64−32=32."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₀^∞ e^(−2x) dx.",
+            "options": ["1/2", "2", "∞", "1"],
+            "answer": "1/2",
+            "explanation": "∫₀^∞ e^(−2x)dx=lim[b→∞][−e^(−2x)/2]₀^b=lim(−e^(−2b)/2+1/2)=0+1/2=1/2."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The logistic model dP/dt=rP(1−P/K) has limiting population as t→∞ of:",
+            "options": ["0", "P₀", "K (carrying capacity)", "∞"],
+            "answer": "K (carrying capacity)",
+            "explanation": "As t→∞, e^(−rt)→0, so P(t)=KP₀/(P₀+(K−P₀)×0)=KP₀/P₀=K. The population approaches the carrying capacity K."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "∫ x/(1+x²) dx is used to evaluate an area. It equals:",
+            "options": [
+              "(1/2)ln(1+x²) + C",
+              "arctan x + C",
+              "ln|x| + C",
+              "x arctan x + C"
+            ],
+            "answer": "(1/2)ln(1+x²) + C",
+            "explanation": "f(x)=1+x², f'(x)=2x. x/(1+x²)=(1/2)(2x/(1+x²))=(1/2)f'/f. ∫=(1/2)ln(1+x²)+C."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The present value integral ∫₀^∞ I₀e^(−rt)dt (for r>0) evaluates to:",
+            "options": ["I₀/r", "I₀r", "I₀e^r", "∞"],
+            "answer": "I₀/r",
+            "explanation": "∫₀^∞I₀e^(−rt)dt=I₀[−e^(−rt)/r]₀^∞=I₀(0−(−1/r))=I₀/r. This is the present value of a perpetual income stream."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which technique is MOST efficient for ∫ x²/(x³+1) dx?",
+            "options": [
+              "Integration by parts",
+              "Substitution u=x³+1",
+              "Partial fractions",
+              "Trigonometric substitution"
+            ],
+            "answer": "Substitution u=x³+1",
+            "explanation": "u=x³+1, du=3x²dx → x²dx=du/3. ∫x²/(x³+1)dx=∫(du/3)/u=(1/3)ln|u|+C=(1/3)ln|x³+1|+C. Substitution is simplest — recognise f'/f pattern."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Full standard integrals: ∫tan x=-ln|cosx|+C; ∫sec x=ln|secx+tanx|+C; ∫1/√(a²−x²)=arcsin(x/a)+C; ∫1/(a²+x²)=(1/a)arctan(x/a)+C; ∫aˣ=aˣ/lna+C.",
+      "f'/f pattern: ∫f'(x)/f(x)dx=ln|f(x)|+C. Recognise this in integrals like ∫2x/(x²+1), ∫tanx, ∫cotx.",
+      "Integration by parts: ∫udv=uv−∫vdu. LIATE order for choosing u. Tabular method for repeated applications. Cyclic form for eˣsinx type.",
+      "Trigonometric substitution: √(a²−x²)→x=asinθ; √(a²+x²)→x=atanθ; √(x²−a²)→x=asecθ.",
+      "Complete the square to match arctan/arcsin standard forms: ∫1/((x+p)²+q²)=(1/q)arctan((x+p)/q)+C.",
+      "Partial fractions for integration: Type 1→ln terms; Type 2→−1/(x−a) terms; Type 3→ln+arctan; Type 4→divide first.",
+      "Areas: actual area uses |f(x)|. Between curves: ∫(upper−lower). Volume about x-axis: π∫y²dx. Shell method about y-axis: 2π∫xy dx.",
+      "Mean value: f̄=(1/(b−a))∫ₐᵇf(x)dx. Applications: differential equations (population, growth), consumer surplus, work done, present value."
+    ],
+    "common_errors": [
+      "∫1/(1+x²)dx = arctan x, NOT ∫1/(1−x²) — that requires partial fractions or arctanh.",
+      "Integration by parts: wrong choice of u — follow LIATE; taking eˣ as u and a polynomial as dv leads to a harder integral.",
+      "Forgetting the +C in indefinite integrals — especially after integration by parts where the working is long.",
+      "Trig substitution: forgetting to substitute dx and change back to x at the end.",
+      "Partial fractions with improper fraction: must divide first when degree(numerator)≥degree(denominator).",
+      "Volume formula: V=π∫y²dx uses y² not y — squaring is mandatory.",
+      "Completing the square error: x²+4x+5=(x+2)²+1, NOT (x+2)²+4."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 19 End-of-Topic Assessment — Integration 2",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Find ∫ sec(2x)tan(2x) dx.",
+        "options": [
+          "sec(2x)/2 + C",
+          "2sec(2x) + C",
+          "sec(2x)tan²(2x) + C",
+          "tan(2x)/2 + C"
+        ],
+        "answer": "sec(2x)/2 + C",
+        "explanation": "∫sec(ax)tan(ax)dx=sec(ax)/a+C. Here a=2: sec(2x)/2+C."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Find ∫ x² ln x dx using integration by parts.",
+        "options": [
+          "x³ln x/3 − x³/9 + C",
+          "x³(3ln x−1)/9 + C",
+          "x³ln x/3 + x³/9 + C",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "u=lnx, dv=x²dx → v=x³/3. ∫=x³lnx/3−∫x³/(3x)dx=x³lnx/3−(1/3)∫x²dx=x³lnx/3−x³/9+C=x³(3lnx−1)/9+C."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Evaluate ∫₀¹ 1/(x²+4x+8) dx.",
+        "options": [
+          "(1/2)[arctan(3/2)−arctan(1)]",
+          "arctan(5/2)−arctan(2)",
+          "(1/2)arctan(5/2)−(1/2)arctan(1)",
+          "(1/2)[arctan(5/2)−arctan(1)]"
+        ],
+        "answer": "(1/2)[arctan(5/2)−arctan(1)]",
+        "explanation": "x²+4x+8=(x+2)²+4. ∫1/((x+2)²+4)dx=(1/2)arctan((x+2)/2)+C. [(1/2)arctan((x+2)/2)]₀¹=(1/2)arctan(3/2)−(1/2)arctan(1)=(1/2)[arctan(3/2)−π/4]."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Find ∫ eˣ sin(2x) dx (cyclic by parts).",
+        "options": [
+          "eˣ(sin2x − 2cos2x)/5 + C",
+          "eˣ(2sin2x − cos2x)/5 + C",
+          "eˣ(sin2x + 2cos2x)/5 + C",
+          "eˣ(sin2x−cos2x)/2 + C"
+        ],
+        "answer": "eˣ(sin2x − 2cos2x)/5 + C",
+        "explanation": "Let I=∫eˣsin2x dx. Parts (u=eˣ,dv=sin2x): =−eˣcos2x/2+∫eˣcos2x/2 dx. Second parts: eˣsin2x/4−∫eˣsin2x/4dx=eˣsin2x/4−I/4. So I=−eˣcos2x/2+eˣsin2x/4−I/4. 5I/4=eˣ(sin2x/4−cos2x/2). I=eˣ(sin2x−2cos2x)/5+C."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Integrate ∫ (x+4)/((x+1)(x+2)) dx using partial fractions.",
+        "options": [
+          "3ln|x+1| − 2ln|x+2| + C",
+          "−3ln|x+1| + 2ln|x+2| + C",
+          "ln|x+1| + ln|x+2| + C",
+          "3ln|x+1| + 2ln|x+2| + C"
+        ],
+        "answer": "3ln|x+1| − 2ln|x+2| + C",
+        "explanation": "(x+4)/((x+1)(x+2))=A/(x+1)+B/(x+2). At x=−1: 3=A. At x=−2: 2=−B→B=−2. ∫=3ln|x+1|−2ln|x+2|+C."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Find the area bounded by y=1/(1+x²), the x-axis, x=0, x=√3.",
+        "options": ["π/3", "π/4", "π/6", "π/2"],
+        "answer": "π/3",
+        "explanation": "∫₀^√3 1/(1+x²)dx=[arctan x]₀^√3=arctan(√3)−0=π/3."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Volume when y=e^(−x) is rotated about x-axis from x=0 to x=∞.",
+        "options": ["π/2", "π", "∞", "e/2"],
+        "answer": "π/2",
+        "explanation": "V=π∫₀^∞(e^(−x))²dx=π∫₀^∞e^(−2x)dx=π[−e^(−2x)/2]₀^∞=π(0+1/2)=π/2."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "The integral ∫ 1/√(x²+2x+5) dx after completing the square becomes:",
+        "options": [
+          "∫1/√((x+1)²+4)dx",
+          "∫1/√((x+1)²+4)dx = ln|x+1+√(x²+2x+5)|+C",
+          "arcsin((x+1)/2)+C",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "x²+2x+5=(x+1)²+4=(x+1)²+2². Let u=x+1: ∫1/√(u²+4)du=ln|u+√(u²+4)|+C=ln|x+1+√(x²+2x+5)|+C."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find ∫₀^(π/2) x cos x dx.",
+        "options": ["π/2 − 1", "1", "π/2", "0"],
+        "answer": "π/2 − 1",
+        "explanation": "Parts: u=x, dv=cosxdx. [x sinx + cosx]₀^(π/2)=(π/2·1+0)−(0+1)=π/2−1."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "The integral ∫(2x+1)/(x²+x) dx = ∫(2x+1)/(x(x+1)) dx uses which technique first?",
+        "options": [
+          "Partial fractions: 1/x + 1/(x+1)",
+          "Recognise 2x+1=d/dx(x²+x), so f'/f giving ln|x²+x|",
+          "Integration by parts",
+          "Substitution u=x²+x"
+        ],
+        "answer": "Recognise 2x+1=d/dx(x²+x), so f'/f giving ln|x²+x|",
+        "explanation": "d/dx(x²+x)=2x+1. So (2x+1)/(x²+x)=f'/f. ∫=ln|x²+x|+C=ln|x(x+1)|+C. Fastest approach — recognise f'/f pattern."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Using partial fractions, ∫₁³ 4/(x²−4) dx. Note: x²−4=(x−2)(x+2).",
+        "options": [
+          "ln(5/3) − ln(1/3) = ln5",
+          "ln(5/3)",
+          "Does not converge (x=2 in range)",
+          "2ln(5/3)"
+        ],
+        "answer": "Does not converge (x=2 in range)",
+        "explanation": "The integrand has a vertical asymptote at x=2, which lies inside [1,3]. The integral is improper and diverges (the partial fraction decomposition gives terms like 1/(x−2) which is not integrable across x=2)."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Mean value of f(x)=x²+1 over [0,3].",
+        "options": ["4", "9/3", "10/3", "3"],
+        "answer": "4",
+        "explanation": "Mean=(1/3)∫₀³(x²+1)dx=(1/3)[x³/3+x]₀³=(1/3)(9+3)=4."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "For ∫ arcsin x dx = x arcsin x + √(1−x²) + C, evaluate ∫₀^(1/2) arcsin x dx.",
+        "options": [
+          "π/12 + √3/2 − 1",
+          "π/12 − √3/2 + 1",
+          "π/6 + √3/2 − 1",
+          "π/12 + √3/2"
+        ],
+        "answer": "π/12 + √3/2 − 1",
+        "explanation": "[x arcsinx+√(1−x²)]₀^(1/2). At x=1/2: (1/2)(π/6)+√(3/4)=π/12+√3/2. At x=0: 0+1=1. Answer=π/12+√3/2−1."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "The area enclosed between y=sin x and y=cos x from x=π/4 to x=5π/4 is:",
+        "options": ["2√2", "√2", "4", "2"],
+        "answer": "2√2",
+        "explanation": "On [π/4, 5π/4]: sinx≥cosx. A=∫_(π/4)^(5π/4)(sinx−cosx)dx=[−cosx−sinx]_(π/4)^(5π/4). At 5π/4: −(−√2/2)−(−√2/2)=√2. At π/4: −√2/2−√2/2=−√2. A=√2−(−√2)=2√2."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Which of the following correctly states the connection between integration by parts and the product rule?",
+        "options": [
+          "∫udv=uv−∫vdu is obtained by integrating d(uv)=udv+vdu both sides",
+          "Integration by parts is only for polynomial integrands",
+          "The product rule says (uv)'=u'v'+uv, so parts reverses this",
+          "Parts and product rule are unrelated"
+        ],
+        "answer": "∫udv=uv−∫vdu is obtained by integrating d(uv)=udv+vdu both sides",
+        "explanation": "Product rule: d(uv)=udv+vdu. Integrate both sides: ∫d(uv)=∫udv+∫vdu → uv=∫udv+∫vdu → ∫udv=uv−∫vdu. Integration by parts is precisely the integral form of the product rule."
+      }
+    ]
+  }
+}

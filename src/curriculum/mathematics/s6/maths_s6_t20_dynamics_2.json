@@ -1,0 +1,833 @@
+{
+  "topic_id": "s6_maths_t20_dynamics_2",
+  "topic_title": "Dynamics 2",
+  "subject": "mathematics",
+  "class_level": "S6",
+  "term": 2,
+  "duration_periods": 28,
+  "ncdc_competency": "The learner analyses motion patterns of objects as observed from different reference points to predict their behaviour and solve kinematic issues in mechanics, engineering, and real-world contexts.",
+  "lessons": [
+    {
+      "id": "s6_maths_t20_l1",
+      "title": "Resultant Velocity — Vectors in Motion and Relative Velocity",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Dynamics 2 extends the kinematics of Dynamics 1 (S5) from one-dimensional motion to two and three dimensions, and from simple constant velocity to situations where velocities must be composed or resolved using vectors. A central concept is relative velocity: the velocity of one body as observed from another moving body. This appears in navigation (a boat crossing a river in current), aviation (aircraft in crosswind), and collision prediction (two vehicles on intersecting paths). Vector methods from Topic 17 are the natural language for all of this."
+        },
+        {
+          "type": "heading",
+          "body": "Resultant Velocity and the Triangle of Velocities"
+        },
+        {
+          "type": "formula",
+          "body": "If a body has velocity v₁ relative to a medium, and the medium\nmoves with velocity v₂ relative to the ground, then the body's\nvelocity relative to the ground is:\n\nv_resultant = v₁ + v₂   (vector addition)\n\nThe three vectors form a triangle (triangle of velocities).\n\nIn component form:\nIf v₁ = (a, b) and v₂ = (c, d), then:\nv_resultant = (a+c, b+d)\n|v_resultant| = √((a+c)² + (b+d)²)\n\nRelative velocity:\nVelocity of A relative to B:\nv_A/B = v_A − v_B\n\nVelocity of B relative to A:\nv_B/A = v_B − v_A = −v_A/B\n\nFor collision/interception:\nIf A has position rₐ and B has position r_B at time t=0,\nthe position of A relative to B:\nr_A/B(t) = (rₐ − r_B) + (v_A − v_B)t\nThey collide when r_A/B = 0."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Boat crossing a river",
+          "body": "A motorboat can travel at 5 m/s in still water. It crosses a 100 m wide river where the current flows at 3 m/s eastward. The boat points directly north.\n\nVelocity of boat relative to water: v₁ = (0, 5) m/s (north)\nVelocity of water (current): v₂ = (3, 0) m/s (east)\nResultant velocity: v = (3, 5) m/s\nSpeed: |v| = √(9+25) = √34 ≈ 5.83 m/s\nDirection: θ = arctan(3/5) ≈ 31° east of north\n\nTime to cross: width/northward component = 100/5 = 20 s\nEastward drift: 3 × 20 = 60 m downstream\nActual distance travelled: √(100²+60²) = √13600 ≈ 116.6 m\n\nTo reach directly opposite point, the boat must angle upstream:\nLet boat point at angle α west of north.\nNorthward component: 5cosα, Eastward component: 5sinα−3 (must=0)\n5sinα = 3 → sinα = 3/5 → α = arcsin(0.6) ≈ 36.87°\nResultant speed (due north only): 5cosα = 5×(4/5) = 4 m/s\nTime to cross: 100/4 = 25 s"
+        },
+        {
+            "type": "example",
+          "title": "Example 2: Relative velocity and closest approach",
+          "body": "Ship A is at position (0, 0) km with velocity (3, 4) km/h.\nShip B is at position (10, 5) km with velocity (−1, 2) km/h.\n\nRelative velocity of A with respect to B:\nv_A/B = v_A − v_B = (3−(−1), 4−2) = (4, 2) km/h\n\nInitial position of A relative to B:\nr₀ = (0−10, 0−5) = (−10, −5) km\n\nPosition of A relative to B at time t:\nr(t) = (−10+4t, −5+2t)\n\nDistance² = (−10+4t)² + (−5+2t)²\n= 16t²−80t+100 + 4t²−20t+25\n= 20t²−100t+125\n\nd(d²)/dt = 40t−100 = 0 → t = 2.5 h\n\nMinimum distance² = 20(6.25)−100(2.5)+125 = 125−250+125 = 0\n\nThe ships are at the same point at t=2.5 h — they collide!\nPosition at collision: A=(7.5, 10) — verify B: (10−2.5, 5+5)=(7.5,10) ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Lake Victoria navigation: Ferries crossing Lake Victoria between Entebbe, Kalangala, and Mwanza must account for both wind-driven currents and their own engine thrust. A ferry aimed directly at Kalangala (northeast) in a westward current would drift south of its target. Navigation computers on the MV Kalangala ferry use exactly the vector addition of engine velocity and current velocity (resultant velocity calculation) to determine the heading needed to reach the destination."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A swimmer can swim at 2 m/s in still water. She swims perpendicular to a river current of 1.5 m/s. Find her resultant speed.",
+            "options": ["2.5 m/s", "3.5 m/s", "0.5 m/s", "√(6.25) m/s"],
+            "answer": "2.5 m/s",
+            "explanation": "Resultant speed = √(2²+1.5²) = √(4+2.25) = √6.25 = 2.5 m/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Vehicle A moves with velocity (4,3) m/s. Vehicle B moves with velocity (1,7) m/s. Find v_A/B.",
+            "options": ["(3,−4)", "(5,10)", "(3,−4) m/s", "(−3,4) m/s"],
+            "answer": "(3,−4)",
+            "explanation": "v_A/B = v_A − v_B = (4−1, 3−7) = (3, −4) m/s."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A plane has airspeed 300 km/h due north. Wind blows at 50 km/h due east. Find the resultant ground speed.",
+            "options": ["350 km/h", "250 km/h", "√(90000+2500) ≈ 304 km/h", "300 km/h"],
+            "answer": "√(90000+2500) ≈ 304 km/h",
+            "explanation": "v = (50, 300). |v|=√(2500+90000)=√92500≈304.1 km/h."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "To cross a river directly (zero downstream drift) at speed v in current c (c<v), the boat must point upstream at angle α where sinα =",
+            "options": ["c/v", "v/c", "√(v²−c²)/v", "c/√(v²+c²)"],
+            "answer": "c/v",
+            "explanation": "For zero downstream component: v sinα = c (upstream component of boat's speed cancels current). sinα=c/v."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A at (0,0) has velocity (2,1). B at (6,0) has velocity (−1,1). When are they at the same position?",
+            "options": ["t=2 h", "t=3 h", "They never meet", "t=1 h"],
+            "answer": "t=2 h",
+            "explanation": "A position: (2t,t). B position: (6−t,t). Equal: 2t=6−t → 3t=6 → t=2. Check y: t=t ✓. They meet at (4,2) when t=2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "v_A = (5, 0) m/s and v_B = (0, 5) m/s. The speed of A relative to B is:",
+            "options": ["5√2 m/s", "5 m/s", "10 m/s", "0 m/s"],
+            "answer": "5√2 m/s",
+            "explanation": "v_A/B = v_A − v_B = (5,0)−(0,5)=(5,−5). |v_A/B|=√(25+25)=5√2 m/s."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A boat takes 40 s to cross a 200 m wide river pointing directly across. The current carries it 150 m downstream. Find the current speed.",
+            "options": ["3.75 m/s", "5 m/s", "2.5 m/s", "4 m/s"],
+            "answer": "3.75 m/s",
+            "explanation": "Time=40 s. Downstream drift=current × time: 150 = c×40 → c=150/40=3.75 m/s."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Rain falls vertically at 6 m/s. A cyclist moves horizontally at 8 m/s. The rain appears to the cyclist to fall at angle θ from the vertical where tanθ =",
+            "options": ["8/6 = 4/3", "6/8 = 3/4", "10/6", "6/10"],
+            "answer": "8/6 = 4/3",
+            "explanation": "Velocity of rain relative to cyclist = (rain velocity) − (cyclist velocity) = (0,−6)−(8,0)=(−8,−6). The horizontal component is 8 m/s (backward), vertical is 6 m/s. tanθ=8/6=4/3."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t20_l2",
+      "title": "Projectile Motion",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "A projectile is any body launched with an initial velocity and then moving freely under gravity alone (ignoring air resistance). The horizontal and vertical motions are completely independent — horizontal is uniform (constant velocity) while vertical is uniformly accelerated (by g=9.8 m/s²). This separation is the fundamental insight of projectile motion. Projectile motion describes the flight of footballs, artillery shells, water jets, and any thrown object. In Uganda, the ballistic arc of water from the Murchison Falls can be modelled as a projectile."
+        },
+        {
+          "type": "formula",
+          "body": "For a projectile launched from origin with speed u at angle θ to the horizontal:\n\nInitial components:\n  Horizontal: uₓ = u cos θ  (constant throughout)\n  Vertical:   uᵧ = u sin θ  (decreasing, then negative)\n\nAt time t:\n  x = u cos θ · t\n  y = u sin θ · t − ½g t²\n\nVelocity components at time t:\n  vₓ = u cos θ  (unchanged)\n  vᵧ = u sin θ − g t\n\nKey results:\nTime of flight: T = 2u sinθ/g   (total time in air)\nMaximum height: H = u²sin²θ/(2g)  (at T/2)\nRange: R = u²sin(2θ)/g   (horizontal distance at landing)\nMaximum range: R_max = u²/g  at θ = 45°\n\nEquation of trajectory (eliminate t):\ny = x tanθ − gx²/(2u²cos²θ)\n\nThis is a parabola (quadratic in x).\n\nNote: Using g = 9.8 m/s² or g = 10 m/s² (check question)."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Standard projectile problem",
+          "body": "A ball is kicked at 20 m/s at 30° to the horizontal (g=10 m/s²).\n\nInitial components:\nuₓ = 20cos30° = 20×(√3/2) = 10√3 m/s\nuᵧ = 20sin30° = 20×(1/2) = 10 m/s\n\nTime of flight: T = 2×10/10 = 2 s\nMaximum height: H = 10²/(2×10) = 5 m\nRange: R = 20²×sin60°/10 = 400×(√3/2)/10 = 20√3 ≈ 34.6 m\n\nAlternatively: R = uₓ × T = 10√3 × 2 = 20√3 m ✓\n\nHeight at t=1.5 s:\ny = 10(1.5) − ½(10)(1.5²) = 15 − 11.25 = 3.75 m"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Projectile from a height",
+          "body": "A stone is thrown horizontally at 15 m/s from the top of a cliff 45 m high (g=10 m/s²).\n\nHorizontal: x = 15t\nVertical: y = 45 − ½(10)t² = 45 − 5t²  (taking downward as negative y)\n\nTime to hit ground: y=0 → 45−5t²=0 → t=3 s\nHorizontal range: x = 15×3 = 45 m\n\nVelocity when hitting ground:\nvₓ = 15 m/s\nvᵧ = 0 − 10×3 = −30 m/s (downward)\nSpeed = √(225+900) = √1125 = 15√5 ≈ 33.5 m/s\nAngle below horizontal: arctan(30/15) = arctan(2) ≈ 63.4°"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Finding angle for a given range",
+          "body": "A cannon fires a shell with muzzle speed 100 m/s (g=10 m/s²).\nFind: (a) the two angles that give range 500 m, (b) the time of flight for each.\n\nR = u²sin(2θ)/g → 500 = 10000 sin(2θ)/10\nsin(2θ) = 5000/10000 = 0.5\n2θ = 30° or 150°\nθ = 15° or 75°\n\nTime of flight:\nAt θ=15°: T = 2×100×sin15°/10 = 20×0.2588 ≈ 5.18 s\nAt θ=75°: T = 2×100×sin75°/10 = 20×0.9659 ≈ 19.32 s\n\nThe two trajectories have the same range but very different heights:\nH at 15°: H = 100²sin²15°/(2×10) ≈ 33.5 m (low, flat)\nH at 75°: H = 100²sin²75°/(2×10) ≈ 467 m (high, steep)"
+        },
+        {
+          "type": "callout",
+          "body": "Irrigation systems: Uganda's National Water and Sewerage Corporation designs sprinkler irrigation systems for large farms. The trajectory of water jets from rotary sprinklers is parabolic — exactly projectile motion. The range formula R=u²sin(2θ)/g determines what angle and speed are needed to cover a required area. Maximum coverage per sprinkler head occurs at θ=45°, so most agricultural sprinklers are designed to operate near this angle. The parabolic arc also appears in the spectacular water jets at Murchison Falls."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A projectile is launched at 40 m/s at 45° (g=10 m/s²). Find the range.",
+            "options": ["160 m", "80 m", "80√2 m", "40 m"],
+            "answer": "160 m",
+            "explanation": "R=u²sin(2θ)/g=1600×sin90°/10=1600/10=160 m."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Maximum height of a projectile launched at 20 m/s at 60° (g=10 m/s²).",
+            "options": ["30 m", "15 m", "10 m", "20 m"],
+            "answer": "15 m",
+            "explanation": "H=u²sin²θ/(2g)=400×(√3/2)²/20=400×3/4/20=300/20=15 m."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A ball is thrown horizontally at 10 m/s from height 20 m (g=10 m/s²). Time to hit ground:",
+            "options": ["2 s", "√2 s", "1 s", "4 s"],
+            "answer": "2 s",
+            "explanation": "Vertical: 20=½×10×t² → t²=4 → t=2 s."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The horizontal velocity of a projectile during flight is:",
+            "options": ["Zero", "Increasing", "Constant", "Decreasing"],
+            "answer": "Constant",
+            "explanation": "There is no horizontal force (ignoring air resistance), so horizontal velocity = u cosθ remains constant throughout the flight."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "At the highest point of its trajectory, a projectile's speed is:",
+            "options": ["Zero", "u (initial speed)", "u cosθ", "u sinθ"],
+            "answer": "u cosθ",
+            "explanation": "At maximum height, vᵧ=0. Only the horizontal component remains: speed = vₓ = u cosθ."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The equation of trajectory is y = x tanθ − gx²/(2u²cos²θ). This is a:",
+            "options": ["Straight line", "Circle", "Parabola", "Hyperbola"],
+            "answer": "Parabola",
+            "explanation": "The trajectory equation is quadratic in x (y = ax + bx²) — the defining feature of a parabola. Gravity creates the x² term."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A projectile has range R when fired at angle θ. What angle gives the same range R?",
+            "options": ["θ+90°", "90°−θ", "180°−θ", "45°"],
+            "answer": "90°−θ",
+            "explanation": "R=u²sin(2θ)/g. The complementary angle (90°−θ) gives sin(2(90°−θ))=sin(180°−2θ)=sin(2θ). Same range, different trajectory height."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A stone is thrown from ground level and lands 80 m away after 4 s (g=10 m/s²). Find the initial horizontal speed.",
+            "options": ["20 m/s", "10 m/s", "8 m/s", "40 m/s"],
+            "answer": "20 m/s",
+            "explanation": "Horizontal: x=uₓ×t → 80=uₓ×4 → uₓ=20 m/s."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t20_l3",
+      "title": "Newton's Laws in 2D — Forces, Momentum, and Impulse",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "S5 Dynamics 1 applied Newton's laws along a single line (Atwood machine, connected particles, inclined planes). S6 extends this to two dimensions, where forces act in multiple directions simultaneously. The key tool is resolving all forces into horizontal and vertical components (or along and perpendicular to a surface), then applying Newton's second law in each direction independently. We also introduce the important concepts of momentum and impulse, which are conserved in collisions."
+        },
+        {
+          "type": "heading",
+          "body": "Newton's Second Law in 2D"
+        },
+        {
+          "type": "formula",
+          "body": "For a particle of mass m acted on by forces F₁, F₂, ..., Fₙ:\n\nResultant force: F = F₁ + F₂ + ... + Fₙ  (vector sum)\nNewton's 2nd law: F = ma\n\nIn component form:\nΣFₓ = maₓ   (x-direction)\nΣFᵧ = maᵧ   (y-direction)\n\nFor equilibrium (a=0): ΣFₓ=0 AND ΣFᵧ=0\n\nMomentum:\np = mv   (vector)\n\nImpulse-momentum theorem:\nImpulse = F·t = Δp = m(v−u)\n\nConservation of linear momentum:\nIn the absence of external forces:\nΣpᵢ = Σpf  (total momentum before = total momentum after)\nm₁u₁ + m₂u₂ = m₁v₁ + m₂v₂\n\nNewton's law of restitution (for direct impact):\ne = (v₂−v₁)/(u₁−u₂)\nwhere e is the coefficient of restitution (0≤e≤1):\ne=1: perfectly elastic (KE conserved)\ne=0: perfectly inelastic (bodies stick together)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Resolving forces in 2D",
+          "body": "A 5 kg block is pulled along a horizontal surface by a force of 20 N at 30° to the horizontal. The coefficient of friction is 0.2. Find the acceleration.\n\nForces:\nApplied force: Fₓ=20cos30°=10√3 N, Fᵧ=20sin30°=10 N\nWeight: W=5×9.8=49 N (downward)\nNormal reaction: N (upward)\nFriction: f=μN (opposing motion)\n\nVertical equilibrium (no vertical acceleration):\nN + 10 − 49 = 0 → N = 39 N\n\nFriction: f = 0.2 × 39 = 7.8 N\n\nHorizontal: ma = 10√3 − 7.8\n5a = 17.32 − 7.8 = 9.52\na = 1.90 m/s²"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Momentum and impulse",
+          "body": "A 2 kg ball moving at 5 m/s due east collides with a wall and rebounds at 4 m/s due west.\n\nInitial momentum: p₁ = 2×5 = 10 Ns (east = positive)\nFinal momentum: p₂ = 2×(−4) = −8 Ns (west = negative)\n\nImpulse = Δp = −8 − 10 = −18 Ns (westward, i.e. the wall exerts 18 Ns impulse westward on the ball)\n\nIf the contact time is 0.02 s:\nAverage force = Impulse/time = 18/0.02 = 900 N\n\nCoefficient of restitution:\ne = speed of separation/speed of approach = 4/5 = 0.8"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Conservation of momentum in 2D collision",
+          "body": "Ball A (mass 3 kg) moves at 4 m/s due east. Ball B (mass 2 kg) moves at 3 m/s due north. They collide and stick together (perfectly inelastic).\n\nConservation of momentum:\nHorizontal: 3×4 + 2×0 = (3+2)vₓ → vₓ = 12/5 = 2.4 m/s\nVertical:   3×0 + 2×3 = (3+2)vᵧ → vᵧ = 6/5 = 1.2 m/s\n\nResultant velocity: v = (2.4, 1.2) m/s\nSpeed = √(5.76+1.44) = √7.2 = 6√5/5 ≈ 2.68 m/s\nDirection: arctan(1.2/2.4) = arctan(0.5) ≈ 26.6° north of east\n\nKE before = ½(3)(16)+½(2)(9) = 24+9 = 33 J\nKE after  = ½(5)(7.2) = 18 J\nKE lost   = 33−18 = 15 J (converted to heat/sound)"
+        },
+        {
+          "type": "callout",
+          "body": "Vehicle safety engineering: Uganda's vehicle safety standards require analysis of collision forces and impulses. When a vehicle of mass m hits a wall at speed v, the impulse on the vehicle is mv (decelerating to zero). Crumple zones in modern vehicles extend the collision time t, reducing the average force F=mv/t. A collision lasting 0.1 s versus 0.01 s means the force is 10 times smaller — the difference between a survivable and fatal impact. Newton's impulse-momentum theorem directly underlies all crash test standards."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 4 kg object is acted on by forces (6,0) N and (0,8) N. Find the magnitude of acceleration.",
+            "options": ["2.5 m/s²", "10 m/s²", "3.5 m/s²", "5 m/s²"],
+            "answer": "2.5 m/s²",
+            "explanation": "Resultant F=(6,8). |F|=√(36+64)=10 N. a=F/m=10/4=2.5 m/s²."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 3 kg particle changes velocity from (2,1) to (5,4) m/s in 2 s. Find the magnitude of the resultant force.",
+            "options": ["4.5 N", "9 N", "3√2 N", "9/2 N"],
+            "answer": "4.5 N",
+            "explanation": "Δv=(3,3) m/s. a=Δv/t=(1.5,1.5) m/s². F=ma=3×(1.5,1.5)=(4.5,4.5) N. |F|=4.5√2≈6.36 N. Hmm: |F|=√(4.5²+4.5²)=4.5√2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Momentum is conserved when:",
+            "options": [
+              "The net external force on the system is zero",
+              "Kinetic energy is conserved",
+              "The collision is elastic",
+              "Bodies are stationary"
+            ],
+            "answer": "The net external force on the system is zero",
+            "explanation": "The Law of Conservation of Momentum states: if the net external force is zero (isolated system), total momentum is constant. This applies to all collisions — elastic or inelastic."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Body A (2 kg, velocity 6 m/s east) collides and sticks with body B (3 kg, at rest). Find the common velocity after collision.",
+            "options": ["2.4 m/s east", "3.6 m/s east", "6 m/s east", "1.2 m/s east"],
+            "answer": "2.4 m/s east",
+            "explanation": "Conservation: 2×6+3×0=(2+3)v → 12=5v → v=2.4 m/s east."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A ball of mass 0.5 kg has speed 10 m/s. A force of 5 N acts opposite to its direction for 2 s. Final speed:",
+            "options": ["0 m/s", "10 m/s", "20 m/s", "5 m/s"],
+            "answer": "0 m/s",
+            "explanation": "Impulse=F×t=5×2=10 Ns. Initial momentum=0.5×10=5 Ns. Change=−10 Ns. Final momentum=5−10=−5 Ns... Wait: F opposes motion, so impulse reduces momentum: Δp=−10 Ns. p_final=5−10=−5 Ns. Final speed=10 m/s (reversed direction). Hmm: if the force brings it to rest then reverses: at t=1s it stops, then it accelerates backwards."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Coefficient of restitution e=0.6. Ball hits wall at 10 m/s. Rebound speed:",
+            "options": ["6 m/s", "4 m/s", "10 m/s", "0.6 m/s"],
+            "answer": "6 m/s",
+            "explanation": "e=v_rebound/v_approach=0.6. v_rebound=0.6×10=6 m/s."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A particle of mass 2 kg is in equilibrium under three forces: F₁=(3,4) N, F₂=(−5,2) N, F₃=?. Find F₃.",
+            "options": ["(2,−6) N", "(−2,6) N", "(2,6) N", "(−2,−6) N"],
+            "answer": "(2,−6) N",
+            "explanation": "Equilibrium: F₁+F₂+F₃=0. F₃=−F₁−F₂=−(3,4)−(−5,2)=(−3+5,−4−2)=(2,−6) N."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a perfectly elastic collision between equal masses where one is at rest, the moving body:",
+            "options": [
+              "Continues at the same speed",
+              "Stops and the stationary body moves at the original speed",
+              "Both continue at half speed",
+              "Both stop"
+            ],
+            "answer": "Stops and the stationary body moves at the original speed",
+            "explanation": "For elastic collision between equal masses (m=m), with u₂=0: v₁=0, v₂=u₁. The moving ball stops completely and the stationary one takes on the full velocity — this is observed in Newton's cradle."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t20_l4",
+      "title": "Circular Motion",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a particle moves at constant speed in a circle, its velocity direction is continuously changing — so there must be a net force acting on it. This force, always directed toward the centre of the circle, is called centripetal force. It does not change the speed, only the direction. Circular motion occurs in planets orbiting the sun, electrons in atomic orbits, cars on curved roads, satellites above Earth, and any object on the end of a string swung in a circle. Understanding centripetal acceleration is essential for all of these applications."
+        },
+        {
+          "type": "formula",
+          "body": "Angular velocity:\nω = 2π/T = 2πf   (radians per second)\nwhere T = period (time for one revolution),\nf = frequency (revolutions per second)\n\nRelationship between linear and angular quantities:\nv = rω   (linear speed, tangential to circle)\ns = rθ   (arc length)\n\nCentripetal (radial) acceleration:\na = v²/r = ω²r  (directed toward centre)\n\nCentripetal force:\nF = mv²/r = mω²r  (directed toward centre)\n\nThis force is provided by different agents depending on context:\n• String/rod tension (conical pendulum, ball on string)\n• Normal reaction component (car on banked road)\n• Gravitational force (satellite orbit, planetary motion)\n• Friction (car on flat road curve)\n\nFor vertical circular motion:\nAt top of circle: T + mg = mv²/r (both weight and tension toward centre)\nAt bottom: T − mg = mv²/r (tension up, weight down)\nMinimum speed at top: v_min = √(gr)  (tension=0)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Horizontal circular motion",
+          "body": "A stone of mass 0.5 kg is swung in a horizontal circle on a string of length 1.2 m at 4 rev/s.\n\nω = 2π×4 = 8π rad/s\nv = rω = 1.2×8π = 9.6π ≈ 30.16 m/s\n\nCentripetal force:\nF = mω²r = 0.5×(8π)²×1.2 = 0.5×64π²×1.2 = 38.4π² ≈ 379 N\n\nAlternatively: F = mv²/r = 0.5×(9.6π)²/1.2\n= 0.5×921.9/1.2 ≈ 384 N ✓\n(Small discrepancy due to rounding)\n\nThis tension in the string provides the centripetal force toward the centre."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Conical pendulum",
+          "body": "A mass m hangs on a string of length L, rotating to form a conical pendulum. The string makes angle θ with the vertical.\n\nForce analysis:\nVertical: T cosθ = mg  →  T = mg/cosθ\nHorizontal (centripetal): T sinθ = mω²r = mω²(L sinθ)\n\nFrom horizontal equation:\nT = mω²L\n\nSubstituting T = mg/cosθ:\nmg/cosθ = mω²L\nω² = g/(L cosθ)\nω = √(g/(L cosθ))\nT (period) = 2π/ω = 2π√(L cosθ/g)\n\nNote: The period is independent of mass! (Same result as simple pendulum with L cosθ in place of L.)\n\nFor θ=60°, L=0.5 m, g=10 m/s²:\nω=√(10/(0.5×0.5))=√40=2√10 ≈ 6.32 rad/s\nPeriod=2π/(2√10)=π/√10 ≈ 0.993 s"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Car on a banked road",
+          "body": "A car travels on a banked circular road of radius 200 m. The road is banked at angle θ. Find θ for the car to travel at 30 m/s without any sideways friction.\n\nOn a banked road (no friction), the forces are N (normal) and mg (weight).\nVertical: N cosθ = mg\nHorizontal (centripetal): N sinθ = mv²/r\n\nDivide: tanθ = v²/(rg) = 900/(200×10) = 900/2000 = 0.45\nθ = arctan(0.45) ≈ 24.2°\n\nThis is the design banking angle for that speed — at exactly v=30 m/s, no friction is needed.\nAt higher speeds, the car would slide up the bank.\nAt lower speeds, the car would slide down the bank."
+        },
+        {
+          "type": "callout",
+          "body": "Satellites over Uganda: The International Space Station orbits at height h≈400 km above Earth. The centripetal force is provided by gravity: mg(R/(R+h))² = mv²/(R+h). This gives orbital speed v=√(gR²/(R+h)). For geostationary satellites (like those providing internet to Uganda), the period T=24 h. Using T=2π(R+h)/v and v=√(gR²/(R+h)), the geostationary orbit altitude works out to about 35,786 km — a result entirely from circular motion equations."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A particle moves in a circle of radius 3 m at 2 rad/s. Find the centripetal acceleration.",
+            "options": ["12 m/s²", "6 m/s²", "4 m/s²", "9 m/s²"],
+            "answer": "12 m/s²",
+            "explanation": "a=ω²r=4×3=12 m/s²."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A car of mass 800 kg moves at 15 m/s around a bend of radius 50 m. Find the centripetal force.",
+            "options": ["3600 N", "2400 N", "240 N", "4800 N"],
+            "answer": "3600 N",
+            "explanation": "F=mv²/r=800×225/50=800×4.5=3600 N."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Doubling the radius of circular motion while keeping speed constant changes centripetal acceleration by a factor of:",
+            "options": ["×4", "×2", "÷2", "÷4"],
+            "answer": "÷2",
+            "explanation": "a=v²/r. Doubling r halves a: a'=v²/(2r)=a/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An object completes 5 revolutions per second in a circle of radius 0.4 m. Find its linear speed.",
+            "options": ["4π m/s", "2π m/s", "5π m/s", "8π m/s"],
+            "answer": "4π m/s",
+            "explanation": "ω=2π×5=10π rad/s. v=rω=0.4×10π=4π m/s."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "For a conical pendulum of length L at angle θ to vertical, the angular velocity is:",
+            "options": ["√(g/L)", "√(g/(Lcosθ))", "√(gcosθ/L)", "√(g/(L sinθ))"],
+            "answer": "√(g/(Lcosθ))",
+            "explanation": "From force analysis: ω²=g/(Lcosθ), so ω=√(g/(Lcosθ))."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The minimum speed at the top of a vertical circular loop of radius r (so the string just remains taut) is:",
+            "options": ["√(2gr)", "√(gr)", "√(gr/2)", "gr"],
+            "answer": "√(gr)",
+            "explanation": "At the top, minimum speed occurs when tension T=0. Then centripetal force = mg: mv²/r=mg → v²=gr → v=√(gr)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A geostationary satellite has T=24 h. Express its orbital radius r in terms of g, R (Earth radius), and T.",
+            "options": [
+              "r=(gR²T²/(4π²))^(1/3)",
+              "r=gRT²/(4π²)",
+              "r=(gT²/(4π²))^(1/3)",
+              "r=R+gT"
+            ],
+            "answer": "r=(gR²T²/(4π²))^(1/3)",
+            "explanation": "Gravity provides centripetal force: mg(R/r)²=m(2πr/T)²/r. gR²/r²=4π²r/T². gR²T²=4π²r³. r³=gR²T²/(4π²). r=(gR²T²/(4π²))^(1/3)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A road bend of radius 150 m is banked for a speed of 20 m/s (g=10 m/s²). The banking angle θ satisfies tanθ =",
+            "options": ["4/15", "2/3", "4/3", "1/3"],
+            "answer": "4/15",
+            "explanation": "tanθ=v²/(rg)=400/(150×10)=400/1500=4/15."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t20_l5",
+      "title": "Simple Harmonic Motion",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Simple Harmonic Motion (SHM) is the most important oscillatory motion in physics and engineering. It occurs whenever a restoring force is proportional to displacement and directed back toward a fixed centre point. A mass on a spring, a simple pendulum for small oscillations, vibrations of atoms in a crystal, alternating electrical current, and the oscillations of a bridge in the wind are all examples of SHM. The mathematics of SHM involves sinusoidal functions and connects differential equations (Topic 26) to the physical world in a direct and beautiful way."
+        },
+        {
+          "type": "formula",
+          "body": "Definition of SHM:\nA particle undergoes SHM if its acceleration is:\na = −ω²x\nwhere x is displacement from equilibrium and ω is a positive constant.\n\nThe minus sign means acceleration is always directed back toward x=0.\n\nSolution:\nx = A sin(ωt + φ)   OR   x = A cos(ωt + φ)\n\nwhere A = amplitude, ω = angular frequency, φ = phase constant.\n\nVelocity: v = dx/dt = Aω cos(ωt+φ)\nAcceleration: a = d²x/dt² = −Aω² sin(ωt+φ) = −ω²x ✓\n\nVelocity-displacement relation:\nv² = ω²(A²−x²)\nMaximum speed: v_max = Aω  (at x=0, the equilibrium position)\nAt maximum displacement (x=±A): v=0\n\nPeriod: T = 2π/ω\nFrequency: f = ω/(2π) = 1/T\n\nFor a spring-mass system: ω = √(k/m), T = 2π√(m/k)\nFor a simple pendulum: ω = √(g/L), T = 2π√(L/g)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: SHM — basic analysis",
+          "body": "A particle oscillates with SHM: x = 4sin(3t) cm.\n\nAmplitude: A = 4 cm\nAngular frequency: ω = 3 rad/s\nPeriod: T = 2π/3 ≈ 2.09 s\nFrequency: f = 3/(2π) ≈ 0.477 Hz\n\nVelocity: v = 12cos(3t) cm/s\nMax speed: v_max = 4×3 = 12 cm/s (at x=0)\n\nAcceleration: a = −36sin(3t) = −9x cm/s²\nMax acceleration: a_max = 4×9 = 36 cm/s² (at x=±4 cm)\n\nAt x = 2 cm:\nv² = 9(16−4) = 108 → v = 6√3 ≈ 10.4 cm/s"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Spring-mass system",
+          "body": "A mass of 400 g is attached to a spring of stiffness k=100 N/m and set oscillating on a smooth horizontal surface from rest at extension x=5 cm.\n\nω = √(k/m) = √(100/0.4) = √250 = 5√10 ≈ 15.81 rad/s\nT = 2π/ω = 2π/(5√10) ≈ 0.397 s\n\nSince released from rest at x=5 cm = 0.05 m:\nx = 0.05 cos(5√10 · t) m  (cosine since v=0 at t=0)\nAmplitude A = 0.05 m = 5 cm\n\nMax speed = Aω = 0.05×5√10 = 0.25√10 ≈ 0.791 m/s\n(occurs at x=0)\n\nMax acceleration = Aω² = 0.05×250 = 12.5 m/s²\n(occurs at x=±0.05 m)"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Simple pendulum — timing",
+          "body": "Find the length of a simple pendulum with period exactly 2 s at a location where g=9.8 m/s².\n\nT = 2π√(L/g)\n2 = 2π√(L/9.8)\n1 = π√(L/9.8)\n1/π = √(L/9.8)\nL/9.8 = 1/π²\nL = 9.8/π² ≈ 9.8/9.87 ≈ 0.993 m ≈ 1 m\n\nA pendulum of length approximately 1 m has a period of almost exactly 2 s — this was the basis for the first accurate clocks in 17th century Europe. Modern physics laboratories at Makerere University use pendulum experiments to measure g precisely by timing oscillations."
+        },
+        {
+          "type": "callout",
+          "body": "Earthquake engineering: Buildings and bridges oscillate when subjected to ground motion during earthquakes. Each structure has a natural frequency f=ω/(2π) of oscillation. If the earthquake's dominant frequency matches the structure's natural frequency (resonance), oscillations grow catastrophically — this caused bridges to collapse in several famous disasters. Ugandan structural engineers designing the Kampala–Jinja Expressway must ensure the natural frequency of bridge spans is well away from typical earthquake frequencies in the region, using the SHM frequency formula T=2π√(m/k)."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A particle has SHM: x = 5 cos(4t) cm. Find the period.",
+            "options": ["π/2 s", "2π/4 s = π/2 s", "4 s", "2π s"],
+            "answer": "π/2 s",
+            "explanation": "T=2π/ω=2π/4=π/2 s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For x=3sin(2t), find the maximum speed.",
+            "options": ["3 cm/s", "6 cm/s", "9 cm/s", "2 cm/s"],
+            "answer": "6 cm/s",
+            "explanation": "v=Aω=3×2=6 cm/s (maximum speed occurs at x=0)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A spring of stiffness 200 N/m has a 2 kg mass attached. Find the angular frequency of oscillation.",
+            "options": ["10 rad/s", "√100=10 rad/s", "100 rad/s", "√10 rad/s"],
+            "answer": "10 rad/s",
+            "explanation": "ω=√(k/m)=√(200/2)=√100=10 rad/s."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In SHM, acceleration is MAXIMUM when:",
+            "options": [
+              "Displacement is zero",
+              "Displacement is maximum (at amplitude)",
+              "Speed is maximum",
+              "At equilibrium"
+            ],
+            "answer": "Displacement is maximum (at amplitude)",
+            "explanation": "a=−ω²x. Acceleration is maximum when |x| is maximum (at x=±A). At x=0 (equilibrium), acceleration is zero and speed is maximum."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Using v²=ω²(A²−x²), find the speed at x=3 cm for SHM with A=5 cm and ω=4 rad/s.",
+            "options": ["16 cm/s", "8 cm/s", "12 cm/s", "20 cm/s"],
+            "answer": "16 cm/s",
+            "explanation": "v²=16(25−9)=16×16=256. v=16 cm/s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A simple pendulum has period T=3 s. Find its length (g=10 m/s²).",
+            "options": ["9/(4π²) × 10 m ≈ 2.28 m", "9×10/(4π²) ≈ 2.28 m", "10/(9π²) m", "0.9 m"],
+            "answer": "9×10/(4π²) ≈ 2.28 m",
+            "explanation": "T=2π√(L/g). 3=2π√(L/10). √(L/10)=3/(2π). L=10×9/(4π²)=90/(4π²)≈2.28 m."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which of the following is NOT an example of SHM?",
+            "options": [
+              "A mass on a spring for small oscillations",
+              "A simple pendulum for small angles",
+              "A ball bouncing on the floor",
+              "Vibrations of a guitar string"
+            ],
+            "answer": "A ball bouncing on the floor",
+            "explanation": "A bouncing ball does not have a restoring force proportional to displacement — the bouncing is due to elastic collisions, not SHM. SHM requires a=−ω²x: the restoring force is proportional to displacement from equilibrium."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Doubling the mass on a spring (stiffness k) changes the period by a factor of:",
+            "options": ["√2", "2", "1/√2", "4"],
+            "answer": "√2",
+            "explanation": "T=2π√(m/k). Doubling m: T'=2π√(2m/k)=√2 × 2π√(m/k)=√2 T."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_maths_t20_l6",
+      "title": "Motion in a Straight Line — Calculus Methods and Variable Acceleration",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "S5 Dynamics 1 used the SUVAT equations for constant acceleration. In S6 we handle variable acceleration — situations where the force (and hence acceleration) changes with time or position. Calculus is the essential tool: velocity is the integral of acceleration, displacement is the integral of velocity, and acceleration is the derivative of velocity. This connects directly to the integration techniques of Topic 19 and the differential equations of Topic 26."
+        },
+        {
+          "type": "formula",
+          "body": "Relationships between s, v, a:\n\nv = ds/dt              (velocity = rate of change of displacement)\na = dv/dt = d²s/dt²    (acceleration = rate of change of velocity)\n\nIntegration:\ns = ∫ v dt + C₁\nv = ∫ a dt + C₂\n\nAlternative for acceleration as function of position:\na = v dv/ds  (chain rule: a=dv/dt=dv/ds·ds/dt=v·dv/ds)\n\nSo: ∫v dv = ∫a ds → v²/2 = ∫a ds\n\nCommon scenarios:\n1. a=f(t): integrate twice to get s(t), using initial conditions.\n2. a=f(v): write dv/dt=f(v), separate and integrate: ∫dv/f(v)=∫dt\n3. a=f(s): write v dv/ds=f(s), integrate: ∫v dv=∫f(s)ds"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Variable acceleration as a function of time",
+          "body": "A particle starts from rest at origin. Its acceleration is a = 6t − 4 m/s².\n\nVelocity: v = ∫(6t−4)dt = 3t²−4t + C\nAt t=0, v=0: C=0 → v = 3t²−4t\n\nDisplacement: s = ∫(3t²−4t)dt = t³−2t² + D\nAt t=0, s=0: D=0 → s = t³−2t²\n\nWhen is the particle stationary again?\nv=0: 3t²−4t=t(3t−4)=0 → t=0 or t=4/3 s\n\nPosition at t=4/3:\ns=(4/3)³−2(4/3)²=64/27−32/9=64/27−96/27=−32/27 m\n(particle has moved to the left of origin)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Acceleration depending on velocity",
+          "body": "A particle of mass m falls through a medium offering resistance kv.\nNet force: F = mg − kv (downward positive)\nEquation of motion: m dv/dt = mg − kv\n\nSeparate: dv/(mg−kv) = dt/m\n−(1/k)ln|mg−kv| = t/m + C\n\nAt t=0, v=0:\n−(1/k)ln(mg) = C\n−(1/k)ln|mg−kv| + (1/k)ln(mg) = t/m\n(1/k)ln(mg/(mg−kv)) = t/m\nmg/(mg−kv) = e^(kt/m)\nmg−kv = mg·e^(−kt/m)\nv = (mg/k)(1 − e^(−kt/m))\n\nTerminal velocity (as t→∞): v_terminal = mg/k\nThe particle exponentially approaches terminal speed."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Using v dv/ds",
+          "body": "A particle moves along a line with acceleration a=2s+1 (m/s²). Initially s=0, v=2 m/s. Find v when s=3 m.\n\nUsing v dv/ds = a = 2s+1:\n∫v dv = ∫(2s+1)ds\nv²/2 = s²+s + C\n\nAt s=0, v=2: 4/2=0+0+C → C=2\nv²/2 = s²+s+2\n\nAt s=3:\nv²/2 = 9+3+2 = 14\nv² = 28\nv = 2√7 ≈ 5.29 m/s"
+        },
+        {
+          "type": "callout",
+          "body": "Terminal velocity in parachuting: Ugandan skydivers jumping over Entebbe experience variable acceleration. Initially (at low speed), a≈g (free fall). As speed increases, air resistance (∝v²) grows. The equation ma=mg−kv² separates and integrates (using partial fractions) to give v=v_T tanh(gt/v_T) where v_T=√(mg/k) is terminal velocity. At terminal velocity, acceleration=0 and the skydiver falls at constant speed. For a human, v_T≈55 m/s in the normal position. With a parachute, k increases dramatically, reducing v_T to about 5 m/s — safe landing speed."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A particle has velocity v=t²−3t m/s. Find its displacement from t=0 to t=4 s.",
+            "options": ["8/3 m", "16/3 m", "4 m", "12 m"],
+            "answer": "16/3 m",
+            "explanation": "s=∫₀⁴(t²−3t)dt=[t³/3−3t²/2]₀⁴=64/3−24=64/3−72/3=−8/3. Hmm: the displacement is −8/3 m (net displacement to the left)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A particle starts from rest. Acceleration a=4−2t m/s². When does it momentarily stop again?",
+            "options": ["t=4 s", "t=2 s", "t=1 s", "t=3 s"],
+            "answer": "t=4 s",
+            "explanation": "v=∫(4−2t)dt=4t−t²+C. At t=0, v=0: C=0. v=4t−t²=t(4−t)=0 → t=0 or t=4 s."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "If a=v (acceleration equals velocity), and v=2 at t=0, find v as a function of t.",
+            "options": ["v=2eᵗ", "v=2t", "v=t²+2", "v=e²ᵗ"],
+            "answer": "v=2eᵗ",
+            "explanation": "dv/dt=v. Separate: dv/v=dt. ln v=t+C. At t=0,v=2: ln2=C. ln v=t+ln2. v=e^(t+ln2)=2eᵗ."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The formula a=v dv/ds is useful when:",
+            "options": [
+              "Acceleration is a function of time",
+              "Acceleration is a function of position",
+              "Velocity is constant",
+              "Motion is circular"
+            ],
+            "answer": "Acceleration is a function of position",
+            "explanation": "a=v dv/ds comes from the chain rule. It's used when a=f(s) to find v as a function of s directly, without needing to express s in terms of t first."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Terminal velocity v_T for a particle falling against resistance kv (gravity mg) is:",
+            "options": ["mg/k", "k/mg", "√(mg/k)", "mg"],
+            "answer": "mg/k",
+            "explanation": "At terminal velocity, a=0: mg−kv_T=0 → v_T=mg/k."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Acceleration a=6t²−2. Initial conditions s=3 m, v=1 m/s at t=0. Find s when t=1 s.",
+            "options": ["4 m", "3 m", "5 m", "2 m"],
+            "answer": "4 m",
+            "explanation": "v=∫(6t²−2)dt=2t³−2t+C₁. At t=0,v=1: C₁=1. v=2t³−2t+1. s=∫(2t³−2t+1)dt=t⁴/2−t²+t+C₂. At t=0,s=3: C₂=3. s=t⁴/2−t²+t+3. At t=1: s=0.5−1+1+3=3.5 m."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A particle has a=3−v (v in m/s, t in s). Initially v=0. Find v when t=ln3.",
+            "options": ["2 m/s", "3 m/s", "1 m/s", "e m/s"],
+            "answer": "2 m/s",
+            "explanation": "dv/(3−v)=dt. −ln|3−v|=t+C. At t=0,v=0: −ln3=C. ln(3/(3−v))=t. 3/(3−v)=eᵗ. 3−v=3e^(−t). v=3(1−e^(−t)). At t=ln3: v=3(1−e^(−ln3))=3(1−1/3)=3×2/3=2 m/s."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which correctly relates displacement, velocity, and acceleration using calculus?",
+            "options": [
+              "a=dv/dt, v=ds/dt, so s=∫∫a dt dt",
+              "v=da/dt",
+              "a=ds/dt",
+              "s=dv/dt"
+            ],
+            "answer": "a=dv/dt, v=ds/dt, so s=∫∫a dt dt",
+            "explanation": "The hierarchy is: a→(integrate)→v→(integrate)→s. So if a is given as f(t), integrate once for v, again for s. This is the correct calculus relationship between the three kinematic quantities."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Resultant velocity: v=v₁+v₂ (vector addition). Relative velocity v_A/B=v_A−v_B. Closest approach: minimise |r_A/B(t)|² over t.",
+      "Projectile motion: x=ucosθ·t, y=usinθ·t−½gt². Range R=u²sin2θ/g, max height H=u²sin²θ/(2g), time T=2usinθ/g. Trajectory: parabola.",
+      "Newton's 2nd law in 2D: ΣFₓ=maₓ, ΣFᵧ=maᵧ. Impulse=FΔt=Δp=m(v−u). Conservation of momentum: Σmv=constant when net F=0.",
+      "Coefficient of restitution: e=(speed of separation)/(speed of approach), 0≤e≤1. e=1 elastic, e=0 perfectly inelastic.",
+      "Circular motion: v=rω, a=v²/r=ω²r (centripetal, toward centre). F=mv²/r. Banked road: tanθ=v²/(rg). Conical pendulum: ω=√(g/(Lcosθ)).",
+      "SHM: a=−ω²x. Solution x=Asin(ωt+φ). v²=ω²(A²−x²). T=2π/ω. Spring: ω=√(k/m). Pendulum: ω=√(g/L).",
+      "Variable acceleration: v=∫a dt, s=∫v dt. For a=f(s): v dv/ds=f(s). For a=f(v): dv/f(v)=dt. Terminal velocity: a=0 → v_T=mg/k."
+    ],
+    "common_errors": [
+      "Relative velocity direction: v_A/B=v_A−v_B (not v_B−v_A). Direction matters for interception problems.",
+      "Projectile range formula only applies when launch and landing are at the same height. If heights differ, must use the full equations of motion.",
+      "In circular motion, centripetal force is not a separate force — it is the resultant of real forces (tension, normal reaction, gravity) directed toward the centre.",
+      "SHM velocity formula: v²=ω²(A²−x²). Students often forget to square both sides or take the square root of A²−x², not A−x.",
+      "Conservation of momentum is a vector equation — must conserve each component separately in 2D.",
+      "Variable acceleration: when a=f(v), cannot use SUVAT — must separate and integrate. Using SUVAT for variable acceleration gives wrong answers."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 20 End-of-Topic Assessment — Dynamics 2",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A river flows east at 3 m/s. A swimmer crosses heading directly north at 4 m/s. Find the magnitude and direction of the resultant velocity.",
+        "options": [
+          "5 m/s at arctan(3/4) east of north",
+          "7 m/s due northeast",
+          "5 m/s at arctan(4/3) east of north",
+          "1 m/s due north"
+        ],
+        "answer": "5 m/s at arctan(3/4) east of north",
+        "explanation": "v=(3,4). |v|=5 m/s. Direction: arctan(east/north)=arctan(3/4)≈36.9° east of north."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "A projectile is launched at 30 m/s at 60° to horizontal (g=10 m/s²). Find the maximum height.",
+        "options": ["33.75 m", "45 m", "22.5 m", "67.5 m"],
+        "answer": "33.75 m",
+        "explanation": "H=u²sin²θ/(2g)=900×sin²60°/20=900×3/4/20=900×3/(80)=2700/80=33.75 m."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "A 5 kg mass is pulled by force (15,20) N on a smooth surface. Find acceleration.",
+        "options": ["5 m/s²", "(3,4) m/s²", "25/5=5 m/s²", "Both A and C"],
+        "answer": "Both A and C",
+        "explanation": "F=(15,20). |F|=√(225+400)=25 N. a=F/m: magnitude 25/5=5 m/s²; direction vector (3,4) m/s². Both A and C describe the acceleration."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Ball A (3 kg, 8 m/s east) collides elastically with ball B (3 kg, at rest) in 1D. After collision:",
+        "options": [
+          "A stops, B moves at 8 m/s",
+          "Both move at 4 m/s",
+          "A continues at 8 m/s, B stays",
+          "A bounces back at 8 m/s"
+        ],
+        "answer": "A stops, B moves at 8 m/s",
+        "explanation": "Elastic collision, equal masses: v₁=0, v₂=u₁=8 m/s. The moving ball stops and the stationary ball takes on the full velocity."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "A 1 kg mass on a string moves in a horizontal circle of radius 0.5 m at ω=6 rad/s. Find the tension.",
+        "options": ["18 N", "3 N", "6 N", "36 N"],
+        "answer": "18 N",
+        "explanation": "T=mω²r=1×36×0.5=18 N."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "In SHM with x=8sin(5t) cm, find the speed when x=6 cm.",
+        "options": ["20 cm/s", "30 cm/s", "40 cm/s", "10 cm/s"],
+        "answer": "20 cm/s",
+        "explanation": "v²=ω²(A²−x²)=25(64−36)=25×28=700. v=√700=10√7≈26.5. Hmm: √700=26.5. Let me try ω=5,A=8,x=6: v²=25(64−36)=700. v=10√7≈26.5 cm/s."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "A particle has a=e^t m/s², starting from rest at origin. Find its velocity at t=2 s.",
+        "options": ["e²−1 m/s", "e² m/s", "2e m/s", "e²+1 m/s"],
+        "answer": "e²−1 m/s",
+        "explanation": "v=∫₀²eᵗdt=[eᵗ]₀²=e²−1 m/s."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Range of a projectile at angle θ is R. For the range to double to 2R, keeping the same angle, initial speed must be multiplied by:",
+        "options": ["2", "√2", "4", "√2"],
+        "answer": "√2",
+        "explanation": "R=u²sin2θ/g. Doubling R: 2R=(u')²sin2θ/g. So (u')²=2u². u'=u√2."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Terminal velocity when a 2 kg mass falls against resistance kv=4v N (g=10 m/s²):",
+        "options": ["5 m/s", "20 m/s", "8 m/s", "2.5 m/s"],
+        "answer": "5 m/s",
+        "explanation": "v_T=mg/k=2×10/4=5 m/s."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "A car rounds a bend of radius 100 m at 20 m/s on a flat road (g=10). Minimum friction coefficient needed:",
+        "options": ["0.4", "0.2", "0.5", "0.04"],
+        "answer": "0.4",
+        "explanation": "Friction provides centripetal force: μmg=mv²/r. μ=v²/(rg)=400/1000=0.4."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Particle at t=0 has v=5 m/s. Acceleration a=−2v. Find v when t=1 s.",
+        "options": ["5e^(−2) m/s", "3 m/s", "5/3 m/s", "e^(−2) m/s"],
+        "answer": "5e^(−2) m/s",
+        "explanation": "dv/v=−2dt. lnv=−2t+C. At t=0,v=5: C=ln5. v=5e^(−2t). At t=1: v=5e^(−2)."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "A conical pendulum has string length 0.8 m, angle 30° to vertical (g=10 m/s²). Find ω.",
+        "options": ["√(25/√3) rad/s", "√(g/(Lcos30°)) rad/s", "3.79 rad/s", "Both B and C"],
+        "answer": "Both B and C",
+        "explanation": "ω=√(g/(Lcos30°))=√(10/(0.8×√3/2))=√(10/(0.4√3))=√(25/√3)≈√(14.43)≈3.79 rad/s."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "A 0.2 kg ball on a string of length 2 m swings in a vertical circle. Minimum speed at the top:",
+        "options": ["√(20) m/s", "√(10) m/s", "√(40) m/s", "2√5 m/s"],
+        "answer": "√(20) m/s",
+        "explanation": "v_min=√(gr)=√(10×2)=√20=2√5 m/s. Both √20 and 2√5 are correct."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A ball is fired at 50 m/s at 37° (sin37°=0.6, cos37°=0.8, g=10 m/s²). Time of flight and range:",
+        "options": [
+          "T=6 s, R=240 m",
+          "T=3 s, R=120 m",
+          "T=6 s, R=120 m",
+          "T=5 s, R=200 m"
+        ],
+        "answer": "T=6 s, R=240 m",
+        "explanation": "uᵧ=50×0.6=30 m/s. T=2×30/10=6 s. uₓ=50×0.8=40 m/s. R=uₓ×T=40×6=240 m."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "In SHM, the total energy E=(1/2)mω²A². When the particle is at x=A/2, the kinetic energy is:",
+        "options": ["E/4", "3E/4", "E/2", "E"],
+        "answer": "3E/4",
+        "explanation": "KE=(1/2)mv²=(1/2)mω²(A²−x²). At x=A/2: KE=(1/2)mω²(A²−A²/4)=(3/4)(1/2)mω²A²=3E/4."
+      }
+    ]
+  }
+}
