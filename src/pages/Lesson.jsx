@@ -3,9 +3,10 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { progressDB, bookmarkDB, notesDB } from '../db/progressDB.js'
 import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
-import { SoundEngine } from '../utils/soundEngine.js'
+import { SoundEngine, Speaker } from '../utils/soundEngine.js'
+import { AmbientEngine, AMBIENT_SOUNDS } from '../utils/ambientSounds.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
-import { invalidateProfileCache } from '../ai/chatbot.js'
+import { invalidateProfileCache } from '../ai/cache.js'
 import { LessonSkeleton } from '../components/Skeletons.jsx'
 
 // Curriculum file map — used to look up lessons when navigating directly by URL
@@ -47,9 +48,16 @@ export default function Lesson(){
   const [notesOpen,setNotesOpen]=useState(false)
   const [notesSaved,setNotesSaved]=useState(false)
   const [progressDone,setProgressDone]=useState(false)
+  const [speaking,setSpeaking]=useState(false)
+  const [handsFree,setHandsFree]=useState(false)
+  const [showAmbient,setShowAmbient]=useState(false)
+  const [ambientId,setAmbientId]=useState(AmbientEngine.lastUsed()||null)
   const saveTimer=useRef(null)
   const startTime=useRef(Date.now())
   const subject=state?.subject||fallbackSubject
+
+  // Stop TTS + ambient when leaving lesson
+  useEffect(()=>{ return ()=>{ Speaker.stop(); setSpeaking(false); AmbientEngine.stop() } },[])
   const topicId=state?.topicId||fallbackTopicId
 
   // Fallback: if page was loaded directly via URL with no router state, scan curriculum
@@ -113,6 +121,58 @@ export default function Lesson(){
     SoundEngine.tap()
     const result=await bookmarkDB.toggle(student.id,lesson.id)
     setIsBookmarked(result)
+  }
+
+  function startHandsFree(){
+    if(!lesson)return
+    setHandsFree(true)
+    // Build lesson text
+    const parts=[`${lesson.title}. `]
+    ;(lesson.content||[]).forEach(item=>{ if(item.body) parts.push(item.body) })
+    const fullText=parts.join('. ')
+    Speaker.speak(fullText)
+    setSpeaking(true)
+    // When lesson finishes reading, auto-read first quiz question
+    const poll=setInterval(()=>{
+      if(!Speaker.isSpeaking()){
+        clearInterval(poll)
+        setSpeaking(false)
+        if(lesson.quiz?.questions?.length>0){
+          const q=lesson.quiz.questions[0]
+          const qText=`Lesson complete! Now let us do the quiz. Question 1. ${q.question}. A: ${q.options[0]}. B: ${q.options[1]}. C: ${q.options[2]}. D: ${q.options[3]}.`
+          setTimeout(()=>{
+            Speaker.speak(qText)
+          },1000)
+        }
+      }
+    },600)
+  }
+
+  function stopHandsFree(){
+    Speaker.stop(); setSpeaking(false); setHandsFree(false)
+  }
+
+  function toggleAmbient(id){
+    const isNowPlaying = AmbientEngine.toggle(id)
+    setAmbientId(isNowPlaying ? id : null)
+  }
+
+  function speakLesson(){
+    if(!lesson)return
+    if(speaking){ Speaker.stop(); setSpeaking(false); return }
+    // Build full text from all content items
+    const parts=[lesson.title]
+    ;(lesson.content||[]).forEach(item=>{
+      if(item.body) parts.push(item.body)
+      if(item.title) parts.push(item.title)
+    })
+    const fullText=parts.join('. ')
+    Speaker.speak(fullText)
+    setSpeaking(true)
+    // Poll until done
+    const poll=setInterval(()=>{
+      if(!Speaker.isSpeaking()){ setSpeaking(false); clearInterval(poll) }
+    },500)
   }
 
   function renderContent(item,i){
@@ -182,6 +242,32 @@ export default function Lesson(){
               style={notesOpen?{color:'#F59E0B'}:{}}>
               📝 Notes
             </button>
+            {/* Ambient sound toggle */}
+            {AmbientEngine.isSupported()&&(
+              <button onClick={()=>{SoundEngine.tap();setShowAmbient(a=>!a)}}
+                title="Study background sounds"
+                className="text-xl transition-all active:scale-125"
+                style={{color:ambientId?'#A78BFA':'#475569'}}>
+                {ambientId?'🎵':'🎶'}
+              </button>
+            )}
+            {/* Hands-free mode */}
+            {Speaker.isSupported()&&lesson?.quiz?.questions?.length>0&&!handsFree&&(
+              <button onClick={()=>{SoundEngine.tap();startHandsFree()}}
+                title="Hands-free: reads lesson then quizzes you"
+                className="text-xl transition-all active:scale-125"
+                style={{color:'#64748B'}}>
+                🎧
+              </button>
+            )}
+            {Speaker.isSupported()&&(
+              <button onClick={speakLesson}
+                title={speaking?'Stop reading':'Read lesson aloud'}
+                className="text-xl transition-all active:scale-125"
+                style={{color:speaking?'#14B8A6':'#475569'}}>
+                {speaking?'⏹':'🔊'}
+              </button>
+            )}
             <button onClick={toggleBookmark}
               className={`text-xl transition-all active:scale-125 ${isBookmarked?'':'text-slate-600'}`}
               style={isBookmarked?{color:'#F59E0B'}:{}}>
@@ -196,6 +282,71 @@ export default function Lesson(){
           {scrollPct>5&&<span className="text-xs text-slate-500">{scrollPct}% read</span>}
         </div>
       </div>
+
+      {/* ── Hands-Free mode active banner ── */}
+      {handsFree&&(
+        <div className="mx-5 mt-3 rounded-2xl px-4 py-3 flex items-center gap-3"
+          style={{background:'rgba(13,148,136,0.12)',border:'1px solid rgba(13,148,136,0.35)'}}>
+          <div className="flex-1">
+            <p className="text-sm font-bold" style={{color:'#5EEAD4'}}>🎧 Hands-Free Mode Active</p>
+            <p className="text-xs mt-0.5" style={{color:'#64748B'}}>Put your phone down — I will read the lesson then quiz you automatically.</p>
+          </div>
+          <button onClick={stopHandsFree}
+            className="px-3 py-1.5 rounded-xl text-xs font-bold"
+            style={{background:'rgba(239,68,68,0.15)',color:'#F87171',border:'1px solid rgba(239,68,68,0.3)'}}>
+            Stop
+          </button>
+        </div>
+      )}
+
+      {/* ── Ambient sound drawer ── */}
+      {showAmbient&&(
+        <div className="mx-5 mt-3 rounded-2xl overflow-hidden"
+          style={{background:'#131829',border:'1px solid rgba(124,58,237,0.3)'}}>
+          <div className="flex items-center justify-between px-4 py-3 border-b"
+            style={{borderColor:'rgba(124,58,237,0.2)'}}>
+            <div>
+              <span className="text-sm font-bold text-white">🎵 Study Sounds</span>
+              <p className="text-xs mt-0.5" style={{color:'#64748B'}}>Play in background while you read</p>
+            </div>
+            {ambientId&&(
+              <button onClick={()=>toggleAmbient(ambientId)}
+                className="text-xs px-2 py-1 rounded-lg"
+                style={{background:'rgba(239,68,68,0.15)',color:'#F87171'}}>
+                Stop
+              </button>
+            )}
+          </div>
+          <div className="grid grid-cols-4 gap-1 p-3">
+            {AMBIENT_SOUNDS.map(s=>(
+              <button key={s.id} onClick={()=>toggleAmbient(s.id)}
+                className="flex flex-col items-center gap-1 py-3 px-1 rounded-xl transition-all active:scale-95"
+                style={{
+                  background:ambientId===s.id?'rgba(124,58,237,0.25)':'rgba(255,255,255,0.04)',
+                  border:`1px solid ${ambientId===s.id?'rgba(124,58,237,0.6)':'rgba(255,255,255,0.08)'}`,
+                }}>
+                <span style={{fontSize:22}}>{s.emoji}</span>
+                <span className="text-center leading-tight"
+                  style={{fontSize:9,color:ambientId===s.id?'#A78BFA':'#64748B',fontWeight:ambientId===s.id?700:400}}>
+                  {s.label.split(' ')[0]}
+                </span>
+                {ambientId===s.id&&<div className="w-1.5 h-1.5 rounded-full" style={{background:'#A78BFA'}}/>}
+              </button>
+            ))}
+          </div>
+          {ambientId&&(
+            <div className="px-4 pb-3">
+              <div className="flex items-center gap-3">
+                <span className="text-xs" style={{color:'#64748B'}}>Vol</span>
+                <input type="range" min="0" max="1" step="0.05"
+                  defaultValue={AmbientEngine.getVolume()}
+                  onChange={e=>AmbientEngine.setVolume(parseFloat(e.target.value))}
+                  className="flex-1 h-1" style={{accentColor:'#7C3AED'}}/>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Notes panel */}
       {notesOpen&&(
