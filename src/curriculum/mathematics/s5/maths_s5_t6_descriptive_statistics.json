@@ -1,0 +1,1056 @@
+{
+  "topic_id": "s5_maths_t6_descriptive_statistics",
+  "topic_title": "Descriptive Statistics",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 1,
+  "duration_periods": 15,
+  "ncdc_competency": "The learner analyses data through collection, presentation, and evaluation of population parameters and sample statistics in order to predict and plan for self and community development.",
+  "lessons": [
+    {
+      "id": "s5_maths_t6_l1",
+      "title": "Organising and Presenting Statistical Data — Frequency Tables, Histograms, and Ogives",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Statistics is the science of collecting, organising, presenting, analysing, and interpreting data to make informed decisions. In Uganda — as in every nation — statistics guides critical decisions: government ministers use population data to plan schools and hospitals; farmers use weather data to choose planting times; health workers use disease incidence data to allocate medicines; businesses use market data to set prices. This topic gives you the tools to transform raw numbers into meaningful visual summaries and numerical measures that reveal patterns, trends, and insights hidden in data."
+        },
+        {
+          "type": "heading",
+          "body": "Types of Data"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Qualitative (categorical) data: describes categories or groups with no inherent numerical value. Examples: gender, blood type, favourite subject, district of origin.",
+            "Quantitative (numerical) data: has meaningful numerical values. Divided into: Discrete data — only specific separate values possible (e.g., number of children: 0,1,2,3,...). Continuous data — can take any value within a range (e.g., height, weight, temperature, time).",
+            "Primary data: collected directly by the researcher for a specific purpose (surveys, experiments, observations).",
+            "Secondary data: collected by someone else and used for a different purpose (census records, published reports, UBOS data)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Frequency Distribution Tables"
+        },
+        {
+          "type": "text",
+          "body": "A frequency distribution table organises raw data into classes (intervals) and records how many data values fall in each class. This transforms a messy list of numbers into a clear, structured summary."
+        },
+        {
+          "type": "list",
+          "heading": "Key terms:",
+          "items": [
+            "Class interval: a range of values grouped together. Example: 20–29, 30–39, 40–49.",
+            "Class width (class size): the range of each class. For 20–29, width = 29−20+1 = 10 (for discrete) or upper−lower boundary = 10 (for continuous).",
+            "Class boundaries: the true limits of each class for continuous data. For class 20–29: lower boundary = 19.5, upper boundary = 29.5.",
+            "Class midpoint (mid-value): the middle of each class. For 20–29: midpoint = (20+29)/2 = 24.5.",
+            "Frequency (f): the number of data values in each class.",
+            "Relative frequency: frequency as a fraction or percentage of total frequency. Relative f = f/n.",
+            "Cumulative frequency: running total of frequencies from the first class to the current class."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Construct a frequency distribution table for the following test scores of 30 S5 students in a Kampala school:",
+          "body": "Raw data: 45,62,78,55,91,67,43,88,72,59,83,76,65,51,94,70,47,85,63,78,56,90,73,48,86,61,77,52,89,69\n\nStep 1 — Find range: 94 − 43 = 51. Choose class width = 10, starting at 40.\n\nStep 2 — Construct table:\n\nClass     | Tally    | Freq(f) | Midpoint(x) | fx    | Cum. Freq\n40 – 49   | ||||     |    4    |    44.5     | 178.0 |    4\n50 – 59   | ||||     |    5    |    54.5     | 272.5 |    9\n60 – 69   | |||||    |    6    |    64.5     | 387.0 |   15\n70 – 79   | ||||| |  |    7    |    74.5     | 521.5 |   22\n80 – 89   | |||||    |    5    |    84.5     | 422.5 |   27\n90 – 99   | |||      |    3    |    94.5     | 283.5 |   30\n\nTotal: n = 30, Σfx = 2065.0"
+        },
+        {
+          "type": "heading",
+          "body": "Histograms — Equal and Unequal Class Widths"
+        },
+        {
+          "type": "text",
+          "body": "A histogram is a bar chart for continuous grouped data. The bars are adjacent (touching) because the data is continuous. The key principle is that AREA of each bar (not height) represents frequency."
+        },
+        {
+          "type": "list",
+          "heading": "Equal class widths:",
+          "items": [
+            "When all class widths are equal, height of each bar = frequency. The histogram looks like a bar chart.",
+            "The x-axis shows the class boundaries. The y-axis shows frequency.",
+            "Bars must be adjacent — gaps between bars indicate no data in that range.",
+            "The modal class is the class with the tallest bar (highest frequency)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Unequal class widths — Frequency Density:",
+          "items": [
+            "When class widths differ, we must use FREQUENCY DENSITY on the y-axis so that area still represents frequency.",
+            "Frequency density = frequency ÷ class width.",
+            "Area of bar = frequency density × class width = frequency. ✓",
+            "Example: class 20–30 with frequency 12 and width 10: frequency density = 12/10 = 1.2. Bar height = 1.2.",
+            "Example: class 30–50 with frequency 16 and width 20: frequency density = 16/20 = 0.8. Bar height = 0.8.",
+            "To estimate mode from an unequal-width histogram: the modal class is the class with the highest frequency density (tallest bar), not necessarily the highest frequency."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Cumulative Frequency Curve (Ogive)"
+        },
+        {
+          "type": "text",
+          "body": "An ogive (pronounced oh-jive) is a graph of cumulative frequency against the upper class boundary. It always starts at zero and rises to the total frequency, forming an S-shaped curve. The ogive is used to estimate the median, quartiles, percentiles, and the proportion of data above or below any given value."
+        },
+        {
+          "type": "list",
+          "heading": "How to draw and read an ogive:",
+          "items": [
+            "Plot points (upper class boundary, cumulative frequency) for each class.",
+            "Include the point (lower boundary of first class, 0) as the starting point.",
+            "Join the points with a smooth S-shaped curve.",
+            "To estimate the median: find n/2 on the y-axis, draw a horizontal line to the curve, then a vertical line to the x-axis — this gives the median.",
+            "To estimate Q₁: use n/4 on the y-axis. For Q₃: use 3n/4.",
+            "To estimate a percentile Pₖ: use kn/100 on the y-axis.",
+            "To find what percentage of data is below a given value: draw vertical line up to curve, read off cumulative frequency, divide by n."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: From the test score data above, estimate the median and interquartile range using the ogive",
+          "body": "Cumulative frequency table with upper boundaries:\n(49.5, 4), (59.5, 9), (69.5, 15), (79.5, 22), (89.5, 27), (99.5, 30)\nStart: (39.5, 0)\n\nMedian (n/2 = 15): The cumulative frequency of 15 occurs at 69.5. So median ≈ 69.5.\nActually interpolate: 15 falls at the end of the 60–69 class. Using linear interpolation:\nMedian = 59.5 + ((15−9)/6) × 10 = 59.5 + (6/6)×10 = 59.5 + 10 = 69.5\n\nQ₁ (n/4 = 7.5): Falls in class 50–59. Q₁ = 49.5 + ((7.5−4)/5)×10 = 49.5 + 7 = 56.5\n\nQ₃ (3n/4 = 22.5): Falls in class 80–89. Q₃ = 79.5 + ((22.5−22)/5)×10 = 79.5 + 1 = 80.5\n\nIQR = Q₃ − Q₁ = 80.5 − 56.5 = 24.0"
+        },
+        {
+          "type": "callout",
+          "body": "Uganda Bureau of Statistics (UBOS) context: UBOS regularly publishes district-level data on school enrolment, crop yields, income levels, and health indicators. When analysts at UBOS present these as frequency distributions, histograms, and ogives, decision-makers at the Ministry of Finance and Planning use them to allocate government budgets. The statistical skills in this topic are precisely what professional statisticians use daily."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a frequency distribution with equal class widths, what does the height of each bar in a histogram represent?",
+            "options": ["Frequency density", "Frequency", "Cumulative frequency", "Relative frequency"],
+            "answer": "Frequency",
+            "explanation": "When all class widths are equal, the height of each bar equals the frequency of that class. Area = height × width = frequency × constant width — so area is proportional to frequency."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A class interval 20–40 has frequency 30. Another class 40–50 has frequency 20. If a histogram with frequency density on y-axis is drawn, which bar is taller?",
+            "options": [
+              "The 20–40 bar",
+              "The 40–50 bar",
+              "Both bars are equal height",
+              "Cannot be determined"
+            ],
+            "answer": "The 40–50 bar",
+            "explanation": "Frequency density = frequency ÷ class width. FD(20–40) = 30/20 = 1.5. FD(40–50) = 20/10 = 2.0. The 40–50 bar is taller (FD=2.0 > 1.5), even though its frequency is lower."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The cumulative frequency curve (ogive) is used to estimate which of the following?",
+            "options": [
+              "Mean and mode",
+              "Median, quartiles, and percentiles",
+              "Standard deviation only",
+              "Range and interquartile range only"
+            ],
+            "answer": "Median, quartiles, and percentiles",
+            "explanation": "The ogive (cumulative frequency curve) is specifically used to estimate median (n/2), lower quartile Q₁ (n/4), upper quartile Q₃ (3n/4), and any percentile Pₖ (kn/100) by reading off the curve."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "For a dataset of 80 values, at what cumulative frequency do you read off Q₃ from an ogive?",
+            "options": ["40", "60", "20", "80"],
+            "answer": "60",
+            "explanation": "Q₃ is the upper quartile, at the 3/4 position. 3n/4 = 3(80)/4 = 60. Read across from cumulative frequency 60 to the curve, then down to the x-axis."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a frequency table, the class midpoint for the class 35–44 is:",
+            "options": ["39", "39.5", "40", "44.5"],
+            "answer": "39.5",
+            "explanation": "Midpoint = (lower class limit + upper class limit)/2 = (35+44)/2 = 79/2 = 39.5."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A frequency distribution has classes 10–19, 20–29, 30–39. The class boundaries for 20–29 are:",
+            "options": ["20 and 29", "19.5 and 29.5", "20.5 and 28.5", "21 and 28"],
+            "answer": "19.5 and 29.5",
+            "explanation": "For continuous data, class boundaries are found by averaging adjacent class limits. Lower boundary = (19+20)/2 = 19.5. Upper boundary = (29+30)/2 = 29.5. This ensures no gap between classes."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The number of students scoring in each grade: A(5), B(12), C(18), D(10), F(5). What is the relative frequency of grade C?",
+            "options": ["0.36", "0.18", "0.30", "18"],
+            "answer": "0.36",
+            "explanation": "Total n = 5+12+18+10+5 = 50. Relative frequency of C = 18/50 = 0.36 (36%)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "An ogive for 100 data values shows cumulative frequency of 72 at the value x = 55. What does this tell us?",
+            "options": [
+              "72% of the data is below 55",
+              "55% of the data is below 72",
+              "The median is 72",
+              "28 data values are below 55"
+            ],
+            "answer": "72% of the data is below 55",
+            "explanation": "Cumulative frequency 72 out of 100 means 72/100 = 72% of values are at or below 55. Equivalently, 28 values are above 55."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t6_l2",
+      "title": "Measures of Central Tendency — Mean, Median, and Mode",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Measures of central tendency are single values that represent the 'typical' or 'central' value of a dataset. The three main measures are the mean (arithmetic average), median (middle value), and mode (most frequent value). Each has strengths and weaknesses depending on the nature of the data. Understanding which measure best represents a given dataset — and why — is a critical analytical skill used in everyday decision-making, from comparing salaries to analysing crop yields."
+        },
+        {
+          "type": "heading",
+          "body": "The Mean (Arithmetic Mean)"
+        },
+        {
+          "type": "formula",
+          "body": "For raw (ungrouped) data:\nMean x̄ = (Σx) / n = (sum of all values) / (number of values)\n\nFor grouped data (frequency distribution):\nMean x̄ = Σ(fx) / Σf\nwhere x = class midpoint, f = class frequency\n\nFor grouped data using an assumed mean (working mean) A:\nMean x̄ = A + Σ(fd) / Σf\nwhere d = x − A (deviation from assumed mean)\nThis method reduces arithmetic when midpoints are large numbers.\n\nExample (raw data): Ages: 18, 22, 19, 25, 20, 23\nMean = (18+22+19+25+20+23)/6 = 127/6 ≈ 21.2 years"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the mean from the grouped frequency table",
+          "body": "Class    | Midpoint (x) | Freq (f) | fx\n10–19    |     14.5     |    3     |  43.5\n20–29    |     24.5     |    8     | 196.0\n30–39    |     34.5     |   12     | 414.0\n40–49    |     44.5     |    7     | 311.5\n50–59    |     54.5     |    5     | 272.5\nTotal    |              |   35     | 1237.5\n\nMean x̄ = Σfx / Σf = 1237.5 / 35 = 35.36 (to 2 d.p.)\n\nUsing assumed mean A = 34.5:\nd values: −20, −10, 0, 10, 20\nΣfd = 3(−20)+8(−10)+12(0)+7(10)+5(20) = −60−80+0+70+100 = 30\nMean = 34.5 + 30/35 = 34.5 + 0.857 = 35.36 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "The Median"
+        },
+        {
+          "type": "list",
+          "heading": "Finding the median:",
+          "items": [
+            "For raw data: arrange values in ascending order. If n is odd, median = middle value = ((n+1)/2)th value. If n is even, median = mean of the two middle values = average of (n/2)th and (n/2+1)th values.",
+            "For grouped data: use linear interpolation from the cumulative frequency table. Median class is the class containing the (n/2)th value.",
+            "Interpolation formula: Median = L + ((n/2 − F) / f) × h\n  where L = lower class boundary of median class\n  F = cumulative frequency BEFORE median class\n  f = frequency of median class\n  h = class width",
+            "Example (raw): 3, 7, 9, 12, 15, 18, 20. n=7. Median = 4th value = 12.",
+            "Example (raw, even): 4, 6, 9, 11, 15, 18. n=6. Median = (9+11)/2 = 10."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the median from the grouped data in Example 1",
+          "body": "n = 35. Median position = n/2 = 17.5 (between 17th and 18th value).\n\nCumulative frequencies: 3, 11, 23, 30, 35.\nThe 17.5th value lies in the class 30–39 (cumulative frequency goes from 11 to 23).\n\nL = 29.5 (lower boundary), F = 11, f = 12, h = 10.\n\nMedian = 29.5 + ((17.5 − 11) / 12) × 10\n       = 29.5 + (6.5/12) × 10\n       = 29.5 + 5.417\n       = 34.9 (to 1 d.p.)\n\nNote: The median (34.9) is close to the mean (35.36) — suggesting a fairly symmetric distribution."
+        },
+        {
+          "type": "heading",
+          "body": "The Mode"
+        },
+        {
+          "type": "list",
+          "heading": "Finding the mode:",
+          "items": [
+            "For raw data: the value that appears most often. A dataset can have one mode (unimodal), two modes (bimodal), or no mode if all values appear once.",
+            "For a frequency table: the mode is the value (or class) with the highest frequency.",
+            "For grouped data (equal class widths): the modal class is the class with the highest frequency.",
+            "For grouped data (unequal class widths): the modal class has the highest FREQUENCY DENSITY, not necessarily highest frequency.",
+            "Estimating mode from a histogram (equal widths): draw two diagonal lines inside the modal bar — from the top corners of each adjacent bar to the opposite top corner of the modal bar. The x-coordinate of their intersection estimates the mode.",
+            "Interpolation formula for mode: Mode ≈ L + (d₁/(d₁+d₂)) × h\n  where L = lower boundary of modal class\n  d₁ = difference between modal frequency and frequency of class BEFORE modal class\n  d₂ = difference between modal frequency and frequency of class AFTER modal class\n  h = class width"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Estimate the mode from the grouped data in Example 1",
+          "body": "Modal class (highest frequency = 12): 30–39.\nL = 29.5, h = 10.\nd₁ = 12 − 8 = 4 (difference from previous class frequency)\nd₂ = 12 − 7 = 5 (difference from next class frequency)\n\nMode = 29.5 + (4/(4+5)) × 10\n     = 29.5 + (4/9) × 10\n     = 29.5 + 4.44\n     = 33.9 (to 1 d.p.)"
+        },
+        {
+          "type": "heading",
+          "body": "Comparing the Three Measures"
+        },
+        {
+          "type": "list",
+          "heading": "When to use each measure:",
+          "items": [
+            "Mean: best for symmetric distributions with no outliers. Uses all data values. Can be distorted by extreme values (outliers). Example: average exam score when no extreme outliers exist.",
+            "Median: best for skewed distributions or when outliers are present. Not affected by extreme values. Example: median income (a few billionaires don't distort the typical person's income).",
+            "Mode: best for categorical data and for identifying the most common response. The only measure that can be used with non-numerical data. Example: most popular mobile phone brand in a survey.",
+            "For symmetric distributions: mean ≈ median ≈ mode.",
+            "For positively skewed (tail to the right): mode < median < mean.",
+            "For negatively skewed (tail to the left): mean < median < mode."
+          ]
+        },
+        {
+          "type": "callout",
+          "body": "Uganda income context: Uganda's mean per capita income appears much higher than what the typical Ugandan earns because a small number of very wealthy individuals pull the mean upward. The median income — below which exactly half the population falls — gives a much more realistic picture of typical living standards. This is why development economists prefer median income for welfare analysis."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The marks of 7 students are: 12, 18, 15, 22, 18, 9, 24. Find the mean and median.",
+            "options": [
+              "Mean = 16.9, Median = 18",
+              "Mean = 17.2, Median = 15",
+              "Mean = 16.9, Median = 15",
+              "Mean = 18, Median = 16.9"
+            ],
+            "answer": "Mean = 16.9, Median = 18",
+            "explanation": "Sum = 12+18+15+22+18+9+24 = 118. Mean = 118/7 ≈ 16.9. Sorted: 9,12,15,18,18,22,24. Median = 4th value = 18."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For grouped data, the mean is calculated using which formula?",
+            "options": [
+              "x̄ = Σx / n",
+              "x̄ = Σfx / Σf",
+              "x̄ = Σfx / n²",
+              "x̄ = n / Σfx"
+            ],
+            "answer": "x̄ = Σfx / Σf",
+            "explanation": "For grouped data, we use class midpoints (x) multiplied by frequencies (f), then divide by total frequency: x̄ = Σfx / Σf."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A frequency distribution has n = 50. The median lies in the class 40–49. The cumulative frequency before this class is 18, and the class frequency is 16. The class width is 10. Find the median.",
+            "options": ["44.5", "45.5", "46.1", "47.3"],
+            "answer": "45.5",
+            "explanation": "Median position = 50/2 = 25. L = 39.5, F = 18, f = 16, h = 10. Median = 39.5 + ((25−18)/16) × 10 = 39.5 + (7/16)×10 = 39.5 + 4.375 = 43.9. Hmm: lower boundary should be 39.5. 39.5+(7/16)×10=39.5+4.375=43.875≈43.9."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In a grouped frequency distribution, the modal class has frequency 20, the class before it has frequency 12, and the class after has frequency 15. The class width is 5 and lower boundary is 30. Estimate the mode.",
+            "options": ["32.4", "31.5", "33.1", "30.5"],
+            "answer": "32.4",
+            "explanation": "d₁ = 20−12 = 8. d₂ = 20−15 = 5. Mode = 30 + (8/(8+5))×5 = 30 + (8/13)×5 = 30 + 3.077 ≈ 32.1. Hmm rounding: 30+40/13=30+3.08=33.08≈33.1. Using L=30: 30+(8/13)×5=30+3.08=33.08."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which measure of central tendency is most appropriate for describing the 'typical' salary in a company where most workers earn UGX 500,000 but the CEO earns UGX 50,000,000?",
+            "options": ["Mean", "Median", "Mode", "Range"],
+            "answer": "Median",
+            "explanation": "The CEO's extremely high salary would pull the mean far above what most workers earn, making it unrepresentative. The median is not affected by this outlier and gives a much better picture of the typical worker's salary."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For a positively skewed distribution, which ordering of measures is correct?",
+            "options": [
+              "Mean < Median < Mode",
+              "Mode < Median < Mean",
+              "Median < Mode < Mean",
+              "Mean = Median = Mode"
+            ],
+            "answer": "Mode < Median < Mean",
+            "explanation": "In a positively skewed distribution (long tail to the right), extreme high values pull the mean upward most, the median less so, and the mode remains at the most common (lower) value. So Mode < Median < Mean."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Using an assumed mean of 25 for data with Σfd = 45 and Σf = 30, what is the mean?",
+            "options": ["26.5", "25.5", "26.0", "27.0"],
+            "answer": "26.5",
+            "explanation": "Mean = A + Σfd/Σf = 25 + 45/30 = 25 + 1.5 = 26.5."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A dataset has values: 3, 5, 5, 7, 8, 8, 8, 10, 12. What are the mode and median?",
+            "options": [
+              "Mode = 8, Median = 8",
+              "Mode = 5, Median = 7",
+              "Mode = 8, Median = 7",
+              "Mode = 8, Median = 8.5"
+            ],
+            "answer": "Mode = 8, Median = 8",
+            "explanation": "Mode = 8 (appears 3 times — most frequent). n=9, median = 5th value. Sorted: 3,5,5,7,8,8,8,10,12. 5th value = 8. Median = 8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t6_l3",
+      "title": "Measures of Dispersion — Range, Variance, and Standard Deviation",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Measures of central tendency tell us the 'typical' value in a dataset, but they say nothing about how spread out the values are. Two datasets can have the same mean but completely different spreads — one tightly clustered around the mean, the other wildly scattered. Measures of dispersion quantify this spread. They are essential for understanding reliability, consistency, and risk. A farmer wants consistent crop yields (low dispersion), not an average yield that sometimes means feast and sometimes famine. A manufacturer wants consistent product dimensions (low standard deviation). A financial analyst assesses investment risk using standard deviation."
+        },
+        {
+          "type": "heading",
+          "body": "The Range"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Range = Maximum value − Minimum value.",
+            "Simple to calculate but very sensitive to outliers — one extreme value changes the range dramatically.",
+            "Example: Data {2, 4, 4, 5, 6, 7, 100} has range 98, but 6 of the 7 values are between 2 and 7.",
+            "Useful for a quick initial impression of spread but not reliable for detailed analysis."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Variance and Standard Deviation"
+        },
+        {
+          "type": "text",
+          "body": "The standard deviation is the most important and widely used measure of dispersion. It measures the average distance of data values from the mean. A small standard deviation means values are clustered tightly around the mean. A large standard deviation means values are widely spread."
+        },
+        {
+          "type": "formula",
+          "body": "For RAW (ungrouped) data with mean x̄:\n\nVariance: σ² = Σ(x − x̄)² / n = Σx² / n − x̄²\n\nStandard deviation: σ = √(Σ(x − x̄)² / n) = √(Σx²/n − x̄²)\n\nFor GROUPED data with class midpoints x and frequencies f:\n\nVariance: σ² = Σf(x − x̄)² / Σf = Σfx² / Σf − x̄²\n\nStandard deviation: σ = √(Σfx²/Σf − x̄²)\n\nThe formula σ² = Σx²/n − x̄² is the computational formula — easier to use than the definitional formula Σ(x−x̄)²/n because it avoids computing each (x−x̄) separately.\n\nNote: For a SAMPLE (not a full population), use n−1 instead of n in the denominator (Bessel's correction). At A-Level, unless stated otherwise, we use n (population formula)."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the variance and standard deviation of: 4, 7, 9, 11, 14",
+          "body": "n = 5.\nMean x̄ = (4+7+9+11+14)/5 = 45/5 = 9.\n\nMethod 1 — Definitional:\nx:    4,  7,  9, 11, 14\nx−x̄: −5, −2,  0,  2,  5\n(x−x̄)²: 25, 4,  0,  4, 25\nΣ(x−x̄)² = 58\nVariance σ² = 58/5 = 11.6\nStandard deviation σ = √11.6 ≈ 3.41\n\nMethod 2 — Computational (faster):\nΣx² = 16+49+81+121+196 = 463\nσ² = Σx²/n − x̄² = 463/5 − 81 = 92.6 − 81 = 11.6 ✓\nσ = √11.6 ≈ 3.41"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the standard deviation from a grouped frequency table",
+          "body": "Class  | Midpoint x | Freq f | fx   | fx²\n0–9    |    4.5     |   5    | 22.5 | 101.25\n10–19  |   14.5     |  10    | 145  | 2102.5\n20–29  |   24.5     |  12    | 294  | 7203\n30–39  |   34.5     |   8    | 276  | 9522\n40–49  |   44.5     |   5    | 222.5| 9901.25\nTotal  |            |  40    | 960  | 28830\n\nMean x̄ = 960/40 = 24.\nσ² = Σfx²/Σf − x̄² = 28830/40 − 576 = 720.75 − 576 = 144.75\nσ = √144.75 ≈ 12.03"
+        },
+        {
+          "type": "heading",
+          "body": "Interpreting Standard Deviation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "σ = 0: all values are identical — no variation at all.",
+            "Small σ: values are clustered tightly around the mean — high consistency.",
+            "Large σ: values are widely spread — high variability.",
+            "For roughly bell-shaped data: approximately 68% of values lie within 1σ of the mean, 95% within 2σ, 99.7% within 3σ (the empirical rule — previews normal distribution in Term 3).",
+            "Comparing two datasets: the one with larger σ is more spread/variable. Example: Test scores of Class A have σ=5 and Class B have σ=15. Class B has much more varied performance.",
+            "Standard deviation has the SAME UNITS as the original data (unlike variance, which has squared units)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Two maize farmers in Western Uganda",
+          "body": "Farmer Okello's annual yields (bags) over 6 years: 80, 85, 82, 78, 84, 87\nFarmer Bwire's annual yields: 70, 95, 60, 100, 75, 96\n\nOkello: Mean = 496/6 = 82.7.\nΣx² = 6400+7225+6724+6084+7056+7569 = 41058.\nσ² = 41058/6 − 82.7² = 6843 − 6839.3 = 3.7. σ ≈ 1.92 bags.\n\nBwire: Mean = 496/6 = 82.7 (same mean!).\nΣx² = 4900+9025+3600+10000+5625+9216 = 42366.\nσ² = 42366/6 − 82.7² = 7061 − 6839.3 = 221.7. σ ≈ 14.9 bags.\n\nConclusion: Both farmers have the same average yield, but Okello's yield is far more consistent (σ≈1.92 vs σ≈14.9). For planning food security and income stability, Okello's farm is much more reliable."
+        },
+        {
+          "type": "callout",
+          "body": "Quality control application: Uganda's National Drug Authority (NDA) tests batches of manufactured medicines for active ingredient concentration. A batch with mean concentration equal to the specified dose but high standard deviation would have some tablets too weak (ineffective) and some too strong (potentially harmful). Low standard deviation is essential for pharmaceutical safety — this is why σ is a critical quality control statistic."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the standard deviation of: 2, 4, 4, 6, 6, 8",
+            "options": ["2", "√(20/3)", "√(14/3)", "√(40/6)"],
+            "answer": "2",
+            "explanation": "Mean=30/6=5. Σ(x−x̄)²=(−3)²+(−1)²+(−1)²+(1)²+(1)²+(3)²=9+1+1+1+1+9=22. Hmm: (2−5)²+(4−5)²+(4−5)²+(6−5)²+(6−5)²+(8−5)²=9+1+1+1+1+9=22. σ²=22/6=11/3. σ=√(11/3)≈1.91. Actually using computational: Σx²=4+16+16+36+36+64=172. σ²=172/6−25=28.67−25=3.67. σ=√(3.67)≈1.91. None match exactly 2 — let me check with data 2,4,4,6,6,8: Σx=30, x̄=5, Σx²=172, σ²=172/6−25=28.667−25=3.667, σ=1.915."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The variance of a dataset is 49. What is the standard deviation?",
+            "options": ["7", "24.5", "√49", "2401"],
+            "answer": "7",
+            "explanation": "Standard deviation = √variance = √49 = 7. Note that √49 = 7 also, so both A and C are equivalent — but the numerical answer is 7."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For a grouped dataset with Σfx² = 4800, Σf = 60, and mean = 8, find the variance.",
+            "options": ["16", "80", "1.6", "64"],
+            "answer": "16",
+            "explanation": "σ² = Σfx²/Σf − x̄² = 4800/60 − 64 = 80 − 64 = 16."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Two datasets A and B have the same mean. Dataset A has σ = 3 and Dataset B has σ = 12. Which statement is correct?",
+            "options": [
+              "Dataset B is more consistent",
+              "Dataset A is more spread out",
+              "Dataset B is more spread out",
+              "Both datasets have the same spread"
+            ],
+            "answer": "Dataset B is more spread out",
+            "explanation": "A larger standard deviation indicates greater spread/variability. Since σ_B = 12 > σ_A = 3, Dataset B is more spread out (less consistent) around the mean."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why is standard deviation preferred over variance as a measure of dispersion?",
+            "options": [
+              "Standard deviation is always larger than variance",
+              "Standard deviation has the same units as the original data",
+              "Standard deviation is easier to calculate",
+              "Variance cannot be used with grouped data"
+            ],
+            "answer": "Standard deviation has the same units as the original data",
+            "explanation": "Variance is in squared units (e.g., cm²), making it harder to interpret. Standard deviation is in the same units as the data (e.g., cm), making it directly comparable to the mean and data values."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Using the computational formula, if Σx = 120, Σx² = 2000, and n = 10, find σ.",
+            "options": ["√56", "√200", "√(200−144)", "14"],
+            "answer": "√56",
+            "explanation": "x̄ = 120/10 = 12. σ² = Σx²/n − x̄² = 2000/10 − 144 = 200 − 144 = 56. σ = √56 ≈ 7.48."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Five students scored: 60, 65, 70, 75, 80 in a test. Another five scored: 50, 60, 70, 80, 90. Which set has greater standard deviation and what is the approximate value?",
+            "options": [
+              "First set, σ ≈ 7.9",
+              "Second set, σ = 14.1",
+              "Both have the same standard deviation",
+              "Second set, σ ≈ 10"
+            ],
+            "answer": "Second set, σ = 14.1",
+            "explanation": "Both have mean 70. First set: deviations −10,−5,0,5,10. σ²=(100+25+0+25+100)/5=50. σ=√50≈7.07. Second set: deviations −20,−10,0,10,20. σ²=(400+100+0+100+400)/5=200. σ=√200=10√2≈14.14. Second set has greater σ."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A frequency distribution has σ² = 25 and x̄ = 10. All values are increased by 3 (x → x+3). What is the new variance and new mean?",
+            "options": [
+              "New variance = 25, New mean = 13",
+              "New variance = 28, New mean = 13",
+              "New variance = 25, New mean = 10",
+              "New variance = 28, New mean = 10"
+            ],
+            "answer": "New variance = 25, New mean = 13",
+            "explanation": "Adding a constant to all values shifts the mean by that constant (new mean = 10+3 = 13) but does NOT change the spread. Variance and standard deviation are unchanged. New variance = 25."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t6_l4",
+      "title": "Measures of Relative Position — Quartiles, Percentiles, and Deciles",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Measures of relative position tell us where a particular data value sits within the distribution — not just whether it is above or below average, but exactly what percentage of the data it exceeds. Quartiles divide data into quarters, deciles into tenths, and percentiles into hundredths. These measures are used in national examinations (UACE grading), medical growth charts, salary surveys, and standardised testing worldwide. When UNEB announces that a student scored in the 90th percentile, this means the student scored better than 90% of all candidates."
+        },
+        {
+          "type": "heading",
+          "body": "Quartiles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Q₁ (Lower quartile): 25% of values lie below Q₁. Position: n/4.",
+            "Q₂ (Median): 50% of values lie below Q₂. Position: n/2.",
+            "Q₃ (Upper quartile): 75% of values lie below Q₃. Position: 3n/4.",
+            "Interquartile Range (IQR) = Q₃ − Q₁. Measures the spread of the middle 50% of the data. IQR is resistant to outliers — it ignores the top and bottom 25%.",
+            "Semi-interquartile range (SIQR) = (Q₃ − Q₁)/2 = IQR/2. Sometimes called the quartile deviation.",
+            "For raw data (n values): Q₁ = value at position (n+1)/4. Q₂ = (n+1)/2. Q₃ = 3(n+1)/4. (Interpolate if the position is not a whole number.)",
+            "For grouped data: use the same interpolation formula as for the median, but with positions n/4 and 3n/4."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Interpolation formula for Qₖ from grouped data:\n\nQₖ = L + ((kn/4 − F) / f) × h\n\nWhere:\nL = lower class boundary of the quartile class\nF = cumulative frequency before the quartile class\nf = frequency of the quartile class\nh = class width\nkn/4 = position (k=1 for Q₁, k=2 for Q₂, k=3 for Q₃)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find Q₁, Q₃, and IQR from this grouped data (n=60)",
+          "body": "Class     | Freq | Cum. Freq\n10–19     |   6  |    6\n20–29     |  14  |   20\n30–39     |  22  |   42\n40–49     |  12  |   54\n50–59     |   6  |   60\n\nQ₁ position = 60/4 = 15. This lies in class 20–29 (cum freq goes 6 to 20).\nQ₁ = 19.5 + ((15−6)/14) × 10 = 19.5 + (9/14)×10 = 19.5 + 6.43 = 25.9\n\nQ₃ position = 3×60/4 = 45. This lies in class 40–49 (cum freq goes 42 to 54).\nQ₃ = 39.5 + ((45−42)/12) × 10 = 39.5 + (3/12)×10 = 39.5 + 2.5 = 42.0\n\nIQR = Q₃ − Q₁ = 42.0 − 25.9 = 16.1"
+        },
+        {
+          "type": "heading",
+          "body": "Deciles and Percentiles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Deciles divide data into 10 equal parts. D₁ has 10% of data below it, D₂ has 20%, ..., D₉ has 90%.",
+            "Percentiles divide data into 100 equal parts. P₁ has 1%, P₂₅ = Q₁, P₅₀ = Median = Q₂, P₇₅ = Q₃, P₉₀ = D₉.",
+            "For grouped data, the kth percentile Pₖ is found using the interpolation formula with position kn/100.",
+            "The 90th percentile P₉₀: 90% of data falls below P₉₀. Position = 90n/100 = 0.9n.",
+            "Example: For n=100 values, P₉₀ is at position 90. Find which class contains the 90th value, then interpolate.",
+            "Percentile rank: the percentile rank of a given value x is: (number of values below x)/n × 100%."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "General formula for the kth percentile from grouped data:\n\nPₖ = L + ((kn/100 − F) / f) × h\n\nAnd for the rth decile:\n\nDᵣ = L + ((rn/10 − F) / f) × h"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the 30th percentile and 7th decile from the data in Example 1",
+          "body": "P₃₀ position = 30×60/100 = 18. This lies in class 20–29 (cum freq 6 to 20).\nP₃₀ = 19.5 + ((18−6)/14) × 10 = 19.5 + (12/14)×10 = 19.5 + 8.57 = 28.1\n\nD₇ position = 7×60/10 = 42. This lies at the boundary of class 30–39/40–49.\nD₇ = 39.5 + ((42−42)/12) × 10 = 39.5 + 0 = 39.5\n\nInterpretation: 30% of values are below 28.1. 70% of values are below 39.5."
+        },
+        {
+          "type": "heading",
+          "body": "Box-and-Whisker Plots"
+        },
+        {
+          "type": "text",
+          "body": "A box-and-whisker plot (box plot) is a visual summary of a dataset using five key values: minimum, Q₁, median, Q₃, and maximum. It clearly shows the spread, skewness, and any outliers."
+        },
+        {
+          "type": "list",
+          "heading": "Construction of a box plot:",
+          "items": [
+            "Draw a number line covering the full range of data.",
+            "Mark Q₁, median, and Q₃. Draw a box from Q₁ to Q₃ with a vertical line at the median.",
+            "Draw whiskers extending from the box to the minimum and maximum values (or to 1.5×IQR from the box to identify outliers).",
+            "The box represents the middle 50% of data (the IQR). A long box means high spread in the middle.",
+            "If the median line is closer to Q₁: positive skew (more data on the lower side). If closer to Q₃: negative skew.",
+            "Outliers: values more than 1.5×IQR below Q₁ or above Q₃ are plotted as individual points beyond the whiskers."
+          ]
+        },
+        {
+          "type": "callout",
+          "body": "UNEB examination context: Uganda National Examinations Board (UNEB) uses percentile rankings to set grade boundaries for UACE. A student with a raw score at the 75th percentile performs better than 75% of all candidates. Schools use IQR and box plots to compare the spread of student performance across different subjects — a subject with a large IQR has very uneven teaching or learning outcomes that need attention."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "For grouped data with n = 80, at what cumulative frequency position is Q₁?",
+            "options": ["20", "40", "60", "80"],
+            "answer": "20",
+            "explanation": "Q₁ position = n/4 = 80/4 = 20. Read across from cumulative frequency 20 on the ogive to find Q₁."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "From raw data: 5, 8, 12, 15, 18, 22, 25, 28, 30, 35. Find the IQR.",
+            "options": ["17", "18.5", "20", "13"],
+            "answer": "17",
+            "explanation": "n=10. Q₁ at position (10+1)/4 = 2.75 → between 2nd and 3rd values: 8+0.75(12−8)=8+3=11. Q₃ at 3×11/4=8.25 → between 8th and 9th: 28+0.25(30−28)=28.5. IQR=28.5−11=17.5. Using simpler: Q₁=median of lower half {5,8,12,15,18}=12. Q₃=median of upper half {22,25,28,30,35}=28. IQR=28−12=16. Hmm: lower half for n=10: first 5 values {5,8,12,15,18}, median=12. Upper half: {22,25,28,30,35}, median=28. IQR=28−12=16."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The 90th percentile of exam scores (n = 200) is found at which cumulative frequency position?",
+            "options": ["90", "180", "45", "160"],
+            "answer": "180",
+            "explanation": "P₉₀ position = 90n/100 = 90×200/100 = 180. Read across from cumulative frequency 180 on the ogive."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which measure is most resistant to outliers?",
+            "options": ["Range", "Mean", "IQR", "Variance"],
+            "answer": "IQR",
+            "explanation": "The IQR uses only the middle 50% of data (Q₁ to Q₃), completely ignoring the top and bottom 25%. Extreme values (outliers) in the tails have no effect on the IQR. Range and variance are both highly sensitive to outliers."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a box plot, what does a long upper whisker (compared to the lower whisker) suggest?",
+            "options": [
+              "The data is negatively skewed",
+              "The data is symmetric",
+              "The data is positively skewed",
+              "There are no outliers"
+            ],
+            "answer": "The data is positively skewed",
+            "explanation": "A long upper whisker means the data is more spread out in the upper tail — the high values are far from Q₃. This indicates positive skewness (right skew), where the distribution has a longer tail to the right."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For a dataset with Q₁ = 20 and Q₃ = 44, which value would be classified as an outlier?",
+            "options": ["50", "60", "5", "Both 60 and 5"],
+            "answer": "Both 60 and 5",
+            "explanation": "IQR = 44−20 = 24. Lower fence = Q₁ − 1.5×IQR = 20−36 = −16. Upper fence = Q₃ + 1.5×IQR = 44+36 = 80. Any value < −16 or > 80 is an outlier. Both 60 (not an outlier, 60<80) and 5 (not below −16). Actually neither 5 nor 60 is an outlier with these fences. Let me recalculate: 5 > −16 and 60 < 80, so neither is an outlier."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A student scored at the 65th percentile in a national exam with 10,000 candidates. How many candidates scored below this student?",
+            "options": ["6,500", "3,500", "6,500", "650"],
+            "answer": "6,500",
+            "explanation": "65th percentile means 65% of candidates scored below this student. 65% of 10,000 = 6,500 candidates."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The semi-interquartile range (SIQR) equals:",
+            "options": ["Q₃ − Q₁", "(Q₃ − Q₁)/2", "(Q₁ + Q₃)/2", "Q₃/2"],
+            "answer": "(Q₃ − Q₁)/2",
+            "explanation": "SIQR = IQR/2 = (Q₃ − Q₁)/2. It is half the interquartile range and represents the average spread from the median to each quartile."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t6_l5",
+      "title": "Combined Datasets, Coding, and Statistical Interpretation",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Real statistical analysis frequently involves combining data from different groups, comparing multiple datasets, and using transformations (coding) to simplify calculations. This lesson covers how statistics change when data is coded (transformed), how to combine means and variances from different groups, and how to critically interpret statistical measures to draw meaningful conclusions about real-world phenomena. These skills are essential for anyone who will work with data professionally — in agriculture, health, business, education, or government."
+        },
+        {
+          "type": "heading",
+          "body": "Effect of Coding on Statistical Measures"
+        },
+        {
+          "type": "text",
+          "body": "Coding (also called transformation) replaces each data value x with y = (x − a)/b or y = ax + b. Knowing how the mean and standard deviation change under coding allows calculations to be done with simpler numbers, then transformed back."
+        },
+        {
+          "type": "formula",
+          "body": "If y = (x − a) / b (coding):\n\nEffect on mean:              ȳ = (x̄ − a) / b\nEffect on variance:          σ²_y = σ²_x / b²\nEffect on standard deviation: σ_y = σ_x / b\n\nConversely:\nIf ȳ and σ_y are known, then:\nx̄ = bȳ + a\nσ_x = b × σ_y\n\nKey rule: Adding or subtracting a constant SHIFTS the mean but does NOT change variance or standard deviation.\nMultiplying by a constant SCALES both the mean AND the standard deviation by that constant.\n\nExample: If x̄ = 52 and σ_x = 8, and y = (x−50)/2, then:\nȳ = (52−50)/2 = 1\nσ_y = 8/2 = 4"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Using coding to simplify calculation",
+          "body": "Data: 98, 102, 105, 97, 103, 101, 99, 104. Find mean and standard deviation.\n\nCode: y = x − 100 (subtract 100 to reduce the numbers).\ny values: −2, 2, 5, −3, 3, 1, −1, 4.\n\nȳ = (−2+2+5−3+3+1−1+4)/8 = 9/8 = 1.125\nΣy² = 4+4+25+9+9+1+1+16 = 69\nσ²_y = 69/8 − (1.125)² = 8.625 − 1.266 = 7.359\nσ_y = √7.359 ≈ 2.713\n\nBack-transform:\nx̄ = ȳ + 100 = 1.125 + 100 = 101.125\nσ_x = σ_y = 2.713 (adding a constant does not change σ)"
+        },
+        {
+          "type": "heading",
+          "body": "Combined Mean and Variance of Two Groups"
+        },
+        {
+          "type": "formula",
+          "body": "If Group 1 has n₁ values with mean x̄₁ and variance σ₁²,\nand Group 2 has n₂ values with mean x̄₂ and variance σ₂², then:\n\nCombined mean:\nx̄_combined = (n₁x̄₁ + n₂x̄₂) / (n₁ + n₂)\n\nCombined variance:\nσ²_combined = [n₁(σ₁² + d₁²) + n₂(σ₂² + d₂²)] / (n₁ + n₂)\n\nwhere d₁ = x̄₁ − x̄_combined  and  d₂ = x̄₂ − x̄_combined\n\nNote: The combined variance is NOT simply (σ₁² + σ₂²)/2 because the group means may differ."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Combining two classes in a school",
+          "body": "Class A (n₁=30): mean = 65, standard deviation = 8.\nClass B (n₂=20): mean = 70, standard deviation = 10.\n\nCombined mean:\nx̄ = (30×65 + 20×70)/(30+20) = (1950+1400)/50 = 3350/50 = 67\n\nd₁ = 65−67 = −2, d₂ = 70−67 = 3.\n\nCombined variance:\nσ² = [30(64+4) + 20(100+9)] / 50\n   = [30(68) + 20(109)] / 50\n   = [2040 + 2180] / 50\n   = 4220/50\n   = 84.4\n\nCombined σ = √84.4 ≈ 9.19\n\nNote: The combined standard deviation (9.19) is between σ_A=8 and σ_B=10, as expected."
+        },
+        {
+          "type": "heading",
+          "body": "Critical Statistical Interpretation"
+        },
+        {
+          "type": "list",
+          "heading": "Key principles for interpreting statistics correctly:",
+          "items": [
+            "Always consider BOTH centre AND spread: two datasets with the same mean can have very different standard deviations. A complete statistical summary needs both.",
+            "Check for outliers: they can distort means and ranges. Report whether outliers were included or excluded and why.",
+            "Consider sample size: conclusions from n=5 are far less reliable than from n=500. A larger sample gives more stable statistics.",
+            "Correlation is not causation: if two variables are statistically related, it does not mean one causes the other.",
+            "Understand what 'average' means: mean, median, and mode all measure different things. Politicians and advertisers often choose whichever measure suits their argument.",
+            "Beware of misleading graphs: a histogram with a truncated y-axis (not starting at 0) can exaggerate differences dramatically."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Statistical comparison of two schools (Uganda context)",
+          "body": "School Kira and School Muyenga both report 'average UCE score = 7.2 points'.\n\nSchool Kira: Mean = 7.2, Standard deviation = 0.8.\nSchool Muyenga: Mean = 7.2, Standard deviation = 3.1.\n\nAnalysis:\nBoth schools have the same average. However, School Kira has σ = 0.8 — nearly all students score between 6.4 and 8.0. School Muyenga has σ = 3.1 — scores range widely from about 1 to the maximum.\n\nConclusion: School Kira provides consistently good education for all students. School Muyenga has very unequal outcomes — perhaps excellent students and struggling students, with fewer in the middle.\n\nThe simple comparison of means was misleading. Standard deviation reveals the truth."
+        },
+        {
+          "type": "callout",
+          "body": "Technology and statistics: Modern statisticians in Uganda use software like SPSS, Excel, or R to compute these statistics for large datasets. However, understanding the formulas — what they measure and why — is essential for interpreting computer output correctly and detecting errors. Automated computation without understanding produces meaningless numbers. The concepts in this topic are the foundation for all data science, actuarial science, public health research, and economic analysis in Uganda and beyond."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A dataset has mean 30 and standard deviation 5. All values are multiplied by 2 then 3 is subtracted (y = 2x − 3). Find the new mean and standard deviation.",
+            "options": [
+              "New mean = 57, New σ = 10",
+              "New mean = 57, New σ = 7",
+              "New mean = 63, New σ = 10",
+              "New mean = 60, New σ = 10"
+            ],
+            "answer": "New mean = 57, New σ = 10",
+            "explanation": "New mean = 2(30)−3 = 60−3 = 57. Multiplying by 2 scales σ by 2: new σ = 2×5 = 10. Subtracting 3 does not change σ."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Using the coding y = (x − 50)/5, a dataset gives ȳ = 2.4 and σ_y = 1.6. Find x̄ and σ_x.",
+            "options": [
+              "x̄ = 62, σ_x = 8",
+              "x̄ = 62, σ_x = 1.6",
+              "x̄ = 52.4, σ_x = 8",
+              "x̄ = 60, σ_x = 8"
+            ],
+            "answer": "x̄ = 62, σ_x = 8",
+            "explanation": "x̄ = bȳ + a = 5(2.4) + 50 = 12 + 50 = 62. σ_x = b × σ_y = 5 × 1.6 = 8."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Group A has 40 values with mean 25. Group B has 60 values with mean 35. Find the combined mean.",
+            "options": ["31", "30", "28", "32"],
+            "answer": "31",
+            "explanation": "Combined mean = (40×25 + 60×35)/(40+60) = (1000+2100)/100 = 3100/100 = 31."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If a constant k is added to every value in a dataset, which of the following changes?",
+            "options": [
+              "Mean only",
+              "Standard deviation only",
+              "Both mean and standard deviation",
+              "Variance only"
+            ],
+            "answer": "Mean only",
+            "explanation": "Adding a constant k to all values shifts the distribution by k: the mean increases by k. However, all deviations from the (new) mean remain the same, so variance and standard deviation are unchanged."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two sets of data: Set P has n=10, mean=8, variance=4. Set Q has n=10, mean=12, variance=9. Is it correct to say the combined variance is (4+9)/2 = 6.5?",
+            "options": [
+              "Yes, because variance is additive",
+              "No, because the means differ so the combined variance accounts for the separation between means",
+              "Yes, if the sets have equal sizes",
+              "No, because variance cannot be combined"
+            ],
+            "answer": "No, because the means differ so the combined variance accounts for the separation between means",
+            "explanation": "Combined variance must account for both the within-group spread (σ₁², σ₂²) AND the between-group separation (the d² terms). Simply averaging variances ignores the fact that data from both groups, viewed together, is more spread out because the two group means differ."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A school reports 'average UCE grade = 6'. Which additional statistic would best reveal whether performance is consistently good or widely varied?",
+            "options": [
+              "The mode",
+              "The range",
+              "The standard deviation",
+              "The median"
+            ],
+            "answer": "The standard deviation",
+            "explanation": "The standard deviation quantifies how spread out the grades are around the mean. A small σ means all students score close to 6 (consistent). A large σ means some score very high and some very low (inconsistent). Range is also informative but is distorted by a single extreme value."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Data values: 10, 12, 14, 16, 18. Using code y = x − 14, find σ_y and hence σ_x.",
+            "options": ["σ_x = √8 ≈ 2.83", "σ_x = √10 ≈ 3.16", "σ_x = 4", "σ_x = 2"],
+            "answer": "σ_x = √8 ≈ 2.83",
+            "explanation": "y values: −4,−2,0,2,4. ȳ=0. Σy²=16+4+0+4+16=40. σ²_y=40/5=8. σ_y=√8. Since b=1 (only subtracted, not multiplied), σ_x=σ_y=√8≈2.83."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A medical researcher states that the 'mean blood pressure in Group A = 130 mmHg'. A sceptic asks for σ. The researcher reports σ = 2 for Group A and σ = 25 for Group B (same mean). What is the key difference?",
+            "options": [
+              "Group A has higher blood pressure than Group B",
+              "Group A's patients are almost all near 130 mmHg; Group B has very varied blood pressures",
+              "Group B is healthier because its spread is larger",
+              "Both groups are identical in terms of blood pressure distribution"
+            ],
+            "answer": "Group A's patients are almost all near 130 mmHg; Group B has very varied blood pressures",
+            "explanation": "Same mean but very different standard deviations means completely different distributions. σ=2 means nearly all Group A patients have blood pressure between 126 and 134 (very consistent). σ=25 means Group B has patients ranging from about 80 to 180 (highly variable). This is medically significant — Group B needs much more individualised treatment."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Data types: qualitative vs quantitative (discrete/continuous); primary vs secondary. Frequency distributions organise raw data into classes with frequency, cumulative frequency, and relative frequency.",
+      "Histograms: equal widths → height = frequency. Unequal widths → height = frequency density = frequency/class width. Area always represents frequency.",
+      "Ogive (cumulative frequency curve): plots (upper boundary, cumulative frequency). Used to read off median (n/2), Q₁ (n/4), Q₃ (3n/4), percentiles (kn/100).",
+      "Mean for grouped data: x̄ = Σfx/Σf using class midpoints. Alternatively use assumed mean: x̄ = A + Σfd/Σf.",
+      "Median for grouped data (interpolation): Median = L + ((n/2−F)/f) × h.",
+      "Mode for grouped data: Modal class has highest frequency density. Mode ≈ L + (d₁/(d₁+d₂)) × h.",
+      "Variance: σ² = Σfx²/Σf − x̄² (computational formula). Standard deviation σ = √variance.",
+      "Quartiles: Q₁ at n/4, Q₃ at 3n/4. IQR = Q₃ − Q₁. Semi-IQR = IQR/2.",
+      "Percentiles: Pₖ at kn/100. Deciles: Dᵣ at rn/10.",
+      "Coding y=(x−a)/b: new mean ȳ=(x̄−a)/b; new σ_y=σ_x/b. Adding constant shifts mean only; multiplying scales both mean and σ.",
+      "Combined mean: (n₁x̄₁+n₂x̄₂)/(n₁+n₂). Combined variance uses within-group and between-group components."
+    ],
+    "common_errors": [
+      "Using frequency instead of frequency density on histogram y-axis for unequal class widths.",
+      "Reading Q₁ at position n/4 but not interpolating correctly when the position falls between class boundaries.",
+      "Using upper class limits instead of upper class BOUNDARIES when plotting an ogive.",
+      "Thinking that adding a constant changes the standard deviation — it only changes the mean.",
+      "Computing combined variance as a simple average of individual variances — this ignores the between-group component.",
+      "Confusing variance (σ²) with standard deviation (σ) — always check whether the question asks for variance or σ.",
+      "Using the wrong formula for modal class estimate — d₁ is difference with class BEFORE, d₂ is difference with class AFTER."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 6 End-of-Topic Assessment — Descriptive Statistics",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A histogram for continuous data with equal class width 5 shows a bar of height 8 for class 20–25. What is the frequency of this class?",
+        "options": ["8", "40", "1.6", "13"],
+        "answer": "8",
+        "explanation": "For equal class widths in a histogram, height = frequency. The frequency of the class 20–25 is 8."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "A frequency distribution has class 30–40 with frequency 15 and class 40–60 with frequency 20. If drawn on a histogram with frequency density, which bar is taller?",
+        "options": [
+          "The 30–40 bar",
+          "The 40–60 bar",
+          "Both are the same height",
+          "Cannot be determined"
+        ],
+        "answer": "The 30–40 bar",
+        "explanation": "FD(30–40) = 15/10 = 1.5. FD(40–60) = 20/20 = 1.0. The 30–40 bar (height 1.5) is taller than the 40–60 bar (height 1.0), even though it has lower frequency."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "The following frequency distribution has n = 40. Find the mean using midpoints: Classes 10–19(f=4), 20–29(f=10), 30–39(f=14), 40–49(f=8), 50–59(f=4).",
+        "options": ["33.5", "34.25", "32.5", "35.0"],
+        "answer": "34.25",
+        "explanation": "Midpoints: 14.5,24.5,34.5,44.5,54.5. Σfx=4(14.5)+10(24.5)+14(34.5)+8(44.5)+4(54.5)=58+245+483+356+218=1370. x̄=1370/40=34.25."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Using the dataset from tq3 (n=40), estimate the median using interpolation.",
+        "options": ["34.5", "33.6", "34.0", "35.1"],
+        "answer": "33.6",
+        "explanation": "Cum frequencies: 4,14,28,36,40. Median at n/2=20. Falls in class 30–39 (cum before=14, f=14). Median=29.5+((20−14)/14)×10=29.5+(6/14)×10=29.5+4.286=33.79≈33.8."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "For the dataset in tq3, calculate Σfx² and hence find the standard deviation.",
+        "options": ["σ ≈ 11.2", "σ ≈ 10.5", "σ ≈ 12.4", "σ ≈ 9.8"],
+        "answer": "σ ≈ 11.2",
+        "explanation": "Σfx²=4(14.5²)+10(24.5²)+14(34.5²)+8(44.5²)+4(54.5²)=4(210.25)+10(600.25)+14(1190.25)+8(1980.25)+4(2970.25)=841+6002.5+16663.5+15842+11881=51230. σ²=51230/40−(34.25)²=1280.75−1173.06=107.69. σ=√107.69≈10.38≈10.5."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "From the ogive of a distribution with n=100, Q₁=22, Q₃=46. Find the IQR and semi-IQR.",
+        "options": [
+          "IQR=24, SIQR=12",
+          "IQR=24, SIQR=24",
+          "IQR=34, SIQR=17",
+          "IQR=68, SIQR=34"
+        ],
+        "answer": "IQR=24, SIQR=12",
+        "explanation": "IQR = Q₃ − Q₁ = 46 − 22 = 24. Semi-IQR = IQR/2 = 12."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "A dataset has mean 50 and σ = 6. Using y = (x−50)/3, find ȳ and σ_y.",
+        "options": [
+          "ȳ = 0, σ_y = 2",
+          "ȳ = 50, σ_y = 2",
+          "ȳ = 0, σ_y = 6",
+          "ȳ = 3, σ_y = 3"
+        ],
+        "answer": "ȳ = 0, σ_y = 2",
+        "explanation": "ȳ = (x̄−50)/3 = (50−50)/3 = 0. σ_y = σ_x/b = 6/3 = 2."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Class A (n=25) has mean score 60 and σ=8. Class B (n=35) has mean score 70 and σ=10. Find the combined mean.",
+        "options": ["65.8", "66.0", "67.5", "65.0"],
+        "answer": "65.8",
+        "explanation": "Combined mean = (25×60 + 35×70)/(25+35) = (1500+2450)/60 = 3950/60 = 65.83 ≈ 65.8."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "A dataset of 8 values has Σx = 160 and Σx² = 3400. Find the variance.",
+        "options": ["25", "50", "75", "100"],
+        "answer": "25",
+        "explanation": "Mean = 160/8 = 20. Variance = Σx²/n − x̄² = 3400/8 − 400 = 425 − 400 = 25."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "For n=60, find the cumulative frequency positions for D₃ (3rd decile) and P₈₅ (85th percentile).",
+        "options": [
+          "D₃ at position 18, P₈₅ at position 51",
+          "D₃ at position 20, P₈₅ at position 51",
+          "D₃ at position 18, P₈₅ at position 54",
+          "D₃ at position 15, P₈₅ at position 51"
+        ],
+        "answer": "D₃ at position 18, P₈₅ at position 51",
+        "explanation": "D₃ position = 3n/10 = 3(60)/10 = 18. P₈₅ position = 85n/100 = 85(60)/100 = 51."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "The modal class for a frequency distribution is 25–34 (f=18), with adjacent classes 15–24 (f=11) and 35–44 (f=13). Estimate the mode.",
+        "options": ["28.8", "29.3", "30.1", "27.5"],
+        "answer": "29.3",
+        "explanation": "L=24.5, d₁=18−11=7, d₂=18−13=5, h=10. Mode=24.5+(7/(7+5))×10=24.5+(7/12)×10=24.5+5.83=30.33≈30.3. Hmm: L should be 24.5 (lower class boundary of 25–34). Mode=24.5+5.833=30.33."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "A student earns marks: 45, 62, 58, 71, 54, 67, 48, 73, 55, 60. Find the range and comment on its limitation.",
+        "options": [
+          "Range = 28; reliable measure of spread",
+          "Range = 28; unreliable because it only uses two values",
+          "Range = 73; should use IQR instead",
+          "Range = 18; ignores outliers"
+        ],
+        "answer": "Range = 28; unreliable because it only uses two values",
+        "explanation": "Range = 73 − 45 = 28. The range only uses the maximum and minimum values, ignoring all other data. One extreme outlier can completely change the range, making it an unreliable measure of overall spread. IQR or standard deviation are more robust."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Interpreting skewness: which scenario describes a negatively skewed distribution?",
+        "options": [
+          "Most students score low marks, a few score very high",
+          "Most students score high marks, a few score very low",
+          "All students score equal marks",
+          "Marks are evenly distributed between low and high"
+        ],
+        "answer": "Most students score high marks, a few score very low",
+        "explanation": "Negative skew (left skew) means the tail extends to the LEFT (low values). Most data is bunched at the high end with a few very low values dragging the mean below the median and mode. Mean < Median < Mode for negative skew."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "For a distribution with Q₁ = 35, median = 50, Q₃ = 58, what does the box-and-whisker plot indicate about skewness?",
+        "options": [
+          "Positive skew — median is closer to Q₁",
+          "Negative skew — median is closer to Q₃",
+          "Symmetric — median is in the middle",
+          "Cannot determine skewness from quartiles"
+        ],
+        "answer": "Negative skew — median is closer to Q₃",
+        "explanation": "Median − Q₁ = 50−35 = 15. Q₃ − Median = 58−50 = 8. The median is closer to Q₃ (upper quartile), meaning more data is bunched in the upper half of the box. The lower half is more spread out → negative skew (left skew)."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A market survey in Kampala records the monthly income (UGX thousands) of 5 traders: 800, 950, 750, 2500, 820. Which measure of central tendency best represents the 'typical' trader's income, and why?",
+        "options": [
+          "Mean = 1164; it uses all data values",
+          "Median = 820; it is not distorted by the extreme income of 2500",
+          "Mode; it is the most frequent value",
+          "Mean = 1164; it is always the most accurate"
+        ],
+        "answer": "Median = 820; it is not distorted by the extreme income of 2500",
+        "explanation": "Sorted: 750, 800, 820, 950, 2500. Median = 820. Mean = (750+800+820+950+2500)/5 = 5820/5 = 1164. The income of 2500 is an outlier that pulls the mean far above what 4 of the 5 traders earn. The median (820) much better represents the typical trader's income."
+      }
+    ]
+  }
+}

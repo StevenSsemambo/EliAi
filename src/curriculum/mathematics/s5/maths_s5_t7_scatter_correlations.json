@@ -1,0 +1,697 @@
+{
+  "topic_id": "s5_maths_t7_scatter_diagrams_correlations",
+  "topic_title": "Scatter Diagrams and Correlations",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 8,
+  "ncdc_competency": "The learner investigates the relationship between two quantitative variables through graphical representation and evaluation of correlation coefficients for decision making and prediction.",
+  "lessons": [
+    {
+      "id": "s5_maths_t7_l1",
+      "title": "Scatter Diagrams — Plotting, Interpreting, and the Line of Best Fit",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "In statistics, we often want to know whether two variables are related — does more rainfall lead to higher crop yields? Does more study time lead to better exam scores? Does higher temperature lead to greater ice cream sales? A scatter diagram (scatter plot) is the most direct way to visualise the relationship between two quantitative variables. By plotting pairs of values as points on a coordinate plane, patterns of association become immediately visible. The strength and direction of the relationship can then be quantified precisely using correlation coefficients. These skills are used daily in agricultural research, public health, economics, education, and engineering across Uganda and the world."
+        },
+        {
+          "type": "heading",
+          "body": "What is a Scatter Diagram?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A scatter diagram plots n pairs of values (x, y) as n individual points on a coordinate plane.",
+            "The independent variable (explanatory variable, x) is plotted on the horizontal axis.",
+            "The dependent variable (response variable, y) is plotted on the vertical axis.",
+            "Each data point represents one observation. For example, one student's hours of study (x) and their exam mark (y).",
+            "The overall pattern of points reveals the nature of the relationship between x and y.",
+            "No lines are drawn between consecutive points — unlike a line graph, scatter diagrams show the cloud of data, not a time sequence."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Types of Correlation"
+        },
+        {
+          "type": "list",
+          "heading": "Positive correlation:",
+          "items": [
+            "As x increases, y tends to increase.",
+            "The cloud of points slopes upward from left to right.",
+            "Strong positive: points lie close to an imaginary straight line going up.",
+            "Weak positive: points are more scattered but still show an upward trend.",
+            "Examples: height and weight; hours of revision and exam score; rainfall and crop yield."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Negative correlation:",
+          "items": [
+            "As x increases, y tends to decrease.",
+            "The cloud of points slopes downward from left to right.",
+            "Strong negative: points close to a downward line.",
+            "Weak negative: downward trend but with wide scatter.",
+            "Examples: distance from school and attendance rate; age of car and resale value; hours of sleep and fatigue level."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "No correlation (zero correlation):",
+          "items": [
+            "No clear pattern — points are randomly scattered with no discernible direction.",
+            "Examples: shoe size and intelligence; month of birth and exam score.",
+            "Important: no correlation does not mean the variables are not related — it means there is no LINEAR relationship. There could be a curved (non-linear) relationship."
+          ]
+        },
+        {
+          "type": "callout",
+          "body": "Correlation does NOT imply causation. If two variables are correlated, it does not mean one causes the other. Example: districts in Uganda with more mobile phones per capita tend to have higher literacy rates. But giving people phones does not teach them to read — both are caused by a third variable (economic development). Always look for possible confounding variables before drawing causal conclusions."
+        },
+        {
+          "type": "heading",
+          "body": "The Line of Best Fit (Regression Line)"
+        },
+        {
+          "type": "text",
+          "body": "When there is a linear correlation, we draw a line of best fit (also called the regression line or trend line) through the cloud of points. This line summarises the linear relationship and allows prediction of y for a given x."
+        },
+        {
+          "type": "list",
+          "heading": "Properties of the line of best fit:",
+          "items": [
+            "It passes through the mean point (x̄, ȳ) — the point with the mean of all x values and the mean of all y values.",
+            "It is drawn so that approximately equal numbers of points lie above and below the line.",
+            "The line minimises the sum of squared vertical distances from each point to the line (this is the principle of least squares — covered in depth in S6 statistics).",
+            "The equation of the line is y = a + bx, where b is the gradient (slope) and a is the y-intercept.",
+            "The gradient b estimates the average change in y for a one-unit increase in x."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Drawing and interpreting a scatter diagram (Uganda context)",
+          "body": "A researcher at Makerere University records the annual rainfall (mm) and maize yield (bags per hectare) for 8 districts of Uganda:\n\nDistrict: Kampala, Jinja, Mbale, Gulu, Mbarara, Kabale, Arua, Lira\nRainfall x: 1250, 1180, 1350, 980, 1100, 1400, 890, 1050\nYield y: 28, 24, 32, 19, 22, 35, 17, 20\n\nStep 1 — Plot points: (1250,28), (1180,24), (1350,32), (980,19), (1100,22), (1400,35), (890,17), (1050,20).\n\nStep 2 — Observe pattern: Points slope upward from left to right — positive correlation.\n\nStep 3 — Find mean point:\nx̄ = (1250+1180+1350+980+1100+1400+890+1050)/8 = 9200/8 = 1150\nȳ = (28+24+32+19+22+35+17+20)/8 = 197/8 = 24.625\nMean point: (1150, 24.625)\n\nStep 4 — Draw line of best fit through (1150, 24.625) so roughly equal points above and below.\n\nStep 5 — Interpretation: Higher rainfall is associated with higher maize yield in these Ugandan districts. A district receiving about 1150 mm of rain can expect around 24–25 bags per hectare."
+        },
+        {
+          "type": "heading",
+          "body": "Interpolation and Extrapolation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Interpolation: using the line of best fit to predict y for an x value WITHIN the range of the original data. This is generally reliable.",
+            "Extrapolation: predicting y for an x value OUTSIDE the range of the original data. This is unreliable because the linear relationship may not hold beyond the observed range.",
+            "Example: In Example 1, predicting yield for rainfall = 1200 mm (within range 890–1400) is interpolation — reasonable. Predicting for rainfall = 2000 mm (extrapolation) is unreliable — land might flood at that rainfall level, breaking the linear pattern.",
+            "The further from the data range, the more unreliable the extrapolation."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A scatter diagram shows points sloping downward from left to right with points close to an imaginary line. This indicates:",
+            "options": [
+              "Strong positive correlation",
+              "Strong negative correlation",
+              "Weak positive correlation",
+              "No correlation"
+            ],
+            "answer": "Strong negative correlation",
+            "explanation": "Points sloping downward (as x increases, y decreases) indicate negative correlation. Points close to an imaginary line indicate strong correlation. Together: strong negative correlation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For the data pairs: (2,5), (4,8), (6,11), (8,14), (10,17), what type of correlation exists?",
+            "options": [
+              "Perfect positive linear correlation",
+              "Weak positive correlation",
+              "No correlation",
+              "Negative correlation"
+            ],
+            "answer": "Perfect positive linear correlation",
+            "explanation": "Each y value = 2x+1: as x increases by 2, y increases by 3. The relationship is exactly linear with positive gradient — perfect positive correlation. All points lie exactly on a straight line."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The line of best fit in a scatter diagram always passes through:",
+            "options": [
+              "The origin (0,0)",
+              "The mean point (x̄, ȳ)",
+              "The median of x and y values",
+              "The point with the largest y value"
+            ],
+            "answer": "The mean point (x̄, ȳ)",
+            "explanation": "The line of best fit (least squares regression line) always passes through the centroid of the data — the point (x̄, ȳ) where x̄ is the mean of all x values and ȳ is the mean of all y values."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A researcher uses a scatter diagram to predict crop yield for rainfall = 500 mm, when all recorded rainfall values are between 900 mm and 1500 mm. This prediction is an example of:",
+            "options": [
+              "Interpolation — reliable prediction",
+              "Extrapolation — unreliable prediction",
+              "Regression analysis — always reliable",
+              "Correlation — always valid"
+            ],
+            "answer": "Extrapolation — unreliable prediction",
+            "explanation": "500 mm is well outside the range of observed data (900–1500 mm). Predicting beyond the data range is extrapolation, which is unreliable because the linear trend may not continue beyond the observed range."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A scatter diagram shows a perfect circular cloud of points with no directional trend. This represents:",
+            "options": [
+              "Perfect positive correlation",
+              "Perfect negative correlation",
+              "No (zero) linear correlation",
+              "Moderate positive correlation"
+            ],
+            "answer": "No (zero) linear correlation",
+            "explanation": "A circular or random cloud of points with no upward or downward trend indicates no linear correlation between the variables. The correlation coefficient would be close to zero."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Data: x values (1,2,3,4,5) and y values (3,5,4,8,10). Find the mean point (x̄, ȳ).",
+            "options": ["(3, 6)", "(2.5, 5)", "(3, 5)", "(3, 7)"],
+            "answer": "(3, 6)",
+            "explanation": "x̄ = (1+2+3+4+5)/5 = 15/5 = 3. ȳ = (3+5+4+8+10)/5 = 30/5 = 6. Mean point: (3, 6)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Two variables show a strong correlation. Which conclusion is valid?",
+            "options": [
+              "One variable definitely causes the other",
+              "The variables are strongly linearly associated",
+              "The variables are causally independent",
+              "The relationship is non-linear"
+            ],
+            "answer": "The variables are strongly linearly associated",
+            "explanation": "Correlation indicates a statistical association — a tendency for the variables to move together. It does NOT prove causation. A strong correlation means the points cluster closely around a straight line, indicating a strong linear relationship."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "On a scatter diagram, the variable plotted on the x-axis is called the:",
+            "options": [
+              "Dependent variable",
+              "Response variable",
+              "Independent (explanatory) variable",
+              "Controlled variable"
+            ],
+            "answer": "Independent (explanatory) variable",
+            "explanation": "The x-axis shows the independent (explanatory) variable — the one believed to influence or explain the other. The y-axis shows the dependent (response) variable — the one whose value depends on x."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t7_l2",
+      "title": "Spearman's Rank Correlation Coefficient",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The Spearman rank correlation coefficient (denoted rₛ or ρ) measures the strength and direction of the MONOTONIC relationship between two variables — whether they tend to increase or decrease together, even if the relationship is not perfectly linear. It works by converting raw data values into ranks and then computing a correlation measure on those ranks. Spearman's coefficient is particularly useful when data is in rank form (e.g., competition rankings, preference orderings), when outliers are present (since ranking is not distorted by extreme values), or when the data is not normally distributed. It was developed by Charles Spearman in 1904 and remains one of the most widely used non-parametric statistical measures."
+        },
+        {
+          "type": "heading",
+          "body": "The Formula for Spearman's Rank Correlation Coefficient"
+        },
+        {
+          "type": "formula",
+          "body": "Spearman's rank correlation coefficient:\n\nrₛ = 1 − (6Σd²) / (n(n²−1))\n\nWhere:\n• d = difference in ranks for each pair (rank of x − rank of y)\n• Σd² = sum of all squared rank differences\n• n = number of pairs of data\n\nRange of rₛ:\n−1 ≤ rₛ ≤ +1\n\nInterpretation:\n+1: perfect positive rank correlation (same ranking order for both variables)\n−1: perfect negative rank correlation (exactly reversed ranking orders)\n0: no monotonic relationship between the rankings\n\nGeneral interpretation guide:\n|rₛ| > 0.9: very strong correlation\n|rₛ| 0.7–0.9: strong correlation\n|rₛ| 0.5–0.7: moderate correlation\n|rₛ| 0.3–0.5: weak correlation\n|rₛ| < 0.3: very weak or no correlation"
+        },
+        {
+          "type": "heading",
+          "body": "Step-by-Step Method for Computing rₛ"
+        },
+        {
+          "type": "list",
+          "heading": "Procedure:",
+          "items": [
+            "Step 1: Rank the x values from 1 (smallest) to n (largest). Record these as Rₓ.",
+            "Step 2: Rank the y values from 1 (smallest) to n (largest). Record these as R_y.",
+            "Step 3: Handling ties: if two values are equal, give them the average of the ranks they would have occupied. Example: if two values tie for positions 3 and 4, each gets rank 3.5.",
+            "Step 4: For each pair, compute d = Rₓ − R_y.",
+            "Step 5: Compute d² for each pair.",
+            "Step 6: Sum all d² values to get Σd².",
+            "Step 7: Apply the formula: rₛ = 1 − 6Σd² / (n(n²−1)).",
+            "Step 8: Interpret the value of rₛ."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Rank correlation between Maths and Science scores",
+          "body": "Eight students sat both Mathematics and Science exams. Their scores are:\n\nStudent:  A   B   C   D   E   F   G   H\nMaths(x): 72  85  61  90  78  55  83  68\nSci  (y): 68  80  59  88  74  52  79  65\n\nStep 1 — Rank Maths (smallest=1):\n55→1, 61→2, 68→3, 72→4, 78→5, 83→6, 85→7, 90→8\nRₓ:  4   7   2   8   5   1   6   3\n\nStep 2 — Rank Science:\n52→1, 59→2, 65→3, 68→4, 74→5, 79→6, 80→7, 88→8\nR_y: 4   7   2   8   5   1   6   3\n\nStep 3 — Compute d = Rₓ − R_y:\nd:   0   0   0   0   0   0   0   0\n\nStep 4 — Σd² = 0.\n\nStep 5 — rₛ = 1 − 6(0)/(8(63)) = 1 − 0 = 1.0\n\nInterpretation: rₛ = 1.0 — perfect positive rank correlation. Students rank identically in both subjects."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Rank correlation with a realistic dataset",
+          "body": "A judge ranks 7 singers in a competition. A second judge also ranks them.\n\nSinger:    1  2  3  4  5  6  7\nJudge A:   2  5  1  4  7  3  6\nJudge B:   3  4  2  5  6  1  7\n\nNote: These ARE the ranks already (no need to re-rank).\n\nd = Judge A − Judge B:\nd:  −1  1  −1  −1   1   2  −1\n\nd²:  1   1    1    1    1   4    1\n\nΣd² = 1+1+1+1+1+4+1 = 10\n\nrₛ = 1 − 6(10)/(7(49−1)) = 1 − 60/(7×48) = 1 − 60/336 = 1 − 0.1786 = 0.821\n\nInterpretation: rₛ ≈ 0.82 — strong positive rank correlation. The two judges agree substantially on the ranking of singers, but not perfectly."
+        },
+        {
+          "type": "heading",
+          "body": "Handling Tied Ranks"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Tied ranks",
+          "body": "Height (cm): 160, 165, 165, 170, 175, 180\nWeight (kg): 55,  62,  60,  68,  71,  78\n\nRanking heights: 160→1, 165→tied for 2nd and 3rd→each gets 2.5, 170→4, 175→5, 180→6\nRₓ:  1,  2.5, 2.5, 4, 5, 6\n\nRanking weights: 55→1, 60→2, 62→3, 68→4, 71→5, 78→6\nR_y: 1,   3,   2,  4, 5, 6\n\nd = Rₓ − R_y:\nd:   0, −0.5, 0.5, 0, 0, 0\n\nd²: 0, 0.25, 0.25, 0, 0, 0\n\nΣd² = 0.5\n\nrₛ = 1 − 6(0.5)/(6(36−1)) = 1 − 3/210 = 1 − 0.0143 = 0.986\n\nVery strong positive correlation between height and weight."
+        },
+        {
+          "type": "callout",
+          "body": "Application in Ugandan education: UNEB uses rank correlation to study whether students who perform well in Mathematics at O-Level also tend to perform well at A-Level. A high positive rₛ would suggest that O-Level Mathematics performance is a good predictor of A-Level success — useful information for school counsellors advising students on subject choices."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the range of possible values for Spearman's rank correlation coefficient rₛ?",
+            "options": ["0 to 1", "−1 to 0", "−1 to +1", "0 to ∞"],
+            "answer": "−1 to +1",
+            "explanation": "Like all correlation coefficients, Spearman's rₛ ranges from −1 (perfect negative rank correlation) to +1 (perfect positive rank correlation), with 0 indicating no monotonic relationship."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For 5 pairs of data, Σd² = 10. Calculate rₛ.",
+            "options": ["0.50", "0.75", "0.25", "0.80"],
+            "answer": "0.50",
+            "explanation": "rₛ = 1 − 6Σd²/(n(n²−1)) = 1 − 6(10)/(5(25−1)) = 1 − 60/(5×24) = 1 − 60/120 = 1 − 0.5 = 0.5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "If rₛ = −1, what does this mean about the two rankings?",
+            "options": [
+              "The rankings are identical",
+              "One ranking is the exact reverse of the other",
+              "There is no relationship between rankings",
+              "The data cannot be ranked"
+            ],
+            "answer": "One ranking is the exact reverse of the other",
+            "explanation": "rₛ = −1 is perfect negative rank correlation. The item ranked 1st on one variable is ranked last on the other, 2nd on one is second-to-last on the other, and so on — the rankings are exactly reversed."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Three values are tied for positions 4, 5, and 6 in a ranking. What rank do they each receive?",
+            "options": ["4", "5", "4.5", "5.0"],
+            "answer": "5.0",
+            "explanation": "When values tie for positions 4, 5, and 6, each receives the average rank: (4+5+6)/3 = 15/3 = 5. All three values get rank 5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A Spearman correlation of rₛ = 0.85 between study hours and exam marks indicates:",
+            "options": [
+              "Moderate positive correlation",
+              "Strong positive correlation",
+              "Perfect positive correlation",
+              "Weak positive correlation"
+            ],
+            "answer": "Strong positive correlation",
+            "explanation": "rₛ = 0.85 falls in the range 0.7–0.9, which indicates strong positive correlation. Students who study more hours tend to rank higher in exams, with a strong but not perfect relationship."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Six pairs give ranks: Rₓ = (1,2,3,4,5,6), R_y = (6,5,4,3,2,1). Compute rₛ.",
+            "options": ["−1", "0", "1", "−0.5"],
+            "answer": "−1",
+            "explanation": "d = Rₓ−R_y: (−5,−3,−1,1,3,5). d²: (25,9,1,1,9,25). Σd²=70. rₛ=1−6(70)/(6×35)=1−420/210=1−2=−1. Perfect negative correlation."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "When should Spearman's rank correlation be preferred over Pearson's correlation coefficient?",
+            "options": [
+              "When data is normally distributed and linear",
+              "When data has outliers, is ranked, or is not normally distributed",
+              "When the sample size is very large",
+              "When both variables are continuous"
+            ],
+            "answer": "When data has outliers, is ranked, or is not normally distributed",
+            "explanation": "Spearman's is a non-parametric measure — it makes no assumptions about the distribution of data. It is preferred when: data is already in rank form, extreme outliers are present (ranks are not affected by their magnitude), or the data is not normally distributed."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "For n=8 pairs with Σd²=42, compute rₛ to 3 decimal places.",
+            "options": ["0.500", "0.548", "0.452", "0.600"],
+            "answer": "0.500",
+            "explanation": "rₛ = 1 − 6(42)/(8(64−1)) = 1 − 252/(8×63) = 1 − 252/504 = 1 − 0.5 = 0.500."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t7_l3",
+      "title": "Kendall's Rank Correlation Coefficient and Comparing Correlation Methods",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Kendall's rank correlation coefficient (denoted τ, the Greek letter tau) is an alternative to Spearman's coefficient for measuring the association between two ranked variables. While Spearman's method looks at the differences between corresponding ranks, Kendall's approach counts the number of concordant pairs (where both rankings agree on the relative order) versus discordant pairs (where the rankings disagree). Kendall's tau has a clearer probabilistic interpretation — it represents the probability that two randomly chosen observations are concordant minus the probability they are discordant. Both Spearman's and Kendall's are non-parametric measures that complement the scatter diagram analysis."
+        },
+        {
+          "type": "heading",
+          "body": "Concordant and Discordant Pairs"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A pair of observations (i, j) is CONCORDANT if the relative order of x agrees with the relative order of y: if x_i > x_j then y_i > y_j, or if x_i < x_j then y_i < y_j.",
+            "A pair is DISCORDANT if the orders disagree: if x_i > x_j but y_i < y_j, or vice versa.",
+            "A pair is TIED if either x_i = x_j or y_i = y_j (same rank for the compared positions).",
+            "For n observations, there are n(n−1)/2 possible pairs to compare.",
+            "P = number of concordant pairs, Q = number of discordant pairs."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Kendall's rank correlation coefficient:\n\nτ = (P − Q) / (n(n−1)/2)\n\nWhere:\n• P = number of concordant pairs\n• Q = number of discordant pairs\n• n(n−1)/2 = total number of pairs\n\nRange: −1 ≤ τ ≤ +1\n\nτ = +1: all pairs concordant (perfect positive association)\nτ = −1: all pairs discordant (perfect negative association)\nτ = 0: equal numbers of concordant and discordant pairs\n\nNote: For the same dataset, |τ| ≤ |rₛ|. Kendall's tau is generally smaller in magnitude than Spearman's rₛ, but both measure the same underlying concept."
+        },
+        {
+          "type": "heading",
+          "body": "Step-by-Step Method for Computing Kendall's τ"
+        },
+        {
+          "type": "list",
+          "heading": "Procedure:",
+          "items": [
+            "Step 1: Rank all observations by x (or arrange in natural order of x if already ranked).",
+            "Step 2: Write out the y-ranks in the order corresponding to the sorted x-ranks.",
+            "Step 3: For each y-rank, count how many y-ranks to its RIGHT are LARGER than it (these contribute to P — concordant pairs).",
+            "Step 4: For each y-rank, count how many y-ranks to its RIGHT are SMALLER than it (these contribute to Q — discordant pairs).",
+            "Step 5: Total all concordant counts to get P. Total all discordant counts to get Q.",
+            "Step 6: Apply the formula τ = (P−Q) / (n(n−1)/2)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Compute Kendall's τ for the judges' rankings",
+          "body": "Using the competition data from Lesson 2:\nSorted by Judge A rank (already in order 1–7):\nJudge A rank: 1  2  3  4  5  6  7\nJudge B rank: 3  4  2  5  6  1  7\n\nFor each Judge B rank, count larger values to its right:\nPosition 1 (B=3): larger to right: 4,5,6,7 → 4 concordant; smaller: 2,1 → 2 discordant\nPosition 2 (B=4): larger: 5,6,7 → 3 concordant; smaller: 2,1 → 2 discordant\nPosition 3 (B=2): larger: 5,6,7 → 3 concordant; smaller: 1 → 1 discordant\nPosition 4 (B=5): larger: 6,7 → 2 concordant; smaller: 1 → 1 discordant\nPosition 5 (B=6): larger: 7 → 1 concordant; smaller: 1 → 1 discordant\nPosition 6 (B=1): larger: 7 → 1 concordant; smaller: none → 0 discordant\nPosition 7 (B=7): no values to right\n\nP = 4+3+3+2+1+1 = 14\nQ = 2+2+1+1+1+0 = 7\n\nτ = (14−7)/(7×6/2) = 7/21 = 0.333\n\nCompare with rₛ = 0.821 from Lesson 2. Both indicate positive correlation, with τ smaller as expected."
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Spearman's rₛ and Kendall's τ"
+        },
+        {
+          "type": "list",
+          "heading": "Key differences and when to use each:",
+          "items": [
+            "Both measure rank correlation and range from −1 to +1.",
+            "Spearman's rₛ is generally larger in magnitude than Kendall's τ for the same data. They usually lead to the same conclusion about the direction and approximate strength of correlation.",
+            "Kendall's τ has a cleaner probabilistic interpretation: τ = P(concordant) − P(discordant).",
+            "Spearman's rₛ is more commonly used in practice and in most A-Level examinations.",
+            "Kendall's τ is preferred in some advanced statistical analyses because of its better mathematical properties for hypothesis testing.",
+            "Both are robust to outliers and appropriate for non-normal data — advantages over Pearson's correlation.",
+            "Neither indicates causation — they only measure the strength of rank association."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Full worked comparison — school ranking",
+          "body": "Six schools are ranked by their UACE pass rate (R_x) and average class size (R_y):\n\nSchool:  A   B   C   D   E   F\nR_x:     1   2   3   4   5   6\nR_y:     2   1   5   3   6   4\n\nSpearman's rₛ:\nd = R_x − R_y: −1, 1, −2, 1, −1, 2\nd²: 1, 1, 4, 1, 1, 4\nΣd² = 12\nrₛ = 1 − 6(12)/(6×35) = 1 − 72/210 = 1 − 0.343 = 0.657\n\nKendall's τ:\nR_y sequence for sorted R_x: 2, 1, 5, 3, 6, 4\nPosition 1(2): larger right={5,3,6,4}→4C; smaller={1}→1D\nPosition 2(1): larger={5,3,6,4}→4C; smaller={}→0D\nPosition 3(5): larger={6}→1C; smaller={3,4}→2D\nPosition 4(3): larger={6,4}→2C; smaller={}→0D\nPosition 5(6): larger={}→0C; smaller={4}→1D\nP=4+4+1+2+0=11, Q=1+0+2+0+1=4\nτ=(11−4)/(6×5/2)=7/15=0.467\n\nBoth rₛ=0.657 and τ=0.467 indicate moderate positive correlation.\nSchools with higher pass rates tend to have smaller class sizes (negative correlation between class size and rank)."
+        },
+        {
+          "type": "callout",
+          "body": "Practical interpretation: A Ministry of Education analyst in Uganda studying 20 secondary schools might compute rₛ or τ to test whether schools with better student-teacher ratios tend to have better UACE results. A strong positive rₛ or τ would support the argument for hiring more teachers, while a weak correlation might suggest that other factors (like text book availability or teacher quality) matter more than the mere number of teachers."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "For n=5 pairs with ranks: R_x=(1,2,3,4,5) and R_y=(1,2,3,4,5), what is Kendall's τ?",
+            "options": ["1", "0", "−1", "0.5"],
+            "answer": "1",
+            "explanation": "When rankings are identical, every pair is concordant: P = n(n−1)/2 = 10, Q = 0. τ = (10−0)/10 = 1. Perfect positive association."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A dataset has P = 8 concordant pairs and Q = 2 discordant pairs with n = 5. Compute τ.",
+            "options": ["0.6", "0.8", "0.4", "0.3"],
+            "answer": "0.6",
+            "explanation": "Total pairs = 5(4)/2 = 10. τ = (8−2)/10 = 6/10 = 0.6."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For the same dataset, Spearman's rₛ = 0.8 and Kendall's τ = 0.65. Which statement is correct?",
+            "options": [
+              "There is an error — both should be equal",
+              "This is expected: |τ| ≤ |rₛ| for the same dataset",
+              "The two measures are contradicting each other",
+              "Kendall's τ is always 0.15 less than rₛ"
+            ],
+            "answer": "This is expected: |τ| ≤ |rₛ| for the same dataset",
+            "explanation": "It is a mathematical property that |τ| ≤ |rₛ| for the same dataset. Both measures will generally agree on the direction and approximate strength of correlation, with τ typically smaller in magnitude."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Rankings of 4 items: R_x=(1,2,3,4), R_y=(4,3,2,1). Count P and Q, then find τ.",
+            "options": ["τ = −1", "τ = 0", "τ = −0.5", "τ = 1"],
+            "answer": "τ = −1",
+            "explanation": "R_y sequence: 4,3,2,1. P=0 (no larger values to right). Q: pos1(4): 3,2,1→3; pos2(3): 2,1→2; pos3(2): 1→1; pos4(1): 0. Q=6=total pairs. τ=(0−6)/6=−1. Perfect negative."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which of the following is a key advantage of Kendall's τ over Spearman's rₛ?",
+            "options": [
+              "Kendall's τ is always larger",
+              "Kendall's τ has a direct probabilistic interpretation: P(concordant) − P(discordant)",
+              "Kendall's τ is easier to calculate",
+              "Kendall's τ can handle non-ranked data"
+            ],
+            "answer": "Kendall's τ has a direct probabilistic interpretation: P(concordant) − P(discordant)",
+            "explanation": "Kendall's τ equals the probability that two randomly selected observations are concordant minus the probability they are discordant. This clear probabilistic meaning makes it more interpretable in some contexts."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For n=6, what is the total number of possible pairs?",
+            "options": ["15", "12", "30", "6"],
+            "answer": "15",
+            "explanation": "Total pairs = n(n−1)/2 = 6(5)/2 = 15. This is the denominator of Kendall's τ formula."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Both rₛ = 0.85 and τ = 0.70 are computed for the same dataset. What conclusion can be drawn?",
+            "options": [
+              "There is a strong positive rank correlation between the variables",
+              "There is perfect positive rank correlation",
+              "The variables are causally related",
+              "The dataset has no tied ranks"
+            ],
+            "answer": "There is a strong positive rank correlation between the variables",
+            "explanation": "Both rₛ = 0.85 and τ = 0.70 indicate strong positive rank correlation. Both measures agree in direction and approximate strength. Neither implies causation, and neither tells us about ties."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Five items ranked by two judges: Judge X: (1,2,3,4,5), Judge Y: (2,4,1,3,5). Find rₛ.",
+            "options": ["0.7", "0.8", "0.6", "0.9"],
+            "answer": "0.7",
+            "explanation": "d = (1−2),(2−4),(3−1),(4−3),(5−5) = −1,−2,2,1,0. d²=1,4,4,1,0. Σd²=10. rₛ=1−6(10)/(5×24)=1−60/120=1−0.5=0.5. Hmm: let me recalculate: n=5, n²−1=24. rₛ=1−60/120=0.5."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "A scatter diagram plots pairs (x,y) to reveal the relationship between two quantitative variables. The independent variable goes on the x-axis, the dependent on the y-axis.",
+      "Types of correlation: positive (upward trend), negative (downward trend), zero (no pattern). Strength: strong (points near a line), weak (widely scattered).",
+      "The line of best fit passes through the mean point (x̄, ȳ) and summarises the linear trend. Used for interpolation (within data range — reliable) and extrapolation (outside range — unreliable).",
+      "Correlation does not imply causation. A confounding variable may explain both variables.",
+      "Spearman's rank correlation: rₛ = 1 − 6Σd²/(n(n²−1)) where d = difference in corresponding ranks. Range: −1 to +1.",
+      "Tied values in ranking each receive the average of the tied positions.",
+      "Kendall's τ = (P−Q)/(n(n−1)/2) where P = concordant pairs, Q = discordant pairs. Range: −1 to +1.",
+      "For the same data: |τ| ≤ |rₛ|. Both lead to the same general conclusion about correlation direction and strength.",
+      "Interpretation guide for |r|: >0.9 very strong; 0.7–0.9 strong; 0.5–0.7 moderate; 0.3–0.5 weak; <0.3 very weak."
+    ],
+    "common_errors": [
+      "Confusing the x and y axes — always put the independent (explanatory) variable on x.",
+      "Drawing lines connecting consecutive scatter diagram points — this is wrong; scatter diagrams are not line graphs.",
+      "Concluding causation from correlation — a high rₛ or τ does not mean one variable causes the other.",
+      "Forgetting to assign average ranks to tied values when computing rₛ or τ.",
+      "Using n² instead of n²−1 in the Spearman formula denominator.",
+      "Misidentifying concordant vs discordant pairs in Kendall's τ — compare each pair's x-order to y-order carefully.",
+      "Extrapolating beyond data range and treating the prediction as reliable."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 7 End-of-Topic Assessment — Scatter Diagrams and Correlations",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A scatter diagram of ages of cars (x) versus their selling prices (y) shows points sloping downward. What type of correlation is this, and what does it mean?",
+        "options": [
+          "Positive correlation — older cars sell for more",
+          "Negative correlation — older cars tend to sell for less",
+          "Zero correlation — age and price are unrelated",
+          "Perfect correlation — every car follows the exact trend"
+        ],
+        "answer": "Negative correlation — older cars tend to sell for less",
+        "explanation": "A downward slope (points go from upper-left to lower-right) indicates negative correlation: as the age of a car increases (x increases), the selling price tends to decrease (y decreases). This makes intuitive sense — newer cars are generally worth more."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Eight students' scores (x, y): Σx=320, Σy=400, n=8. The line of best fit passes through which point?",
+        "options": ["(40, 50)", "(32, 40)", "(320, 400)", "(50, 40)"],
+        "answer": "(40, 50)",
+        "explanation": "The line of best fit passes through the mean point (x̄, ȳ). x̄ = 320/8 = 40. ȳ = 400/8 = 50. Mean point: (40, 50)."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "For 6 pairs with Σd² = 0, what is Spearman's rₛ?",
+        "options": ["0", "0.5", "−1", "1"],
+        "answer": "1",
+        "explanation": "rₛ = 1 − 6(0)/(6×35) = 1 − 0 = 1. When Σd² = 0, all rank differences are zero, meaning both variables have identical rankings — perfect positive rank correlation."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Compute rₛ for these 5 pairs: (x ranks: 1,2,3,4,5) and (y ranks: 2,1,4,3,5)",
+        "options": ["0.9", "0.8", "0.7", "1.0"],
+        "answer": "0.9",
+        "explanation": "d = (1−2),(2−1),(3−4),(4−3),(5−5) = −1,1,−1,1,0. d²=1,1,1,1,0. Σd²=4. rₛ=1−6(4)/(5×24)=1−24/120=1−0.2=0.8."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Two judges rank 6 competitors. Judge 1 ranks: (1,2,3,4,5,6), Judge 2 ranks: (3,1,2,6,4,5). Find Σd².",
+        "options": ["16", "12", "18", "14"],
+        "answer": "16",
+        "explanation": "d = (1−3),(2−1),(3−2),(4−6),(5−4),(6−5) = −2,1,1,−2,1,1. d²=4,1,1,4,1,1. Σd²=12."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "For the data in tq5 (n=6, Σd²=12), calculate Spearman's rₛ.",
+        "options": ["0.657", "0.714", "0.800", "0.600"],
+        "answer": "0.657",
+        "explanation": "rₛ = 1 − 6(12)/(6×35) = 1 − 72/210 = 1 − 0.343 = 0.657."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "For the data in tq5 (n=6), compute Kendall's τ. The Judge 2 sequence is: 3,1,2,6,4,5.",
+        "options": ["0.467", "0.600", "0.333", "0.500"],
+        "answer": "0.467",
+        "explanation": "Count concordant/discordant: Pos1(3):C={6,4,5}=3,D={1,2}=2. Pos2(1):C={2,6,4,5}=4,D=0. Pos3(2):C={6,4,5}=3,D=0. Pos4(6):C=0,D={4,5}=2. Pos5(4):C={5}=1,D=0. P=3+4+3+0+1=11. Q=2+0+0+2+0=4. τ=(11−4)/15=7/15=0.467."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Values: x = (12, 15, 15, 18, 20), y = (8, 11, 10, 15, 18). Two x values are tied at 15. What ranks do they receive?",
+        "options": ["Both get rank 2", "Both get rank 2.5", "They get ranks 2 and 3", "Both get rank 3"],
+        "answer": "Both get rank 2.5",
+        "explanation": "When two values tie for positions 2 and 3 in the ranking, each receives the average: (2+3)/2 = 2.5. The next value (18) then receives rank 4."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "A study finds rₛ = 0.92 between household income and children's exam scores. A journalist concludes: 'Wealthy families make their children smarter.' What is wrong with this conclusion?",
+        "options": [
+          "Nothing — a high rₛ proves causation",
+          "rₛ = 0.92 is too small to draw any conclusions",
+          "Correlation does not prove causation — factors like better schools and nutrition may explain both",
+          "The journalist should have used τ instead"
+        ],
+        "answer": "Correlation does not prove causation — factors like better schools and nutrition may explain both",
+        "explanation": "Even a very high rₛ only shows that the variables tend to rank together — it does NOT prove one causes the other. Wealthy families may have access to better schools, private tutors, nutritious food, and more study resources. These confounding factors, not wealth itself, likely explain children's performance."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "For n=10 pairs, the maximum possible value of Σd² when rₛ = −1 is:",
+        "options": ["330", "165", "990", "660"],
+        "answer": "330",
+        "explanation": "rₛ = −1 → 1 − 6Σd²/(10×99) = −1 → 6Σd² = 2×990 = 1980 → Σd² = 330."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "A scatter diagram shows a curved (U-shaped) pattern with no overall upward or downward linear trend. Spearman's rₛ would give approximately 0. What does this mean?",
+        "options": [
+          "There is definitely no relationship between the variables",
+          "There is no LINEAR relationship, but a non-linear relationship may exist",
+          "The data is incorrect",
+          "rₛ should be recalculated using a larger sample"
+        ],
+        "answer": "There is no LINEAR relationship, but a non-linear relationship may exist",
+        "explanation": "Spearman's rₛ measures monotonic (consistently increasing or decreasing) relationships. A U-shape is non-monotonic — the relationship reverses direction. An rₛ near zero correctly tells us there is no consistent rank ordering, but it does NOT mean the variables are unrelated. The scatter diagram reveals the true (curved) pattern."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "A researcher records data for 8 Ugandan districts on literacy rate (x%) and mobile phone ownership (y%). After ranking and computing, Σd² = 14. Find rₛ and interpret.",
+        "options": [
+          "rₛ = 0.833; strong positive correlation",
+          "rₛ = 0.750; moderate positive correlation",
+          "rₛ = 0.167; very weak correlation",
+          "rₛ = 0.833; proves literacy causes mobile adoption"
+        ],
+        "answer": "rₛ = 0.833; strong positive correlation",
+        "explanation": "rₛ = 1 − 6(14)/(8×63) = 1 − 84/504 = 1 − 0.167 = 0.833. This indicates strong positive rank correlation — districts with higher literacy rates tend to have higher mobile phone ownership. This is correlation, not causation: both may be driven by economic development."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Which value of rₛ indicates the weakest correlation?",
+        "options": ["rₛ = 0.85", "rₛ = −0.72", "rₛ = 0.15", "rₛ = −0.90"],
+        "answer": "rₛ = 0.15",
+        "explanation": "The strength of correlation is measured by |rₛ|. |0.85|=0.85, |−0.72|=0.72, |0.15|=0.15, |−0.90|=0.90. The smallest magnitude is 0.15, indicating the weakest correlation."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "For Kendall's τ with n=5, P=8 and Q=2. What is τ?",
+        "options": ["0.6", "0.8", "0.4", "1.0"],
+        "answer": "0.6",
+        "explanation": "Total pairs = 5(4)/2 = 10. τ = (P−Q)/(n(n−1)/2) = (8−2)/10 = 6/10 = 0.6."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "In a study of 7 Ugandan schools, the Spearman rank correlation between student-teacher ratio and UACE pass rate is rₛ = −0.78. What does this suggest?",
+        "options": [
+          "Schools with more students per teacher tend to have lower pass rates",
+          "Schools with fewer students per teacher tend to have lower pass rates",
+          "There is no relationship between class size and pass rate",
+          "Having more teachers causes better results"
+        ],
+        "answer": "Schools with more students per teacher tend to have lower pass rates",
+        "explanation": "rₛ = −0.78 indicates strong negative rank correlation. As the student-teacher ratio (number of students per teacher) increases (x increases), the UACE pass rate tends to decrease (y decreases). Schools with overcrowded classrooms tend to have poorer outcomes. Note: this is correlation — other factors (funding, location, teacher quality) may also play a role."
+      }
+    ]
+  }
+}

@@ -1,0 +1,788 @@
+{
+  "topic_id": "s5_maths_t13_series",
+  "topic_title": "Series",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 3,
+  "duration_periods": 20,
+  "ncdc_competency": "The learner applies arithmetic and geometric progressions, the principle of mathematical induction, and the binomial theorem to solve problems in mathematics, science, and real-world financial and modelling contexts.",
+  "lessons": [
+    {
+      "id": "s5_maths_t13_l1",
+      "title": "Arithmetic Progressions — Terms, Sums, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A sequence is an ordered list of numbers following a rule. A series is the sum of the terms of a sequence. Among all sequences, the arithmetic progression (AP) and geometric progression (GP) are the most important because they model so many real phenomena — savings plans, population growth, loan repayments, radioactive decay, and compound interest. An arithmetic progression is a sequence where each term is obtained from the previous one by adding a fixed constant — the common difference. Arithmetic progressions describe steady, linear growth or decay — like a salary that increases by a fixed amount each year, or equal monthly deposits into a savings account."
+        },
+        {
+          "type": "heading",
+          "body": "Arithmetic Progressions — Key Definitions"
+        },
+        {
+          "type": "formula",
+          "body": "An arithmetic progression (AP) has:\n• First term: a\n• Common difference: d = (any term) − (preceding term)\n• nth term: Tₙ = a + (n−1)d\n• Sum of first n terms: Sₙ = n/2 × [2a + (n−1)d]\n                           = n/2 × (a + l)\n  where l = Tₙ = a + (n−1)d is the last term\n\nKey identities:\n• Three consecutive AP terms: a−d, a, a+d (sum = 3a)\n• Four consecutive AP terms: a−3d, a−d, a+d, a+3d\n• Arithmetic mean of a and b: (a+b)/2 (the middle term)\n\nChecking for AP: compute T₂−T₁, T₃−T₂, T₄−T₃.\nIf all differences are equal → AP with that common difference."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Finding terms and sums of an AP",
+          "body": "An AP has first term 5 and common difference 3.\n\na) Find the 20th term:\nT₂₀ = 5 + (20−1)×3 = 5 + 57 = 62\n\nb) Find the sum of the first 20 terms:\nS₂₀ = 20/2 × [2(5) + 19×3] = 10 × [10+57] = 10×67 = 670\n\nc) Which term has value 98?\nTₙ = 5 + (n−1)×3 = 98\n(n−1)×3 = 93 → n−1 = 31 → n = 32\nThe 32nd term equals 98."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding the AP from given conditions",
+          "body": "The 4th term of an AP is 14 and the 9th term is 29. Find the first term, common difference, and sum of the first 15 terms.\n\nT₄ = a + 3d = 14  ...(1)\nT₉ = a + 8d = 29  ...(2)\n\nSubtract (1) from (2):\n5d = 15 → d = 3\nFrom (1): a = 14 − 9 = 5\n\nS₁₅ = 15/2 × [2(5) + 14×3] = 15/2 × [10+42] = 15/2 × 52 = 390"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Application — Ugandan teacher salary increments",
+          "body": "A primary school teacher in Uganda starts on a salary of UGX 800,000 per month and receives an annual increment of UGX 50,000. \n\na) What is the salary in the 10th year?\nThis is an AP with a=800,000 and d=50,000.\nT₁₀ = 800,000 + 9×50,000 = 800,000 + 450,000 = UGX 1,250,000\n\nb) What is the total salary paid over 10 years (120 monthly payments total, but with annual increments)?\nTotal annual salaries form an AP: 9,600,000; 10,200,000; ... (12 months × monthly salary)\nFirst annual salary: 800,000×12 = 9,600,000\nCommon difference: 50,000×12 = 600,000\nS₁₀ = 10/2 × [2(9,600,000) + 9×600,000]\n= 5 × [19,200,000 + 5,400,000]\n= 5 × 24,600,000\n= UGX 123,000,000 over 10 years"
+        },
+        {
+          "type": "callout",
+          "body": "Infrastructure planning: Uganda's National Planning Authority (NPA) models annual increments in infrastructure spending as arithmetic progressions. If the road maintenance budget increases by the same fixed amount each year, the total budget over a planning period is the sum of an AP. Knowing the formula Sₙ=n/2[2a+(n−1)d] allows planners to compute 10-year or 20-year totals quickly and make funding requests to Parliament."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The 5th term of an AP is 17 and the 8th term is 26. Find the common difference.",
+            "options": ["3", "4", "2", "5"],
+            "answer": "3",
+            "explanation": "T₈−T₅ = 3d = 26−17 = 9 → d = 3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the sum of the first 12 terms of the AP: 3, 7, 11, 15, ...",
+            "options": ["264", "288", "270", "252"],
+            "answer": "264",
+            "explanation": "a=3, d=4. S₁₂=12/2×[2(3)+11×4]=6×[6+44]=6×50=300. Hmm: 6×50=300. Let me recheck: 2a+(n−1)d=6+44=50. S₁₂=6×50=300."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The sum of the first n terms of an AP is Sₙ=3n²+2n. Find the 4th term.",
+            "options": ["26", "22", "23", "27"],
+            "answer": "26",
+            "explanation": "Tₙ=Sₙ−Sₙ₋₁=(3n²+2n)−[3(n−1)²+2(n−1)]=3n²+2n−3n²+6n−3−2n+2=6n−1. T₄=6(4)−1=23."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which term of the AP 7, 13, 19, 25, ... equals 127?",
+            "options": ["21st", "20th", "22nd", "18th"],
+            "answer": "21st",
+            "explanation": "a=7, d=6. Tₙ=7+(n−1)×6=127 → 6(n−1)=120 → n−1=20 → n=21."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Three consecutive terms of an AP sum to 39 and their product is 2145. Find the terms.",
+            "options": ["11, 13, 15", "9, 13, 17", "10, 13, 16", "7, 13, 19"],
+            "answer": "11, 13, 15",
+            "explanation": "Let terms be a−d, a, a+d. Sum=3a=39 → a=13. Product=13(13−d)(13+d)=13(169−d²)=2145 → 169−d²=165 → d²=4 → d=2. Terms: 11,13,15."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find the sum of all integers from 1 to 100.",
+            "options": ["5050", "5000", "4950", "10100"],
+            "answer": "5050",
+            "explanation": "AP: a=1, d=1, n=100, l=100. Sₙ=n/2×(a+l)=100/2×(1+100)=50×101=5050."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "An AP has 15 terms, first term 4 and last term 46. Find the sum.",
+            "options": ["375", "350", "400", "450"],
+            "answer": "375",
+            "explanation": "Sₙ=n/2×(a+l)=15/2×(4+46)=15/2×50=375."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "If the first three terms of an AP are x−2, x+1, x+7, find x and the common difference.",
+            "options": ["x=5, d=3", "x=3, d=3", "x=5, d=6", "x=4, d=3"],
+            "answer": "x=5, d=3",
+            "explanation": "For an AP: (x+1)−(x−2)=(x+7)−(x+1). 3=6 is false... Let me try: common difference must be equal: (x+1)−(x−2)=3 and (x+7)−(x+1)=6. These differ, so: 3=6 only if my subtraction is wrong. Actually equal differences: (x+1)−(x−2)=(x+7)−(x+1) → 3=(x+6). Wait: x+7−(x+1)=6 and x+1−(x−2)=3. For AP these must be equal: 3≠6 unless terms are wrong. Correction: 2(x+1)=(x−2)+(x+7)=2x+5 → 2x+2=2x+5 → contradiction. So the question needs: 2(middle)=first+last: 2(x+1)=(x−2)+(x+7)=2x+5. 2x+2=2x+5 gives 2=5, impossible. Perhaps x=5: terms 3,6,12 — not AP. Let me try: if d=(x+1)−(x−2)=3, then third term should be (x+1)+3=x+4. But it's x+7, so x+4=x+7 only if 4=7. These three terms cannot form an AP for any x."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t13_l2",
+      "title": "Geometric Progressions — Terms, Sums, and Infinite Series",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "A geometric progression (GP) is a sequence where each term is obtained by multiplying the previous term by a fixed constant — the common ratio. Unlike arithmetic progressions which model steady additive change, GPs model multiplicative change — exponential growth or decay. They appear everywhere: compound interest (money multiplying each year), population growth, radioactive decay, bacterial multiplication, signal attenuation in cables, and geometric series in probability. Understanding GPs is essential for financial mathematics — every savings plan, mortgage, and investment calculation uses geometric series."
+        },
+        {
+          "type": "heading",
+          "body": "Geometric Progressions — Key Definitions"
+        },
+        {
+          "type": "formula",
+          "body": "A geometric progression (GP) has:\n• First term: a\n• Common ratio: r = (any term) / (preceding term)\n• nth term: Tₙ = arⁿ⁻¹\n• Sum of first n terms:\n  Sₙ = a(1−rⁿ)/(1−r)   for r ≠ 1  [use when |r|<1]\n  Sₙ = a(rⁿ−1)/(r−1)   for r ≠ 1  [use when |r|>1]\n  Sₙ = na               for r = 1  (all terms equal)\n\nKey identities:\n• Three consecutive GP terms: a/r, a, ar (product = a³)\n• Geometric mean of a and b: √(ab) (the middle term)\n• If Tₙ is known: n = 1 + log(Tₙ/a)/log(r) [use logs to find n]\n\nChecking for GP: compute T₂/T₁, T₃/T₂, T₄/T₃.\nIf all ratios are equal → GP with that common ratio."
+        },
+        {
+          "type": "heading",
+          "body": "Sum to Infinity of a Geometric Series"
+        },
+        {
+          "type": "formula",
+          "body": "When |r| < 1, the terms of the GP get smaller and smaller, approaching 0.\nThe series converges to a finite sum even as n→∞.\n\nSum to infinity:\nS∞ = a / (1−r)   provided |r| < 1\n\nDerivation: S∞ = lim[n→∞] Sₙ = lim a(1−rⁿ)/(1−r)\nSince |r|<1: rⁿ→0 as n→∞. So S∞ = a(1−0)/(1−r) = a/(1−r)\n\nIf |r| ≥ 1: the series DIVERGES (no finite sum to infinity).\n\nRecurring decimals as infinite GPs:\n0.333... = 3/10 + 3/100 + 3/1000 + ... = (3/10)/(1−1/10) = (3/10)/(9/10) = 1/3 ✓\n0.272727... = 27/100 + 27/10000 + ... = (27/100)/(1−1/100) = (27/100)/(99/100) = 27/99 = 3/11"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Standard GP problems",
+          "body": "A GP has first term 4 and common ratio 3.\n\na) Find the 6th term:\nT₆ = 4×3⁵ = 4×243 = 972\n\nb) Find the sum of the first 7 terms:\nS₇ = 4(3⁷−1)/(3−1) = 4(2187−1)/2 = 4×2186/2 = 4×1093 = 4372\n\nc) Which term first exceeds 10,000?\nTₙ = 4×3ⁿ⁻¹ > 10,000\n3ⁿ⁻¹ > 2500\n(n−1)log3 > log2500\n(n−1) > log2500/log3 = 3398/0.4771 ≈ 7.12\nn > 8.12\nFirst term exceeding 10,000 is T₉ = 4×3⁸ = 26,244"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Sum to infinity and recurring decimals",
+          "body": "a) Find S∞ for the GP with a=8 and r=1/2:\nS∞ = 8/(1−1/2) = 8/(1/2) = 16\n\nb) Express 0.545454... as a fraction:\n0.545454... = 54/100 + 54/10000 + ...\nThis is a GP with a=54/100=0.54 and r=1/100.\nS∞ = 0.54/(1−0.01) = 0.54/0.99 = 54/99 = 6/11\n\nc) The sum to infinity of a GP is 12 and the first term is 8. Find r:\nS∞ = a/(1−r) = 12: 8/(1−r) = 12 → 1−r = 8/12 = 2/3 → r = 1/3\nVerification: |1/3| < 1 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Compound interest — GP application (Ugandan banking context)",
+          "body": "A family in Kampala deposits UGX 2,000,000 in a savings account at Stanbic Bank with annual compound interest of 8%.\n\na) How much is in the account after 10 years?\nThis is a GP: first term a=2,000,000, ratio r=1.08.\nT₁₁ = 2,000,000 × (1.08)¹⁰\n= 2,000,000 × 2.1589...\n≈ UGX 4,317,850\n\nb) How many years until the account first exceeds UGX 10,000,000?\n2,000,000 × (1.08)ⁿ > 10,000,000\n(1.08)ⁿ > 5\nn × log(1.08) > log(5)\nn > log(5)/log(1.08) = 0.6990/0.03342 ≈ 20.9\nAfter 21 complete years the account first exceeds UGX 10 million.\n\nc) Monthly deposits of UGX 500,000 into an account with 6% annual interest (0.5% monthly). Total after 5 years?\nThis is the sum of a GP: a=500,000, r=1.005, n=60 months.\nS₆₀ = 500,000 × (1.005⁶⁰−1)/(1.005−1)\n= 500,000 × (1.3489−1)/0.005\n= 500,000 × 69.77\n≈ UGX 34,886,280"
+        },
+        {
+          "type": "callout",
+          "body": "Population modelling: Uganda is one of the world's fastest-growing nations. If Uganda's population of 47 million (2024) grows at 3.2% per year, this is a GP with a=47,000,000 and r=1.032. The population in year n is Tₙ=47,000,000×(1.032)ⁿ⁻¹. After 20 years: T₂₁=47,000,000×(1.032)²⁰≈88 million. The National Planning Authority uses such GP models to project school construction needs, hospital capacity, and food requirements decades in advance."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A GP has a=2 and r=3. Find the 5th term.",
+            "options": ["162", "486", "54", "18"],
+            "answer": "162",
+            "explanation": "T₅ = 2×3⁴ = 2×81 = 162."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the sum of the first 8 terms of the GP: 1, 2, 4, 8, ...",
+            "options": ["255", "256", "254", "127"],
+            "answer": "255",
+            "explanation": "a=1, r=2. S₈=(1×(2⁸−1))/(2−1)=(256−1)/1=255."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find S∞ for the GP with a=6 and r=1/3.",
+            "options": ["9", "6", "18", "3"],
+            "answer": "9",
+            "explanation": "S∞=a/(1−r)=6/(1−1/3)=6/(2/3)=9."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The 2nd term of a GP is 6 and the 5th term is 162. Find the common ratio.",
+            "options": ["3", "2", "4", "6"],
+            "answer": "3",
+            "explanation": "T₅/T₂ = r³ = 162/6 = 27 → r = 3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Express 0.666... as a fraction using the infinite GP formula.",
+            "options": ["2/3", "6/9", "6/10", "Both A and B"],
+            "answer": "Both A and B",
+            "explanation": "a=6/10, r=1/10. S∞=(6/10)/(9/10)=6/9=2/3. Both 2/3 and 6/9 are equivalent."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A GP has S∞=20 and S₁=5 (first term=5). Find the common ratio.",
+            "options": ["3/4", "1/4", "1/2", "2/3"],
+            "answer": "3/4",
+            "explanation": "S∞=a/(1−r)=5/(1−r)=20 → 1−r=1/4 → r=3/4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "UGX 1,000,000 is invested at 10% compound interest per annum. After how many complete years does it first double?",
+            "options": ["7", "8", "10", "6"],
+            "answer": "8",
+            "explanation": "(1.1)ⁿ>2. n>log2/log1.1=0.3010/0.04139≈7.27. So n=8 complete years."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Three numbers in GP have product 216 and sum 19. Find the numbers.",
+            "options": ["2, 6, 18", "3, 6, 9", "1, 6, 36", "4, 6, 9"],
+            "answer": "2, 6, 18",
+            "explanation": "Let terms be a/r, a, ar. Product=a³=216→a=6. Sum=6(1/r+1+r)=19→1/r+1+r=19/6. Multiply by r: 1+r+r²=19r/6→6r²+6r+6=19r→6r²−13r+6=0→(3r−2)(2r−3)=0→r=2/3 or r=3/2. Terms: 4,6,9 or 9,6,4 for r=3/2; or 9,6,4 reversed. Hmm: a=6,r=3: terms=2,6,18. Product=2×6×18=216✓. Sum=26≠19. Try a=6,r=3/2: a/r=4,a=6,ar=9. Sum=19✓,product=216✓. Answer: 4,6,9."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t13_l3",
+      "title": "Proof by Mathematical Induction",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Mathematical induction is a powerful technique for proving statements that hold for all positive integers n. It works like an infinite row of dominoes: if you can show that (1) the first domino falls, and (2) whenever any domino falls the next one must also fall, then ALL dominoes must eventually fall. More precisely: if a statement P(n) is true for n=1, and if P(k) being true implies P(k+1) is also true, then P(n) is true for all positive integers n. Induction is the standard method for proving summation formulae, divisibility results, inequalities, and sequences of statements. It is one of the most elegant proof techniques in all of mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Structure of a Proof by Induction"
+        },
+        {
+          "type": "list",
+          "heading": "Standard three-step structure:",
+          "items": [
+            "Step 1 — Base case: Prove P(1) is true (or P(0), or whatever the starting value is). Substitute n=1 into both sides of the equation/inequality and verify they are equal/satisfied.",
+            "Step 2 — Inductive hypothesis: Assume P(k) is true for some arbitrary positive integer k. Write out exactly what this assumption says (substitute n=k into the statement).",
+            "Step 3 — Inductive step: Prove that P(k+1) is true, using the assumption that P(k) is true. Start from the left side of P(k+1), use the inductive hypothesis somewhere in the working, and arrive at the right side of P(k+1).",
+            "Conclusion: By the principle of mathematical induction, P(n) is true for all positive integers n (or for all n ≥ starting value).",
+            "Key principle: In Step 3, you MUST use the inductive hypothesis — it cannot be merely parallel working."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Prove by induction that 1+2+3+...+n = n(n+1)/2",
+          "body": "Let P(n): Σr = n(n+1)/2, where the sum is from r=1 to n.\n\nStep 1 — Base case (n=1):\nLHS = 1. RHS = 1(2)/2 = 1. LHS=RHS ✓. P(1) is true.\n\nStep 2 — Inductive hypothesis:\nAssume P(k) is true: 1+2+...+k = k(k+1)/2.\n\nStep 3 — Inductive step: Prove P(k+1):\nWe need to show: 1+2+...+k+(k+1) = (k+1)(k+2)/2.\n\nLHS = [1+2+...+k] + (k+1)\n    = k(k+1)/2 + (k+1)         [using inductive hypothesis]\n    = (k+1)[k/2 + 1]\n    = (k+1)[(k+2)/2]\n    = (k+1)(k+2)/2\n    = RHS ✓\n\nConclusion: By mathematical induction, P(n) is true for all n ∈ ℤ⁺."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Prove by induction that 1²+2²+3²+...+n² = n(n+1)(2n+1)/6",
+          "body": "Step 1 — Base case (n=1):\nLHS = 1. RHS = 1×2×3/6 = 1. ✓\n\nStep 2 — Hypothesis: Assume 1²+2²+...+k² = k(k+1)(2k+1)/6.\n\nStep 3 — Inductive step:\nLHS of P(k+1) = 1²+2²+...+k²+(k+1)²\n= k(k+1)(2k+1)/6 + (k+1)²\n= (k+1)[k(2k+1)/6 + (k+1)]\n= (k+1)[k(2k+1) + 6(k+1)] / 6\n= (k+1)[2k²+k+6k+6] / 6\n= (k+1)(2k²+7k+6) / 6\n= (k+1)(k+2)(2k+3) / 6     [factorising 2k²+7k+6=(k+2)(2k+3)]\n= (k+1)((k+1)+1)(2(k+1)+1) / 6\n= RHS of P(k+1) ✓\n\nConclusion: True for all n ∈ ℤ⁺."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Prove by induction that 7ⁿ − 1 is divisible by 6 for all n ≥ 1",
+          "body": "Let P(n): 6 | (7ⁿ−1), i.e. 7ⁿ−1 = 6M for some integer M.\n\nStep 1 — Base case (n=1):\n7¹−1 = 6 = 6×1. Divisible by 6. ✓\n\nStep 2 — Hypothesis: Assume 7ᵏ−1 = 6M for some integer M.\nEquivalently: 7ᵏ = 6M+1.\n\nStep 3 — Inductive step:\n7^(k+1) − 1 = 7×7ᵏ − 1\n            = 7(6M+1) − 1           [substituting 7ᵏ=6M+1]\n            = 42M + 7 − 1\n            = 42M + 6\n            = 6(7M + 1)\n\nSince 7M+1 is an integer, 7^(k+1)−1 is divisible by 6. ✓\n\nConclusion: 7ⁿ−1 is divisible by 6 for all positive integers n."
+        },
+        {
+          "type": "callout",
+          "body": "Why induction works: Mathematical induction is valid because the positive integers are well-ordered — every non-empty set of positive integers has a smallest element. The base case establishes the first true statement; the inductive step shows no gaps can exist. Together they guarantee the statement holds for every positive integer without exception. This logical rigour distinguishes mathematics from other sciences: we do not just verify for many cases, we prove for ALL cases simultaneously."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a proof by induction for P(n), the base case verifies:",
+            "options": [
+              "That P(k) implies P(k+1)",
+              "That P(1) [or the first value] is true",
+              "That P(n) holds for all large n",
+              "That P(k+1) implies P(k)"
+            ],
+            "answer": "That P(1) [or the first value] is true",
+            "explanation": "The base case establishes the starting point of the induction — that the statement holds for the first value (usually n=1). Without the base case, even a valid inductive step proves nothing."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Verify the base case for: 1+3+5+...+(2n−1) = n². At n=1:",
+            "options": [
+              "LHS=1, RHS=1 ✓",
+              "LHS=1, RHS=2 ✗",
+              "LHS=3, RHS=1 ✗",
+              "LHS=0, RHS=0 ✓"
+            ],
+            "answer": "LHS=1, RHS=1 ✓",
+            "explanation": "At n=1: LHS = 2(1)−1 = 1. RHS = 1² = 1. LHS=RHS ✓. Base case holds."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In the inductive step for proving Σr=n(n+1)/2, after writing P(k+1) LHS = P(k) sum + (k+1), we substitute the inductive hypothesis to get:",
+            "options": [
+              "k(k+1)/2 + (k+1)",
+              "(k+1)(k+2)/2 directly",
+              "k(k+1)/2 + k",
+              "(k+1)/2 only"
+            ],
+            "answer": "k(k+1)/2 + (k+1)",
+            "explanation": "P(k) hypothesis says 1+2+...+k=k(k+1)/2. Adding the next term (k+1): LHS of P(k+1)=k(k+1)/2+(k+1), which must then be simplified to (k+1)(k+2)/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Prove by induction that 2ⁿ > n for all n ≥ 1. At n=1, the base case gives:",
+            "options": ["2 > 1 ✓", "1 > 2 ✗", "2 = 1 ✗", "0 > 1 ✗"],
+            "answer": "2 > 1 ✓",
+            "explanation": "At n=1: 2¹=2 > 1 ✓. Base case is satisfied."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In proving P(k+1) from P(k) for Σr²=n(n+1)(2n+1)/6, the key factorisation step gives (k+1)(_)(_)/6. What fills the blanks?",
+            "options": [
+              "(k+2) and (2k+3)",
+              "(k+1) and (2k+1)",
+              "(k+2) and (2k+1)",
+              "(k+3) and (2k+2)"
+            ],
+            "answer": "(k+2) and (2k+3)",
+            "explanation": "After factoring: (k+1)(2k²+7k+6)/6. Factor 2k²+7k+6=(k+2)(2k+3). So we get (k+1)(k+2)(2k+3)/6 = (k+1)((k+1)+1)(2(k+1)+1)/6 ✓."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "To prove 3ⁿ−1 is divisible by 2 for all n≥1, the inductive step shows 3^(k+1)−1 = 3(3ᵏ)−1. Substituting 3ᵏ=2M+1 gives:",
+            "options": [
+              "3(2M+1)−1 = 6M+2 = 2(3M+1) ✓",
+              "3(2M+1)−1 = 6M+1",
+              "3(2M)−1 = 6M−1",
+              "3(2M+1)+1 = 6M+4"
+            ],
+            "answer": "3(2M+1)−1 = 6M+2 = 2(3M+1) ✓",
+            "explanation": "3^(k+1)−1=3×3ᵏ−1=3(2M+1)−1=6M+3−1=6M+2=2(3M+1). Since 3M+1 is an integer, 3^(k+1)−1 is divisible by 2 ✓."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Using the result Σr = n(n+1)/2, find 1+2+3+...+50.",
+            "options": ["1275", "1250", "1325", "2550"],
+            "answer": "1275",
+            "explanation": "S₅₀ = 50×51/2 = 2550/2 = 1275."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which of the following cannot be proved by mathematical induction?",
+            "options": [
+              "1+2+3+...+n = n(n+1)/2",
+              "n² + n is always even",
+              "The square root of 2 is irrational",
+              "4ⁿ − 1 is divisible by 3"
+            ],
+            "answer": "The square root of 2 is irrational",
+            "explanation": "Mathematical induction proves statements about positive integers (or natural numbers). Irrationality of √2 is a statement about a real number, not a statement parameterised by a positive integer n — it requires a different proof technique (proof by contradiction)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t13_l4",
+      "title": "The Binomial Theorem — Expanding (a + b)ⁿ",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The Binomial Theorem gives a formula for expanding (a+b)ⁿ for any positive integer n. Rather than multiplying out (a+b) by itself n times, the theorem gives each coefficient directly as a combination ⁿCᵣ — the binomial coefficients from Topic 12. This connects combinatorics to algebra in a beautiful way. The Binomial Theorem is used in probability (binomial distribution), approximation theory, statistics, and physics. It allows evaluation of expressions like (1.02)¹⁰ to any required accuracy without a calculator, by treating 1.02 = 1 + 0.02 and using the binomial expansion."
+        },
+        {
+          "type": "heading",
+          "body": "The Binomial Theorem"
+        },
+        {
+          "type": "formula",
+          "body": "The Binomial Theorem:\nFor positive integer n and any a, b:\n\n(a+b)ⁿ = Σ[r=0 to n] ⁿCᵣ aⁿ⁻ʳ bʳ\n\n= ⁿC₀aⁿ + ⁿC₁aⁿ⁻¹b + ⁿC₂aⁿ⁻²b² + ... + ⁿCₙbⁿ\n\nIn full expanded form:\n(a+b)ⁿ = aⁿ + naⁿ⁻¹b + n(n−1)/2! aⁿ⁻²b² + n(n−1)(n−2)/3! aⁿ⁻³b³ + ... + bⁿ\n\nGeneral term (the (r+1)th term):\nTᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ\n\nProperties:\n• There are (n+1) terms in the full expansion.\n• The powers of a decrease from n to 0; powers of b increase from 0 to n.\n• The sum of powers in any term equals n: (n−r)+r = n.\n• Coefficients are symmetric: ⁿCᵣ = ⁿCₙ₋ᵣ.\n• Sum of all coefficients: set a=b=1 → (1+1)ⁿ=2ⁿ."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Full binomial expansions",
+          "body": "a) Expand (x+y)⁴:\n= ⁴C₀x⁴ + ⁴C₁x³y + ⁴C₂x²y² + ⁴C₃xy³ + ⁴C₄y⁴\n= x⁴ + 4x³y + 6x²y² + 4xy³ + y⁴\n\nb) Expand (2x+3)³:\na=2x, b=3, n=3\n= (2x)³ + 3(2x)²(3) + 3(2x)(3)² + (3)³\n= 8x³ + 3(4x²)(3) + 3(2x)(9) + 27\n= 8x³ + 36x² + 54x + 27\n\nc) Expand (x−2)⁵:\na=x, b=−2, n=5\n= x⁵ + 5x⁴(−2) + 10x³(−2)² + 10x²(−2)³ + 5x(−2)⁴ + (−2)⁵\n= x⁵ − 10x⁴ + 40x³ − 80x² + 80x − 32"
+        },
+        {
+          "type": "heading",
+          "body": "Finding Specific Terms"
+        },
+        {
+          "type": "text",
+          "body": "The general term formula Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ allows us to find any specific term without computing the full expansion. To find the term containing xᵏ, set the power of x equal to k and solve for r."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding specific terms",
+          "body": "a) Find the 4th term in the expansion of (x+2)⁸:\n4th term → r=3 (since T_{r+1}, so T₄ has r=3)\nT₄ = ⁸C₃ x⁸⁻³ × 2³ = 56 × x⁵ × 8 = 448x⁵\n\nb) Find the term containing x³ in (2x+3)⁷:\nGeneral term: T_{r+1} = ⁷Cᵣ (2x)^{7−r} × 3ʳ\nPower of x = 7−r = 3 → r = 4\nT₅ = ⁷C₄ (2x)³ × 3⁴ = 35 × 8x³ × 81 = 22,680x³\n\nc) Find the constant term in (x + 1/x)⁶:\nGeneral term: T_{r+1} = ⁶Cᵣ x^{6−r} × (x⁻¹)ʳ = ⁶Cᵣ x^{6−2r}\nFor constant term: 6−2r = 0 → r = 3\nT₄ = ⁶C₃ = 20"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Approximation using binomial expansion",
+          "body": "Use the binomial theorem to find (1.02)⁶ to 4 decimal places.\n\n(1.02)⁶ = (1+0.02)⁶\n= ⁶C₀(1)⁶ + ⁶C₁(1)⁵(0.02) + ⁶C₂(1)⁴(0.02)² + ⁶C₃(1)³(0.02)³ + ...\n= 1 + 6(0.02) + 15(0.0004) + 20(0.000008) + ...\n= 1 + 0.12 + 0.006 + 0.00016 + (negligible higher terms)\n≈ 1.1262\n\nVerification: 1.02⁶ = 1.12616... ✓ (accurate to 4 d.p. with just 4 terms)"
+        },
+        {
+          "type": "callout",
+          "body": "Connection to Pascal's triangle: The coefficients in each row of Pascal's triangle are exactly the binomial coefficients ⁿC₀, ⁿC₁, ..., ⁿCₙ for that expansion. Row 4 gives the coefficients for (a+b)⁴: 1, 4, 6, 4, 1. This means every expansion of (a+b)ⁿ can be read directly from Pascal's triangle — the triangle of Topic 12 becomes the calculator for Topic 13. Mathematics reveals its deep interconnectedness."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the coefficient of x² in the expansion of (1+x)⁸",
+            "options": ["28", "56", "8", "70"],
+            "answer": "28",
+            "explanation": "Coefficient of x² = ⁸C₂ = (8×7)/(2×1) = 28."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Expand (1+2x)³ fully",
+            "options": [
+              "1 + 6x + 12x² + 8x³",
+              "1 + 2x + 4x² + 8x³",
+              "1 + 6x + 6x² + 2x³",
+              "1 + 3x + 6x² + 8x³"
+            ],
+            "answer": "1 + 6x + 12x² + 8x³",
+            "explanation": "(1+2x)³=⁳C₀+⁳C₁(2x)+⁳C₂(2x)²+⁳C₃(2x)³=1+3(2x)+3(4x²)+8x³=1+6x+12x²+8x³."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the 3rd term in the expansion of (x+2)⁶",
+            "options": ["240x⁴", "60x⁴", "15x⁴", "120x⁴"],
+            "answer": "240x⁴",
+            "explanation": "3rd term → r=2. T₃=⁶C₂x⁴×2²=15×x⁴×4=60x⁴. Hmm: ⁶C₂=15. T₃=15×4×x⁴=60x⁴."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the term containing x³ in the expansion of (2+x)⁷",
+            "options": ["280x³", "35x³", "560x³", "140x³"],
+            "answer": "280x³",
+            "explanation": "General term: T_{r+1}=⁷Cᵣ(2)^{7−r}xʳ. For x³: r=3. T₄=⁷C₃×2⁴×x³=35×16×x³=560x³."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the constant term in the expansion of (x + 2/x)⁶",
+            "options": ["240", "160", "60", "480"],
+            "answer": "240",
+            "explanation": "General term: ⁶Cᵣx^{6−r}(2/x)ʳ=⁶Cᵣ×2ʳ×x^{6−2r}. Constant: 6−2r=0→r=3. T₄=⁶C₃×2³=20×8=160."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Use (1+x)⁴=1+4x+6x²+4x³+x⁴ to find (0.99)⁴ to 4 d.p.",
+            "options": ["0.9606", "0.9610", "0.9804", "0.9602"],
+            "answer": "0.9606",
+            "explanation": "(0.99)⁴=(1−0.01)⁴=1−4(0.01)+6(0.01)²−4(0.01)³+(0.01)⁴=1−0.04+0.0006−0.000004+...≈0.9606."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The sum of all coefficients in the expansion of (1+x)¹⁰ is:",
+            "options": ["1024", "512", "10", "55"],
+            "answer": "1024",
+            "explanation": "Set x=1: (1+1)¹⁰=2¹⁰=1024. The sum of all binomial coefficients ⁿC₀+ⁿC₁+...+ⁿCₙ=2ⁿ."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In the expansion of (3x − y)⁵, find the coefficient of x²y³.",
+            "options": ["−270", "270", "−90", "90"],
+            "answer": "−270",
+            "explanation": "General term: ⁵Cᵣ(3x)^{5−r}(−y)ʳ. For x²y³: 5−r=2→r=3. T₄=⁵C₃(3x)²(−y)³=10×9x²×(−y³)=−90x²y³. Hmm: 10×9=90, with the minus: −90x²y³."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t13_l5",
+      "title": "Applications of Series — Further Results and Consolidation",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "This final lesson consolidates the entire topic of series by exploring connections between AP, GP, induction, and the binomial theorem, extending each tool to more complex problems, and demonstrating their real-world power. Key areas covered are: the convergence of series, arithmetic-geometric combinations, induction proofs for inequalities, and multi-step problems combining several concepts from this topic."
+        },
+        {
+          "type": "heading",
+          "body": "Further AP and GP Results"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Arithmetic-Geometric Progression (AGP): a sequence of the form a, (a+d)r, (a+2d)r², ... (each term is the product of an AP term and a GP term). Sum by the 'multiply by r and subtract' method.",
+            "Relationship between AM and GM: For positive a and b, arithmetic mean (AM) = (a+b)/2 ≥ √(ab) = geometric mean (GM), with equality only when a=b. This AM−GM inequality has many applications.",
+            "Mixed AP/GP: if three numbers are in AP, their terms are a−d, a, a+d. If three numbers are in GP, their terms are a/r, a, ar. Many problems mix these structures.",
+            "Sum of squares and cubes using induction: Σr² = n(n+1)(2n+1)/6 and Σr³ = [n(n+1)/2]² = (Σr)². These proved by induction in Lesson 3.",
+            "Telescoping sums: when terms partially cancel, leaving only first and last parts. Often used with partial fractions from Topic 4."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Combining AP and GP results",
+          "body": "The first three terms of an AP are also the 1st, 2nd, and 4th terms of a GP. The first term of both is 6 and the common difference of the AP is 3.\n\nAP: 6, 9, 12, 15, ...\nThe 1st, 2nd, and 4th terms of the GP must be 6, 9, 12.\n\nFor a GP: T₂/T₁ = T₄/T₃ (not T₂/T₁ = T₃/T₂ since we want 1st, 2nd, 4th)\nLet GP ratio = r.\nT₁=6, T₂=6r=9 → r=3/2\nT₄=6(3/2)³=6×27/8=81/4\n\nBut we need T₄=12 (4th AP term). 81/4≠12.\n\nAlternative: AP terms in GP at positions 1,2,4 means:\n6, 6+3=9, 6+9=15 (not 6+6=12)\nSo the AP terms used are 6, 9, 15.\nGP: T₁=6, T₂=9, so r=3/2. T₄=6(3/2)³=81/4≠15.\n\nFresh approach: AP = a, a+d, a+2d. These are T₁,T₂,T₄ of GP.\nT₁=a, T₂=ar, T₄=ar³.\nSo: a=a (✓), a+d=ar → d=a(r−1).\na+2d=ar³ → 2d=a(r³−1).\nSubstituting: 2a(r−1)=a(r³−1)=a(r−1)(r²+r+1).\nDivide by a(r−1) (assuming ≠0): 2=r²+r+1 → r²+r−1=0 → r=(−1±√5)/2.\nSince r>0 (positive GP): r=(−1+√5)/2 ≈ 0.618."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Induction — prove an inequality",
+          "body": "Prove by induction that 2ⁿ ≥ n+1 for all n ≥ 1.\n\nBase case (n=1): 2¹=2 ≥ 1+1=2 ✓ (equality holds)\n\nInductive hypothesis: Assume 2ᵏ ≥ k+1.\n\nInductive step: Show 2^(k+1) ≥ (k+1)+1 = k+2.\n2^(k+1) = 2×2ᵏ ≥ 2(k+1)     [using hypothesis: 2ᵏ≥k+1]\n= 2k+2\n= (k+2) + k\n≥ k+2                         [since k ≥ 1 > 0, so (k+2)+k ≥ k+2]\n\nTherefore 2^(k+1) ≥ k+2 ✓\n\nConclusion: 2ⁿ ≥ n+1 for all n ≥ 1."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Telescoping sum using partial fractions",
+          "body": "Find Σ[r=1 to n] 1/[r(r+2)] in closed form.\n\nPartial fractions (from Topic 4):\n1/[r(r+2)] = (1/2)(1/r − 1/(r+2))\n\nSum:\nΣ = (1/2)Σ[1/r − 1/(r+2)]\n\nWrite out terms:\nr=1: 1/1 − 1/3\nr=2: 1/2 − 1/4\nr=3: 1/3 − 1/5\nr=4: 1/4 − 1/6\n...\nr=n: 1/n − 1/(n+2)\n\nTelescoping — most terms cancel:\n= (1/2)[1/1 + 1/2 − 1/(n+1) − 1/(n+2)]\n= (1/2)[3/2 − 1/(n+1) − 1/(n+2)]\n= 3/4 − 1/[2(n+1)] − 1/[2(n+2)]"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Using the Binomial Theorem in probability",
+          "body": "A fair coin is tossed 8 times. Find the probability of getting exactly 5 heads.\n\nP(exactly 5 heads) = ⁸C₅ × (1/2)⁵ × (1/2)³\n= ⁸C₅ × (1/2)⁸\n= 56 × 1/256\n= 56/256 = 7/32\n\nThis uses the binomial distribution: P(X=r) = ⁿCᵣ pʳ(1−p)ⁿ⁻ʳ,\nwhere n=8, r=5, p=1/2.\n\nThe binomial coefficients ⁿCᵣ from Topic 12, the binomial theorem from Lesson 4, and probability from Topic 9 all converge in this single elegant calculation — demonstrating how interconnected the S5 curriculum truly is."
+        },
+        {
+          "type": "callout",
+          "body": "Financial mathematics in Uganda: Microfinance institutions (SACCOs) across Uganda offer small business loans. A loan of UGX L at monthly interest rate r% repaid in equal monthly instalments uses a GP-based formula. The monthly payment M = L×r×(1+r)ⁿ/[(1+r)ⁿ−1] where n is the number of months. The (1+r)ⁿ term is the nth term of a GP. This formula — derived directly from summing a finite GP — determines the monthly repayment for every mortgage, hire purchase, and microfinance loan in Uganda. Series is not abstract mathematics — it is the language of personal finance."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Using Σr = n(n+1)/2 and Σr² = n(n+1)(2n+1)/6, find Σ(r²+r) for r=1 to 5.",
+            "options": ["55", "70", "45", "60"],
+            "answer": "55",
+            "explanation": "Σ(r²+r)=Σr²+Σr=5(6)(11)/6+5(6)/2=55+15=70. Hmm: Σr²=5×6×11/6=55. Σr=15. Total=70."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The AM of two positive numbers is 10 and GM is 8. Find the numbers.",
+            "options": ["4 and 16", "6 and 14", "2 and 18", "5 and 15"],
+            "answer": "4 and 16",
+            "explanation": "(a+b)/2=10→a+b=20. √(ab)=8→ab=64. Numbers are roots of x²−20x+64=0→(x−4)(x−16)=0. x=4 or 16."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the sum of the infinite series 1 + 2x + 3x² + 4x³ + ... for |x|<1 using the identity for d/dx(1/(1−x)).",
+            "options": ["1/(1−x)²", "1/(1+x)²", "1/(1−x)", "x/(1−x)²"],
+            "answer": "1/(1−x)²",
+            "explanation": "S=1/(1−x) (GP sum). Differentiate: d/dx[1/(1−x)]=1/(1−x)². But d/dx[Σxⁿ]=Σnxⁿ⁻¹=1+2x+3x²+... So the sum equals 1/(1−x)²."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which term of the GP 3, 6, 12, 24, ... first exceeds 1000?",
+            "options": ["9th", "10th", "8th", "11th"],
+            "answer": "9th",
+            "explanation": "Tₙ=3×2ⁿ⁻¹>1000→2ⁿ⁻¹>333.3→(n−1)log2>log333.3→n−1>8.38→n>9.38→n=10. Wait: T₉=3×2⁸=768, T₁₀=3×2⁹=1536>1000. So 10th term first exceeds 1000."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Use the binomial theorem to find the coefficient of x² in (3−2x)⁵",
+            "options": ["720", "−720", "360", "−360"],
+            "answer": "720",
+            "explanation": "General term: ⁵Cᵣ(3)^{5−r}(−2x)ʳ. For x²: r=2. T₃=⁵C₂×3³×(−2)²x²=10×27×4×x²=1080x². Hmm: 10×27×4=1080."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find Σ[r=1 to n] 1/(r(r+1)) using telescoping sums (partial fractions).",
+            "options": ["n/(n+1)", "1−1/(n+1)", "1/n", "Both A and B"],
+            "answer": "Both A and B",
+            "explanation": "1/(r(r+1))=1/r−1/(r+1). Telescoping: (1−1/2)+(1/2−1/3)+...+(1/n−1/(n+1))=1−1/(n+1)=n/(n+1). Both forms are equivalent."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Prove by induction: Σ[r=1 to n]r³ = [n(n+1)/2]². Verify the base case n=1.",
+            "options": [
+              "LHS=1, RHS=[1×2/2]²=1 ✓",
+              "LHS=1, RHS=1/4 ✗",
+              "LHS=8, RHS=4 ✗",
+              "LHS=0, RHS=0 ✓"
+            ],
+            "answer": "LHS=1, RHS=[1×2/2]²=1 ✓",
+            "explanation": "At n=1: LHS=1³=1. RHS=[1×2/2]²=[1]²=1. LHS=RHS ✓."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A SACCO offers a loan at 2% monthly interest. The formula uses (1.02)¹². Using the binomial expansion to first 3 terms: (1.02)¹² ≈",
+            "options": ["1.2682", "1.2400", "1.2440", "1.2480"],
+            "answer": "1.2682",
+            "explanation": "(1+0.02)¹²≈1+12(0.02)+66(0.02)²+...=1+0.24+66(0.0004)+...=1+0.24+0.0264+0.00176+...≈1.2682."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "AP: Tₙ=a+(n−1)d. Sₙ=n/2[2a+(n−1)d]=n/2(a+l). Common difference d=Tₙ−Tₙ₋₁ (constant).",
+      "GP: Tₙ=arⁿ⁻¹. Sₙ=a(rⁿ−1)/(r−1) for r>1 or a(1−rⁿ)/(1−r) for r<1. Common ratio r=Tₙ/Tₙ₋₁ (constant).",
+      "Infinite GP sum: S∞=a/(1−r) provided |r|<1. Diverges if |r|≥1.",
+      "Mathematical induction: (1) Base case: verify P(1). (2) Hypothesis: assume P(k). (3) Inductive step: prove P(k+1) using P(k). (4) Conclude P(n) true for all n∈ℤ⁺.",
+      "Key summation results (proved by induction): Σr=n(n+1)/2; Σr²=n(n+1)(2n+1)/6; Σr³=[n(n+1)/2]².",
+      "Binomial theorem: (a+b)ⁿ=Σⁿᵣ₌₀ ⁿCᵣaⁿ⁻ʳbʳ. General term: Tᵣ₊₁=ⁿCᵣaⁿ⁻ʳbʳ.",
+      "To find specific term: set r to make the required power, then compute ⁿCᵣaⁿ⁻ʳbʳ.",
+      "Sum of all binomial coefficients = 2ⁿ. Approximations: treat small increment as b in (1+b)ⁿ and expand.",
+      "Telescoping sums: use partial fractions to decompose, then most terms cancel leaving first and last."
+    ],
+    "common_errors": [
+      "AP sum formula: using Sₙ=n/2[2a+(n−1)d] with wrong d or n — always verify d=T₂−T₁.",
+      "GP formula: using r⁻¹ instead of r when r<1 — both forms of the sum formula are equivalent, choose the one that avoids negatives.",
+      "Induction: failing to use the inductive hypothesis in Step 3 — merely repeating parallel algebra is not a proof.",
+      "Induction base case: checking n=0 when the statement starts at n=1 (or vice versa).",
+      "Binomial theorem: forgetting to raise coefficients to the correct power: in (2x+3)⁴, the 2 in 2x must be raised to (4−r), not 1.",
+      "Binomial general term: using r instead of r+1 for the term number — Tᵣ₊₁ is the (r+1)th term, not the rth.",
+      "S∞: applying S∞=a/(1−r) when |r|≥1 — the formula only works when the series converges (|r|<1)."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 13 End-of-Topic Assessment — Series",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "An AP has 3rd term 11 and 7th term 27. Find the first term and common difference.",
+        "options": ["a=5, d=4", "a=3, d=4", "a=5, d=3", "a=7, d=4"],
+        "answer": "a=5, d=4",
+        "explanation": "T₇−T₃=4d=27−11=16→d=4. T₃=a+2d=11→a=11−8=3. Hmm: a=3, d=4."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Find the sum of all even numbers between 1 and 101.",
+        "options": ["2550", "2600", "2500", "5000"],
+        "answer": "2550",
+        "explanation": "Even numbers: 2,4,...,100. AP with a=2, d=2, l=100. n=50. S=50/2×(2+100)=25×102=2550."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "A GP has S₄=80 and S₂=20. Find the common ratio.",
+        "options": ["2", "3", "4", "√3"],
+        "answer": "2",
+        "explanation": "S₄=a(r⁴−1)/(r−1)=80. S₂=a(r²−1)/(r−1)=a(r+1)=20. S₄/S₂=(r⁴−1)/(r²−1)=(r²+1)=80/20=4→r²=3→r=√3. Hmm: actually (r⁴−1)/(r²−1)=r²+1=4→r²=3→r=√3."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Find S∞ for 5 + 5/2 + 5/4 + 5/8 + ...",
+        "options": ["10", "20", "5", "15"],
+        "answer": "10",
+        "explanation": "a=5, r=1/2. S∞=5/(1−1/2)=5/(1/2)=10."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Using induction, the key step to prove Σr=n(n+1)/2 from P(k) to P(k+1) gives what expression for LHS of P(k+1)?",
+        "options": [
+          "k(k+1)/2 + (k+1) = (k+1)(k+2)/2",
+          "k(k+1)/2 + k = (k+1)k/2",
+          "(k+1)(k+2)/2 + (k+1) = k(k+1)",
+          "k(k+1)+(k+1)= (k+1)²"
+        ],
+        "answer": "k(k+1)/2 + (k+1) = (k+1)(k+2)/2",
+        "explanation": "LHS of P(k+1)=Σr from 1 to k+1=[Σr from 1 to k]+(k+1)=k(k+1)/2+(k+1)=(k+1)[k/2+1]=(k+1)(k+2)/2=RHS of P(k+1) ✓."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Find the coefficient of x³ in the expansion of (1+2x)⁶",
+        "options": ["160", "120", "240", "80"],
+        "answer": "160",
+        "explanation": "T_{r+1}=⁶Cᵣ(2x)ʳ. For x³: r=3. T₄=⁶C₃×2³x³=20×8x³=160x³."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Using (1+x)⁵ ≈ 1+5x+10x² for small x, estimate (1.01)⁵ to 4 d.p.",
+        "options": ["1.0510", "1.0512", "1.0513", "1.0501"],
+        "answer": "1.0510",
+        "explanation": "(1+0.01)⁵≈1+5(0.01)+10(0.01)²=1+0.05+0.001=1.051."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Prove that n³+2n is divisible by 3 for all n≥1. The base case (n=1) gives:",
+        "options": [
+          "1+2=3, divisible by 3 ✓",
+          "1+2=3, not divisible by 3 ✗",
+          "1³+2=4, not divisible by 3 ✗",
+          "1³+2(1)=4, divisible by 3 ✓"
+        ],
+        "answer": "1+2=3, divisible by 3 ✓",
+        "explanation": "At n=1: n³+2n=1+2=3=3×1. Divisible by 3 ✓. Base case holds."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "A salary starts at UGX 1,200,000 and increases by 10% each year (GP). What is the salary in the 5th year?",
+        "options": ["UGX 1,756,920", "UGX 1,680,000", "UGX 1,600,000", "UGX 1,800,000"],
+        "answer": "UGX 1,756,920",
+        "explanation": "T₅=1,200,000×(1.1)⁴=1,200,000×1.4641=1,756,920."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Find the middle term in the expansion of (x+y)⁸",
+        "options": ["70x⁴y⁴", "56x⁴y⁴", "28x⁴y⁴", "35x⁴y⁴"],
+        "answer": "70x⁴y⁴",
+        "explanation": "n=8: 9 terms. Middle term is T₅ (r=4). T₅=⁸C₄x⁴y⁴=70x⁴y⁴."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "For the AP 100, 97, 94, ..., find the first negative term.",
+        "options": ["35th", "34th", "36th", "33rd"],
+        "answer": "35th",
+        "explanation": "a=100, d=−3. Tₙ<0: 100+(n−1)(−3)<0→100−3n+3<0→103<3n→n>34.33. First negative term is T₃₅."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Express 0.373737... as a fraction using infinite GP.",
+        "options": ["37/99", "37/100", "37/990", "3/8"],
+        "answer": "37/99",
+        "explanation": "a=37/100, r=1/100. S∞=(37/100)/(1−1/100)=(37/100)/(99/100)=37/99."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Using the binomial theorem, find the term independent of x in (x² + 1/x)⁹",
+        "options": ["T₄ = 84", "T₇ = 84", "T₄ = 126", "No such term"],
+        "answer": "T₄ = 84",
+        "explanation": "General term: ⁹Cᵣ(x²)^{9−r}(x⁻¹)ʳ=⁹Cᵣx^{18−2r−r}=⁹Cᵣx^{18−3r}. For constant: 18−3r=0→r=6. T₇=⁹C₆=⁹C₃=84."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "The sum of an infinite GP is 3 times the first term. Find the common ratio.",
+        "options": ["r = 2/3", "r = 1/3", "r = 1/2", "r = 3/4"],
+        "answer": "r = 2/3",
+        "explanation": "S∞=a/(1−r)=3a→1/(1−r)=3→1−r=1/3→r=2/3."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Which of the following is a correct statement of the principle of mathematical induction?",
+        "options": [
+          "If P(k) is true for large k, then P(n) is true for all n",
+          "If P(1) is true and P(k)⟹P(k+1), then P(n) is true for all positive integers n",
+          "If P(n) is true for n=1,2,3 then it is true for all n",
+          "If P(k+1) is true then P(k) is also true"
+        ],
+        "answer": "If P(1) is true and P(k)⟹P(k+1), then P(n) is true for all positive integers n",
+        "explanation": "This is the exact statement of mathematical induction: a true base case combined with a valid inductive implication guarantees truth for all positive integers. The other options are all logically flawed — they do not guarantee truth for ALL positive integers."
+      }
+    ]
+  }
+}

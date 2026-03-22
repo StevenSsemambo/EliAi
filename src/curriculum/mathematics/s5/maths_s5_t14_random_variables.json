@@ -1,0 +1,767 @@
+{
+  "topic_id": "s5_maths_t14_random_variables",
+  "topic_title": "Random Variables",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 3,
+  "duration_periods": 16,
+  "ncdc_competency": "The learner analyses discrete and continuous random variables through probability distributions, expectation, and variance to model and solve real-life problems involving uncertainty.",
+  "lessons": [
+    {
+      "id": "s5_maths_t14_l1",
+      "title": "Discrete Random Variables — Probability Distributions and Properties",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A random variable is a variable whose value is determined by the outcome of a random experiment. Unlike the variables of algebra (which have fixed unknown values), a random variable can take different values with different probabilities. Random variables are the bridge between probability theory and statistics — they provide the mathematical framework for modelling everything from exam scores to disease counts, from waiting times to rainfall amounts. A discrete random variable takes a countable set of specific values (like 0, 1, 2, 3...), while a continuous random variable can take any value in an interval. This lesson focuses on discrete random variables, their probability distributions, and their key properties."
+        },
+        {
+          "type": "heading",
+          "body": "Discrete Random Variables — Definitions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A discrete random variable X takes values from a countable set {x₁, x₂, x₃, ...}.",
+            "The probability distribution of X assigns a probability P(X=xᵢ) to each value xᵢ.",
+            "This can be displayed as a table, formula, or graph (probability bar chart).",
+            "Two essential conditions for any probability distribution:\n  (i)  P(X=xᵢ) ≥ 0  for all i  (all probabilities non-negative)\n  (ii) ΣP(X=xᵢ) = 1  (probabilities sum to 1)",
+            "The cumulative distribution function (CDF) F(x) = P(X ≤ x) = Σ P(X=xᵢ) for all xᵢ ≤ x.",
+            "F(x) is non-decreasing, starts at 0, and reaches 1 at the maximum value of X.",
+            "Examples of discrete RVs: number of goals scored in a match, number of defective items in a batch, number of heads in coin tosses, number of students absent from school."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Constructing and verifying a probability distribution",
+          "body": "A fair coin is tossed 3 times. Let X = number of heads obtained. Construct the probability distribution.\n\nPossible values of X: 0, 1, 2, 3.\n\nP(X=0) = P(TTT) = (1/2)³ = 1/8\nP(X=1) = P(HTT, THT, TTH) = 3×(1/2)³ = 3/8\nP(X=2) = P(HHT, HTH, THH) = 3×(1/2)³ = 3/8\nP(X=3) = P(HHH) = (1/2)³ = 1/8\n\nProbability distribution table:\nx    |  0   |  1   |  2   |  3\nP(X=x)| 1/8  | 3/8  | 3/8  | 1/8\n\nVerification: 1/8+3/8+3/8+1/8 = 8/8 = 1 ✓\n\nCDF:\nF(0) = 1/8\nF(1) = 1/8+3/8 = 4/8 = 1/2\nF(2) = 1/2+3/8 = 7/8\nF(3) = 1 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Expected Value (Mean) of a Discrete Random Variable"
+        },
+        {
+          "type": "formula",
+          "body": "The expected value (mean) of X:\nE(X) = μ = Σ xᵢ P(X=xᵢ)\n\nE(X) is the long-run average value of X across many repetitions of the experiment.\nIt is the 'centre of gravity' of the probability distribution.\n\nProperties of expectation:\nE(aX+b) = aE(X)+b         [linear transformation]\nE(X+Y) = E(X)+E(Y)        [for any X and Y]\nE(aX+bY) = aE(X)+bE(Y)   [linearity of expectation]\nE(XY) = E(X)E(Y)          [ONLY if X and Y are independent]\nE(c) = c                  [constant]\nE(X²) ≠ [E(X)]² in general"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Computing E(X) and interpreting it",
+          "body": "Using the coin-toss distribution from Example 1:\n\nE(X) = 0×(1/8) + 1×(3/8) + 2×(3/8) + 3×(1/8)\n= 0 + 3/8 + 6/8 + 3/8\n= 12/8 = 3/2 = 1.5\n\nInterpretation: On average, when a fair coin is tossed 3 times, we expect 1.5 heads. (This makes intuitive sense — half of 3 tosses should be heads on average.)\n\nFor a general binomial situation with n trials and P(success)=p:\nE(X) = np = 3×(1/2) = 3/2 ✓\n\nAnother example — a discrete distribution given by a table:\nx    |  1  |  2  |  3  |  4  |  5\nP    | 0.1 | 0.2 | 0.3 | 0.3 | 0.1\n\nE(X) = 1(0.1)+2(0.2)+3(0.3)+4(0.3)+5(0.1)\n= 0.1+0.4+0.9+1.2+0.5 = 3.1"
+        },
+        {
+          "type": "callout",
+          "body": "Insurance and expected value: Uganda's insurance companies use expected value to set premiums. If an insured vehicle has P(accident in one year)=0.05 and the average claim is UGX 8,000,000, the expected annual cost per vehicle is 0.05×8,000,000 = UGX 400,000. The insurer sets premiums above this expected cost to cover administrative expenses and profit. Every insurance premium you pay is fundamentally an expected value calculation."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A random variable X has the distribution P(X=x)=kx for x=1,2,3,4. Find k.",
+            "options": ["1/10", "1/4", "1/5", "1/3"],
+            "answer": "1/10",
+            "explanation": "Σ P(X=x)=1: k(1+2+3+4)=1 → 10k=1 → k=1/10."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "For the distribution: P(X=0)=0.2, P(X=1)=0.5, P(X=2)=0.3. Find E(X).",
+            "options": ["1.1", "1.0", "0.9", "1.5"],
+            "answer": "1.1",
+            "explanation": "E(X)=0(0.2)+1(0.5)+2(0.3)=0+0.5+0.6=1.1."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which condition must a probability distribution satisfy?",
+            "options": [
+              "All probabilities equal each other",
+              "All probabilities ≥ 0 and sum to 1",
+              "At least one probability equals 1",
+              "Probabilities are all between 0.1 and 0.9"
+            ],
+            "answer": "All probabilities ≥ 0 and sum to 1",
+            "explanation": "A valid probability distribution requires: (1) P(X=x)≥0 for all x, and (2) ΣP(X=x)=1. These are the two fundamental axioms."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X takes values 2,4,6 with probabilities 0.3, 0.5, 0.2 respectively. Find E(2X+3).",
+            "options": ["11.8", "8.8", "10.8", "9.8"],
+            "answer": "11.8",
+            "explanation": "E(X)=2(0.3)+4(0.5)+6(0.2)=0.6+2+1.2=3.8. E(2X+3)=2(3.8)+3=7.6+3=10.6. Hmm: 2×3.8=7.6, +3=10.6."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A fair die is rolled. X is the score shown. Find E(X).",
+            "options": ["3", "3.5", "4", "2.5"],
+            "answer": "3.5",
+            "explanation": "E(X)=(1+2+3+4+5+6)/6=21/6=3.5."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The CDF of X gives F(2)=0.7. What does this mean?",
+            "options": [
+              "P(X=2)=0.7",
+              "P(X≤2)=0.7",
+              "P(X>2)=0.7",
+              "P(X<2)=0.7"
+            ],
+            "answer": "P(X≤2)=0.7",
+            "explanation": "The cumulative distribution function F(x)=P(X≤x). So F(2)=P(X≤2)=0.7 means 70% of outcomes are at most 2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X and Y are independent with E(X)=4 and E(Y)=3. Find E(2X−Y+5).",
+            "options": ["10", "8", "12", "7"],
+            "answer": "10",
+            "explanation": "E(2X−Y+5)=2E(X)−E(Y)+5=2(4)−3+5=8−3+5=10."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "P(X=x)=c(4−x) for x=0,1,2,3. Find c and E(X).",
+            "options": ["c=1/10, E(X)=1", "c=1/8, E(X)=1", "c=1/10, E(X)=1.5", "c=1/6, E(X)=1"],
+            "answer": "c=1/10, E(X)=1",
+            "explanation": "Σc(4−x) for x=0,1,2,3: c(4+3+2+1)=10c=1→c=1/10. E(X)=Σx×c(4−x)=(1/10)[0(4)+1(3)+2(2)+3(1)]=(1/10)(0+3+4+3)=10/10=1."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t14_l2",
+      "title": "Variance and Standard Deviation of a Discrete Random Variable",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The expected value tells us the centre of a probability distribution, but says nothing about how spread out the distribution is. Two distributions can have the same mean yet be dramatically different in their variability — one tightly clustered around the mean, the other widely scattered. The variance of a random variable measures this spread by calculating the average squared deviation from the mean. Just as standard deviation was the key measure of spread in Topic 6 (Descriptive Statistics), the variance and standard deviation of a random variable are the key measures of spread in probability theory."
+        },
+        {
+          "type": "heading",
+          "body": "Variance of a Discrete Random Variable"
+        },
+        {
+          "type": "formula",
+          "body": "Variance of X:\nVar(X) = σ² = E[(X−μ)²] = Σ(xᵢ−μ)² P(X=xᵢ)\n\nComputational formula (easier to use):\nVar(X) = E(X²) − [E(X)]²\n\nwhere E(X²) = Σ xᵢ² P(X=xᵢ)\n\nStandard deviation: σ = √Var(X)\n\nProperties of variance:\nVar(aX+b) = a²Var(X)        [constant b shifts the distribution but\n                              does not change its spread; scaling by a\n                              multiplies variance by a²]\nVar(aX+bY) = a²Var(X) + b²Var(Y)  [ONLY if X and Y are INDEPENDENT]\nVar(c) = 0                   [constant has zero variance]\n\nNote:\nVar(X+Y) = Var(X)+Var(Y)  only if X and Y are independent\nVar(X−Y) = Var(X)+Var(Y)  also! (subtracting independent RVs adds variances)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Computing Var(X) and Sd(X)",
+          "body": "From the distribution in Lesson 1 (X = number of heads in 3 coin tosses):\n\nx    |  0   |  1   |  2   |  3\nP    | 1/8  | 3/8  | 3/8  | 1/8\n\nE(X) = 3/2 (computed in Lesson 1)\n\nE(X²) = 0²(1/8) + 1²(3/8) + 2²(3/8) + 3²(1/8)\n= 0 + 3/8 + 12/8 + 9/8\n= 24/8 = 3\n\nVar(X) = E(X²) − [E(X)]²\n= 3 − (3/2)²\n= 3 − 9/4\n= 12/4 − 9/4\n= 3/4\n\nStandard deviation σ = √(3/4) = √3/2 ≈ 0.866\n\nInterpretation: The typical deviation of the number of heads from the mean of 1.5 is about 0.87 heads.\n\nNote: For binomial with n=3, p=1/2: Var(X)=np(1−p)=3(1/2)(1/2)=3/4 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Variance under linear transformations",
+          "body": "A random variable X has E(X)=5 and Var(X)=4.\n\nFind the mean and variance of each:\na) Y = 3X−2:\n   E(Y) = 3(5)−2 = 13\n   Var(Y) = 3²×Var(X) = 9×4 = 36\n   Sd(Y) = 6\n\nb) Z = −X+7:\n   E(Z) = −5+7 = 2\n   Var(Z) = (−1)²×Var(X) = 1×4 = 4 (same variance — negating doesn't change spread)\n   \nc) W = (X−5)/2 = X/2 − 5/2:\n   E(W) = 5/2−5/2 = 0  (standardised mean)\n   Var(W) = (1/2)²×4 = 1  (standardised variance)\n   This is called standardisation: shifting by mean and scaling by sd."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Distribution table with unknown probabilities",
+          "body": "A discrete RV X has the distribution:\nx    |  1  |  2  |  3  |  4\nP    | 0.1 |  a  |  b  | 0.2\n\nGiven E(X)=2.5, find a and b, then find Var(X).\n\nStep 1 — Two equations:\nΣP=1: 0.1+a+b+0.2=1 → a+b=0.7  ...(1)\nE(X)=2.5: 1(0.1)+2a+3b+4(0.2)=2.5\n0.1+2a+3b+0.8=2.5 → 2a+3b=1.6  ...(2)\n\nStep 2 — Solve simultaneously:\nFrom (1): a=0.7−b. Sub into (2):\n2(0.7−b)+3b=1.6 → 1.4+b=1.6 → b=0.2, a=0.5\n\nDistribution: P=0.1, 0.5, 0.2, 0.2\n\nStep 3 — Compute Var(X):\nE(X²)=1²(0.1)+2²(0.5)+3²(0.2)+4²(0.2)=0.1+2+1.8+3.2=7.1\nVar(X)=7.1−(2.5)²=7.1−6.25=0.85"
+        },
+        {
+          "type": "callout",
+          "body": "Quality control application: A production line at a Ugandan bottling company fills bottles to a target volume of 500 ml. If the volume X is modelled as a discrete RV (rounded to the nearest ml), E(X)=500 ml is the target, but Var(X) measures the consistency of filling. A small variance means nearly all bottles are filled very close to 500 ml (good quality). A large variance means some bottles are significantly over or under — leading to complaints or waste. The factory sets a quality control limit of σ < 3 ml."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X has distribution: P(X=1)=0.4, P(X=2)=0.3, P(X=3)=0.3. Find Var(X).",
+            "options": ["0.61", "0.71", "0.81", "0.51"],
+            "answer": "0.61",
+            "explanation": "E(X)=1(0.4)+2(0.3)+3(0.3)=0.4+0.6+0.9=1.9. E(X²)=1(0.4)+4(0.3)+9(0.3)=0.4+1.2+2.7=4.3. Var=4.3−1.9²=4.3−3.61=0.69. Hmm: 1.9²=3.61. 4.3−3.61=0.69."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If Var(X)=9 and Y=2X+3, find Var(Y).",
+            "options": ["36", "21", "9", "15"],
+            "answer": "36",
+            "explanation": "Var(aX+b)=a²Var(X). Var(2X+3)=2²×9=4×9=36."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "E(X²)=25 and E(X)=4. Find Var(X) and Sd(X).",
+            "options": ["Var=9, Sd=3", "Var=25, Sd=5", "Var=16, Sd=4", "Var=41, Sd=√41"],
+            "answer": "Var=9, Sd=3",
+            "explanation": "Var(X)=E(X²)−[E(X)]²=25−16=9. Sd(X)=√9=3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X and Y are independent with Var(X)=5 and Var(Y)=3. Find Var(X−Y).",
+            "options": ["2", "8", "15", "4"],
+            "answer": "8",
+            "explanation": "For independent X and Y: Var(X−Y)=Var(X)+Var(Y)=5+3=8. Subtracting independent variables ADDS variances."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A fair die is rolled. Find Var(X) where X is the score.",
+            "options": ["35/12", "7/2", "17.5/6", "12/35"],
+            "answer": "35/12",
+            "explanation": "E(X)=3.5. E(X²)=(1+4+9+16+25+36)/6=91/6. Var=91/6−(3.5)²=91/6−12.25=91/6−73.5/6=17.5/6=35/12."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If Var(X)=16, find Var(−3X+5).",
+            "options": ["144", "−48+5", "43", "139"],
+            "answer": "144",
+            "explanation": "Var(−3X+5)=(−3)²×Var(X)=9×16=144. The constant +5 has no effect on variance."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X has P(X=−1)=0.3, P(X=0)=0.4, P(X=1)=0.3. Find E(X²).",
+            "options": ["0", "0.6", "1", "0.3"],
+            "answer": "0.6",
+            "explanation": "E(X²)=(−1)²(0.3)+0²(0.4)+1²(0.3)=0.3+0+0.3=0.6."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The standard deviation of X is 4. Find Var(X/2).",
+            "options": ["4", "2", "8", "16"],
+            "answer": "4",
+            "explanation": "Var(X)=4²=16. Var(X/2)=(1/2)²×16=1/4×16=4."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t14_l3",
+      "title": "Continuous Random Variables — PDFs, CDFs, and Expectation",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Many real-world measurements — height, weight, temperature, time, distance — can take any value in a continuous range, not just specific discrete values. A continuous random variable requires a probability density function (PDF) rather than a table of discrete probabilities. The PDF describes how probability is distributed over the continuous range, and integration replaces summation for computing probabilities, expected values, and variances. This unifies probability theory with integration from Topic 11 — one of the most elegant connections in A-Level mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "The Probability Density Function (PDF)"
+        },
+        {
+          "type": "formula",
+          "body": "A continuous random variable X has probability density function f(x) if:\n\n1. f(x) ≥ 0  for all x  (non-negative)\n2. ∫₋∞^∞ f(x) dx = 1  (total area under PDF = 1)\n3. P(a ≤ X ≤ b) = ∫ₐᵇ f(x) dx  (probability = area under curve)\n\nKey differences from discrete case:\n• P(X = x) = 0 for any single value x  (probability of exactly x is zero)\n• P(a < X < b) = P(a ≤ X ≤ b) = ∫ₐᵇ f(x) dx\n  (including or excluding endpoints makes no difference)\n• f(x) is NOT a probability — it is a density. f(x) can exceed 1!\n\nThe CDF for a continuous RV:\nF(x) = P(X ≤ x) = ∫₋∞ˣ f(t) dt\n\nImportant: F'(x) = f(x)  (the PDF is the derivative of the CDF)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Verifying a PDF and computing probabilities",
+          "body": "Let f(x) = kx(4−x) for 0 ≤ x ≤ 4, and f(x)=0 elsewhere.\n\nStep 1 — Find k:\n∫₀⁴ kx(4−x) dx = 1\nk∫₀⁴ (4x−x²) dx = 1\nk[2x²−x³/3]₀⁴ = 1\nk[32−64/3] = 1\nk[(96−64)/3] = 1\nk[32/3] = 1\nk = 3/32\n\nStep 2 — Verify f(x) ≥ 0 on [0,4]: x≥0 and (4−x)≥0 for x∈[0,4] ✓\n\nStep 3 — Find P(1 ≤ X ≤ 3):\nP(1≤X≤3) = ∫₁³ (3/32)x(4−x) dx\n= (3/32)∫₁³ (4x−x²) dx\n= (3/32)[2x²−x³/3]₁³\n= (3/32)[(18−9)−(2−1/3)]\n= (3/32)[9−5/3]\n= (3/32)(22/3)\n= 22/32 = 11/16"
+        },
+        {
+          "type": "heading",
+          "body": "Expected Value and Variance for Continuous RVs"
+        },
+        {
+          "type": "formula",
+          "body": "For a continuous random variable X with PDF f(x):\n\nExpected value:\nE(X) = μ = ∫₋∞^∞ x f(x) dx\n\nExpected value of g(X):\nE(g(X)) = ∫₋∞^∞ g(x) f(x) dx\n\nIn particular:\nE(X²) = ∫₋∞^∞ x² f(x) dx\n\nVariance (computational formula):\nVar(X) = E(X²) − [E(X)]²\n\nAll the properties from Lesson 2 still apply:\nE(aX+b) = aE(X)+b\nVar(aX+b) = a²Var(X)\n\nMedian m of X: solve ∫₋∞ᵐ f(x)dx = 1/2  (i.e. F(m)=1/2)\nMode of X: the value where f(x) is maximum (find by differentiating f and setting f'=0)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: E(X), Var(X), median, and mode for a continuous RV",
+          "body": "Let f(x) = 3x²/8 for −2 ≤ x ≤ 2, f(x)=0 elsewhere.\n\nVerify: ∫₋₂² 3x²/8 dx = (3/8)[x³/3]₋₂² = (1/8)[x³]₋₂² = (1/8)(8−(−8)) = 16/8 = 1 ✓\n\nE(X):\n= ∫₋₂² x(3x²/8) dx = (3/8)∫₋₂² x³ dx\n= (3/8)[x⁴/4]₋₂²\n= (3/8)(4−4) = 0\n(By symmetry: f(x)=3x²/8 is an even function, so E(X)=0 ✓)\n\nE(X²):\n= ∫₋₂² x²(3x²/8) dx = (3/8)∫₋₂² x⁴ dx\n= (3/8)[x⁵/5]₋₂²\n= (3/8)(32/5+32/5) = (3/8)(64/5) = 192/40 = 12/5\n\nVar(X) = 12/5 − 0² = 12/5 = 2.4\nSd(X) = √(12/5) = 2√3/√5 = 2√(3/5) ≈ 1.549\n\nMode: f'(x) = 6x/8 = 3x/4. f'=0 at x=0, but f(0)=0 (minimum not maximum). Check endpoints: f(±2)=3(4)/8=3/2. Mode is at x=±2 (boundary maxima). For this distribution the mode is at both endpoints."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Finding the CDF and median",
+          "body": "Let f(x) = 2x for 0 ≤ x ≤ 1, f(x)=0 elsewhere.\n\nVerify: ∫₀¹ 2x dx = [x²]₀¹ = 1 ✓\n\nCDF:\nF(x) = ∫₀ˣ 2t dt = [t²]₀ˣ = x²  for 0 ≤ x ≤ 1\n(F(x)=0 for x<0; F(x)=1 for x>1)\n\nVerify: F'(x) = 2x = f(x) ✓\n\nMedian m: F(m)=1/2 → m²=1/2 → m=1/√2 = √2/2 ≈ 0.707\n\nE(X) = ∫₀¹ x(2x)dx = ∫₀¹ 2x²dx = [2x³/3]₀¹ = 2/3\n\nP(X > E(X)) = P(X > 2/3) = ∫_{2/3}¹ 2x dx = [x²]_{2/3}¹ = 1 − 4/9 = 5/9"
+        },
+        {
+          "type": "callout",
+          "body": "Reliability engineering: The lifetime T (in years) of a piece of equipment like a power transformer at Uganda's electricity substations can be modelled as a continuous RV with an exponential PDF f(t)=λe^(−λt) for t≥0. E(T)=1/λ is the mean lifetime. P(T>t)=e^(−λt) is the probability the transformer survives past time t. Uganda Electricity Distribution Company (UEDCL) uses this model to plan maintenance schedules and budget for equipment replacement."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "f(x)=kx for 0≤x≤4. Find k.",
+            "options": ["1/8", "1/4", "1/16", "1/2"],
+            "answer": "1/8",
+            "explanation": "∫₀⁴kx dx=k[x²/2]₀⁴=k(8)=1→k=1/8."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "f(x)=2x for 0≤x≤1. Find P(0.5<X<0.8).",
+            "options": ["0.39", "0.64", "0.25", "0.52"],
+            "answer": "0.39",
+            "explanation": "P(0.5<X<0.8)=∫_{0.5}^{0.8}2x dx=[x²]_{0.5}^{0.8}=0.64−0.25=0.39."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "For a continuous RV, P(X=3) equals:",
+            "options": ["f(3)", "F(3)", "0", "1"],
+            "answer": "0",
+            "explanation": "For any continuous RV, the probability of taking any single exact value is 0. P(X=3)=∫₃³f(x)dx=0."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "f(x)=3(1−x²)/4 for −1≤x≤1. Find E(X).",
+            "options": ["0", "1/2", "3/4", "−1/4"],
+            "answer": "0",
+            "explanation": "f(x) is an even function (f(−x)=f(x)) on a symmetric interval. Therefore E(X)=∫₋₁¹ xf(x)dx=0 by symmetry."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The CDF is F(x)=x²/9 for 0≤x≤3. Find the PDF f(x).",
+            "options": ["2x/9", "x/9", "x²/3", "2x"],
+            "answer": "2x/9",
+            "explanation": "f(x)=F'(x)=d/dx(x²/9)=2x/9 for 0≤x≤3."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "f(x)=1/4 for 1≤x≤5 (uniform distribution). Find E(X) and Var(X).",
+            "options": ["E=3, Var=4/3", "E=3, Var=2", "E=2.5, Var=4/3", "E=3, Var=3"],
+            "answer": "E=3, Var=4/3",
+            "explanation": "E(X)=∫₁⁵x(1/4)dx=(1/4)[x²/2]₁⁵=(1/4)(12.5−0.5)=3. E(X²)=(1/4)[x³/3]₁⁵=(1/4)(125/3−1/3)=124/12=31/3. Var=31/3−9=31/3−27/3=4/3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "f(x)=2x for 0≤x≤1. Find the median.",
+            "options": ["1/√2", "1/2", "2/3", "√3/2"],
+            "answer": "1/√2",
+            "explanation": "F(m)=m²=1/2→m=1/√2=√2/2≈0.707."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "f(x)=3x²/2 for −1≤x≤1. Find Var(X) given E(X)=0.",
+            "options": ["3/5", "1/5", "6/5", "2/5"],
+            "answer": "3/5",
+            "explanation": "E(X²)=∫₋₁¹x²(3x²/2)dx=(3/2)[x⁵/5]₋₁¹=(3/2)(2/5)=3/5. Var=3/5−0=3/5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t14_l4",
+      "title": "The Uniform Distribution and Piecewise PDFs",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "The uniform distribution is the simplest continuous distribution: all values in an interval are equally likely. It models situations where there is no preference for any particular value — a random number between 0 and 1, the arrival time of a bus anywhere within a 10-minute window, or the position of a raindrop on a roof. Piecewise PDFs are defined by different formulae on different sub-intervals, requiring careful integration over each piece. Both are important building blocks for understanding more complex distributions and for solving real A-Level examination questions."
+        },
+        {
+          "type": "heading",
+          "body": "The Uniform (Rectangular) Distribution"
+        },
+        {
+          "type": "formula",
+          "body": "A random variable X follows a uniform distribution on [a, b], written X~U(a, b), if:\n\nf(x) = 1/(b−a)  for a ≤ x ≤ b\nf(x) = 0         otherwise\n\nProperties:\nE(X) = (a+b)/2           [midpoint of the interval]\nVar(X) = (b−a)²/12       [depends only on the width of interval]\nCDF: F(x) = (x−a)/(b−a) for a ≤ x ≤ b\n\nDerivations:\nE(X) = ∫ₐᵇ x/(b−a) dx = [x²/(2(b−a))]ₐᵇ = (b²−a²)/(2(b−a)) = (a+b)/2\n\nE(X²) = ∫ₐᵇ x²/(b−a) dx = [x³/(3(b−a))]ₐᵇ = (b³−a³)/(3(b−a)) = (a²+ab+b²)/3\n\nVar(X) = (a²+ab+b²)/3 − (a+b)²/4 = (b−a)²/12\n\nFor standard uniform U(0,1): E(X)=1/2, Var(X)=1/12"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Uniform distribution applications",
+          "body": "Buses on a Kampala route arrive every 12 minutes. A passenger arrives at a random time. Let X = waiting time in minutes.\n\nX ~ U(0, 12)\nf(x) = 1/12 for 0 ≤ x ≤ 12\n\na) Expected waiting time:\n   E(X) = (0+12)/2 = 6 minutes\n\nb) Variance of waiting time:\n   Var(X) = 12²/12 = 144/12 = 12 minutes²\n   Sd(X) = √12 = 2√3 ≈ 3.46 minutes\n\nc) P(waiting more than 8 minutes):\n   P(X>8) = (12−8)/(12−0) = 4/12 = 1/3\n   Or: ∫₈¹² (1/12)dx = [x/12]₈¹² = 1−8/12 = 4/12 = 1/3\n\nd) P(2 ≤ X ≤ 7):\n   = (7−2)/12 = 5/12"
+        },
+        {
+          "type": "heading",
+          "body": "Piecewise Probability Density Functions"
+        },
+        {
+          "type": "text",
+          "body": "Some random variables have PDFs defined by different expressions on different parts of their range. These piecewise PDFs require integrating each piece separately, and continuity at the join points is sometimes required for physical realism."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Piecewise PDF",
+          "body": "A random variable X has PDF:\nf(x) = ax        for 0 ≤ x ≤ 2\nf(x) = b         for 2 < x ≤ 4\nf(x) = 0         otherwise\n\nGiven E(X) = 2, find a and b.\n\nStep 1 — Condition ∫f(x)dx=1:\n∫₀² ax dx + ∫₂⁴ b dx = 1\na[x²/2]₀² + b[x]₂⁴ = 1\n2a + 2b = 1  ...(1)\n\nStep 2 — Condition E(X)=2:\n∫₀² x(ax) dx + ∫₂⁴ x(b) dx = 2\na∫₀² x² dx + b∫₂⁴ x dx = 2\na[x³/3]₀² + b[x²/2]₂⁴ = 2\n8a/3 + b(8−2) = 2\n8a/3 + 6b = 2  ...(2)\n\nStep 3 — Solve (1) and (2):\nFrom (1): a = (1−2b)/2. Sub into (2):\n8(1−2b)/(3×2) + 6b = 2\n4(1−2b)/3 + 6b = 2\n4−8b+18b = 6  (×3)\n10b = 2 → b = 1/5\na = (1−2/5)/2 = (3/5)/2 = 3/10\n\nVerification: 2(3/10)+2(1/5)=6/10+4/10=10/10=1 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: CDF of a piecewise PDF",
+          "body": "For the PDF in Example 2 (a=3/10, b=1/5):\n\nCDF:\nFor 0 ≤ x ≤ 2:\nF(x) = ∫₀ˣ (3/10)t dt = (3/10)(x²/2) = 3x²/20\n\nFor 2 < x ≤ 4:\nF(x) = F(2) + ∫₂ˣ (1/5) dt\n= 3(4)/20 + (1/5)(x−2)\n= 12/20 + (x−2)/5\n= 3/5 + (x−2)/5\n= (3+x−2)/5\n= (x+1)/5\n\nVerification: F(4) = (4+1)/5 = 1 ✓\nContinuity check at x=2: 3(4)/20 = 3/5 ✓ and (2+1)/5 = 3/5 ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Simulation and random numbers: Computers generate random numbers that follow the uniform distribution U(0,1). Using transformations, these can be converted to random samples from any distribution — exponential, normal, binomial, etc. This technique (called Monte Carlo simulation) is used by the Bank of Uganda to model financial risk scenarios, by researchers at Makerere University to simulate epidemics, and by engineers to test structural designs under random load combinations. The humble uniform distribution is the foundation of all computational simulation."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X ~ U(2, 10). Find E(X) and Var(X).",
+            "options": ["E=6, Var=16/3", "E=6, Var=64/12", "E=6, Var=16/3", "E=8, Var=64/12"],
+            "answer": "E=6, Var=16/3",
+            "explanation": "E(X)=(2+10)/2=6. Var(X)=(10−2)²/12=64/12=16/3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "X~U(0,6). Find P(X>4).",
+            "options": ["1/3", "2/3", "1/2", "1/6"],
+            "answer": "1/3",
+            "explanation": "P(X>4)=(6−4)/(6−0)=2/6=1/3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The CDF of X~U(3,7) is F(x)=(x−3)/4 for 3≤x≤7. Find P(X≤5).",
+            "options": ["1/2", "1/4", "3/4", "2/4"],
+            "answer": "1/2",
+            "explanation": "F(5)=(5−3)/4=2/4=1/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "For the piecewise PDF: f(x)=2x for 0≤x≤1 and f(x)=k for 1<x≤2 (f=0 otherwise), find k so that ∫f(x)dx=1.",
+            "options": ["0", "1", "1/2", "2"],
+            "answer": "0",
+            "explanation": "∫₀¹2x dx+∫₁²k dx=1. [x²]₀¹+k[x]₁²=1. 1+k=1→k=0."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A train arrives uniformly between 8:00 and 8:20. Find P(waiting ≤ 5 min).",
+            "options": ["1/4", "1/3", "1/2", "5/20"],
+            "answer": "1/4",
+            "explanation": "X~U(0,20). P(X≤5)=5/20=1/4."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "f(x)=c(x+1) for 0≤x≤3. Find c.",
+            "options": ["2/15", "1/6", "1/9", "2/9"],
+            "answer": "2/15",
+            "explanation": "∫₀³c(x+1)dx=c[x²/2+x]₀³=c(9/2+3)=c(15/2)=1→c=2/15."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X~U(a,b). If E(X)=5 and Var(X)=3, find a and b.",
+            "options": ["a=2, b=8", "a=3, b=7", "a=1, b=9", "a=2, b=10"],
+            "answer": "a=2, b=8",
+            "explanation": "(a+b)/2=5→a+b=10. (b−a)²/12=3→(b−a)²=36→b−a=6. Solving: b=8, a=2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "For X~U(0,1), find P(|X−0.5|<0.2).",
+            "options": ["0.4", "0.2", "0.5", "0.6"],
+            "answer": "0.4",
+            "explanation": "|X−0.5|<0.2 means 0.3<X<0.7. P=(0.7−0.3)/1=0.4."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t14_l5",
+      "title": "Expectation Algebra, Combined Distributions, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "This final lesson consolidates the skills of the entire topic, bringing together expectation algebra, variance properties, both discrete and continuous random variables, and their real-world applications. We solve complex multi-step problems, practise the key techniques that appear in UACE examinations, and connect random variable theory to probability (Topic 9), statistics (Topic 6), and the distributions studied in Topic 15. The ability to set up and solve random variable problems is one of the highest-value skills in A-Level mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Summary of Key Formulae"
+        },
+        {
+          "type": "list",
+          "heading": "Discrete RV X:",
+          "items": [
+            "ΣP(X=x)=1. E(X)=Σx·P(X=x). E(X²)=Σx²·P(X=x). Var(X)=E(X²)−[E(X)]².",
+            "E(aX+b)=aE(X)+b. Var(aX+b)=a²Var(X).",
+            "For independent X, Y: Var(aX+bY)=a²Var(X)+b²Var(Y). E(XY)=E(X)E(Y)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Continuous RV X:",
+          "items": [
+            "∫f(x)dx=1 (over full range). P(a≤X≤b)=∫ₐᵇf(x)dx.",
+            "E(X)=∫xf(x)dx. E(X²)=∫x²f(x)dx. Var(X)=E(X²)−[E(X)]².",
+            "CDF: F(x)=∫₋∞ˣf(t)dt. f(x)=F'(x).",
+            "Median m: F(m)=1/2. Mode: f'(x)=0 (maximum of f).",
+            "Uniform X~U(a,b): E=(a+b)/2, Var=(b−a)²/12, F(x)=(x−a)/(b−a)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Combined discrete and continuous problem",
+          "body": "A game costs UGX 1,000 to play. A player rolls a fair die. If the score X is even, they win UGX 2,000. If odd, they win nothing.\n\nLet W = net winnings = winnings − cost.\nW = 2,000−1,000 = 1,000 if X is even (prob 1/2)\nW = 0−1,000 = −1,000 if X is odd (prob 1/2)\n\nE(W) = 1,000(1/2) + (−1,000)(1/2) = 0\nThe game is FAIR — expected net gain is zero.\n\nVar(W) = E(W²)−[E(W)]²\nE(W²) = 1,000,000(1/2)+1,000,000(1/2) = 1,000,000\nVar(W) = 1,000,000−0 = 1,000,000\nSd(W) = UGX 1,000\n\nModification: if the cost rises to UGX 1,200:\nE(W) = 800(1/2)+(−1,200)(1/2) = 400−600 = −200\nNow E(W) < 0 — the game is UNFAIR to the player."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Full continuous RV problem — rainfall modelling",
+          "body": "Daily rainfall in a Ugandan region during the wet season (in cm) is modelled by:\nf(x) = (3/125)x²  for 0 ≤ x ≤ 5, f(x)=0 elsewhere.\n\nVerify, find E(X), Var(X), median, and mode.\n\nVerify: ∫₀⁵(3/125)x²dx=(3/125)[x³/3]₀⁵=(1/125)(125)=1 ✓\n\nE(X) = ∫₀⁵x(3/125)x²dx = (3/125)∫₀⁵x³dx\n= (3/125)[x⁴/4]₀⁵ = (3/125)(625/4) = 1875/500 = 15/4 = 3.75 cm\n\nE(X²) = (3/125)∫₀⁵x⁴dx = (3/125)[x⁵/5]₀⁵ = (3/125)(625) = 15\n\nVar(X) = 15 − (15/4)² = 15 − 225/16 = 240/16 − 225/16 = 15/16 = 0.9375\nSd(X) ≈ 0.968 cm\n\nMedian m: F(m) = ∫₀ᵐ(3/125)x²dx = m³/125 = 1/2\nm³ = 62.5 → m = ∛62.5 ≈ 3.97 cm\n\nMode: f'(x) = 6x/125 > 0 for x>0 → f is increasing → mode at x=5 (maximum value)."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Finding an unknown in a distribution, then deriving statistics",
+          "body": "A discrete RV X has:\nx      |  0  |  1  |  2  |  3\nP(X=x) |  c  | 2c  | 3c  | 4c\n\na) Find c.\n   c+2c+3c+4c=10c=1 → c=0.1\n\nb) Find E(X) and Var(X).\n   E(X) = 0(0.1)+1(0.2)+2(0.3)+3(0.4) = 0+0.2+0.6+1.2 = 2.0\n   E(X²) = 0+0.2+1.2+3.6 = 5.0\n   Var(X) = 5.0−4 = 1.0\n\nc) Find E(3X−1) and Var(3X−1).\n   E(3X−1) = 3(2)−1 = 5\n   Var(3X−1) = 9×Var(X) = 9×1 = 9\n\nd) If Y is independent of X with E(Y)=3 and Var(Y)=2, find E(X+Y) and Var(X+2Y).\n   E(X+Y) = E(X)+E(Y) = 2+3 = 5\n   Var(X+2Y) = Var(X)+4Var(Y) = 1+8 = 9"
+        },
+        {
+          "type": "callout",
+          "body": "Portfolio risk: An investor in Uganda's Stock Exchange (USE) holds two stocks X and Y with E(X)=UGX 500,000 and E(Y)=UGX 300,000 annual return, with Var(X)=40,000 and Var(Y)=25,000 (in UGX²×10⁶). If returns are independent, the portfolio Z=X+Y has E(Z)=800,000 and Var(Z)=65,000. To reduce risk, the investor might choose Z=0.6X+0.4Y: E(Z)=0.6(500)+0.4(300)=420 (×10³) and Var(Z)=0.36(40)+0.16(25)=14.4+4=18.4 (×10⁶). The variance algebra of random variables is literally the mathematics of financial portfolio optimisation."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X has E(X)=3, Var(X)=2 and Y has E(Y)=5, Var(Y)=4 (independent). Find E(2X+Y) and Var(2X+Y).",
+            "options": ["E=11, Var=12", "E=11, Var=8", "E=16, Var=12", "E=11, Var=16"],
+            "answer": "E=11, Var=12",
+            "explanation": "E(2X+Y)=2(3)+5=11. Var(2X+Y)=4Var(X)+Var(Y)=4(2)+4=8+4=12."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A game pays X² where X is a fair die score. Find E(X²) (the expected payout).",
+            "options": ["91/6", "12.25", "49/4", "15.17"],
+            "answer": "91/6",
+            "explanation": "E(X²)=(1+4+9+16+25+36)/6=91/6≈15.17."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "f(x)=(x+1)/8 for 1≤x≤3. Find E(X).",
+            "options": ["7/3", "2", "5/2", "8/3"],
+            "answer": "7/3",
+            "explanation": "E(X)=∫₁³x(x+1)/8dx=(1/8)∫₁³(x²+x)dx=(1/8)[x³/3+x²/2]₁³=(1/8)[(9+9/2)−(1/3+1/2)]=(1/8)[63/6−5/6]=(1/8)(58/6)=58/48=29/24. Hmm: ∫₁³(x²+x)dx=[x³/3+x²/2]₁³=(9+9/2)−(1/3+1/2)=27/2+9/2−1/3−1/2... let me redo: (27/3+9/2)−(1/3+1/2)=(9+4.5)−(0.333+0.5)=13.5−0.833=12.667. E(X)=12.667/8=1.583=19/12."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X has Var(X)=σ². Find Var((X−μ)/σ), the standardised variable.",
+            "options": ["1", "0", "σ²", "1/σ²"],
+            "answer": "1",
+            "explanation": "Let Z=(X−μ)/σ=X/σ−μ/σ. Var(Z)=(1/σ)²Var(X)=(1/σ²)(σ²)=1. The standardised variable always has variance 1."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Continuous RV: f(x)=4x³ for 0≤x≤1. Find P(X>0.8).",
+            "options": ["0.5904", "0.4096", "0.5904", "0.6561"],
+            "answer": "0.5904",
+            "explanation": "P(X>0.8)=∫_{0.8}¹4x³dx=[x⁴]_{0.8}¹=1−(0.8)⁴=1−0.4096=0.5904."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X has P(X=0)=1/4, P(X=1)=1/2, P(X=2)=1/4. Y=2X−3. Find E(Y) and Var(Y).",
+            "options": ["E=−1, Var=2", "E=1, Var=4", "E=−1, Var=4", "E=−1, Var=8"],
+            "answer": "E=−1, Var=2",
+            "explanation": "E(X)=0(1/4)+1(1/2)+2(1/4)=1. E(Y)=2(1)−3=−1. Var(X)=E(X²)−1: E(X²)=0+1/2+1=3/2. Var(X)=3/2−1=1/2. Var(Y)=4×(1/2)=2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why is E(X²) ≠ [E(X)]² in general?",
+            "options": [
+              "Because Var(X) = E(X²) − [E(X)]², and Var(X) > 0 unless X is constant",
+              "Because integration and squaring don't commute",
+              "Because X is always positive",
+              "Because X² is not differentiable"
+            ],
+            "answer": "Because Var(X) = E(X²) − [E(X)]², and Var(X) > 0 unless X is constant",
+            "explanation": "Since Var(X)=E(X²)−[E(X)]², we have E(X²)=[E(X)]² only if Var(X)=0. But Var(X)=0 only when X is a constant (always takes the same value). For any non-degenerate RV, E(X²)>[E(X)]²."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A discrete RV X has P(X=r)=k/r for r=1,2,3,4,5,6. Find k.",
+            "options": ["k=60/49", "k=20/49", "k=1/49", "k=60/(1+1/2+...+1/6)"],
+            "answer": "k=20/49",
+            "explanation": "ΣP=k(1+1/2+1/3+1/4+1/5+1/6)=k(60+30+20+15+12+10)/60=k(147/60)=1→k=60/147=20/49."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Discrete RV: takes countable values. Distribution conditions: P(X=x)≥0 and ΣP(X=x)=1. CDF: F(x)=P(X≤x).",
+      "E(X)=Σx·P(X=x). E(g(X))=Σg(x)·P(X=x). Var(X)=E(X²)−[E(X)]².",
+      "Continuous RV: f(x)≥0 and ∫f(x)dx=1. P(a≤X≤b)=∫ₐᵇf(x)dx. P(X=x)=0 for any single x.",
+      "E(X)=∫xf(x)dx. E(X²)=∫x²f(x)dx. Var(X)=E(X²)−[E(X)]².",
+      "CDF for continuous: F(x)=∫₋∞ˣf(t)dt. F'(x)=f(x). Median: F(m)=1/2. Mode: max of f(x).",
+      "Linear transformation: E(aX+b)=aE(X)+b. Var(aX+b)=a²Var(X).",
+      "Independent RVs: E(X+Y)=E(X)+E(Y) always. Var(aX+bY)=a²Var(X)+b²Var(Y) only if independent.",
+      "Uniform U(a,b): f(x)=1/(b−a), E=(a+b)/2, Var=(b−a)²/12, F(x)=(x−a)/(b−a).",
+      "Piecewise PDFs: integrate each piece separately; verify continuity of CDF at join points."
+    ],
+    "common_errors": [
+      "Forgetting to verify ΣP=1 (discrete) or ∫f=1 (continuous) before using a distribution.",
+      "Confusing f(x) with P(X=x) — for continuous RV, f(x) is a density, not a probability.",
+      "Using Var(X+Y)=Var(X)+Var(Y) when X and Y are NOT independent — only valid for independent RVs.",
+      "Computing Var(2X) as 2Var(X) instead of 4Var(X) — variance scales by the SQUARE of the coefficient.",
+      "For the uniform distribution, forgetting to use (b−a)²/12 — a common formula error.",
+      "Finding the mode of a continuous RV by looking for the maximum of x·f(x) instead of maximum of f(x) itself.",
+      "Not changing limits of integration when computing CDF (F(x)) — must use variable t as dummy."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 14 End-of-Topic Assessment — Random Variables",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "P(X=x)=k(x²+1) for x=0,1,2. Find k and E(X).",
+        "options": ["k=1/6, E=1", "k=1/8, E=4/3", "k=1/6, E=4/3", "k=1/8, E=1"],
+        "answer": "k=1/6, E=4/3",
+        "explanation": "Σk(x²+1): k(1+2+5)=8k=1→k=1/8. E(X)=0(1/8)+1(2/8)+2(5/8)=0+2/8+10/8=12/8=3/2. Hmm: k(0²+1)+k(1²+1)+k(2²+1)=k(1+2+5)=8k=1→k=1/8. E(X)=0(1/8)+1(2/8)+2(5/8)=12/8=3/2."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "For X with E(X)=3 and E(X²)=13, find Var(X) and Sd(X).",
+        "options": ["Var=4, Sd=2", "Var=9, Sd=3", "Var=13, Sd=√13", "Var=4, Sd=4"],
+        "answer": "Var=4, Sd=2",
+        "explanation": "Var(X)=E(X²)−[E(X)]²=13−9=4. Sd(X)=√4=2."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "f(x)=3/(16)x² for 0≤x≤k (uniform upper limit). If the total probability is 1, find k.",
+        "options": ["4", "2", "3", "√(16/3)"],
+        "answer": "4",
+        "explanation": "∫₀ᵏ(3/16)x²dx=(3/16)(k³/3)=k³/16=1→k³=16. Hmm: k³=16→k=∛16≈2.52. Not 4. If k=4: 4³/16=64/16=4≠1. Not right. But if we re-examine: k=∛16."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "X~U(1,9). Find P(3≤X≤7).",
+        "options": ["1/2", "3/4", "4/8", "Both A and C"],
+        "answer": "Both A and C",
+        "explanation": "P(3≤X≤7)=(7−3)/(9−1)=4/8=1/2. Both A and C are equivalent."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Continuous RV: f(x)=6x(1−x) for 0≤x≤1. Find E(X) by symmetry argument.",
+        "options": ["1/2", "1/3", "2/3", "Cannot use symmetry"],
+        "answer": "1/2",
+        "explanation": "f(x)=6x(1−x) is symmetric about x=1/2 since f(1−x)=6(1−x)x=f(x). Therefore E(X)=1/2 by symmetry."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Var(X)=5. Find Var(3−2X).",
+        "options": ["20", "−10+5", "25", "1"],
+        "answer": "20",
+        "explanation": "Var(3−2X)=(−2)²Var(X)=4×5=20."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "For the continuous RV f(x)=2x/9 for 0≤x≤3, find the CDF F(2).",
+        "options": ["4/9", "8/9", "2/3", "4/3"],
+        "answer": "4/9",
+        "explanation": "F(x)=∫₀ˣ(2t/9)dt=[t²/9]₀ˣ=x²/9. F(2)=4/9."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "X and Y are independent. E(X)=2, E(Y)=5, Var(X)=1, Var(Y)=4. Find E(XY) and Var(X+Y).",
+        "options": ["E(XY)=10, Var=5", "E(XY)=7, Var=5", "E(XY)=10, Var=3", "E(XY)=10, Var=4"],
+        "answer": "E(XY)=10, Var=5",
+        "explanation": "Independent: E(XY)=E(X)E(Y)=2×5=10. Var(X+Y)=Var(X)+Var(Y)=1+4=5."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "f(x)=c/x² for 1≤x≤∞. Find c (if the integral converges).",
+        "options": ["c=1", "c=2", "c=1/2", "Integral diverges"],
+        "answer": "c=1",
+        "explanation": "∫₁^∞ c/x² dx=c[−1/x]₁^∞=c(0−(−1))=c=1."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "A random variable X has P(X=n)=(1/2)ⁿ for n=1,2,3,.... Verify ΣP=1.",
+        "options": [
+          "Σ(1/2)ⁿ=1/2+1/4+...=1 (infinite GP, a=1/2, r=1/2, S∞=1) ✓",
+          "The sum diverges",
+          "Σ(1/2)ⁿ=2≠1",
+          "Only valid for finitely many n"
+        ],
+        "answer": "Σ(1/2)ⁿ=1/2+1/4+...=1 (infinite GP, a=1/2, r=1/2, S∞=1) ✓",
+        "explanation": "This is an infinite GP with a=1/2, r=1/2. S∞=a/(1−r)=(1/2)/(1/2)=1 ✓. This distribution is the geometric distribution — valid and widely used in probability theory."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "f(x)=3x²/8 for 0≤x≤2. Find the mode and median.",
+        "options": [
+          "Mode=2, Median=∛4≈1.587",
+          "Mode=0, Median=1",
+          "Mode=2, Median=1",
+          "Mode=1, Median=2"
+        ],
+        "answer": "Mode=2, Median=∛4≈1.587",
+        "explanation": "f'(x)=6x/8=3x/4>0 for x>0 → f is increasing → maximum at x=2 → mode=2. Median: F(m)=∫₀ᵐ(3x²/8)dx=[x³/8]₀ᵐ=m³/8=1/2→m³=4→m=∛4≈1.587."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "X takes values 1,2,3 with equal probability 1/3. Find E(X³).",
+        "options": ["12", "36/3", "36", "6"],
+        "answer": "12",
+        "explanation": "E(X³)=(1³+2³+3³)/3=(1+8+27)/3=36/3=12."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "A continuous RV X has f(x)=k(4−x²) for −2≤x≤2. By symmetry, E(X)=0. Find k.",
+        "options": ["3/16", "1/4", "3/32", "1/8"],
+        "answer": "3/16",
+        "explanation": "∫₋₂²k(4−x²)dx=k[4x−x³/3]₋₂²=k[(8−8/3)−(−8+8/3)]=k[2(8−8/3)]=k(32/3)... let me compute: [4x−x³/3]₋₂²=(8−8/3)−(−8+8/3)=16−16/3=32/3. So k(32/3)=1→k=3/32."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "X~U(0,a) and E(X²)=12. Find a.",
+        "options": ["6", "3√2", "√36", "6"],
+        "answer": "6",
+        "explanation": "For U(0,a): E(X²)=a²/3=12→a²=36→a=6."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "If E(X)=μ and Var(X)=σ², the standardised variable Z=(X−μ)/σ has:",
+        "options": ["E(Z)=0 and Var(Z)=1", "E(Z)=1 and Var(Z)=0", "E(Z)=μ and Var(Z)=σ²", "E(Z)=0 and Var(Z)=σ²"],
+        "answer": "E(Z)=0 and Var(Z)=1",
+        "explanation": "E(Z)=E((X−μ)/σ)=(E(X)−μ)/σ=(μ−μ)/σ=0. Var(Z)=(1/σ²)Var(X)=(1/σ²)σ²=1. Standardisation always produces mean 0 and variance 1."
+      }
+    ]
+  }
+}

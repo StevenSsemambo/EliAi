@@ -1,0 +1,865 @@
+{
+  "topic_id": "s5_maths_t11_integration_1",
+  "topic_title": "Integration 1",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 22,
+  "ncdc_competency": "The learner applies integration techniques to find areas, volumes, and mean values, and solves problems involving indefinite and definite integrals in real-life and mathematical contexts.",
+  "lessons": [
+    {
+      "id": "s5_maths_t11_l1",
+      "title": "Indefinite Integration — The Reverse of Differentiation",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Integration is the second fundamental operation of calculus — the reverse of differentiation. If differentiation asks 'given a function, find its rate of change', integration asks 'given a rate of change, find the original function'. This reversal process is called antidifferentiation or indefinite integration. Integration is one of the most powerful tools in all of mathematics: it computes areas, volumes, lengths, accumulated totals, work done by forces, electric charge, and probability distributions. Every physical quantity that is found by accumulation — total rainfall, total displacement, total energy — involves integration. In Uganda, integration is applied in hydrology (computing total river flow), engineering (calculating structural loads), and economics (finding consumer surplus and total revenue)."
+        },
+        {
+          "type": "heading",
+          "body": "The Indefinite Integral — Definition and Notation"
+        },
+        {
+          "type": "text",
+          "body": "If F'(x) = f(x), then F(x) is called an antiderivative of f(x). Because the derivative of any constant is zero, if F(x) is one antiderivative, then F(x)+C is also an antiderivative for any constant C. The indefinite integral captures all antiderivatives at once."
+        },
+        {
+          "type": "formula",
+          "body": "Indefinite integral:\n∫ f(x) dx = F(x) + C\n\nwhere F'(x) = f(x) and C is the constant of integration.\n\nThe symbol ∫ is an elongated S (for 'sum'). The dx indicates we are integrating with respect to x.\n\nVerification: always check by differentiating — d/dx[F(x)+C] must equal f(x).\n\nPower rule for integration (reverse of power rule for differentiation):\n∫ xⁿ dx = xⁿ⁺¹/(n+1) + C     provided n ≠ −1\n\nKey standard integrals:\n∫ xⁿ dx = xⁿ⁺¹/(n+1) + C    (n ≠ −1)\n∫ k dx = kx + C               (constant)\n∫ x⁻¹ dx = ln|x| + C         (special case n=−1)\n∫ eˣ dx = eˣ + C\n\nLinearity rules:\n∫ [f(x)+g(x)] dx = ∫f(x)dx + ∫g(x)dx\n∫ kf(x) dx = k∫f(x)dx"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Basic indefinite integrals",
+          "body": "a) ∫ x⁵ dx = x⁶/6 + C\n\nb) ∫ 3x² dx = 3 × x³/3 + C = x³ + C\n   Verification: d/dx(x³+C) = 3x² ✓\n\nc) ∫ (4x³ − 6x + 5) dx\n   = 4×x⁴/4 − 6×x²/2 + 5x + C\n   = x⁴ − 3x² + 5x + C\n\nd) ∫ (1/x²) dx = ∫ x⁻² dx = x⁻¹/(−1) + C = −1/x + C\n\ne) ∫ √x dx = ∫ x^(1/2) dx = x^(3/2)/(3/2) + C = (2/3)x^(3/2) + C\n   = (2/3)x√x + C\n\nf) ∫ (3/√x) dx = ∫ 3x^(−1/2) dx = 3 × x^(1/2)/(1/2) + C = 6√x + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Integrals requiring simplification first",
+          "body": "Always simplify before integrating — expand brackets or split fractions.\n\na) ∫ x(x+3)² dx\nExpand: x(x²+6x+9) = x³+6x²+9x\n∫(x³+6x²+9x) dx = x⁴/4 + 2x³ + 9x²/2 + C\n\nb) ∫ (x²+2)/x dx = ∫(x + 2/x) dx = x²/2 + 2ln|x| + C\n\nc) ∫ (√x + 1/√x)² dx\nExpand: (√x)² + 2(√x)(1/√x) + (1/√x)² = x + 2 + x⁻¹\n∫(x + 2 + x⁻¹) dx = x²/2 + 2x + ln|x| + C"
+        },
+        {
+          "type": "heading",
+          "body": "Finding the Constant of Integration"
+        },
+        {
+          "type": "text",
+          "body": "When additional information is given — such as a point the curve passes through — we can find the specific value of C and determine the particular antiderivative."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Finding C from initial conditions",
+          "body": "A curve has dy/dx = 3x² − 4x + 1 and passes through the point (2, 5). Find y.\n\nIntegrate: y = ∫(3x²−4x+1) dx = x³ − 2x² + x + C\n\nSubstitute (2, 5): 5 = 8 − 8 + 2 + C → 5 = 2 + C → C = 3\n\nAnswer: y = x³ − 2x² + x + 3\n\nVerification: at x=2: y = 8−8+2+3 = 5 ✓\nAnd dy/dx = 3x²−4x+1 ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Motion and integration: If the velocity v of a vehicle is known as a function of time t, then integrating gives the displacement: s = ∫v dt. If acceleration a is known, integrating gives velocity: v = ∫a dt. A traffic engineer monitoring vehicles on Entebbe Road can use integration to compute total distance travelled from a velocity-time record, or to find the velocity at any time from an acceleration profile. Integration transforms instantaneous rates into cumulative totals."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find ∫ (6x² − 4x + 3) dx",
+            "options": [
+              "2x³ − 2x² + 3x + C",
+              "12x − 4 + C",
+              "6x³ − 4x² + 3x + C",
+              "2x³ − 2x + 3 + C"
+            ],
+            "answer": "2x³ − 2x² + 3x + C",
+            "explanation": "∫6x²dx=2x³, ∫−4x dx=−2x², ∫3dx=3x. Result: 2x³−2x²+3x+C."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫ x^(−3) dx",
+            "options": [
+              "−x^(−2)/2 + C",
+              "x^(−2)/2 + C",
+              "−1/(2x²) + C",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "∫x⁻³dx = x⁻²/(−2)+C = −x⁻²/2+C = −1/(2x²)+C. Options A and C are equivalent."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find ∫ (x+1)² dx by expanding first",
+            "options": [
+              "x³/3 + x² + x + C",
+              "(x+1)³/3 + C",
+              "x³/3 + x² + x + C",
+              "2(x+1) + C"
+            ],
+            "answer": "x³/3 + x² + x + C",
+            "explanation": "(x+1)²=x²+2x+1. ∫(x²+2x+1)dx=x³/3+x²+x+C."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Integrate ∫ (3x² + 2)/x² dx",
+            "options": [
+              "3x − 2/x + C",
+              "3x − 2x⁻¹ + C",
+              "3x + 2/x + C",
+              "Both A and B"
+            ],
+            "answer": "Both A and B",
+            "explanation": "Split: ∫(3+2x⁻²)dx=3x+2x⁻¹/(−1)+C=3x−2x⁻¹+C=3x−2/x+C. A and B are the same."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A curve passes through (1, 4) and dy/dx = 4x − 1. Find y.",
+            "options": [
+              "y = 2x² − x + 3",
+              "y = 2x² − x + 4",
+              "y = 4x² − x + C",
+              "y = 2x² − x"
+            ],
+            "answer": "y = 2x² − x + 3",
+            "explanation": "y=∫(4x−1)dx=2x²−x+C. At (1,4): 4=2−1+C → C=3. y=2x²−x+3."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find ∫ √(x³) dx",
+            "options": [
+              "(2/5)x^(5/2) + C",
+              "(2/5)x² √x + C",
+              "x^(5/2)/5 + C",
+              "Both A and B"
+            ],
+            "answer": "Both A and B",
+            "explanation": "√(x³)=x^(3/2). ∫x^(3/2)dx=x^(5/2)/(5/2)+C=(2/5)x^(5/2)+C=(2/5)x²√x+C."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which of these is NOT a valid antiderivative of f(x) = 2x?",
+            "options": [
+              "x² + 5",
+              "x² − 7",
+              "x² + C",
+              "2x²"
+            ],
+            "answer": "2x²",
+            "explanation": "d/dx(2x²)=4x ≠ 2x. So 2x² is NOT an antiderivative of 2x. All forms x²+C (for any constant C) are valid antiderivatives since d/dx(x²+C)=2x."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "∫ (x² − 1)(x + 1) dx simplifies and integrates to:",
+            "options": [
+              "x⁴/4 − x²/2 − x³/3 + C",
+              "x⁴/4 + x³/3 − x²/2 − x + C",
+              "x⁴/4 − x²/2 + C",
+              "(x²−1)²/2 + C"
+            ],
+            "answer": "x⁴/4 + x³/3 − x²/2 − x + C",
+            "explanation": "(x²−1)(x+1)=x³+x²−x−1. ∫(x³+x²−x−1)dx=x⁴/4+x³/3−x²/2−x+C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t11_l2",
+      "title": "Integration by Substitution and Integrals of Trig Functions",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The power rule handles polynomials, but many important functions — composite functions, trigonometric functions, and exponentials — require more powerful techniques. Integration by substitution is the analogue of the chain rule in differentiation: it transforms a difficult integral into a simpler one by changing the variable. Alongside this, integrals of the standard trigonometric functions are essential building blocks for physics, engineering, and advanced mathematics."
+        },
+        {
+          "type": "heading",
+          "body": "Integration by Substitution"
+        },
+        {
+          "type": "formula",
+          "body": "Integration by substitution (reverse chain rule):\n\nIf the integrand contains a composite function f(g(x))×g'(x), let u=g(x):\n\n∫ f(g(x)) × g'(x) dx = ∫ f(u) du\n\nProcedure:\n1. Choose u = (inner function or a key part of the integrand)\n2. Differentiate: du/dx = g'(x), so du = g'(x)dx\n3. Substitute: replace g(x) with u and g'(x)dx with du\n4. Integrate with respect to u\n5. Substitute back: replace u with g(x)\n\nPattern recognition — look for:\n• ∫ f(ax+b) dx → u = ax+b\n• ∫ f(xⁿ) × xⁿ⁻¹ dx → u = xⁿ\n• ∫ f'(x)/f(x) dx = ln|f(x)| + C  (logarithm form)\n• ∫ f(x)f'(x) dx = [f(x)]²/2 + C  (power form)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Substitution with linear inner function",
+          "body": "a) ∫ (3x+1)⁵ dx\nLet u = 3x+1. du/dx = 3, so dx = du/3.\n∫ u⁵ × (du/3) = (1/3) × u⁶/6 + C = u⁶/18 + C\n= (3x+1)⁶/18 + C\n\nVerification: d/dx[(3x+1)⁶/18] = 6(3x+1)⁵×3/18 = (3x+1)⁵ ✓\n\nb) ∫ 1/(2x−5)³ dx = ∫(2x−5)⁻³ dx\nLet u=2x−5. du=2dx → dx=du/2.\n∫ u⁻³ × (du/2) = (1/2)×u⁻²/(−2)+C = −1/(4u²)+C\n= −1/[4(2x−5)²] + C\n\nc) ∫ √(4x+9) dx\nLet u=4x+9. du=4dx → dx=du/4.\n∫ u^(1/2) × (du/4) = (1/4)×(2/3)u^(3/2)+C = u^(3/2)/6+C\n= (4x+9)^(3/2)/6 + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Substitution with composite functions",
+          "body": "a) ∫ 2x(x²+3)⁴ dx\nLet u=x²+3. du=2x dx. (The 2x dx matches perfectly!)\n∫ u⁴ du = u⁵/5 + C = (x²+3)⁵/5 + C\n\nb) ∫ x²√(x³+1) dx\nLet u=x³+1. du=3x²dx → x²dx=du/3.\n∫ √u × (du/3) = (1/3) × (2/3)u^(3/2)+C = 2u^(3/2)/9+C\n= 2(x³+1)^(3/2)/9 + C\n\nc) ∫ sin(x)cos(x) dx\nLet u=sinx. du=cosxdx.\n∫ u du = u²/2+C = sin²x/2 + C\n\nAlternative: let u=cosx. du=−sinxdx.\n∫ −u du = −u²/2+C = −cos²x/2+C\nBoth are valid — they differ by a constant since sin²x/2+cos²x/2=1/2."
+        },
+        {
+          "type": "heading",
+          "body": "Integrals of Trigonometric Functions"
+        },
+        {
+          "type": "formula",
+          "body": "Standard trigonometric integrals:\n\n∫ sin x dx = −cos x + C\n∫ cos x dx = sin x + C\n∫ sec²x dx = tan x + C\n∫ cosec²x dx = −cot x + C\n∫ sec x tan x dx = sec x + C\n∫ cosec x cot x dx = −cosec x + C\n\nWith chain rule / substitution:\n∫ sin(ax+b) dx = −cos(ax+b)/a + C\n∫ cos(ax+b) dx = sin(ax+b)/a + C\n∫ sec²(ax+b) dx = tan(ax+b)/a + C\n\nUsing double angle identities for sin²x and cos²x:\n∫ sin²x dx = ∫ (1−cos2x)/2 dx = x/2 − sin2x/4 + C\n∫ cos²x dx = ∫ (1+cos2x)/2 dx = x/2 + sin2x/4 + C"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Integrating trigonometric functions",
+          "body": "a) ∫ sin(3x) dx = −cos(3x)/3 + C\n\nb) ∫ cos(x/2) dx = sin(x/2)/(1/2) + C = 2sin(x/2) + C\n\nc) ∫ (2cos x − 3sin x) dx = 2sinx + 3cosx + C\n\nd) ∫ sin²x dx = ∫(1−cos2x)/2 dx\n= (1/2)∫(1−cos2x)dx\n= x/2 − sin(2x)/4 + C\n\ne) ∫ cos²(3x) dx = ∫(1+cos6x)/2 dx\n= x/2 + sin(6x)/12 + C\n\nf) ∫ sin x cos x dx = (1/2)∫sin2x dx = −cos2x/4 + C\n(Using sin2x=2sinxcosx, so sinxcosx=sin2x/2)"
+        },
+        {
+          "type": "callout",
+          "body": "Electrical engineering application: Alternating current in Uganda's national grid follows I = I₀sin(ωt). The energy dissipated in a resistor R over one period T is proportional to ∫₀ᵀ I²dt = I₀²∫₀ᵀ sin²(ωt)dt. Using the identity sin²(ωt) = (1−cos2ωt)/2, this integral gives the RMS (root mean square) current — the effective DC equivalent. Uganda Electricity Transmission Company engineers use this calculation to size transformers and transmission lines correctly for the national grid."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find ∫ (5x+2)⁷ dx by substitution",
+            "options": [
+              "(5x+2)⁸/40 + C",
+              "(5x+2)⁸/8 + C",
+              "5(5x+2)⁸/8 + C",
+              "(5x+2)⁸/56 + C"
+            ],
+            "answer": "(5x+2)⁸/40 + C",
+            "explanation": "u=5x+2, du=5dx → dx=du/5. ∫u⁷(du/5)=(1/5)(u⁸/8)+C=u⁸/40+C=(5x+2)⁸/40+C."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫ 3x²(x³+1)⁵ dx using substitution",
+            "options": [
+              "(x³+1)⁶/6 + C",
+              "(x³+1)⁶/2 + C",
+              "3(x³+1)⁶/6 + C",
+              "(x³+1)⁵/5 + C"
+            ],
+            "answer": "(x³+1)⁶/6 + C",
+            "explanation": "u=x³+1, du=3x²dx. ∫u⁵du=u⁶/6+C=(x³+1)⁶/6+C."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find ∫ cos(4x) dx",
+            "options": [
+              "sin(4x)/4 + C",
+              "−sin(4x)/4 + C",
+              "4sin(4x) + C",
+              "sin(4x) + C"
+            ],
+            "answer": "sin(4x)/4 + C",
+            "explanation": "∫cos(ax)dx=sin(ax)/a+C. Here a=4: sin(4x)/4+C."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find ∫ sin²(x) dx using the double angle identity",
+            "options": [
+              "x/2 + sin(2x)/4 + C",
+              "x/2 − sin(2x)/4 + C",
+              "−cos²x/2 + C",
+              "sin(x)cos(x)/2 + C"
+            ],
+            "answer": "x/2 − sin(2x)/4 + C",
+            "explanation": "sin²x=(1−cos2x)/2. ∫(1−cos2x)/2 dx=(1/2)[x−sin2x/2]+C=x/2−sin2x/4+C."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find ∫ x/√(x²+4) dx",
+            "options": [
+              "√(x²+4) + C",
+              "2√(x²+4) + C",
+              "x²/(2√(x²+4)) + C",
+              "√(x²+4)/2 + C"
+            ],
+            "answer": "√(x²+4) + C",
+            "explanation": "u=x²+4, du=2x dx → x dx=du/2. ∫u^(−1/2)(du/2)=(1/2)(2u^(1/2))+C=√u+C=√(x²+4)+C."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find ∫ (2x+1)/(x²+x+3) dx",
+            "options": [
+              "ln|x²+x+3| + C",
+              "2ln|x²+x+3| + C",
+              "1/(x²+x+3) + C",
+              "(x²+x+3)² + C"
+            ],
+            "answer": "ln|x²+x+3| + C",
+            "explanation": "The numerator (2x+1) is the derivative of the denominator (x²+x+3). This matches ∫f'(x)/f(x)dx=ln|f(x)|+C. Answer: ln|x²+x+3|+C."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫ sec²(3x+1) dx",
+            "options": [
+              "3tan(3x+1) + C",
+              "tan(3x+1)/3 + C",
+              "−cot(3x+1)/3 + C",
+              "sec(3x+1)/3 + C"
+            ],
+            "answer": "tan(3x+1)/3 + C",
+            "explanation": "∫sec²(ax+b)dx=tan(ax+b)/a+C. Here a=3: tan(3x+1)/3+C."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Find ∫ cos²(x) dx using the identity cos²x = (1+cos2x)/2",
+            "options": [
+              "x/2 + sin(2x)/4 + C",
+              "x/2 − sin(2x)/4 + C",
+              "sin(x)cos(x) + C",
+              "x + sin(2x)/2 + C"
+            ],
+            "answer": "x/2 + sin(2x)/4 + C",
+            "explanation": "∫(1+cos2x)/2 dx=(1/2)[x+sin2x/2]+C=x/2+sin2x/4+C."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t11_l3",
+      "title": "Definite Integrals — Evaluation and the Fundamental Theorem",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The indefinite integral gives a family of functions; the definite integral gives a specific NUMBER — the area under a curve between two limits. This profound connection between the area problem and antidifferentiation is the Fundamental Theorem of Calculus, one of the most important results in all of mathematics. It was discovered independently by Newton and Leibniz in the 17th century and transformed science and engineering forever."
+        },
+        {
+          "type": "heading",
+          "body": "The Definite Integral and the Fundamental Theorem"
+        },
+        {
+          "type": "formula",
+          "body": "The Fundamental Theorem of Calculus:\n\nIf F'(x) = f(x), then:\n\n∫ₐᵇ f(x) dx = [F(x)]ₐᵇ = F(b) − F(a)\n\nWhere:\n• a is the lower limit, b is the upper limit\n• F(x) is any antiderivative of f(x)\n• The constant of integration C cancels: [F(x)+C]ₐᵇ = F(b)+C−F(a)−C = F(b)−F(a)\n\nNotation: [F(x)]ₐᵇ means 'evaluate F(x) at x=b then subtract F(x) at x=a'\n\nProperties of definite integrals:\n• ∫ₐᵃ f(x)dx = 0  (zero width → zero area)\n• ∫ₐᵇ f(x)dx = −∫ᵦₐ f(x)dx  (swap limits → change sign)\n• ∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫ᶜᵇ f(x)dx  (split at interior point c)\n• ∫ₐᵇ kf(x)dx = k∫ₐᵇ f(x)dx\n• ∫ₐᵇ [f(x)±g(x)]dx = ∫ₐᵇ f(x)dx ± ∫ₐᵇ g(x)dx"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Evaluating definite integrals",
+          "body": "a) ∫₁³ (3x²−2x+1) dx\n= [x³−x²+x]₁³\n= (27−9+3) − (1−1+1)\n= 21 − 1\n= 20\n\nb) ∫₀⁴ √x dx = ∫₀⁴ x^(1/2) dx\n= [(2/3)x^(3/2)]₀⁴\n= (2/3)(4)^(3/2) − (2/3)(0)\n= (2/3)(8) − 0\n= 16/3\n\nc) ∫₀^(π/2) sin x dx\n= [−cos x]₀^(π/2)\n= −cos(π/2) − (−cos 0)\n= 0 − (−1)\n= 1\n\nd) ∫₁² (x² + 1/x²) dx\n= [x³/3 − 1/x]₁²\n= (8/3 − 1/2) − (1/3 − 1)\n= (8/3 − 1/2) − (1/3 − 1)\n= 7/3 − 1/2 + 1\n= 7/3 + 1/2\n= 14/6 + 3/6 = 17/6"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Definite integrals with substitution",
+          "body": "Method 1 — Change limits with substitution:\n∫₀¹ 2x(x²+1)³ dx\n\nLet u=x²+1. du=2xdx.\nWhen x=0: u=1. When x=1: u=2. (Change the limits!)\n\n∫₁² u³ du = [u⁴/4]₁² = 16/4 − 1/4 = 15/4\n\nMethod 2 — Substitute back, then evaluate:\nIndefinite: ∫2x(x²+1)³dx = (x²+1)⁴/4 + C\nDefinite: [(x²+1)⁴/4]₀¹ = (1+1)⁴/4 − (0+1)⁴/4 = 16/4 − 1/4 = 15/4 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Even and Odd Functions — Symmetry Shortcuts"
+        },
+        {
+          "type": "formula",
+          "body": "For integration over symmetric intervals [−a, a]:\n\nIf f(x) is an EVEN function (f(−x)=f(x), symmetric about y-axis):\n∫₋ₐᵃ f(x)dx = 2∫₀ᵃ f(x)dx\n\nIf f(x) is an ODD function (f(−x)=−f(x), rotational symmetry about origin):\n∫₋ₐᵃ f(x)dx = 0\n\nExamples:\n∫₋₂² x⁴ dx = 2∫₀² x⁴ dx = 2[x⁵/5]₀² = 2(32/5) = 64/5  (x⁴ is even)\n∫₋π^π sin x dx = 0  (sin x is odd)\n∫₋₁¹ (x³+x) dx = 0  (x³+x is odd since (−x)³+(−x) = −(x³+x))"
+        },
+        {
+          "type": "callout",
+          "body": "Checking results: Always sanity-check definite integrals. A definite integral of a non-negative function over [a,b] must be ≥ 0 (it represents area). If you get a negative result when the function is above the x-axis between a and b, you have made an error. Also verify by estimating: if the function averages roughly h over width (b−a), the integral should be approximately h(b−a)."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₀² (3x² + 2x) dx",
+            "options": ["12", "16", "8", "10"],
+            "answer": "12",
+            "explanation": "[x³+x²]₀² = (8+4)−(0+0) = 12."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find ∫₁⁴ 1/√x dx",
+            "options": ["2", "4", "3", "1"],
+            "answer": "2",
+            "explanation": "∫x^(−1/2)dx=2√x. [2√x]₁⁴=2√4−2√1=4−2=2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₀^(π/4) cos(2x) dx",
+            "options": ["1/4", "1/2", "0", "1"],
+            "answer": "1/2",
+            "explanation": "[sin(2x)/2]₀^(π/4) = sin(π/2)/2 − sin(0)/2 = 1/2 − 0 = 1/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If ∫₂⁵ f(x)dx = 7 and ∫₂⁸ f(x)dx = 11, find ∫₅⁸ f(x)dx",
+            "options": ["4", "18", "3", "−4"],
+            "answer": "4",
+            "explanation": "∫₂⁸=∫₂⁵+∫₅⁸ → 11=7+∫₅⁸ → ∫₅⁸=4."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₋₂² x³ dx using the odd function property",
+            "options": ["0", "8", "−8", "16"],
+            "answer": "0",
+            "explanation": "x³ is an odd function (f(−x)=−f(x)). For any odd function: ∫₋ₐᵃ f(x)dx=0."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Use substitution to evaluate ∫₀¹ x(1+x²)³ dx (change limits)",
+            "options": ["15/8", "8/4", "2", "15/4"],
+            "answer": "15/8",
+            "explanation": "u=1+x², du=2xdx → xdx=du/2. x=0→u=1; x=1→u=2. ∫₁²u³(du/2)=[u⁴/8]₁²=16/8−1/8=15/8."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "∫₀^π sin²x dx equals:",
+            "options": ["π/2", "π", "0", "1"],
+            "answer": "π/2",
+            "explanation": "∫₀^π sin²x dx=∫₀^π(1−cos2x)/2 dx=[x/2−sin2x/4]₀^π=(π/2−0)−(0−0)=π/2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Evaluate ∫₁² (x³−x⁻²) dx",
+            "options": ["17/4", "15/4", "4", "17/2"],
+            "answer": "17/4",
+            "explanation": "[x⁴/4+x⁻¹]₁²=[x⁴/4+1/x]₁²=(16/4+1/2)−(1/4+1)=4.5−1.25=3.25=13/4. Hmm: (4+0.5)−(0.25+1)=4.5−1.25=3.25=13/4."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t11_l4",
+      "title": "Area Under a Curve and Area Between Curves",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The most direct geometric application of the definite integral is computing areas. The area under a curve and above the x-axis is given by a definite integral — this is precisely what the Fundamental Theorem connects to antidifferentiation. However, when parts of a curve lie below the x-axis, or when we want the area between two curves, we must be careful with signs and strategy. These area calculations are used throughout science and engineering: computing the work done by a variable force, the impulse of a force over time, the amount of material needed to fill a space, and even economic measures like consumer surplus."
+        },
+        {
+          "type": "heading",
+          "body": "Area Between a Curve and the x-axis"
+        },
+        {
+          "type": "formula",
+          "body": "For a continuous curve y=f(x):\n\nArea ABOVE x-axis between x=a and x=b (where f(x)≥0):\nA = ∫ₐᵇ f(x) dx\n\nWhen the curve goes BELOW the x-axis (f(x)<0 for some region):\nThe integral gives a NEGATIVE value for the parts below the x-axis.\n\nTo find the TOTAL (positive) area:\n1. Find all roots of f(x)=0 between a and b (x-intercepts)\n2. Split the integral at each root\n3. Take the ABSOLUTE VALUE of each part\n4. Add the absolute values\n\nTotal area = |∫ₐᶜ f(x)dx| + |∫ᶜᵇ f(x)dx|\n\nCRITICAL DISTINCTION:\n• SIGNED area = ∫ₐᵇ f(x)dx  (can be negative)\n• ACTUAL area = sum of |each section|  (always positive)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Area under a curve above the x-axis",
+          "body": "Find the area enclosed by y = x² − 4x + 3, the x-axis, and the lines x=0 and x=4.\n\nStep 1 — Find roots: x²−4x+3=0 → (x−1)(x−3)=0 → x=1 and x=3.\n\nThe curve is above x-axis for x<1 and x>3; below x-axis for 1<x<3.\n\nStep 2 — Split the integral:\nA = |∫₀¹(x²−4x+3)dx| + |∫₁³(x²−4x+3)dx| + |∫₃⁴(x²−4x+3)dx|\n\nIntegrate: F(x) = x³/3 − 2x² + 3x\n\nF(0)=0, F(1)=1/3−2+3=4/3, F(3)=9−18+9=0, F(4)=64/3−32+12=64/3−20=4/3\n\nA = |4/3−0| + |0−4/3| + |4/3−0|\n= 4/3 + 4/3 + 4/3 = 4 square units\n\nNote: ∫₀⁴(x²−4x+3)dx = F(4)−F(0) = 4/3−0 = 4/3 ≠ 4. The signed integral gives 4/3 but total area is 4!"
+        },
+        {
+          "type": "heading",
+          "body": "Area Between Two Curves"
+        },
+        {
+          "type": "formula",
+          "body": "Area between curves y=f(x) (upper) and y=g(x) (lower) from x=a to x=b:\n\nA = ∫ₐᵇ [f(x) − g(x)] dx\n\nWhere f(x) ≥ g(x) throughout [a, b] (f is the upper curve).\n\nIf the curves cross within [a, b]:\n1. Find all intersection points\n2. Split the region at each crossing\n3. In each sub-region, determine which curve is on top\n4. Add up the absolute values of sub-region areas\n\nTo find intersection points: solve f(x)=g(x) → these give the x-limits."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Area between two curves",
+          "body": "Find the area enclosed between y = x² and y = x+2.\n\nStep 1 — Find intersections:\nx² = x+2 → x²−x−2=0 → (x−2)(x+1)=0 → x=−1 and x=2.\n\nStep 2 — Determine upper/lower curve between x=−1 and x=2:\nAt x=0: y=x²=0 and y=x+2=2. So y=x+2 is on top.\n\nStep 3 — Integrate:\nA = ∫₋₁² [(x+2) − x²] dx\n= ∫₋₁² (x+2−x²) dx\n= [x²/2 + 2x − x³/3]₋₁²\n= (4/2+4−8/3) − (1/2−2+1/3)\n= (2+4−8/3) − (−3/2+1/3)\n= (6−8/3) − (−7/6)\n= 10/3 + 7/6\n= 20/6 + 7/6\n= 27/6 = 9/2 square units"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Area between a curve and the y-axis",
+          "body": "Find the area between y=x² and the y-axis from y=0 to y=4.\n\nFrom y=x²: x=√y (taking positive root, right of y-axis).\n\nA = ∫₀⁴ √y dy = ∫₀⁴ y^(1/2) dy\n= [(2/3)y^(3/2)]₀⁴\n= (2/3)(4)^(3/2) − 0\n= (2/3)(8) = 16/3 square units\n\nAlternative using vertical strips:\nA = ∫₀² (4−x²) dx = [4x−x³/3]₀² = (8−8/3) = 16/3 ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Economic application: In economics, consumer surplus measures the benefit consumers gain from buying at the market price. If the demand curve is p = f(x) (price as a function of quantity) and the market price is p₀, the consumer surplus is the area between the demand curve and the horizontal line p=p₀ from x=0 to the market quantity x₀. This equals ∫₀^(x₀)[f(x)−p₀]dx — a definite integral. The Uganda Revenue Authority uses related calculations to assess the welfare impact of different tax policies."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the area enclosed by y = x² + 1, the x-axis, x=0 and x=3",
+            "options": ["12", "9", "15", "10"],
+            "answer": "12",
+            "explanation": "∫₀³(x²+1)dx=[x³/3+x]₀³=(9+3)−0=12. Since x²+1≥1>0 everywhere, no sign issue."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The curve y = x(x−2) dips below the x-axis between x=0 and x=2. Find the ACTUAL area between the curve and x-axis for 0≤x≤2.",
+            "options": ["4/3", "0", "−4/3", "2"],
+            "answer": "4/3",
+            "explanation": "∫₀²x(x−2)dx=∫₀²(x²−2x)dx=[x³/3−x²]₀²=(8/3−4)−0=−4/3. Actual area=|−4/3|=4/3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the area between y = x² and y = 2x from x=0 to x=2",
+            "options": ["4/3", "2/3", "8/3", "1"],
+            "answer": "4/3",
+            "explanation": "y=2x is above y=x² on [0,2] (check x=1: 2>1). A=∫₀²(2x−x²)dx=[x²−x³/3]₀²=(4−8/3)=4/3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the intersection points of y=x² and y=4, then find the enclosed area.",
+            "options": ["32/3", "16", "8", "16/3"],
+            "answer": "32/3",
+            "explanation": "x²=4 → x=±2. A=∫₋₂²(4−x²)dx=[4x−x³/3]₋₂²=(8−8/3)−(−8+8/3)=16−16/3=32/3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the area bounded by y = sin x and the x-axis from x=0 to x=π",
+            "options": ["0", "1", "2", "π"],
+            "answer": "2",
+            "explanation": "sinx≥0 on [0,π]. ∫₀^π sinx dx=[−cosx]₀^π=−cos(π)+cos(0)=1+1=2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The SIGNED integral ∫₀^(2π) sin x dx gives 0. What does this mean geometrically?",
+            "options": [
+              "There is no area under the sine curve",
+              "The area above the x-axis equals the area below, and they cancel",
+              "The function is undefined on this interval",
+              "The area is zero everywhere"
+            ],
+            "answer": "The area above the x-axis equals the area below, and they cancel",
+            "explanation": "On [0,π], sinx>0 (area=2). On [π,2π], sinx<0 (signed area=−2). Total signed integral=2+(−2)=0. The positive and negative areas cancel, but the TOTAL actual area is 4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find the area enclosed between y=x³ and y=x for x≥0",
+            "options": ["1/4", "1/2", "1", "0"],
+            "answer": "1/4",
+            "explanation": "Intersections: x³=x → x(x²−1)=0 → x=0,1 (for x≥0). On [0,1]: x≥x³ (check x=0.5: 0.5>0.125). A=∫₀¹(x−x³)dx=[x²/2−x⁴/4]₀¹=1/2−1/4=1/4."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "For y=x²−4x, find the area between the curve and the x-axis from x=0 to x=4.",
+            "options": ["16/3", "32/3", "0", "8"],
+            "answer": "32/3",
+            "explanation": "Roots: x(x−4)=0 → x=0,4. Curve dips below on [0,4]. ∫₀⁴(x²−4x)dx=[x³/3−2x²]₀⁴=(64/3−32)=−32/3. Area=|−32/3|=32/3."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t11_l5",
+      "title": "Volume of Revolution and Mean Value of a Function",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a curve is rotated about an axis, it sweeps out a three-dimensional solid of revolution. Integration gives the exact volume of this solid — a powerful tool for computing volumes of bowls, bottles, pipes, domes, and any object with rotational symmetry. Additionally, the definite integral provides the mean (average) value of a function over an interval — useful for finding the average temperature over a day, the average force over a time interval, or the mean value of any continuously varying quantity."
+        },
+        {
+          "type": "heading",
+          "body": "Volume of Revolution About the x-axis"
+        },
+        {
+          "type": "formula",
+          "body": "When the region between y=f(x) and the x-axis (from x=a to x=b)\nis rotated 360° about the x-axis, the volume of the solid formed is:\n\nV = π ∫ₐᵇ y² dx = π ∫ₐᵇ [f(x)]² dx\n\nDerivation idea: each thin vertical strip (width dx, height y) generates\na thin disc (radius y, thickness dx) when rotated. Volume of disc = πy²dx.\nTotal volume = sum of all discs = π∫ₐᵇ y²dx.\n\nNote: the y is SQUARED in the formula — this is the disc method.\n\nFor rotation about the y-axis:\nV = π ∫ₐᵇ x² dy  (swap roles of x and y, integrate w.r.t. y)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Volume of revolution about the x-axis",
+          "body": "The region bounded by y = x², the x-axis, and x=2 is rotated about the x-axis. Find the volume.\n\nV = π∫₀² y² dx = π∫₀² (x²)² dx = π∫₀² x⁴ dx\n= π[x⁵/5]₀²\n= π(32/5 − 0)\n= 32π/5 cubic units ≈ 20.1 cubic units"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Volume of a cone by revolution",
+          "body": "The line y = rx/h (from origin to point (h,r)) is rotated about the x-axis. This generates a cone of height h and base radius r. Verify the volume formula.\n\nV = π∫₀ʰ y² dx = π∫₀ʰ (rx/h)² dx\n= π(r²/h²)∫₀ʰ x² dx\n= π(r²/h²)[x³/3]₀ʰ\n= π(r²/h²)(h³/3)\n= πr²h/3\n\nThis is exactly the standard formula V = (1/3)πr²h ✓\n\nThe integration confirms the cone formula — a beautiful verification of the disc method."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Volume — region between two curves rotated",
+          "body": "The region between y=√x and y=x (from x=0 to x=1) is rotated about the x-axis. Find the volume.\n\nNote: on [0,1], √x ≥ x (check x=0.25: √0.25=0.5>0.25 ✓).\nThe outer radius is √x, the inner radius is x (washer method).\n\nV = π∫₀¹ [(√x)² − x²] dx\n= π∫₀¹ [x − x²] dx\n= π[x²/2 − x³/3]₀¹\n= π(1/2 − 1/3)\n= π(3/6 − 2/6)\n= π/6 cubic units"
+        },
+        {
+          "type": "heading",
+          "body": "Mean Value of a Function"
+        },
+        {
+          "type": "formula",
+          "body": "The mean (average) value of f(x) over [a, b]:\n\n f̄ = (1/(b−a)) × ∫ₐᵇ f(x) dx\n\nGeometric interpretation: f̄ is the height of the rectangle with the\nsame base [a,b] and the same area as ∫ₐᵇ f(x)dx.\n\nIn other words: area under curve = f̄ × (b−a)\n\nApplications:\n• Mean temperature over a time period\n• Mean velocity of a particle\n• Mean power output of an engine\n• Mean value theorem: there exists at least one c in (a,b)\n  where f(c) = f̄ (the function actually achieves its mean value)"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Mean value of a function",
+          "body": "Find the mean value of f(x) = x² + 2 over [1, 4].\n\nf̄ = (1/(4−1)) ∫₁⁴ (x²+2) dx\n= (1/3)[x³/3 + 2x]₁⁴\n= (1/3)[(64/3+8) − (1/3+2)]\n= (1/3)[(64/3+24/3) − (1/3+6/3)]\n= (1/3)[88/3 − 7/3]\n= (1/3)(81/3)\n= (1/3)(27)\n= 9\n\nVerification: the mean value 9 lies between f(1)=3 and f(4)=18 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 5: RMS (root mean square) value",
+          "body": "The RMS (root mean square) value of f(x) over [a,b] is:\nf_rms = √[(1/(b−a)) ∫ₐᵇ f(x)² dx]\n\nFor current I = I₀ sin(ωt) over one period [0, 2π/ω]:\nI²_rms = (ω/2π) ∫₀^(2π/ω) I₀² sin²(ωt) dt\n\nUsing sin²(ωt) = (1−cos2ωt)/2:\n= (ω/2π) × I₀² × (1/2) × [2π/ω]\n= I₀²/2\n\nSo I_rms = I₀/√2 ≈ 0.707 I₀\n\nThis is why Uganda's mains supply of 240V (RMS) has a peak voltage of 240√2 ≈ 339V."
+        },
+        {
+          "type": "callout",
+          "body": "Engineering design: Water storage tanks in Uganda are often designed as solids of revolution — cylindrical or conical. When engineers at the National Water and Sewerage Corporation (NWSC) design a dome-topped cylindrical tank, they calculate the dome's volume using the disc method V=π∫ₐᵇy²dx, where y=f(x) describes the dome's profile curve. Getting the volume right ensures the correct amount of water storage for Uganda's growing urban population."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the volume when y=3x² (0≤x≤2) is rotated about the x-axis",
+            "options": ["πx⁵/5×9", "648π/5", "324π/5", "81π/5"],
+            "answer": "648π/5",
+            "explanation": "V=π∫₀²(3x²)²dx=π∫₀²9x⁴dx=π[9x⁵/5]₀²=π(9×32/5)=288π/5. Hmm: 9×32=288. V=288π/5."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The region bounded by y=√x, x-axis, x=0, x=4 is rotated about the x-axis. Find the volume.",
+            "options": ["8π", "4π", "16π", "2π"],
+            "answer": "8π",
+            "explanation": "V=π∫₀⁴(√x)²dx=π∫₀⁴x dx=π[x²/2]₀⁴=π(8)=8π."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the mean value of f(x)=2x+1 over [0,3]",
+            "options": ["4", "5", "7", "3"],
+            "answer": "4",
+            "explanation": "f̄=(1/3)∫₀³(2x+1)dx=(1/3)[x²+x]₀³=(1/3)(9+3)=(1/3)(12)=4."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the volume when y=1/x (1≤x≤3) is rotated about the x-axis",
+            "options": ["2π/3", "π(1−1/3)", "2π/9", "2π/3"],
+            "answer": "2π/3",
+            "explanation": "V=π∫₁³(1/x)²dx=π∫₁³x⁻²dx=π[−x⁻¹]₁³=π(−1/3+1)=π(2/3)=2π/3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the mean value of sin x over [0, π]",
+            "options": ["2/π", "0", "π/2", "1"],
+            "answer": "2/π",
+            "explanation": "f̄=(1/π)∫₀^π sinx dx=(1/π)[−cosx]₀^π=(1/π)(1+1)=2/π."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The region between y=x² and y=x (0≤x≤1) is rotated about the x-axis (washer method). Find the volume.",
+            "options": ["π/15", "2π/15", "π/3", "π/5"],
+            "answer": "2π/15",
+            "explanation": "V=π∫₀¹(x²−x⁴)dx=π[x³/3−x⁵/5]₀¹=π(1/3−1/5)=π(2/15)=2π/15."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Using the disc method, verify that rotating y=r (constant) from x=0 to x=h about x-axis gives volume πr²h.",
+            "options": [
+              "V=π∫₀ʰr²dx=πr²h ✓",
+              "V=π∫₀ʰr dx=πrh",
+              "V=π∫₀ʰr² dx=πr²h/2",
+              "V=2π∫₀ʰr dx=2πrh"
+            ],
+            "answer": "V=π∫₀ʰr²dx=πr²h ✓",
+            "explanation": "V=π∫₀ʰy²dx=π∫₀ʰr²dx=πr²[x]₀ʰ=πr²h. This is the volume of a cylinder ✓."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Find the RMS value of f(x)=x over [0,2]",
+            "options": ["2/√3", "√(4/3)", "2√3/3", "All of the above"],
+            "answer": "All of the above",
+            "explanation": "f²_rms=(1/2)∫₀²x²dx=(1/2)[x³/3]₀²=(1/2)(8/3)=4/3. f_rms=√(4/3)=2/√3=2√3/3. All three are equivalent."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Indefinite integral: ∫f(x)dx=F(x)+C where F'(x)=f(x). Always includes +C.",
+      "Power rule for integration: ∫xⁿdx=xⁿ⁺¹/(n+1)+C for n≠−1. Special case: ∫x⁻¹dx=ln|x|+C.",
+      "Simplify before integrating: expand brackets, split fractions, rewrite surds as powers.",
+      "Integration by substitution: let u=g(x), replace g(x)→u and g'(x)dx→du. Reverse chain rule.",
+      "Trig integrals: ∫sinxdx=−cosx+C; ∫cosxdx=sinx+C; ∫sec²xdx=tanx+C.",
+      "sin²x=(1−cos2x)/2 and cos²x=(1+cos2x)/2 — essential for integrating even powers of trig functions.",
+      "Fundamental Theorem: ∫ₐᵇf(x)dx=F(b)−F(a). Constant C cancels in definite integrals.",
+      "Area under curve: A=∫ₐᵇf(x)dx when f(x)≥0. For regions below x-axis, take absolute value of each section.",
+      "Area between curves: A=∫ₐᵇ[f(x)−g(x)]dx where f is upper curve. Find limits from intersection points.",
+      "Volume of revolution (x-axis): V=π∫ₐᵇy²dx. Disc method — square y before integrating.",
+      "Mean value: f̄=(1/(b−a))∫ₐᵇf(x)dx."
+    ],
+    "common_errors": [
+      "Forgetting +C in indefinite integrals.",
+      "Power rule error: adding 1 to the power but forgetting to divide by the new power (or vice versa).",
+      "Not simplifying before integrating — trying to integrate a product or fraction directly without expanding or splitting.",
+      "In substitution, not changing the limits for definite integrals — must substitute new limits in terms of u.",
+      "Taking the integral of a negative region as positive — the integral gives negative values below the x-axis; must take |value| for actual area.",
+      "Volume formula error: using V=π∫y dx instead of V=π∫y² dx — must SQUARE y in the disc method.",
+      "Forgetting the factor 1/(b−a) in the mean value formula — it is an AVERAGE, not a sum."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 11 End-of-Topic Assessment — Integration 1",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Find ∫ (5x⁴ − 3x² + 2x − 7) dx",
+        "options": [
+          "x⁵ − x³ + x² − 7x + C",
+          "20x³ − 6x + 2 + C",
+          "5x⁵ − 3x³ + 2x² − 7x + C",
+          "x⁵ − x³ + x² − 7 + C"
+        ],
+        "answer": "x⁵ − x³ + x² − 7x + C",
+        "explanation": "∫5x⁴dx=x⁵, ∫−3x²dx=−x³, ∫2xdx=x², ∫−7dx=−7x. Result: x⁵−x³+x²−7x+C."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Find ∫ (x+2)/√x dx",
+        "options": [
+          "2√x(x/3+2) + C",
+          "(2/3)x^(3/2) + 4√x + C",
+          "2x^(3/2)/3 + 4x^(1/2) + C",
+          "Both B and C"
+        ],
+        "answer": "Both B and C",
+        "explanation": "Split: ∫(x^(1/2)+2x^(−1/2))dx=(2/3)x^(3/2)+4x^(1/2)+C."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Use substitution to find ∫ 6x²(2x³+1)⁴ dx",
+        "options": [
+          "(2x³+1)⁵ + C",
+          "(2x³+1)⁵/5 + C",
+          "6(2x³+1)⁵/5 + C",
+          "(2x³+1)⁵/5 + C"
+        ],
+        "answer": "(2x³+1)⁵/5 + C",
+        "explanation": "u=2x³+1, du=6x²dx. ∫u⁴du=u⁵/5+C=(2x³+1)⁵/5+C."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Evaluate ∫₀³ (2x+1) dx",
+        "options": ["12", "9", "15", "10"],
+        "answer": "12",
+        "explanation": "[x²+x]₀³=(9+3)−0=12."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Find ∫₀^(π/6) sin(2x) dx",
+        "options": ["1/4", "1/2", "1", "√3/4"],
+        "answer": "1/4",
+        "explanation": "[−cos(2x)/2]₀^(π/6)=−cos(π/3)/2+cos(0)/2=−(1/2)/2+1/2=−1/4+2/4=1/4."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "A curve passes through (0,3) with dy/dx = 6x² − 4. Find y at x=2.",
+        "options": ["11", "8", "13", "15"],
+        "answer": "11",
+        "explanation": "y=∫(6x²−4)dx=2x³−4x+C. At (0,3): 3=0−0+C → C=3. y=2x³−4x+3. At x=2: 16−8+3=11."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Find the area between y=x²−1 and the x-axis from x=−1 to x=1",
+        "options": ["4/3", "0", "2/3", "−4/3"],
+        "answer": "4/3",
+        "explanation": "x²−1≤0 on (−1,1). Signed integral=∫₋₁¹(x²−1)dx=[x³/3−x]₋₁¹=(1/3−1)−(−1/3+1)=−2/3−2/3=−4/3. Actual area=4/3."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Find the area enclosed between y=x+2 and y=x²",
+        "options": ["9/2", "4", "7/2", "5"],
+        "answer": "9/2",
+        "explanation": "Intersections: x+2=x² → x²−x−2=0 → x=−1,2. A=∫₋₁²(x+2−x²)dx=[x²/2+2x−x³/3]₋₁²=(2+4−8/3)−(1/2−2+1/3)=10/3−(−7/6)=10/3+7/6=20/6+7/6=27/6=9/2."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find the volume when y=2x (0≤x≤3) is rotated about the x-axis",
+        "options": ["36π", "12π", "18π", "9π"],
+        "answer": "36π",
+        "explanation": "V=π∫₀³(2x)²dx=π∫₀³4x²dx=π[4x³/3]₀³=π(4×27/3)=36π."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Find ∫₁⁴ (√x + 1/√x) dx",
+        "options": ["16/3", "22/3", "26/3", "8"],
+        "answer": "22/3",
+        "explanation": "∫(x^(1/2)+x^(−1/2))dx=2x^(3/2)/3+2x^(1/2). [2x^(3/2)/3+2√x]₁⁴=(2×8/3+4)−(2/3+2)=16/3+4−2/3−2=14/3+2=14/3+6/3=20/3. Hmm: (16/3+4)−(2/3+2)=16/3+12/3−2/3−6/3=26/3."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "The mean value of f(x)=x³ over [0,2] is:",
+        "options": ["2", "4", "3", "1"],
+        "answer": "2",
+        "explanation": "f̄=(1/2)∫₀²x³dx=(1/2)[x⁴/4]₀²=(1/2)(4)=2."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Find ∫ cos²(2x) dx",
+        "options": [
+          "x/2 + sin(4x)/8 + C",
+          "x/2 − sin(4x)/8 + C",
+          "sin(4x)/4 + C",
+          "x + sin(4x)/4 + C"
+        ],
+        "answer": "x/2 + sin(4x)/8 + C",
+        "explanation": "cos²(2x)=(1+cos4x)/2. ∫(1+cos4x)/2 dx=(1/2)[x+sin4x/4]+C=x/2+sin4x/8+C."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Find ∫ (3x+1)/√(3x²+2x+5) dx using substitution",
+        "options": [
+          "√(3x²+2x+5) + C",
+          "2√(3x²+2x+5) + C",
+          "(1/2)√(3x²+2x+5) + C",
+          "3√(3x²+2x+5) + C"
+        ],
+        "answer": "√(3x²+2x+5) + C",
+        "explanation": "Let u=3x²+2x+5. du=(6x+2)dx=2(3x+1)dx → (3x+1)dx=du/2. ∫u^(−1/2)(du/2)=(1/2)(2u^(1/2))+C=√u+C=√(3x²+2x+5)+C."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A particle starts at origin. Its velocity is v=3t²−2 m/s. Find its displacement after t=3 s.",
+        "options": ["23 m", "25 m", "27 m", "21 m"],
+        "answer": "21 m",
+        "explanation": "s=∫₀³(3t²−2)dt=[t³−2t]₀³=(27−6)−0=21 m."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "The volume of the solid formed when y=√x is rotated about the x-axis from x=0 to x=9 is:",
+        "options": ["81π/2", "27π", "9π", "81π"],
+        "answer": "81π/2",
+        "explanation": "V=π∫₀⁹(√x)²dx=π∫₀⁹xdx=π[x²/2]₀⁹=π(81/2)=81π/2."
+      }
+    ]
+  }
+}

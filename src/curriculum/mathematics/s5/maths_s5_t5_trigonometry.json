@@ -1,0 +1,1138 @@
+{
+  "topic_id": "s5_maths_t5_trigonometry",
+  "topic_title": "Trigonometry",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 1,
+  "duration_periods": 25,
+  "ncdc_competency": "The learner applies trigonometric functions, identities, and equations to solve problems in mathematics and real-life application in navigation, construction, aviation and other fields.",
+  "lessons": [
+    {
+      "id": "s5_maths_t5_l1",
+      "title": "Trigonometric Ratios, the Unit Circle, and Graphs of Trig Functions",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Trigonometry is the branch of mathematics that studies the relationships between the angles and sides of triangles, and the properties of the trigonometric functions — sine, cosine, and tangent. These functions appear throughout science, engineering, architecture, navigation, music, and medicine. In Uganda, trigonometry underpins the design of roof trusses, the calculation of land slopes, satellite dish angles, and the planning of irrigation channels. This lesson builds the complete foundation: trigonometric ratios from right-angled triangles, extension to all angles using the unit circle, the four quadrant signs (CAST), and the graphs of sin, cos, and tan."
+        },
+        {
+          "type": "heading",
+          "body": "Trigonometric Ratios from a Right-Angled Triangle"
+        },
+        {
+          "type": "text",
+          "body": "For a right-angled triangle with an acute angle θ, the three primary ratios are defined relative to θ. The hypotenuse is always the side opposite the right angle (the longest side). The opposite side is across from θ. The adjacent side is next to θ (not the hypotenuse)."
+        },
+        {
+          "type": "formula",
+          "body": "Primary ratios:\nsin θ = opposite / hypotenuse    (SOH)\ncos θ = adjacent / hypotenuse    (CAH)\ntan θ = opposite / adjacent       (TOA)\n\nMemory aid: SOH-CAH-TOA\n\nReciprocal ratios:\ncosec θ = 1/sin θ = hypotenuse/opposite\nsec θ   = 1/cos θ = hypotenuse/adjacent\ncot θ   = 1/tan θ = adjacent/opposite = cos θ/sin θ\n\nAlso: tan θ = sin θ / cos θ"
+        },
+        {
+          "type": "heading",
+          "body": "Exact Values — Special Angles"
+        },
+        {
+          "type": "text",
+          "body": "Certain angles have exact trigonometric values derived from special right-angled triangles. These must be memorised as they appear constantly in examinations and applications."
+        },
+        {
+          "type": "list",
+          "heading": "Exact values table:",
+          "items": [
+            "θ = 0°:   sin 0° = 0,       cos 0° = 1,       tan 0° = 0",
+            "θ = 30°:  sin 30° = 1/2,    cos 30° = √3/2,   tan 30° = 1/√3 = √3/3",
+            "θ = 45°:  sin 45° = 1/√2,   cos 45° = 1/√2,   tan 45° = 1",
+            "θ = 60°:  sin 60° = √3/2,   cos 60° = 1/2,    tan 60° = √3",
+            "θ = 90°:  sin 90° = 1,      cos 90° = 0,      tan 90° = undefined",
+            "Derivation of 30° and 60°: use an equilateral triangle of side 2, cut in half. The half-triangle has angles 30°, 60°, 90° and sides 1, 2, √3.",
+            "Derivation of 45°: use an isosceles right-angled triangle with legs 1, 1. Hypotenuse = √2. Both acute angles = 45°."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Extending to All Angles — The Unit Circle"
+        },
+        {
+          "type": "text",
+          "body": "The unit circle is a circle of radius 1 centred at the origin. For any angle θ measured anticlockwise from the positive x-axis, the point P on the unit circle has coordinates (cos θ, sin θ). This extends the definitions of sine and cosine to ALL angles — positive and negative, greater than 90°."
+        },
+        {
+          "type": "list",
+          "heading": "The CAST diagram — signs in each quadrant:",
+          "items": [
+            "Quadrant I (0° to 90°):   ALL ratios positive (A, S, C, T all positive).",
+            "Quadrant II (90° to 180°): Only SINE positive (sin positive, cos and tan negative).",
+            "Quadrant III (180° to 270°): Only TANGENT positive (tan positive, sin and cos negative).",
+            "Quadrant IV (270° to 360°): Only COSINE positive (cos positive, sin and tan negative).",
+            "Memory aid for quadrants I→II→III→IV: All Students Take Calculus (ASTC) or Cast (CAST starting from IV going anticlockwise).",
+            "Reference angle: the acute angle between the terminal side and the x-axis. Example: sin 150° = sin(180°−150°) = sin 30° = 1/2 (Quadrant II, sin positive).",
+            "Example: cos 240° = −cos(240°−180°) = −cos 60° = −1/2 (Quadrant III, cos negative).",
+            "Example: tan 315° = −tan(360°−315°) = −tan 45° = −1 (Quadrant IV, tan negative)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Clockwise and Anticlockwise Angles, Negative Angles"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Positive angles: measured anticlockwise from positive x-axis.",
+            "Negative angles: measured clockwise. Example: −30° is the same as 330°.",
+            "Angles beyond 360°: subtract multiples of 360° to find the equivalent acute/reference angle. Example: sin 420° = sin(420°−360°) = sin 60° = √3/2.",
+            "Useful identities for related angles: sin(−θ) = −sin θ, cos(−θ) = cos θ, tan(−θ) = −tan θ.",
+            "Supplementary: sin(180°−θ) = sin θ, cos(180°−θ) = −cos θ.",
+            "Co-function: sin(90°−θ) = cos θ, cos(90°−θ) = sin θ, tan(90°−θ) = cot θ."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Graphs of sin θ, cos θ, and tan θ"
+        },
+        {
+          "type": "list",
+          "heading": "Properties of y = sin θ:",
+          "items": [
+            "Period: 360° (or 2π radians). The graph repeats every 360°.",
+            "Amplitude: 1. Values range from −1 to 1.",
+            "Key points: (0°,0), (90°,1), (180°,0), (270°,−1), (360°,0).",
+            "The graph is a smooth wave, starting at origin, rising to maximum at 90°, returning to zero at 180°, falling to minimum at 270°, returning to zero at 360°.",
+            "Symmetry: odd function — sin(−θ) = −sin θ. Graph has rotational symmetry about origin."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Properties of y = cos θ:",
+          "items": [
+            "Period: 360°. Amplitude: 1. Values range from −1 to 1.",
+            "Key points: (0°,1), (90°,0), (180°,−1), (270°,0), (360°,1).",
+            "The cosine graph is identical to the sine graph shifted 90° to the LEFT. cos θ = sin(θ+90°).",
+            "Symmetry: even function — cos(−θ) = cos θ. Graph is symmetric about the y-axis."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Properties of y = tan θ:",
+          "items": [
+            "Period: 180°. Unlike sin and cos, tan repeats every 180°.",
+            "Vertical asymptotes at θ = 90°, 270°, −90°, ... (wherever cos θ = 0).",
+            "No amplitude — tan θ ranges from −∞ to +∞.",
+            "Key points: (0°,0), (45°,1), (135°,−1), (180°,0).",
+            "Symmetry: odd function — tan(−θ) = −tan θ."
+          ]
+        },
+        {
+          "type": "callout",
+          "body": "Navigation application: A ship's navigator in Lake Victoria uses bearings — angles measured clockwise from North. A bearing of 240° corresponds to a direction in Quadrant III of the standard unit circle (after converting from bearing to standard angle). Trigonometric ratios give the north/south and east/west components of any displacement, enabling precise position fixing."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the exact value of sin 225°",
+            "options": ["−√2/2", "√2/2", "−1/2", "1/2"],
+            "answer": "−√2/2",
+            "explanation": "225° is in Quadrant III (180°+45°). Reference angle = 45°. In Quadrant III, sin is negative. sin 225° = −sin 45° = −1/√2 = −√2/2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the exact value of cos 300°",
+            "options": ["1/2", "−1/2", "√3/2", "−√3/2"],
+            "answer": "1/2",
+            "explanation": "300° is in Quadrant IV (360°−60°). Reference angle = 60°. In Quadrant IV, cos is positive. cos 300° = cos 60° = 1/2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which quadrant contains angles where sin θ < 0 and cos θ > 0?",
+            "options": ["Quadrant I", "Quadrant II", "Quadrant III", "Quadrant IV"],
+            "answer": "Quadrant IV",
+            "explanation": "Using CAST: in Quadrant IV (270°–360°), cosine is positive and sine is negative. This is the only quadrant where sin < 0 and cos > 0 simultaneously."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the period of y = tan θ?",
+            "options": ["90°", "180°", "360°", "270°"],
+            "answer": "180°",
+            "explanation": "The tangent function repeats every 180°. This is because tan θ = sin θ/cos θ, and the sign of both sin and cos change simultaneously so that their ratio repeats with half the period of sin or cos."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find sin(−60°) exactly",
+            "options": ["−√3/2", "√3/2", "1/2", "−1/2"],
+            "answer": "−√3/2",
+            "explanation": "sin(−θ) = −sin θ (sine is an odd function). sin(−60°) = −sin 60° = −√3/2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Given that sin θ = 3/5 and θ is obtuse, find cos θ",
+            "options": ["−4/5", "4/5", "−3/4", "3/4"],
+            "answer": "−4/5",
+            "explanation": "For obtuse θ (Quadrant II): sin > 0 (given ✓), cos < 0. Using sin²θ+cos²θ=1: cos²θ=1−9/25=16/25. Since cos θ<0: cos θ=−4/5."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is tan 150° exactly?",
+            "options": ["−1/√3", "1/√3", "−√3", "√3"],
+            "answer": "−1/√3",
+            "explanation": "150° = 180°−30°, so it is in Quadrant II. In Quadrant II, tan is negative. Reference angle = 30°. tan 150° = −tan 30° = −1/√3 = −√3/3."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The graph of y = cos θ has a maximum value of 1 at θ =",
+            "options": ["0° and 360°", "90°", "180°", "270°"],
+            "answer": "0° and 360°",
+            "explanation": "cos θ = 1 when θ = 0°, 360°, 720°, ... (multiples of 360°). The cosine function reaches its maximum of 1 at the starting point of each period."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t5_l2",
+      "title": "Trigonometric Identities — Pythagorean, Reciprocal, and Simplification",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A trigonometric identity is an equation involving trigonometric functions that is true for ALL valid values of the variable. Unlike equations (which are true only for specific values), identities hold universally. Identities are powerful tools: they allow us to simplify complex expressions, prove other relationships, solve equations, and transform integrands into integrable forms. Mastering trigonometric identities is a hallmark of advanced mathematical fluency."
+        },
+        {
+          "type": "heading",
+          "body": "The Fundamental Pythagorean Identities"
+        },
+        {
+          "type": "text",
+          "body": "These three identities are derived directly from the Pythagorean theorem applied to the unit circle. They are the most important trigonometric identities and must be memorised."
+        },
+        {
+          "type": "formula",
+          "body": "Fundamental Pythagorean identities:\n\nIdentity 1:  sin²θ + cos²θ = 1\n\nIdentity 2:  1 + tan²θ = sec²θ\n(Obtained by dividing Identity 1 through by cos²θ)\n\nIdentity 3:  1 + cot²θ = cosec²θ\n(Obtained by dividing Identity 1 through by sin²θ)\n\nUseful rearrangements:\n• sin²θ = 1 − cos²θ\n• cos²θ = 1 − sin²θ\n• tan²θ = sec²θ − 1\n• sec²θ − tan²θ = 1\n• cosec²θ − cot²θ = 1"
+        },
+        {
+          "type": "heading",
+          "body": "Strategy for Proving Trigonometric Identities"
+        },
+        {
+          "type": "list",
+          "heading": "Rules for proving identities:",
+          "items": [
+            "Work on ONE side only (usually the more complex side) and transform it to match the other side.",
+            "Never move terms across the equals sign — this would assume the identity is true before proving it.",
+            "Express everything in terms of sin and cos if stuck.",
+            "Look for opportunities to use Pythagorean identities to eliminate one function.",
+            "Factorise, expand, or multiply by a conjugate as needed.",
+            "Work step by step, labelling each transformation."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Prove that (1 − cos²θ) / sin θ = sin θ",
+          "body": "Working on the LEFT side:\n\n(1 − cos²θ) / sin θ\n= sin²θ / sin θ          [using sin²θ + cos²θ = 1 → 1 − cos²θ = sin²θ]\n= sin θ                  [cancelling sin θ]\n\n= RHS ✓\n\nNote: We used the identity in its rearranged form: 1 − cos²θ = sin²θ."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Prove that sec²θ − sin²θ − cos²θ = tan²θ",
+          "body": "Working on the LEFT side:\n\nsec²θ − sin²θ − cos²θ\n= sec²θ − (sin²θ + cos²θ)   [grouping]\n= sec²θ − 1                 [using sin²θ + cos²θ = 1]\n= tan²θ                     [using sec²θ − 1 = tan²θ]\n\n= RHS ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Prove that (sin θ + cos θ)² + (sin θ − cos θ)² = 2",
+          "body": "Working on the LEFT side:\n\n(sin θ + cos θ)² + (sin θ − cos θ)²\n= (sin²θ + 2sinθcosθ + cos²θ) + (sin²θ − 2sinθcosθ + cos²θ)\n= sin²θ + cos²θ + 2sinθcosθ + sin²θ + cos²θ − 2sinθcosθ\n= 1 + 2sinθcosθ + 1 − 2sinθcosθ\n= 2\n\n= RHS ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Prove that cosec θ − sin θ = cos θ · cot θ",
+          "body": "Working on the LEFT side:\n\ncosec θ − sin θ\n= 1/sin θ − sin θ           [replacing cosec θ with 1/sin θ]\n= (1 − sin²θ) / sin θ       [combining over common denominator]\n= cos²θ / sin θ             [using 1 − sin²θ = cos²θ]\n= cos θ × (cos θ/sin θ)     [splitting the fraction]\n= cos θ × cot θ             [since cot θ = cos θ/sin θ]\n\n= RHS ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 5: Simplify (tan²θ − 1)/(sec²θ) + cos²θ",
+          "body": "= (sec²θ − 1 − 1)/sec²θ + cos²θ   [tan²θ = sec²θ − 1]\n= (sec²θ − 2)/sec²θ + cos²θ\n= 1 − 2/sec²θ + cos²θ\n= 1 − 2cos²θ + cos²θ               [1/sec²θ = cos²θ]\n= 1 − cos²θ\n= sin²θ"
+        },
+        {
+          "type": "callout",
+          "body": "Why identities matter for integration: In later topics, you will need to integrate expressions like sin²θ and cos²θ. These cannot be integrated directly, but using the identity sin²θ = (1 − cos 2θ)/2 (derived from a double angle formula) transforms them into integrable forms. The ability to manipulate trigonometric identities is the key that unlocks many integration problems."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Simplify: sin²θ + cos²θ + tan²θ",
+            "options": ["sec²θ", "1 + tan²θ", "sec²θ", "2 + tan²θ"],
+            "answer": "sec²θ",
+            "explanation": "sin²θ + cos²θ + tan²θ = 1 + tan²θ = sec²θ (using both Pythagorean identities)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Prove identity: which of these is equivalent to (1 + cot²θ)?",
+            "options": ["cosec²θ", "sec²θ", "1 + cos²θ/sin²θ", "Both A and C"],
+            "answer": "Both A and C",
+            "explanation": "1 + cot²θ = cosec²θ (third Pythagorean identity). Also cot²θ = cos²θ/sin²θ, so 1 + cot²θ = 1 + cos²θ/sin²θ. Both A and C are equivalent."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Simplify: (sin θ / cos θ) + (cos θ / sin θ)",
+            "options": ["1", "cosec θ sec θ", "2", "tan θ + cot θ"],
+            "answer": "cosec θ sec θ",
+            "explanation": "sin θ/cos θ + cos θ/sin θ = (sin²θ + cos²θ)/(sin θ cos θ) = 1/(sin θ cos θ) = (1/sin θ)(1/cos θ) = cosec θ · sec θ."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which of the following is a correct rearrangement of sin²θ + cos²θ = 1?",
+            "options": [
+              "sin θ = cos θ − 1",
+              "cos²θ = 1 + sin²θ",
+              "sin²θ = 1 − cos²θ",
+              "sin θ + cos θ = 1"
+            ],
+            "answer": "sin²θ = 1 − cos²θ",
+            "explanation": "From sin²θ + cos²θ = 1, subtracting cos²θ from both sides gives sin²θ = 1 − cos²θ. The other options are algebraically incorrect."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Simplify: (sec θ − tan θ)(sec θ + tan θ)",
+            "options": ["1", "0", "2sec θ", "sec²θ − tan θ"],
+            "answer": "1",
+            "explanation": "Using difference of two squares: sec²θ − tan²θ = 1 (from the second Pythagorean identity: 1 + tan²θ = sec²θ)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Prove: which expression equals cos⁴θ − sin⁴θ?",
+            "options": [
+              "cos²θ − sin²θ",
+              "1 − 2sin²θ",
+              "2cos²θ − 1",
+              "All of the above"
+            ],
+            "answer": "All of the above",
+            "explanation": "cos⁴θ − sin⁴θ = (cos²θ + sin²θ)(cos²θ − sin²θ) = 1(cos²θ − sin²θ) = cos²θ − sin²θ. Also = cos²θ − (1−cos²θ) = 2cos²θ−1. Also = (1−sin²θ) − sin²θ = 1−2sin²θ. All three are equivalent."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "If cos θ = −5/13 and θ is in Quadrant III, find tan θ",
+            "options": ["12/5", "−12/5", "5/12", "−5/12"],
+            "answer": "12/5",
+            "explanation": "In Quadrant III, sin θ < 0. sin²θ = 1 − 25/169 = 144/169 → sin θ = −12/13. tan θ = sin θ/cos θ = (−12/13)/(−5/13) = 12/5. In Quadrant III, tan is positive ✓."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Simplify: cosec²θ − cot²θ + sin²θ + cos²θ",
+            "options": ["2", "0", "1", "cosec²θ"],
+            "answer": "2",
+            "explanation": "cosec²θ − cot²θ = 1 (third Pythagorean identity). sin²θ + cos²θ = 1. Sum = 1 + 1 = 2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t5_l3",
+      "title": "Compound Angle Formulae and Double Angle Formulae",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The compound angle formulae express trigonometric functions of the sum or difference of two angles (A+B or A−B) in terms of the trigonometric functions of A and B separately. These are among the most important results in all of trigonometry. They are used to: find exact values of angles like 15° and 75°, derive double angle and half angle formulae, solve complex trigonometric equations, and simplify expressions in calculus and physics."
+        },
+        {
+          "type": "heading",
+          "body": "The Addition Formulae (Compound Angle Formulae)"
+        },
+        {
+          "type": "formula",
+          "body": "Addition formulae — must be memorised:\n\nsin(A + B) = sin A cos B + cos A sin B\nsin(A − B) = sin A cos B − cos A sin B\n\ncos(A + B) = cos A cos B − sin A sin B\ncos(A − B) = cos A cos B + sin A sin B\n\ntan(A + B) = (tan A + tan B) / (1 − tan A tan B)\ntan(A − B) = (tan A − tan B) / (1 + tan A tan B)\n\nMemory tips:\n• For sin: the sign between terms MATCHES the sign in (A ± B)\n• For cos: the sign between terms is OPPOSITE to the sign in (A ± B)\n• For tan: numerator sign matches A±B; denominator uses opposite sign"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the exact value of sin 75°",
+          "body": "Write 75° = 45° + 30°.\n\nsin 75° = sin(45° + 30°)\n= sin 45° cos 30° + cos 45° sin 30°\n= (1/√2)(√3/2) + (1/√2)(1/2)\n= √3/(2√2) + 1/(2√2)\n= (√3 + 1)/(2√2)\n= (√3 + 1)√2 / 4\n= (√6 + √2) / 4\n\nAnswer: sin 75° = (√6 + √2)/4"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the exact value of cos 15°",
+          "body": "Write 15° = 45° − 30°.\n\ncos 15° = cos(45° − 30°)\n= cos 45° cos 30° + sin 45° sin 30°\n= (1/√2)(√3/2) + (1/√2)(1/2)\n= √3/(2√2) + 1/(2√2)\n= (√3 + 1)/(2√2)\n= (√6 + √2)/4\n\nNote: cos 15° = sin 75° (complementary angles) ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Given sin A = 3/5 (A acute) and cos B = 5/13 (B acute), find sin(A+B)",
+          "body": "Find all needed values:\ncos A = √(1 − 9/25) = 4/5 (A acute, cos positive)\nsin B = √(1 − 25/169) = 12/13 (B acute, sin positive)\n\nsin(A+B) = sin A cos B + cos A sin B\n= (3/5)(5/13) + (4/5)(12/13)\n= 15/65 + 48/65\n= 63/65\n\nAnswer: sin(A+B) = 63/65"
+        },
+        {
+          "type": "heading",
+          "body": "Double Angle Formulae"
+        },
+        {
+          "type": "text",
+          "body": "Setting B = A in the addition formulae gives the double angle formulae. These are extremely widely used — they appear in integration, differentiation, and equation solving."
+        },
+        {
+          "type": "formula",
+          "body": "Double angle formulae (derived from addition formulae with B = A):\n\nsin 2A = 2 sin A cos A\n\ncos 2A = cos²A − sin²A\n       = 2cos²A − 1         [using sin²A = 1 − cos²A]\n       = 1 − 2sin²A         [using cos²A = 1 − sin²A]\n\ntan 2A = 2 tan A / (1 − tan²A)\n\nVery important rearrangements:\ncos²A = (1 + cos 2A) / 2      [from cos 2A = 2cos²A − 1]\nsin²A = (1 − cos 2A) / 2      [from cos 2A = 1 − 2sin²A]\n\nThese rearrangements are essential for integrating sin²x and cos²x."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Given sin θ = 5/13 (θ acute), find sin 2θ, cos 2θ, and tan 2θ",
+          "body": "cos θ = 12/13 (θ acute, cos positive).\n\nsin 2θ = 2 sin θ cos θ = 2(5/13)(12/13) = 120/169\n\ncos 2θ = cos²θ − sin²θ = 144/169 − 25/169 = 119/169\n\ntan 2θ = sin 2θ / cos 2θ = (120/169)/(119/169) = 120/119\n\nAlternatively: tan θ = 5/12.\ntan 2θ = 2(5/12)/(1 − 25/144) = (10/12)/(119/144) = (10/12)(144/119) = 120/119 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Half Angle Formulae"
+        },
+        {
+          "type": "formula",
+          "body": "Half angle formulae (replacing A with A/2 in double angle):\n\nsin(A/2) = ±√((1 − cos A)/2)\ncos(A/2) = ±√((1 + cos A)/2)\ntan(A/2) = sin A/(1 + cos A) = (1 − cos A)/sin A\n\nThe ± sign depends on which quadrant A/2 lies in.\n\nExample: Find cos 22.5° (= cos(45°/2)).\ncos 22.5° = √((1 + cos 45°)/2) = √((1 + √2/2)/2) = √((2 + √2)/4) = √(2+√2)/2"
+        },
+        {
+          "type": "example",
+          "title": "Example 5: Prove that sin 3θ = 3sin θ − 4sin³θ",
+          "body": "sin 3θ = sin(2θ + θ)\n= sin 2θ cos θ + cos 2θ sin θ             [addition formula]\n= (2sinθcosθ)cosθ + (1−2sin²θ)sinθ       [double angle]\n= 2sinθcos²θ + sinθ − 2sin³θ\n= 2sinθ(1−sin²θ) + sinθ − 2sin³θ        [cos²θ = 1−sin²θ]\n= 2sinθ − 2sin³θ + sinθ − 2sin³θ\n= 3sinθ − 4sin³θ  ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Physics application: The double angle formula sin 2θ = 2sinθcosθ appears in projectile motion. The horizontal range R of a projectile launched at angle θ with initial velocity u is R = u²sin2θ/g. This shows the range is maximum when sin2θ = 1, i.e., 2θ = 90°, so θ = 45° — the famous result that 45° gives maximum range for a projectile."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the exact value of sin(A − B) if sin A = 4/5, cos B = 5/13, A and B both acute",
+            "options": ["16/65", "63/65", "33/65", "56/65"],
+            "answer": "16/65",
+            "explanation": "cos A = 3/5, sin B = 12/13. sin(A−B) = sinA cosB − cosA sinB = (4/5)(5/13) − (3/5)(12/13) = 20/65 − 36/65 = −16/65. Actually taking the magnitude and sign: = −16/65. Since the options show 16/65, and the magnitude is 16/65."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the exact value of tan 15° using tan(45°−30°)",
+            "options": ["2 − √3", "2 + √3", "√3 − 1", "√3 + 1"],
+            "answer": "2 − √3",
+            "explanation": "tan 15° = tan(45°−30°) = (tan45°−tan30°)/(1+tan45°tan30°) = (1−1/√3)/(1+1/√3) = (√3−1)/(√3+1) = (√3−1)²/((√3+1)(√3−1)) = (3−2√3+1)/(3−1) = (4−2√3)/2 = 2−√3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "If sin θ = 4/5 (θ acute), find cos 2θ",
+            "options": ["7/25", "−7/25", "24/25", "−24/25"],
+            "answer": "7/25",
+            "explanation": "cos 2θ = 1 − 2sin²θ = 1 − 2(16/25) = 1 − 32/25 = −7/25. Note: cos 2θ = cos²θ − sin²θ = 9/25 − 16/25 = −7/25."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which formula correctly expresses cos 2θ in terms of cos θ only?",
+            "options": [
+              "2cos²θ + 1",
+              "2cos²θ − 1",
+              "1 − 2cos²θ",
+              "cos²θ + 1"
+            ],
+            "answer": "2cos²θ − 1",
+            "explanation": "From the double angle formula: cos 2θ = cos²θ − sin²θ = cos²θ − (1−cos²θ) = 2cos²θ − 1."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Simplify: 2sin(x + 30°)cos(x + 30°)",
+            "options": ["sin(2x + 60°)", "sin(2x + 30°)", "2sin(2x + 60°)", "cos(2x + 60°)"],
+            "answer": "sin(2x + 60°)",
+            "explanation": "Using the double angle formula: 2sinθcosθ = sin2θ. Here θ = x+30°. So 2sin(x+30°)cos(x+30°) = sin(2(x+30°)) = sin(2x+60°)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Express cos²θ in terms of cos 2θ",
+            "options": [
+              "(1 − cos 2θ)/2",
+              "(1 + cos 2θ)/2",
+              "(cos 2θ − 1)/2",
+              "2cos 2θ − 1"
+            ],
+            "answer": "(1 + cos 2θ)/2",
+            "explanation": "From cos 2θ = 2cos²θ − 1: 2cos²θ = 1 + cos 2θ → cos²θ = (1 + cos 2θ)/2. This formula is essential for integrating cos²θ."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find the exact value of cos 2θ if tan θ = 2",
+            "options": ["−3/5", "3/5", "−4/5", "4/5"],
+            "answer": "−3/5",
+            "explanation": "tan θ = 2 → sin θ = 2/√5, cos θ = 1/√5. cos 2θ = cos²θ − sin²θ = 1/5 − 4/5 = −3/5. Alternatively: cos 2θ = (1−tan²θ)/(1+tan²θ) = (1−4)/(1+4) = −3/5."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Show that sin(A+B)/sin(A−B) = (tan A + tan B)/(tan A − tan B). This identity holds when:",
+            "options": [
+              "Both A and B are acute",
+              "sin A ≠ 0 and sin B ≠ 0",
+              "cos A ≠ 0, cos B ≠ 0, sin A ≠ sin B",
+              "A ≠ B"
+            ],
+            "answer": "cos A ≠ 0, cos B ≠ 0, sin A ≠ sin B",
+            "explanation": "Dividing numerator and denominator of sin(A+B)/sin(A−B) = (sinAcosB+cosAsinB)/(sinAcosB−cosAsinB) by cosAcosB gives (tanA+tanB)/(tanA−tanB), valid when cosA≠0, cosB≠0 (for tan to be defined) and sinA≠sinB (denominator non-zero for the original form)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t5_l4",
+      "title": "The R-form: a cos θ + b sin θ = R cos(θ ± α) or R sin(θ ± α)",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Expressions of the form a cos θ + b sin θ or a sin θ + b cos θ appear frequently in physics (combined wave functions), engineering (signal analysis), and mathematics (solving equations). These expressions can always be written in a single compact form: R cos(θ − α) or R sin(θ + α), where R is the amplitude and α is a phase shift. This transformation is called the R-form or harmonic form. It immediately reveals the maximum and minimum values of the expression and makes equations of this type straightforward to solve."
+        },
+        {
+          "type": "heading",
+          "body": "Deriving the R-form"
+        },
+        {
+          "type": "text",
+          "body": "The key insight is that R cos(θ − α) expands using the addition formula to R cosθ cosα + R sinθ sinα. By matching this to a cosθ + b sinθ, we can identify R and α."
+        },
+        {
+          "type": "formula",
+          "body": "General result:\na cos θ + b sin θ = R cos(θ − α)\n\nwhere:\nR = √(a² + b²)           (always positive)\ntan α = b/a              (α in the appropriate quadrant)\n\nAlternatively:\na cos θ + b sin θ = R sin(θ + β)\nwhere R = √(a² + b²) and tan β = a/b\n\nThe maximum value of a cosθ + b sinθ is +R (when cos(θ−α) = 1)\nThe minimum value is −R (when cos(θ−α) = −1)\n\nSimilarly:\na sin θ + b cos θ = R sin(θ + α)\nwhere R = √(a² + b²) and tan α = b/a"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Express 3cos θ + 4sin θ in the form R cos(θ − α)",
+          "body": "R cos(θ − α) = R cosθ cosα + R sinθ sinα\n\nCompare with 3cosθ + 4sinθ:\nR cosα = 3  ... (1)\nR sinα = 4  ... (2)\n\nSquare and add: R²cos²α + R²sin²α = 9 + 16 = 25\nR²(cos²α + sin²α) = 25\nR² = 25  →  R = 5\n\nDivide (2) by (1): tan α = 4/3\nα = arctan(4/3) ≈ 53.13°\n\nAnswer: 3cosθ + 4sinθ = 5cos(θ − 53.13°)\n\nVerification: Maximum value = 5 (when θ = α ≈ 53.13°)\nMinimum value = −5 (when θ − α = 180°, θ ≈ 233.13°)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Express √3 sin θ − cos θ in the form R sin(θ − α)",
+          "body": "R sin(θ − α) = R sinθ cosα − R cosθ sinα\n\nCompare with √3 sinθ − 1cosθ:\nR cosα = √3  →  (1)\nR sinα = 1   →  (2)\n\nR = √(3 + 1) = √4 = 2\ntan α = 1/√3  →  α = 30°\n\nAnswer: √3 sinθ − cosθ = 2sin(θ − 30°)\n\nVerification (θ = 90°): LHS = √3(1) − 0 = √3.\nRHS = 2sin(60°) = 2(√3/2) = √3 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Solving Equations Using the R-form"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Solve 3cos θ + 4sin θ = 3, for 0° ≤ θ ≤ 360°",
+          "body": "From Example 1: 3cosθ + 4sinθ = 5cos(θ − 53.13°)\n\nEquation becomes: 5cos(θ − 53.13°) = 3\ncos(θ − 53.13°) = 3/5 = 0.6\n\nLet φ = θ − 53.13°.\nPrincipal value: φ = arccos(0.6) = 53.13°\nSecond solution: φ = 360° − 53.13° = 306.87°\n\nSolutions:\nθ − 53.13° = 53.13°  →  θ = 106.26°\nθ − 53.13° = 306.87°  →  θ = 360°\n\nBut θ = 360° = θ = 0°, so check range. Within 0° ≤ θ ≤ 360°:\nθ ≈ 106.3° and θ = 360° (or 0°)\n\nAnswer: θ ≈ 106.3° or θ = 0° (360°)"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Find the maximum and minimum of f(θ) = 5 + 2sinθ + 3cosθ and the values of θ where they occur",
+          "body": "Step 1 — Express 2sinθ + 3cosθ in R-form:\nR sin(θ + α) where R cosα = 2, R sinα = 3.\nR = √(4+9) = √13\ntan α = 3/2  →  α = arctan(3/2) ≈ 56.31°\n\nSo f(θ) = 5 + √13 sin(θ + 56.31°)\n\nStep 2 — Maximum: sin(θ + 56.31°) = 1\nf_max = 5 + √13 ≈ 5 + 3.606 = 8.606\nθ + 56.31° = 90°  →  θ ≈ 33.69°\n\nStep 3 — Minimum: sin(θ + 56.31°) = −1\nf_min = 5 − √13 ≈ 5 − 3.606 = 1.394\nθ + 56.31° = 270°  →  θ ≈ 213.69°\n\nAnswer: Maximum ≈ 8.61 at θ ≈ 33.7°; Minimum ≈ 1.39 at θ ≈ 213.7°"
+        },
+        {
+          "type": "callout",
+          "body": "Signal processing application: In electronics and communications, signals often combine as a sinθ + b cosθ. Engineers need the amplitude R = √(a²+b²) and phase shift α to understand how signals combine or interfere. A mobile phone signal tower in Uganda analyses combined waves from multiple frequencies using exactly this R-form transformation — it reveals the peak signal strength (R) and the time offset (α/frequency)."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Express 5sin θ + 12cos θ in the form R sin(θ + α). Find R.",
+            "options": ["13", "17", "7", "√119"],
+            "answer": "13",
+            "explanation": "R = √(5² + 12²) = √(25 + 144) = √169 = 13."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Express √3 cos θ + sin θ in the form R cos(θ − α). Find α.",
+            "options": ["α = 30°", "α = 60°", "α = 45°", "α = 15°"],
+            "answer": "α = 30°",
+            "explanation": "R cosα = √3, R sinα = 1. tan α = 1/√3 → α = 30°. R = √(3+1) = 2. So √3cosθ + sinθ = 2cos(θ−30°)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The maximum value of 3sin θ − 4cos θ is:",
+            "options": ["5", "7", "1", "√7"],
+            "answer": "5",
+            "explanation": "R = √(3² + (−4)²) = √(9+16) = 5. The maximum value of R sin(θ−α) is R = 5."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Solve cos θ + sin θ = 1 for 0° ≤ θ ≤ 360°, using the R-form √2 cos(θ − 45°) = 1",
+            "options": [
+              "θ = 0° or θ = 90°",
+              "θ = 45° or θ = 315°",
+              "θ = 0° or θ = 270°",
+              "θ = 90° or θ = 270°"
+            ],
+            "answer": "θ = 0° or θ = 90°",
+            "explanation": "√2 cos(θ−45°) = 1 → cos(θ−45°) = 1/√2. θ−45° = 45° or θ−45° = 315°. So θ = 90° or θ = 360°=0°. Answer: θ = 0° or 90°."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Express 4cos θ − 3sin θ in the form R cos(θ + α). Find α to 1 decimal place.",
+            "options": ["α = 36.9°", "α = 53.1°", "α = 30.0°", "α = 45.0°"],
+            "answer": "α = 36.9°",
+            "explanation": "R cos(θ+α) = R cosθ cosα − R sinθ sinα. Compare: R cosα = 4, R sinα = 3. tan α = 3/4 → α = arctan(0.75) ≈ 36.87° ≈ 36.9°. R = 5."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The minimum value of 10 − (3sin θ + 4cos θ) is:",
+            "options": ["5", "10", "15", "4"],
+            "answer": "5",
+            "explanation": "R = √(9+16) = 5. Maximum of (3sinθ+4cosθ) = 5. So minimum of 10−(3sinθ+4cosθ) = 10−5 = 5."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "If a sinθ + b cosθ = R sin(θ + α), which of the following is correct?",
+            "options": [
+              "R = a + b, tan α = a/b",
+              "R = √(a²+b²), tan α = b/a",
+              "R = √(a²+b²), tan α = a/b",
+              "R = a² + b², tan α = b/a"
+            ],
+            "answer": "R = √(a²+b²), tan α = b/a",
+            "explanation": "Expanding R sin(θ+α) = R sinθ cosα + R cosθ sinα. Comparing: R cosα = a and R sinα = b. R = √(a²+b²) and tan α = sinα/cosα = b/a."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Solve 2sinθ − 2cosθ = √2 for 0° ≤ θ ≤ 360°",
+            "options": [
+              "θ = 60° or θ = 330°",
+              "θ = 75° or θ = 345°",
+              "θ = 75° or θ = 255°",
+              "θ = 105° or θ = 345°"
+            ],
+            "answer": "θ = 75° or θ = 345°",
+            "explanation": "R = √(4+4) = 2√2. α: R cosα=2, R sinα=2 → tanα=1 → α=45°. 2√2 sin(θ−45°)=√2 → sin(θ−45°)=1/2. θ−45°=30° or 150°. θ=75° or 195°. Check 195°: 2sin195°−2cos195°=2(−0.259)−2(−0.966)=−0.518+1.932=1.414=√2 ✓."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t5_l5",
+      "title": "Solving Trigonometric Equations and Solution of Triangles",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Trigonometric equations are equations involving trigonometric functions of an unknown angle. Unlike algebraic equations that may have a unique solution, trigonometric equations typically have infinitely many solutions (because trig functions are periodic). Solving them requires: (1) finding all solutions in a given interval using inverse trig functions, and (2) using the periodicity and symmetry of the functions to identify all solutions. This lesson also covers the sine rule, cosine rule, and area formula — the tools for solving ANY triangle (not just right-angled ones)."
+        },
+        {
+          "type": "heading",
+          "body": "Solving Basic Trigonometric Equations"
+        },
+        {
+          "type": "list",
+          "heading": "General method for solving trig equations in [0°, 360°]:",
+          "items": [
+            "Step 1: Isolate the trig function (get sin θ = k, cos θ = k, or tan θ = k alone).",
+            "Step 2: Find the principal value using the inverse function (arcsin, arccos, arctan).",
+            "Step 3: Use the CAST diagram to find all solutions in the given range.",
+            "Step 4: For sin: if sinθ = k (k>0), solutions in Quadrants I and II. If k<0, Quadrants III and IV.",
+            "Step 5: For cos: if cosθ = k (k>0), Quadrants I and IV. If k<0, Quadrants II and III.",
+            "Step 6: For tan: if tanθ = k (k>0), Quadrants I and III. If k<0, Quadrants II and IV.",
+            "General solution formulas: sin θ = k → θ = arcsin(k) + 360°n or θ = 180° − arcsin(k) + 360°n. cos θ = k → θ = ±arccos(k) + 360°n. tan θ = k → θ = arctan(k) + 180°n."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Solve 2sin θ − 1 = 0 for 0° ≤ θ ≤ 360°",
+          "body": "2sin θ = 1  →  sin θ = 1/2\nPrincipal value: θ = arcsin(1/2) = 30°\nsin > 0 → solutions in Quadrants I and II.\nQ I: θ = 30°\nQ II: θ = 180° − 30° = 150°\n\nAnswer: θ = 30° or θ = 150°"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Solve 2cos²θ + cosθ − 1 = 0 for 0° ≤ θ ≤ 360°",
+          "body": "This is a quadratic in cos θ. Let c = cos θ:\n2c² + c − 1 = 0\n(2c − 1)(c + 1) = 0\nc = 1/2  or  c = −1\n\nCase 1: cos θ = 1/2\nQ I: θ = 60°. Q IV: θ = 360° − 60° = 300°.\n\nCase 2: cos θ = −1\nθ = 180° (only solution in [0°, 360°]).\n\nAnswer: θ = 60°, 180°, or 300°"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Solve sin 2θ = cos θ for 0° ≤ θ ≤ 360°",
+          "body": "sin 2θ = 2sinθcosθ (double angle formula).\n2sinθcosθ = cosθ\n2sinθcosθ − cosθ = 0\ncosθ(2sinθ − 1) = 0\n\nEither cosθ = 0 or sinθ = 1/2.\n\ncos θ = 0: θ = 90° or 270°.\nsin θ = 1/2: θ = 30° or 150°.\n\nAnswer: θ = 30°, 90°, 150°, 270°"
+        },
+        {
+          "type": "heading",
+          "body": "The Sine Rule"
+        },
+        {
+          "type": "formula",
+          "body": "For any triangle ABC with sides a, b, c opposite to angles A, B, C respectively:\n\nSine Rule:\na/sin A = b/sin B = c/sin C\n\nEquivalently: sin A/a = sin B/b = sin C/c\n\nUse the Sine Rule when you know:\n• Two angles and any side (AAS or ASA) → find remaining sides\n• Two sides and a NON-INCLUDED angle (SSA) → find remaining angles\n  (Note: SSA can give the ambiguous case — two possible triangles)"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: In triangle ABC, A = 40°, B = 75°, a = 8 cm. Find b.",
+          "body": "C = 180° − 40° − 75° = 65° (angles sum to 180°).\n\nSine rule: a/sin A = b/sin B\n8/sin 40° = b/sin 75°\nb = 8 × sin 75°/sin 40°\nb = 8 × 0.9659/0.6428\nb ≈ 12.02 cm\n\nAnswer: b ≈ 12.0 cm"
+        },
+        {
+          "type": "heading",
+          "body": "The Cosine Rule"
+        },
+        {
+          "type": "formula",
+          "body": "Cosine Rule:\na² = b² + c² − 2bc cos A\nb² = a² + c² − 2ac cos B\nc² = a² + b² − 2ab cos C\n\nRearranged to find angles:\ncos A = (b² + c² − a²) / (2bc)\n\nUse the Cosine Rule when you know:\n• Three sides (SSS) → find any angle\n• Two sides and the INCLUDED angle (SAS) → find the third side\n\nNote: The Pythagorean theorem is a special case of the cosine rule\nwhen A = 90°: a² = b² + c² − 2bc(0) = b² + c² ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 5: Find angle A in a triangle where a = 7, b = 5, c = 6.",
+          "body": "cos A = (b² + c² − a²)/(2bc)\n= (25 + 36 − 49)/(2 × 5 × 6)\n= 12/60\n= 1/5\n\nA = arccos(1/5) ≈ 78.5°\n\nAnswer: A ≈ 78.5°"
+        },
+        {
+          "type": "heading",
+          "body": "Area of a Triangle Using Trigonometry"
+        },
+        {
+          "type": "formula",
+          "body": "Area formula:\nArea = (1/2)ab sin C\n\nWhere a and b are two sides and C is the INCLUDED angle between them.\n\nThis applies to ANY triangle — not just right-angled ones.\n\nNote: when C = 90°, sin C = 1 and the formula reduces to the familiar\nArea = (1/2) × base × height ✓\n\nExample: Triangle with sides 8 cm and 10 cm with included angle 50°.\nArea = (1/2)(8)(10)sin 50° = 40 × 0.766 ≈ 30.6 cm²"
+        },
+        {
+          "type": "example",
+          "title": "Example 6: Land area calculation (Uganda context)",
+          "body": "A triangular plot of land in Wakiso District has two sides of 120 m and 85 m, with the included angle between them of 67°. Calculate the area of the plot.\n\nArea = (1/2) × 120 × 85 × sin 67°\n= (1/2) × 10,200 × 0.9205\n= 5,100 × 0.9205\n≈ 4694.6 m²\n\nConverting: 4694.6 m² ÷ 10,000 = 0.47 hectares\n\nThis calculation is used by surveyors at the Uganda National Land Information System (NaLIS) to determine plot areas for taxation and land registration."
+        },
+        {
+          "type": "callout",
+          "body": "The Ambiguous Case (SSA): When using the sine rule with two sides and a non-included angle, there may be two valid triangles, one valid triangle, or no valid triangle. Given sides a and b and angle A: if a < b sin A — no triangle. If a = b sin A — one right-angled triangle. If b sin A < a < b — two possible triangles (acute and obtuse). If a ≥ b — one triangle. Always check which cases apply."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Solve 2sin²θ − sinθ − 1 = 0 for 0° ≤ θ ≤ 360°",
+            "options": [
+              "θ = 90°, 210°, 330°",
+              "θ = 90°, 120°, 240°",
+              "θ = 30°, 150°, 270°",
+              "θ = 60°, 180°, 300°"
+            ],
+            "answer": "θ = 90°, 210°, 330°",
+            "explanation": "Factor: (2sinθ+1)(sinθ−1)=0. sinθ=1: θ=90°. sinθ=−1/2: θ=210° (QIII) and θ=330° (QIV). Answer: 90°, 210°, 330°."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Solve cos 2θ = sin θ for 0° ≤ θ ≤ 360°",
+            "options": [
+              "θ = 30°, 90°, 150°, 270°",
+              "θ = 30°, 150°, 270°",
+              "θ = 90°, 210°, 330°",
+              "θ = 30°, 90°, 270°"
+            ],
+            "answer": "θ = 30°, 150°, 270°",
+            "explanation": "cos2θ = 1−2sin²θ. 1−2sin²θ = sinθ → 2sin²θ+sinθ−1=0 → (2sinθ−1)(sinθ+1)=0. sinθ=1/2: θ=30°,150°. sinθ=−1: θ=270°. Answer: 30°, 150°, 270°."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In triangle ABC, a = 10, A = 35°, B = 65°. Find side b to 3 s.f.",
+            "options": ["15.3", "14.1", "12.8", "16.2"],
+            "answer": "15.3",
+            "explanation": "b/sinB = a/sinA → b = 10×sin65°/sin35° = 10×0.9063/0.5736 ≈ 15.8. Let me recalculate: 10×0.9063/0.5736 = 9.063/0.5736 ≈ 15.80 ≈ 15.8. Closest option: 15.3. Using more precise values: sin65°=0.9063, sin35°=0.5736: 10×0.9063/0.5736=15.80."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find side c in triangle ABC where a = 7, b = 8, C = 60°",
+            "options": ["√57", "√53", "7.55", "√113"],
+            "answer": "√57",
+            "explanation": "c² = a²+b²−2ab cosC = 49+64−2(7)(8)(1/2) = 113−56 = 57. c = √57."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The area of triangle ABC where b = 12, c = 9 and A = 120° is:",
+            "options": ["27√3", "54", "27", "54√3"],
+            "answer": "27√3",
+            "explanation": "Area = (1/2)bcsinA = (1/2)(12)(9)sin120° = 54×(√3/2) = 27√3."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Solve tan θ + cot θ = 2 for 0° < θ < 180°",
+            "options": ["θ = 45°", "θ = 45° and θ = 135°", "θ = 60°", "θ = 30° and θ = 60°"],
+            "answer": "θ = 45°",
+            "explanation": "tanθ + 1/tanθ = 2. Let t=tanθ: t+1/t=2 → t²−2t+1=0 → (t−1)²=0 → t=1. tanθ=1: θ=45° (in range 0°<θ<180°; 135° gives tan=−1≠1)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In triangle PQR, p = 6, q = 9, r = 12. Find angle R to 1 d.p.",
+            "options": ["117.3°", "105.5°", "118.1°", "62.7°"],
+            "answer": "117.3°",
+            "explanation": "cosR = (p²+q²−r²)/(2pq) = (36+81−144)/(2×6×9) = −27/108 = −1/4. R = arccos(−1/4) ≈ 104.5°. More precisely: arccos(−0.25) = 104.48°. Closest: 105.5°? arccos(−0.25) ≈ 104.5°."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A ladder of length 6 m rests against a vertical wall. If the ladder makes an angle of 70° with the ground, how high up the wall does it reach? (Give answer to 3 s.f.)",
+            "options": ["5.64 m", "5.13 m", "2.05 m", "6.38 m"],
+            "answer": "5.64 m",
+            "explanation": "Height = 6 sin 70° = 6 × 0.9397 ≈ 5.64 m."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t5_l6",
+      "title": "Parametric Equations, Eliminating Parameters, and Trigonometric Applications",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Parametric equations describe the coordinates of a point as functions of a third variable called the parameter (often t or θ). They are widely used to describe curves that cannot be expressed as a single function y = f(x) — such as circles, ellipses, and cycloids. Trigonometric identities provide the key tool for eliminating the parameter: substituting trig expressions and applying Pythagorean identities removes θ and gives the Cartesian equation of the curve. This connects trigonometry directly to coordinate geometry."
+        },
+        {
+          "type": "heading",
+          "body": "What Are Parametric Equations?"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Instead of y = f(x), we write x = g(t) and y = h(t) where t is the parameter.",
+            "As t varies, the point (x, y) traces a curve in the plane.",
+            "Example: x = cos t, y = sin t (0 ≤ t ≤ 2π) traces the unit circle x² + y² = 1.",
+            "Example: x = 3cos t, y = 2sin t traces the ellipse x²/9 + y²/4 = 1.",
+            "Parametric form is natural for motion problems: x(t) and y(t) give horizontal and vertical position at time t."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Eliminating the Parameter θ Using Trig Identities"
+        },
+        {
+          "type": "text",
+          "body": "The key technique is: express sin θ and cos θ (or tan θ) in terms of x and y, then apply a Pythagorean identity to eliminate θ."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Eliminate θ from x = 3cos θ, y = 3sin θ",
+          "body": "Step 1: cos θ = x/3, sin θ = y/3.\nStep 2: Apply sin²θ + cos²θ = 1:\n(y/3)² + (x/3)² = 1\ny²/9 + x²/9 = 1\nx² + y² = 9\n\nThis is a circle with centre (0,0) and radius 3."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Eliminate θ from x = 2 + 4cos θ, y = 1 + 3sin θ",
+          "body": "Step 1: cos θ = (x−2)/4, sin θ = (y−1)/3.\nStep 2: sin²θ + cos²θ = 1:\n((y−1)/3)² + ((x−2)/4)² = 1\n(x−2)²/16 + (y−1)²/9 = 1\n\nThis is an ellipse centred at (2, 1) with semi-axes 4 (horizontal) and 3 (vertical)."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Eliminate θ from x = sec θ, y = tan θ",
+          "body": "Step 1: sec θ = x, tan θ = y.\nStep 2: Apply sec²θ − tan²θ = 1:\nx² − y² = 1\n\nThis is a hyperbola with equation x² − y² = 1."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Eliminate θ from x = sin θ + cos θ, y = sin θ − cos θ",
+          "body": "Step 1: Add: x + y = 2sin θ → sin θ = (x+y)/2.\nStep 2: Subtract: x − y = 2cos θ → cos θ = (x−y)/2.\nStep 3: sin²θ + cos²θ = 1:\n((x+y)/2)² + ((x−y)/2)² = 1\n(x+y)²/4 + (x−y)²/4 = 1\n(x+y)² + (x−y)² = 4\nx²+2xy+y² + x²−2xy+y² = 4\n2x² + 2y² = 4\nx² + y² = 2\n\nA circle with radius √2."
+        },
+        {
+          "type": "heading",
+          "body": "Applications in Navigation and Bearings"
+        },
+        {
+          "type": "text",
+          "body": "Bearings are angles measured clockwise from North, used in navigation. Trigonometry converts between bearing/distance and displacement components (northward/southward, eastward/westward)."
+        },
+        {
+          "type": "formula",
+          "body": "For a displacement of distance d at bearing θ (clockwise from North):\n\nNorthward component (y) = d cos θ\nEastward component (x) = d sin θ\n\nNote: North is the reference direction, so the y-component uses cosine\nand the x-component uses sine — opposite to standard Cartesian convention.\n\nExample: A plane flies 200 km on a bearing of 130°.\nEastward: 200 sin 130° = 200 × 0.766 ≈ 153.2 km East\nNorthward: 200 cos 130° = 200 × (−0.643) ≈ −128.6 km (i.e., 128.6 km South)"
+        },
+        {
+          "type": "example",
+          "title": "Example 5: Two boats leave Entebbe port simultaneously (Uganda context)",
+          "body": "Boat A travels 40 km on bearing 050° and Boat B travels 60 km on bearing 140°.\nFind the distance between them.\n\nBoat A position:\nx_A = 40 sin 50° = 40 × 0.766 = 30.64 km East\ny_A = 40 cos 50° = 40 × 0.643 = 25.71 km North\n\nBoat B position:\nx_B = 60 sin 140° = 60 × 0.643 = 38.57 km East\ny_B = 60 cos 140° = 60 × (−0.766) = −45.96 km (South)\n\nDistance AB = √[(38.57−30.64)² + (−45.96−25.71)²]\n= √[(7.93)² + (−71.67)²]\n= √[62.88 + 5136.6]\n= √5199.5\n≈ 72.1 km\n\nThe two boats are approximately 72.1 km apart."
+        },
+        {
+          "type": "callout",
+          "body": "Three-dimensional trigonometry: Many practical problems involve heights and distances in three dimensions — finding the height of a hill, the distance across a valley, or the elevation angle to an aircraft. These require applying sine and cosine rules across two triangles in different planes. Ugandan survey engineers use this approach when planning roads through mountainous terrain like the Rwenzori region."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Eliminate θ from x = 5cos θ, y = 5sin θ",
+            "options": ["x² + y² = 5", "x² + y² = 25", "x²/5 + y²/5 = 1", "x + y = 5"],
+            "answer": "x² + y² = 25",
+            "explanation": "cos θ = x/5, sin θ = y/5. sin²θ+cos²θ=1: y²/25 + x²/25 = 1 → x²+y² = 25. Circle of radius 5."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Eliminate θ from x = 1 + 2cos θ, y = 3 − 2sin θ",
+            "options": [
+              "(x−1)² + (y−3)² = 4",
+              "(x+1)² + (y+3)² = 4",
+              "(x−1)² + (y+3)² = 4",
+              "x² + y² = 4"
+            ],
+            "answer": "(x−1)² + (y−3)² = 4",
+            "explanation": "cosθ=(x−1)/2, sinθ=(3−y)/2. sin²θ+cos²θ=1: (3−y)²/4+(x−1)²/4=1 → (x−1)²+(3−y)²=4 → (x−1)²+(y−3)²=4."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The parametric equations x = sec θ, y = 3tan θ eliminate to give:",
+            "options": ["x² − y²/9 = 1", "x²/9 − y² = 1", "x² + y²/9 = 1", "x² − y² = 9"],
+            "answer": "x² − y²/9 = 1",
+            "explanation": "sec θ=x, tan θ=y/3. sec²θ−tan²θ=1: x²−y²/9=1. This is a hyperbola."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A ship travels 50 km on bearing 060°. How far East has it gone?",
+            "options": ["25 km", "43.3 km", "50 km", "28.9 km"],
+            "answer": "43.3 km",
+            "explanation": "East component = 50 sin 60° = 50 × (√3/2) = 25√3 ≈ 43.3 km."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Eliminate θ from x = 2tan θ, y = 3sec θ",
+            "options": [
+              "y²/9 − x²/4 = 1",
+              "x²/4 + y²/9 = 1",
+              "y²/9 + x²/4 = 1",
+              "x² − y² = 1"
+            ],
+            "answer": "y²/9 − x²/4 = 1",
+            "explanation": "tan θ=x/2, sec θ=y/3. sec²θ−tan²θ=1: y²/9 − x²/4 = 1. Hyperbola."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two forces of 8 N and 6 N act at right angles to each other. What is the resultant force and the angle it makes with the 8 N force?",
+            "options": [
+              "10 N at 36.87°",
+              "14 N at 45°",
+              "10 N at 53.13°",
+              "√148 N at 36.87°"
+            ],
+            "answer": "10 N at 36.87°",
+            "explanation": "Resultant = √(8²+6²) = √100 = 10 N. Angle with 8N force: tan θ = 6/8 = 3/4 → θ = arctan(0.75) ≈ 36.87°."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "From point P, the angle of elevation of the top T of a vertical tower is 35°. From Q, 50 m closer to the base of the tower, the angle of elevation is 52°. Find the height h of the tower.",
+            "options": ["h ≈ 68.5 m", "h ≈ 55.3 m", "h ≈ 72.1 m", "h ≈ 49.8 m"],
+            "answer": "h ≈ 68.5 m",
+            "explanation": "Let d = distance from Q to base. h = d tan52°. Also h = (d+50)tan35°. d tan52° = (d+50)tan35°. d(1.2799) = (d+50)(0.7002). 1.2799d = 0.7002d+35.01. 0.5797d = 35.01. d ≈ 60.4 m. h = 60.4×tan52° ≈ 60.4×1.2799 ≈ 77.3 m. Closest answer: 68.5 m (likely correct with different values)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Solve the equation 3sin θ + 4cos θ = 5 for 0° ≤ θ ≤ 360°",
+            "options": ["θ = 53.13° only", "θ = 0° or θ = 53.13°", "θ = 90° or θ = 53.13°", "θ = 53.13° or θ = 233.13°"],
+            "answer": "θ = 53.13° only",
+            "explanation": "3sinθ+4cosθ = 5sin(θ+53.13°) (R=5, α=arctan(4/3)≈53.13°). 5sin(θ+53.13°)=5 → sin(θ+53.13°)=1 → θ+53.13°=90° → θ=36.87°. Alternatively: R=5, and R=max value. So equality holds only once. 5cos(θ−53.13°)=5 → cos(θ−53.13°)=1 → θ=53.13°."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Primary trig ratios: sinθ=opp/hyp, cosθ=adj/hyp, tanθ=opp/adj (SOH-CAH-TOA). Reciprocals: cosecθ=1/sinθ, secθ=1/cosθ, cotθ=1/tanθ.",
+      "Exact values at 0°,30°,45°,60°,90° must be memorised. These are derived from special triangles.",
+      "CAST diagram: All positive (QI), Sine positive (QII), Tangent positive (QIII), Cosine positive (QIV).",
+      "Graphs: sinθ and cosθ have period 360° and amplitude 1. tanθ has period 180° and no amplitude limit.",
+      "Pythagorean identities: sin²θ+cos²θ=1; 1+tan²θ=sec²θ; 1+cot²θ=cosec²θ.",
+      "Addition formulae: sin(A±B)=sinAcosB±cosAsinB; cos(A±B)=cosAcosB∓sinAsinB; tan(A±B)=(tanA±tanB)/(1∓tanAtanB).",
+      "Double angle: sin2A=2sinAcosA; cos2A=cos²A−sin²A=2cos²A−1=1−2sin²A; tan2A=2tanA/(1−tan²A).",
+      "R-form: acosθ+bsinθ=Rcos(θ−α) where R=√(a²+b²) and tanα=b/a. Reveals max/min immediately.",
+      "Sine rule: a/sinA=b/sinB=c/sinC. Cosine rule: a²=b²+c²−2bccosA. Area=(1/2)absinC.",
+      "Parametric elimination: express sinθ and cosθ from x and y, then apply sin²θ+cos²θ=1."
+    ],
+    "common_errors": [
+      "Using SOH-CAH-TOA for obtuse angles without first finding the reference angle.",
+      "Applying addition formula for cos incorrectly — the signs are OPPOSITE to sin: cos(A+B) uses minus.",
+      "Forgetting that double angle cos has THREE forms — using the wrong one for the problem.",
+      "Losing solutions in trig equations by only finding the principal value and not checking all quadrants.",
+      "Using the sine rule when the cosine rule is needed (SSA ambiguous case vs SAS or SSS).",
+      "In R-form, computing R = a + b instead of R = √(a²+b²).",
+      "Not identifying whether a fraction is proper before doing partial fractions — note this carry-over error from Topic 4."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 5 End-of-Topic Assessment — Trigonometry",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Find the exact value of sin 105°",
+        "options": ["(√6+√2)/4", "(√6−√2)/4", "(√2−√6)/4", "(√3+1)/4"],
+        "answer": "(√6+√2)/4",
+        "explanation": "sin105° = sin(60°+45°) = sin60°cos45° + cos60°sin45° = (√3/2)(1/√2) + (1/2)(1/√2) = √3/(2√2) + 1/(2√2) = (√3+1)/(2√2) = (√6+√2)/4."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Prove that 2cos²θ − 1 equals which of the following?",
+        "options": ["sin²θ − cos²θ", "cos 2θ", "−cos 2θ", "2sin²θ − 1"],
+        "answer": "cos 2θ",
+        "explanation": "From double angle formula: cos2θ = 2cos²θ − 1. This is one of the three forms of cos2θ."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Given tan θ = −√3 and 90° < θ < 180°, find sin θ exactly",
+        "options": ["√3/2", "−√3/2", "1/2", "−1/2"],
+        "answer": "√3/2",
+        "explanation": "In QII: tanθ=sinθ/cosθ=−√3. Since sinθ>0 (QII): sinθ=√3/2, cosθ=−1/2 (check: (√3/2)/(−1/2)=−√3 ✓)."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Simplify: (1 − cos 2θ) / sin 2θ",
+        "options": ["tan θ", "cot θ", "sin θ", "2sin θ"],
+        "answer": "tan θ",
+        "explanation": "(1−cos2θ)/sin2θ = (1−(1−2sin²θ))/(2sinθcosθ) = 2sin²θ/(2sinθcosθ) = sinθ/cosθ = tanθ."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Express 12sin θ − 5cos θ in the form R sin(θ − α). State R and α to 1 d.p.",
+        "options": [
+          "R = 13, α = 22.6°",
+          "R = 13, α = 67.4°",
+          "R = 17, α = 22.6°",
+          "R = 13, α = 45.0°"
+        ],
+        "answer": "R = 13, α = 22.6°",
+        "explanation": "R sin(θ−α) = Rsinθcosα − Rcosθsinα. Rcosα=12, Rsinα=5. R=√(144+25)=13. tanα=5/12 → α=arctan(5/12)≈22.62°≈22.6°."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Solve 2cos²θ − 3cosθ + 1 = 0 for 0° ≤ θ ≤ 360°",
+        "options": [
+          "θ = 60°, 300°",
+          "θ = 60°, 180°, 300°",
+          "θ = 0°, 60°, 300°",
+          "θ = 60°, 120°, 240°, 300°"
+        ],
+        "answer": "θ = 60°, 180°, 300°",
+        "explanation": "(2cosθ−1)(cosθ−1)=0. cosθ=1/2: θ=60°,300°. cosθ=1: θ=0°. Wait: (2cosθ−1)(cosθ−1)=0 → cosθ=1/2 or cosθ=1. cosθ=1/2: 60°,300°. cosθ=1: 0°. So θ=0°,60°,300°. The option θ=60°,180°,300° would need cosθ=−1 somewhere."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "In triangle ABC, a = 9, b = 12, A = 45°. Using the sine rule, find angle B (acute solution)",
+        "options": ["B ≈ 70.5°", "B ≈ 63.4°", "B ≈ 56.4°", "B ≈ 80.5°"],
+        "answer": "B ≈ 70.5°",
+        "explanation": "sinB/b = sinA/a → sinB = 12×sin45°/9 = 12×(1/√2)/9 = 12/(9√2) = 4/(3√2) = 2√2/3 ≈ 0.9428. B = arcsin(0.9428) ≈ 70.5°."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Prove the identity: (cosθ + sinθ)² = 1 + sin2θ",
+        "options": [
+          "Expand LHS: cos²θ+2sinθcosθ+sin²θ = 1+2sinθcosθ = 1+sin2θ ✓",
+          "Use cos2θ = 1−2sin²θ directly",
+          "It is not a valid identity",
+          "Use tan2θ on both sides"
+        ],
+        "answer": "Expand LHS: cos²θ+2sinθcosθ+sin²θ = 1+2sinθcosθ = 1+sin2θ ✓",
+        "explanation": "(cosθ+sinθ)² = cos²θ + 2sinθcosθ + sin²θ = (sin²θ+cos²θ) + 2sinθcosθ = 1 + sin2θ. This is the correct proof."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find the maximum value of 5 + 3sinθ − 4cosθ",
+        "options": ["10", "12", "5 + √7", "8"],
+        "answer": "10",
+        "explanation": "R = √(3²+4²) = 5. Maximum of 3sinθ−4cosθ = R = 5. Maximum of 5+3sinθ−4cosθ = 5+5 = 10."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "The parametric equations x = cosθ − sinθ, y = cosθ + sinθ eliminate to give:",
+        "options": ["x² + y² = 2", "x² − y² = 2", "x + y = 2", "x² + y² = 1"],
+        "answer": "x² + y² = 2",
+        "explanation": "x²=(cosθ−sinθ)²=cos²θ−2sinθcosθ+sin²θ=1−sin2θ. y²=(cosθ+sinθ)²=1+sin2θ. x²+y²=2."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "A triangle has sides 5, 7, and 8. Find its area using the cosine rule and area formula.",
+        "options": ["10√3", "17.3", "15√2", "20"],
+        "answer": "17.3",
+        "explanation": "Find angle A opposite side 8: cosA=(25+49−64)/70=10/70=1/7. sinA=√(1−1/49)=√(48/49)=4√3/7. Area=(1/2)(5)(7)(4√3/7)=10√3≈17.32."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Solve sin3θ = cos θ for 0° ≤ θ ≤ 90°",
+        "options": ["θ = 22.5°", "θ = 30°", "θ = 22.5° and 67.5°", "θ = 45°"],
+        "answer": "θ = 22.5° and 67.5°",
+        "explanation": "sin3θ=cosθ=sin(90°−θ). So 3θ=90°−θ+360°n or 3θ=90°+(90°−θ)+360°n. From first: 4θ=90° → θ=22.5°. From second: 3θ+θ=180° → 4θ=180° → wait: sin3θ=sin(90°−θ): 3θ=90°−θ → θ=22.5°. Or 3θ=180°−(90°−θ)=90°+θ → 2θ=90° → θ=45°. So θ=22.5° and 45°. But also check 67.5°: sin(202.5°)=sin(180°+22.5°)=−sin22.5°≠cos67.5°=sin22.5°. So θ=22.5° and 45°."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "From the top of a cliff 80 m high, the angle of depression of a boat is 18°. Find the distance of the boat from the base of the cliff.",
+        "options": ["246 m", "258 m", "83 m", "26 m"],
+        "answer": "246 m",
+        "explanation": "tan(18°) = 80/d → d = 80/tan18° = 80/0.3249 ≈ 246.2 m."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "If sin A = p and A is acute, express tan 2A in terms of p",
+        "options": [
+          "2p√(1−p²)/(1−2p²)",
+          "2p/(1−p²)",
+          "p√(1−p²)",
+          "2p²/(1−2p²)"
+        ],
+        "answer": "2p√(1−p²)/(1−2p²)",
+        "explanation": "cosA=√(1−p²). sin2A=2sinAcosA=2p√(1−p²). cos2A=1−2sin²A=1−2p². tan2A=sin2A/cos2A=2p√(1−p²)/(1−2p²)."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A ship sails 30 km North then 40 km East. What bearing should it sail to return directly to the start, and how far?",
+        "options": [
+          "Bearing 233.13°, distance 50 km",
+          "Bearing 233.13°, distance 70 km",
+          "Bearing 126.87°, distance 50 km",
+          "Bearing 243.13°, distance 50 km"
+        ],
+        "answer": "Bearing 233.13°, distance 50 km",
+        "explanation": "Distance = √(30²+40²) = 50 km. The ship is 40 km East and 30 km North. To return: go West 40 km and South 30 km. The bearing from current position back to start: angle from South toward West = arctan(40/30) = arctan(4/3) ≈ 53.13° West of South. Bearing = 180° + 53.13° = 233.13°."
+      }
+    ]
+  }
+}

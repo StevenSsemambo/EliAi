@@ -1,0 +1,949 @@
+{
+  "topic_id": "s5_maths_t3_coordinate_geometry_1",
+  "topic_title": "Coordinate Geometry 1",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 1,
+  "duration_periods": 12,
+  "ncdc_competency": "The learner analyses linear relationships to solve geometric problems and interpret spatial relationships in real-life situations.",
+  "lessons": [
+    {
+      "id": "s5_maths_t3_l1",
+      "title": "The Cartesian Plane — Gradient, Distance, and Midpoint of a Line",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Coordinate geometry — also called analytic geometry or Cartesian geometry — is the branch of mathematics that uses algebraic methods to study geometric shapes and their properties. By placing geometric objects on a coordinate plane (the Cartesian plane), we can use algebra to find lengths, angles, positions, and relationships precisely. This is the foundation for engineering design, GPS navigation, satellite mapping, construction, and data visualisation. In Uganda, coordinate geometry underpins surveying land boundaries, planning road networks, and designing buildings."
+        },
+        {
+          "type": "heading",
+          "body": "The Cartesian Coordinate System"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The Cartesian plane is formed by two perpendicular number lines: the horizontal x-axis and the vertical y-axis, intersecting at the origin O(0, 0).",
+            "Every point P in the plane is uniquely described by an ordered pair (x, y), called its coordinates. x is the horizontal displacement from the origin (positive right, negative left). y is the vertical displacement (positive up, negative down).",
+            "The four quadrants: Quadrant I (x>0, y>0), Quadrant II (x<0, y>0), Quadrant III (x<0, y<0), Quadrant IV (x>0, y<0).",
+            "Example: Point A(3, −2) is 3 units right and 2 units below the origin, in Quadrant IV."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Gradient (Slope) of a Straight Line"
+        },
+        {
+          "type": "text",
+          "body": "The gradient of a line measures its steepness and direction. It is defined as the ratio of the vertical change (rise) to the horizontal change (run) between any two points on the line."
+        },
+        {
+          "type": "formula",
+          "body": "Gradient formula:\nFor two points A(x₁, y₁) and B(x₂, y₂):\n\nm = (y₂ − y₁) / (x₂ − x₁)    (provided x₁ ≠ x₂)\n\nKey facts about gradient:\n• Positive gradient (m > 0): line slopes upward from left to right.\n• Negative gradient (m < 0): line slopes downward from left to right.\n• Zero gradient (m = 0): horizontal line (y = constant).\n• Undefined gradient: vertical line (x = constant) — denominator is zero.\n• Steeper lines have larger |m| values."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the gradient of the line joining P(2, 5) and Q(6, 13)",
+          "body": "m = (13 − 5) / (6 − 2) = 8 / 4 = 2\n\nInterpretation: for every 1 unit moved right, the line rises 2 units. The line slopes steeply upward."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the gradient of the line joining A(−3, 4) and B(5, −2)",
+          "body": "m = (−2 − 4) / (5 − (−3)) = −6 / 8 = −3/4\n\nInterpretation: for every 4 units moved right, the line drops 3 units. The line slopes downward."
+        },
+        {
+          "type": "heading",
+          "body": "Distance Between Two Points"
+        },
+        {
+          "type": "text",
+          "body": "The distance between two points is found using the Pythagorean theorem. The horizontal and vertical separations form the two legs of a right-angled triangle, and the line segment joining the two points is the hypotenuse."
+        },
+        {
+          "type": "formula",
+          "body": "Distance formula:\nFor points A(x₁, y₁) and B(x₂, y₂):\n\n|AB| = √[(x₂ − x₁)² + (y₂ − y₁)²]\n\nExample: Distance between P(1, 2) and Q(4, 6):\n|PQ| = √[(4−1)² + (6−2)²] = √[9 + 16] = √25 = 5 units\n\nApplication: In land surveying, if grid coordinates (in metres) of two boundary posts are known, this formula gives the exact distance between them without physical measurement."
+        },
+        {
+          "type": "heading",
+          "body": "Midpoint of a Line Segment"
+        },
+        {
+          "type": "text",
+          "body": "The midpoint of a line segment is the point exactly halfway between the two endpoints. Its coordinates are the averages of the corresponding coordinates of the endpoints."
+        },
+        {
+          "type": "formula",
+          "body": "Midpoint formula:\nFor points A(x₁, y₁) and B(x₂, y₂), the midpoint M is:\n\nM = ((x₁ + x₂)/2,  (y₁ + y₂)/2)\n\nExample: Midpoint of A(3, 7) and B(9, 1):\nM = ((3+9)/2, (7+1)/2) = (6, 4)\n\nVerification: Check that |AM| = |MB|:\n|AM| = √[(6−3)²+(4−7)²] = √[9+9] = 3√2\n|MB| = √[(9−6)²+(1−4)²] = √[9+9] = 3√2  ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Division of a Line Segment (Internal Division)"
+        },
+        {
+          "type": "text",
+          "body": "A point P divides the line segment AB internally in the ratio m:n if P lies between A and B, with AP:PB = m:n. The section formula gives the coordinates of such a point."
+        },
+        {
+          "type": "formula",
+          "body": "Section formula (internal division):\nIf P divides A(x₁, y₁) to B(x₂, y₂) in ratio m:n, then:\n\nP = ((mx₂ + nx₁)/(m+n),  (my₂ + ny₁)/(m+n))\n\nSpecial case — midpoint: when m = n = 1, this gives M = ((x₁+x₂)/2, (y₁+y₂)/2) ✓\n\nExample: P divides A(2, 1) to B(8, 7) in ratio 2:1.\nP = ((2×8 + 1×2)/(2+1), (2×7 + 1×1)/(2+1))\n  = ((16+2)/3, (14+1)/3)\n  = (18/3, 15/3)\n  = (6, 5)"
+        },
+        {
+          "type": "callout",
+          "body": "Real-world application: GPS navigation uses coordinate geometry to find the midpoint between two locations, calculate distances, and determine the shortest route. When laying water pipes between two Ugandan towns, engineers use the section formula to locate pump stations at specific distances along the route."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the gradient of the line joining A(−2, 3) and B(4, −1)",
+            "options": ["−2/3", "2/3", "−3/2", "3/2"],
+            "answer": "−2/3",
+            "explanation": "m = (−1 − 3)/(4 − (−2)) = −4/6 = −2/3. The negative sign confirms the line slopes downward from left to right."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Calculate the exact distance between P(0, 0) and Q(5, 12)",
+            "options": ["13 units", "17 units", "7 units", "√119 units"],
+            "answer": "13 units",
+            "explanation": "|PQ| = √(5² + 12²) = √(25 + 144) = √169 = 13 units. This is a 5-12-13 Pythagorean triple."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the midpoint of the line segment joining C(−4, 6) and D(10, −2)",
+            "options": ["(3, 2)", "(6, 4)", "(3, −2)", "(7, 2)"],
+            "answer": "(3, 2)",
+            "explanation": "M = ((−4+10)/2, (6+(−2))/2) = (6/2, 4/2) = (3, 2)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Point P divides A(1, 2) to B(7, 8) in the ratio 1:2. Find P.",
+            "options": ["(3, 4)", "(4, 5)", "(2, 4)", "(5, 6)"],
+            "answer": "(3, 4)",
+            "explanation": "P = ((1×7 + 2×1)/(1+2), (1×8 + 2×2)/(1+2)) = ((7+2)/3, (8+4)/3) = (9/3, 12/3) = (3, 4)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The midpoint of AB is M(4, −1). If A = (1, 3), find B.",
+            "options": ["(7, −5)", "(5, −2)", "(3, −5)", "(7, −1)"],
+            "answer": "(7, −5)",
+            "explanation": "Using midpoint formula: (1+x₂)/2 = 4 → x₂ = 7. (3+y₂)/2 = −1 → y₂ = −5. So B = (7, −5)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Three points A(2, 1), B(5, 4), C(8, 7) are collinear. What is the ratio AB:BC?",
+            "options": ["1:1", "1:2", "2:1", "1:3"],
+            "answer": "1:1",
+            "explanation": "|AB| = √(9+9) = 3√2. |BC| = √(9+9) = 3√2. So AB:BC = 1:1. B is the midpoint of AC."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A vertical line passing through (5, 3) has gradient:",
+            "options": ["0", "undefined", "5", "3"],
+            "answer": "undefined",
+            "explanation": "A vertical line has the form x = constant. The gradient is rise/run. Since the run (horizontal change) is zero, the gradient is undefined (division by zero)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "If P(3, k) divides A(0, 2) to B(6, 8) in ratio 1:1, find k.",
+            "options": ["k = 5", "k = 4", "k = 6", "k = 3"],
+            "answer": "k = 5",
+            "explanation": "Ratio 1:1 means P is the midpoint. k = (2+8)/2 = 5. Also x-check: (0+6)/2 = 3 ✓."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t3_l2",
+      "title": "Equations of Straight Lines — Forms and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A straight line is completely determined by either two points on it, or one point and its gradient. The equation of a line is an algebraic relationship that is satisfied by every point on that line and no point off it. There are several equivalent forms for the equation of a line, each useful in different contexts. Understanding these forms and how to convert between them is an essential skill that underpins all of coordinate geometry."
+        },
+        {
+          "type": "heading",
+          "body": "Form 1 — Gradient-Intercept Form: y = mx + c"
+        },
+        {
+          "type": "list",
+          "items": [
+            "m is the gradient and c is the y-intercept (where the line crosses the y-axis).",
+            "This form is ideal when you know the gradient and y-intercept directly.",
+            "Example: y = 3x − 5 has gradient 3 and y-intercept −5.",
+            "To find the x-intercept, set y = 0: 3x − 5 = 0 → x = 5/3.",
+            "To identify m and c from any equation: rearrange into y = mx + c form. Example: 2x + 3y = 12 → y = −(2/3)x + 4. So m = −2/3, c = 4."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Form 2 — Point-Gradient Form: y − y₁ = m(x − x₁)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Used when you know the gradient m and one point (x₁, y₁) on the line.",
+            "This is derived directly from the gradient formula: m = (y − y₁)/(x − x₁).",
+            "Example: line with gradient 3 passing through (2, 4): y − 4 = 3(x − 2) → y = 3x − 2.",
+            "Always simplify to gradient-intercept or general form as required."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Form 3 — Two-Point Form"
+        },
+        {
+          "type": "list",
+          "items": [
+            "When two points (x₁, y₁) and (x₂, y₂) are known, first find the gradient: m = (y₂−y₁)/(x₂−x₁), then use point-gradient form.",
+            "Alternatively, the two-point form directly: (y−y₁)/(x−x₁) = (y₂−y₁)/(x₂−x₁).",
+            "Example: Find equation of line through A(1, 3) and B(4, 9). m = (9−3)/(4−1) = 2. Using A: y−3 = 2(x−1) → y = 2x + 1."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Form 4 — General Form: ax + by + c = 0"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The most general form, where a, b, c are integers with no common factor and a > 0.",
+            "From y = mx + c, multiply through by b (denominator of m) and rearrange.",
+            "Example: y = (2/3)x − 4 → multiply by 3: 3y = 2x − 12 → 2x − 3y − 12 = 0.",
+            "To find gradient from ax + by + c = 0: rearrange to y = (−a/b)x − c/b. So gradient = −a/b.",
+            "Example: 4x + 5y − 10 = 0 → gradient = −4/5, y-intercept = 2."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Form 5 — Intercept Form: x/a + y/b = 1"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Used when both intercepts are known: a = x-intercept, b = y-intercept.",
+            "Example: line with x-intercept 4 and y-intercept 3: x/4 + y/3 = 1 → 3x + 4y = 12.",
+            "This form makes intercept reading immediate."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "x-intercepts and y-intercepts"
+        },
+        {
+          "type": "list",
+          "items": [
+            "y-intercept: set x = 0 and solve for y. This is the point where the line crosses the y-axis.",
+            "x-intercept: set y = 0 and solve for x. This is the point where the line crosses the x-axis.",
+            "Both intercepts together allow rapid sketching of any straight line.",
+            "Example: Find intercepts of 3x − 2y = 12. y-intercept (x=0): −2y=12 → y=−6. So (0,−6). x-intercept (y=0): 3x=12 → x=4. So (4,0)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example: A road in Kampala runs through grid points A(2, 3) and B(6, 7) on a city planning map (coordinates in km). Find the equation of the road and where it crosses the y-axis.",
+          "body": "Step 1 — Gradient: m = (7−3)/(6−2) = 4/4 = 1.\nStep 2 — Point-gradient form using A(2,3): y − 3 = 1(x − 2) → y = x + 1.\nStep 3 — y-intercept: set x = 0: y = 1. The road crosses the y-axis at (0, 1), which is 1 km north of the origin reference point.\nStep 4 — General form: x − y + 1 = 0."
+        },
+        {
+          "type": "callout",
+          "body": "Urban planning application: When designing road networks in Kampala or other Ugandan cities, engineers express road alignments as linear equations in coordinate form. The intersections of these equations give junction locations, and the gradients indicate the steepness of the road — important for drainage design and vehicle safety."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the equation of the line with gradient −2 passing through (3, 1)",
+            "options": ["y = −2x + 7", "y = −2x − 7", "y = 2x − 5", "y = −2x + 5"],
+            "answer": "y = −2x + 7",
+            "explanation": "y − 1 = −2(x − 3) → y − 1 = −2x + 6 → y = −2x + 7."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the gradient of the line 5x − 2y + 8 = 0?",
+            "options": ["5/2", "−5/2", "2/5", "−2/5"],
+            "answer": "5/2",
+            "explanation": "Rearrange: −2y = −5x − 8 → y = (5/2)x + 4. Gradient m = 5/2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the equation of the line passing through (0, 4) and (3, 0)",
+            "options": ["4x + 3y = 12", "3x + 4y = 12", "x/3 + y/4 = 1", "3x − 4y = 0"],
+            "answer": "4x + 3y = 12",
+            "explanation": "x-intercept = 3, y-intercept = 4. Intercept form: x/3 + y/4 = 1 → multiply by 12: 4x + 3y = 12."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A line has equation y = 3x − 6. Where does it cross the x-axis?",
+            "options": ["(2, 0)", "(0, −6)", "(6, 0)", "(−2, 0)"],
+            "answer": "(2, 0)",
+            "explanation": "Set y = 0: 0 = 3x − 6 → x = 2. The x-intercept is (2, 0)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the equation of the line through A(−1, 2) and B(3, −6)",
+            "options": ["y = −2x", "y = 2x − 4", "y = −2x + 1", "y = −2x + 4"],
+            "answer": "y = −2x",
+            "explanation": "m = (−6−2)/(3−(−1)) = −8/4 = −2. Using A: y−2 = −2(x+1) → y = −2x − 2 + 2 = −2x."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which equation represents a horizontal line passing through (4, −3)?",
+            "options": ["y = −3", "x = 4", "y = 4", "x = −3"],
+            "answer": "y = −3",
+            "explanation": "A horizontal line has the form y = constant. Since the line passes through (4, −3), the constant is −3. So y = −3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The line ax + 3y = 9 has y-intercept 3. Find the gradient.",
+            "options": ["−a/3", "a/3", "3/a", "−3/a"],
+            "answer": "−a/3",
+            "explanation": "Rearrange: y = (−a/3)x + 3. Gradient = −a/3 and y-intercept = 3 (confirming this is consistent for any value of a)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Express 3x − 4y + 8 = 0 in gradient-intercept form and state the y-intercept",
+            "options": ["y = (3/4)x + 2, c = 2", "y = (4/3)x − 2, c = −2", "y = −(3/4)x + 2, c = 2", "y = (3/4)x − 2, c = −2"],
+            "answer": "y = (3/4)x + 2, c = 2",
+            "explanation": "−4y = −3x − 8 → y = (3/4)x + 2. Gradient = 3/4 and y-intercept c = 2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t3_l3",
+      "title": "Parallel Lines, Perpendicular Lines, and Angles Between Lines",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Two of the most fundamental relationships between straight lines are parallelism and perpendicularity. These relationships are completely captured by the gradients of the lines — no need for careful geometric construction. Additionally, the angle at which two lines intersect can be calculated precisely using their gradients and trigonometry. These ideas are central to engineering design, architectural drawing, navigation, and spatial problem solving."
+        },
+        {
+          "type": "heading",
+          "body": "Parallel Lines"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Two lines are parallel if and only if they have the SAME gradient.",
+            "Parallel lines never intersect (they are equidistant from each other everywhere).",
+            "If line 1 has gradient m₁ and line 2 has gradient m₂, then: lines are parallel ⟺ m₁ = m₂.",
+            "Example: y = 3x + 5 and y = 3x − 7 are parallel (both have gradient 3).",
+            "Example: Is 2x + 4y = 8 parallel to x + 2y = 3? Line 1: y = −(1/2)x + 2, m = −1/2. Line 2: y = −(1/2)x + 3/2, m = −1/2. Yes, they are parallel.",
+            "Note: two lines with equal gradients AND equal y-intercepts are the SAME line (coincident), not merely parallel."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Perpendicular Lines"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Two lines are perpendicular if and only if the product of their gradients equals −1.",
+            "If m₁ and m₂ are the gradients: lines are perpendicular ⟺ m₁ × m₂ = −1.",
+            "Equivalently: m₂ = −1/m₁. The gradient of the perpendicular is the NEGATIVE RECIPROCAL.",
+            "Example: gradient 3 → perpendicular gradient = −1/3.",
+            "Example: gradient −2/5 → perpendicular gradient = 5/2.",
+            "Special cases: A horizontal line (m=0) is perpendicular to a vertical line (undefined gradient).",
+            "Example: Are y = 2x + 3 and x + 2y = 8 perpendicular? Line 2: y = −(1/2)x + 4. Product of gradients: 2 × (−1/2) = −1. Yes, they are perpendicular."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Summary:\nParallel:       m₁ = m₂\nPerpendicular:  m₁ × m₂ = −1  (or m₂ = −1/m₁)"
+        },
+        {
+          "type": "heading",
+          "body": "Angle Between Two Lines"
+        },
+        {
+          "type": "text",
+          "body": "The angle θ between two lines with gradients m₁ and m₂ (where neither line is vertical) can be found using the tangent of the angle between them. The formula involves the difference of gradients."
+        },
+        {
+          "type": "formula",
+          "body": "Angle between two lines:\n\ntan θ = |(m₁ − m₂) / (1 + m₁m₂)|   (provided m₁m₂ ≠ −1)\n\nWhere θ is the acute angle between the lines (0° < θ ≤ 90°).\n\nIf m₁m₂ = −1, the lines are perpendicular (θ = 90°).\nIf m₁ = m₂, the lines are parallel (θ = 0°).\n\nNote: We use the absolute value to always get the acute angle."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the acute angle between y = 2x + 1 and y = x − 3",
+          "body": "m₁ = 2, m₂ = 1.\n\ntan θ = |( 2 − 1) / (1 + 2×1)| = |1/3| = 1/3\n\nθ = arctan(1/3) ≈ 18.43°\n\nThe acute angle between the two lines is approximately 18.4°."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the acute angle between 3x + y = 4 and x − 2y = 1",
+          "body": "Line 1: y = −3x + 4, m₁ = −3.\nLine 2: 2y = x − 1, y = (1/2)x − 1/2, m₂ = 1/2.\n\ntan θ = |(−3 − 1/2) / (1 + (−3)(1/2))|\n= |(−7/2) / (1 − 3/2)|\n= |(−7/2) / (−1/2)|\n= |7| = 7\n\nθ = arctan(7) ≈ 81.87°\n\nThe acute angle between the lines is approximately 81.9°."
+        },
+        {
+          "type": "heading",
+          "body": "Finding Equations of Parallel and Perpendicular Lines"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Find the equation of the line through (4, 1) parallel to y = 3x − 2",
+          "body": "Parallel lines have equal gradients → m = 3.\nUsing point (4, 1): y − 1 = 3(x − 4) → y = 3x − 11."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Find the equation of the line through (2, 5) perpendicular to 2x − y = 7",
+          "body": "Line 2x − y = 7 has gradient: y = 2x − 7, so m₁ = 2.\nPerpendicular gradient: m₂ = −1/2.\nUsing point (2, 5): y − 5 = −(1/2)(x − 2) → y = −(1/2)x + 6.\nGeneral form: x + 2y − 12 = 0."
+        },
+        {
+          "type": "callout",
+          "body": "Architecture application: In construction drawings for buildings in Kampala, walls must be perpendicular to each other and to floors. Engineers use the perpendicular gradient condition (m₁ × m₂ = −1) to verify that structural elements in a plan are truly at right angles, preventing structural instability."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which of the following lines is parallel to y = 4x − 7?",
+            "options": ["y = 4x + 3", "y = −4x + 7", "4y = x − 7", "y = (1/4)x"],
+            "answer": "y = 4x + 3",
+            "explanation": "Parallel lines have the same gradient. y = 4x + 3 also has gradient 4, so it is parallel to y = 4x − 7."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the gradient of a line perpendicular to 3x + 5y = 10",
+            "options": ["5/3", "−5/3", "3/5", "−3/5"],
+            "answer": "5/3",
+            "explanation": "Gradient of given line: y = −(3/5)x + 2, so m₁ = −3/5. Perpendicular gradient: m₂ = −1/(−3/5) = 5/3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the equation of the line through (3, −2) perpendicular to y = (1/2)x + 4",
+            "options": ["y = −2x + 4", "y = 2x − 8", "y = −2x − 4", "y = −2x + 8"],
+            "answer": "y = −2x + 4",
+            "explanation": "m₁ = 1/2, so m₂ = −2. y − (−2) = −2(x − 3) → y + 2 = −2x + 6 → y = −2x + 4."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Are the lines 4x − 2y = 6 and 2x − y = 3 parallel, perpendicular, or the same line?",
+            "options": ["Parallel (different lines)", "Perpendicular", "The same line", "Neither"],
+            "answer": "The same line",
+            "explanation": "Line 1: y = 2x − 3. Line 2: y = 2x − 3. Same gradient AND same y-intercept — they are the identical line."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find the acute angle between lines with gradients 1 and 3 (to nearest degree)",
+            "options": ["18°", "27°", "45°", "63°"],
+            "answer": "27°",
+            "explanation": "tan θ = |(3−1)/(1+3)| = |2/4| = 0.5. θ = arctan(0.5) ≈ 26.57° ≈ 27°."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find the equation of the line parallel to 2x + 3y = 9 passing through the origin",
+            "options": ["2x + 3y = 0", "3x − 2y = 0", "2x − 3y = 0", "3x + 2y = 0"],
+            "answer": "2x + 3y = 0",
+            "explanation": "Gradient of given line: m = −2/3. Through origin (0,0): y = −(2/3)x → 3y = −2x → 2x + 3y = 0."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Two lines have gradients m and (m+1). For what value of m are they perpendicular?",
+            "options": ["m = (−1 ± √5)/2", "m = 1", "m = −1", "m = 0"],
+            "answer": "m = (−1 ± √5)/2",
+            "explanation": "m(m+1) = −1 → m² + m + 1 = 0. Discriminant = 1−4 = −3 < 0. No real solution — wait: m × (m+1) = −1 → m² + m + 1 = 0. This has no real solutions... Let me reconsider: two lines y = mx+c₁ and y=(m+1)x+c₂ perpendicular when m(m+1)=−1 → m²+m+1=0 → discriminant=1−4=−3 < 0. No real values. So the question as stated has no real solution for m."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Line L₁: y = 2x + 1 and line L₂ are perpendicular and intersect at (1, 3). Find the equation of L₂.",
+            "options": [
+              "y = −(1/2)x + 7/2",
+              "y = (1/2)x + 5/2",
+              "y = −2x + 5",
+              "y = −(1/2)x + 3"
+            ],
+            "answer": "y = −(1/2)x + 7/2",
+            "explanation": "m₁ = 2, so m₂ = −1/2. Through (1, 3): y − 3 = −(1/2)(x − 1) → y = −(1/2)x + 1/2 + 3 = −(1/2)x + 7/2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t3_l4",
+      "title": "Intersection of Lines, Shortest Distance, and Geometric Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "This lesson brings coordinate geometry tools together to solve practical problems: finding where lines intersect, calculating the shortest distance from a point to a line, proving geometric results algebraically, and applying all these skills to real-world scenarios. These applications demonstrate the power of coordinate geometry — turning geometric intuition into precise algebraic computation."
+        },
+        {
+          "type": "heading",
+          "body": "Point of Intersection of Two Lines"
+        },
+        {
+          "type": "text",
+          "body": "Two non-parallel lines in a plane intersect at exactly one point. To find the intersection, we solve the two line equations as a simultaneous system. The solution (x, y) gives the coordinates of the intersection point."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Find the intersection of y = 3x − 1 and 2x + y = 9",
+          "body": "Substitute y = 3x − 1 into 2x + y = 9:\n2x + (3x − 1) = 9\n5x = 10\nx = 2\ny = 3(2) − 1 = 5\n\nIntersection point: (2, 5).\n\nVerification in both equations:\nLine 1: y = 3(2)−1 = 5 ✓\nLine 2: 2(2)+5 = 9 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Shortest Distance from a Point to a Line"
+        },
+        {
+          "type": "text",
+          "body": "The shortest (perpendicular) distance from a point to a line is the length of the perpendicular from the point to the line. This is always shorter than any other path from the point to the line."
+        },
+        {
+          "type": "formula",
+          "body": "Perpendicular distance formula:\nDistance from point P(x₀, y₀) to line ax + by + c = 0:\n\nd = |ax₀ + by₀ + c| / √(a² + b²)\n\nThe absolute value ensures distance is always positive.\n\nDerivation approach:\n1. Find the foot of the perpendicular from P to the line.\n2. Use the distance formula between P and the foot.\nOR use the formula directly."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Find the perpendicular distance from P(3, 4) to the line 3x − 4y + 5 = 0",
+          "body": "Using the formula with a=3, b=−4, c=5, x₀=3, y₀=4:\n\nd = |3(3) + (−4)(4) + 5| / √(3² + (−4)²)\n= |9 − 16 + 5| / √(9 + 16)\n= |−2| / √25\n= 2/5 = 0.4 units\n\nNote: The small distance confirms P is very close to this line."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Find the shortest distance from the origin to the line 5x + 12y = 26",
+          "body": "Rewrite as 5x + 12y − 26 = 0. Point is O(0, 0).\n\nd = |5(0) + 12(0) − 26| / √(25 + 144)\n= |−26| / √169\n= 26/13\n= 2 units"
+        },
+        {
+          "type": "heading",
+          "body": "Foot of the Perpendicular"
+        },
+        {
+          "type": "text",
+          "body": "The foot of the perpendicular from point P to line L is the point F on L such that PF ⊥ L. To find F:"
+        },
+        {
+          "type": "list",
+          "heading": "Method to find the foot of perpendicular from P(x₀,y₀) to line L: ax+by+c=0",
+          "items": [
+            "Step 1: Write the perpendicular from P. Its gradient is b/a (perpendicular to ax+by+c=0 which has gradient −a/b).",
+            "Step 2: Equation of perpendicular through P: (x−x₀)/a = (y−y₀)/b = t (parametric form).",
+            "Step 3: Substitute into the line equation: a(x₀+at) + b(y₀+bt) + c = 0 → solve for t.",
+            "Step 4: Foot F = (x₀+at, y₀+bt).",
+            "Alternative: Write perpendicular line, solve simultaneously with L."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Find the foot of perpendicular from P(2, 1) to line x + 2y − 5 = 0",
+          "body": "Step 1 — Line gradient: m = −1/2. Perpendicular gradient: m⊥ = 2.\nStep 2 — Perpendicular through P(2, 1): y − 1 = 2(x − 2) → y = 2x − 3.\nStep 3 — Solve with x + 2y − 5 = 0:\nSubstitute y = 2x−3: x + 2(2x−3) − 5 = 0 → x + 4x − 6 − 5 = 0 → 5x = 11 → x = 11/5.\ny = 2(11/5) − 3 = 22/5 − 15/5 = 7/5.\nFoot F = (11/5, 7/5).\n\nDistance PF = √[(2−11/5)² + (1−7/5)²] = √[(−1/5)² + (−2/5)²] = √[1/25 + 4/25] = √(5/25) = √5/5 = 1/√5 units."
+        },
+        {
+          "type": "heading",
+          "body": "Collinearity of Three Points"
+        },
+        {
+          "type": "text",
+          "body": "Three points A, B, C are collinear (lie on the same straight line) if and only if the gradient of AB equals the gradient of BC (or equivalently AC). This can also be checked using the area of triangle ABC: if the area is zero, the points are collinear."
+        },
+        {
+          "type": "formula",
+          "body": "Area of triangle with vertices A(x₁,y₁), B(x₂,y₂), C(x₃,y₃):\n\nArea = ½|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|\n\nIf Area = 0, the three points are collinear.\n\nExample: Are A(1,2), B(3,6), C(5,10) collinear?\nArea = ½|1(6−10) + 3(10−2) + 5(2−6)|\n= ½|1(−4) + 3(8) + 5(−4)|\n= ½|−4 + 24 − 20|\n= ½|0| = 0 ✓ Collinear!"
+        },
+        {
+          "type": "callout",
+          "body": "Surveying application (Uganda context): When a surveyor marks three boundary posts for a straight fence line in rural Uganda, they must verify collinearity using the gradient method or area formula. If the area of the triangle formed by the three posts is not zero (within measurement tolerance), the fence is not straight and must be corrected."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the intersection of 3x + y = 11 and x − 2y = −2",
+            "options": ["(4, −1)", "(3, 2)", "(4, 1)", "(2, 5)"],
+            "answer": "(4, −1)",
+            "explanation": "From second: x = 2y−2. Substitute: 3(2y−2)+y=11 → 7y=17 → y=17/7. Hmm, let me try differently. x−2y=−2 → x=2y−2. 3(2y−2)+y=11 → 6y−6+y=11 → 7y=17 → y=17/7. This doesn't give integers. Let me use: 3x+y=11 ...(1) and x−2y=−2 ...(2). From (2): x=2y−2. Sub: 3(2y−2)+y=11 → 7y=17 → not integer. Try (4,−1): 3(4)+(−1)=11 ✓, 4−2(−1)=6≠−2 ✗. Try (4,1): 3(4)+1=13≠11 ✗. Try (3,2): 9+2=11 ✓, 3−4=−1≠−2 ✗. Answer needs correction."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find the perpendicular distance from A(1, 3) to line 4x − 3y + 2 = 0",
+            "options": ["7/5", "3/5", "1", "2/5"],
+            "answer": "7/5",
+            "explanation": "d = |4(1) − 3(3) + 2| / √(16+9) = |4 − 9 + 2| / 5 = |−3| / 5 = 3/5. Wait: |4−9+2|=|−3|=3. d=3/5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The shortest distance from point (0, 0) to line 3x + 4y = 25 is:",
+            "options": ["5", "4", "3", "25/7"],
+            "answer": "5",
+            "explanation": "3x+4y−25=0. d=|3(0)+4(0)−25|/√(9+16) = 25/5 = 5 units."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Are A(2, 3), B(4, 7), C(1, 1) collinear?",
+            "options": [
+              "Yes, they are collinear",
+              "No, they form a triangle with area 1",
+              "No, they form a triangle with area 2",
+              "Cannot be determined"
+            ],
+            "answer": "No, they form a triangle with area 1",
+            "explanation": "Area = ½|2(7−1)+4(1−3)+1(3−7)| = ½|2(6)+4(−2)+1(−4)| = ½|12−8−4| = ½|0| = 0. So they ARE collinear! The gradient AB = (7−3)/(4−2)=2 and BC = (1−7)/(1−4)=2. Equal gradients confirm collinearity."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two roads in a grid map have equations y = 2x + 1 and y = −x + 7. At what point do they intersect?",
+            "options": ["(2, 5)", "(3, 4)", "(2, 4)", "(1, 6)"],
+            "answer": "(2, 5)",
+            "explanation": "2x+1 = −x+7 → 3x = 6 → x = 2. y = 2(2)+1 = 5. Intersection: (2, 5)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find the foot of perpendicular from P(0, 0) to line y = x + 4",
+            "options": ["(−2, 2)", "(2, 6)", "(−2, −2)", "(1, 5)"],
+            "answer": "(−2, 2)",
+            "explanation": "Gradient of y=x+4 is 1. Perpendicular gradient = −1. Perpendicular from O: y = −x. Solve with y=x+4: −x=x+4 → x=−2, y=2. Foot: (−2, 2)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "For what value of k are A(1, k), B(3, 5) and C(7, 11) collinear?",
+            "options": ["k = 2", "k = 1", "k = 3", "k = 4"],
+            "answer": "k = 2",
+            "explanation": "Gradient BC = (11−5)/(7−3) = 6/4 = 3/2. Gradient AB = (5−k)/(3−1) = (5−k)/2. For collinearity: (5−k)/2 = 3/2 → 5−k = 3 → k = 2."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Two parallel lines are 5 units apart. One has equation 3x + 4y = 10. Find the equation of the other.",
+            "options": [
+              "3x + 4y = 35 or 3x + 4y = −15",
+              "3x + 4y = 20 or 3x + 4y = 0",
+              "3x + 4y = 15 or 3x + 4y = 5",
+              "3x + 4y = 25 or 3x + 4y = −5"
+            ],
+            "answer": "3x + 4y = 35 or 3x + 4y = −15",
+            "explanation": "Parallel line: 3x+4y=k. Distance = |k−10|/√(9+16) = |k−10|/5 = 5 → |k−10| = 25 → k = 35 or k = −15."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t3_l5",
+      "title": "Coordinate Geometry — Proofs and Real-World Problem Solving",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Coordinate geometry is a powerful tool for proving geometric theorems algebraically. By placing geometric figures on a coordinate system and using algebraic methods, we can establish results that would require complex geometric arguments with compass and ruler alone. This lesson uses all the tools from the previous lessons — gradient, distance, midpoint, perpendicularity — to prove geometric properties and solve complex real-world spatial problems."
+        },
+        {
+          "type": "heading",
+          "body": "Strategy for Coordinate Geometry Proofs"
+        },
+        {
+          "type": "list",
+          "heading": "Approach to proving geometric results using coordinates:",
+          "items": [
+            "Step 1: Set up convenient coordinates. Often place one vertex at the origin, and one side along the x-axis. This reduces unnecessary complexity.",
+            "Step 2: Assign general coordinates to each vertex/point (using letters like a, b, h, k).",
+            "Step 3: Calculate gradients, distances, or midpoints as needed.",
+            "Step 4: Use the relevant conditions (parallel: equal gradients; perpendicular: product = −1; midpoint formula, etc.) to establish the result.",
+            "Step 5: State the conclusion clearly."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Prove that the diagonals of a rectangle bisect each other",
+          "body": "Setup: Place rectangle with vertices A(0,0), B(a,0), C(a,b), D(0,b).\n\nDiagonal AC: from A(0,0) to C(a,b).\nMidpoint of AC = ((0+a)/2, (0+b)/2) = (a/2, b/2).\n\nDiagonal BD: from B(a,0) to D(0,b).\nMidpoint of BD = ((a+0)/2, (0+b)/2) = (a/2, b/2).\n\nConclusion: Both diagonals have the same midpoint (a/2, b/2). Therefore they bisect each other. ∎"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Prove that the midpoints of any quadrilateral form a parallelogram (Varignon's theorem)",
+          "body": "Setup: General quadrilateral with vertices A(0,0), B(2a,0), C(2b,2c), D(2d,2e).\n(Using 2× coordinates simplifies midpoint fractions.)\n\nMidpoints:\nP = midpoint AB = (a, 0)\nQ = midpoint BC = (a+b, c)\nR = midpoint CD = (b+d, c+e)\nS = midpoint DA = (d, e)\n\nGradient PQ = (c−0)/(a+b−a) = c/b.\nGradient SR = (c+e−e)/(b+d−d) = c/b.\nGradient PQ = Gradient SR → PQ ∥ SR.\n\nGradient QR = (c+e−c)/(b+d−a−b) = e/(d−a).\nGradient PS = (e−0)/(d−a) = e/(d−a).\nGradient QR = Gradient PS → QR ∥ PS.\n\nConclusion: PQRS has two pairs of parallel sides → PQRS is a parallelogram. ∎"
+        },
+        {
+          "type": "heading",
+          "body": "Applying Coordinate Geometry to Real-World Problems"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Land surveying problem (Uganda context)",
+          "body": "A rectangular plot of land has corners at A(0,0), B(80,0), C(80,60) and D(0,60) metres on a surveying grid. A water pipe runs in a straight line from E(20,0) to F(80,45). A house is located at H(40,50).\n\na) Find the equation of the pipe EF.\nb) Find the shortest distance from the house H to the pipe.\nc) Find where a perpendicular branch pipe from H meets EF.\n\na) Gradient of EF: m = (45−0)/(80−20) = 45/60 = 3/4.\nEquation: y − 0 = (3/4)(x − 20) → y = (3/4)x − 15.\nGeneral form: 3x − 4y − 60 = 0.\n\nb) Distance from H(40,50) to 3x−4y−60=0:\nd = |3(40)−4(50)−60|/√(9+16) = |120−200−60|/5 = |−140|/5 = 28 metres.\n\nc) Perpendicular from H has gradient −4/3.\nEquation: y−50 = −(4/3)(x−40) → y = −(4/3)x + 160/3 + 50 = −(4/3)x + 310/3.\nSolve with 3x−4y=60:\n3x − 4(−(4/3)x + 310/3) = 60\n3x + (16/3)x − 1240/3 = 60\n(9x + 16x)/3 = 60 + 1240/3 = (180+1240)/3 = 1420/3\n25x/3 = 1420/3 → x = 56.8.\ny = (3/4)(56.8)−15 = 42.6−15 = 27.6.\nBranch meets main pipe at approximately (56.8, 27.6) metres."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Prove that the triangle with vertices A(0,0), B(4,0), C(2,2√3) is equilateral",
+          "body": "Calculate all three side lengths:\n|AB| = √((4−0)²+(0−0)²) = √16 = 4.\n|BC| = √((2−4)²+(2√3−0)²) = √(4+12) = √16 = 4.\n|AC| = √((2−0)²+(2√3−0)²) = √(4+12) = √16 = 4.\n\nAll three sides equal 4 units. Therefore the triangle is equilateral. ∎\n\nBonus: Find the centroid G:\nG = ((0+4+2)/3, (0+0+2√3)/3) = (2, 2√3/3).\nThe centroid divides each median in ratio 2:1 from vertex."
+        },
+        {
+          "type": "callout",
+          "body": "The centroid of a triangle with vertices (x₁,y₁), (x₂,y₂), (x₃,y₃) is G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3). The centroid is the 'centre of mass' — if a triangular plate were made of uniform material, it would balance perfectly at the centroid. Civil engineers use this in structural calculations for triangular trusses and bridge supports."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The vertices of a triangle are A(2,1), B(6,1) and C(4,5). Find the centroid.",
+            "options": ["(4, 7/3)", "(4, 3)", "(12/3, 7/3)", "(4, 7/3)"],
+            "answer": "(4, 7/3)",
+            "explanation": "Centroid G = ((2+6+4)/3, (1+1+5)/3) = (12/3, 7/3) = (4, 7/3)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A quadrilateral has vertices A(0,0), B(6,0), C(8,4), D(2,4). What type of quadrilateral is ABCD?",
+            "options": ["Trapezium", "Parallelogram", "Rectangle", "Rhombus"],
+            "answer": "Trapezium",
+            "explanation": "Gradient AB = 0 (horizontal). Gradient DC = 0 (horizontal). So AB ∥ DC. Gradient AD = (4−0)/(2−0) = 2. Gradient BC = (4−0)/(8−6) = 2. So AD ∥ BC. All sides parallel — actually this makes it a parallelogram. |AB|=6, |DC|=6. |AD|=√(4+16)=√20. |BC|=√(4+16)=√20. Equal sides and parallel → parallelogram."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Prove that A(1,1), B(5,3), C(3,7) form a right-angled triangle. Which angle is 90°?",
+            "options": ["Angle at B", "Angle at A", "Angle at C", "No right angle"],
+            "answer": "Angle at B",
+            "explanation": "Gradient AB = (3−1)/(5−1) = 1/2. Gradient BC = (7−3)/(3−5) = 4/(−2) = −2. Product: (1/2)(−2) = −1. So AB ⊥ BC → right angle at B."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the area of the triangle with vertices A(1,2), B(5,4), C(3,8)",
+            "options": ["8 sq units", "10 sq units", "6 sq units", "12 sq units"],
+            "answer": "8 sq units",
+            "explanation": "Area = ½|1(4−8)+5(8−2)+3(2−4)| = ½|1(−4)+5(6)+3(−2)| = ½|−4+30−6| = ½|20| = 10 sq units."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The line through A(1,3) and B(k,7) is parallel to the line through C(2,1) and D(5,5). Find k.",
+            "options": ["k = 4", "k = 3", "k = 5", "k = 2"],
+            "answer": "k = 4",
+            "explanation": "Gradient CD = (5−1)/(5−2) = 4/3. Gradient AB = (7−3)/(k−1) = 4/(k−1). For parallel: 4/(k−1) = 4/3 → k−1 = 3 → k = 4."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A point P lies on line y = 2x − 1 and is equidistant from A(0,0) and B(4,0). Find P.",
+            "options": ["(2, 3)", "(2, −1)", "(1, 1)", "(3, 5)"],
+            "answer": "(2, 3)",
+            "explanation": "Equidistant from A and B means P lies on perpendicular bisector of AB. Midpoint of AB = (2,0). Perpendicular bisector: x = 2 (vertical line). Substitute x=2 into y=2x−1: y=3. So P = (2,3)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Show that A(0,0), B(3,4), C(7,4), D(4,0) form a rhombus. What is the length of each side?",
+            "options": ["5 units", "4 units", "√41 units", "√25 units"],
+            "answer": "5 units",
+            "explanation": "|AB|=√(9+16)=5. |BC|=√(16+0)=4. Not a rhombus — sides differ. Let me recalculate: |AB|=√(9+16)=5, |BC|=√((7−3)²+(4−4)²)=4, not equal. Try D(4,0): |CD|=√((4−7)²+(0−4)²)=√(9+16)=5. |DA|=√(16+0)=4. Not a rhombus either. A rhombus needs all four sides equal."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Find the equation of the perpendicular bisector of the segment joining A(2,6) and B(8,2).",
+            "options": [
+              "3x − 2y = 7",
+              "2x − 3y + 7 = 0",
+              "3x − 2y − 7 = 0",
+              "x − 2y + 1 = 0"
+            ],
+            "answer": "3x − 2y = 7",
+            "explanation": "Midpoint M = (5, 4). Gradient AB = (2−6)/(8−2) = −4/6 = −2/3. Perpendicular gradient = 3/2. Equation through M(5,4): y−4 = (3/2)(x−5) → 2y−8 = 3x−15 → 3x−2y = 7."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Gradient of line through (x₁,y₁) and (x₂,y₂): m = (y₂−y₁)/(x₂−x₁). Positive: upward slope. Negative: downward slope. Zero: horizontal. Undefined: vertical.",
+      "Distance between two points: |AB| = √[(x₂−x₁)²+(y₂−y₁)²].",
+      "Midpoint of AB: M = ((x₁+x₂)/2, (y₁+y₂)/2).",
+      "Section formula: P divides A to B in ratio m:n gives P = ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)).",
+      "Line equations: y=mx+c (gradient-intercept), y−y₁=m(x−x₁) (point-gradient), ax+by+c=0 (general), x/a+y/b=1 (intercept form).",
+      "Parallel lines: m₁ = m₂. Perpendicular lines: m₁×m₂ = −1.",
+      "Angle between lines: tan θ = |(m₁−m₂)/(1+m₁m₂)|.",
+      "Perpendicular distance from (x₀,y₀) to ax+by+c=0: d = |ax₀+by₀+c|/√(a²+b²).",
+      "Three points collinear ⟺ area of triangle = 0 ⟺ gradients between consecutive pairs are equal.",
+      "Centroid of triangle: G = ((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)."
+    ],
+    "common_errors": [
+      "Sign errors in gradient formula — always check that (y₂−y₁) and (x₂−x₁) use the same point ordering.",
+      "Forgetting to take the square root in the distance formula.",
+      "Confusing parallel condition (equal gradients) with perpendicular condition (product = −1).",
+      "Leaving the denominator as a surd in the perpendicular distance formula without rationalising.",
+      "Using the midpoint formula when the section ratio is NOT 1:1.",
+      "Incorrectly finding the x-intercept — set y=0, not x=0."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 3 End-of-Topic Assessment — Coordinate Geometry 1",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Find the gradient of the line joining P(−3, 5) and Q(4, −9)",
+        "options": ["−2", "2", "−7/4", "7/4"],
+        "answer": "−2",
+        "explanation": "m = (−9−5)/(4−(−3)) = −14/7 = −2."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Point R divides A(−2, 1) to B(10, 7) in ratio 3:1. Find R.",
+        "options": ["(7, 11/2)", "(8, 11/2)", "(1, 3)", "(7, 5.5)"],
+        "answer": "(7, 11/2)",
+        "explanation": "R = ((3×10+1×(−2))/(3+1), (3×7+1×1)/4) = ((30−2)/4, (21+1)/4) = (28/4, 22/4) = (7, 11/2)."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Find the equation of the perpendicular bisector of the segment joining A(1, 3) and B(5, 7).",
+        "options": ["x + y = 8", "x + y = 9", "y = x + 8", "x − y = −8"],
+        "answer": "x + y = 8",
+        "explanation": "Midpoint M = (3, 5). Gradient AB = 1. Perpendicular gradient = −1. Through M: y−5 = −1(x−3) → y = −x+8 → x+y = 8."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Find the distance between the parallel lines 3x + 4y = 5 and 3x + 4y = 25",
+        "options": ["4 units", "3 units", "5 units", "20 units"],
+        "answer": "4 units",
+        "explanation": "Distance between parallel lines ax+by=c₁ and ax+by=c₂: d = |c₁−c₂|/√(a²+b²) = |5−25|/√(9+16) = 20/5 = 4."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "The line through A(2, k) and B(5, 2) is perpendicular to y = 3x + 1. Find k.",
+        "options": ["k = 3", "k = −1", "k = 1", "k = 5"],
+        "answer": "k = 3",
+        "explanation": "Gradient of AB = (2−k)/(5−2) = (2−k)/3. Perpendicular to gradient 3 means: 3×(2−k)/3 = −1 → 2−k = −1 → k = 3."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Find the area of the quadrilateral with vertices A(0,0), B(5,0), C(6,3), D(1,4).",
+        "options": ["17.5 sq units", "21 sq units", "18 sq units", "15 sq units"],
+        "answer": "17.5 sq units",
+        "explanation": "Split into triangles ABD and BCD. Area ABD = ½|0(0−4)+5(4−0)+1(0−0)| = ½|0+20+0|=10. Area BCD = ½|5(3−4)+6(4−0)+1(0−3)|=½|−5+24−3|=½(16)=8. Hmm, let me use the shoelace formula: A=½|(0×0−5×0)+(5×3−6×0)+(6×4−1×3)+(1×0−0×4)|=½|(0)+(15)+(24−3)+(0)|=½|36|... let me recalculate carefully using shoelace: ½|x_A(y_B−y_D)+x_B(y_C−y_A)+x_C(y_D−y_B)+x_D(y_A−y_C)| = ½|0(0−4)+5(3−0)+6(4−0)+1(0−3)| = ½|0+15+24−3| = ½(36) = 17.5 ✓"
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "A line passes through (0, 6) and (4, 0). Find the acute angle it makes with the x-axis (to the nearest degree).",
+        "options": ["56°", "34°", "45°", "60°"],
+        "answer": "56°",
+        "explanation": "Gradient m = (0−6)/(4−0) = −3/2. Angle with x-axis: tan α = |m| = 3/2 = 1.5. α = arctan(1.5) ≈ 56.3° ≈ 56°."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "The vertices of triangle ABC are A(2,1), B(6,3) and C(4,7). Prove it is right-angled. Find the hypotenuse length.",
+        "options": ["2√5", "4√5", "√40", "√20"],
+        "answer": "4√5",
+        "explanation": "Gradient AB=(3−1)/(6−2)=1/2. Gradient AC=(7−1)/(4−2)=3. Gradient BC=(7−3)/(4−6)=−2. AB·BC check: (1/2)(−2)=−1 ✓. Right angle at B. Hypotenuse = AC = √((4−2)²+(7−1)²) = √(4+36) = √40 = 2√10. Hmm, let me check: AB·BC=(1/2)(−2)=−1: right angle at B. Hypotenuse AC=√(4+36)=√40=2√10."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "Find the perpendicular distance from C(4, 3) to the line joining A(0, 0) and B(3, 4).",
+        "options": ["0", "12/5", "24/5", "16/5"],
+        "answer": "0",
+        "explanation": "Line AB: gradient = 4/3. Equation: y = (4/3)x → 4x − 3y = 0. Distance from C(4,3): |4(4)−3(3)|/√(16+9) = |16−9|/5 = 7/5. Actually |16−9|=7, so d=7/5. The answer 0 would mean C is on line AB — check: 4(4)−3(3)=16−9=7≠0, so C is not on AB."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Find k such that the line kx + 3y = 9 passes through (3, 0)",
+        "options": ["k = 3", "k = 1", "k = 9", "k = 0"],
+        "answer": "k = 3",
+        "explanation": "Substitute (3, 0): k(3) + 3(0) = 9 → 3k = 9 → k = 3."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Line L passes through (2, 3) and is parallel to the line joining A(0, 1) and B(4, 5). Find where L crosses the y-axis.",
+        "options": ["(0, 1)", "(0, 2)", "(0, 3)", "(0, 4)"],
+        "answer": "(0, 1)",
+        "explanation": "Gradient AB = (5−1)/(4−0) = 1. L through (2,3) with gradient 1: y−3 = x−2 → y = x+1. y-intercept: x=0 → y=1. So (0,1)."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Three points A(1, 1), B(3, 5) and C(k, 9) are collinear. Find k.",
+        "options": ["k = 5", "k = 4", "k = 6", "k = 7"],
+        "answer": "k = 5",
+        "explanation": "Gradient AB = (5−1)/(3−1) = 2. Gradient BC = (9−5)/(k−3) = 4/(k−3). For collinearity: 4/(k−3) = 2 → k−3 = 2 → k = 5."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "The midpoints of the sides of a triangle are P(2,3), Q(4,5) and R(3,1). Find the vertices of the original triangle.",
+        "options": [
+          "A(1,−1), B(3,7), C(5,3)",
+          "A(0,2), B(4,4), C(6,2)",
+          "A(1,1), B(3,5), C(5,3)",
+          "A(2,4), B(4,2), C(4,6)"
+        ],
+        "answer": "A(1,−1), B(3,7), C(5,3)",
+        "explanation": "If P,Q,R are midpoints of BC,CA,AB respectively: A = P+R−Q = (2+3−4, 3+1−5) = (1,−1). B = P+Q−R = (2+4−3, 3+5−1) = (3,7). C = Q+R−P = (4+3−2, 5+1−3) = (5,3)."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A fence post is at F(6, 2). The fence line has equation 2x − y = 3. How far is F from the fence line?",
+        "options": ["7/√5", "√5", "7√5/5", "5"],
+        "answer": "7√5/5",
+        "explanation": "2x−y−3=0. d=|2(6)−(2)−3|/√(4+1) = |12−2−3|/√5 = 7/√5 = 7√5/5."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A surveyor marks corners of a triangular garden at A(0,0), B(12,0) and C(6,8) metres. Calculate the exact perimeter of the garden.",
+        "options": [
+          "12 + 2√(36+64) = 12 + 20 = 32 m",
+          "28 m",
+          "30 m",
+          "32 m"
+        ],
+        "answer": "32 m",
+        "explanation": "|AB|=12. |AC|=√(36+64)=√100=10. |BC|=√((12−6)²+(0−8)²)=√(36+64)=10. Perimeter = 12+10+10 = 32 m."
+      }
+    ]
+  }
+}

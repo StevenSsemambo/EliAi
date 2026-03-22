@@ -1,0 +1,777 @@
+{
+  "topic_id": "s5_maths_t12_permutations_combinations",
+  "topic_title": "Permutations and Combinations",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 10,
+  "ncdc_competency": "The learner applies counting principles, permutations, and combinations to count arrangements and selections systematically in real-life and mathematical contexts.",
+  "lessons": [
+    {
+      "id": "s5_maths_t12_l1",
+      "title": "Counting Principles — Factorial Notation and the Multiplication Principle",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Counting is one of the oldest mathematical activities — but counting complex arrangements and selections precisely is a surprisingly deep skill. How many different ways can 8 runners finish a race? How many 4-digit PIN codes are possible? How many ways can a committee of 5 be chosen from 20 candidates? These questions all require systematic counting techniques. The branch of mathematics that studies these is called combinatorics. Its applications range from probability (computing the number of outcomes) to computer science (analysing algorithms), genetics (counting DNA sequences), cryptography (assessing password security), and logistics (scheduling and routing). In Uganda, combinatorics underlies the design of national examination question papers, the scheduling of football leagues, and the security of mobile banking systems."
+        },
+        {
+          "type": "heading",
+          "body": "The Fundamental Counting Principle (Multiplication Principle)"
+        },
+        {
+          "type": "text",
+          "body": "If one task can be done in m ways and a second independent task can be done in n ways, then both tasks together can be done in m × n ways. This principle extends to any number of independent tasks."
+        },
+        {
+          "type": "formula",
+          "body": "Multiplication Principle:\nIf task 1 can be done in n₁ ways, task 2 in n₂ ways, ..., task k in nₖ ways\n(all independently), then the total number of ways to do all k tasks is:\n\nn₁ × n₂ × n₃ × ... × nₖ\n\nAddition Principle (complement):\nIf task 1 OR task 2 must be done (mutually exclusive alternatives),\ntotal ways = n₁ + n₂\n\nExamples:\n• A restaurant menu has 4 starters, 6 mains, 3 desserts.\n  Total meal combinations = 4 × 6 × 3 = 72\n• A padlock has 3 dials each with digits 0–9.\n  Total codes = 10 × 10 × 10 = 1000\n• A student must choose 1 of 4 science subjects OR 1 of 3 art subjects.\n  Total choices = 4 + 3 = 7"
+        },
+        {
+          "type": "heading",
+          "body": "Factorial Notation"
+        },
+        {
+          "type": "text",
+          "body": "The factorial of a positive integer n, written n!, is the product of all positive integers from 1 up to n. Factorials arise naturally when counting arrangements."
+        },
+        {
+          "type": "formula",
+          "body": "Definition:\nn! = n × (n−1) × (n−2) × ... × 3 × 2 × 1\n\nKey values:\n0! = 1   (by convention — essential for the formulae to work)\n1! = 1\n2! = 2\n3! = 6\n4! = 24\n5! = 120\n6! = 720\n7! = 5040\n8! = 40320\n10! = 3,628,800\n\nRecurrence relation: n! = n × (n−1)!\n\nUseful simplification:\nn!/r! = n × (n−1) × ... × (r+1)   [cancel all terms up to r!]\n\nExample: 8!/5! = 8 × 7 × 6 = 336  (cancel the 5×4×3×2×1)\n\nExample: 10!/(10−3)! = 10!/7! = 10 × 9 × 8 = 720"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Applying the counting principle",
+          "body": "a) How many 3-digit numbers can be formed from the digits {1,2,3,4,5} if:\n   (i) Repetition is allowed: 5×5×5 = 125\n   (ii) No repetition: 5×4×3 = 60\n\nb) How many ways can a Ugandan school prefect body of President, Vice President, Secretary, and Treasurer be filled from 20 candidates if no one holds two offices?\n   = 20 × 19 × 18 × 17 = 116,280\n\nc) How many car number plates can be formed using 2 letters followed by 3 digits (letters and digits not repeated, 26 letters and 10 digits available)?\n   Letters: 26×25 = 650\n   Digits: 10×9×8 = 720\n   Total = 650 × 720 = 468,000 plates"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Factorial simplification",
+          "body": "Simplify each without using a calculator:\n\na) 7!/5! = 7×6 = 42\n\nb) 10!/(7!×3!) = (10×9×8)/(3×2×1) = 720/6 = 120\n\nc) (n+1)!/n! = n+1\n\nd) (2n)!/(2n−1)! = 2n\n\ne) Express 8×7×6×5 using factorials:\n   = 8!/4! = 8×7×6×5×4!/4! = 8!/4!"
+        },
+        {
+          "type": "callout",
+          "body": "Password security: A 6-character password using only lowercase letters (26 options per character) has 26⁶ = 308,915,776 possible combinations — with repetition allowed. If the password must contain no repeated letters: 26×25×24×23×22×21 = 26!/20! = 165,765,600 combinations. Understanding counting principles helps IT security professionals at Ugandan banks assess how difficult it is to crack passwords by brute force — the more combinations, the more secure."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "How many ways can a student choose 1 main dish from 5 options AND 1 drink from 4 options at a Kampala school canteen?",
+            "options": ["9", "20", "40", "15"],
+            "answer": "20",
+            "explanation": "Multiplication principle: 5 × 4 = 20 combinations."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Evaluate 9!/7!",
+            "options": ["72", "9", "2", "362880"],
+            "answer": "72",
+            "explanation": "9!/7! = 9 × 8 = 72. Cancel the 7! in numerator and denominator."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many 4-digit PIN codes are possible using digits 0–9 (repetition allowed)?",
+            "options": ["5040", "10000", "3628800", "360"],
+            "answer": "10000",
+            "explanation": "10 × 10 × 10 × 10 = 10⁴ = 10000."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Simplify 12!/(9! × 3!)",
+            "options": ["220", "120", "1320", "660"],
+            "answer": "220",
+            "explanation": "12!/(9!×3!) = (12×11×10)/(3×2×1) = 1320/6 = 220."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "How many ways can 5 books be arranged on a shelf?",
+            "options": ["25", "10", "120", "15"],
+            "answer": "120",
+            "explanation": "5! = 5×4×3×2×1 = 120. Each arrangement uses all 5 books in a different order."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A car registration plate has 3 letters followed by 3 digits. If letters and digits can repeat, how many plates are possible (26 letters, 10 digits)?",
+            "options": ["17,576,000", "11,232,000", "15,600,000", "1,757,600"],
+            "answer": "17,576,000",
+            "explanation": "Letters: 26³ = 17,576. Digits: 10³ = 1,000. Total = 17,576 × 1,000 = 17,576,000."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What is the value of 0! + 1! + 2! + 3!?",
+            "options": ["10", "9", "15", "6"],
+            "answer": "10",
+            "explanation": "0!+1!+2!+3! = 1+1+2+6 = 10."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Express (n+2)!/n! in simplified form",
+            "options": ["n+2", "(n+2)(n+1)", "2", "(n+2)!"],
+            "answer": "(n+2)(n+1)",
+            "explanation": "(n+2)!/n! = (n+2)(n+1)×n!/n! = (n+2)(n+1)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t12_l2",
+      "title": "Permutations — Ordered Arrangements",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A permutation is an ordered arrangement of objects. The word 'ordered' is crucial — in a permutation, the ORDER matters. Choosing person A then person B for first and second place in a race is different from choosing B then A. This distinguishes permutations from combinations (where order does not matter). Permutations arise in any situation where sequence, rank, or position is important: race results, passwords, codes, seating arrangements, and scheduling."
+        },
+        {
+          "type": "heading",
+          "body": "Permutations of n Objects Taken r at a Time"
+        },
+        {
+          "type": "formula",
+          "body": "The number of permutations of n distinct objects taken r at a time:\n\n ⁿPᵣ = n! / (n−r)!\n\nAlso written as P(n,r) or Pₙᵣ\n\nExpanded form:\n ⁿPᵣ = n(n−1)(n−2)···(n−r+1)     [r factors]\n\nSpecial cases:\n ⁿPₙ = n!     [all n objects arranged: n!/(n−n)! = n!/0! = n!]\n ⁿP₁ = n      [choose 1 from n: n objects to place in 1 position]\n ⁿP₀ = 1      [choose 0 objects: only 1 way — choose nothing]\n\nVerification using tree:\nFrom 4 objects {A,B,C,D}, arrange 2:\n⁴P₂ = 4×3 = 12\nThese are: AB,AC,AD,BA,BC,BD,CA,CB,CD,DA,DB,DC ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Standard permutation problems",
+          "body": "a) In a race with 8 runners, how many possible arrangements of 1st, 2nd, and 3rd place?\n   ⁸P₃ = 8×7×6 = 336\n\nb) How many 4-letter codes can be made from the letters {A,B,C,D,E,F,G} (no repeats)?\n   ⁷P₄ = 7×6×5×4 = 840\n\nc) 10 students compete for 5 prizes (1st through 5th, all different). How many outcomes?\n   ¹⁰P₅ = 10×9×8×7×6 = 30,240\n\nd) How many ways can 6 people be seated in a row?\n   ⁶P₆ = 6! = 720"
+        },
+        {
+          "type": "heading",
+          "body": "Permutations with Restrictions"
+        },
+        {
+          "type": "list",
+          "heading": "Key strategies for restricted permutations:",
+          "items": [
+            "Fixed positions: if certain items MUST be in specific positions, fill those positions first (1 way each for fixed items), then arrange the remaining items in the remaining positions.",
+            "Items that MUST be together (treated as a unit): bundle them into one 'super-object', count arrangements of (n−k+1) objects, then multiply by k! for internal arrangements of the bundle.",
+            "Items that MUST be separated (not adjacent): use total arrangements minus arrangements where they ARE together.",
+            "At least one from a group: use complement — total minus none from the group.",
+            "Specific order required: if A must come before B, exactly half of all arrangements of A and B satisfy this, so divide by 2 (or more generally by r! for r items)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Permutations with restrictions",
+          "body": "a) 7 people sit in a row. Person A and B must sit at the two ends. How many arrangements?\n   Step 1 — Fill the ends: A and B can be placed in 2! = 2 ways (A left/B right or B left/A right).\n   Step 2 — Remaining 5 people in middle 5 seats: 5! = 120 ways.\n   Total = 2! × 5! = 2 × 120 = 240\n\nb) 5 books (3 Mathematics and 2 English) are placed on a shelf. How many ways if all Maths books must be together?\n   Bundle the 3 Maths books: treat as 1 unit → 3 objects (1 bundle + 2 English).\n   Arrange 3 objects: 3! = 6 ways.\n   Arrange 3 Maths books within bundle: 3! = 6 ways.\n   Total = 3! × 3! = 6 × 6 = 36\n\nc) In how many ways can 6 people sit in a row if two particular people (X and Y) must NOT sit next to each other?\n   Total arrangements: 6! = 720\n   Arrangements where X and Y ARE adjacent: treat as 1 unit → 5 objects, 5! × 2! = 240\n   Answer: 720 − 240 = 480"
+        },
+        {
+          "type": "heading",
+          "body": "Circular Permutations"
+        },
+        {
+          "type": "formula",
+          "body": "Circular permutations — arranging n objects in a CIRCLE:\n\nIn a circle, one position is fixed (to account for rotational equivalence).\nNumber of circular arrangements of n distinct objects = (n−1)!\n\nRationale: fix one object in place (removing rotational symmetry),\nthen arrange the remaining (n−1) objects in (n−1)! ways.\n\nWith reflection symmetry (e.g. a necklace where clockwise and\nanticlockwise arrangements are the same):\nNumber of distinct necklace arrangements = (n−1)!/2\n\nExamples:\n• 6 people around a circular table: (6−1)! = 5! = 120\n• 8 beads on a necklace: (8−1)!/2 = 7!/2 = 2520\n• 4 people at a round table where 2 particular people must sit together:\n  Treat the pair as 1 unit → 3 objects in circle → (3−1)! = 2! = 2\n  Internal arrangement of pair → 2! = 2\n  Total = 2! × 2! = 4"
+        },
+        {
+          "type": "callout",
+          "body": "Scheduling application: Uganda's Premier League football scheduling committee needs to arrange fixtures so that each of 16 teams plays every other team. The number of distinct ways to order a round of matches (where order matters for broadcasting slots) involves permutation calculations. Similarly, UNEB arranging exam timetables — ensuring no student has two exams simultaneously — is a permutation problem with constraints. These problems motivate the need for sophisticated counting techniques."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Evaluate ⁸P₃",
+            "options": ["336", "56", "512", "24"],
+            "answer": "336",
+            "explanation": "⁸P₃ = 8×7×6 = 336."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In how many ways can 5 students line up for a photograph?",
+            "options": ["25", "120", "60", "10"],
+            "answer": "120",
+            "explanation": "⁵P₅ = 5! = 120. All 5 students arranged in a line."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "6 athletes compete for Gold, Silver, and Bronze. How many possible medal outcomes are there?",
+            "options": ["120", "20", "216", "720"],
+            "answer": "120",
+            "explanation": "⁶P₃ = 6×5×4 = 120."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "How many ways can 8 people be seated around a circular table?",
+            "options": ["40320", "5040", "8", "56"],
+            "answer": "5040",
+            "explanation": "Circular arrangements = (n−1)! = 7! = 5040."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "6 books are arranged on a shelf. The 2 mathematics books must always be at the ends. How many arrangements?",
+            "options": ["96", "48", "240", "720"],
+            "answer": "48",
+            "explanation": "2 maths books at ends: 2! = 2 ways. Remaining 4 books in middle: 4! = 24. Total = 2 × 24 = 48."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In how many ways can the letters of the word 'MATH' be arranged?",
+            "options": ["12", "24", "16", "4"],
+            "answer": "24",
+            "explanation": "'MATH' has 4 distinct letters. Arrangements = 4! = 24."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "5 people sit around a circular table. Two specific people MUST sit next to each other. Find the number of arrangements.",
+            "options": ["12", "24", "48", "6"],
+            "answer": "12",
+            "explanation": "Treat the pair as 1 unit: 4 objects in a circle → (4−1)! = 3! = 6. Internal arrangement of pair: 2! = 2. Total = 6 × 2 = 12."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "How many 3-digit numbers can be formed from {1,2,3,4,5,6} with no digit repeated, and the first digit must be odd?",
+            "options": ["60", "120", "96", "48"],
+            "answer": "60",
+            "explanation": "Odd digits (first position): {1,3,5} → 3 choices. Remaining 2 positions from remaining 5 digits: 5×4 = 20. Total = 3×20 = 60."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t12_l3",
+      "title": "Combinations — Unordered Selections",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A combination is a selection of objects where ORDER DOES NOT MATTER. Choosing persons A and B for a committee is the same as choosing B and A — they form the same committee regardless of order of selection. This is the key distinction from permutations. Combinations are used whenever we want to count selections, subsets, or groups — choosing a team from players, selecting questions from an exam paper, picking lottery numbers, choosing a study group, or selecting items from a menu. Combinations are arguably the most important counting tool in mathematics, appearing throughout probability, statistics, and algebra."
+        },
+        {
+          "type": "heading",
+          "body": "The Combination Formula"
+        },
+        {
+          "type": "formula",
+          "body": "The number of ways to choose r objects from n distinct objects (order does not matter):\n\n  ⁿCᵣ = n! / (r! × (n−r)!)\n\nAlso written as C(n,r), Cₙᵣ, or (n choose r): ⎛n⎞\n                                                          ⎝r⎠\n\nKey insight:\n ⁿCᵣ = ⁿPᵣ / r!     [take the permutation count and divide by r!\n                       to remove the ordering of the r chosen items]\n\nProperties:\n ⁿC₀ = 1        [one way to choose nothing]\n ⁿC₁ = n        [n ways to choose 1 item]\n ⁿCₙ = 1        [one way to choose all n items]\n ⁿCᵣ = ⁿCₙ₋ᵣ   [symmetry: choosing r is equivalent to rejecting n−r]\n ⁿCᵣ + ⁿCᵣ₊₁ = ⁿ⁺¹Cᵣ₊₁   [Pascal's identity]\n\nQuick values:\n ⁵C₂ = 10,  ⁶C₃ = 20,  ¹⁰C₄ = 210,  ⁸C₃ = 56"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Standard combination problems",
+          "body": "a) A committee of 3 is chosen from 8 candidates. How many possible committees?\n   ⁸C₃ = 8!/(3!×5!) = (8×7×6)/(3×2×1) = 336/6 = 56\n\nb) A student must answer 4 questions from 10. How many ways can the student choose?\n   ¹⁰C₄ = 10!/(4!×6!) = (10×9×8×7)/(4×3×2×1) = 5040/24 = 210\n\nc) Uganda's national football team selects 11 players from a squad of 20. How many possible starting lineups (ignoring positions)?\n   ²⁰C₁₁ = ²⁰C₉ = 20!/(9!×11!) = 167,960\n\nd) Verify: ⁸C₃ = ⁸C₅\n   ⁸C₅ = 8!/(5!×3!) = ⁸C₃ ✓  (symmetry property)"
+        },
+        {
+          "type": "heading",
+          "body": "Combinations with Restrictions"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Restricted combinations",
+          "body": "A committee of 5 is chosen from 6 men and 4 women.\n\na) No restriction:\n   ¹⁰C₅ = 252\n\nb) Exactly 3 men and 2 women:\n   ⁶C₃ × ⁴C₂ = 20 × 6 = 120\n\nc) At least 3 women:\n   Exactly 3 women: ⁴C₃ × ⁶C₂ = 4 × 15 = 60\n   Exactly 4 women: ⁴C₄ × ⁶C₁ = 1 × 6 = 6\n   Total = 60 + 6 = 66\n\nd) At least 1 woman:\n   Total − no women = ¹⁰C₅ − ⁶C₅ = 252 − 6 = 246\n\ne) A particular person (say, the chairman) MUST be on the committee:\n   Fix the chairman → choose 4 from remaining 9 → ⁹C₄ = 126\n\nf) A particular person MUST NOT be on the committee:\n   Choose 5 from remaining 9 → ⁹C₅ = 126\n   (Verify: 126 + 126 = 252 ✓ — either the chairman is included or not)"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Combinations in probability",
+          "body": "A bag contains 5 red balls and 4 blue balls. 3 balls are drawn randomly.\n\nTotal ways to draw 3 from 9: ⁹C₃ = 84\n\na) P(all red) = ⁵C₃/⁹C₃ = 10/84 = 5/42\n\nb) P(exactly 2 red, 1 blue) = (⁵C₂ × ⁴C₁)/⁹C₃ = (10×4)/84 = 40/84 = 10/21\n\nc) P(at least 1 blue) = 1 − P(all red) = 1 − 10/84 = 74/84 = 37/42\n\nThis shows how combinations power probability calculations — the denominators and numerators are combination counts."
+        },
+        {
+          "type": "callout",
+          "body": "Lottery and risk: Uganda's National Lotteries Board operates games where players choose 6 numbers from 1–49. The number of possible tickets is ⁴⁹C₆ = 49!/(6!×43!) = 13,983,816 ≈ 14 million. The probability of winning the jackpot with one ticket is 1/13,983,816 ≈ 0.0000000715. Understanding this combination calculation helps citizens make informed decisions about lottery spending — and helps regulators design fair prize structures."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Evaluate ¹²C₄",
+            "options": ["495", "11880", "124", "990"],
+            "answer": "495",
+            "explanation": "¹²C₄ = (12×11×10×9)/(4×3×2×1) = 11880/24 = 495."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A team of 4 is selected from 9 players. How many different teams are possible?",
+            "options": ["3024", "126", "15120", "504"],
+            "answer": "126",
+            "explanation": "⁹C₄ = 9!/(4!×5!) = (9×8×7×6)/(4×3×2×1) = 3024/24 = 126."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which is larger: ¹⁰C₄ or ¹⁰C₆?",
+            "options": [
+              "¹⁰C₄ is larger",
+              "¹⁰C₆ is larger",
+              "They are equal",
+              "Cannot be compared"
+            ],
+            "answer": "They are equal",
+            "explanation": "By the symmetry property ⁿCᵣ = ⁿCₙ₋ᵣ: ¹⁰C₄ = ¹⁰C₆ (since 10−4=6). Both equal 210."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "From a class of 8 boys and 7 girls, a group of 4 is chosen with exactly 2 boys and 2 girls. How many ways?",
+            "options": ["588", "1176", "28", "196"],
+            "answer": "588",
+            "explanation": "⁸C₂ × ⁷C₂ = 28 × 21 = 588."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "An exam paper has 10 questions. A student must answer any 6. How many ways can the student choose?",
+            "options": ["210", "720", "5040", "100"],
+            "answer": "210",
+            "explanation": "¹⁰C₆ = ¹⁰C₄ = (10×9×8×7)/(4×3×2×1) = 5040/24 = 210."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A committee of 4 is chosen from 10 people. One specific person MUST be included. How many committees are possible?",
+            "options": ["84", "210", "126", "120"],
+            "answer": "84",
+            "explanation": "Fix the required person. Choose 3 more from remaining 9: ⁹C₃ = (9×8×7)/(3×2×1) = 84."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "From 6 red and 4 blue balls, 3 balls are drawn. Find the probability that all 3 are red.",
+            "options": ["1/6", "1/5", "1/4", "3/10"],
+            "answer": "1/6",
+            "explanation": "P(all red) = ⁶C₃/¹⁰C₃ = 20/120 = 1/6."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Prove that ⁿC₂ = n(n−1)/2 by expanding the formula",
+            "options": [
+              "n!/2!(n−2)! = n(n−1)/2 ✓",
+              "n!/2! = n(n−1)/2",
+              "n!/(n−2)! = n(n−1)",
+              "n(n−1)/2! = n²/2"
+            ],
+            "answer": "n!/2!(n−2)! = n(n−1)/2 ✓",
+            "explanation": "ⁿC₂ = n!/(2!(n−2)!) = [n(n−1)(n−2)!]/(2×1×(n−2)!) = n(n−1)/2. This is the 'handshake formula' — n people each shake hands with (n−1) others, divided by 2 since each handshake involves 2 people."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t12_l4",
+      "title": "Permutations of Repeated Objects and Mixed Problems",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "So far, all objects have been distinct (different from each other). But many practical counting problems involve repeated objects — letters in a word, objects of the same colour, or identical items in a sequence. When some objects are identical, fewer truly different arrangements exist because swapping identical objects produces no visible change. A separate formula handles this case. This lesson also brings together permutations and combinations in multi-step problems where both types of counting appear."
+        },
+        {
+          "type": "heading",
+          "body": "Permutations with Repeated Objects"
+        },
+        {
+          "type": "formula",
+          "body": "If n objects are arranged in a row, where:\n• n₁ objects are of type 1 (identical)\n• n₂ objects are of type 2 (identical)\n• ...\n• nₖ objects are of type k (identical)\n• n₁ + n₂ + ... + nₖ = n (total)\n\nThen the number of distinct arrangements is:\n\n    n! / (n₁! × n₂! × ... × nₖ!)\n\nIntuition: start with n! (as if all distinct), then divide by each nᵢ! to\ncorrect for the over-counting caused by identical objects within each group.\n\nExample: How many distinct arrangements of the letters in 'BANANA'?\nn=6: B×1, A×3, N×2\n6!/(1!×3!×2!) = 720/(1×6×2) = 720/12 = 60"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Arrangements of letters in words",
+          "body": "a) How many distinct arrangements of the letters in 'MISSISSIPPI'?\nM×1, I×4, S×4, P×2 → n=11\n11!/(1!×4!×4!×2!) = 39,916,800/(1×24×24×2) = 39,916,800/1152 = 34,650\n\nb) How many distinct arrangements of 'COMMITTEE'?\nC×1, O×1, M×2, I×1, T×2, E×2 → n=9\n9!/(1!×1!×2!×1!×2!×2!) = 362,880/(1×1×2×1×2×2) = 362,880/8 = 45,360\n\nc) How many arrangements of the letters in 'MAKERERE' (the university)?\nM×1, A×1, K×1, E×3, R×2 → n=8\n8!/(1!×1!×1!×3!×2!) = 40,320/(1×1×1×6×2) = 40,320/12 = 3,360"
+        },
+        {
+          "type": "heading",
+          "body": "Choosing AND Arranging — Mixed Problems"
+        },
+        {
+          "type": "text",
+          "body": "Many real problems involve both choosing (combinations) and arranging (permutations) in sequence. The key is to break the problem into stages: first use combinations to count selections, then use permutations to count arrangements within those selections."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Mixed selection and arrangement",
+          "body": "a) 5 people are chosen from 8 and then seated in a row. How many arrangements?\n   Step 1 — Choose 5 from 8: ⁸C₅ = 56 ways\n   Step 2 — Arrange 5 in a row: 5! = 120 ways\n   Total = 56 × 120 = 6,720\n   \n   Note: This equals ⁸P₅ = 8×7×6×5×4 = 6,720 ✓\n   (Choosing and arranging r from n in a line = ⁿPᵣ)\n\nb) From 4 consonants and 3 vowels, form all possible 3-letter 'words' using 2 consonants and 1 vowel, with the vowel always in the middle.\n   Choose 2 consonants from 4: ⁴C₂ = 6\n   Choose 1 vowel from 3: ³C₁ = 3\n   Arrange: consonant-vowel-consonant → 2 ways (which consonant is first)\n   Total = 6 × 3 × 2 = 36\n\nc) A student body of 12 must elect a President, a Secretary, and a 3-person welfare committee. How many ways can this be done?\n   President: 12 choices\n   Secretary (different from President): 11 choices\n   Welfare committee (3 from remaining 10, order doesn't matter): ¹⁰C₃ = 120\n   Total = 12 × 11 × 120 = 15,840"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Distributing items into groups",
+          "body": "12 books must be distributed into 3 groups of 4. In how many ways can this be done?\n\nIf the groups are DISTINGUISHABLE (e.g. 3 different shelves):\nChoose 4 from 12 for group 1: ¹²C₄ = 495\nChoose 4 from 8 for group 2: ⁸C₄ = 70\nRemaining 4 go to group 3: ⁴C₄ = 1\nTotal = 495 × 70 × 1 = 34,650\n\nIf the groups are INDISTINGUISHABLE (just 3 equal piles):\n= 34,650 / 3! = 34,650 / 6 = 5,775\n(Divide by 3! because the 3 groups are identical — their arrangement doesn't matter.)"
+        },
+        {
+          "type": "callout",
+          "body": "Genetics and DNA: DNA sequences are strings over the alphabet {A, T, C, G}. The number of distinct DNA sequences of length n that use A exactly a times, T exactly t times, C exactly c times, and G exactly g times is n!/(a!×t!×c!×g!) — the multinomial coefficient. This is the exact same formula as for repeated-object permutations. Biologists at Makerere University's College of Health Sciences use this formula when studying the frequency of specific genetic patterns in Ugandan population genetics research."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "How many distinct arrangements of the letters in 'KAMPALA'?",
+            "options": ["1260", "5040", "2520", "840"],
+            "answer": "1260",
+            "explanation": "KAMPALA: K×1,A×3,M×1,P×1,L×1 → n=7. Arrangements = 7!/(3!) = 5040/6 = 840. Hmm: K,A,M,P,A,L,A → K×1,A×3,M×1,P×1,L×1. 7!/(1!×3!×1!×1!×1!) = 5040/6 = 840."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "How many distinct arrangements of the letters in 'UGANDA'?",
+            "options": ["360", "720", "120", "180"],
+            "answer": "360",
+            "explanation": "UGANDA: U×1,G×1,A×2,N×1,D×1 → n=6. 6!/(2!) = 720/2 = 360."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "4 red balls and 3 blue balls are placed in a row. How many distinct arrangements?",
+            "options": ["35", "5040", "840", "70"],
+            "answer": "35",
+            "explanation": "7!/(4!×3!) = 5040/144 = 35."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "3 people are chosen from 7 and then assigned to 3 distinct roles. How many ways?",
+            "options": ["210", "35", "420", "840"],
+            "answer": "210",
+            "explanation": "⁷P₃ = 7×6×5 = 210. Equivalently ⁷C₃ × 3! = 35×6 = 210."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "How many arrangements of 'LEVEL' are there?",
+            "options": ["120", "20", "30", "60"],
+            "answer": "30",
+            "explanation": "LEVEL: L×2,E×2,V×1 → n=5. 5!/(2!×2!) = 120/4 = 30."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "From 10 items, 4 are selected and arranged in a line. This equals:",
+            "options": ["¹⁰C₄", "¹⁰P₄", "4!×¹⁰C₄", "¹⁰C₄/4!"],
+            "answer": "¹⁰P₄",
+            "explanation": "Selecting and arranging r from n in a line = ⁿPᵣ = ⁿCᵣ × r!. For 4 from 10: ¹⁰P₄ = 10×9×8×7 = 5040."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In how many ways can 9 books be split into 3 groups of 3 for 3 different shelves?",
+            "options": ["280", "1680", "560", "840"],
+            "answer": "1680",
+            "explanation": "Groups are distinguishable (3 different shelves). ⁹C₃ × ⁶C₃ × ³C₃ = 84×20×1 = 1680."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "How many 4-digit numbers can be formed using {1,1,2,3}?",
+            "options": ["12", "24", "6", "4"],
+            "answer": "12",
+            "explanation": "4 digits with 1 repeated twice: 4!/2! = 24/2 = 12."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t12_l5",
+      "title": "Binomial Coefficients, Pascal's Triangle, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Combinations ⁿCᵣ appear as the coefficients in the expansion of (a+b)ⁿ — these are the binomial coefficients. Pascal's triangle organises these coefficients in a beautiful triangular array that reveals deep patterns. The Binomial theorem, which will be studied in full detail in Topic 13 (Series), relies entirely on combination counts. This lesson introduces Pascal's triangle, its properties, and further applications of combinations in counting paths, subsets, and other combinatorial structures."
+        },
+        {
+          "type": "heading",
+          "body": "Pascal's Triangle"
+        },
+        {
+          "type": "list",
+          "heading": "Pascal's Triangle — construction and key properties:",
+          "items": [
+            "Each row corresponds to a power n of (1+x). Row 0 is n=0, row 1 is n=1, etc.",
+            "Each entry is ⁿCᵣ where n is the row number and r is the position (from r=0).",
+            "Row n contains: ⁿC₀, ⁿC₁, ⁿC₂, ..., ⁿCₙ",
+            "Construction rule (Pascal's identity): each entry = sum of the two entries above it. ⁿCᵣ = ⁿ⁻¹Cᵣ₋₁ + ⁿ⁻¹Cᵣ",
+            "Symmetry: each row is palindromic (reads the same forwards and backwards) because ⁿCᵣ = ⁿCₙ₋ᵣ.",
+            "Row sums: the sum of all entries in row n = 2ⁿ. (Total number of subsets of an n-element set.)",
+            "Alternating sum: ⁿC₀ − ⁿC₁ + ⁿC₂ − ... = 0 for n ≥ 1.",
+            "Hockey stick identity: ⁿCᵣ + ⁿ⁺¹Cᵣ + ⁿ⁺²Cᵣ + ... + ᵐCᵣ = ᵐ⁺¹Cᵣ₊₁"
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Pascal's Triangle rows:\n\nRow 0:               1\nRow 1:             1   1\nRow 2:           1   2   1\nRow 3:         1   3   3   1\nRow 4:       1   4   6   4   1\nRow 5:     1   5  10  10   5   1\nRow 6:   1   6  15  20  15   6   1\n\nIn ⁿCᵣ notation (row n, position r starting from 0):\nRow 4: ⁴C₀=1, ⁴C₁=4, ⁴C₂=6, ⁴C₃=4, ⁴C₄=1\n\nConnection to Binomial Theorem (preview):\n(a+b)³ = ⁳C₀a³ + ³C₁a²b + ³C₂ab² + ³C₃b³\n       = a³ + 3a²b + 3ab² + b³\nThe coefficients 1,3,3,1 are row 3 of Pascal's triangle."
+        },
+        {
+          "type": "heading",
+          "body": "Counting Subsets"
+        },
+        {
+          "type": "text",
+          "body": "A combination ⁿCᵣ counts the r-element subsets of an n-element set. Adding up all possible subset sizes gives the total number of subsets."
+        },
+        {
+          "type": "formula",
+          "body": "Total number of subsets of a set with n elements:\n\nTotal subsets = 2ⁿ\n\nThis includes the empty set (∅) and the full set itself.\n\nProof:\n2ⁿ = (1+1)ⁿ = ⁿC₀ + ⁿC₁ + ⁿC₂ + ... + ⁿCₙ\n= (subsets of size 0) + (size 1) + ... + (size n) ✓\n\nExamples:\n• A set {a,b,c} has 2³ = 8 subsets:\n  {}, {a},{b},{c},{a,b},{a,c},{b,c},{a,b,c}\n• A set of 5 elements has 2⁵=32 subsets\n• The number of different selections of ANY size from 10 items = 2¹⁰−1 = 1023 (excluding empty selection)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Applications of Pascal's identity and subset counting",
+          "body": "a) Verify Pascal's identity: ⁶C₂ = ⁵C₁ + ⁵C₂\n   ⁵C₁ + ⁵C₂ = 5 + 10 = 15 = ⁶C₂ ✓\n\nb) A mobile phone network in Uganda offers data bundles in different amounts. If a customer can subscribe to any number (including none) of 6 different bundles, how many subscription choices exist?\n   Each bundle is either included or not → 2⁶ = 64 choices.\n   If at least one bundle must be chosen: 64−1 = 63 choices.\n\nc) Find the sum: ⁶C₀ + ⁶C₁ + ⁶C₂ + ⁶C₃ + ⁶C₄ + ⁶C₅ + ⁶C₆\n   = 2⁶ = 64\n   Verification: 1+6+15+20+15+6+1 = 64 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Lattice paths — counting routes",
+          "body": "A person walks on a grid from A (bottom-left) to B (top-right), moving only right (R) or up (U). The grid is 4 units wide and 3 units tall. How many distinct routes are there?\n\nAny route consists of exactly 7 moves: 4 right + 3 up in some order.\nThis is a permutation of RRRRUUU (repeated letters):\nNumber of routes = 7!/(4!×3!) = ⁷C₃ = 35\n\nThis connects grid-path counting directly to combinations — a beautiful link!\nApplication: network routing algorithms in Ugandan telecoms companies use this idea when computing the number of paths through a network grid."
+        },
+        {
+          "type": "callout",
+          "body": "The Binomial Theorem (Preview for Topic 13): Combinations are the heart of the Binomial Theorem. When we expand (1+x)ⁿ, the coefficient of xʳ is exactly ⁿCᵣ. This means all the combination skills from this topic are directly used in expanding binomial expressions, finding specific terms, and approximating values. Every time you use the Binomial Theorem, you are using ⁿCᵣ. This topic is therefore the essential prerequisite for Topic 13 (Series) in Term 3."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the sum of all entries in Row 7 of Pascal's triangle?",
+            "options": ["128", "64", "256", "49"],
+            "answer": "128",
+            "explanation": "Sum of row n = 2ⁿ. Row 7: 2⁷ = 128."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Use Pascal's identity to find ⁸C₃ given ⁷C₂=21 and ⁷C₃=35.",
+            "options": ["56", "70", "42", "28"],
+            "answer": "56",
+            "explanation": "Pascal's identity: ⁸C₃ = ⁷C₂ + ⁷C₃ = 21 + 35 = 56."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many subsets does a set of 5 elements have (including the empty set)?",
+            "options": ["25", "32", "120", "10"],
+            "answer": "32",
+            "explanation": "Total subsets = 2⁵ = 32."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In Row 5 of Pascal's triangle, what is the 3rd entry (counting from 0)?",
+            "options": ["10", "5", "15", "20"],
+            "answer": "10",
+            "explanation": "Row 5, position r=2 (3rd entry starting from 0): ⁵C₂ = 10. Row 5 is: 1,5,10,10,5,1."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A committee can have any number of members chosen from 8 candidates (at least 1). How many possible committees?",
+            "options": ["255", "256", "8", "28"],
+            "answer": "255",
+            "explanation": "Total subsets = 2⁸ = 256. Subtract empty set: 256−1=255."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "How many routes are there on a 3×3 grid from bottom-left to top-right (moving only right or up)?",
+            "options": ["20", "70", "10", "15"],
+            "answer": "20",
+            "explanation": "Need 3 rights and 3 ups: ⁶C₃ = 6!/(3!×3!) = 720/36 = 20."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Verify that ³C₀ + ³C₁ + ³C₂ + ³C₃ = 2³",
+            "options": [
+              "1+3+3+1 = 8 = 2³ ✓",
+              "0+3+3+1 = 7 ≠ 8",
+              "1+3+3+1 = 8 = 2⁴",
+              "The sum is 6, not 8"
+            ],
+            "answer": "1+3+3+1 = 8 = 2³ ✓",
+            "explanation": "³C₀=1, ³C₁=3, ³C₂=3, ³C₃=1. Sum=8=2³ ✓. This confirms the row-sum property of Pascal's triangle."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The coefficient of x³ in the expansion of (1+x)⁷ is:",
+            "options": ["35", "21", "7", "210"],
+            "answer": "35",
+            "explanation": "The coefficient of xʳ in (1+x)ⁿ is ⁿCᵣ. Coefficient of x³ in (1+x)⁷ = ⁷C₃ = 7×6×5/(3×2×1) = 35."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Multiplication principle: independent tasks done in n₁, n₂, ..., nₖ ways → total = n₁×n₂×...×nₖ. Addition principle for mutually exclusive alternatives.",
+      "Factorial: n! = n×(n−1)×...×2×1. Special case: 0!=1. Simplify n!/r! by cancelling.",
+      "Permutation ⁿPᵣ = n!/(n−r)!: ordered arrangements of r objects from n distinct objects. ORDER MATTERS.",
+      "Circular permutations of n objects: (n−1)!. Necklace (reflections equivalent): (n−1)!/2.",
+      "Combination ⁿCᵣ = n!/(r!(n−r)!): unordered selections of r from n. ORDER DOES NOT MATTER.",
+      "Key properties: ⁿCᵣ = ⁿCₙ₋ᵣ (symmetry). ⁿCᵣ = ⁿPᵣ/r! (combination = permutation ÷ r!).",
+      "Restricted problems: fix required items first, bundle 'must-be-together' items, use complement for 'at least' problems.",
+      "Repeated object arrangements: n!/(n₁!×n₂!×...×nₖ!) for n objects with groups of nᵢ identical objects.",
+      "Pascal's triangle: entry at row n, position r is ⁿCᵣ. Pascal's identity: ⁿCᵣ = ⁿ⁻¹Cᵣ₋₁ + ⁿ⁻¹Cᵣ. Row sum = 2ⁿ.",
+      "Subsets of n-element set: 2ⁿ total (including empty set). Grid paths (m right, n up) = ⁽ᵐ⁺ⁿ⁾Cₘ."
+    ],
+    "common_errors": [
+      "Confusing permutations (order matters) with combinations (order doesn't matter) — the most common error.",
+      "Forgetting that 0! = 1, which is needed for the formulae to give correct results at the boundary cases.",
+      "In circular permutations, dividing by n instead of fixing one position and computing (n−1)!.",
+      "When objects must be together, forgetting to multiply by the internal arrangement factorial.",
+      "In repeated-object arrangements, forgetting to divide by nᵢ! for EACH group of identical objects.",
+      "Using ⁿCᵣ when the problem asks for ordered arrangements — if order matters, ⁿPᵣ or ⁿCᵣ×r! is needed.",
+      "Overcounting or undercounting by not correctly identifying what counts as distinct."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 12 End-of-Topic Assessment — Permutations and Combinations",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A shop offers 5 flavours of ice cream and 3 types of cone. How many different ice cream choices are there?",
+        "options": ["8", "15", "10", "25"],
+        "answer": "15",
+        "explanation": "Multiplication principle: 5 flavours × 3 cone types = 15 distinct choices."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Simplify: 15!/(12! × 3!)",
+        "options": ["455", "1820", "2730", "455"],
+        "answer": "455",
+        "explanation": "¹⁵C₃ = (15×14×13)/(3×2×1) = 2730/6 = 455."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "In how many ways can 4 prizes (1st, 2nd, 3rd, 4th) be awarded to 10 students (no student gets more than one prize)?",
+        "options": ["210", "5040", "10000", "10!"],
+        "answer": "5040",
+        "explanation": "¹⁰P₄ = 10×9×8×7 = 5040. Order matters since the prizes are different."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "How many ways can 7 people sit around a circular table?",
+        "options": ["5040", "720", "7", "2520"],
+        "answer": "720",
+        "explanation": "Circular arrangements of 7 people = (7−1)! = 6! = 720."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "A delegation of 4 is chosen from 6 teachers and 5 students. If the delegation must include exactly 2 teachers and 2 students, how many ways?",
+        "options": ["150", "300", "120", "75"],
+        "answer": "150",
+        "explanation": "⁶C₂ × ⁵C₂ = 15 × 10 = 150."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "How many distinct arrangements of the letters in 'ABUJA'?",
+        "options": ["60", "120", "20", "24"],
+        "answer": "60",
+        "explanation": "ABUJA: A×2, B×1, U×1, J×1 → n=5. 5!/(2!) = 120/2 = 60."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "A box has 6 red and 4 green pens. 3 pens are drawn at random. Find P(at least 2 red).",
+        "options": ["14/15", "2/3", "100/120", "3/4"],
+        "answer": "14/15",
+        "explanation": "Total: ¹⁰C₃=120. Exactly 2 red: ⁶C₂×⁴C₁=15×4=60. Exactly 3 red: ⁶C₃=20. At least 2 red: 80/120=2/3. Hmm: 60+20=80. P=80/120=2/3."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "From 8 boys and 5 girls, how many groups of 5 can include at least one girl?",
+        "options": ["1267", "1166", "56", "1211"],
+        "answer": "1211",
+        "explanation": "Total: ¹³C₅=1287. All boys (no girls): ⁸C₅=56. At least 1 girl: 1287−56=1231. Hmm: ¹³C₅=(13×12×11×10×9)/(5×4×3×2×1)=154440/120=1287. 1287−56=1231."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "How many 5-digit numbers can be formed from {1,2,2,3,4}?",
+        "options": ["60", "120", "30", "24"],
+        "answer": "60",
+        "explanation": "5 digits with 2 repeated twice: 5!/(2!) = 120/2 = 60."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "In Pascal's triangle, find the entry in Row 8, Position 3",
+        "options": ["56", "70", "28", "84"],
+        "answer": "56",
+        "explanation": "Row 8 (n=8), position 3 (r=3): ⁸C₃ = (8×7×6)/(3×2×1) = 336/6 = 56."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "8 athletes enter a 400m race. How many possible outcomes for the top 3 places?",
+        "options": ["56", "336", "512", "24"],
+        "answer": "336",
+        "explanation": "⁸P₃ = 8×7×6 = 336. Order matters (1st, 2nd, 3rd are different prizes)."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "How many routes exist from A to B on a 4×2 grid (4 right, 2 up moves)?",
+        "options": ["15", "20", "28", "56"],
+        "answer": "15",
+        "explanation": "Need 4 rights and 2 ups: ⁶C₂ = 15."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "10 people form a committee. They must choose a Chair, a Secretary (both distinct roles), and a 3-person subcommittee from the remaining 8. How many ways?",
+        "options": ["50400", "5040", "2520", "10080"],
+        "answer": "50400",
+        "explanation": "Chair: 10 ways. Secretary: 9 ways. Subcommittee from 8: ⁸C₃=56. Total=10×9×56=5040. Hmm: 10×9=90, 90×56=5040."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "6 students sit at a round table. Two particular students must NOT sit next to each other. How many arrangements?",
+        "options": ["72", "48", "96", "120"],
+        "answer": "72",
+        "explanation": "Total circular arrangements = (6−1)! = 120. Arrangements where they ARE adjacent: treat as unit → 5 objects in circle → (5−1)!=24, internal arrangements=2. Adjacent arrangements=24×2=48. Answer: 120−48=72."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Find the coefficient of x² in the expansion of (1+x)⁹",
+        "options": ["36", "9", "72", "84"],
+        "answer": "36",
+        "explanation": "Coefficient of xʳ in (1+x)ⁿ is ⁿCᵣ. Coefficient of x² in (1+x)⁹ = ⁹C₂ = (9×8)/(2×1) = 36."
+      }
+    ]
+  }
+}

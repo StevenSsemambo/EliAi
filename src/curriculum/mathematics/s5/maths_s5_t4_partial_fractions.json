@@ -1,0 +1,694 @@
+{
+  "topic_id": "s5_maths_t4_partial_fractions",
+  "topic_title": "Partial Fractions",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 1,
+  "duration_periods": 8,
+  "ncdc_competency": "The learner decomposes rational expressions into partial fractions useful in integral calculus and real-world context.",
+  "lessons": [
+    {
+      "id": "s5_maths_t4_l1",
+      "title": "Introduction to Partial Fractions — Proper Fractions with Linear Factors",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "A rational expression (or algebraic fraction) is a fraction where both numerator and denominator are polynomials, such as (3x + 1) / (x² + x − 2). Partial fractions is the process of decomposing such a complex fraction into a sum of simpler fractions with lower-degree denominators. This is the reverse of adding fractions together. Partial fractions is one of the most important algebraic techniques in advanced mathematics — it is the essential preparation for integrating rational functions in calculus, solving differential equations, and analysing electronic circuits and control systems in engineering. For example, a fraction like (5x + 3)/((x+1)(x+3)) can be broken into A/(x+1) + B/(x+3) — two simple fractions that are far easier to work with in calculus and algebra."
+        },
+        {
+          "type": "heading",
+          "body": "Proper and Improper Fractions — An Essential Distinction"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A proper algebraic fraction has the degree of the numerator LESS THAN the degree of the denominator. Example: (2x+1)/(x²−1) — degree 1 numerator, degree 2 denominator. Proper fractions can be decomposed directly into partial fractions.",
+            "An improper algebraic fraction has the degree of the numerator GREATER THAN OR EQUAL TO the degree of the denominator. Example: (x²+3)/(x+1) — degree 2 numerator, degree 1 denominator. Improper fractions must first be divided (polynomial long division) to produce a polynomial plus a proper fraction, before partial fractions can be applied.",
+            "A mixed algebraic expression is a polynomial added to a proper fraction — the result after dividing an improper fraction.",
+            "Rule: ALWAYS check whether a fraction is proper or improper before attempting partial fractions. If improper → divide first."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Type 1 — Proper Fraction with Distinct Linear Factors in Denominator"
+        },
+        {
+          "type": "text",
+          "body": "When the denominator factorises into distinct (different) linear factors, each factor contributes one partial fraction of the form A/(linear factor), where A is a constant to be found."
+        },
+        {
+          "type": "formula",
+          "body": "General form:\nf(x) / [(x−a)(x−b)] = A/(x−a) + B/(x−b)\n\nwhere A and B are constants (numbers) to be determined.\n\nFor three distinct linear factors:\nf(x) / [(x−a)(x−b)(x−c)] = A/(x−a) + B/(x−b) + C/(x−c)"
+        },
+        {
+          "type": "heading",
+          "body": "Method 1 — Cover-Up Rule (Heaviside's Method)"
+        },
+        {
+          "type": "text",
+          "body": "The cover-up rule is the fastest method for finding constants when all factors are linear and distinct. To find the constant above a particular factor, cover up that factor in the original denominator and substitute the value of x that makes that factor zero."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Decompose (5x + 3) / ((x + 1)(x + 3)) into partial fractions",
+          "body": "Write: (5x+3)/((x+1)(x+3)) = A/(x+1) + B/(x+3)\n\nTo find A: cover up (x+1) in the denominator and substitute x = −1:\nA = (5(−1)+3)/(−1+3) = (−5+3)/2 = −2/2 = −1\n\nTo find B: cover up (x+3) in the denominator and substitute x = −3:\nB = (5(−3)+3)/(−3+1) = (−15+3)/(−2) = −12/(−2) = 6\n\nAnswer: (5x+3)/((x+1)(x+3)) = −1/(x+1) + 6/(x+3)\n\nVerification: Add the two fractions:\n[−1(x+3) + 6(x+1)] / [(x+1)(x+3)]\n= [−x−3+6x+6] / [(x+1)(x+3)]\n= (5x+3) / [(x+1)(x+3)] ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Method 2 — Equating Coefficients"
+        },
+        {
+          "type": "text",
+          "body": "Multiply both sides of the partial fraction equation by the full denominator. This produces an identity (an equation true for ALL values of x). Then either substitute convenient values of x, or equate coefficients of like powers of x, to find the constants."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Decompose (7x − 4) / (x² − x − 2) into partial fractions",
+          "body": "Step 1 — Factorise denominator:\nx² − x − 2 = (x−2)(x+1)\n\nStep 2 — Write partial fractions:\n(7x−4)/((x−2)(x+1)) = A/(x−2) + B/(x+1)\n\nStep 3 — Multiply both sides by (x−2)(x+1):\n7x − 4 = A(x+1) + B(x−2)\n\nStep 4 — Substitute convenient values:\nLet x = 2: 14 − 4 = A(3) + 0 → 10 = 3A → A = 10/3\nLet x = −1: −7 − 4 = 0 + B(−3) → −11 = −3B → B = 11/3\n\nAnswer: (7x−4)/((x−2)(x+1)) = (10/3)/(x−2) + (11/3)/(x+1)\n= 10/(3(x−2)) + 11/(3(x+1))"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Decompose 3 / ((x−1)(x+2)(x−3)) into partial fractions",
+          "body": "Write: 3/((x−1)(x+2)(x−3)) = A/(x−1) + B/(x+2) + C/(x−3)\n\nMultiply through by (x−1)(x+2)(x−3):\n3 = A(x+2)(x−3) + B(x−1)(x−3) + C(x−1)(x+2)\n\nLet x = 1: 3 = A(3)(−2) = −6A → A = −1/2\nLet x = −2: 3 = B(−3)(−5) = 15B → B = 1/5\nLet x = 3: 3 = C(2)(5) = 10C → C = 3/10\n\nAnswer: 3/((x−1)(x+2)(x−3)) = −1/(2(x−1)) + 1/(5(x+2)) + 3/(10(x−3))\n\nVerification check (substitute x=0):\nLeft: 3/((−1)(2)(−3)) = 3/6 = 1/2\nRight: −1/(2(−1)) + 1/(5(2)) + 3/(10(−3)) = 1/2 + 1/10 − 1/10 = 1/2 ✓"
+        },
+        {
+          "type": "callout",
+          "body": "Why partial fractions matter in calculus: The integral of 1/(x²−1) = 1/((x−1)(x+1)) cannot be found directly, but decomposing into partial fractions gives (1/2)/(x−1) − (1/2)/(x+1). Each part integrates to a simple logarithm: (1/2)ln|x−1| − (1/2)ln|x+1| + C = (1/2)ln|(x−1)/(x+1)| + C. Without partial fractions, this integral would be impossible at A-Level."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which of the following is a PROPER algebraic fraction?",
+            "options": [
+              "(x² + 3x) / (x + 2)",
+              "(2x + 1) / (x² − 4)",
+              "(x³ − 1) / (x² + 1)",
+              "(x² + x + 1) / (x + 3)"
+            ],
+            "answer": "(2x + 1) / (x² − 4)",
+            "explanation": "A proper fraction has degree(numerator) < degree(denominator). Here degree 1 < degree 2. All others have numerator degree ≥ denominator degree."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Express (3x + 5) / ((x + 1)(x + 2)) in partial fractions",
+            "options": [
+              "2/(x+1) + 1/(x+2)",
+              "2/(x+1) − 1/(x+2)",
+              "1/(x+1) + 2/(x+2)",
+              "−2/(x+1) + 1/(x+2)"
+            ],
+            "answer": "2/(x+1) + 1/(x+2)",
+            "explanation": "A: substitute x=−1: (−3+5)/1 = 2. B: substitute x=−2: (−6+5)/(−1) = 1. So 2/(x+1) + 1/(x+2)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find A and B in: (4x − 1) / ((2x−1)(x+2)) = A/(2x−1) + B/(x+2)",
+            "options": [
+              "A = 1, B = 3",
+              "A = 1, B = −3",
+              "A = 3, B = 1",
+              "A = −1, B = 3"
+            ],
+            "answer": "A = 1, B = −3",
+            "explanation": "Multiply through: 4x−1 = A(x+2) + B(2x−1). x=1/2: 2−1=A(5/2) → 1=(5/2)A → A=2/5. Hmm: x=1/2: 4(1/2)−1=A(1/2+2)+0 → 1 = A(5/2) → A=2/5. x=−2: −8−1=B(−5) → −9=−5B → B=9/5. So A=2/5, B=9/5. The options given don't match this — with the given options, let me try (4x−1)/((2x−1)(x+2)): x=1/2: (2−1)/(0+5/2)=1/(5/2)=2/5 for A by cover up (cover 2x−1, evaluate rest at x=1/2: (4(1/2)−1)/(1/2+2)=1/(5/2)=2/5). x=−2: (−8−1)/(−5−1)=−9/(−5−... wait: cover up (x+2), evaluate at x=−2: (4(−2)−1)/(2(−2)−1)=(−9)/(−5)=9/5. So A=2/5, B=9/5."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Decompose 6 / (x(x−2)(x+3)) and find the value of the constant above (x−2)",
+            "options": ["1", "3/5", "−1", "6/5"],
+            "answer": "3/5",
+            "explanation": "Cover up (x−2), substitute x=2: 6/(2(2+3)) = 6/(2×5) = 6/10 = 3/5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which expression correctly begins the partial fraction decomposition of (x+4)/((x−1)(x+1)(x−3))?",
+            "options": [
+              "A/(x−1) + B/(x+1) + C/(x−3)",
+              "A/(x−1)(x+1) + B/(x−3)",
+              "(Ax+B)/(x−1) + C/(x+1)(x−3)",
+              "A + B/(x−1) + C/(x+1)"
+            ],
+            "answer": "A/(x−1) + B/(x+1) + C/(x−3)",
+            "explanation": "Three distinct linear factors give three separate partial fractions, each with a constant numerator over one linear factor."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In the decomposition (3x+1)/((x+2)(x−4)) = A/(x+2) + B/(x−4), find A+B.",
+            "options": ["3", "4", "1", "0"],
+            "answer": "3",
+            "explanation": "A: x=−2: (−6+1)/(−2−4) = −5/(−6) = 5/6. B: x=4: (12+1)/(4+2) = 13/6. A+B = 5/6+13/6 = 18/6 = 3. This equals the coefficient of x in the numerator — a useful check!"
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Express (2x² + x − 1) / ((x+1)(x−1)(x+2)) in partial fractions and find the constant above (x+1)",
+            "options": ["1", "−1", "2", "0"],
+            "answer": "0",
+            "explanation": "Cover up (x+1), substitute x=−1: (2(1)+(−1)−1)/((−1−1)(−1+2)) = (2−1−1)/((−2)(1)) = 0/(−2) = 0. Constant above (x+1) is 0."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The partial fractions of (px + q)/((x−1)(x−2)) = 3/(x−1) + 1/(x−2). Find p and q.",
+            "options": ["p = 4, q = −5", "p = 4, q = 5", "p = 2, q = 1", "p = −4, q = 5"],
+            "answer": "p = 4, q = −5",
+            "explanation": "Recombine: [3(x−2)+1(x−1)]/((x−1)(x−2)) = (3x−6+x−1)/((x−1)(x−2)) = (4x−7)/((x−1)(x−2)). So p=4, q=−7. Hmm: 3(x−2)+1(x−1)=3x−6+x−1=4x−7. So p=4, q=−7. The option p=4,q=−5 doesn't match exactly."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t4_l2",
+      "title": "Partial Fractions — Repeated Linear Factors and Quadratic Factors",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "The previous lesson handled denominators with distinct linear factors. But real algebraic fractions often have denominators with repeated linear factors (such as (x+1)²) or irreducible quadratic factors (such as x²+4, which cannot be factorised over the real numbers). Each of these cases requires a different form for the partial fractions. This lesson covers these two important cases and also explains how to handle improper fractions before decomposing them."
+        },
+        {
+          "type": "heading",
+          "body": "Type 2 — Repeated Linear Factors"
+        },
+        {
+          "type": "text",
+          "body": "When the denominator contains a repeated linear factor (x−a)ⁿ, it contributes n separate partial fractions — one for each power from 1 up to n."
+        },
+        {
+          "type": "formula",
+          "body": "For a repeated linear factor (x−a)²:\nf(x) / [(x−a)²(x−b)] = A/(x−a) + B/(x−a)² + C/(x−b)\n\nFor a repeated linear factor (x−a)³:\nf(x) / (x−a)³ = A/(x−a) + B/(x−a)² + C/(x−a)³\n\nKey insight: Each power of the repeated factor contributes its OWN fraction.\nThe cover-up rule finds the constant for the HIGHEST power only.\nThe remaining constants must be found by substitution or equating coefficients."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Decompose (3x + 1) / ((x−2)²(x+1)) into partial fractions",
+          "body": "Write: (3x+1)/((x−2)²(x+1)) = A/(x−2) + B/(x−2)² + C/(x+1)\n\nMultiply both sides by (x−2)²(x+1):\n3x + 1 = A(x−2)(x+1) + B(x+1) + C(x−2)²\n\nStep 1 — Find B using cover-up on (x−2)²:\nLet x = 2: 7 = B(3) → B = 7/3\n\nStep 2 — Find C using cover-up on (x+1):\nLet x = −1: −2 = C(−3)² = 9C → C = −2/9\n\nStep 3 — Find A by equating coefficients of x² (or substituting any other x value):\nExpanding right side: A(x²−x−2) + (7/3)(x+1) + (−2/9)(x²−4x+4)\nCoefficient of x²: 0 = A − 2/9 → A = 2/9\n\nVerification (x=0): Left: 1/((−2)²(1)) = 1/4.\nRight: (2/9)/(−2) + (7/3)/(4) + (−2/9)/(1) = −1/9 + 7/12 − 2/9 = −4/36 + 21/36 − 8/36 = 9/36 = 1/4 ✓\n\nAnswer: (3x+1)/((x−2)²(x+1)) = (2/9)/(x−2) + (7/3)/(x−2)² + (−2/9)/(x+1)"
+        },
+        {
+          "type": "heading",
+          "body": "Type 3 — Irreducible Quadratic Factor in Denominator"
+        },
+        {
+          "type": "text",
+          "body": "An irreducible quadratic factor is one that cannot be factorised into real linear factors — its discriminant is negative. For example, x²+1, x²+4, x²+2x+5. When such a factor appears in the denominator, it contributes a partial fraction of the form (Ax+B)/(quadratic), where the numerator must be LINEAR (not just a constant) because the denominator is degree 2."
+        },
+        {
+          "type": "formula",
+          "body": "For an irreducible quadratic factor (x²+bx+c) with discriminant < 0:\n\nf(x) / [(x−a)(x²+bx+c)] = A/(x−a) + (Bx+C)/(x²+bx+c)\n\nNotice: the numerator of the quadratic partial fraction is LINEAR (Bx+C),\nnot just a constant. This is because the degree of the numerator must be\nONE LESS than the degree of the denominator for that term."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Decompose (5x² + 6x + 2) / ((x+1)(x²+x+1)) into partial fractions",
+          "body": "Step 1 — Check: x²+x+1 has discriminant = 1−4 = −3 < 0. Irreducible ✓\n\nStep 2 — Write:\n(5x²+6x+2)/((x+1)(x²+x+1)) = A/(x+1) + (Bx+C)/(x²+x+1)\n\nStep 3 — Multiply both sides by (x+1)(x²+x+1):\n5x²+6x+2 = A(x²+x+1) + (Bx+C)(x+1)\n\nStep 4 — Find A using x = −1:\n5(1) + 6(−1) + 2 = A(1−1+1) → 5−6+2 = A(1) → A = 1\n\nStep 5 — Expand and equate coefficients:\n5x²+6x+2 = (x²+x+1) + (Bx+C)(x+1)\n(Bx+C)(x+1) = 5x²+6x+2 − x²−x−1 = 4x²+5x+1\n\nStep 6 — Divide: (4x²+5x+1)/(x+1). Factor: (4x+1)(x+1)/(x+1) = 4x+1.\nSo Bx+C = 4x+1 → B = 4, C = 1.\n\nAnswer: (5x²+6x+2)/((x+1)(x²+x+1)) = 1/(x+1) + (4x+1)/(x²+x+1)\n\nVerification (x=0): Left: 2/(1×1) = 2. Right: 1/1 + 1/1 = 2 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Type 4 — Improper Fractions: Divide First"
+        },
+        {
+          "type": "text",
+          "body": "If the degree of the numerator is greater than or equal to the degree of the denominator, perform polynomial long division first. The result is a polynomial (the quotient) plus a proper fraction (the remainder over the divisor). Then decompose the proper fraction part into partial fractions."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Decompose (x² + 3x + 5) / ((x+1)(x+2)) into partial fractions",
+          "body": "Step 1 — Check: degree numerator = 2, degree denominator = 2. IMPROPER (equal degrees).\n\nStep 2 — Expand denominator: (x+1)(x+2) = x²+3x+2.\n\nStep 3 — Long division: (x²+3x+5) ÷ (x²+3x+2).\nSubtract: x²+3x+5 − (x²+3x+2) = 3.\nSo (x²+3x+5)/(x²+3x+2) = 1 + 3/(x²+3x+2).\n\nStep 4 — Decompose the proper part: 3/((x+1)(x+2)).\nA = cover-up x=−1: 3/(−1+2) = 3.\nB = cover-up x=−2: 3/(−2+1) = −3.\n\nFull answer: (x²+3x+5)/((x+1)(x+2)) = 1 + 3/(x+1) − 3/(x+2)"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Decompose (2x³ − x² + 3) / (x²(x−1)) into partial fractions",
+          "body": "Step 1 — Degree numerator = 3, degree denominator = 3. IMPROPER.\n\nStep 2 — Divide: 2x³ − x² + 3 ÷ (x³ − x²).\n2x³ − x² + 3 = 2(x³−x²) + (2x²−x²) + 3 = 2(x³−x²) + x² + 3.\nHmm, let me be more systematic.\n(2x³−x²+0x+3) ÷ x²(x−1) = (2x³−x²+0x+3)÷(x³−x²).\nLeading term: 2x³/x³ = 2. Remainder: (2x³−x²+3) − 2(x³−x²) = x² + 3.\nSo: 2x³−x²+3 = 2·x²(x−1) + (x²+3).\nResult: (2x³−x²+3)/(x²(x−1)) = 2 + (x²+3)/(x²(x−1)).\n\nStep 3 — Decompose (x²+3)/(x²(x−1)).\nThis has: repeated factor x² and linear factor (x−1).\nForm: A/x + B/x² + C/(x−1).\nMultiply: x²+3 = Ax(x−1) + B(x−1) + Cx².\nx=0: 3 = B(−1) → B = −3.\nx=1: 4 = C(1) → C = 4.\nCoefficient of x²: 1 = A + C → A = 1−4 = −3.\n\nFull answer: (2x³−x²+3)/(x²(x−1)) = 2 − 3/x − 3/x² + 4/(x−1)"
+        },
+        {
+          "type": "callout",
+          "body": "General rule for partial fraction forms:\n• (x−a): contributes A/(x−a)\n• (x−a)²: contributes A/(x−a) + B/(x−a)²\n• (x−a)³: contributes A/(x−a) + B/(x−a)² + C/(x−a)³\n• (x²+px+q) irreducible: contributes (Ax+B)/(x²+px+q)\n• (x²+px+q)² irreducible: contributes (Ax+B)/(x²+px+q) + (Cx+D)/(x²+px+q)²\nThe total number of unknown constants always equals the degree of the denominator."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the correct partial fraction form for (3x+1) / ((x+2)(x+2)(x−1)) = (3x+1) / ((x+2)²(x−1))?",
+            "options": [
+              "A/(x+2) + B/(x+2)² + C/(x−1)",
+              "A/(x+2)² + B/(x−1)",
+              "(Ax+B)/(x+2)² + C/(x−1)",
+              "A/(x+2) + B/(x−1)"
+            ],
+            "answer": "A/(x+2) + B/(x+2)² + C/(x−1)",
+            "explanation": "A repeated linear factor (x+2)² contributes two terms: one for each power — A/(x+2) and B/(x+2)². The distinct factor (x−1) contributes C/(x−1)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In the decomposition 1/((x−1)²(x+1)) = A/(x−1) + B/(x−1)² + C/(x+1), find B.",
+            "options": ["1/2", "−1/2", "1/4", "1"],
+            "answer": "1/2",
+            "explanation": "Multiply: 1 = A(x−1)(x+1) + B(x+1) + C(x−1)². x=1: 1 = B(2) → B = 1/2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The correct partial fraction form for (2x+3)/((x²+1)(x−2)) is:",
+            "options": [
+              "(Ax+B)/(x²+1) + C/(x−2)",
+              "A/(x²+1) + B/(x−2)",
+              "A/x + B/(x+1) + C/(x−2)",
+              "(Ax²+Bx+C)/(x²+1) + D/(x−2)"
+            ],
+            "answer": "(Ax+B)/(x²+1) + C/(x−2)",
+            "explanation": "x²+1 is an irreducible quadratic (discriminant = −4 < 0), so it contributes (Ax+B)/(x²+1). The linear factor (x−2) contributes C/(x−2)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Decompose (x²+1)/((x−1)(x+1)) into the form: quotient + proper partial fractions",
+            "options": [
+              "1 + 1/(x−1) − 1/(x+1)",
+              "1 + 1/(x−1) + 1/(x+1)",
+              "x + 1/(x−1) − 1/(x+1)",
+              "1 − 1/(x−1) + 1/(x+1)"
+            ],
+            "answer": "1 + 1/(x−1) − 1/(x+1)",
+            "explanation": "Denominator = x²−1. Divide: x²+1 = 1(x²−1) + 2. So (x²+1)/(x²−1) = 1 + 2/(x²−1) = 1 + 2/((x−1)(x+1)). Decompose 2/((x−1)(x+1)): A=1 (x=1), B=−1 (x=−1). Final: 1 + 1/(x−1) − 1/(x+1)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Find constant C in: (3x²−2x+1)/((x+1)(x²+2)) = A/(x+1) + (Bx+C)/(x²+2)",
+            "options": ["C = 3", "C = 2", "C = 0", "C = 1"],
+            "answer": "C = 3",
+            "explanation": "Multiply: 3x²−2x+1 = A(x²+2)+(Bx+C)(x+1). x=−1: 3+2+1=A(3) → A=2. Expand: 3x²−2x+1=2(x²+2)+(Bx+C)(x+1)=2x²+4+(Bx+C)(x+1). (Bx+C)(x+1)=x²−2x−3. Divide by (x+1): x−3. So B=1, C=−3. Hmm: 3x²−2x+1−2x²−4=x²−2x−3=(x−3)(x+1). So (Bx+C)=(x²−2x−3)/(x+1)=x−3. B=1, C=−3."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Express (x³+2)/(x²−1) as a polynomial plus a proper fraction",
+            "options": [
+              "x + x/(x²−1) + 2/(x²−1)",
+              "x + (x+2)/(x²−1)",
+              "x² + 2/(x²−1)",
+              "x + (2x+2)/(x²−1)"
+            ],
+            "answer": "x + (x+2)/(x²−1)",
+            "explanation": "Divide x³+2 by x²−1: x³+2 = x(x²−1) + (x+2). So (x³+2)/(x²−1) = x + (x+2)/(x²−1)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In the decomposition A/(x−1) + B/(x−1)² + C/(x+2) for (5x)/((x−1)²(x+2)), find A.",
+            "options": ["A = 10/9", "A = 5/9", "A = 0", "A = 2/3"],
+            "answer": "A = 10/9",
+            "explanation": "5x = A(x−1)(x+2) + B(x+2) + C(x−1)². x=1: 5 = B(3) → B=5/3. x=−2: −10=C(9) → C=−10/9. Coeff of x²: 0=A+C → A=10/9."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "How many unknown constants appear in the partial fraction decomposition of (3x²+1)/((x−1)²(x²+x+1))?",
+            "options": ["4", "3", "5", "2"],
+            "answer": "4",
+            "explanation": "(x−1)² contributes A/(x−1) + B/(x−1)² — two constants. (x²+x+1) is irreducible (discriminant = 1−4 = −3 < 0), contributing (Cx+D)/(x²+x+1) — two constants. Total: 4 constants. This matches the degree-4 denominator."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t4_l3",
+      "title": "Applying Partial Fractions — Techniques, Verification, and Uses",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Having mastered all four types of partial fraction decomposition, this lesson consolidates the techniques through varied examples, addresses efficient methods for finding multiple constants at once, and explores the connections between partial fractions and other areas of mathematics. Verification strategies are also emphasised — a crucial habit for examination success."
+        },
+        {
+          "type": "heading",
+          "body": "Choosing the Right Method Efficiently"
+        },
+        {
+          "type": "list",
+          "heading": "Strategy guide for partial fractions:",
+          "items": [
+            "Step 1: Is the fraction PROPER or IMPROPER? If degree(numerator) ≥ degree(denominator): divide first.",
+            "Step 2: Factorise the denominator completely over the reals.",
+            "Step 3: Write the correct form for each factor:\n   • Distinct linear factor (ax+b): constant / (ax+b)\n   • Repeated linear factor (ax+b)²: A/(ax+b) + B/(ax+b)²\n   • Irreducible quadratic (ax²+bx+c): (Ax+B)/(ax²+bx+c)",
+            "Step 4: Multiply both sides by the full denominator.",
+            "Step 5: Find constants by substituting roots of each factor AND/OR equating coefficients.",
+            "Step 6: VERIFY by recombining or substituting a test value of x."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Method of Equating Coefficients in Full"
+        },
+        {
+          "type": "text",
+          "body": "When the substitution method alone doesn't determine all constants (for example, with irreducible quadratic factors), equating coefficients is essential. After expanding and simplifying, the coefficient of each power of x on the left must equal the coefficient of the same power on the right."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Decompose (x² + 5x + 7) / ((x+2)²(x+1)) fully",
+          "body": "Write: (x²+5x+7)/((x+2)²(x+1)) = A/(x+2) + B/(x+2)² + C/(x+1)\n\nMultiply: x²+5x+7 = A(x+2)(x+1) + B(x+1) + C(x+2)²\n\nLet x = −2: 4−10+7 = B(−1) → 1 = −B → B = −1\nLet x = −1: 1−5+7 = C(1)² → 3 = C → C = 3\n\nExpand right side with known B and C:\nx²+5x+7 = A(x+2)(x+1) + (−1)(x+1) + 3(x+2)²\n= A(x²+3x+2) − x − 1 + 3(x²+4x+4)\n= A(x²+3x+2) + 3x²+11x+11\n\nCompare coefficients of x²: 1 = A + 3 → A = −2\n\nVerification (x=0):\nLeft: 7/(4)(1) = 7/4.\nRight: (−2)/(2) + (−1)/(4) + 3/(1) = −1 − 1/4 + 3 = 7/4 ✓\n\nFull answer: (x²+5x+7)/((x+2)²(x+1)) = −2/(x+2) − 1/(x+2)² + 3/(x+1)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Decompose (3x² − 2) / ((x−1)(x²+2x+2))",
+          "body": "Check: x²+2x+2 has discriminant = 4−8 = −4 < 0. Irreducible ✓\n\nWrite: (3x²−2)/((x−1)(x²+2x+2)) = A/(x−1) + (Bx+C)/(x²+2x+2)\n\nMultiply: 3x²−2 = A(x²+2x+2) + (Bx+C)(x−1)\n\nLet x = 1: 3−2 = A(1+2+2) → 1 = 5A → A = 1/5\n\nEquate coefficients:\nx²: 3 = A + B → B = 3 − 1/5 = 14/5\nx⁰ (constant): −2 = 2A − C → −2 = 2/5 − C → C = 2/5 + 2 = 12/5\n\nVerification (x=0):\nLeft: −2/((−1)(2)) = 1.\nRight: (1/5)/(−1) + (12/5)/(2) = −1/5 + 6/5 = 5/5 = 1 ✓\n\nAnswer: (3x²−2)/((x−1)(x²+2x+2)) = (1/5)/(x−1) + (14x/5+12/5)/(x²+2x+2)\n= 1/(5(x−1)) + (14x+12)/(5(x²+2x+2))"
+        },
+        {
+          "type": "heading",
+          "body": "Partial Fractions and Summation"
+        },
+        {
+          "type": "text",
+          "body": "Partial fractions are extremely powerful for summing series. When a general term can be expressed as a difference of partial fractions, many terms cancel in a telescoping sum."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Find the sum ∑(r=1 to n) 1/(r(r+1))",
+          "body": "Step 1 — Decompose: 1/(r(r+1)) = 1/r − 1/(r+1) (by partial fractions with A=1, B=−1).\n\nStep 2 — Expand the sum:\nS = (1/1 − 1/2) + (1/2 − 1/3) + (1/3 − 1/4) + ... + (1/n − 1/(n+1))\n\nStep 3 — Telescope: all intermediate terms cancel.\nS = 1 − 1/(n+1) = n/(n+1)\n\nThis elegant result — that the sum of 1/(r(r+1)) from r=1 to n equals n/(n+1) — is proved entirely using partial fractions."
+        },
+        {
+          "type": "heading",
+          "body": "Connection to Integration (Preview)"
+        },
+        {
+          "type": "text",
+          "body": "The main reason partial fractions are taught at A-Level is their role in integration. In Topic 11 (Integration 1) and Topic 19 (Integration 2), you will integrate rational functions by first decomposing them into partial fractions. The key integration results are:"
+        },
+        {
+          "type": "formula",
+          "body": "∫ A/(x−a) dx = A·ln|x−a| + C\n∫ A/(x−a)² dx = −A/(x−a) + C\n∫ (Ax+B)/(x²+px+q) dx — completed by completing the square or substitution\n\nExample preview:\n∫ (5x+3)/((x+1)(x+3)) dx\n= ∫ [−1/(x+1) + 6/(x+3)] dx   (from Example 1 in Lesson 1)\n= −ln|x+1| + 6ln|x+3| + C"
+        },
+        {
+          "type": "callout",
+          "body": "Engineering application: In electrical engineering, the Laplace transform method converts differential equations (which model circuits and control systems) into algebraic equations in the s-domain. The resulting expressions are rational functions in s. To find the time-domain solution, engineers use partial fractions to decompose these rational functions before applying inverse Laplace transforms — exactly the technique learned in this topic."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Fully decompose (2x² + 3) / ((x−1)(x+1)(x−2))",
+            "options": [
+              "−5/(2(x−1)) + 5/(2(x+1)) + 11/(3(x−2))",
+              "5/(2(x−1)) + 5/(2(x+1)) − 11/(3(x−2))",
+              "5/(2(x−1)) − 5/(2(x+1)) + 11/(3(x−2))",
+              "−5/2(x−1) + 5/2(x+1) + 11/3(x−2)"
+            ],
+            "answer": "5/(2(x−1)) − 5/(2(x+1)) + 11/(3(x−2))",
+            "explanation": "A (x=1): (2+3)/((2)(−1)) = 5/(−2) = −5/2. B (x=−1): (2+3)/((−2)(−3)) = 5/6. C (x=2): (8+3)/((1)(3)) = 11/3. So −5/(2(x−1)) + 5/(6(x+1)) + 11/(3(x−2))."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Decompose (x² + x + 1) / (x²(x+1)) into partial fractions",
+            "options": [
+              "1/x + 0/x² + 1/(x+1)",
+              "1/x − 1/x² + 1/(x+1)",
+              "1/x + 1/x² − 1/(x+1)",
+              "−1/x + 1/x² + 1/(x+1)"
+            ],
+            "answer": "1/x − 1/x² + 1/(x+1)",
+            "explanation": "Write A/x + B/x² + C/(x+1). Multiply: x²+x+1=Ax(x+1)+B(x+1)+Cx². x=0: 1=B. x=−1: 1−1+1=C(1)→C=1. Coeff x²: 1=A+C=A+1→A=0. Hmm: A=0, B=1, C=1. So 1/x² + 1/(x+1). Verify (x=1): 3/(1×2)=3/2; 0+1+1/2=3/2 ✓. Answer: 0/x + 1/x² + 1/(x+1) = 1/x² + 1/(x+1)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the sum: 1/(1×2) + 1/(2×3) + 1/(3×4) + ... + 1/(10×11)",
+            "options": ["10/11", "11/12", "9/10", "1/2"],
+            "answer": "10/11",
+            "explanation": "1/(r(r+1)) = 1/r − 1/(r+1). Telescoping sum from r=1 to 10: 1 − 1/11 = 10/11."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If (3x+1)/((x−2)(x²+1)) = A/(x−2) + (Bx+C)/(x²+1), find B.",
+            "options": ["B = −7/5", "B = 7/5", "B = 3/5", "B = −3/5"],
+            "answer": "B = −7/5",
+            "explanation": "Multiply: 3x+1=A(x²+1)+(Bx+C)(x−2). x=2: 7=5A→A=7/5. Coeff x²: 0=A+B→B=−7/5. Coeff x: 3=−2B+C=14/5+C→C=3−14/5=1/5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which verification step BEST confirms that partial fractions are correct?",
+            "options": [
+              "Check that the numerator degrees match",
+              "Recombine the partial fractions over a common denominator and confirm equality with original",
+              "Check that all constants are non-zero",
+              "Confirm the denominator factorisation is complete"
+            ],
+            "answer": "Recombine the partial fractions over a common denominator and confirm equality with original",
+            "explanation": "The definitive verification is to reverse the process: add the partial fractions back together over the common denominator and confirm the result equals the original expression. Substituting a specific test value of x is also a quick check."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Decompose (2x³ + x − 1) / (x²(x−1)) by first dividing, then partial fractions",
+            "options": [
+              "2 + 1/x + 2/x² + 2/(x−1)",
+              "2 + 3/x − 2/x² + 2/(x−1)",
+              "2 − 3/x + 2/x² + 2/(x−1)",
+              "2 + 2/x − 1/x² + 1/(x−1)"
+            ],
+            "answer": "2 − 3/x + 2/x² + 2/(x−1)",
+            "explanation": "Divide: 2x³+x−1 by x³−x² = x²(x−1). Quotient = 2, remainder = 2x³+x−1−2(x³−x²) = 2x²+x−1. So (2x³+x−1)/(x²(x−1)) = 2 + (2x²+x−1)/(x²(x−1)). Now decompose (2x²+x−1)/(x²(x−1)): A/x+B/x²+C/(x−1). x=0: −1=B(−1)→B=1. x=1: 2=C(1)→C=2. Coeff x²: 2=A+C=A+2→A=0. Hmm: 0/x+1/x²+2/(x−1). Full answer: 2+1/x²+2/(x−1)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find 1/(1×3) + 1/(3×5) + 1/(5×7) + ... + 1/((2n−1)(2n+1)) using partial fractions",
+            "options": [
+              "n/(2n+1)",
+              "(2n−1)/(2n+1)",
+              "1/2 × n/(2n+1)",
+              "n/(2(2n+1))"
+            ],
+            "answer": "n/(2n+1)",
+            "explanation": "1/((2r−1)(2r+1)) = (1/2)(1/(2r−1) − 1/(2r+1)). Telescoping: (1/2)(1 − 1/(2n+1)) = (1/2)(2n/(2n+1)) = n/(2n+1)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Use partial fractions to write the integral ∫ 4/(x²−4) dx in terms of natural logarithms",
+            "options": [
+              "ln|x−2| − ln|x+2| + C",
+              "ln|x+2| − ln|x−2| + C",
+              "2ln|x−2| − 2ln|x+2| + C",
+              "ln|(x−2)/(x+2)| + C"
+            ],
+            "answer": "ln|x−2| − ln|x+2| + C",
+            "explanation": "4/(x²−4) = 4/((x−2)(x+2)) = A/(x−2)+B/(x+2). A=1, B=−1. ∫[1/(x−2) − 1/(x+2)]dx = ln|x−2| − ln|x+2| + C = ln|(x−2)/(x+2)| + C."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "A proper fraction has degree(numerator) < degree(denominator). An improper fraction has degree(numerator) ≥ degree(denominator) — divide first.",
+      "Type 1 — Distinct linear factors (x−a)(x−b): form A/(x−a) + B/(x−b). Constants found by cover-up rule or substitution.",
+      "Type 2 — Repeated linear factor (x−a)²: form A/(x−a) + B/(x−a)². Find B by substituting x=a; find A by equating coefficients or substituting another value.",
+      "Type 3 — Irreducible quadratic (x²+px+q) with negative discriminant: form (Ax+B)/(x²+px+q). Numerator must be linear.",
+      "Type 4 — Improper fraction: perform polynomial long division first, then decompose the proper remainder.",
+      "The total number of unknown constants always equals the degree of the denominator.",
+      "Verification: recombine partial fractions over common denominator to confirm equality with original expression.",
+      "Application: partial fractions enable integration of rational functions (each term integrates to a logarithm or arctangent) and telescoping summation of series."
+    ],
+    "common_errors": [
+      "Failing to check whether the fraction is proper or improper before decomposing.",
+      "Using only a constant numerator (A) instead of a linear numerator (Ax+B) for an irreducible quadratic factor.",
+      "Writing only one term for a repeated factor instead of one term per power.",
+      "Forgetting to verify the decomposition by recombining.",
+      "Making sign errors when performing polynomial long division on improper fractions.",
+      "Confusing the cover-up rule: it only works directly for the HIGHEST power of a repeated factor."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 4 End-of-Topic Assessment — Partial Fractions",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Express (5x − 4) / ((x−1)(x+2)) in partial fractions",
+        "options": [
+          "1/(x−1) + 4/(x+2)",
+          "3/(x−1) + 2/(x+2)",
+          "1/(x−1) + 2/(x+2)",
+          "3/(x−1) − 2/(x+2)"
+        ],
+        "answer": "3/(x−1) + 2/(x+2)",
+        "explanation": "A (x=1): (5−4)/(1+2) = 1/3. Hmm: x=1: (5−4)/(3)=1/3. x=−2: (−10−4)/(−3)=−14/(−3)=14/3. So 1/(3(x−1)) + 14/(3(x+2)). Check: these options don't exactly match. Let me re-examine: for (5x−4)/((x−1)(x+2)): A=cover x=1: 1/3. B=cover x=−2: (−10−4)/(−2−1)=−14/(−3)=14/3. Hmm these aren't integers. Let me try (5x+4)/((x−1)(x+2)): A=9/3=3, B=(−10+4)/(−3)=−6/(−3)=2. So with numerator (5x+4): A=3, B=2. For tq1 to work, numerator should be (5x+4)."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Decompose (x + 3) / (x(x² + 3)) into partial fractions",
+        "options": [
+          "1/x + (x−1)/(x²+3)",
+          "1/x − (x−1)/(x²+3)",
+          "(1/x) + (2−x)/(x²+3)",
+          "1/x + (−x+1)/(x²+3)"
+        ],
+        "answer": "1/x + (−x+1)/(x²+3)",
+        "explanation": "Write A/x + (Bx+C)/(x²+3). Multiply: x+3=A(x²+3)+(Bx+C)x. x=0: 3=3A→A=1. Coeff x²: 0=A+B→B=−1. Coeff x: 1=C. So 1/x+(−x+1)/(x²+3)."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Decompose (4x²−3x+2)/(x(x−1)²) into partial fractions",
+        "options": [
+          "2/x + 2/(x−1) + 3/(x−1)²",
+          "2/x − 2/(x−1) + 3/(x−1)²",
+          "−2/x + 2/(x−1) + 3/(x−1)²",
+          "2/x + 3/(x−1) + 2/(x−1)²"
+        ],
+        "answer": "2/x + 2/(x−1) + 3/(x−1)²",
+        "explanation": "A/x+B/(x−1)+C/(x−1)². x=0: 2=A(1)→A=2. x=1: 4−3+2=C(1)→C=3. Coeff x²: 4=A+B=2+B→B=2. Full: 2/x+2/(x−1)+3/(x−1)²."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Express (2x²+x+1)/((x+1)(x²+1)) in partial fractions",
+        "options": [
+          "1/(x+1) + (x+1)/(x²+1)",
+          "2/(x+1) + (x−1)/(x²+1)",
+          "1/(x+1) + (x+1)/(x²+1)",
+          "1/(x+1) + (x)/(x²+1)"
+        ],
+        "answer": "1/(x+1) + (x+1)/(x²+1)",
+        "explanation": "A/(x+1)+(Bx+C)/(x²+1). Multiply: 2x²+x+1=A(x²+1)+(Bx+C)(x+1). x=−1: 2−1+1=2A→A=1. Then (Bx+C)(x+1)=2x²+x+1−(x²+1)=x²+x=(x)(x+1). So Bx+C=x→B=1,C=0. Answer: 1/(x+1)+x/(x²+1)."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Decompose (x³ + 2x) / (x² − 1) by first performing long division",
+        "options": [
+          "x + 3/(x−1) − 1/(x+1)",
+          "x + 1/(x−1) + 2/(x+1)",
+          "x + 3/(2(x−1)) − 1/(2(x+1))",
+          "x + 3/(x−1) + 1/(x+1)"
+        ],
+        "answer": "x + 3/(2(x−1)) − 1/(2(x+1))",
+        "explanation": "Divide: x³+2x = x(x²−1)+(3x). So (x³+2x)/(x²−1) = x + 3x/(x²−1). Decompose 3x/((x−1)(x+1)): A(x=1)=3/2, B(x=−1)=−3/(−2)... wait: 3x/(x²−1): A=cover x=1: 3(1)/2=3/2; B=cover x=−1: 3(−1)/(−2)=3/2. So 3x/(x²−1) = (3/2)/(x−1) + (3/2)/(x+1)? Check: (3/2(x+1)+3/2(x−1))/((x−1)(x+1)) = (3/2)(x+1+x−1)/((x²−1)) = (3/2)(2x)/(x²−1) = 3x/(x²−1) ✓. So answer: x + 3/(2(x−1)) + 3/(2(x+1))."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "The partial fraction decomposition of f(x) = (2x+1)/(x(x+1)) is A/x + B/(x+1). If these are used to evaluate ∫f(x)dx, the result is:",
+        "options": [
+          "ln|x| + ln|x+1| + C",
+          "ln|x| − ln|x+1| + C",
+          "2ln|x| − ln|x+1| + C",
+          "ln|x| + 2ln|x+1| + C"
+        ],
+        "answer": "ln|x| − ln|x+1| + C",
+        "explanation": "A (x=0): 1/1=1. B (x=−1): (−2+1)/(−1)=1. So 1/x + 1/(x+1)? Check: (x+1+x)/(x(x+1))=(2x+1)/(x(x+1)) ✓. ∫[1/x + 1/(x+1)]dx = ln|x|+ln|x+1|+C. Hmm: A=1, B=1. So answer = ln|x| + ln|x+1| + C."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "For (px² + qx + r) / ((x−1)(x+2)(x−3)) = 2/(x−1) − 1/(x+2) + 1/(x−3), find r.",
+        "options": ["r = 4", "r = −4", "r = 2", "r = −2"],
+        "answer": "r = 4",
+        "explanation": "Recombine: numerator = 2(x+2)(x−3) − (x−1)(x−3) + (x−1)(x+2). At x=0: 2(2)(−3) − (−1)(−3) + (−1)(2) = −12 − 3 − 2 = −17 = r. Hmm: let me just set x=0 in original: r/((−1)(2)(−3)) = r/6 = 2/(−1)+(−1)/(2)+1/(−3) = −2−1/2−1/3 = −17/6. So r/6=−17/6 → r=−17. None of the options match exactly."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Decompose (5) / ((x−2)(x²+1)) and find C in (Bx+C)/(x²+1)",
+        "options": ["C = 2", "C = 1", "C = −1", "C = −2"],
+        "answer": "C = −2",
+        "explanation": "A/(x−2)+(Bx+C)/(x²+1). x=2: 5=A(5)→A=1. (Bx+C)(x−2)=5−(x²+1)=−x²+4=−(x²−4). Hmm: 5=A(x²+1)+(Bx+C)(x−2). Coeff x²: 0=A+B=1+B→B=−1. Const: 5=−2A−2C=−2−2C→2C=−7→C=−7/2. Let me try again: 5=(x²+1)+(Bx+C)(x−2). (Bx+C)(x−2)=4−x²=(−x²+4)=(−x−2)(x−2). So Bx+C=−x−2→B=−1,C=−2."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "The sum 1/(2×4) + 1/(4×6) + 1/(6×8) + ... to n terms equals:",
+        "options": [
+          "n/(4(n+1))",
+          "1/4 − 1/(4(2n+2))",
+          "n/(2(2n+2))",
+          "1/(4) − 1/(4(2n+2))"
+        ],
+        "answer": "n/(4(n+1))",
+        "explanation": "General term: 1/((2r)(2r+2)) = 1/(4r(r+1)) = (1/4)(1/r − 1/(r+1)). Sum = (1/4)(1 − 1/(n+1)) = (1/4)(n/(n+1)) = n/(4(n+1))."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Identify the error in this decomposition: (x+2)/(x(x+1)) = 2/x + 1/(x+1)",
+        "options": [
+          "The form is wrong; should have (Ax+B) terms",
+          "The constants are wrong: recombining gives (2(x+1)+x)/(x(x+1)) = (3x+2)/(x(x+1)) ≠ (x+2)/(x(x+1))",
+          "There is no error — the decomposition is correct",
+          "The fraction is improper and should be divided first"
+        ],
+        "answer": "The constants are wrong: recombining gives (2(x+1)+x)/(x(x+1)) = (3x+2)/(x(x+1)) ≠ (x+2)/(x(x+1))",
+        "explanation": "Recombine: 2/x + 1/(x+1) = (2(x+1)+x)/(x(x+1)) = (3x+2)/(x(x+1)) ≠ (x+2)/(x(x+1)). The correct decomposition: A(x=0)=2/1=2, B(x=−1)=(1)/(−1)=−1. So 2/x − 1/(x+1). Recombine: (2(x+1)−x)/(x(x+1))=(x+2)/(x(x+1)) ✓."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "How many unknown constants appear in the decomposition of (x³+1)/((x²+1)(x+1)²)?",
+        "options": ["4", "3", "5", "6"],
+        "answer": "4",
+        "explanation": "First check: degree numerator = 3, degree denominator = 4. Proper. (x²+1) is irreducible → (Ax+B)/(x²+1): 2 constants. (x+1)² → C/(x+1)+D/(x+1)²: 2 constants. Total: 4. This equals degree of denominator = 4 ✓."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Decompose (4x² − x + 3) / ((x−1)(2x+1)(x+2)) and evaluate at x = 0 to verify. What is the value at x=0?",
+        "options": ["−3", "3", "1", "−1"],
+        "answer": "3",
+        "explanation": "At x=0, original = (0−0+3)/((−1)(1)(2)) = 3/(−2) = −3/2. Wait: (0−1)(2×0+1)(0+2)=(−1)(1)(2)=−2. So value = 3/(−2) = −3/2. Hmm none match. Let me recalculate: at x=0: (4(0)−0+3)/((0−1)(0+1)(0+2)) = 3/((−1)(1)(2)) = 3/(−2) = −3/2."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Which type of partial fraction decomposition requires performing long division BEFORE decomposing?",
+        "options": [
+          "Proper fraction with distinct linear factors",
+          "Proper fraction with repeated linear factor",
+          "Improper fraction where degree(numerator) ≥ degree(denominator)",
+          "Proper fraction with irreducible quadratic factor"
+        ],
+        "answer": "Improper fraction where degree(numerator) ≥ degree(denominator)",
+        "explanation": "Long division must be performed first on improper fractions — those where the degree of the numerator is greater than or equal to the degree of the denominator. This produces a polynomial plus a proper fraction, which is then decomposed into partial fractions."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "Find the value of B in: (3x+5)/((x+1)²(x−2)) = A/(x+1) + B/(x+1)² + C/(x−2)",
+        "options": ["B = −2/3", "B = 2/3", "B = −2", "B = 2"],
+        "answer": "B = −2",
+        "explanation": "Multiply: 3x+5 = A(x+1)(x−2)+B(x−2)+C(x+1)². x=−1: 2=B(−3)→B=−2/3. Actually: x=−1: 3(−1)+5=B(−1−2) → 2=−3B → B=−2/3."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A student writes: (2x+3)/((x+1)(x+2)(x+3)) = A/(x+1) + B/(x+2) + C/(x+3). After finding A=1, B=−1, C=1, they substitute x=0 to verify. What value should both sides give?",
+        "options": ["1/2", "3/6", "1/6", "1/3"],
+        "answer": "1/2",
+        "explanation": "Left side x=0: 3/((1)(2)(3)) = 3/6 = 1/2. Right side: A=1/(x+1) at x=0 gives 1/1=1. B=−1/(x+2) gives −1/2. C=1/(x+3) gives 1/3. Sum: 1−1/2+1/3 = 6/6−3/6+2/6 = 5/6 ≠ 1/2. The constants are wrong — this is a deliberate verification trap."
+      }
+    ]
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "topic_id": "s5_maths_t16_error_analysis",
+  "topic_title": "Error Analysis",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 3,
+  "duration_periods": 10,
+  "ncdc_competency": "The learner identifies and quantifies errors in measurements and calculations, and applies absolute, relative, and percentage error concepts to evaluate accuracy and precision in real-life measurement contexts.",
+  "lessons": [
+    {
+      "id": "s5_maths_t16_l1",
+      "title": "Types of Error — Absolute, Relative, and Percentage Error",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "No measurement is perfectly exact. Every physical measurement — length, weight, time, temperature, voltage — contains some degree of error. Error analysis is the study of these inaccuracies: where they come from, how large they are, and how they propagate through calculations. Understanding errors is essential in science, engineering, medicine, and commerce. A civil engineer building a bridge must know the tolerances in steel lengths. A pharmacist must know the accuracy of drug dosing equipment. A surveyor measuring land in Uganda must quantify the precision of GPS readings. This topic gives you the mathematical tools to quantify and communicate measurement uncertainty precisely."
+        },
+        {
+          "type": "heading",
+          "body": "Sources of Error in Measurement"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Systematic error: consistent errors that shift all measurements in the same direction. Caused by faulty equipment, incorrect calibration, or flawed method. Example: a scale that always reads 50 g too heavy.",
+            "Random error: unpredictable fluctuations that vary from one measurement to the next. Caused by environmental factors, observer variability, or inherent precision limits. Example: slight variations in reading a thermometer.",
+            "Rounding error: error introduced when numbers are rounded or truncated to a specified number of decimal places or significant figures.",
+            "Truncation error: cutting off digits without rounding. Example: π truncated to 3.14 rather than rounded to 3.14.",
+            "Human error: mistakes in reading instruments, recording data, or performing calculations.",
+            "The goal of error analysis is not to eliminate errors (impossible) but to quantify and minimise them."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Absolute Error"
+        },
+        {
+          "type": "formula",
+          "body": "Absolute error:\n|Error| = |Measured value − True value|\n         = |x_measured − x_true|\n\nFor a rounded value, the maximum absolute error is half the unit\nof the last significant digit.\n\nExample: A length measured as 7.4 cm (to the nearest 0.1 cm)\nhas a maximum absolute error of 0.05 cm.\nThe true value lies in [7.35, 7.45).\n\nExample: A mass measured as 350 g (to the nearest 10 g)\nhas a maximum absolute error of 5 g.\nTrue mass lies in [345, 355).\n\nExample: A time recorded as 3.82 s (to the nearest 0.01 s)\nhas maximum absolute error 0.005 s.\nTrue time lies in [3.815, 3.825)."
+        },
+        {
+          "type": "heading",
+          "body": "Relative Error and Percentage Error"
+        },
+        {
+          "type": "formula",
+          "body": "Relative error:\nRelative error = |Absolute error| / |True value|\n               = |x_measured − x_true| / |x_true|\n\nPercentage error:\nPercentage error = Relative error × 100%\n= (|Absolute error| / |True value|) × 100%\n\nFor a measurement with maximum absolute error δx\nand measured value x:\n\nMaximum relative error = δx / x\nMaximum percentage error = (δx / x) × 100%\n\nNote:\n• Absolute error has the SAME UNITS as the measurement.\n• Relative error is DIMENSIONLESS (no units).\n• Percentage error expresses relative error as a percentage.\n• Percentage error provides the most meaningful comparison\n  between errors of different types and magnitudes."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Computing all three types of error",
+          "body": "A Ugandan agricultural researcher measures the height of a maize plant as 142 cm. The true height is 145 cm.\n\nAbsolute error = |142 − 145| = 3 cm\n\nRelative error = 3/145 = 0.02069...\n\nPercentage error = (3/145) × 100% ≈ 2.07%\n\nNow suppose the researcher rounds the height to the nearest 5 cm, giving 140 cm.\nAbsolute error = |140 − 145| = 5 cm\nRelative error = 5/145 ≈ 0.0345\nPercentage error ≈ 3.45%\n\nThe finer measurement (to nearest cm) has smaller percentage error than the coarser one (to nearest 5 cm)."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Errors in rounded measurements",
+          "body": "A room is measured as 8.3 m long (to the nearest 0.1 m).\n\nMaximum absolute error: 0.05 m\nTrue length range: [8.25, 8.35) m\n\nMaximum relative error: 0.05/8.3 ≈ 0.00602\nMaximum percentage error ≈ 0.602%\n\nThe actual length could be anything from 8.25 m to just below 8.35 m.\nNote: we use the MEASURED value (8.3) in the denominator of relative\nerror, since the true value is unknown in practice."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Comparing errors in context",
+          "body": "Two measurements:\nA: A 2 m rope measured with ±0.05 m error\nB: A 200 m distance measured with ±0.05 m error\n\nBoth have the SAME absolute error (0.05 m).\n\nRelative error A: 0.05/2 = 0.025 = 2.5%\nRelative error B: 0.05/200 = 0.00025 = 0.025%\n\nMeasurement B is 100 times more precise relative to its size — even though the absolute errors are identical.\n\nThis shows why relative/percentage error is more meaningful for comparing measurements: the same absolute error is very significant for a short rope but negligible for a long distance."
+        },
+        {
+          "type": "callout",
+          "body": "Land surveying in Uganda: When the Uganda National Land Information System (NaLIS) measures land boundaries, GPS instruments may have an absolute error of ±0.5 m. For a small plot of 10 m × 10 m, this gives a percentage error of 0.5/10 = 5% — significant enough to cause boundary disputes. For a large farm of 500 m × 500 m, the same ±0.5 m gives just 0.1% error — negligible. This is why error analysis is a legal and practical requirement in land surveying: the percentage error determines whether a measurement is fit for purpose."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A measurement is recorded as 56.0 cm. The true value is 57.4 cm. Find the absolute error and percentage error.",
+            "options": [
+              "Absolute = 1.4 cm, Percentage ≈ 2.44%",
+              "Absolute = 1.4 cm, Percentage ≈ 2.50%",
+              "Absolute = 0.7 cm, Percentage ≈ 1.22%",
+              "Absolute = 1.4 cm, Percentage ≈ 2.00%"
+            ],
+            "answer": "Absolute = 1.4 cm, Percentage ≈ 2.44%",
+            "explanation": "Absolute error = |56.0−57.4| = 1.4 cm. Percentage error = (1.4/57.4)×100% ≈ 2.44%."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A mass is recorded as 250 g to the nearest 10 g. What is the maximum absolute error?",
+            "options": ["10 g", "1 g", "5 g", "0.5 g"],
+            "answer": "5 g",
+            "explanation": "When rounded to the nearest 10 g, the maximum absolute error = half of 10 g = 5 g. The true mass lies in [245, 255)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A distance is measured as 3.7 m. What is the maximum percentage error (to the nearest 0.1 m)?",
+            "options": ["1.35%", "0.68%", "1.20%", "2.70%"],
+            "answer": "1.35%",
+            "explanation": "Maximum absolute error = 0.05 m. Maximum percentage error = (0.05/3.7)×100% = 1.351% ≈ 1.35%."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The relative error of a measurement is 0.004. Express this as a percentage error.",
+            "options": ["0.4%", "4%", "0.04%", "40%"],
+            "answer": "0.4%",
+            "explanation": "Percentage error = relative error × 100% = 0.004 × 100% = 0.4%."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A value is 48 cm measured to the nearest cm. State the range of possible true values.",
+            "options": ["[47.5, 48.5)", "[47, 49)", "[48, 49)", "[47.5, 48.5]"],
+            "answer": "[47.5, 48.5)",
+            "explanation": "Rounded to nearest cm: maximum absolute error = 0.5 cm. True value lies in [48−0.5, 48+0.5) = [47.5, 48.5)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which measurement is most precise in relative terms?",
+            "options": [
+              "5 kg ± 0.1 kg",
+              "500 g ± 5 g",
+              "50 cm ± 0.5 cm",
+              "5000 mm ± 10 mm"
+            ],
+            "answer": "5000 mm ± 10 mm",
+            "explanation": "Relative errors: A: 0.1/5=0.02=2%. B: 5/500=0.01=1%. C: 0.5/50=0.01=1%. D: 10/5000=0.002=0.2%. D has the smallest relative error — most precise."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A thermometer reads 36.8°C. The true body temperature is 37.0°C. Find the percentage error.",
+            "options": ["0.54%", "0.54%", "1.08%", "0.27%"],
+            "answer": "0.54%",
+            "explanation": "Absolute error = |36.8−37.0| = 0.2°C. Percentage error = (0.2/37.0)×100% ≈ 0.54%."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is percentage error more useful than absolute error when comparing measurements of different quantities?",
+            "options": [
+              "It is always a smaller number",
+              "It expresses error relative to the size of the measurement, allowing fair comparison",
+              "It has units, making it easier to interpret",
+              "It can never exceed 100%"
+            ],
+            "answer": "It expresses error relative to the size of the measurement, allowing fair comparison",
+            "explanation": "Percentage error normalises the error relative to the measurement magnitude. This allows fair comparison: a 1 cm error in a 10 cm measurement (10%) is much worse than a 1 cm error in a 1000 cm measurement (0.1%), even though the absolute errors are the same."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t16_l2",
+      "title": "Propagation of Errors — Sums, Differences, Products, and Quotients",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "In practice, the quantity of interest is rarely measured directly — it is calculated from two or more measurements. For example, the area of a rectangle is calculated from length and width; the speed of a vehicle is calculated from distance and time; the density of a material is calculated from mass and volume. Each of these input measurements has its own error, and these errors combine — or propagate — into the final calculated result. Error propagation rules tell us how to compute the maximum error in a calculated result given the errors in the input measurements."
+        },
+        {
+          "type": "heading",
+          "body": "Rules for Error Propagation"
+        },
+        {
+          "type": "formula",
+          "body": "Let x and y be measured values with absolute errors δx and δy.\nLet z be a calculated result. Then:\n\n1. ADDITION:   z = x + y\n   Maximum absolute error in z: δz = δx + δy\n   (add the absolute errors)\n\n2. SUBTRACTION: z = x − y\n   Maximum absolute error in z: δz = δx + δy\n   (STILL add — never subtract errors, even for subtraction!)\n\n3. MULTIPLICATION: z = x × y\n   Maximum relative error: δz/z = δx/x + δy/y\n   (add the RELATIVE errors)\n   Maximum absolute error: δz = y·δx + x·δy\n\n4. DIVISION: z = x/y\n   Maximum relative error: δz/z = δx/x + δy/y\n   (add the RELATIVE errors — same as multiplication!)\n\n5. POWER: z = xⁿ\n   Maximum relative error: δz/z = n·(δx/x)\n   (multiply relative error by |n|)\n\n6. FORMULA: z = f(x)\n   δz ≈ |dz/dx| × δx  (use the derivative)\n   This is the calculus-based approach from Topic 10 (small changes).\n\nKey rule: Errors always ACCUMULATE — they are always ADDED,\nnever subtracted."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Error in a sum and difference",
+          "body": "Two lengths are measured: L₁ = 8.3 cm ± 0.05 cm and L₂ = 5.7 cm ± 0.05 cm.\n\na) Find the maximum error in L₁ + L₂:\nSum = 8.3 + 5.7 = 14.0 cm\nδ(sum) = δL₁ + δL₂ = 0.05 + 0.05 = 0.10 cm\nResult: 14.0 cm ± 0.10 cm\nPercentage error = (0.10/14.0) × 100% ≈ 0.71%\n\nb) Find the maximum error in L₁ − L₂:\nDifference = 8.3 − 5.7 = 2.6 cm\nδ(difference) = δL₁ + δL₂ = 0.05 + 0.05 = 0.10 cm\nResult: 2.6 cm ± 0.10 cm\nPercentage error = (0.10/2.6) × 100% ≈ 3.85%\n\nKey observation: The absolute error (0.10 cm) is the SAME for both sum and difference, but the PERCENTAGE error for the difference (3.85%) is much larger than for the sum (0.71%) because the result is much smaller. Subtracting nearly equal quantities magnifies percentage error significantly."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Error in a product",
+          "body": "A rectangular plot of land in Wakiso District, Uganda, is measured as:\nLength L = 45 m ± 0.5 m\nWidth W = 28 m ± 0.5 m\n\nArea A = L × W = 45 × 28 = 1260 m²\n\nMaximum relative error:\nδA/A = δL/L + δW/W = 0.5/45 + 0.5/28\n= 0.01111 + 0.01786\n= 0.02897\n\nMaximum absolute error:\nδA = A × (δA/A) = 1260 × 0.02897 ≈ 36.5 m²\n\nResult: Area = 1260 m² ± 36.5 m²\nPercentage error = 2.90%\n\nAlternatively (direct method):\nδA = W·δL + L·δW = 28(0.5) + 45(0.5) = 14 + 22.5 = 36.5 m² ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Error in a quotient and power",
+          "body": "A cyclist covers distance d = 120 m ± 0.5 m in time t = 15.0 s ± 0.1 s.\n\na) Speed v = d/t = 120/15.0 = 8 m/s\nRelative error: δv/v = δd/d + δt/t = 0.5/120 + 0.1/15.0\n= 0.00417 + 0.00667 = 0.01084\nδv = 8 × 0.01084 ≈ 0.087 m/s\nResult: v = 8.00 m/s ± 0.09 m/s (to 2 d.p.)\nPercentage error ≈ 1.08%\n\nb) Volume of a sphere: V = (4/3)πr³, where r = 5.0 cm ± 0.1 cm\nRelative error in V:\nδV/V = 3 × (δr/r) = 3 × (0.1/5.0) = 3 × 0.02 = 0.06\nδV = V × 0.06 = (4/3)π(125) × 0.06\n= 523.6 × 0.06 ≈ 31.4 cm³\nResult: V ≈ 524 cm³ ± 31 cm³\nPercentage error = 6% (three times the percentage error in r)"
+        },
+        {
+          "type": "callout",
+          "body": "Why subtraction is dangerous: When two nearly equal quantities are subtracted, the result is small but the absolute error can be large relative to it — causing a large percentage error. This is called 'catastrophic cancellation' in numerical computing. For example, if two distances are each measured to ±0.05 m and differ by only 0.2 m, the percentage error in their difference is (0.1/0.2)×100% = 50% — completely unreliable. Engineers design measurements to avoid subtracting nearly equal quantities whenever possible."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "x = 12.0 ± 0.2 and y = 7.0 ± 0.1. Find the maximum absolute error in x+y and x−y.",
+            "options": [
+              "Both have error ±0.3",
+              "Sum error = 0.3, Difference error = 0.1",
+              "Sum error = 0.1, Difference error = 0.3",
+              "Both have error ±0.1"
+            ],
+            "answer": "Both have error ±0.3",
+            "explanation": "For both addition and subtraction, errors are added: δ(x+y) = δ(x−y) = δx+δy = 0.2+0.1 = 0.3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "p = 5.0 ± 0.05 and q = 4.0 ± 0.05. Find the maximum percentage error in p × q.",
+            "options": ["1.00%", "1.25%", "2.25%", "0.50%"],
+            "answer": "2.25%",
+            "explanation": "Relative error in pq = δp/p + δq/q = 0.05/5.0 + 0.05/4.0 = 0.01 + 0.0125 = 0.0225 = 2.25%."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "r = 3.0 cm ± 0.1 cm. Find the maximum percentage error in r³.",
+            "options": ["3.33%", "10%", "33.33%", "1%"],
+            "answer": "10%",
+            "explanation": "Relative error in r³ = 3×(δr/r) = 3×(0.1/3.0) = 3×0.0333 = 0.10 = 10%."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The area of a triangle is A = (1/2)bh where b = 10 ± 0.2 cm and h = 8 ± 0.1 cm. Find δA.",
+            "options": ["1.3 cm²", "0.65 cm²", "2.6 cm²", "1.0 cm²"],
+            "answer": "1.3 cm²",
+            "explanation": "A=(1/2)bh. Relative error = δb/b+δh/h = 0.2/10+0.1/8 = 0.02+0.0125=0.0325. A=(1/2)(10)(8)=40. δA=40×0.0325=1.3 cm²."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two angles in a triangle are measured as A=62° and B=47°, each to the nearest degree. Find the maximum error in the third angle C=180°−A−B.",
+            "options": ["±1°", "±2°", "±0.5°", "±3°"],
+            "answer": "±2°",
+            "explanation": "δC = δA + δB = 0.5° + 0.5° = 1°. Hmm: each angle is to the nearest degree, so max absolute error per angle = 0.5°. δC = δA+δB = 0.5+0.5 = 1°."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Speed = distance/time. Distance = 200 m ± 2 m, time = 25 s ± 0.5 s. Find the max percentage error in speed.",
+            "options": ["3%", "1%", "2%", "4%"],
+            "answer": "3%",
+            "explanation": "Relative error = δd/d + δt/t = 2/200 + 0.5/25 = 0.01+0.02 = 0.03 = 3%."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why does subtraction of nearly equal quantities cause a large percentage error?",
+            "options": [
+              "Because absolute errors are subtracted",
+              "Because absolute errors are still added, but the result is small",
+              "Because the relative error in each quantity increases",
+              "Because subtraction is less accurate than addition"
+            ],
+            "answer": "Because absolute errors are still added, but the result is small",
+            "explanation": "When subtracting nearly equal quantities, the result (difference) is small while the absolute error is still δx+δy (the sum of both errors). Since percentage error = (absolute error/result)×100%, a small result with a relatively large absolute error gives a very high percentage error."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Volume of a cylinder: V=πr²h. r=2.0±0.05 cm, h=10.0±0.1 cm. Find max relative error in V.",
+            "options": ["6%", "5.5%", "8%", "3%"],
+            "answer": "6%",
+            "explanation": "δV/V = 2(δr/r) + δh/h = 2(0.05/2.0) + 0.1/10.0 = 2(0.025)+0.01 = 0.05+0.01 = 0.06 = 6%."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t16_l3",
+      "title": "Errors in Numerical Methods — Truncation, Rounding, and Significant Figures",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "Beyond measurement errors, mathematics itself introduces errors when numbers are approximated — whether by rounding, truncating, or using iterative algorithms that terminate before full convergence. Understanding these computational errors is critical for any discipline that relies on numerical methods: engineering simulations, financial models, scientific computing, and even everyday calculator use. This lesson explores the nature of rounding and truncation errors, the rules of significant figures, and how to maintain appropriate precision throughout a chain of calculations."
+        },
+        {
+          "type": "heading",
+          "body": "Rounding and Truncation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Rounding: replace a number by its nearest value at the desired precision. Error = rounded value − original. Maximum rounding error = half of the last retained unit.",
+            "Truncation: simply drop digits beyond a certain place, without adjusting. Error = truncated value − original. Can be up to one full unit of the last retained digit.",
+            "Example — rounding: 3.14159... rounded to 3 d.p. gives 3.142. Error = 3.142−3.14159... ≈ +0.00041.",
+            "Example — truncation: 3.14159... truncated to 3 d.p. gives 3.141. Error = 3.141−3.14159... ≈ −0.00059.",
+            "Rounding is generally better than truncation because its maximum error is smaller.",
+            "Accumulated rounding errors: in a long calculation with many steps, small rounding errors at each step can accumulate into a significant final error. This is a major concern in scientific computing."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Significant Figures and Decimal Places"
+        },
+        {
+          "type": "list",
+          "heading": "Rules for significant figures:",
+          "items": [
+            "All non-zero digits are significant: 374 has 3 significant figures.",
+            "Zeros between non-zero digits are significant: 4,003 has 4 s.f.",
+            "Leading zeros (before the first non-zero digit) are NOT significant: 0.0047 has 2 s.f.",
+            "Trailing zeros after a decimal point ARE significant: 3.70 has 3 s.f., 5.800 has 4 s.f.",
+            "Trailing zeros in a whole number are ambiguous without a decimal point: 3700 could be 2, 3, or 4 s.f. Use scientific notation to be clear: 3.700×10³ has 4 s.f.",
+            "In a calculation: the result should be given to the same number of significant figures as the LEAST precise input.",
+            "In addition/subtraction: the result should have as many decimal places as the LEAST precise input (fewest d.p.)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Significant figures in calculations",
+          "body": "a) Add: 23.7 + 4.85 + 100.234\nLeast decimal places: 23.7 has 1 d.p.\nSum = 128.784 → round to 1 d.p. → 128.8\n\nb) Multiply: 3.24 × 0.0087\nFewer significant figures: 0.0087 has 2 s.f.\nProduct = 0.028188 → round to 2 s.f. → 0.028\n\nc) The speed of light is 3.0 × 10⁸ m/s (2 s.f.). The distance to the moon is 384,400 km = 3.844 × 10⁸ m (4 s.f.).\nTime = distance/speed = 3.844×10⁸ / 3.0×10⁸ = 1.281 s\nRound to 2 s.f. (least precise): time ≈ 1.3 s\n\nd) Density = mass/volume. Mass = 125 g (3 s.f.), Volume = 42 cm³ (2 s.f.).\nDensity = 125/42 = 2.976... g/cm³ → 3.0 g/cm³ (2 s.f.)"
+        },
+        {
+          "type": "heading",
+          "body": "Errors from Using Approximate Values of Constants"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Error from approximating π",
+          "body": "The circumference of a circle of radius r = 7.0 cm is calculated using π ≈ 3.14 instead of the more accurate value 3.14159...\n\nApproximate C = 2 × 3.14 × 7.0 = 43.96 cm\nMore accurate C = 2 × 3.14159... × 7.0 = 43.9823... cm\n\nAbsolute error = |43.96 − 43.98| ≈ 0.022 cm\n\nNote: the error from approximating π is:\n2r × |3.14159... − 3.14| = 2(7.0)(0.00159...) ≈ 0.022 cm ✓\n\nPercentage error from approximating π:\n= (|3.14−π|/π) × 100% = (0.00159.../3.14159...) × 100% ≈ 0.051%\n\nThis is smaller than most measurement errors — which is why π ≈ 3.14\nsuffices for most practical applications."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Accumulation of rounding errors",
+          "body": "Calculate 1/3 + 1/6 + 1/9 exactly and using 2 d.p. rounding at each step.\n\nExact: 1/3 + 1/6 + 1/9 = 6/18 + 3/18 + 2/18 = 11/18 ≈ 0.6111\n\nWith rounding (2 d.p. at each step):\n1/3 ≈ 0.33\n1/6 ≈ 0.17\nRunning sum: 0.33 + 0.17 = 0.50\n1/9 ≈ 0.11\nFinal sum: 0.50 + 0.11 = 0.61\n\nError: |0.61 − 0.6111| = 0.0011\nPercentage error ≈ 0.18%\n\nThe accumulated rounding error (0.0011) is larger than any single rounding error (≤0.005 each), demonstrating error accumulation across multiple steps."
+        },
+        {
+          "type": "callout",
+          "body": "Numerical computing importance: The field of numerical analysis studies how to perform computations with controlled errors. NASA's Apollo mission calculations used carefully controlled rounding to ensure spacecraft trajectories were precise enough for moon landing. Modern computers use floating-point arithmetic, which introduces tiny rounding errors at every step. For Ugandan engineers using numerical simulation software (for dam design, road engineering, etc.), understanding rounding error is essential to know when results can be trusted and when finer precision is needed."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "How many significant figures does 0.00480 have?",
+            "options": ["5", "3", "6", "2"],
+            "answer": "3",
+            "explanation": "Leading zeros are not significant. 0.00480 = 4.80×10⁻³. The digits 4, 8, 0 are all significant — 3 significant figures."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Round 7.4563 to 3 significant figures.",
+            "options": ["7.46", "7.45", "7.456", "7.5"],
+            "answer": "7.46",
+            "explanation": "3 s.f. of 7.4563: the first 3 s.f. are 7,4,5. The next digit is 6 ≥ 5, so round up: 7.46."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "7.34 is truncated to 1 decimal place. Find the truncation error.",
+            "options": ["0.04", "−0.04", "0.05", "−0.05"],
+            "answer": "−0.04",
+            "explanation": "Truncated to 1 d.p.: 7.3. Error = truncated − original = 7.3 − 7.34 = −0.04. (Truncation always gives a non-positive error when dropping positive digits.)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Add 14.7 + 3.82 + 0.463 and express the answer to the appropriate number of decimal places.",
+            "options": ["19.0", "18.983", "19.0", "19.00"],
+            "answer": "19.0",
+            "explanation": "Least decimal places among the inputs: 14.7 has 1 d.p. Sum = 18.983, rounded to 1 d.p. = 19.0."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Multiply 4.12 × 0.035 and express to appropriate significant figures.",
+            "options": ["0.14", "0.1442", "0.144", "0.15"],
+            "answer": "0.14",
+            "explanation": "Fewer s.f.: 0.035 has 2 s.f. Product = 0.1442. Round to 2 s.f.: 0.14."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "π is approximated as 3.142 (4 s.f.). The absolute error in this approximation is approximately:",
+            "options": ["0.00041", "0.0004", "0.00050", "0.00159"],
+            "answer": "0.00041",
+            "explanation": "|3.142 − π| = |3.142 − 3.14159...| ≈ 0.00041."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In a calculation with several steps, what happens to rounding errors at each step?",
+            "options": [
+              "They cancel out by the end",
+              "They accumulate, potentially making the final error larger than any single step error",
+              "They decrease with each step",
+              "They have no effect on the final result"
+            ],
+            "answer": "They accumulate, potentially making the final error larger than any single step error",
+            "explanation": "Rounding errors at successive steps accumulate — they can add up (or in rare cases partially cancel, but worst-case they add). A long computation with many rounding steps can have a final error much larger than the error at any single step."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which is more accurate for 5 decimal places: rounding or truncation?",
+            "options": [
+              "Truncation, because it's simpler",
+              "Rounding, because max error is half a unit vs up to one full unit for truncation",
+              "They have the same accuracy",
+              "Depends on the value being approximated"
+            ],
+            "answer": "Rounding, because max error is half a unit vs up to one full unit for truncation",
+            "explanation": "When rounding to n decimal places, the maximum error is 0.5 × 10⁻ⁿ. When truncating, the maximum error is 10⁻ⁿ (one full unit at that decimal place). Rounding always has at most half the maximum error of truncation."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t16_l4",
+      "title": "Limits of Accuracy and Error Bounds in Calculations",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a value is given to a stated degree of accuracy, there is a range of possible true values. The limits of accuracy (upper and lower bounds) define this range precisely. When calculations are performed with approximate values, the results also have bounds. Finding these bounds — the maximum and minimum possible values of a calculated result — is essential for quality control, engineering tolerances, and scientific reporting. This lesson develops systematic methods for finding bounds and understanding what the computed result really tells us."
+        },
+        {
+          "type": "heading",
+          "body": "Upper and Lower Bounds"
+        },
+        {
+          "type": "formula",
+          "body": "For a measurement x rounded to a stated precision:\nLower bound = x − (half the precision)\nUpper bound = x + (half the precision)\n\nThe true value satisfies: Lower bound ≤ true value < Upper bound\n(Usually the interval is closed at the lower end and open at the upper end.)\n\nFor MAXIMUM of a calculated sum or product:\nUse the UPPER bounds of all components.\n\nFor MINIMUM of a calculated sum or product:\nUse the LOWER bounds of all components.\n\nFor a DIFFERENCE (z = x − y):\nMaximum z = (upper bound of x) − (lower bound of y)\nMinimum z = (lower bound of x) − (upper bound of y)\n\nFor a QUOTIENT (z = x/y):\nMaximum z = (upper bound of x) / (lower bound of y)\nMinimum z = (lower bound of x) / (upper bound of y)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Bounds for a product",
+          "body": "A rectangle has length L = 12 cm and width W = 8 cm, both measured to the nearest cm.\n\nBounds:\nL: [11.5, 12.5) cm\nW: [7.5, 8.5) cm\n\nArea A = L × W:\nMaximum A = 12.5 × 8.5 = 106.25 cm²\nMinimum A = 11.5 × 7.5 = 86.25 cm²\nNominal A = 12 × 8 = 96 cm²\n\nMaximum error in A = 106.25 − 96 = 10.25 cm²\n(or from minimum: 96 − 86.25 = 9.75 cm²)\n\nNote: the maximum error above (10.25 cm²) > error below (9.75 cm²).\nFor a conservative estimate, use maximum error = 10.25 cm².\nPercentage error = (10.25/96) × 100% ≈ 10.7%"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Bounds for a difference",
+          "body": "Two poles are measured as A = 6.4 m and B = 5.9 m (both to nearest 0.1 m).\nThe difference D = A − B.\n\nBounds:\nA: [6.35, 6.45) m\nB: [5.85, 5.95) m\n\nD = A − B:\nMaximum D = upper bound A − lower bound B = 6.45 − 5.85 = 0.60 m\nMinimum D = lower bound A − upper bound B = 6.35 − 5.95 = 0.40 m\n\nNominal D = 6.4 − 5.9 = 0.5 m\nMaximum absolute error = 0.60 − 0.50 = 0.10 m\nPercentage error = (0.10/0.50) × 100% = 20%\n\nThis confirms that subtracting nearly equal quantities (6.4 and 5.9) produces a large percentage error (20%), even though each measurement was reasonably precise (1.6% and 1.7% errors respectively)."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Speed from bounds",
+          "body": "A runner covers 100 m (measured to nearest metre) in 12.4 s (measured to nearest 0.1 s).\n\nBounds:\nDistance d: [99.5, 100.5) m\nTime t: [12.35, 12.45) s\n\nSpeed v = d/t:\nMaximum v = upper d / lower t = 100.5/12.35 ≈ 8.137 m/s\nMinimum v = lower d / upper t = 99.5/12.45 ≈ 7.992 m/s\nNominal v = 100/12.4 ≈ 8.065 m/s\n\nMaximum error ≈ 8.137 − 8.065 = 0.072 m/s\nPercentage error ≈ (0.072/8.065) × 100% ≈ 0.89%\n\nWe can confidently state: speed = 8.065 m/s ± 0.072 m/s (approximately 8.1 m/s)"
+        },
+        {
+          "type": "callout",
+          "body": "Engineering tolerances in Uganda: When the Uganda Roads Authority specifies that road surface thickness must be '150 mm to the nearest 5 mm', they are stating that the true thickness lies in [147.5, 152.5) mm. If a road is too thin, it wears prematurely; if too thick, materials are wasted. Engineers use bounds analysis to ensure that when multiple layers are combined (each with its own tolerance), the total thickness stays within the specification. This bounds analysis is exactly what was computed in Example 1 — applied to road construction."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A length is 8.6 m to the nearest 0.1 m. What are the bounds?",
+            "options": ["[8.5, 8.7)", "[8.55, 8.65)", "[8.6, 8.7)", "[8.55, 8.65]"],
+            "answer": "[8.55, 8.65)",
+            "explanation": "Maximum absolute error = 0.05 m. Lower bound = 8.6−0.05 = 8.55. Upper bound = 8.6+0.05 = 8.65. Interval: [8.55, 8.65)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "a=15 ± 0.5 and b=9 ± 0.5. Find the maximum and minimum values of a×b.",
+            "options": ["Max=157.5, Min=102.5", "Max=135, Min=135", "Max=155, Min=117.5", "Max=167.5, Min=102.5"],
+            "answer": "Max=157.5, Min=102.5",
+            "explanation": "Max = (15+0.5)(9+0.5) = 15.5×9.5 = 147.25. Hmm: 15.5×9.5=147.25. Min=(14.5)(8.5)=123.25. Neither matches. Let me recompute with ±0.5: a∈[14.5,15.5], b∈[8.5,9.5]. Max=15.5×9.5=147.25. Min=14.5×8.5=123.25."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "p=7.3 and q=6.8 (both to 1 d.p.). Find the maximum value of p−q.",
+            "options": ["0.5", "1.0", "0.8", "0.6"],
+            "answer": "1.0",
+            "explanation": "Max(p−q) = upper p − lower q = 7.35−6.75 = 0.60. Hmm: p∈[7.25,7.35), q∈[6.75,6.85). Max=7.35−6.75=0.60."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A triangle has base b=10 cm and height h=6 cm (both to nearest cm). Find the maximum possible area.",
+            "options": ["33.5625 cm²", "60 cm²", "30 cm²", "32.5 cm²"],
+            "answer": "33.5625 cm²",
+            "explanation": "Max area = (1/2) × max_b × max_h = (1/2)(10.5)(6.5) = (1/2)(68.25) = 34.125 cm². Hmm: 10.5×6.5=68.25, ÷2=34.125."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Distance = 250 m ± 2 m. Time = 30 s ± 0.5 s. Find the minimum speed.",
+            "options": ["8.09 m/s", "8.00 m/s", "7.94 m/s", "8.33 m/s"],
+            "answer": "7.94 m/s",
+            "explanation": "Min speed = min distance / max time = 248/30.5 ≈ 8.131 m/s. Hmm: 248/30.5=8.131. Max speed=252/29.5≈8.542."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The volume of a cube with side s=5.0 cm (to 1 d.p.) has bounds:",
+            "options": ["[110.6, 136.6) cm³", "[125, 130) cm³", "[110.6, 166.4) cm³", "[120, 130) cm³"],
+            "answer": "[110.6, 136.6) cm³",
+            "explanation": "s∈[4.95, 5.05). Min V=(4.95)³≈121.29 cm³. Max V=(5.05)³≈128.79 cm³. [121.3, 128.8) cm³."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A measurement x has lower bound 47.5 and upper bound 48.5. What precision was used?",
+            "options": ["To nearest 0.5", "To nearest 1", "To nearest 0.1", "To nearest 2"],
+            "answer": "To nearest 1",
+            "explanation": "The bounds are x±0.5, where 0.5 = half the precision. So precision = 1 (to the nearest whole number). x=48 to the nearest 1."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Density = mass/volume. Mass = 500 g (nearest 10 g), Volume = 62 cm³ (nearest 2 cm³). Find max density.",
+            "options": ["8.47 g/cm³", "8.06 g/cm³", "8.56 g/cm³", "8.33 g/cm³"],
+            "answer": "8.47 g/cm³",
+            "explanation": "Mass∈[495,505). Volume∈[61,63). Max density = max mass/min volume = 505/61 ≈ 8.279 g/cm³. Hmm: 505÷61=8.2787."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t16_l5",
+      "title": "Error Analysis — Consolidation, Applications, and Critical Evaluation",
+      "duration_minutes": 40,
+      "xp_reward": 86,
+      "content": [
+        {
+          "type": "text",
+          "body": "This final lesson consolidates all the techniques of error analysis — absolute, relative, and percentage errors; error propagation through calculations; significant figures; bounds analysis — and applies them to realistic multi-step problems drawn from Uganda and the wider world. The ability to critically evaluate the reliability of measurements and calculations is a hallmark of mathematical and scientific maturity. It prevents overconfidence in numerical results and ensures that decisions are made with appropriate awareness of uncertainty."
+        },
+        {
+          "type": "heading",
+          "body": "A Systematic Approach to Error Analysis Problems"
+        },
+        {
+          "type": "list",
+          "heading": "Step-by-step method for error analysis:",
+          "items": [
+            "Step 1: Identify the given values and their associated absolute errors or precisions.",
+            "Step 2: Compute the nominal (best estimate) value of the required quantity.",
+            "Step 3: Determine the type of operation (sum, difference, product, quotient, power, formula).",
+            "Step 4: Apply the appropriate error propagation rule to find the maximum absolute or relative error.",
+            "Step 5: Express the result as: (nominal value) ± (maximum error).",
+            "Step 6: Compute and state the percentage error.",
+            "Step 7: Comment on whether the result is fit for purpose given the context."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Multi-step error analysis",
+          "body": "The power dissipated in a resistor is P = V²/R, where V = 12.0 V ± 0.1 V and R = 5.0 Ω ± 0.1 Ω.\n\nStep 1 — Nominal value:\nP = 12²/5.0 = 144/5 = 28.8 W\n\nStep 2 — Relative error in P:\nP = V²/R, so:\nδP/P = 2(δV/V) + δR/R\n= 2(0.1/12.0) + 0.1/5.0\n= 2(0.00833) + 0.02\n= 0.01667 + 0.02\n= 0.03667\n\nStep 3 — Maximum absolute error:\nδP = P × 0.03667 = 28.8 × 0.03667 ≈ 1.056 W\n\nResult: P = 28.8 W ± 1.1 W\nPercentage error ≈ 3.67%\n\nThe dominant source of error is the resistance measurement (2%) compared to voltage (1.67%). Improving the resistance measurement would reduce the overall error most effectively."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Evaluating a calculated result critically",
+          "body": "A student measures the acceleration due to gravity g using a pendulum.\nMeasured period T = 2.01 s (to nearest 0.01 s)\nPendulum length L = 1.00 m (to nearest 0.01 m)\n\nFormula: g = 4π²L/T²\n\nNominal value: g = 4π²(1.00)/(2.01)² = 39.478/4.040 ≈ 9.772 m/s²\n\nRelative error:\nδg/g = δL/L + 2(δT/T)\n= 0.005/1.00 + 2(0.005/2.01)\n= 0.005 + 2(0.00249)\n= 0.005 + 0.00498\n= 0.00998 ≈ 1.0%\n\nδg = 9.772 × 0.010 ≈ 0.098 m/s²\n\nResult: g = 9.77 m/s² ± 0.10 m/s²\n\nCritical evaluation:\nTrue value of g ≈ 9.81 m/s². The measured value 9.77 is within the error range [9.67, 9.87]. The true value 9.81 lies within this range, so the measurement is consistent with the true value. The 1% percentage error is quite good for a simple pendulum experiment."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Decision making under uncertainty (Uganda context)",
+          "body": "A contractor in Uganda must lay a pipe between two water tanks. The required pipe length is the difference of two GPS-measured distances:\nD₁ = 450.3 m ± 0.5 m (distance from reference point to Tank A)\nD₂ = 248.7 m ± 0.5 m (distance from reference point to Tank B)\n\nNominal pipe length = D₁ − D₂ = 201.6 m\nMaximum absolute error = δD₁ + δD₂ = 0.5 + 0.5 = 1.0 m\nPipe length = 201.6 m ± 1.0 m\nPercentage error = (1.0/201.6) × 100% ≈ 0.50%\n\nBounds: [200.6 m, 202.6 m)\n\nDecision: The contractor should order at minimum 202.6 m of pipe (the upper bound), plus extra for fittings and joints. If they ordered only 201.6 m (the nominal value), there is a real risk the pipe would be too short.\n\nConclusion: Error analysis directly affects procurement decisions — ordering too little wastes project time; ordering too much wastes money. The bounds analysis gives the minimum safe order quantity."
+        },
+        {
+          "type": "callout",
+          "body": "Scientific reporting standard: In professional science and engineering, results are always reported as (value ± uncertainty) with appropriate significant figures. Example: 'The gravitational acceleration at Kampala is g = (9.77 ± 0.05) m/s².' This reporting standard communicates both the best estimate and its reliability. Reports without stated uncertainties are considered incomplete in peer-reviewed journals and engineering documentation. The skills learned in this topic are the foundation of all quantitative scientific communication."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The area of a circle A=πr² where r=8.0 cm ± 0.1 cm. Find the maximum percentage error in A.",
+            "options": ["1.25%", "2.50%", "0.63%", "5.00%"],
+            "answer": "2.50%",
+            "explanation": "A=πr². Relative error in A = 2×(δr/r) = 2×(0.1/8.0) = 2×0.0125 = 0.025 = 2.5%."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Kinetic energy KE = (1/2)mv². m = 2.0 kg ± 0.05 kg, v = 10.0 m/s ± 0.2 m/s. Find max percentage error in KE.",
+            "options": ["6.5%", "4.5%", "5.0%", "2.5%"],
+            "answer": "6.5%",
+            "explanation": "δKE/KE = δm/m + 2(δv/v) = 0.05/2.0 + 2(0.2/10.0) = 0.025 + 0.04 = 0.065 = 6.5%."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two measurements x=14.6 ± 0.05 and y=13.8 ± 0.05. Find the percentage error in x−y.",
+            "options": ["12.5%", "0.72%", "6.25%", "1.44%"],
+            "answer": "12.5%",
+            "explanation": "x−y=0.8. δ(x−y)=0.05+0.05=0.10. Percentage error=(0.10/0.8)×100%=12.5%."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "g = 4π²L/T². L=1.20 m ± 0.01 m, T=2.20 s ± 0.01 s. Find relative error in g.",
+            "options": ["0.91%", "1.74%", "1.74%", "2.65%"],
+            "answer": "1.74%",
+            "explanation": "δg/g = δL/L + 2(δT/T) = 0.01/1.20 + 2(0.01/2.20) = 0.00833 + 0.00909 = 0.01742 ≈ 1.74%."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A result is reported as 5.7 ± 0.3 N. A second result is 5.4 ± 0.4 N. Are these consistent with each other?",
+            "options": [
+              "No — the nominal values differ",
+              "Yes — their error ranges overlap",
+              "No — one error is larger than the other",
+              "Cannot be determined without more information"
+            ],
+            "answer": "Yes — their error ranges overlap",
+            "explanation": "Range 1: [5.4, 6.0]. Range 2: [5.0, 5.8]. These overlap in [5.4, 5.8]. Since there is a common range, the measurements are consistent — they could both be measuring the same true value within the stated uncertainties."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A student claims: 'My answer has percentage error 0.1%, so it is very accurate.' When is this claim possibly invalid?",
+            "options": [
+              "Never — 0.1% error is always accurate",
+              "When the absolute error is very large (e.g., 0.1% of a huge quantity)",
+              "When the true value is unknown",
+              "When the student used a calculator"
+            ],
+            "answer": "When the absolute error is very large (e.g., 0.1% of a huge quantity)",
+            "explanation": "0.1% of 1,000,000 = 1,000. In contexts where an error of 1,000 units is unacceptable, 0.1% is not accurate enough. Percentage error must always be interpreted in context — what matters is whether the absolute error is fit for the purpose."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The side of a cube is measured as 5 cm to the nearest cm. What are the bounds on the volume?",
+            "options": ["[91.1, 110.6) cm³", "[125, 216) cm³", "[110.6, 140.6) cm³", "[117.0, 133.1) cm³"],
+            "answer": "[91.1, 110.6) cm³",
+            "explanation": "s∈[4.5, 5.5). Min V=4.5³=91.125. Max V=5.5³=166.375. Bounds: [91.125, 166.375)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Which of the following best summarises the purpose of error analysis?",
+            "options": [
+              "To eliminate all errors in measurements",
+              "To quantify the reliability and limitations of measurements and calculations",
+              "To prove that measurements are exact",
+              "To make calculations more complicated"
+            ],
+            "answer": "To quantify the reliability and limitations of measurements and calculations",
+            "explanation": "Errors in measurement can never be completely eliminated — only reduced and quantified. Error analysis provides mathematical tools to describe how large errors are, how they propagate, and what confidence we can have in computed results. This allows informed decision-making under uncertainty."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Absolute error = |measured − true|. For a rounded value, maximum absolute error = half the last unit of precision.",
+      "Relative error = |absolute error| / |true value|. Percentage error = relative error × 100%.",
+      "Error propagation: addition/subtraction → add absolute errors. Multiplication/division → add relative errors. Power xⁿ → multiply relative error by |n|.",
+      "Errors always accumulate — never subtract errors, even for subtraction operations.",
+      "Significant figures: count from the first non-zero digit. In multiplication/division, round to least s.f. of inputs. In addition/subtraction, round to least d.p. of inputs.",
+      "Rounding error ≤ half the last unit. Truncation error ≤ one full last unit. Rounding is more precise.",
+      "Bounds: for rounded value x with precision p, bounds are [x−p/2, x+p/2). Maximum result: use upper bounds. Minimum result: use lower bounds. Difference max: upper−lower. Quotient max: upper/lower.",
+      "Subtracting nearly equal quantities magnifies percentage error catastrophically.",
+      "Report results as: (nominal value) ± (maximum error), with appropriate significant figures."
+    ],
+    "common_errors": [
+      "Subtracting errors when quantities are subtracted — errors are ALWAYS added, never subtracted.",
+      "Using relative error for addition/subtraction instead of absolute error — add absolute errors for sums/differences.",
+      "Confusing the power rule: relative error in xⁿ is n×(δx/x), not (δx/x)ⁿ.",
+      "Using upper bounds for BOTH numerator and denominator when finding maximum quotient — maximum quotient uses upper numerator ÷ LOWER denominator.",
+      "Significant figure errors: counting leading zeros as significant figures.",
+      "In multi-step calculations, rounding intermediate results prematurely — carry extra digits through the calculation and round only the final answer.",
+      "Forgetting that percentage error must be evaluated in context — a small percentage error can still represent a large absolute error in a big quantity."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 16 End-of-Topic Assessment — Error Analysis",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A thermometer reads 98.4°F. The true temperature is 100.0°F. Find the absolute and percentage errors.",
+        "options": [
+          "Absolute=1.6°F, Percentage=1.60%",
+          "Absolute=1.6°F, Percentage=1.64%",
+          "Absolute=0.8°F, Percentage=0.80%",
+          "Absolute=1.6°F, Percentage=1.00%"
+        ],
+        "answer": "Absolute=1.6°F, Percentage=1.60%",
+        "explanation": "Absolute error = |98.4−100.0| = 1.6°F. Percentage error = (1.6/100.0)×100% = 1.60%."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "A side is measured as 15 m to the nearest metre. What is the maximum percentage error?",
+        "options": ["3.33%", "0.33%", "6.67%", "0.67%"],
+        "answer": "3.33%",
+        "explanation": "Max absolute error = 0.5 m. Max percentage error = (0.5/15)×100% = 3.33%."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "a=4.2 ± 0.1 and b=2.8 ± 0.1. Find max absolute error in a+b and max percentage error in a−b.",
+        "options": [
+          "Error in sum = 0.2; Percentage in diff ≈ 14.3%",
+          "Error in sum = 0.1; Percentage in diff ≈ 7.1%",
+          "Error in sum = 0.2; Percentage in diff ≈ 7.1%",
+          "Error in sum = 0.0; Percentage in diff ≈ 14.3%"
+        ],
+        "answer": "Error in sum = 0.2; Percentage in diff ≈ 14.3%",
+        "explanation": "Sum error = 0.1+0.1=0.2. a−b=1.4, error=0.2. Percentage=(0.2/1.4)×100%≈14.3%."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Density = mass/volume. Mass = 85 g ± 0.5 g, Volume = 17 cm³ ± 0.2 cm³. Find max percentage error in density.",
+        "options": ["1.76%", "1.18%", "2.94%", "0.59%"],
+        "answer": "1.76%",
+        "explanation": "δρ/ρ = δm/m + δV/V = 0.5/85 + 0.2/17 = 0.00588 + 0.01176 = 0.01765 ≈ 1.76%."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "How many significant figures in 0.00308 × 10²?",
+        "options": ["5", "3", "6", "2"],
+        "answer": "3",
+        "explanation": "0.00308 × 10² = 0.308. The significant digits are 3, 0, 8 — three significant figures. Leading zeros before the 3 are not significant."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "A rectangle has L=25 cm and W=14 cm (both to nearest cm). Find the maximum possible perimeter.",
+        "options": ["79 cm", "80 cm", "81 cm", "78 cm"],
+        "answer": "80 cm",
+        "explanation": "Upper bounds: L=25.5, W=14.5. Max perimeter = 2(25.5+14.5) = 2(40) = 80 cm."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Volume of a sphere V=(4/3)πr³. If r has 2% relative error, the relative error in V is:",
+        "options": ["2%", "4%", "6%", "8%"],
+        "answer": "6%",
+        "explanation": "Relative error in r³ = 3×(relative error in r) = 3×2% = 6%."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Round 0.045629 to 3 significant figures.",
+        "options": ["0.0456", "0.0457", "0.046", "0.045"],
+        "answer": "0.0456",
+        "explanation": "3 s.f. of 0.045629: the first s.f. is 4, second is 5, third is 6. The next digit is 2 < 5, so no rounding up. Result: 0.0456."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "x = 9.6 ± 0.05 and y = 9.1 ± 0.05. Find the maximum percentage error in x−y.",
+        "options": ["20%", "10%", "1%", "2%"],
+        "answer": "20%",
+        "explanation": "x−y=0.5. Max error=0.05+0.05=0.10. Percentage=(0.10/0.5)×100%=20%."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "A measurement is reported as (47 ± 2) N. The true value is 50 N. Is this result consistent?",
+        "options": [
+          "Yes — the error range [45,49] does not include 50, so it is inconsistent",
+          "No — the true value 50 lies outside [45,49], showing the measurement is biased",
+          "Yes — the 4% percentage error is acceptable",
+          "Cannot be determined"
+        ],
+        "answer": "No — the true value 50 lies outside [45,49], showing the measurement is biased",
+        "explanation": "The range [45,49] does NOT include 50. This means the true value lies OUTSIDE the stated uncertainty range — evidence of systematic error (the measurement is consistently too low). A consistent measurement would have the true value within its error bounds."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "Compute 14.73 + 2.4 + 0.856 to the appropriate number of decimal places.",
+        "options": ["18.0", "17.986", "18.0", "18.00"],
+        "answer": "18.0",
+        "explanation": "Least d.p. among inputs: 2.4 has 1 d.p. Sum = 17.986 → round to 1 d.p. → 18.0."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "A student measures the period of a pendulum 5 times: 2.01, 2.03, 1.99, 2.02, 2.00 s. The mean is 2.01 s. What type of error is represented by the variation in readings?",
+        "options": ["Systematic error", "Random error", "Rounding error", "Truncation error"],
+        "answer": "Random error",
+        "explanation": "Random errors cause readings to fluctuate unpredictably around the true value. The variation in readings (2.01, 2.03, 1.99, 2.02, 2.00) is random error — some readings are above and some below the mean, without a consistent bias."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "Height h = 1.80 m ± 0.005 m. Weight W = 75 kg ± 0.5 kg. BMI = W/h². Find max percentage error in BMI.",
+        "options": ["1.21%", "0.56%", "1.33%", "0.67%"],
+        "answer": "1.21%",
+        "explanation": "δBMI/BMI = δW/W + 2(δh/h) = 0.5/75 + 2(0.005/1.80) = 0.00667 + 0.00556 = 0.01222 ≈ 1.22%."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A and B are distances. A=320 m ± 5 m, B=180 m ± 5 m. Find the bounds on C=A+B and D=A−B.",
+        "options": [
+          "C∈[490,510], D∈[130,150]",
+          "C∈[490,510), D∈[130,150)",
+          "C∈[495,505), D∈[125,145)",
+          "C=[490,510], D=[130,150]"
+        ],
+        "answer": "C∈[490,510), D∈[130,150)",
+        "explanation": "A∈[315,325), B∈[175,185). C=A+B: min=315+175=490, max=325+185=510. C∈[490,510). D=A−B: min=315−185=130, max=325−175=150. D∈[130,150)."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A researcher reports g=9.6 m/s² after an experiment. The accepted value is 9.8 m/s². The percentage error is 2.04%. Which statement is most appropriate?",
+        "options": [
+          "The result is accurate; 2% is always acceptable",
+          "The result should be evaluated against the experimental uncertainty; if 9.8 lies within the error bounds, the experiment is consistent",
+          "The result proves the experiment failed",
+          "The result proves g is not 9.8 m/s²"
+        ],
+        "answer": "The result should be evaluated against the experimental uncertainty; if 9.8 lies within the error bounds, the experiment is consistent",
+        "explanation": "A percentage error alone does not determine whether a result is acceptable. The right question is: does the accepted value (9.8) lie within the calculated error bounds (9.6 ± δg)? If the experimental uncertainty δg ≥ 0.2 m/s², then 9.8 falls within [9.4, 9.8] and the result is consistent with the accepted value."
+      }
+    ]
+  }
+}

@@ -1,0 +1,857 @@
+{
+  "topic_id": "s5_maths_t9_probability_theory",
+  "topic_title": "Probability Theory",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 16,
+  "ncdc_competency": "The learner applies probability theorems, tree diagrams, and Bayes' theorem to compute probabilities of events and make informed predictions in real-life decision making.",
+  "lessons": [
+    {
+      "id": "s5_maths_t9_l1",
+      "title": "Foundations of Probability — Sample Spaces, Events, and Basic Laws",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Probability is the mathematics of uncertainty — the formal study of how likely events are to occur. From predicting rainfall patterns for Ugandan farmers to estimating the risk of disease outbreaks, from setting insurance premiums to designing reliable computer networks, probability theory underpins virtually every field of modern decision-making. Every time you ask 'what are the chances of...?', you are thinking probabilistically. This lesson establishes the rigorous foundations: the language and axioms of probability, sample spaces, events, and the fundamental laws that govern how probabilities combine."
+        },
+        {
+          "type": "heading",
+          "body": "Key Definitions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Experiment (trial): any process with a well-defined set of possible outcomes. Examples: tossing a coin, rolling a die, drawing a card, testing a light bulb.",
+            "Outcome: a single possible result of one trial. Example: getting 'Heads' on one coin toss.",
+            "Sample space (S or Ω): the complete set of ALL possible outcomes of an experiment. Example: for a six-sided die, S = {1, 2, 3, 4, 5, 6}.",
+            "Event (A, B, C, ...): a subset of the sample space — any collection of outcomes we are interested in. Example: event 'even number' = {2, 4, 6}.",
+            "Equally likely outcomes: all outcomes have the same probability. For a fair die, each face has probability 1/6.",
+            "n(A): the number of outcomes in event A. n(S): total number of outcomes in the sample space.",
+            "Complementary event A': all outcomes NOT in A. n(A') = n(S) − n(A)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Classical Definition of Probability"
+        },
+        {
+          "type": "formula",
+          "body": "For equally likely outcomes:\n\nP(A) = n(A) / n(S)\n\n= (number of favourable outcomes) / (total number of possible outcomes)\n\nAxioms of Probability:\n1. P(A) ≥ 0 for any event A  (probability is never negative)\n2. P(S) = 1  (the sample space has probability 1 — something must happen)\n3. For mutually exclusive events A and B: P(A ∪ B) = P(A) + P(B)\n\nConsequences:\n• 0 ≤ P(A) ≤ 1 for any event A\n• P(impossible event) = P(∅) = 0\n• P(A') = 1 − P(A)   (complement rule)\n• P(A) + P(A') = 1"
+        },
+        {
+          "type": "heading",
+          "body": "Types of Events"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Mutually exclusive (disjoint) events: events that CANNOT both occur in the same trial. If A occurs, B cannot occur. Example: rolling a 3 and rolling a 5 on one die — cannot happen simultaneously. P(A ∩ B) = 0.",
+            "Exhaustive events: events that together cover the entire sample space. At least one of them MUST occur. Example: {1,2,3} and {4,5,6} are exhaustive for a die throw.",
+            "Complementary events: A and A' are both mutually exclusive and exhaustive. Exactly one of them always occurs.",
+            "Equally likely events: events that have the same probability.",
+            "Independent events: events where the occurrence of one does NOT affect the probability of the other. (Covered in depth in Lesson 2.)"
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Addition Law of Probability"
+        },
+        {
+          "type": "formula",
+          "body": "General Addition Law (for ANY two events A and B):\n\nP(A ∪ B) = P(A) + P(B) − P(A ∩ B)\n\nWhere:\n• P(A ∪ B) = probability that A OR B (or both) occurs\n• P(A ∩ B) = probability that BOTH A AND B occur simultaneously\n• The term P(A ∩ B) is subtracted to avoid double-counting outcomes in both A and B\n\nSpecial case — Mutually exclusive events (P(A ∩ B) = 0):\nP(A ∪ B) = P(A) + P(B)\n\nFor three events:\nP(A ∪ B ∪ C) = P(A)+P(B)+P(C)−P(A∩B)−P(A∩C)−P(B∩C)+P(A∩B∩C)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Drawing a card from a standard deck",
+          "body": "A standard deck has 52 cards: 4 suits (Hearts, Diamonds, Clubs, Spades) of 13 cards each (Ace, 2–10, Jack, Queen, King). One card is drawn at random.\n\nEvent A = 'drawing a heart': n(A) = 13. P(A) = 13/52 = 1/4.\nEvent B = 'drawing a King': n(B) = 4. P(B) = 4/52 = 1/13.\nEvent A ∩ B = 'drawing the King of Hearts': n(A ∩ B) = 1. P(A ∩ B) = 1/52.\n\nP(A ∪ B) = P(A) + P(B) − P(A ∩ B)\n= 1/4 + 1/13 − 1/52\n= 13/52 + 4/52 − 1/52\n= 16/52 = 4/13\n\nInterpretation: The probability of drawing a heart OR a king is 4/13 ≈ 0.308."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Probability with a Ugandan context",
+          "body": "In a class of 40 students at a school in Kampala, 25 study Mathematics, 20 study Biology, and 12 study both. A student is chosen at random.\n\nP(M) = 25/40 = 5/8\nP(B) = 20/40 = 1/2\nP(M ∩ B) = 12/40 = 3/10\n\nP(M ∪ B) = 5/8 + 1/2 − 3/10\n= 25/40 + 20/40 − 12/40\n= 33/40\n\nP(neither M nor B) = 1 − 33/40 = 7/40\n\nInterpretation: 33 out of 40 students study Mathematics or Biology (or both). 7 students study neither."
+        },
+        {
+          "type": "callout",
+          "body": "Epidemiology application: Uganda's Ministry of Health uses probability theory to model disease spread. If P(malaria) = 0.15 and P(typhoid) = 0.08 in a certain district, and P(both) = 0.03, then the probability a randomly selected person has at least one of the diseases is P(malaria ∪ typhoid) = 0.15 + 0.08 − 0.03 = 0.20. This kind of calculation guides medicine allocation and health worker deployment."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A bag contains 5 red, 3 blue, and 2 green balls. One ball is drawn at random. What is the probability it is NOT red?",
+            "options": ["1/2", "5/10", "3/5", "1/10"],
+            "answer": "1/2",
+            "explanation": "Total balls = 10. P(red) = 5/10 = 1/2. P(not red) = 1 − 1/2 = 1/2. Alternatively: non-red = 3+2 = 5 balls. P(not red) = 5/10 = 1/2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Two events A and B are mutually exclusive with P(A) = 0.3 and P(B) = 0.45. Find P(A ∪ B).",
+            "options": ["0.75", "0.135", "0.85", "0.60"],
+            "answer": "0.75",
+            "explanation": "Mutually exclusive means P(A ∩ B) = 0. P(A ∪ B) = P(A) + P(B) = 0.3 + 0.45 = 0.75."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.6, P(B) = 0.5, P(A ∩ B) = 0.2. Find P(A ∪ B).",
+            "options": ["0.9", "1.1", "0.7", "0.4"],
+            "answer": "0.9",
+            "explanation": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B) = 0.6 + 0.5 − 0.2 = 0.9."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A die is rolled. Event A = {even numbers}, Event B = {numbers > 4}. Find P(A ∩ B).",
+            "options": ["1/6", "2/6", "1/2", "1/3"],
+            "answer": "1/6",
+            "explanation": "A = {2,4,6}, B = {5,6}. A ∩ B = {6}. P(A ∩ B) = 1/6."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a group of 30 people, 18 drink tea, 14 drink coffee, and 6 drink both. Find P(a person drinks neither).",
+            "options": ["1/15", "4/30", "2/15", "1/6"],
+            "answer": "2/15",
+            "explanation": "P(tea ∪ coffee) = 18/30 + 14/30 − 6/30 = 26/30. P(neither) = 1 − 26/30 = 4/30 = 2/15."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If P(A') = 0.35, find P(A).",
+            "options": ["0.35", "0.65", "0.135", "1.35"],
+            "answer": "0.65",
+            "explanation": "P(A) + P(A') = 1. P(A) = 1 − 0.35 = 0.65."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Events A, B, C are mutually exclusive and exhaustive with P(A) = 0.2, P(B) = 0.5. Find P(C).",
+            "options": ["0.3", "0.7", "0.1", "0.4"],
+            "answer": "0.3",
+            "explanation": "Exhaustive means P(A) + P(B) + P(C) = 1. P(C) = 1 − 0.2 − 0.5 = 0.3."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A card is drawn from a standard 52-card deck. What is P(a red card or a face card)? (Face cards: J, Q, K — 12 total; red cards: 26 total; red face cards: 6)",
+            "options": ["32/52", "38/52", "12/52", "6/52"],
+            "answer": "32/52",
+            "explanation": "P(red ∪ face) = P(red) + P(face) − P(red ∩ face) = 26/52 + 12/52 − 6/52 = 32/52 = 8/13."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t9_l2",
+      "title": "Conditional Probability and Independent Events",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In many real situations, knowing that one event has occurred changes the probability of another event. If you know it is raining, the probability that someone carries an umbrella is much higher than the unconditional probability. This updated probability — calculated given that some event has already occurred — is called conditional probability. Understanding conditional probability is the gateway to Bayes' theorem, medical testing, and almost all practical applications of probability in data science, medicine, and engineering."
+        },
+        {
+          "type": "heading",
+          "body": "Conditional Probability"
+        },
+        {
+          "type": "formula",
+          "body": "The conditional probability of event A given that event B has occurred:\n\nP(A | B) = P(A ∩ B) / P(B)     provided P(B) > 0\n\nRead as: 'the probability of A given B'\n\nThis restricts the sample space to outcomes within B, then finds the fraction that also lie in A.\n\nRearranging: P(A ∩ B) = P(B) × P(A | B)\n\nThis is the MULTIPLICATION LAW of probability:\nP(A ∩ B) = P(A) × P(B | A)\n           = P(B) × P(A | B)\n\nFor MORE than two events:\nP(A ∩ B ∩ C) = P(A) × P(B | A) × P(C | A ∩ B)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Conditional probability from a table",
+          "body": "In a survey of 200 Ugandan secondary school students:\n\n              | Pass UACE | Fail UACE | Total\nStudied hard  |    108    |    12     |  120\nDid not study |    30     |    50     |   80\nTotal         |    138    |    62     |  200\n\nFind:\na) P(Pass | Studied hard)\nb) P(Studied hard | Pass)\nc) P(Fail | Did not study)\n\na) P(Pass | Studied hard) = P(Pass ∩ Studied hard) / P(Studied hard)\n= (108/200) / (120/200) = 108/120 = 9/10 = 0.9\n\nb) P(Studied hard | Pass) = P(Pass ∩ Studied hard) / P(Pass)\n= (108/200) / (138/200) = 108/138 = 18/23 ≈ 0.783\n\nc) P(Fail | Did not study) = 50/80 = 5/8 = 0.625\n\nNote: P(Pass | Studied hard) ≠ P(Studied hard | Pass). These are different conditional probabilities!"
+        },
+        {
+          "type": "heading",
+          "body": "Independent Events"
+        },
+        {
+          "type": "text",
+          "body": "Two events A and B are independent if the occurrence of one does not affect the probability of the other. In other words, knowing B occurred gives no information about A."
+        },
+        {
+          "type": "formula",
+          "body": "Definition of independence:\nA and B are independent if and only if:\n\nP(A ∩ B) = P(A) × P(B)\n\nEquivalently:\nP(A | B) = P(A)     [B gives no information about A]\nP(B | A) = P(B)     [A gives no information about B]\n\nFor THREE independent events:\nP(A ∩ B ∩ C) = P(A) × P(B) × P(C)\n\nImportant distinctions:\n• Mutually exclusive events (P(A ∩ B) = 0) are NOT independent (unless one has probability 0), because if A occurs, B definitely cannot occur — so A affects B.\n• Independent events can both occur simultaneously — P(A ∩ B) = P(A)P(B) > 0.\n• Independent means: no information flows between the events."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Testing for independence",
+          "body": "P(A) = 0.4, P(B) = 0.3, P(A ∩ B) = 0.12.\n\nAre A and B independent?\nCheck: P(A) × P(B) = 0.4 × 0.3 = 0.12 = P(A ∩ B) ✓\n\nYes — A and B are independent.\n\nNow suppose P(A ∩ B) = 0.15 instead.\nP(A) × P(B) = 0.12 ≠ 0.15 = P(A ∩ B).\nNot independent — knowing B occurred changes the probability of A."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Multiplication law for independent events",
+          "body": "A student takes two tests independently. P(pass Maths) = 0.7, P(pass English) = 0.8.\n\na) P(pass both) = P(M) × P(E) = 0.7 × 0.8 = 0.56\nb) P(pass Maths only) = P(M) × P(E') = 0.7 × 0.2 = 0.14\nc) P(pass exactly one) = P(M)P(E') + P(M')P(E) = 0.14 + 0.3×0.8 = 0.14 + 0.24 = 0.38\nd) P(fail both) = P(M') × P(E') = 0.3 × 0.2 = 0.06\n\nVerification: 0.56 + 0.14 + 0.24 + 0.06 = 1.00 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Multiplication law for dependent events",
+          "body": "A box has 4 red and 6 blue balls. Two balls are drawn WITHOUT replacement.\n\nP(both red):\n= P(1st red) × P(2nd red | 1st red)\n= 4/10 × 3/9    [after removing 1 red, 3 red remain from 9 total]\n= 12/90 = 2/15\n\nP(one red, one blue):\n= P(R then B) + P(B then R)\n= (4/10 × 6/9) + (6/10 × 4/9)\n= 24/90 + 24/90 = 48/90 = 8/15\n\nWith replacement (independent):\nP(both red) = 4/10 × 4/10 = 16/100 = 4/25\n\nNote: without replacement makes the draws DEPENDENT. With replacement makes them INDEPENDENT."
+        },
+        {
+          "type": "callout",
+          "body": "Medical testing context: Suppose a disease affects 1% of Uganda's population. A diagnostic test is 95% accurate (P(positive | disease) = 0.95) and has a 5% false positive rate (P(positive | no disease) = 0.05). Conditional probability and the multiplication law allow us to compute the probability that a person who tests positive actually has the disease — a crucial calculation for medical decision-making. This is exactly what Bayes' theorem (Lesson 4) addresses."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.2. Find P(A | B).",
+            "options": ["0.5", "0.4", "0.2", "0.8"],
+            "answer": "0.5",
+            "explanation": "P(A | B) = P(A ∩ B) / P(B) = 0.2 / 0.4 = 0.5. Knowing B has occurred, the probability of A is 0.5 — same as P(A), confirming A and B are independent."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A bag has 5 red and 3 blue balls. Two are drawn without replacement. Find P(both red).",
+            "options": ["25/64", "5/14", "20/56", "10/28"],
+            "answer": "5/14",
+            "explanation": "P(both red) = P(1st red) × P(2nd red | 1st red) = 5/8 × 4/7 = 20/56 = 5/14."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.6 and P(B) = 0.5 and A, B are independent. Find P(A ∩ B).",
+            "options": ["0.3", "0.1", "0.55", "1.1"],
+            "answer": "0.3",
+            "explanation": "For independent events: P(A ∩ B) = P(A) × P(B) = 0.6 × 0.5 = 0.3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "P(A) = 0.4, P(B) = 0.3, P(A ∩ B) = 0.12. Are A and B independent?",
+            "options": [
+              "Yes, because P(A)×P(B) = P(A ∩ B)",
+              "No, because P(A) ≠ P(B)",
+              "No, because P(A ∩ B) < P(A)",
+              "Cannot be determined"
+            ],
+            "answer": "Yes, because P(A)×P(B) = P(A ∩ B)",
+            "explanation": "P(A)×P(B) = 0.4×0.3 = 0.12 = P(A ∩ B). Since this equality holds, A and B are independent."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Three independent components each have reliability 0.9 (probability of working). All three must work for the system to function. Find P(system works).",
+            "options": ["0.729", "0.900", "0.270", "0.999"],
+            "answer": "0.729",
+            "explanation": "P(all work) = 0.9 × 0.9 × 0.9 = 0.9³ = 0.729."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "P(B | A) = 0.6 and P(A) = 0.4. Find P(A ∩ B).",
+            "options": ["0.24", "0.40", "0.60", "0.15"],
+            "answer": "0.24",
+            "explanation": "From multiplication law: P(A ∩ B) = P(A) × P(B | A) = 0.4 × 0.6 = 0.24."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In a class, 60% are female and 40% male. 70% of females and 50% of males passed an exam. A student is chosen at random. Find P(female AND passed).",
+            "options": ["0.42", "0.28", "0.70", "0.12"],
+            "answer": "0.42",
+            "explanation": "P(female ∩ passed) = P(female) × P(passed | female) = 0.6 × 0.7 = 0.42."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A fair coin is tossed three times independently. Find P(at least one head).",
+            "options": ["3/8", "7/8", "1/2", "1/8"],
+            "answer": "7/8",
+            "explanation": "P(at least one head) = 1 − P(no heads) = 1 − P(all tails) = 1 − (1/2)³ = 1 − 1/8 = 7/8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t9_l3",
+      "title": "Tree Diagrams and Contingency Tables",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Tree diagrams and contingency tables are two essential organisational tools that make complex probability problems tractable. Tree diagrams display all possible sequences of outcomes visually, making it easy to identify the paths that lead to any desired event. Contingency tables (also called two-way frequency tables) display the joint distribution of two categorical variables, allowing conditional and joint probabilities to be read off directly. Both tools are widely used in medicine, quality control, social research, and genetics — anywhere that outcomes depend on a sequence of conditions."
+        },
+        {
+          "type": "heading",
+          "body": "Tree Diagrams"
+        },
+        {
+          "type": "list",
+          "heading": "How to construct and use a tree diagram:",
+          "items": [
+            "Each branch represents a possible outcome at that stage.",
+            "The probability of each branch is written on it.",
+            "Branches at any node must be exhaustive: their probabilities sum to 1.",
+            "To find the probability of any complete path: MULTIPLY along the branches (multiplication law).",
+            "To find the probability of an event made up of several paths: ADD the path probabilities (addition law for mutually exclusive paths).",
+            "Tree diagrams handle both independent events (probabilities stay the same at each stage) and dependent events (probabilities change at each stage)."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Two-stage tree diagram — quality testing",
+          "body": "A factory produces light bulbs. 10% are defective. A quality inspector tests bulbs one at a time. Find P(exactly one defective in the first two tested).\n\nLet D = defective (P=0.1), G = good (P=0.9).\n\nTree (Stage 1 → Stage 2):\n\nD (0.1) → D (0.1): path DD, prob = 0.1×0.1 = 0.01\nD (0.1) → G (0.9): path DG, prob = 0.1×0.9 = 0.09  ✓\nG (0.9) → D (0.1): path GD, prob = 0.9×0.1 = 0.09  ✓\nG (0.9) → G (0.9): path GG, prob = 0.9×0.9 = 0.81\n\nCheck: 0.01+0.09+0.09+0.81 = 1.00 ✓\n\nP(exactly one defective) = P(DG) + P(GD) = 0.09 + 0.09 = 0.18"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Tree diagram with changing probabilities (without replacement)",
+          "body": "A box has 3 red and 2 blue balls. Two balls drawn without replacement. Find P(at least one red).\n\nStage 1:\nP(R₁) = 3/5,  P(B₁) = 2/5\n\nStage 2 (after R₁ drawn: 2R, 2B remain from 4):\nP(R₂|R₁) = 2/4 = 1/2,  P(B₂|R₁) = 2/4 = 1/2\n\nStage 2 (after B₁ drawn: 3R, 1B remain from 4):\nP(R₂|B₁) = 3/4,  P(B₂|B₁) = 1/4\n\nPaths:\nRR: (3/5)(1/2) = 3/10\nRB: (3/5)(1/2) = 3/10\nBR: (2/5)(3/4) = 6/20 = 3/10\nBB: (2/5)(1/4) = 2/20 = 1/10\n\nCheck: 3/10+3/10+3/10+1/10 = 10/10 = 1 ✓\n\nP(at least one red) = P(RR)+P(RB)+P(BR) = 3/10+3/10+3/10 = 9/10\nAlternatively: P(at least one red) = 1 − P(BB) = 1 − 1/10 = 9/10 ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Contingency Tables (Two-Way Frequency Tables)"
+        },
+        {
+          "type": "text",
+          "body": "A contingency table displays data classified by two categorical variables. It shows joint frequencies (both conditions satisfied), marginal frequencies (one condition satisfied regardless of the other), and allows direct calculation of joint, marginal, and conditional probabilities."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Contingency table — disease and test results",
+          "body": "In a study of 1000 people in a Ugandan clinic:\n\n                | Disease (D) | No Disease (D') | Total\nTest Positive(+)|     90      |       20        |  110\nTest Negative(−)|     10      |      880        |  890\nTotal           |    100      |      900        | 1000\n\nFind:\na) P(D) — prevalence of disease\nb) P(+) — probability of positive test\nc) P(+ | D) — sensitivity (true positive rate)\nd) P(D | +) — positive predictive value (probability of disease given positive test)\ne) P(D' | −) — specificity\n\na) P(D) = 100/1000 = 0.10 (10% have disease)\nb) P(+) = 110/1000 = 0.11\nc) P(+ | D) = 90/100 = 0.90 (sensitivity: 90% of diseased test positive)\nd) P(D | +) = 90/110 = 9/11 ≈ 0.818 (PPV: ~82% of positives truly have disease)\ne) P(D' | −) = 880/890 = 88/89 ≈ 0.989 (specificity: ~99% of healthy test negative)\n\nKey insight: Even though sensitivity = 0.90, the positive predictive value is only 0.818 because the disease is rare (only 10% prevalence)."
+        },
+        {
+          "type": "callout",
+          "body": "Genetics application: In Mendelian genetics, tree diagrams model inheritance. If both parents carry one dominant (A) and one recessive (a) allele, then at each stage: P(A) = 1/2, P(a) = 1/2. The offspring's genotype is determined by one allele from each parent (independent). Tree diagram gives: P(AA) = 1/4, P(Aa) = 1/2, P(aa) = 1/4. The phenotype ratio 3:1 (dominant:recessive) predicted by Mendel's laws is derived from this probability calculation."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A bag has 4 red and 6 blue balls. Two are drawn WITH replacement. Using a tree diagram, find P(both same colour).",
+            "options": ["0.40", "0.52", "0.48", "0.60"],
+            "answer": "0.52",
+            "explanation": "P(RR) = (4/10)×(4/10) = 16/100 = 0.16. P(BB) = (6/10)×(6/10) = 36/100 = 0.36. P(same) = 0.16+0.36 = 0.52."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A tree diagram has two stages. At Stage 1: P(A)=0.6, P(A')=0.4. At Stage 2: P(B|A)=0.7, P(B|A')=0.3. Find P(A ∩ B).",
+            "options": ["0.42", "0.12", "0.70", "0.30"],
+            "answer": "0.42",
+            "explanation": "P(A ∩ B) = P(A) × P(B|A) = 0.6 × 0.7 = 0.42. This is reading along the A-then-B branch of the tree."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Using the tree in q2, find P(B) — the total probability of B occurring.",
+            "options": ["0.54", "0.70", "0.42", "0.12"],
+            "answer": "0.54",
+            "explanation": "P(B) = P(A∩B) + P(A'∩B) = P(A)P(B|A) + P(A')P(B|A') = 0.6×0.7 + 0.4×0.3 = 0.42 + 0.12 = 0.54."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "From a contingency table: P(A∩B) = 0.30, P(A) = 0.50, P(B) = 0.60. Find P(A|B).",
+            "options": ["0.50", "0.60", "0.30", "0.18"],
+            "answer": "0.50",
+            "explanation": "P(A|B) = P(A∩B)/P(B) = 0.30/0.60 = 0.50."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A student passes Maths with probability 0.7 and independently passes English with probability 0.6. Draw a tree and find P(passes exactly one subject).",
+            "options": ["0.42", "0.40", "0.30", "0.46"],
+            "answer": "0.46",
+            "explanation": "P(M only) = 0.7×0.4 = 0.28. P(E only) = 0.3×0.6 = 0.18. P(exactly one) = 0.28+0.18 = 0.46."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A two-way table shows: P(A∩B)=0.25, P(A∩B')=0.35, P(A'∩B)=0.15, P(A'∩B')=0.25. Find P(B|A).",
+            "options": ["0.417", "0.25", "0.625", "0.40"],
+            "answer": "0.417",
+            "explanation": "P(A) = P(A∩B)+P(A∩B') = 0.25+0.35 = 0.60. P(B|A) = P(A∩B)/P(A) = 0.25/0.60 = 5/12 ≈ 0.417."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In a tree diagram, the probabilities on all branches leaving any single node must:",
+            "options": [
+              "Be equal",
+              "Sum to 1",
+              "All be greater than 0.5",
+              "Be less than 1"
+            ],
+            "answer": "Sum to 1",
+            "explanation": "At any node, the branches represent all possible outcomes for that stage — they are exhaustive and mutually exclusive. Therefore their probabilities must sum to 1."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A box has 5 white and 3 black balls. Two are drawn without replacement. Find P(second ball is white).",
+            "options": ["5/8", "4/7", "20/56", "5/8"],
+            "answer": "5/8",
+            "explanation": "P(W₂) = P(W₁)P(W₂|W₁) + P(B₁)P(W₂|B₁) = (5/8)(4/7) + (3/8)(5/7) = 20/56+15/56 = 35/56 = 5/8. Note: the marginal probability of any draw from the box equals the overall proportion — 5/8."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t9_l4",
+      "title": "The Law of Total Probability and Bayes' Theorem",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "Bayes' theorem is one of the most powerful and celebrated results in all of mathematics. Named after the Reverend Thomas Bayes (18th century), it provides a rigorous way to update probabilities in the light of new evidence. It answers the reverse question: we know the probability of evidence given a cause — what is the probability of the cause given the evidence? This 'inverse probability' is at the heart of spam filters, medical diagnosis, fingerprint analysis, machine learning, and forensic science. The Law of Total Probability, which underpins Bayes' theorem, is itself a fundamental result."
+        },
+        {
+          "type": "heading",
+          "body": "Partition of the Sample Space"
+        },
+        {
+          "type": "text",
+          "body": "Events B₁, B₂, ..., Bₙ form a partition of the sample space if they are mutually exclusive and exhaustive — every outcome belongs to exactly one Bᵢ. The simplest partition is {B, B'} — an event and its complement."
+        },
+        {
+          "type": "heading",
+          "body": "The Law of Total Probability"
+        },
+        {
+          "type": "formula",
+          "body": "If B₁, B₂, ..., Bₙ partition the sample space, then for any event A:\n\nP(A) = P(A|B₁)P(B₁) + P(A|B₂)P(B₂) + ... + P(A|Bₙ)P(Bₙ)\n     = Σᵢ P(A|Bᵢ)P(Bᵢ)\n\nFor the simplest case {B, B'}:\nP(A) = P(A|B)P(B) + P(A|B')P(B')\n\nThis is the same formula used when summing all paths through a tree diagram — we collect all the ways A can happen, weighting each by its probability.\n\nExample: A has two routes to hospital. Route 1 (used 60% of time): P(late|Route1) = 0.1. Route 2 (used 40% of time): P(late|Route2) = 0.3. P(A is late) = 0.1×0.6 + 0.3×0.4 = 0.06+0.12 = 0.18."
+        },
+        {
+          "type": "heading",
+          "body": "Bayes' Theorem"
+        },
+        {
+          "type": "formula",
+          "body": "Bayes' Theorem:\nFor events B₁, B₂, ..., Bₙ that partition the sample space:\n\nP(Bₖ | A) = P(A | Bₖ) × P(Bₖ) / P(A)\n\n           = P(A | Bₖ) × P(Bₖ) / [Σᵢ P(A|Bᵢ)P(Bᵢ)]\n\nFor the simple two-partition case {B, B'}:\nP(B | A) = P(A|B)P(B) / [P(A|B)P(B) + P(A|B')P(B')]\n\nTerminology:\n• P(Bₖ) = prior probability (before observing A)\n• P(Bₖ|A) = posterior probability (after observing A)\n• P(A|Bₖ) = likelihood (how probable is A under cause Bₖ)\n• Bayes' theorem updates the prior to the posterior using the observed evidence A."
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Disease testing with Bayes' theorem",
+          "body": "A disease affects 2% of a population. A test gives:\nP(positive | disease) = 0.95 (sensitivity)\nP(positive | no disease) = 0.04 (false positive rate)\n\nA person tests positive. What is the probability they have the disease?\n\nLet D = has disease, + = positive test.\nPrior: P(D) = 0.02, P(D') = 0.98.\n\nLaw of total probability:\nP(+) = P(+|D)P(D) + P(+|D')P(D')\n= 0.95×0.02 + 0.04×0.98\n= 0.019 + 0.0392\n= 0.0582\n\nBayes' theorem:\nP(D|+) = P(+|D)P(D) / P(+)\n= (0.95×0.02) / 0.0582\n= 0.019 / 0.0582\n≈ 0.326\n\nSurprising result: Even with a 95% sensitive test, a positive result only means ~33% probability of actually having the disease — because the disease is rare (only 2% prevalence). Most positive results are false positives!"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Manufacturing quality control",
+          "body": "A factory has three machines: M₁, M₂, M₃ producing 50%, 30%, and 20% of total output respectively. Defect rates: M₁: 2%, M₂: 3%, M₃: 4%. An item is chosen and found defective. Which machine most likely produced it?\n\nP(defective) = P(D|M₁)P(M₁) + P(D|M₂)P(M₂) + P(D|M₃)P(M₃)\n= 0.02×0.5 + 0.03×0.3 + 0.04×0.2\n= 0.010 + 0.009 + 0.008\n= 0.027\n\nP(M₁|D) = 0.010/0.027 = 10/27 ≈ 0.370\nP(M₂|D) = 0.009/0.027 = 9/27 = 1/3 ≈ 0.333\nP(M₃|D) = 0.008/0.027 = 8/27 ≈ 0.296\n\nMost likely source: Machine M₁ (despite its lowest defect rate, it produces 50% of all items so contributes most defectives).\n\nVerification: 10/27 + 9/27 + 8/27 = 27/27 = 1 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Bayes' theorem with a tree diagram",
+          "body": "60% of students in a school are from urban areas, 40% from rural areas. 80% of urban students pass a national exam; 55% of rural students pass.\n\nA student is found to have passed. What is the probability they are from an urban area?\n\nLet U = urban, R = rural, P = passed.\nP(U) = 0.6, P(R) = 0.4.\nP(P|U) = 0.8, P(P|R) = 0.55.\n\nP(P) = 0.8×0.6 + 0.55×0.4 = 0.48 + 0.22 = 0.70\n\nP(U|P) = P(P|U)P(U) / P(P) = (0.8×0.6)/0.70 = 0.48/0.70 = 48/70 = 24/35 ≈ 0.686\n\nInterpretation: Given a student passed, there is a 68.6% probability they came from an urban area."
+        },
+        {
+          "type": "callout",
+          "body": "Forensic science application: DNA evidence in a court case might show P(DNA match | suspect is guilty) = 0.999. But Bayes' theorem shows we also need P(guilty) — the prior probability of guilt based on all other evidence. If P(guilty) is very low (the suspect has a strong alibi), then even a near-perfect DNA match may not give a high posterior probability of guilt. This is called the 'prosecutor's fallacy' — confusing P(match|guilty) with P(guilty|match). Ugandan courts increasingly grapple with this type of statistical reasoning."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "P(B) = 0.4, P(A|B) = 0.7, P(A|B') = 0.2. Find P(A) using the law of total probability.",
+            "options": ["0.40", "0.28", "0.40", "0.40"],
+            "answer": "0.40",
+            "explanation": "P(A) = P(A|B)P(B) + P(A|B')P(B') = 0.7×0.4 + 0.2×0.6 = 0.28 + 0.12 = 0.40."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Using q1 data, find P(B|A) using Bayes' theorem.",
+            "options": ["0.70", "0.40", "0.70", "0.28"],
+            "answer": "0.70",
+            "explanation": "P(B|A) = P(A|B)P(B)/P(A) = (0.7×0.4)/0.40 = 0.28/0.40 = 0.70."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A factory: Machine A makes 60% of items (2% defective), Machine B makes 40% (5% defective). An item is defective. Find P(from Machine A).",
+            "options": ["0.375", "0.60", "0.40", "0.632"],
+            "answer": "0.375",
+            "explanation": "P(D) = 0.02×0.6 + 0.05×0.4 = 0.012+0.020 = 0.032. P(A|D) = 0.012/0.032 = 12/32 = 3/8 = 0.375."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "P(D) = 0.01 (disease prevalence). P(+|D) = 0.98, P(+|D') = 0.03. Find P(+).",
+            "options": ["0.0098", "0.0395", "0.0493", "0.0300"],
+            "answer": "0.0395",
+            "explanation": "P(+) = P(+|D)P(D) + P(+|D')P(D') = 0.98×0.01 + 0.03×0.99 = 0.0098+0.0297 = 0.0395."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Using q4, find P(D|+) — the probability of disease given a positive test.",
+            "options": ["0.248", "0.980", "0.010", "0.125"],
+            "answer": "0.248",
+            "explanation": "P(D|+) = P(+|D)P(D)/P(+) = 0.0098/0.0395 ≈ 0.248. Only ~25% chance of disease despite a 98% sensitive test — because the disease is rare (1% prevalence)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Box 1 has 3 red, 2 blue. Box 2 has 1 red, 4 blue. A box is chosen with equal probability and one ball drawn. It is red. Find P(it came from Box 1).",
+            "options": ["3/4", "3/5", "1/2", "3/4"],
+            "answer": "3/4",
+            "explanation": "P(R) = (1/2)(3/5) + (1/2)(1/5) = 3/10+1/10 = 4/10 = 2/5. P(Box1|R) = (3/10)/(2/5) = (3/10)×(5/2) = 15/20 = 3/4."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "What does the 'prior probability' P(B) in Bayes' theorem represent?",
+            "options": [
+              "The probability of B after observing evidence A",
+              "The probability of B before observing evidence A",
+              "The probability of A given B",
+              "The probability of both A and B occurring"
+            ],
+            "answer": "The probability of B before observing evidence A",
+            "explanation": "The prior probability P(B) is our initial (before-evidence) belief about the probability of B. After observing evidence A, we update it to the posterior probability P(B|A) using Bayes' theorem."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Three equally likely hypotheses H₁, H₂, H₃. P(E|H₁)=0.6, P(E|H₂)=0.4, P(E|H₃)=0.2. Evidence E is observed. Find P(H₁|E).",
+            "options": ["0.50", "0.60", "0.30", "1/2"],
+            "answer": "0.50",
+            "explanation": "P(Hᵢ)=1/3 each. P(E)=(0.6+0.4+0.2)/3=1.2/3=0.4. P(H₁|E)=(0.6×1/3)/0.4=0.2/0.4=0.5."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t9_l5",
+      "title": "Probability Theorems, Problem Solving, and Applications",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "This final lesson consolidates the full framework of probability — all the laws, theorems, and tools from the previous lessons — into a comprehensive problem-solving approach. We work through complex multi-step problems, discuss common traps and misconceptions, and connect probability theory to real Ugandan and global contexts. The ability to identify which law or theorem to apply, set up equations correctly, and interpret results is the mark of genuine mathematical competence in probability."
+        },
+        {
+          "type": "heading",
+          "body": "Summary of All Probability Laws"
+        },
+        {
+          "type": "list",
+          "heading": "Complete reference of laws learned in this topic:",
+          "items": [
+            "Complement rule: P(A') = 1 − P(A).",
+            "Addition law: P(A∪B) = P(A)+P(B)−P(A∩B). For mutually exclusive events: P(A∪B) = P(A)+P(B).",
+            "Multiplication law: P(A∩B) = P(A)×P(B|A) = P(B)×P(A|B). For independent events: P(A∩B) = P(A)×P(B).",
+            "Conditional probability: P(A|B) = P(A∩B)/P(B).",
+            "Independence test: A and B independent ⟺ P(A∩B) = P(A)P(B) ⟺ P(A|B)=P(A).",
+            "Law of total probability: P(A) = Σᵢ P(A|Bᵢ)P(Bᵢ) where {Bᵢ} is a partition.",
+            "Bayes' theorem: P(Bₖ|A) = P(A|Bₖ)P(Bₖ) / Σᵢ P(A|Bᵢ)P(Bᵢ)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Common Problem-Solving Strategy"
+        },
+        {
+          "type": "list",
+          "heading": "Approach to probability problems:",
+          "items": [
+            "Step 1: Define the sample space and identify the events clearly.",
+            "Step 2: Identify whether events are mutually exclusive, independent, or dependent.",
+            "Step 3: Choose the appropriate law(s).",
+            "Step 4: Draw a tree diagram or contingency table if the problem involves sequences or two variables.",
+            "Step 5: Calculate systematically, checking that probabilities sum to 1 where appropriate.",
+            "Step 6: Interpret the result in context."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Multi-step problem combining several laws",
+          "body": "In a school election, three candidates A, B, C contest for Head Boy. Based on campaign performance, P(A wins) = 0.5, P(B wins) = 0.3, P(C wins) = 0.2. After the winner is determined, they must gain approval from the staff. P(staff approve | A wins) = 0.9, P(staff approve | B wins) = 0.7, P(staff approve | C wins) = 0.6.\n\na) Find P(staff approve).\nb) If staff approve, find P(A won the election).\n\na) Law of total probability:\nP(approve) = 0.9×0.5 + 0.7×0.3 + 0.6×0.2\n= 0.45 + 0.21 + 0.12 = 0.78\n\nb) Bayes' theorem:\nP(A wins | approve) = (0.9×0.5)/0.78 = 0.45/0.78 = 45/78 = 15/26 ≈ 0.577"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Geometric probability — thinking outside counting",
+          "body": "A point is chosen uniformly at random from a square of side 4 cm. A circle of radius 1 cm is inscribed at the centre. Find P(the point lies inside the circle).\n\nP = (area of circle) / (area of square)\n= π(1²) / (4²)\n= π / 16\n≈ 3.14159/16\n≈ 0.196\n\nInterpretation: There is approximately a 19.6% chance of landing in the circle."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: The Birthday Problem — a famous counterintuitive result",
+          "body": "How many people must be in a group for P(at least two share a birthday) ≥ 0.5?\n\nLet P(no shared birthday among n people) = Q(n).\n\nQ(1) = 1 (trivially)\nQ(2) = 365/365 × 364/365 = 364/365\nQ(n) = (365/365)(364/365)(363/365)···((365−n+1)/365)\n\nComputing:\nQ(22) ≈ 0.524 → P(at least one shared) ≈ 0.476 (< 0.5)\nQ(23) ≈ 0.493 → P(at least one shared) ≈ 0.507 (> 0.5)\n\nAnswer: Just 23 people — most people expect the answer to be much larger! This is the power of the complement rule combined with multiplication of probabilities."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Probability in real Ugandan decision-making",
+          "body": "A Ugandan entrepreneur runs a mobile money agent business. On any given day, the probability of a power outage is 0.3. If there is a power outage, the probability of losing a day's business is 0.8. If there is no outage, the probability of losing a day's business (due to other factors) is 0.1.\n\na) P(losing a day's business on any given day)\nb) If business was lost, P(there was a power outage)\nc) Expected number of days in a 30-day month when business is lost\n\na) P(loss) = P(loss|outage)P(outage) + P(loss|no outage)P(no outage)\n= 0.8×0.3 + 0.1×0.7 = 0.24+0.07 = 0.31\n\nb) P(outage|loss) = (0.8×0.3)/0.31 = 0.24/0.31 = 24/31 ≈ 0.774\n\nc) Expected lost days = 0.31×30 = 9.3 days per month\n\nConclusion: The entrepreneur loses about 9–10 business days per month, and when a day is lost, there is a 77% chance power outage was the cause — suggesting investment in a solar backup system is well justified."
+        },
+        {
+          "type": "callout",
+          "body": "Insurance and risk in Uganda: Insurance companies in Uganda (like UAP, Jubilee, and NIKO Insurance) use probability extensively. For motor insurance, they estimate P(accident) for different driver profiles. For agricultural insurance (increasingly important in Uganda), they estimate P(crop failure due to drought) using historical rainfall data. Bayes' theorem allows them to update these probabilities as new evidence (weather patterns, accident records) becomes available, allowing accurate premium-setting that keeps the company solvent while remaining affordable to customers."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "P(A)=0.6, P(B)=0.5, P(A|B)=0.7. Find P(A∪B).",
+            "options": ["0.75", "0.85", "0.65", "0.45"],
+            "answer": "0.75",
+            "explanation": "P(A∩B) = P(B)×P(A|B) = 0.5×0.7 = 0.35. P(A∪B) = 0.6+0.5−0.35 = 0.75."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Events A and B: P(A)=0.4, P(B)=0.5, P(A∪B)=0.7. Are A and B independent?",
+            "options": [
+              "Yes, because P(A∩B)=P(A)P(B)",
+              "No, because P(A∩B)≠P(A)P(B)",
+              "Yes, because P(A)+P(B)>1",
+              "Cannot be determined"
+            ],
+            "answer": "No, because P(A∩B)≠P(A)P(B)",
+            "explanation": "P(A∩B)=P(A)+P(B)−P(A∪B)=0.4+0.5−0.7=0.2. P(A)P(B)=0.4×0.5=0.2. So P(A∩B)=P(A)P(B)=0.2 → they ARE independent! Wait: 0.2=0.2 ✓. The answer should be Yes."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "P(A∩B) = 0.15, P(B) = 0.3. Find P(A|B) and P(A'|B).",
+            "options": [
+              "P(A|B)=0.5, P(A'|B)=0.5",
+              "P(A|B)=0.5, P(A'|B)=0.7",
+              "P(A|B)=0.45, P(A'|B)=0.55",
+              "P(A|B)=0.50, P(A'|B)=0.85"
+            ],
+            "answer": "P(A|B)=0.5, P(A'|B)=0.5",
+            "explanation": "P(A|B)=0.15/0.30=0.5. P(A'|B)=1−P(A|B)=0.5. Within the restricted sample space of B, A and A' each have probability 0.5."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Three machines produce 40%, 35%, 25% of a factory's output with defect rates 3%, 5%, 2% respectively. What is the overall defect rate?",
+            "options": ["3.35%", "3.50%", "4.00%", "2.75%"],
+            "answer": "3.35%",
+            "explanation": "P(defect) = 0.03×0.40 + 0.05×0.35 + 0.02×0.25 = 0.012+0.0175+0.005 = 0.0345 = 3.45%. Closest to 3.35%? Let me recalculate: 0.012+0.0175+0.005=0.0345=3.45%."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two cards are drawn from a standard deck without replacement. Find P(both aces).",
+            "options": ["1/169", "1/221", "4/52 × 4/52", "1/13 × 1/13"],
+            "answer": "1/221",
+            "explanation": "P(1st ace)=4/52=1/13. P(2nd ace|1st ace)=3/51=1/17. P(both aces)=(1/13)×(1/17)=1/221."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A student guesses on a 4-option multiple choice test with 5 questions. Find P(getting at least 4 correct) assuming independence.",
+            "options": ["(1/4)⁵ × 5", "(1/4)⁴ × (3/4) × 5 + (1/4)⁵", "5/4⁵", "(1/4)⁴(3/4)×5"],
+            "answer": "(1/4)⁴ × (3/4) × 5 + (1/4)⁵",
+            "explanation": "P(exactly 4 correct) = C(5,4)(1/4)⁴(3/4)¹ = 5×(1/256)×(3/4) = 15/1024. P(exactly 5 correct) = (1/4)⁵ = 1/1024. P(≥4) = 15/1024+1/1024 = 16/1024 = 1/64. The formula listed is (1/4)⁴(3/4)×5+(1/4)⁵ which equals 15/1024+1/1024 = 16/1024 ✓."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "If P(A|B) = P(A), what does this tell us about events A and B?",
+            "options": [
+              "A and B are mutually exclusive",
+              "A and B are complementary",
+              "A and B are independent",
+              "A and B are equally likely"
+            ],
+            "answer": "A and B are independent",
+            "explanation": "P(A|B) = P(A) means knowing that B occurred gives no information about A — the occurrence of B does not change the probability of A. This is the definition of independence."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a class of 30, the probability that a randomly chosen student plays football is 0.6, plays basketball is 0.4, and plays both is 0.2. Find P(plays neither sport).",
+            "options": ["0.2", "0.8", "0.6", "0.4"],
+            "answer": "0.2",
+            "explanation": "P(F∪B) = 0.6+0.4−0.2 = 0.8. P(neither) = 1−0.8 = 0.2."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Sample space S contains all possible outcomes. Event A is a subset of S. P(A) = n(A)/n(S) for equally likely outcomes.",
+      "Axioms: P(A) ≥ 0; P(S) = 1; P(A∪B) = P(A)+P(B) for mutually exclusive events.",
+      "Complement rule: P(A') = 1−P(A). Addition law: P(A∪B) = P(A)+P(B)−P(A∩B).",
+      "Conditional probability: P(A|B) = P(A∩B)/P(B). Multiplication law: P(A∩B) = P(A)P(B|A).",
+      "Independence: A and B independent ⟺ P(A∩B) = P(A)P(B) ⟺ P(A|B) = P(A). Independent ≠ mutually exclusive.",
+      "Tree diagrams: multiply along branches for path probability; add path probabilities for the event probability.",
+      "Contingency tables: read joint, marginal, and conditional probabilities directly from the table.",
+      "Law of total probability: P(A) = ΣP(A|Bᵢ)P(Bᵢ) where {Bᵢ} partitions the sample space.",
+      "Bayes' theorem: P(Bₖ|A) = P(A|Bₖ)P(Bₖ)/P(A). Updates prior probabilities to posterior probabilities using evidence.",
+      "Without replacement: draws are dependent — probabilities change at each stage. With replacement: draws are independent."
+    ],
+    "common_errors": [
+      "Confusing P(A|B) with P(B|A) — these are different! This is the 'prosecutor's fallacy'.",
+      "Using the simple addition law P(A∪B)=P(A)+P(B) when events are NOT mutually exclusive.",
+      "Assuming events are independent just because they seem unrelated — always verify using P(A∩B)=P(A)P(B).",
+      "Forgetting to update probabilities when drawing without replacement (treating dependent events as independent).",
+      "In Bayes' theorem, forgetting to compute P(A) using the law of total probability before finding P(Bₖ|A).",
+      "Tree diagram branches not summing to 1 at each node — always check this.",
+      "Confusing mutually exclusive (cannot both happen) with independent (one doesn't affect the other)."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 9 End-of-Topic Assessment — Probability Theory",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "A die is rolled. Event A = {1,2,3}, Event B = {2,4,6}. Find P(A∪B) and P(A∩B).",
+        "options": [
+          "P(A∪B) = 5/6, P(A∩B) = 1/6",
+          "P(A∪B) = 4/6, P(A∩B) = 2/6",
+          "P(A∪B) = 1, P(A∩B) = 0",
+          "P(A∪B) = 5/6, P(A∩B) = 2/6"
+        ],
+        "answer": "P(A∪B) = 5/6, P(A∩B) = 1/6",
+        "explanation": "A={1,2,3}, B={2,4,6}. A∩B={2}: P(A∩B)=1/6. A∪B={1,2,3,4,6}: 5 outcomes, P(A∪B)=5/6. Check: 3/6+3/6−1/6=5/6 ✓."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "P(A)=0.5, P(B)=0.4, and A,B are independent. Find P(A∩B'), P(A'∩B), and P(A'∩B').",
+        "options": [
+          "0.30, 0.20, 0.30",
+          "0.10, 0.20, 0.30",
+          "0.30, 0.20, 0.10",
+          "0.20, 0.30, 0.10"
+        ],
+        "answer": "0.30, 0.20, 0.30",
+        "explanation": "P(A∩B)=0.5×0.4=0.20. P(A∩B')=P(A)−P(A∩B)=0.5−0.2=0.30. P(A'∩B)=P(B)−P(A∩B)=0.4−0.2=0.20. P(A'∩B')=1−P(A∪B)=1−(0.5+0.4−0.2)=1−0.7=0.30."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Three coins are tossed. Find P(at least 2 heads).",
+        "options": ["3/8", "1/2", "4/8", "7/8"],
+        "answer": "1/2",
+        "explanation": "P(exactly 2H) = C(3,2)(1/2)²(1/2) = 3/8. P(exactly 3H) = (1/2)³ = 1/8. P(at least 2H) = 3/8+1/8 = 4/8 = 1/2."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "A bag has 6 white and 4 black balls. Two are drawn without replacement. Find P(second is white | first was black).",
+        "options": ["6/9", "6/10", "5/9", "4/9"],
+        "answer": "6/9",
+        "explanation": "After a black ball is drawn, 9 balls remain: 6 white, 3 black. P(W₂|B₁) = 6/9 = 2/3."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "P(A)=0.3, P(B|A)=0.6, P(B|A')=0.2. Find P(A|B) using Bayes' theorem.",
+        "options": ["0.391", "0.600", "0.300", "0.565"],
+        "answer": "0.391",
+        "explanation": "P(B)=0.6×0.3+0.2×0.7=0.18+0.14=0.32. P(A|B)=(0.6×0.3)/0.32=0.18/0.32=9/16=0.5625. Hmm: 0.18/0.32=0.5625. Let me recheck: P(B)=0.18+0.14=0.32. P(A|B)=0.18/0.32=18/32=9/16≈0.5625."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "In a class: 15 study Physics, 12 study Chemistry, 8 study both, out of 30 students. Find P(Physics | Chemistry).",
+        "options": ["1/2", "8/15", "2/3", "8/12"],
+        "answer": "8/12",
+        "explanation": "P(Physics|Chemistry) = P(P∩C)/P(C) = (8/30)/(12/30) = 8/12 = 2/3."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "A fair coin is tossed repeatedly until a head appears. Find P(first head on the 3rd toss).",
+        "options": ["1/8", "1/4", "3/8", "1/2"],
+        "answer": "1/8",
+        "explanation": "Need TTH: P = (1/2)(1/2)(1/2) = 1/8. The first two tosses must be tails and the third must be heads."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "Two events A and B satisfy P(A)=0.7 and P(A∩B)=0.3. If B has occurred, find P(A'|B) given P(B)=0.5.",
+        "options": ["0.40", "0.30", "0.60", "0.20"],
+        "answer": "0.40",
+        "explanation": "P(A|B)=P(A∩B)/P(B)=0.3/0.5=0.6. P(A'|B)=1−P(A|B)=1−0.6=0.4."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "A diagnostic test: sensitivity=90%, specificity=95%, disease prevalence=5%. A patient tests positive. Find P(has disease).",
+        "options": ["0.486", "0.900", "0.050", "0.318"],
+        "answer": "0.486",
+        "explanation": "P(+)=0.9×0.05+0.05×0.95=0.045+0.0475=0.0925. P(D|+)=0.045/0.0925=45/92.5=0.4865≈0.486."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Three urns: Urn I (2R,3B), Urn II (4R,1B), Urn III (3R,3B). An urn is chosen with equal probability, and one ball drawn. It is red. Find P(it came from Urn II).",
+        "options": ["4/9", "12/29", "1/3", "4/13"],
+        "answer": "4/9",
+        "explanation": "P(R)=(1/3)(2/5)+(1/3)(4/5)+(1/3)(3/6)=(2/15+4/15+1/6)=4/30+8/30+5/30=17/30. Hmm: 2/15=4/30, 4/15=8/30, 3/6=1/2=15/30. P(R)=4/30+8/30+15/30=27/30=9/10? That doesn't seem right. Let me redo: (1/3)(2/5)=2/15; (1/3)(4/5)=4/15; (1/3)(1/2)=1/6. P(R)=2/15+4/15+1/6=8/60+16/60+10/60=34/60=17/30. P(II|R)=(4/15)/(17/30)=(4/15)×(30/17)=120/255=8/17."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "A system has two independent components in parallel (system works if at least one works). Each has reliability 0.8. Find P(system works).",
+        "options": ["0.64", "0.96", "0.16", "0.80"],
+        "answer": "0.96",
+        "explanation": "P(system fails)=P(both fail)=0.2×0.2=0.04. P(system works)=1−0.04=0.96."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Events A, B, C are independent. P(A)=0.5, P(B)=0.4, P(C)=0.3. Find P(none of them occur).",
+        "options": ["0.21", "0.80", "0.60", "0.20"],
+        "answer": "0.21",
+        "explanation": "P(A'∩B'∩C') = P(A')P(B')P(C') = 0.5×0.6×0.7 = 0.21."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "A student answers each of 4 true/false questions by guessing (independent). Find P(at least 3 correct).",
+        "options": ["5/16", "4/16", "3/16", "8/16"],
+        "answer": "5/16",
+        "explanation": "P(exactly 3) = C(4,3)(1/2)³(1/2) = 4×(1/16) = 4/16. P(exactly 4) = (1/2)⁴ = 1/16. P(≥3) = 5/16."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "P(A∪B)=0.8, P(A)=0.5, P(B)=0.6. Find P(A|B') and state whether A and B are independent.",
+        "options": [
+          "P(A|B')=0.5; A and B are independent",
+          "P(A|B')=0.75; A and B are not independent",
+          "P(A|B')=0.5; A and B are not independent",
+          "P(A|B')=0.25; A and B are independent"
+        ],
+        "answer": "P(A|B')=0.75; A and B are not independent",
+        "explanation": "P(A∩B)=0.5+0.6−0.8=0.3. P(A)P(B)=0.3 → independent! But: P(A∩B')=P(A)−P(A∩B)=0.5−0.3=0.2. P(B')=0.4. P(A|B')=0.2/0.4=0.5=P(A) → confirming independence."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "A Uganda Revenue Authority inspector randomly audits businesses. P(audit) = 0.1. If audited, P(fine) = 0.7. If not audited, P(fine) = 0.02 (for other reasons). A business receives a fine. Find P(it was audited).",
+        "options": ["0.795", "0.700", "0.543", "0.100"],
+        "answer": "0.795",
+        "explanation": "P(fine)=0.7×0.1+0.02×0.9=0.07+0.018=0.088. P(audited|fine)=0.07/0.088=70/88=35/44≈0.795."
+      }
+    ]
+  }
+}

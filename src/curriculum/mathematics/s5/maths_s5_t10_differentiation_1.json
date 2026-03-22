@@ -1,0 +1,963 @@
+{
+  "topic_id": "s5_maths_t10_differentiation_1",
+  "topic_title": "Differentiation 1",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 20,
+  "ncdc_competency": "The learner applies differentiation techniques to find gradients, turning points, and rates of change in order to solve problems in mathematics, science, and real-life situations.",
+  "lessons": [
+    {
+      "id": "s5_maths_t10_l1",
+      "title": "The Gradient Function — Limits, First Principles, and Basic Differentiation",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Differentiation is one of the two fundamental operations of calculus — the other being integration. While coordinate geometry gave us the gradient of a straight line, differentiation gives us the gradient of a CURVE at any point. This is far more powerful: the gradient of a curve changes from point to point, and finding it exactly at any location unlocks the ability to analyse rates of change, optimise quantities, and model dynamic systems. In Uganda and globally, differentiation underpins every engineering design, every economic model, every physics simulation, and every piece of signal processing software. This lesson builds from the concept of a limit to the formal definition of the derivative and the rules for basic differentiation."
+        },
+        {
+          "type": "heading",
+          "body": "The Idea of a Gradient at a Point — Limits"
+        },
+        {
+          "type": "text",
+          "body": "The gradient of a curve y = f(x) at point P is defined as the gradient of the tangent to the curve at P. The tangent is the straight line that just touches the curve at P without crossing it. We find this gradient by considering the gradient of a chord PQ as Q approaches P along the curve — the limit of the chord gradient as Q → P."
+        },
+        {
+          "type": "formula",
+          "body": "Differentiation from first principles:\n\nFor y = f(x), the gradient at point P(x, f(x)) is:\n\ndy/dx = lim[h→0] [f(x+h) − f(x)] / h\n\nThis limit is called the DERIVATIVE of f with respect to x.\nNotation: dy/dx = f'(x) = y' = Df(x)\n\nProcess — first principles method:\n1. Write f(x+h) by replacing every x with (x+h)\n2. Compute f(x+h) − f(x)\n3. Divide by h and simplify (h should always cancel)\n4. Take the limit as h → 0 (remaining h terms → 0)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Differentiate y = x² from first principles",
+          "body": "f(x) = x², so f(x+h) = (x+h)² = x² + 2xh + h²\n\nf(x+h) − f(x) = x² + 2xh + h² − x² = 2xh + h²\n\n[f(x+h) − f(x)] / h = (2xh + h²)/h = 2x + h\n\nlim[h→0] (2x + h) = 2x\n\nTherefore: dy/dx = 2x\n\nInterpretation: At any point on y = x², the gradient equals 2x.\nAt x=1: gradient = 2. At x=3: gradient = 6. At x=−2: gradient = −4."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Differentiate y = x³ from first principles",
+          "body": "f(x+h) = (x+h)³ = x³ + 3x²h + 3xh² + h³\n\nf(x+h) − f(x) = 3x²h + 3xh² + h³\n\n[f(x+h) − f(x)] / h = 3x² + 3xh + h²\n\nlim[h→0] (3x² + 3xh + h²) = 3x²\n\nTherefore: d/dx(x³) = 3x²"
+        },
+        {
+          "type": "heading",
+          "body": "Standard Differentiation Rules"
+        },
+        {
+          "type": "formula",
+          "body": "Power rule (most important rule):\nd/dx(xⁿ) = nxⁿ⁻¹    for any rational n\n\nKey results:\nd/dx(xⁿ) = nxⁿ⁻¹\nd/dx(constant) = 0\nd/dx(x) = 1\nd/dx(x²) = 2x\nd/dx(x³) = 3x²\nd/dx(√x) = d/dx(x^(1/2)) = (1/2)x^(−1/2) = 1/(2√x)\nd/dx(1/x) = d/dx(x⁻¹) = −x⁻² = −1/x²\n\nLinearity rules:\nd/dx[cf(x)] = c·f'(x)          [scalar multiplication]\nd/dx[f(x)+g(x)] = f'(x)+g'(x)   [sum rule]\nd/dx[f(x)−g(x)] = f'(x)−g'(x)   [difference rule]\n\nThese rules mean: differentiate each term separately, then combine."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Applying the standard rules",
+          "body": "Differentiate each of the following:\n\na) y = 4x³ − 5x² + 7x − 3\ndy/dx = 4(3x²) − 5(2x) + 7(1) − 0 = 12x² − 10x + 7\n\nb) y = 3x⁴ − 2/x + √x\nRewrite: y = 3x⁴ − 2x⁻¹ + x^(1/2)\ndy/dx = 12x³ − 2(−1)x⁻² + (1/2)x^(−1/2)\n= 12x³ + 2/x² + 1/(2√x)\n\nc) y = (x² + 3)(2x − 1)\nExpand first: y = 2x³ − x² + 6x − 3\ndy/dx = 6x² − 2x + 6\n\nd) y = (x³ − 2x)/x\nSimplify first: y = x² − 2\ndy/dx = 2x"
+        },
+        {
+          "type": "callout",
+          "body": "Physical interpretation: The derivative dy/dx at any point gives the instantaneous rate of change of y with respect to x. If y represents the position of a vehicle (in km) and x represents time (in hours), then dy/dx is the instantaneous speed (km/h). If y represents the population of Kampala and x represents years, then dy/dx is the rate of population growth (people per year). Differentiation transforms static relationships into dynamic rates."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Differentiate y = 5x⁴ − 3x² + 8x − 2",
+            "options": [
+              "20x³ − 6x + 8",
+              "20x³ − 6x + 8 − 2",
+              "5x³ − 3x + 8",
+              "20x⁴ − 6x² + 8"
+            ],
+            "answer": "20x³ − 6x + 8",
+            "explanation": "Differentiate term by term using the power rule: d/dx(5x⁴)=20x³, d/dx(−3x²)=−6x, d/dx(8x)=8, d/dx(−2)=0. So dy/dx = 20x³ − 6x + 8."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "From first principles, differentiate f(x) = 3x. What is f'(x)?",
+            "options": ["3x", "3", "x", "0"],
+            "answer": "3",
+            "explanation": "f(x+h)=3(x+h)=3x+3h. f(x+h)−f(x)=3h. [f(x+h)−f(x)]/h=3. lim[h→0](3)=3. f'(x)=3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find dy/dx for y = 6/x² − 4√x",
+            "options": [
+              "−12/x³ − 2/√x",
+              "12/x³ − 2/√x",
+              "−12x⁻³ + 2x^(−1/2)",
+              "−12/x − 4"
+            ],
+            "answer": "−12/x³ − 2/√x",
+            "explanation": "Rewrite: y=6x⁻²−4x^(1/2). dy/dx=6(−2)x⁻³−4(1/2)x^(−1/2)=−12x⁻³−2x^(−1/2)=−12/x³−2/√x."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Differentiate y = (3x + 2)² by expanding first",
+            "options": ["6(3x+2)", "18x + 12", "6x + 4", "9x² + 12x + 4"],
+            "answer": "18x + 12",
+            "explanation": "(3x+2)²=9x²+12x+4. dy/dx=18x+12. Alternatively: 6(3x+2) = 18x+12 ✓ (this is also the chain rule result)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The gradient of y = x³ − 4x at x = 2 is:",
+            "options": ["8", "12", "0", "4"],
+            "answer": "8",
+            "explanation": "dy/dx=3x²−4. At x=2: 3(4)−4=12−4=8."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Differentiate f(x) = x⁵ from first principles. What is the key step after expanding (x+h)⁵?",
+            "options": [
+              "Cancel x⁵ terms, divide by h, let h→0 to get 5x⁴",
+              "Cancel h terms, divide by x, let x→0",
+              "Divide by x+h, let h→0",
+              "Multiply by h, let h→∞"
+            ],
+            "answer": "Cancel x⁵ terms, divide by h, let h→0 to get 5x⁴",
+            "explanation": "(x+h)⁵−x⁵ = 5x⁴h+10x³h²+... Dividing by h gives 5x⁴+10x³h+... As h→0, all terms with h vanish, leaving 5x⁴."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find dy/dx for y = (x² − 1)/x",
+            "options": ["1 + 1/x²", "2x − 1/x²", "2x/x", "1 − x⁻²"],
+            "answer": "1 + 1/x²",
+            "explanation": "Simplify: y=x−x⁻¹. dy/dx=1−(−1)x⁻²=1+x⁻²=1+1/x²."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "A curve has equation y = 2x³ − 9x² + 12x − 4. At which x-values is the gradient equal to 0?",
+            "options": ["x=1 and x=2", "x=−1 and x=−2", "x=3 and x=4", "x=0 and x=3"],
+            "answer": "x=1 and x=2",
+            "explanation": "dy/dx=6x²−18x+12=6(x²−3x+2)=6(x−1)(x−2)=0. x=1 or x=2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t10_l2",
+      "title": "The Chain Rule, Product Rule, and Quotient Rule",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The power rule and linearity rules handle polynomials and simple expressions, but real-world functions are often more complex — composed functions (a function of a function), products of two functions, or quotients of two functions. Three powerful rules extend differentiation to these cases: the chain rule for composite functions, the product rule for products, and the quotient rule for quotients. Together with the basic rules from Lesson 1, these three rules make it possible to differentiate virtually any algebraic function."
+        },
+        {
+          "type": "heading",
+          "body": "The Chain Rule — Composite Functions"
+        },
+        {
+          "type": "text",
+          "body": "A composite function is a function of a function: y = f(g(x)). For example, y = (3x+1)⁵ is a composite where the outer function is 'raise to the power 5' and the inner function is '3x+1'. The chain rule states how to differentiate such compositions."
+        },
+        {
+          "type": "formula",
+          "body": "Chain Rule:\nIf y = f(u) where u = g(x), then:\n\ndy/dx = (dy/du) × (du/dx)\n\nEquivalently: d/dx[f(g(x))] = f'(g(x)) × g'(x)\n\nIn words: differentiate the OUTER function (leaving the inner unchanged),\nthen MULTIPLY by the derivative of the INNER function.\n\nQuick chain rule pattern:\nd/dx[(expression)ⁿ] = n(expression)ⁿ⁻¹ × d/dx(expression)\n\nExamples:\nd/dx[(3x+1)⁵] = 5(3x+1)⁴ × 3 = 15(3x+1)⁴\nd/dx[(x²+1)³] = 3(x²+1)² × 2x = 6x(x²+1)²\nd/dx[√(2x+3)] = (1/2)(2x+3)^(−1/2) × 2 = 1/√(2x+3)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Applying the chain rule",
+          "body": "a) y = (4x² − 3x + 1)⁶\nLet u = 4x²−3x+1. du/dx = 8x−3.\ndy/du = 6u⁵. By chain rule:\ndy/dx = 6(4x²−3x+1)⁵ × (8x−3)\n\nb) y = 1/(2x+5)³ = (2x+5)⁻³\ndy/dx = −3(2x+5)⁻⁴ × 2 = −6/(2x+5)⁴\n\nc) y = √(x³+4) = (x³+4)^(1/2)\ndy/dx = (1/2)(x³+4)^(−1/2) × 3x² = 3x²/[2√(x³+4)]"
+        },
+        {
+          "type": "heading",
+          "body": "The Product Rule"
+        },
+        {
+          "type": "formula",
+          "body": "Product Rule:\nIf y = u(x) × v(x), then:\n\ndy/dx = u'v + uv'\n\nor equivalently: d/dx[uv] = (du/dx)v + u(dv/dx)\n\nIn words: (derivative of first) × second + first × (derivative of second)\n\nMemory tip: 'dash-v plus u-dash' — u'v + uv'\n\nNote: never try to differentiate a product term by term — that is WRONG.\nExample of ERROR: d/dx[(x²)(x³)] ≠ (2x)(3x²)\nCorrect: d/dx[x⁵] = 5x⁴ (or use product rule: 2x·x³+x²·3x²=2x⁴+3x⁴=5x⁴ ✓)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Applying the product rule",
+          "body": "a) y = x²(3x−1)\nLet u=x², v=3x−1. u'=2x, v'=3.\ndy/dx = 2x(3x−1) + x²(3) = 6x²−2x+3x² = 9x²−2x\n\nVerification: expand first: y=3x³−x². dy/dx=9x²−2x ✓\n\nb) y = (x²+1)(x³−2x)\nu=x²+1, v=x³−2x. u'=2x, v'=3x²−2.\ndy/dx = 2x(x³−2x) + (x²+1)(3x²−2)\n= 2x⁴−4x² + 3x⁴−2x²+3x²−2\n= 5x⁴−3x²−2\n\nVerification: expand: (x²+1)(x³−2x)=x⁵−2x³+x³−2x=x⁵−x³−2x.\ndy/dx=5x⁴−3x²−2 ✓\n\nc) y = x³(2x+1)⁴   [chain rule within product rule]\nu=x³, v=(2x+1)⁴. u'=3x², v'=4(2x+1)³×2=8(2x+1)³.\ndy/dx = 3x²(2x+1)⁴ + x³×8(2x+1)³\n= x²(2x+1)³[3(2x+1)+8x]\n= x²(2x+1)³(6x+3+8x)\n= x²(2x+1)³(14x+3)"
+        },
+        {
+          "type": "heading",
+          "body": "The Quotient Rule"
+        },
+        {
+          "type": "formula",
+          "body": "Quotient Rule:\nIf y = u(x)/v(x), then:\n\ndy/dx = (u'v − uv') / v²\n\nIn words: (derivative of numerator × denominator − numerator × derivative of denominator) / (denominator)²\n\nMemory tip: 'lo-d(hi) minus hi-d(lo) over lo-squared'\n= [v·u' − u·v'] / v²\n\nAlternative: rewrite as y=u×v⁻¹ and use the product rule — gives same result."
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Applying the quotient rule",
+          "body": "a) y = (x²+1)/(x−2)\nu=x²+1, v=x−2. u'=2x, v'=1.\ndy/dx = [2x(x−2) − (x²+1)(1)] / (x−2)²\n= [2x²−4x − x²−1] / (x−2)²\n= (x²−4x−1) / (x−2)²\n\nb) y = (3x−1)/(x²+4)\nu=3x−1, v=x²+4. u'=3, v'=2x.\ndy/dx = [3(x²+4) − (3x−1)(2x)] / (x²+4)²\n= [3x²+12 − 6x²+2x] / (x²+4)²\n= (−3x²+2x+12) / (x²+4)²\n\nc) y = x/(1+x²)\ndy/dx = [(1)(1+x²) − x(2x)] / (1+x²)²\n= (1+x²−2x²) / (1+x²)²\n= (1−x²) / (1+x²)²"
+        },
+        {
+          "type": "callout",
+          "body": "Engineering application: Many physical quantities are ratios — efficiency (useful output/total input), density (mass/volume), pressure (force/area), electrical resistance (voltage/current). When these quantities change over time or position, their rates of change are found using the quotient rule. For example, if an engineer at Karuma Hydroelectric Power Plant wants to know how the efficiency of a turbine changes as water flow rate varies, the quotient rule gives the instantaneous rate of change of efficiency."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Differentiate y = (5x − 2)⁴ using the chain rule",
+            "options": [
+              "4(5x−2)³",
+              "20(5x−2)³",
+              "4(5x−2)³ × 5",
+              "5(5x−2)⁴"
+            ],
+            "answer": "20(5x−2)³",
+            "explanation": "dy/dx = 4(5x−2)³ × d/dx(5x−2) = 4(5x−2)³ × 5 = 20(5x−2)³."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Find d/dx[√(3x² + 1)]",
+            "options": [
+              "3x/√(3x²+1)",
+              "6x/√(3x²+1)",
+              "1/(2√(3x²+1))",
+              "3x/(√(3x²+1))"
+            ],
+            "answer": "3x/√(3x²+1)",
+            "explanation": "d/dx[(3x²+1)^(1/2)] = (1/2)(3x²+1)^(−1/2) × 6x = 6x/[2√(3x²+1)] = 3x/√(3x²+1)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Use the product rule to differentiate y = x³(x+1)²",
+            "options": [
+              "x²(x+1)(5x+3)",
+              "3x²(x+1)² + 2x³(x+1)",
+              "x²(x+1)(5x+3)",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "u=x³,v=(x+1)². u'=3x²,v'=2(x+1). dy/dx=3x²(x+1)²+x³×2(x+1)=x²(x+1)[3(x+1)+2x]=x²(x+1)(5x+3)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Apply the quotient rule to y = x²/(x+1)",
+            "options": [
+              "(x²+2x)/(x+1)²",
+              "(2x(x+1)−x²)/(x+1)²",
+              "(x²+2x)/(x+1)²",
+              "Both A and B"
+            ],
+            "answer": "Both A and B",
+            "explanation": "dy/dx=[2x(x+1)−x²(1)]/(x+1)²=(2x²+2x−x²)/(x+1)²=(x²+2x)/(x+1)². Both options A and B are equivalent expressions."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Differentiate y = (x+1)²(x−1)³ using the product rule",
+            "options": [
+              "(x+1)(x−1)²(5x−1)",
+              "2(x+1)(x−1)³ + 3(x+1)²(x−1)²",
+              "(x+1)(x−1)²(5x−1)",
+              "Both A and B simplified"
+            ],
+            "answer": "Both A and B simplified",
+            "explanation": "dy/dx=2(x+1)(x−1)³+3(x+1)²(x−1)²=(x+1)(x−1)²[2(x−1)+3(x+1)]=(x+1)(x−1)²(2x−2+3x+3)=(x+1)(x−1)²(5x+1). So the factored form is (x+1)(x−1)²(5x+1)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find dy/dx for y = 1/(x²+1)² using the chain rule",
+            "options": [
+              "−4x/(x²+1)³",
+              "2x/(x²+1)³",
+              "−2(x²+1)",
+              "4x(x²+1)"
+            ],
+            "answer": "−4x/(x²+1)³",
+            "explanation": "y=(x²+1)⁻². dy/dx=−2(x²+1)⁻³×2x=−4x/(x²+1)³."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Differentiate y = x²√(x+1) using the product rule",
+            "options": [
+              "x(5x+4)/[2√(x+1)]",
+              "2x√(x+1) + x²/[2√(x+1)]",
+              "x(5x+4)/[2√(x+1)]",
+              "Both A and B simplified"
+            ],
+            "answer": "Both A and B simplified",
+            "explanation": "u=x², v=(x+1)^(1/2). u'=2x, v'=1/[2√(x+1)]. dy/dx=2x√(x+1)+x²/[2√(x+1)]=x[4(x+1)+x²]/[2√(x+1)]=x(x²+4x+4)/[2√(x+1)]. Hmm: 2x√(x+1)+x²/[2√(x+1)]=x[4(x+1)+x]/(2√(x+1))=x(5x+4)/(2√(x+1))."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Find the gradient of y = (x²−1)/(x²+1) at x = 0",
+            "options": ["0", "2", "−2", "1"],
+            "answer": "0",
+            "explanation": "dy/dx=[2x(x²+1)−(x²−1)×2x]/(x²+1)²=2x[(x²+1)−(x²−1)]/(x²+1)²=2x×2/(x²+1)²=4x/(x²+1)². At x=0: dy/dx=0."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t10_l3",
+      "title": "Implicit Differentiation and Differentiation of Trigonometric Functions",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "So far, all our functions have been given explicitly as y = f(x). But many important relationships in mathematics and science are given implicitly — for example, a circle x² + y² = r². Here y is not given as a single explicit function of x, yet we can still differentiate. We also extend differentiation to trigonometric functions, which are essential for modelling periodic phenomena — sound waves, alternating current, tidal patterns, and oscillating structures."
+        },
+        {
+          "type": "heading",
+          "body": "Implicit Differentiation"
+        },
+        {
+          "type": "text",
+          "body": "In implicit differentiation, we differentiate both sides of an equation with respect to x, treating y as a function of x and applying the chain rule whenever we differentiate a term involving y."
+        },
+        {
+          "type": "list",
+          "heading": "Key rule for implicit differentiation:",
+          "items": [
+            "d/dx(f(y)) = f'(y) × dy/dx   [chain rule: y is the inner function of x]",
+            "d/dx(y²) = 2y × dy/dx",
+            "d/dx(y³) = 3y² × dy/dx",
+            "d/dx(xy) = x × dy/dx + y × 1 = x(dy/dx) + y   [product rule]",
+            "After differentiating, collect all dy/dx terms on one side and solve for dy/dx."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Implicit differentiation of a circle",
+          "body": "Find dy/dx for the circle x² + y² = 25.\n\nDifferentiate both sides with respect to x:\n2x + 2y(dy/dx) = 0\n\nSolve for dy/dx:\n2y(dy/dx) = −2x\ndy/dx = −x/y\n\nInterpretation: At point (3, 4) on the circle (check: 9+16=25 ✓):\ndy/dx = −3/4\n\nThis is the gradient of the tangent to the circle at (3,4).\nThe radius at (3,4) has gradient 4/3. Product: (−3/4)(4/3) = −1. ✓ Perpendicular!"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Implicit differentiation with a product term",
+          "body": "Find dy/dx for x²y + y³ = 5.\n\nDifferentiate with respect to x:\nd/dx(x²y) + d/dx(y³) = 0\n\n[2xy + x²(dy/dx)] + 3y²(dy/dx) = 0\n\nCollect dy/dx terms:\nx²(dy/dx) + 3y²(dy/dx) = −2xy\ndy/dx(x² + 3y²) = −2xy\ndy/dx = −2xy/(x² + 3y²)"
+        },
+        {
+          "type": "heading",
+          "body": "Derivatives of Trigonometric Functions"
+        },
+        {
+          "type": "formula",
+          "body": "Standard derivatives (must be memorised):\n\nd/dx(sin x) = cos x\nd/dx(cos x) = −sin x\nd/dx(tan x) = sec²x\n\nd/dx(cosec x) = −cosec x cot x\nd/dx(sec x) = sec x tan x\nd/dx(cot x) = −cosec²x\n\nIMPORTANT: These results are ONLY valid when x is in RADIANS.\nIn degrees, extra conversion factors appear — always work in radians for calculus.\n\nCombined with chain rule:\nd/dx(sin(f(x))) = cos(f(x)) × f'(x)\nd/dx(cos(f(x))) = −sin(f(x)) × f'(x)\nd/dx(tan(f(x))) = sec²(f(x)) × f'(x)"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Differentiating trig functions",
+          "body": "a) y = sin(3x)\ndy/dx = cos(3x) × 3 = 3cos(3x)\n\nb) y = cos(x²)\ndy/dx = −sin(x²) × 2x = −2x sin(x²)\n\nc) y = tan(2x+1)\ndy/dx = sec²(2x+1) × 2 = 2sec²(2x+1)\n\nd) y = x² sin x   [product rule]\nu=x², v=sinx. u'=2x, v'=cosx.\ndy/dx = 2x sinx + x²cosx\n\ne) y = sin x/cos x = tanx (verification)\nu=sinx, v=cosx. u'=cosx, v'=−sinx.\ndy/dx = [cosx·cosx − sinx·(−sinx)] / cos²x\n= (cos²x+sin²x)/cos²x = 1/cos²x = sec²x ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Implicit differentiation with trig",
+          "body": "Find dy/dx if sin(x+y) = x.\n\nDifferentiate both sides with respect to x:\ncos(x+y) × (1 + dy/dx) = 1\n\nExpand:\ncos(x+y) + cos(x+y)(dy/dx) = 1\n\nSolve for dy/dx:\ncos(x+y)(dy/dx) = 1 − cos(x+y)\ndy/dx = [1 − cos(x+y)] / cos(x+y)\ndy/dx = sec(x+y) − 1"
+        },
+        {
+          "type": "callout",
+          "body": "Wave physics application: Sound waves, radio signals, and alternating electrical current are modelled as y = A sin(ωt + φ), where A is amplitude, ω is angular frequency, and φ is phase. The rate of change (velocity of the oscillation) is dy/dt = Aω cos(ωt + φ) — obtained by differentiating the sine function. At Makerere University's physics department and at Uganda's broadcasting stations, this calculation governs signal processing and antenna design."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find dy/dx implicitly for x² + 3y² = 12",
+            "options": [
+              "dy/dx = −x/(3y)",
+              "dy/dx = x/(3y)",
+              "dy/dx = −2x/6y",
+              "dy/dx = 2x"
+            ],
+            "answer": "dy/dx = −x/(3y)",
+            "explanation": "Differentiate: 2x + 6y(dy/dx) = 0. Solve: dy/dx = −2x/6y = −x/(3y)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Differentiate y = sin(5x²)",
+            "options": [
+              "cos(5x²)",
+              "10x cos(5x²)",
+              "5x cos(5x²)",
+              "cos(10x)"
+            ],
+            "answer": "10x cos(5x²)",
+            "explanation": "Chain rule: dy/dx = cos(5x²) × d/dx(5x²) = cos(5x²) × 10x = 10x cos(5x²)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find dy/dx for x² + xy + y² = 7",
+            "options": [
+              "−(2x+y)/(x+2y)",
+              "(2x+y)/(x+2y)",
+              "−2x/(x+2y)",
+              "−(2x+y)/2y"
+            ],
+            "answer": "−(2x+y)/(x+2y)",
+            "explanation": "Differentiate: 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Collect: (x+2y)(dy/dx) = −(2x+y). dy/dx = −(2x+y)/(x+2y)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is d/dx(cos 3x)?",
+            "options": ["sin 3x", "−sin 3x", "−3sin 3x", "3sin 3x"],
+            "answer": "−3sin 3x",
+            "explanation": "d/dx(cos 3x) = −sin(3x) × 3 = −3sin 3x."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Differentiate y = x cos x using the product rule",
+            "options": [
+              "cos x − x sin x",
+              "cos x + x sin x",
+              "−x sin x",
+              "−sin x"
+            ],
+            "answer": "cos x − x sin x",
+            "explanation": "u=x, v=cosx. u'=1, v'=−sinx. dy/dx = (1)(cosx) + x(−sinx) = cosx − x sinx."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Find the gradient of the ellipse x² + 4y² = 8 at the point (2, 1)",
+            "options": ["−1/2", "1/2", "−1/4", "−2"],
+            "answer": "−1/2",
+            "explanation": "Differentiate: 2x + 8y(dy/dx)=0. dy/dx=−2x/(8y)=−x/(4y). At (2,1): dy/dx=−2/4=−1/2."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find dy/dx for y = sin²x (use chain rule treating sin x as inner function)",
+            "options": ["2sin x", "2sin x cos x", "cos²x", "sin 2x"],
+            "answer": "sin 2x",
+            "explanation": "y=(sinx)². dy/dx=2sinx×cosx=2sinxcosx=sin2x (using double angle formula). Both 2sinxcosx and sin2x are correct — they are equal."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Differentiate y = tan(x²) and evaluate at x = 0",
+            "options": ["0", "1", "sec²(0)=1", "2x sec²(x²)"],
+            "answer": "0",
+            "explanation": "dy/dx = sec²(x²) × 2x = 2x sec²(x²). At x=0: dy/dx = 2(0)sec²(0) = 0."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t10_l4",
+      "title": "Applications — Tangents, Normals, Stationary Points, and Curve Sketching",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The derivative is not just a mathematical abstraction — it is the key that unlocks a complete description of how curves behave. In this lesson, we use the derivative to find equations of tangents and normals to curves, locate and classify stationary points (maxima, minima, and points of inflection), and sketch curves accurately. These techniques are among the most tested in A-Level examinations and underpin everything from structural engineering (finding minimum material for maximum strength) to economics (maximising profit or minimising cost)."
+        },
+        {
+          "type": "heading",
+          "body": "Equations of Tangents and Normals"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The tangent to a curve y=f(x) at point P(a, f(a)) is the straight line with gradient m=f'(a) passing through P.",
+            "Equation of tangent: y − f(a) = f'(a)(x − a)",
+            "The normal to a curve at P is perpendicular to the tangent at P.",
+            "Gradient of normal = −1/f'(a) (negative reciprocal).",
+            "Equation of normal: y − f(a) = [−1/f'(a)](x − a)",
+            "Special cases: if f'(a)=0, the tangent is horizontal (y = f(a)) and the normal is vertical (x = a). If f'(a) is undefined (vertical tangent), the normal is horizontal."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Tangent and normal to a curve",
+          "body": "Find the equations of the tangent and normal to y = x³ − 3x + 2 at the point where x = 2.\n\nStep 1 — Find y at x=2:\ny = 8 − 6 + 2 = 4. Point: (2, 4).\n\nStep 2 — Find gradient:\ndy/dx = 3x² − 3. At x=2: m = 3(4)−3 = 9.\n\nStep 3 — Tangent (gradient 9 through (2,4)):\ny − 4 = 9(x − 2) → y = 9x − 14\n\nStep 4 — Normal (gradient −1/9 through (2,4)):\ny − 4 = −(1/9)(x − 2) → 9y − 36 = −x + 2 → x + 9y = 38"
+        },
+        {
+          "type": "heading",
+          "body": "Stationary Points — Finding and Classifying"
+        },
+        {
+          "type": "list",
+          "heading": "Procedure for stationary points:",
+          "items": [
+            "Step 1: Find dy/dx and set it equal to zero: dy/dx = 0. Solve for x. These x-values are the stationary points.",
+            "Step 2: Find the y-coordinates by substituting x back into y = f(x).",
+            "Step 3: Classify each stationary point using the SECOND DERIVATIVE TEST or the SIGN OF GRADIENT test.",
+            "Second derivative test: find d²y/dx². At a stationary point x=a:\n   If d²y/dx² > 0: minimum (curve is concave up)\n   If d²y/dx² < 0: maximum (curve is concave down)\n   If d²y/dx² = 0: inconclusive — use sign of gradient test.",
+            "Sign of gradient test: examine the sign of dy/dx just before and just after the stationary point:\n   (+, 0, −): maximum (gradient changes from + to −)\n   (−, 0, +): minimum (gradient changes from − to +)\n   (+, 0, +) or (−, 0, −): point of inflection (gradient does not change sign)"
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Full stationary point analysis",
+          "body": "Find and classify all stationary points of y = 2x³ − 9x² + 12x − 4.\n\nStep 1 — Find dy/dx:\ndy/dx = 6x² − 18x + 12 = 6(x²−3x+2) = 6(x−1)(x−2)\n\nStep 2 — Set dy/dx = 0:\n6(x−1)(x−2) = 0 → x=1 or x=2\n\nStep 3 — Find y-values:\nAt x=1: y = 2−9+12−4 = 1. Point: (1, 1).\nAt x=2: y = 16−36+24−4 = 0. Point: (2, 0).\n\nStep 4 — Second derivative test:\nd²y/dx² = 12x − 18\nAt x=1: d²y/dx² = 12−18 = −6 < 0 → LOCAL MAXIMUM at (1, 1)\nAt x=2: d²y/dx² = 24−18 = 6 > 0 → LOCAL MINIMUM at (2, 0)"
+        },
+        {
+          "type": "heading",
+          "body": "Curve Sketching Using Calculus"
+        },
+        {
+          "type": "list",
+          "heading": "Complete curve sketching procedure:",
+          "items": [
+            "1. Find y-intercept: set x=0.",
+            "2. Find x-intercepts: set y=0 and solve.",
+            "3. Find dy/dx and stationary points. Classify as max, min, or inflection.",
+            "4. Find d²y/dx² to confirm classification.",
+            "5. Check behaviour as x→+∞ and x→−∞ (which term dominates?).",
+            "6. Check symmetry: even function (y-axis symmetry) if f(−x)=f(x); odd function (origin symmetry) if f(−x)=−f(x).",
+            "7. Note any asymptotes (for rational functions: vertical where denominator=0; horizontal from limit as x→±∞).",
+            "8. Sketch, marking all key features."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Sketch y = 2x³ − 9x² + 12x − 4",
+          "body": "Using the work from Example 2:\n\ny-intercept: x=0, y=−4. Point: (0, −4).\nx-intercepts: 2x³−9x²+12x−4=0. Factor: try x=2: 16−36+24−4=0 ✓. (x−2) is a factor.\n2x³−9x²+12x−4 = (x−2)(2x²−5x+2) = (x−2)(2x−1)(x−2) = (x−2)²(2x−1).\nRoots: x=2 (repeated, touching x-axis) and x=1/2 (crossing x-axis).\n\nStationary points: maximum at (1,1), minimum at (2,0).\n\nBehaviour: as x→+∞, y→+∞ (cubic, positive leading coefficient). As x→−∞, y→−∞.\n\nSketch notes:\n• Starts bottom-left, rises.\n• Crosses x-axis at x=1/2.\n• Rises to local max (1,1).\n• Falls to touch x-axis at x=2 (repeated root — bounces back).\n• Rises steeply to top-right."
+        },
+        {
+          "type": "callout",
+          "body": "Economic optimisation: A Ugandan manufacturer produces x units of a product. The profit function is P(x) = −2x² + 80x − 300 (in millions of UGX). To maximise profit: dP/dx = −4x + 80 = 0 → x = 20 units. d²P/dx² = −4 < 0 confirms maximum. Maximum profit = P(20) = −800 + 1600 − 300 = 500 million UGX. The derivative tells the manufacturer exactly how many units to produce for maximum profitability."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Find the equation of the tangent to y = x² − 3x at x = 4",
+            "options": [
+              "y = 5x − 16",
+              "y = 5x + 4",
+              "y = 5x − 20",
+              "y = x − 16"
+            ],
+            "answer": "y = 5x − 16",
+            "explanation": "At x=4: y=16−12=4. dy/dx=2x−3. At x=4: m=8−3=5. Tangent: y−4=5(x−4) → y=5x−16."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The normal to y = x³ at the point (1,1) has equation:",
+            "options": [
+              "y = 3x − 2",
+              "y = −(1/3)x + 4/3",
+              "x + 3y = 4",
+              "Both B and C"
+            ],
+            "answer": "Both B and C",
+            "explanation": "dy/dx=3x². At x=1: m=3. Normal gradient=−1/3. Normal: y−1=−(1/3)(x−1) → 3y−3=−x+1 → x+3y=4. Both B and C are the same line."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A curve has dy/dx = (x−2)(x+3). Classify the stationary point at x=2.",
+            "options": [
+              "Maximum",
+              "Minimum",
+              "Point of inflection",
+              "Cannot be determined"
+            ],
+            "answer": "Minimum",
+            "explanation": "At x slightly < 2: (neg)(pos) = neg. At x slightly > 2: (pos)(pos) = pos. Sign changes from − to + → minimum."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the stationary points of y = x⁴ − 4x³ and classify them",
+            "options": [
+              "x=0 (inflection), x=3 (minimum)",
+              "x=0 (minimum), x=3 (minimum)",
+              "x=0 (maximum), x=3 (minimum)",
+              "x=3 only (minimum)"
+            ],
+            "answer": "x=0 (inflection), x=3 (minimum)",
+            "explanation": "dy/dx=4x³−12x²=4x²(x−3)=0 → x=0 or x=3. d²y/dx²=12x²−24x. At x=0: d²y/dx²=0 → inconclusive. Sign test around x=0: (4(−ε)²(−ε−3)<0) and (4ε²(ε−3)<0) — same sign → inflection. At x=3: d²y/dx²=108−72=36>0 → minimum."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A profit function is P(x) = −x² + 10x − 16. Find the maximum profit.",
+            "options": ["9", "25", "16", "10"],
+            "answer": "9",
+            "explanation": "dP/dx=−2x+10=0 → x=5. d²P/dx²=−2<0 → maximum. P(5)=−25+50−16=9."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "For y = x³ − 3x, determine the nature of the stationary points at x=1 and x=−1",
+            "options": [
+              "x=1 maximum, x=−1 minimum",
+              "x=−1 maximum, x=1 minimum",
+              "Both are minima",
+              "Both are maxima"
+            ],
+            "answer": "x=−1 maximum, x=1 minimum",
+            "explanation": "dy/dx=3x²−3=3(x−1)(x+1)=0 → x=±1. d²y/dx²=6x. At x=−1: d²y/dx²=−6<0 → maximum. At x=1: d²y/dx²=6>0 → minimum."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A rectangle has perimeter 40 cm. If one side is x, find the value of x that maximises the area.",
+            "options": ["x=5", "x=10", "x=20", "x=8"],
+            "answer": "x=10",
+            "explanation": "Other side = (40−2x)/2 = 20−x. Area A=x(20−x)=20x−x². dA/dx=20−2x=0 → x=10. d²A/dx²=−2<0 → maximum. Each side = 10 cm (a square)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The second derivative d²y/dx² > 0 at a stationary point tells us the point is:",
+            "options": [
+              "A maximum",
+              "A minimum",
+              "A point of inflection",
+              "Cannot be classified"
+            ],
+            "answer": "A minimum",
+            "explanation": "d²y/dx² > 0 means the curve is concave up (like a U shape) at that point. The stationary point is therefore a local minimum — the curve curves upward away from that point."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t10_l5",
+      "title": "Small Changes, Rates of Change, and Connected Variables",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Two of the most powerful practical applications of differentiation are: approximating small changes in a function using the derivative, and relating rates of change of connected variables using the chain rule. These tools allow us to estimate how much a quantity changes when another changes by a small amount, and to connect rates of change (like how fast a sphere's surface area grows as its radius increases). Both appear frequently in physics, engineering, and economics — and regularly in UACE examinations."
+        },
+        {
+          "type": "heading",
+          "body": "Approximation of Small Changes"
+        },
+        {
+          "type": "formula",
+          "body": "If y = f(x) and x changes by a small amount δx, then y changes by approximately:\n\nδy ≈ (dy/dx) × δx\n\nThis comes from the definition of the derivative:\ndy/dx ≈ δy/δx  for small δx\n\nSo: δy ≈ (dy/dx) δx\n\nAs a percentage change:\n(δy/y) × 100 ≈ (dy/dx) × (δx/y) × 100\n\nRelative (fractional) change in y ≈ (dy/dx / y) × δx\n\nExample: y = x³. If x changes from 4 to 4.02:\ndy/dx = 3x² = 3(16) = 48 at x=4.\nδx = 0.02.\nδy ≈ 48 × 0.02 = 0.96\nSo y ≈ 4³ + 0.96 = 64 + 0.96 = 64.96.\nExact: 4.02³ = 64.964... ✓ (very close)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Small change approximation",
+          "body": "The radius of a circular oil slick on Lake Victoria increases from 50 m to 50.5 m. Estimate the increase in area.\n\nA = πr². dA/dr = 2πr.\nAt r=50: dA/dr = 100π.\nδr = 0.5.\nδA ≈ 100π × 0.5 = 50π ≈ 157.1 m²\n\nExact increase: π(50.5²) − π(50²) = π(2550.25 − 2500) = 50.25π ≈ 157.9 m²\nThe approximation (157.1 m²) is very close to the exact (157.9 m²)."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Percentage change in volume",
+          "body": "A spherical balloon is inflated. Its radius increases by 2%. Find the approximate percentage increase in volume.\n\nV = (4/3)πr³. dV/dr = 4πr².\n\nRelative change in V:\nδV/V ≈ (dV/dr × δr) / V = [4πr² × δr] / [(4/3)πr³]\n= 3δr/r = 3 × (δr/r)\n\nIf δr/r = 2/100 = 0.02:\nδV/V ≈ 3 × 0.02 = 0.06 = 6%\n\nResult: a 2% increase in radius gives approximately a 6% increase in volume.\nIn general: if radius increases by p%, volume increases by approximately 3p%."
+        },
+        {
+          "type": "heading",
+          "body": "Rates of Change of Connected Variables"
+        },
+        {
+          "type": "text",
+          "body": "When two variables y and x are both changing with respect to a third variable t (usually time), the chain rule connects their rates of change:"
+        },
+        {
+          "type": "formula",
+          "body": "Chain rule for rates of change:\n\ndy/dt = (dy/dx) × (dx/dt)\n\nThis allows us to find the rate of change of one variable given the rate\nof change of another, when the two are connected by an equation y=f(x).\n\nFor three connected variables:\ndz/dt = (dz/dy)(dy/dx)(dx/dt)\n\nCommon notation:\n• dx/dt = rate of change of x with time (e.g. velocity if x is position)\n• dA/dt = rate of change of area with time\n• dV/dt = rate of change of volume with time"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Connected rates — expanding circle",
+          "body": "A circular ripple on a pond expands at 3 cm/s (dr/dt = 3). Find the rate at which the area is increasing when r = 10 cm.\n\nA = πr². dA/dr = 2πr.\n\ndA/dt = (dA/dr) × (dr/dt) = 2πr × 3 = 6πr\n\nAt r=10: dA/dt = 60π ≈ 188.5 cm²/s\n\nInterpretation: When the radius is 10 cm, the area is increasing at about 188.5 square centimetres per second."
+        },
+        {
+          "type": "example",
+          "title": "Example 4: Filling a conical tank",
+          "body": "Water is poured into an inverted conical tank at 2 m³/min (dV/dt = 2). The cone has height H=6 m and base radius R=3 m. Find dh/dt when h=2 m.\n\nFor a cone with fixed angle: r/h = R/H = 3/6 = 1/2, so r = h/2.\n\nV = (1/3)πr²h = (1/3)π(h/2)²h = πh³/12\n\ndV/dh = πh²/4\n\nFrom chain rule: dV/dt = (dV/dh)(dh/dt)\n2 = (πh²/4)(dh/dt)\ndh/dt = 8/(πh²)\n\nAt h=2: dh/dt = 8/(4π) = 2/π ≈ 0.637 m/min\n\nInterpretation: When the water is 2 m deep, the water level is rising at approximately 0.64 m per minute."
+        },
+        {
+          "type": "callout",
+          "body": "Medical application: A drug is administered to a patient and its concentration C in the blood (mg/L) decreases with time t (hours) according to C = 10e^(−0.3t). The rate of change dC/dt = −3e^(−0.3t) (using the chain rule on exponential functions, covered in S6). At t=0: dC/dt = −3 mg/L per hour — the drug is leaving the blood at 3 mg/L/hr initially. Doctors at Mulago Hospital use these rates to determine safe dosing intervals."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "y = x² + 3x. Estimate δy when x = 5 and δx = 0.1",
+            "options": ["1.3", "1.31", "13", "0.13"],
+            "answer": "1.3",
+            "explanation": "dy/dx=2x+3. At x=5: dy/dx=13. δy ≈ 13×0.1=1.3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The side of a square increases from 8 cm to 8.02 cm. Estimate the increase in area.",
+            "options": ["0.32 cm²", "3.2 cm²", "0.04 cm²", "0.64 cm²"],
+            "answer": "0.32 cm²",
+            "explanation": "A=x². dA/dx=2x=16 at x=8. δA≈16×0.02=0.32 cm²."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The radius of a sphere increases by 3%. Find the approximate percentage increase in its surface area (S=4πr²).",
+            "options": ["3%", "6%", "9%", "12%"],
+            "answer": "6%",
+            "explanation": "δS/S ≈ (dS/dr × δr)/S = (8πr × δr)/(4πr²) = 2δr/r = 2×3% = 6%."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If y = x³ and dx/dt = 4 at x = 2, find dy/dt",
+            "options": ["48", "12", "24", "8"],
+            "answer": "48",
+            "explanation": "dy/dt = (dy/dx)(dx/dt) = 3x² × 4. At x=2: 3(4)×4 = 48."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A spherical balloon is inflated so that its volume increases at 10 cm³/s. Find dR/dt when R=5 cm. (V=4πR³/3)",
+            "options": ["1/(10π) cm/s", "2/(10π) cm/s", "10/(100π) cm/s", "1/(10π) cm/s"],
+            "answer": "1/(10π) cm/s",
+            "explanation": "dV/dt=4πR²(dR/dt). At R=5: 10=4π(25)(dR/dt)=100π(dR/dt). dR/dt=10/(100π)=1/(10π) cm/s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "y = √x. If x changes from 9 to 9.06, estimate the change in y.",
+            "options": ["0.01", "0.10", "0.03", "3"],
+            "answer": "0.01",
+            "explanation": "dy/dx=1/(2√x). At x=9: dy/dx=1/6. δy≈(1/6)×0.06=0.01."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Water flows into a cylindrical tank (radius 3 m) at 9 m³/min. Find the rate at which the water level rises.",
+            "options": ["1/π m/min", "3/π m/min", "π m/min", "9/π m/min"],
+            "answer": "1/π m/min",
+            "explanation": "V=πr²h=9πh. dV/dt=9π(dh/dt). 9=9π(dh/dt). dh/dt=1/π m/min."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "The area of a square is A = x². If x increases at 2 cm/s, find dA/dt when x=6 cm.",
+            "options": ["24 cm²/s", "12 cm²/s", "4 cm²/s", "36 cm²/s"],
+            "answer": "24 cm²/s",
+            "explanation": "dA/dt=(dA/dx)(dx/dt)=2x×2=4x. At x=6: dA/dt=4×6=24 cm²/s."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "The derivative dy/dx = lim[h→0][f(x+h)−f(x)]/h is the gradient of the tangent to y=f(x) at any point.",
+      "Power rule: d/dx(xⁿ) = nxⁿ⁻¹. Applies for any rational n, including negative and fractional powers.",
+      "Sum/difference: differentiate term by term. Scalar multiple: d/dx(cf)=c×f'.",
+      "Chain rule: d/dx[f(g(x))] = f'(g(x)) × g'(x). Differentiate outer, multiply by derivative of inner.",
+      "Product rule: d/dx(uv) = u'v + uv'. Quotient rule: d/dx(u/v) = (u'v − uv')/v².",
+      "Implicit differentiation: differentiate both sides w.r.t. x; use chain rule for y terms (attach dy/dx); solve for dy/dx.",
+      "Trig derivatives: d/dx(sinx)=cosx; d/dx(cosx)=−sinx; d/dx(tanx)=sec²x. Valid in radians only.",
+      "Tangent at (a,f(a)): gradient=f'(a); equation: y−f(a)=f'(a)(x−a). Normal gradient=−1/f'(a).",
+      "Stationary points: solve dy/dx=0. Classify: d²y/dx²>0→minimum; d²y/dx²<0→maximum; d²y/dx²=0→use sign test.",
+      "Small changes: δy ≈ (dy/dx)δx. Connected rates: dy/dt=(dy/dx)(dx/dt)."
+    ],
+    "common_errors": [
+      "Forgetting the chain rule — differentiating (3x+1)⁵ as 5(3x+1)⁴ without multiplying by 3.",
+      "Applying product rule incorrectly — d/dx(uv) ≠ u'v'. Must include BOTH u'v AND uv' terms.",
+      "In quotient rule, subtracting in wrong order: must be u'v − uv', NOT uv' − u'v.",
+      "In implicit differentiation, forgetting to attach dy/dx when differentiating y-terms.",
+      "Using d/dx(sinx)=−cosx (wrong sign) instead of +cosx.",
+      "Confusing maximum (d²y/dx²<0) and minimum (d²y/dx²>0) — the negative second derivative gives maximum.",
+      "Not simplifying before differentiating — always simplify fractions and products first where possible."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 10 End-of-Topic Assessment — Differentiation 1",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "Differentiate y = 3x⁴ − 2x³ + 5x − 7 and find the gradient at x = 1",
+        "options": ["11", "7", "9", "5"],
+        "answer": "11",
+        "explanation": "dy/dx=12x³−6x²+5. At x=1: 12−6+5=11."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "Use the chain rule to differentiate y = (2x³ − 1)⁵",
+        "options": [
+          "5(2x³−1)⁴",
+          "30x²(2x³−1)⁴",
+          "5(6x²)(2x³−1)⁴",
+          "10x²(2x³−1)⁴"
+        ],
+        "answer": "30x²(2x³−1)⁴",
+        "explanation": "dy/dx=5(2x³−1)⁴×6x²=30x²(2x³−1)⁴."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "Find dy/dx using the product rule for y = (x²+1)(x³−x)",
+        "options": [
+          "5x⁴−3x²−1",
+          "2x(x³−x)+(x²+1)(3x²−1)",
+          "5x⁴−3x²−1",
+          "Both A and B simplified"
+        ],
+        "answer": "Both A and B simplified",
+        "explanation": "dy/dx=2x(x³−x)+(x²+1)(3x²−1)=2x⁴−2x²+3x⁴−x²+3x²−1=5x⁴−1. Hmm: 2x⁴−2x²+3x⁴+3x²−x²−1=5x⁴+0x²−1=5x⁴−1."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "Apply the quotient rule to y = (x+1)/(x²+2) and simplify",
+        "options": [
+          "(−x²−2x+2)/(x²+2)²",
+          "(x²+2x+2)/(x²+2)²",
+          "(2−2x−x²)/(x²+2)²",
+          "Both A and C"
+        ],
+        "answer": "Both A and C",
+        "explanation": "dy/dx=[(1)(x²+2)−(x+1)(2x)]/(x²+2)²=[x²+2−2x²−2x]/(x²+2)²=(−x²−2x+2)/(x²+2)²=−(x²+2x−2)/(x²+2)²."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "Find dy/dx implicitly for x³ + y³ = 9",
+        "options": [
+          "dy/dx = −x²/y²",
+          "dy/dx = x²/y²",
+          "dy/dx = −3x²/3y²",
+          "Both A and C"
+        ],
+        "answer": "Both A and C",
+        "explanation": "3x²+3y²(dy/dx)=0. dy/dx=−3x²/3y²=−x²/y²."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Find the stationary points of y = x³ − 6x² + 9x + 1 and classify them",
+        "options": [
+          "x=1 (max, y=5), x=3 (min, y=1)",
+          "x=1 (min, y=5), x=3 (max, y=1)",
+          "x=3 (max), x=1 (min)",
+          "x=0 (max), x=3 (min)"
+        ],
+        "answer": "x=1 (max, y=5), x=3 (min, y=1)",
+        "explanation": "dy/dx=3x²−12x+9=3(x−1)(x−3)=0→x=1,3. y(1)=1−6+9+1=5. y(3)=27−54+27+1=1. d²y/dx²=6x−12. At x=1:−6<0→max. At x=3:6>0→min."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "Differentiate y = sin(x)cos(x) using the product rule, then simplify",
+        "options": [
+          "cos2x",
+          "cos²x − sin²x",
+          "2sinxcosx",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "dy/dx=cos(x)cos(x)+sin(x)(−sin(x))=cos²x−sin²x=cos2x. Options A and B are equivalent."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "The equation of the tangent to y=√x at x=9 is:",
+        "options": [
+          "y = (1/6)x + 3/2",
+          "6y = x + 9",
+          "y = (1/6)x + 3/2",
+          "Both A and B"
+        ],
+        "answer": "Both A and B",
+        "explanation": "At x=9: y=3. dy/dx=1/(2√x)=1/6. Tangent: y−3=(1/6)(x−9) → 6y−18=x−9 → 6y=x+9. Both A and B are the same line."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "y = 2x⁴ − x². A particle moves along this curve. Find d²y/dx² and determine where the curve is concave up.",
+        "options": [
+          "d²y/dx²=24x²−2; concave up for |x|>1/√12",
+          "d²y/dx²=24x²−2; concave up for all x",
+          "d²y/dx²=8x³−2x; inflection at x=0",
+          "d²y/dx²=24x²−2; concave up where 24x²>2"
+        ],
+        "answer": "d²y/dx²=24x²−2; concave up where 24x²>2",
+        "explanation": "dy/dx=8x³−2x. d²y/dx²=24x²−2. Concave up (d²y/dx²>0): 24x²>2 → x²>1/12 → |x|>1/√12."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "Estimate y = x^(1/3) when x = 27.3, given y=3 at x=27",
+        "options": ["3.0185", "3.037", "3.010", "3.020"],
+        "answer": "3.0185",
+        "explanation": "dy/dx=(1/3)x^(−2/3)=1/(3x^(2/3)). At x=27: dy/dx=1/(3×9)=1/27. δx=0.3. δy≈(1/27)×0.3=0.3/27=1/90≈0.0111. y≈3.011. Hmm: 1/27×0.3=0.3/27=10/900=1/90≈0.0111. Answer: 3.011."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "An oil spill forms a circle expanding at dA/dt = 4π m²/s. Find dr/dt when r = 2 m.",
+        "options": ["1 m/s", "0.5 m/s", "2 m/s", "π m/s"],
+        "answer": "1 m/s",
+        "explanation": "A=πr². dA/dt=2πr(dr/dt). 4π=2π(2)(dr/dt)=4π(dr/dt). dr/dt=1 m/s."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "Find the gradient of the curve x²y + y³ = 5 at point (2,1)",
+        "options": ["−4/7", "4/7", "−2/5", "−7/4"],
+        "answer": "−4/7",
+        "explanation": "Differentiate: 2xy+x²(dy/dx)+3y²(dy/dx)=0. At (2,1): 4+4(dy/dx)+3(dy/dx)=0 → 7(dy/dx)=−4 → dy/dx=−4/7."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "A curve C has equation y = (x−1)/(x+1). Show that dy/dx > 0 for all x ≠ −1, so C has no stationary points.",
+        "options": [
+          "dy/dx = 2/(x+1)² which is always positive",
+          "dy/dx = (x+1)−(x−1)/(x+1)² = 0 everywhere",
+          "dy/dx = 1/(x+1)² which is always positive",
+          "dy/dx cannot be found for this function"
+        ],
+        "answer": "dy/dx = 2/(x+1)² which is always positive",
+        "explanation": "Quotient rule: dy/dx=[(1)(x+1)−(x−1)(1)]/(x+1)²=[x+1−x+1]/(x+1)²=2/(x+1)². Since 2>0 and (x+1)²>0 for all x≠−1, dy/dx>0 always → no stationary points."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "The volume of a cube is V=x³. If each side decreases by 0.5% find the approximate percentage decrease in volume.",
+        "options": ["0.5%", "1.0%", "1.5%", "3.0%"],
+        "answer": "1.5%",
+        "explanation": "δV/V=(dV/dx × δx)/V=(3x²×δx)/x³=3(δx/x)=3×(−0.5%)=−1.5%. Volume decreases by approximately 1.5%."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Differentiate y = sin(x²) × cos(3x) using the product rule combined with the chain rule",
+        "options": [
+          "2x cos(x²)cos(3x) − 3sin(x²)sin(3x)",
+          "2x cos(x²)cos(3x) + 3sin(x²)sin(3x)",
+          "cos(x²)×2x − sin(3x)×3",
+          "cos(x²)cos(3x)"
+        ],
+        "answer": "2x cos(x²)cos(3x) − 3sin(x²)sin(3x)",
+        "explanation": "u=sin(x²),v=cos(3x). u'=2xcos(x²),v'=−3sin(3x). dy/dx=2xcos(x²)cos(3x)+sin(x²)(−3sin(3x))=2xcos(x²)cos(3x)−3sin(x²)sin(3x)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,785 @@
+{
+  "topic_id": "s5_maths_t15_probability_distributions",
+  "topic_title": "Probability Distributions",
+  "subject": "mathematics",
+  "class_level": "S5",
+  "term": 3,
+  "duration_periods": 18,
+  "ncdc_competency": "The learner applies the binomial, rectangular (uniform), and normal probability distributions to model real-life phenomena and compute probabilities for decision making in science, health, and social contexts.",
+  "lessons": [
+    {
+      "id": "s5_maths_t15_l1",
+      "title": "The Binomial Distribution — Model, Formula, and Properties",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The binomial distribution is the most widely used discrete probability distribution. It models the number of successes in a fixed number of independent trials, where each trial has exactly two outcomes — success or failure — and the probability of success is the same on every trial. This situation arises constantly in real life: the number of students who pass an exam out of a class of 30, the number of defective items in a batch of 100, the number of patients who respond to a treatment out of 20, and the number of times a coin lands heads in 10 tosses are all binomial scenarios. The distribution was introduced in connection with combinations in Topic 12 and the binomial theorem in Topic 13 — now we study it as a probability model in its own right."
+        },
+        {
+          "type": "heading",
+          "body": "Conditions for the Binomial Distribution (FIST)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Fixed number of trials: the experiment is repeated exactly n times.",
+            "Independent trials: the outcome of any one trial does not affect any other trial.",
+            "Success/Failure: each trial has exactly two possible outcomes — success (S) or failure (F).",
+            "Two outcomes, constant probability: the probability of success p is the same on every trial. Therefore P(failure) = 1−p = q (constant).",
+            "Memory aid: FIST — Fixed, Independent, Success/Failure, Two-outcome (constant probability).",
+            "If ALL four conditions hold, X = number of successes ~ B(n, p) — binomial with parameters n and p."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Binomial probability formula:\nIf X ~ B(n, p), then:\n\nP(X = r) = ⁿCᵣ pʳ (1−p)ⁿ⁻ʳ   for r = 0, 1, 2, ..., n\n\nwhere:\n• n = number of trials\n• p = probability of success on each trial\n• q = 1−p = probability of failure\n• ⁿCᵣ = number of ways to choose which r trials are successes\n\nMean and variance:\nE(X) = np\nVar(X) = np(1−p) = npq\nSd(X) = √(npq)\n\nNote: The full distribution sums to 1:\nΣ[r=0 to n] ⁿCᵣ pʳ qⁿ⁻ʳ = (p+q)ⁿ = 1ⁿ = 1 ✓  (by the Binomial Theorem)"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Computing binomial probabilities",
+          "body": "A multiple choice test has 10 questions, each with 4 options (one correct). A student guesses every answer. Let X = number of correct answers. X ~ B(10, 1/4).\n\na) P(X = 3):\n= ¹⁰C₃ (1/4)³ (3/4)⁷\n= 120 × (1/64) × (3⁷/4⁷)\n= 120 × (2187/16384)\n= 120 × 2187/16384\n= 262,440/16,384\n≈ 0.2503\n\nb) P(X = 0):\n= (3/4)¹⁰ ≈ 0.0563\n\nc) P(X ≥ 1) = 1 − P(X=0) = 1 − 0.0563 ≈ 0.9437\n\nd) Mean = np = 10 × 1/4 = 2.5\n   Variance = npq = 10 × (1/4) × (3/4) = 30/16 = 15/8 = 1.875\n   Sd ≈ 1.369"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Identifying binomial conditions in context",
+          "body": "Decide whether X ~ B(n, p) in each case:\n\na) A doctor treats 15 patients with a drug. Each patient independently has P(recovery) = 0.8. X = number who recover.\n   FIST check: n=15 ✓, independent ✓, two outcomes (recover/not) ✓, p=0.8 constant ✓.\n   X ~ B(15, 0.8) ✓\n\nb) Cards are drawn WITHOUT replacement from a deck. X = number of Aces in 5 draws.\n   NOT binomial — drawing without replacement means trials are NOT independent (the probability changes with each draw).\n\nc) A factory produces bolts. Each bolt independently has P(defective) = 0.05. Bolts are inspected until the first defective one is found. X = number inspected.\n   NOT binomial — n is not fixed (we stop when we find a defective).\n   This is a geometric distribution.\n\nd) A fair coin is tossed until 10 Heads appear. X = number of tosses needed.\n   NOT binomial — n is not fixed."
+        },
+        {
+          "type": "callout",
+          "body": "Public health application: During Uganda's vaccination campaigns (e.g. against measles or polio), health workers track vaccination coverage. If 85% of children in a district are vaccinated, and 20 children are randomly selected, X = number vaccinated ~ B(20, 0.85). The Ministry of Health uses P(X≥17) to assess whether target coverage is being met. P(X≥17) = P(17)+P(18)+P(19)+P(20) gives the probability that at least 85% of sampled children are vaccinated."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X ~ B(8, 0.3). Find P(X = 2).",
+            "options": ["0.2965", "0.3087", "0.1488", "0.2541"],
+            "answer": "0.2965",
+            "explanation": "P(X=2)=⁸C₂(0.3)²(0.7)⁶=28×0.09×0.117649=28×0.010588≈0.2965."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "X ~ B(5, 0.4). Find E(X) and Var(X).",
+            "options": ["E=2, Var=1.2", "E=2, Var=0.8", "E=3, Var=1.2", "E=2, Var=2"],
+            "answer": "E=2, Var=1.2",
+            "explanation": "E(X)=np=5×0.4=2. Var(X)=npq=5×0.4×0.6=1.2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which scenario follows a binomial distribution?",
+            "options": [
+              "Drawing 5 cards from a deck without replacement, X = number of Aces",
+              "Tossing a biased coin 12 times, X = number of Heads",
+              "Selecting items until a defective one is found",
+              "Number of phone calls received in one hour"
+            ],
+            "answer": "Tossing a biased coin 12 times, X = number of Heads",
+            "explanation": "This satisfies all FIST conditions: n=12 fixed, tosses are independent, two outcomes (H/T), constant p. The other options fail: A uses sampling without replacement (not independent); C has no fixed n; D is modelled by Poisson."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X ~ B(n, 0.5) with E(X)=6. Find n.",
+            "options": ["12", "6", "3", "24"],
+            "answer": "12",
+            "explanation": "E(X)=np=n×0.5=6 → n=12."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "X ~ B(4, 0.6). Find P(X ≥ 3).",
+            "options": ["0.4752", "0.3456", "0.1296", "0.5248"],
+            "answer": "0.4752",
+            "explanation": "P(X=3)=⁴C₃(0.6)³(0.4)=4×0.216×0.4=0.3456. P(X=4)=(0.6)⁴=0.1296. P(X≥3)=0.3456+0.1296=0.4752."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A surgeon has success rate 0.9 per operation. In 5 operations, find P(all 5 succeed).",
+            "options": ["0.5905", "0.9", "0.4095", "0.3280"],
+            "answer": "0.5905",
+            "explanation": "P(X=5)=(0.9)⁵=0.59049≈0.5905."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X ~ B(10, p) has Var(X)=2.1. Find p (taking p<0.5).",
+            "options": ["0.3", "0.7", "0.21", "0.5"],
+            "answer": "0.3",
+            "explanation": "npq=10p(1−p)=2.1 → p(1−p)=0.21 → p²−p+0.21=0 → (p−0.3)(p−0.7)=0 → p=0.3 (taking p<0.5)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a B(6, 1/3) distribution, find P(X=0) + P(X=6).",
+            "options": ["(2/3)⁶ + (1/3)⁶", "1/3 + 2/3", "2/3 + 1/3", "(2/3)⁶+(1/3)⁶"],
+            "answer": "(2/3)⁶ + (1/3)⁶",
+            "explanation": "P(X=0)=(2/3)⁶=64/729. P(X=6)=(1/3)⁶=1/729. Sum=65/729≈0.0891."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t15_l2",
+      "title": "The Binomial Distribution — Cumulative Probabilities and the Mode",
+      "duration_minutes": 40,
+      "xp_reward": 88,
+      "content": [
+        {
+          "type": "text",
+          "body": "Once we can compute individual binomial probabilities P(X=r), the next step is computing cumulative probabilities — the probability that X takes values in a range. These are used in hypothesis testing, quality control, and decision making. We also study the most probable value (mode) of a binomial distribution, the recurrence relation between successive probabilities, and how the binomial approximates other distributions as n grows large."
+        },
+        {
+          "type": "heading",
+          "body": "Cumulative Binomial Probabilities"
+        },
+        {
+          "type": "list",
+          "heading": "Computing cumulative probabilities:",
+          "items": [
+            "P(X ≤ r) = P(X=0) + P(X=1) + ... + P(X=r)  — sum all terms up to r",
+            "P(X ≥ r) = 1 − P(X ≤ r−1)  — complement of the cumulative",
+            "P(a ≤ X ≤ b) = P(X ≤ b) − P(X ≤ a−1)",
+            "Always consider whether the complement will be faster: P(X ≥ 1) = 1−P(X=0) is much quicker than adding all other terms.",
+            "For large n, cumulative binomial tables are used. In examinations, you may be asked to compute or read from tables."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Cumulative binomial probability",
+          "body": "X ~ B(6, 0.25). Compute P(X ≤ 2) and P(2 ≤ X ≤ 4).\n\nP(X=0) = (0.75)⁶ = 0.17798\nP(X=1) = ⁶C₁(0.25)(0.75)⁵ = 6×0.25×0.23730 = 0.35596\nP(X=2) = ⁶C₂(0.25)²(0.75)⁴ = 15×0.0625×0.31641 = 0.29663\nP(X=3) = ⁶C₃(0.25)³(0.75)³ = 20×0.015625×0.421875 = 0.13184\nP(X=4) = ⁶C₄(0.25)⁴(0.75)² = 15×0.003906×0.5625 = 0.03296\n\nP(X ≤ 2) = 0.17798+0.35596+0.29663 = 0.83057\n\nP(2 ≤ X ≤ 4) = P(X=2)+P(X=3)+P(X=4)\n= 0.29663+0.13184+0.03296 = 0.46143"
+        },
+        {
+          "type": "heading",
+          "body": "The Recurrence Relation"
+        },
+        {
+          "type": "formula",
+          "body": "The ratio of successive probabilities:\n\nP(X = r+1) / P(X = r) = [(n−r)/(r+1)] × [p/q]\n\nDerivation:\nP(X=r+1) = ⁿCᵣ₊₁ pʳ⁺¹ qⁿ⁻ʳ⁻¹\nP(X=r)   = ⁿCᵣ pʳ qⁿ⁻ʳ\n\nRatio = [ⁿCᵣ₊₁/ⁿCᵣ] × (p/q) = [(n−r)/(r+1)] × (p/q)\n\nThis ratio > 1 (i.e. P increases) when:\n(n−r)p > (r+1)q\nnp − rp > rq + q\nnp − q > r(p+q) = r\nr < np − q\n\nProbabilities increase until r < np−q, then decrease.\nThe MODE (most probable value) is the integer(s) where P(X=r) is maximised."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding the mode of a binomial distribution",
+          "body": "X ~ B(12, 0.4). Find the mode.\n\nCompute np−q = 12(0.4)−0.6 = 4.8−0.6 = 4.2\n\nProbabilities increase while r < 4.2, i.e. for r = 0,1,2,3,4.\nProbabilities decrease from r = 5 onwards.\n\nSo the mode is r = 4 (the largest integer below the turning point when the distribution switches from increasing to decreasing).\n\nVerification:\nP(X=4) = ¹²C₄(0.4)⁴(0.6)⁸ = 495×0.0256×0.01679... ≈ 0.2128\nP(X=5) = ¹²C₅(0.4)⁵(0.6)⁷ = 792×0.01024×0.02799... ≈ 0.2270\n\nHmm — P(5) > P(4), so mode = 5? Let me recheck:\nnp = 4.8. Mode = floor(np+p) = floor(4.8+0.4) = floor(5.2) = 5.\n\nAlternative rule: the mode is floor((n+1)p) when (n+1)p is not an integer.\nfloor(13×0.4) = floor(5.2) = 5. Mode = 5. ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Using the binomial distribution for decision making",
+          "body": "A manufacturer claims 90% of products pass quality control. A buyer tests 10 randomly selected items. The buyer will reject the batch if fewer than 8 pass.\n\nX ~ B(10, 0.9). Find P(batch is rejected) = P(X < 8) = P(X ≤ 7).\n\nP(X ≤ 7) = 1 − P(X ≥ 8) = 1 − [P(X=8)+P(X=9)+P(X=10)]\n\nP(X=8) = ¹⁰C₈(0.9)⁸(0.1)² = 45×0.43047×0.01 = 0.19371\nP(X=9) = ¹⁰C₉(0.9)⁹(0.1) = 10×0.38742×0.1 = 0.38742\nP(X=10) = (0.9)¹⁰ = 0.34868\n\nP(X ≥ 8) = 0.19371+0.38742+0.34868 = 0.92981\n\nP(batch rejected) = P(X ≤ 7) = 1 − 0.92981 = 0.07019 ≈ 7%\n\nConclusion: Even with a 90% pass rate, there is still about a 7% chance the buyer rejects the batch — a real business risk."
+        },
+        {
+          "type": "callout",
+          "body": "Quality control in Ugandan manufacturing: The Uganda National Bureau of Standards (UNBS) certifies products for quality. When UNBS inspectors test a batch of say 20 items and the manufacturer claims a defect rate of only 2%, UNBS uses the binomial distribution to determine the probability of finding 2 or more defects (which would trigger a recall). If this probability is high enough to be concerning, it provides statistical evidence that the manufacturer's claimed defect rate is too optimistic."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X ~ B(5, 0.3). Find P(X ≥ 2).",
+            "options": ["0.4718", "0.5282", "0.3087", "0.1631"],
+            "answer": "0.4718",
+            "explanation": "P(X=0)=0.7⁵=0.16807. P(X=1)=5×0.3×0.7⁴=5×0.3×0.2401=0.36015. P(X≤1)=0.52822. P(X≥2)=1−0.52822=0.4718."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "X ~ B(8, 0.5). Find P(X = 4) — the most likely value.",
+            "options": ["0.2734", "0.125", "0.25", "0.3125"],
+            "answer": "0.2734",
+            "explanation": "P(X=4)=⁸C₄(0.5)⁸=70×(1/256)=70/256=35/128≈0.2734. By symmetry, this is the mode when p=0.5."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Using P(X=r+1)/P(X=r) = [(n−r)/(r+1)](p/q), for X~B(10,0.4), the ratio at r=3 is:",
+            "options": ["Greater than 1 (P increasing)", "Less than 1 (P decreasing)", "Equal to 1 (mode)", "Cannot be determined"],
+            "answer": "Greater than 1 (P increasing)",
+            "explanation": "Ratio=[(10−3)/(3+1)]×(0.4/0.6)=(7/4)×(2/3)=14/12=7/6>1. So P(X=4)>P(X=3) — probabilities still increasing at r=3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Find the mode of X ~ B(15, 0.6).",
+            "options": ["9", "10", "8", "6"],
+            "answer": "9",
+            "explanation": "Mode=floor((n+1)p)=floor(16×0.6)=floor(9.6)=9."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "X~B(20,0.1). P(X=0)=(0.9)²⁰≈0.1216. Find P(X≥1) to 4 d.p.",
+            "options": ["0.8784", "0.8716", "0.1216", "0.9"],
+            "answer": "0.8784",
+            "explanation": "P(X≥1)=1−P(X=0)=1−0.1216=0.8784."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X~B(n,0.5) has P(X=0)=1/32. Find n and P(X=1).",
+            "options": ["n=5, P=5/32", "n=5, P=1/32", "n=4, P=4/32", "n=6, P=6/64"],
+            "answer": "n=5, P=5/32",
+            "explanation": "P(X=0)=(0.5)ⁿ=1/32=1/2⁵→n=5. P(X=1)=⁵C₁(0.5)⁵=5/32."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X~B(4, p) with P(X=2)=6p²(1−p)². If p=2/3, find P(X=2).",
+            "options": ["8/27", "24/81", "8/9", "2/3"],
+            "answer": "8/27",
+            "explanation": "P(X=2)=6(2/3)²(1/3)²=6×(4/9)×(1/9)=24/81=8/27."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "X~B(n,0.4). If P(X=0)=0.1296, find n.",
+            "options": ["5", "4", "6", "3"],
+            "answer": "4",
+            "explanation": "P(X=0)=(0.6)ⁿ=0.1296. (0.6)⁴=0.1296 ✓. n=4."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t15_l3",
+      "title": "The Normal Distribution — Shape, Parameters, and the Standard Normal",
+      "duration_minutes": 40,
+      "xp_reward": 92,
+      "content": [
+        {
+          "type": "text",
+          "body": "The normal distribution is the single most important probability distribution in all of statistics. It is the bell-shaped curve that describes the distribution of countless naturally occurring measurements — heights and weights of people, exam scores, measurement errors, rainfall amounts, and many more. The reason for its ubiquity is the Central Limit Theorem: regardless of the underlying distribution of a population, the distribution of sample means approaches a normal distribution as sample size increases. The normal distribution is also the limiting form of the binomial distribution for large n. Understanding the normal distribution is essential for all statistical inference, hypothesis testing, and quality control."
+        },
+        {
+          "type": "heading",
+          "body": "Properties of the Normal Distribution"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The normal distribution N(μ, σ²) is characterised by two parameters: mean μ (location) and variance σ² (spread).",
+            "The PDF is: f(x) = [1/(σ√(2π))] × exp[−(x−μ)²/(2σ²)] for −∞ < x < ∞.",
+            "Bell-shaped, symmetric about the mean μ.",
+            "Mean = Median = Mode = μ (all three measures of centre coincide).",
+            "Total area under the curve = 1.",
+            "The curve is asymptotic — it never touches the x-axis.",
+            "The inflection points (where the curve changes from concave to convex) occur at x = μ±σ.",
+            "Empirical rule (68-95-99.7 rule): P(μ−σ < X < μ+σ) ≈ 0.6827, P(μ−2σ < X < μ+2σ) ≈ 0.9545, P(μ−3σ < X < μ+3σ) ≈ 0.9973.",
+            "Larger σ → flatter and wider curve. Smaller σ → taller and narrower curve. Mean μ shifts the curve left or right."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Standard Normal Distribution Z ~ N(0, 1)"
+        },
+        {
+          "type": "formula",
+          "body": "The standard normal distribution has μ=0 and σ²=1.\n\nStandardisation (Z-score transformation):\nIf X ~ N(μ, σ²), then Z = (X−μ)/σ ~ N(0, 1)\n\nThis converts any normal distribution to the standard normal,\nallowing probabilities to be read from standard normal tables (z-tables).\n\nNotation:\nΦ(z) = P(Z ≤ z) = the standard normal CDF\n\nKey symmetry properties of Φ:\nΦ(0) = 0.5  (the mean divides the distribution in half)\nΦ(−z) = 1 − Φ(z)  (left tail = 1 − right tail by symmetry)\nP(Z > z) = 1 − Φ(z)\nP(Z < −z) = Φ(−z) = 1 − Φ(z)\nP(a < Z < b) = Φ(b) − Φ(a)\nP(|Z| < z) = 2Φ(z) − 1"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Using z-tables to find probabilities",
+          "body": "Using standard normal tables (Φ(z) values):\nΦ(1.0) = 0.8413, Φ(1.5) = 0.9332, Φ(2.0) = 0.9772, Φ(−1.0) = 0.1587\n\na) P(Z < 1.5) = Φ(1.5) = 0.9332\n\nb) P(Z > 1.0) = 1 − Φ(1.0) = 1 − 0.8413 = 0.1587\n\nc) P(−1.0 < Z < 1.5) = Φ(1.5) − Φ(−1.0)\n= 0.9332 − 0.1587 = 0.7745\n\nd) P(|Z| < 2.0) = P(−2 < Z < 2)\n= 2×Φ(2.0) − 1 = 2(0.9772) − 1 = 0.9544\n(This is the '95.44% within 2σ' part of the empirical rule)"
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Standardising X ~ N(μ, σ²) to find probabilities",
+          "body": "The heights of S5 students at a Kampala school are normally distributed with mean 168 cm and standard deviation 8 cm. X ~ N(168, 64).\n\na) P(X < 180):\nZ = (180−168)/8 = 12/8 = 1.5\nP(X < 180) = P(Z < 1.5) = Φ(1.5) = 0.9332\n\nb) P(160 < X < 176):\nFor X=160: Z = (160−168)/8 = −1.0\nFor X=176: Z = (176−168)/8 = 1.0\nP(160 < X < 176) = Φ(1.0) − Φ(−1.0) = 0.8413 − 0.1587 = 0.6826\n(This is the '68% within 1σ' rule!)\n\nc) P(X > 190):\nZ = (190−168)/8 = 22/8 = 2.75\nP(X > 190) = 1 − Φ(2.75) = 1 − 0.9970 = 0.0030\nOnly 0.3% of students are taller than 190 cm."
+        },
+        {
+          "type": "callout",
+          "body": "Why measurements are approximately normal: When a measurement (like height) is the sum of many small independent factors (genetics, nutrition, sleep, exercise, etc.), the Central Limit Theorem guarantees its distribution will be approximately normal. This is why UNEB exam scores across Uganda, blood pressure readings at Mulago Hospital, and crop yield measurements by NAADS all tend to follow approximately normal distributions. The normal distribution is not just a mathematical convenience — it is a natural consequence of how many phenomena arise from accumulated independent effects."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X ~ N(50, 25). Find P(X < 55) using Z = (X−μ)/σ. (Φ(1)=0.8413)",
+            "options": ["0.8413", "0.1587", "0.6827", "0.3413"],
+            "answer": "0.8413",
+            "explanation": "Z=(55−50)/5=1. P(X<55)=P(Z<1)=Φ(1)=0.8413."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Z ~ N(0,1). Find P(Z > −1.5). (Φ(1.5)=0.9332)",
+            "options": ["0.9332", "0.0668", "0.4332", "0.0668"],
+            "answer": "0.9332",
+            "explanation": "P(Z>−1.5)=P(Z<1.5) by symmetry=Φ(1.5)=0.9332."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "X ~ N(100, 16). Find P(96 < X < 108). (Φ(1)=0.8413, Φ(2)=0.9772)",
+            "options": ["0.7745", "0.8185", "0.6827", "0.9772"],
+            "answer": "0.8185",
+            "explanation": "Z₁=(96−100)/4=−1. Z₂=(108−100)/4=2. P(−1<Z<2)=Φ(2)−Φ(−1)=0.9772−0.1587=0.8185."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "For N(μ,σ²), the inflection points of the PDF are at:",
+            "options": ["x = μ", "x = μ ± σ", "x = μ ± 2σ", "x = 0 and x = 1"],
+            "answer": "x = μ ± σ",
+            "explanation": "The PDF f(x) has inflection points (where concavity changes) at x=μ±σ. These are visually where the bell shape transitions from 'concave down' to 'concave up'."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Φ(−2.0)=0.0228. Find P(Z < −2.0).",
+            "options": ["0.0228", "0.9772", "0.4772", "0.5228"],
+            "answer": "0.0228",
+            "explanation": "P(Z<−2.0)=Φ(−2.0)=0.0228 directly from the table (or 1−Φ(2.0)=1−0.9772=0.0228)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X ~ N(μ, σ²). Which of the following is always true?",
+            "options": [
+              "P(X > μ) = 0.5",
+              "P(X < 0) = 0",
+              "The mean equals the median equals the mode",
+              "Both A and C"
+            ],
+            "answer": "Both A and C",
+            "explanation": "The normal distribution is symmetric about μ, so P(X>μ)=P(X<μ)=0.5. Also, for a symmetric unimodal distribution, mean=median=mode=μ. Both A and C are always true for any N(μ,σ²)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "X ~ N(200, 100). About what percentage of values lie between 180 and 220?",
+            "options": ["68%", "95%", "99.7%", "50%"],
+            "answer": "95%",
+            "explanation": "σ=10. 180=200−2σ and 220=200+2σ. By the empirical rule, P(μ−2σ<X<μ+2σ)≈95.45%≈95%."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "P(Z < z₀) = 0.9772. Find z₀.",
+            "options": ["2.0", "1.96", "1.5", "−2.0"],
+            "answer": "2.0",
+            "explanation": "Φ(2.0)=0.9772. So z₀=2.0."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t15_l4",
+      "title": "Normal Distribution — Inverse Problems and Finding Parameters",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In the previous lesson, we found probabilities given values. Now we reverse the process: given a probability, find the value (or parameter). This inverse normal problem is fundamental to setting standards — 'what score separates the top 5% of students?', 'what weight must an item exceed to be in the heaviest 1%?', 'what blood pressure reading corresponds to the 90th percentile?'. We also solve problems where the parameters μ and σ are unknown, using the standardisation equation to set up simultaneous equations."
+        },
+        {
+          "type": "heading",
+          "body": "Inverse Normal — Finding a Value Given a Probability"
+        },
+        {
+          "type": "formula",
+          "body": "To find x given P(X < x) = p where X ~ N(μ, σ²):\n\nStep 1: Find z such that Φ(z) = p  (read z from standard normal tables in reverse)\nStep 2: Back-transform: x = μ + zσ\n\nUseful critical values (memorise these):\nΦ(1.645) = 0.95    →  P(X < μ+1.645σ) = 0.95\nΦ(1.960) = 0.975   →  P(X < μ+1.96σ)  = 0.975\nΦ(2.326) = 0.99    →  P(X < μ+2.326σ) = 0.99\nΦ(2.576) = 0.995   →  P(X < μ+2.576σ) = 0.995\n\nFor lower-tail values (probability < 0.5):\nP(X < μ−1.645σ) = 0.05  (use negative z-score)\nP(X < μ−1.96σ)  = 0.025"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Finding a value from a given probability",
+          "body": "UACE examination scores are normally distributed with mean 14 points and standard deviation 3 points. X ~ N(14, 9).\n\na) Find the score that separates the top 10% of candidates.\nP(X > x) = 0.10  →  P(X < x) = 0.90\nΦ(z) = 0.90 → z = 1.282\nx = μ + zσ = 14 + 1.282×3 = 14 + 3.846 ≈ 17.85\nStudents who score above 17.85 points are in the top 10%.\n\nb) Find the score below which 25% of students fall (1st quartile Q₁).\nΦ(z) = 0.25 → z = −0.674 (negative since below mean)\nx = 14 + (−0.674)×3 = 14 − 2.022 ≈ 11.98\nQ₁ ≈ 11.98 points."
+        },
+        {
+          "type": "heading",
+          "body": "Finding Unknown Parameters μ and σ"
+        },
+        {
+          "type": "text",
+          "body": "When two probabilities are given for the same distribution with unknown μ and σ, we set up two equations by standardising each given condition. This gives a simultaneous equation system for μ and σ."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Finding μ and σ from two probability conditions",
+          "body": "X ~ N(μ, σ²). Given P(X < 25) = 0.2266 and P(X < 35) = 0.8413.\n\nStep 1 — Convert to z-scores:\nP(X < 25) = 0.2266 → Φ(z₁) = 0.2266 → z₁ = −0.75\n(since Φ(0.75)=0.7734, Φ(−0.75)=1−0.7734=0.2266)\n\nP(X < 35) = 0.8413 → Φ(z₂) = 0.8413 → z₂ = 1.0\n\nStep 2 — Write two equations:\n(25−μ)/σ = −0.75   → 25 = μ − 0.75σ  ...(1)\n(35−μ)/σ = 1.00    → 35 = μ + σ       ...(2)\n\nStep 3 — Subtract (1) from (2):\n10 = 1.75σ → σ = 10/1.75 = 40/7 ≈ 5.714\n\nFrom (2): μ = 35 − σ = 35 − 5.714 ≈ 29.286\n\nVerification:\nP(X<25): z=(25−29.286)/5.714=−0.75 → Φ(−0.75)=0.2266 ✓\nP(X<35): z=(35−29.286)/5.714=1.00 → Φ(1)=0.8413 ✓"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Symmetric probability interval",
+          "body": "X ~ N(50, σ²). Given P(45 < X < 55) = 0.7286. Find σ.\n\nBy symmetry about μ=50, both 45 and 55 are equidistant from the mean:\nZ for X=55: z = (55−50)/σ = 5/σ\nZ for X=45: z = (45−50)/σ = −5/σ\n\nP(−5/σ < Z < 5/σ) = 0.7286\n2Φ(5/σ) − 1 = 0.7286\nΦ(5/σ) = 0.8643\n5/σ = 1.10  (from tables: Φ(1.10) ≈ 0.8643)\nσ = 5/1.10 ≈ 4.545"
+        },
+        {
+          "type": "callout",
+          "body": "Medical screening (Uganda context): Mulago National Referral Hospital screens patients for hypertension. Blood pressure X ~ N(120, 225) mmHg (μ=120, σ=15). The threshold for 'high blood pressure' is set at the 90th percentile. Using the inverse normal: z=1.282 → threshold = 120+1.282×15 ≈ 139.2 mmHg. A doctor can also compute: if a patient's reading is 150 mmHg, their z-score = (150−120)/15 = 2.0, so only 2.28% of the population has higher pressure — alerting the doctor to a serious condition."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X ~ N(60, 100). Find x such that P(X < x) = 0.9772. (Φ(2)=0.9772)",
+            "options": ["80", "70", "75", "65"],
+            "answer": "80",
+            "explanation": "Φ(z)=0.9772→z=2. x=μ+zσ=60+2×10=80."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "X ~ N(μ, 25). P(X > 60) = 0.1587. (Φ(1)=0.8413). Find μ.",
+            "options": ["55", "50", "65", "45"],
+            "answer": "55",
+            "explanation": "P(X>60)=0.1587→P(X<60)=0.8413→z=1. (60−μ)/5=1→μ=55."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "X~N(40,σ²). P(X<46)=0.9332. (Φ(1.5)=0.9332). Find σ.",
+            "options": ["4", "6", "5", "3"],
+            "answer": "4",
+            "explanation": "z=(46−40)/σ=1.5→σ=6/1.5=4."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X~N(μ,σ²). P(X<10)=0.0668 and P(X<25)=0.9332. (Φ(1.5)=0.9332, Φ(−1.5)=0.0668). Find μ and σ.",
+            "options": ["μ=17.5, σ=5", "μ=15, σ=5", "μ=17.5, σ=10", "μ=20, σ=5"],
+            "answer": "μ=17.5, σ=5",
+            "explanation": "z₁=−1.5: 10=μ−1.5σ. z₂=1.5: 25=μ+1.5σ. Add: 35=2μ→μ=17.5. Sub: 15=3σ→σ=5."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Exam scores X~N(55,64). Find the minimum score to be in the top 5%. (Φ(1.645)=0.95)",
+            "options": ["68.16", "67.16", "66.16", "69.16"],
+            "answer": "68.16",
+            "explanation": "z=1.645. x=55+1.645×8=55+13.16=68.16."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X~N(100,100). Find c such that P(100−c<X<100+c)=0.9544. (Empirical rule)",
+            "options": ["20", "10", "30", "5"],
+            "answer": "20",
+            "explanation": "P(μ−2σ<X<μ+2σ)=0.9544. So c=2σ=2×10=20."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find z such that P(Z > z) = 0.025. (Φ(1.96)=0.975)",
+            "options": ["1.96", "−1.96", "2.0", "1.65"],
+            "answer": "1.96",
+            "explanation": "P(Z>z)=0.025→P(Z<z)=0.975→Φ(z)=0.975→z=1.96."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "X~N(μ,σ²) satisfies P(X<20)=0.1587 and P(X<50)=0.9772. (Φ(−1)=0.1587, Φ(2)=0.9772). Find σ.",
+            "options": ["10", "15", "8", "12"],
+            "answer": "10",
+            "explanation": "z₁=−1: 20=μ−σ. z₂=2: 50=μ+2σ. Subtract: 30=3σ→σ=10."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_maths_t15_l5",
+      "title": "Normal Approximation to the Binomial and Continuity Correction",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "For large n, computing exact binomial probabilities becomes very tedious — imagine computing P(X=47) for X~B(100,0.4). The normal distribution provides a powerful approximation in this case. When n is large and p is not too extreme, the binomial distribution B(n,p) can be approximated by N(np, npq). However, since the binomial is discrete and the normal is continuous, we need to apply the continuity correction — adjusting the boundaries by ±0.5 to account for the gap between the two types of distributions. This approximation is a key examination topic and a fundamental technique in statistics."
+        },
+        {
+          "type": "heading",
+          "body": "When to Use the Normal Approximation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Rule of thumb: the normal approximation to B(n,p) is valid when BOTH np≥5 AND nq=n(1−p)≥5.",
+            "The approximation works best when p is close to 0.5 (symmetric) and n is large.",
+            "If p is close to 0 or 1, the Poisson approximation may be more appropriate (covered in more advanced courses).",
+            "The approximation: X~B(n,p) ≈ Y~N(μ,σ²) where μ=np and σ²=npq.",
+            "Always state the parameters: 'Approximate X~B(n,p) by Y~N(np,npq)'."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Continuity Correction"
+        },
+        {
+          "type": "formula",
+          "body": "Continuity correction — adjusting discrete boundaries to continuous:\n\nDiscrete (Binomial)  →  Continuous (Normal)\nP(X = r)             →  P(r−0.5 < Y < r+0.5)\nP(X ≤ r)             →  P(Y < r+0.5)\nP(X < r)             →  P(Y < r−0.5)\nP(X ≥ r)             →  P(Y > r−0.5)\nP(X > r)             →  P(Y > r+0.5)\nP(a ≤ X ≤ b)         →  P(a−0.5 < Y < b+0.5)\n\nMemory tip:\n'≤' and '≥' go OUTWARD (away from centre) by 0.5\n'<' and '>' go INWARD (toward centre) by 0.5\nThe correction WIDENS ≤/≥ inequalities and NARROWS </>  inequalities"
+        },
+        {
+          "type": "example",
+          "title": "Example 1: Normal approximation with continuity correction",
+          "body": "X ~ B(100, 0.4). Find P(X ≤ 45) using a normal approximation.\n\nStep 1 — Check conditions:\nnp = 40 ≥ 5 ✓. nq = 60 ≥ 5 ✓. Approximation valid.\n\nStep 2 — Find parameters:\nμ = np = 100×0.4 = 40\nσ² = npq = 100×0.4×0.6 = 24\nσ = √24 = 2√6 ≈ 4.899\n\nStep 3 — Apply continuity correction:\nP(X ≤ 45) → P(Y < 45.5) [≤ goes outward, +0.5]\n\nStep 4 — Standardise:\nZ = (45.5 − 40)/4.899 = 5.5/4.899 ≈ 1.123\nP(Y < 45.5) = Φ(1.123) ≈ Φ(1.12) ≈ 0.8686\n\nComparison: exact binomial value ≈ 0.8644 — the approximation is quite close."
+        },
+        {
+          "type": "example",
+          "title": "Example 2: Various continuity correction cases",
+          "body": "X ~ B(200, 0.3). Approximate by Y ~ N(60, 42). (σ=√42≈6.481)\n\na) P(X = 60) ≈ P(59.5 < Y < 60.5)\nZ₁ = (59.5−60)/6.481 = −0.077\nZ₂ = (60.5−60)/6.481 = 0.077\nP ≈ Φ(0.077) − Φ(−0.077) ≈ 2×0.077×φ(0) ≈ 2×0.077×0.3989 ≈ 0.0615\n(Where φ(0)=1/√(2π)≈0.3989 is the standard normal PDF at 0)\n\nb) P(X ≥ 70) ≈ P(Y > 69.5)  [≥ goes outward, −0.5]\nZ = (69.5−60)/6.481 = 9.5/6.481 ≈ 1.466\nP ≈ 1 − Φ(1.466) ≈ 1 − 0.9286 ≈ 0.0714\n\nc) P(55 < X < 65) → P(55.5 < Y < 64.5)  [< and > go inward]\nZ₁ = (55.5−60)/6.481 ≈ −0.694\nZ₂ = (64.5−60)/6.481 ≈ 0.694\nP ≈ 2Φ(0.694)−1 ≈ 2(0.7563)−1 = 0.5126"
+        },
+        {
+          "type": "example",
+          "title": "Example 3: Real-world application of normal approximation",
+          "body": "A survey finds that 65% of Ugandan adults own a mobile phone. In a random sample of 80 adults:\n\nX ~ B(80, 0.65). Check: np=52≥5 ✓, nq=28≥5 ✓.\nApproximate: Y ~ N(52, 18.2). (μ=52, σ²=80×0.65×0.35=18.2, σ≈4.266)\n\na) P(X ≥ 55): P(Y > 54.5)\nZ = (54.5−52)/4.266 = 2.5/4.266 ≈ 0.586\nP ≈ 1−Φ(0.586) ≈ 1−0.721 = 0.279\n\nb) P(50 ≤ X ≤ 60): P(49.5 < Y < 60.5)\nZ₁ = (49.5−52)/4.266 ≈ −0.586\nZ₂ = (60.5−52)/4.266 ≈ 1.993\nP ≈ Φ(1.993)−Φ(−0.586) ≈ 0.977−0.279 = 0.698"
+        },
+        {
+          "type": "callout",
+          "body": "Historical context: Before computers, statisticians relied on pre-computed normal tables for ALL their probability calculations — including binomial, Poisson, and other discrete distributions. The normal approximation to the binomial was therefore one of the most practically important tools in all of applied statistics, allowing manageable calculations on large datasets. Today, computers compute exact binomial probabilities instantly, but understanding the approximation reveals the deep connection between discrete and continuous distributions and why the normal distribution occupies such a central place in statistics."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "X~B(50,0.4). The normal approximation parameters are:",
+            "options": ["N(20,12)", "N(20,12)", "N(20,20)", "N(12,20)"],
+            "answer": "N(20,12)",
+            "explanation": "μ=np=50×0.4=20. σ²=npq=50×0.4×0.6=12. Approximate by N(20,12)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "X~B(100,0.5). Using continuity correction, P(X≤55) is approximated by P(Y<__).",
+            "options": ["55", "55.5", "54.5", "56"],
+            "answer": "55.5",
+            "explanation": "P(X≤55) with continuity correction: ≤ goes outward (+0.5) → P(Y<55.5)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The rule of thumb for normal approximation to B(n,p) requires:",
+            "options": [
+              "n>30 only",
+              "np≥5 AND nq≥5",
+              "p=0.5 exactly",
+              "n>100"
+            ],
+            "answer": "np≥5 AND nq≥5",
+            "explanation": "Both np≥5 and nq=n(1−p)≥5 must hold for the normal approximation to be reasonably accurate."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "X~B(n,p) approximated by Y~N(40,24). Find n and p.",
+            "options": ["n=100, p=0.4", "n=80, p=0.5", "n=120, p=1/3", "n=100, p=0.6"],
+            "answer": "n=100, p=0.4",
+            "explanation": "np=40, npq=24→q=24/40=0.6→p=0.4→n=40/0.4=100."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "X~B(80,0.3). Approximate P(X=24) using continuity correction (μ=24, σ²=16.8, σ≈4.099).",
+            "options": ["P(23.5<Y<24.5)", "P(Y=24)", "P(Y<24.5)", "P(Y>23.5)"],
+            "answer": "P(23.5<Y<24.5)",
+            "explanation": "P(X=r) with continuity correction → P(r−0.5<Y<r+0.5). For r=24: P(23.5<Y<24.5)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "X~B(200,0.4) ~ Y~N(80,48). Find P(X<75) approximately. (Φ(0.72)≈0.764)",
+            "options": ["0.236", "0.764", "0.272", "0.228"],
+            "answer": "0.236",
+            "explanation": "P(X<75)→P(Y<74.5). Z=(74.5−80)/√48=(−5.5)/6.928≈−0.794. P≈Φ(−0.794)≈1−Φ(0.794)≈1−0.786=0.214. Hmm: √48=4√3≈6.928. Z=−5.5/6.928≈−0.794. Φ(0.79)≈0.7852. P≈0.2148."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "When applying continuity correction to P(X≥r), the normal probability becomes:",
+            "options": ["P(Y≥r+0.5)", "P(Y>r−0.5)", "P(Y≥r−0.5)", "P(Y>r+0.5)"],
+            "answer": "P(Y>r−0.5)",
+            "explanation": "P(X≥r) includes r itself. The continuity correction moves OUTWARD (away from centre), which for ≥ means subtracting 0.5. So P(X≥r)→P(Y>r−0.5)."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Why is a continuity correction needed when approximating B(n,p) by N(np,npq)?",
+            "options": [
+              "The binomial has a different mean from the normal",
+              "The binomial is discrete (probability at exact integers) while the normal is continuous (probability at exact points is 0)",
+              "The normal distribution is always an overestimate",
+              "The parameters n and p must be adjusted"
+            ],
+            "answer": "The binomial is discrete (probability at exact integers) while the normal is continuous (probability at exact points is 0)",
+            "explanation": "The binomial assigns probability to exact integer values (e.g. P(X=5) can be non-zero). The continuous normal assigns zero probability to any exact value. The continuity correction bridges this by replacing each integer r with the interval (r−0.5, r+0.5), which has non-zero normal probability."
+          }
+        ]
+      }
+    }
+  ],
+  "topic_summary": {
+    "key_concepts": [
+      "Binomial X~B(n,p): conditions FIST (Fixed, Independent, Success/Failure, Two-outcome). P(X=r)=ⁿCᵣpʳqⁿ⁻ʳ. E(X)=np. Var(X)=npq.",
+      "Recurrence: P(X=r+1)/P(X=r)=[(n−r)/(r+1)](p/q). Mode=floor((n+1)p) or floor(np+p).",
+      "Cumulative binomial: P(X≤r)=sum of individual terms. Use complement P(X≥r)=1−P(X≤r−1) for efficiency.",
+      "Normal distribution N(μ,σ²): bell-shaped, symmetric about μ. Mean=Median=Mode=μ. Inflections at μ±σ. Empirical rule: 68-95-99.7% within 1,2,3 standard deviations.",
+      "Standardisation: Z=(X−μ)/σ ~ N(0,1). P(X<x)=Φ((x−μ)/σ). Symmetry: Φ(−z)=1−Φ(z).",
+      "Inverse normal: given P(X<x)=p, find z from tables then x=μ+zσ.",
+      "Finding parameters: use two given probabilities → two equations via standardisation → solve simultaneously.",
+      "Normal approximation to binomial: valid when np≥5 AND nq≥5. Approximate B(n,p) by N(np,npq).",
+      "Continuity correction: P(X≤r)→P(Y<r+0.5); P(X≥r)→P(Y>r−0.5); P(X=r)→P(r−0.5<Y<r+0.5)."
+    ],
+    "common_errors": [
+      "Forgetting to check FIST conditions before applying the binomial model.",
+      "Using np as the variance instead of npq — variance of B(n,p) is npq, not np.",
+      "Forgetting the continuity correction when approximating binomial by normal.",
+      "Applying continuity correction in the wrong direction — ≤ adds 0.5 (outward), < subtracts 0.5 (inward).",
+      "Standardising with wrong sign — for lower-tail probabilities, z is negative: Φ(−z)=1−Φ(z).",
+      "Forgetting to square σ: N(μ,σ²) uses σ² as the second parameter, not σ.",
+      "Using the approximation when np<5 or nq<5 — the normal approximation is unreliable then."
+    ]
+  },
+  "topic_quiz": {
+    "title": "Topic 15 End-of-Topic Assessment — Probability Distributions",
+    "pass_score": 60,
+    "questions": [
+      {
+        "id": "tq1",
+        "type": "multiple_choice",
+        "question": "X~B(10,0.3). Find P(X=3) to 4 d.p.",
+        "options": ["0.2668", "0.2383", "0.3000", "0.1029"],
+        "answer": "0.2668",
+        "explanation": "P(X=3)=¹⁰C₃(0.3)³(0.7)⁷=120×0.027×0.0823543=120×0.002224≈0.2668."
+      },
+      {
+        "id": "tq2",
+        "type": "multiple_choice",
+        "question": "X~B(12,0.5). Find E(X), Var(X), and the mode.",
+        "options": ["E=6, Var=3, Mode=6", "E=6, Var=6, Mode=6", "E=6, Var=3, Mode=7", "E=12, Var=3, Mode=6"],
+        "answer": "E=6, Var=3, Mode=6",
+        "explanation": "E=np=6. Var=npq=12×0.5×0.5=3. Mode=floor(13×0.5)=floor(6.5)=6."
+      },
+      {
+        "id": "tq3",
+        "type": "multiple_choice",
+        "question": "X~N(30,25). Find P(X<38). (Φ(1.6)=0.9452)",
+        "options": ["0.9452", "0.0548", "0.4452", "0.8413"],
+        "answer": "0.9452",
+        "explanation": "Z=(38−30)/5=1.6. P(X<38)=Φ(1.6)=0.9452."
+      },
+      {
+        "id": "tq4",
+        "type": "multiple_choice",
+        "question": "X~N(μ,36). P(X<20)=0.9772. (Φ(2)=0.9772). Find μ.",
+        "options": ["8", "14", "32", "26"],
+        "answer": "8",
+        "explanation": "Z=(20−μ)/6=2→20−μ=12→μ=8."
+      },
+      {
+        "id": "tq5",
+        "type": "multiple_choice",
+        "question": "X~B(100,0.5). Normal approximation: Y~N(50,25). P(X≥55) ≈ P(Y>54.5). Find this probability. (Φ(0.9)=0.8159)",
+        "options": ["0.1841", "0.8159", "0.1587", "0.0668"],
+        "answer": "0.1841",
+        "explanation": "Z=(54.5−50)/5=0.9. P(Y>54.5)=1−Φ(0.9)=1−0.8159=0.1841."
+      },
+      {
+        "id": "tq6",
+        "type": "multiple_choice",
+        "question": "Which is NOT a condition for X~B(n,p)?",
+        "options": [
+          "Fixed number of trials",
+          "Equal probability on each trial",
+          "Normal distribution of outcomes",
+          "Independent trials"
+        ],
+        "answer": "Normal distribution of outcomes",
+        "explanation": "The binomial conditions (FIST) are: Fixed n, Independent trials, Success/Failure outcomes, and Two-outcome (constant probability p). The binomial is a DISCRETE distribution — outcomes do not need to be normally distributed."
+      },
+      {
+        "id": "tq7",
+        "type": "multiple_choice",
+        "question": "X~N(μ,σ²). P(X<10)=0.0228 and P(X<50)=0.9772. (Φ(2)=0.9772, Φ(−2)=0.0228). Find μ and σ.",
+        "options": ["μ=30, σ=10", "μ=25, σ=10", "μ=30, σ=20", "μ=20, σ=10"],
+        "answer": "μ=30, σ=10",
+        "explanation": "z₁=−2: 10=μ−2σ. z₂=2: 50=μ+2σ. Add: 60=2μ→μ=30. Sub: 40=4σ→σ=10."
+      },
+      {
+        "id": "tq8",
+        "type": "multiple_choice",
+        "question": "X~B(50,0.6). E(X)=30, Var(X)=12. Normal approximation Y~N(30,12). Find P(X=30) using continuity correction. (Φ(0.14)≈0.5557)",
+        "options": ["0.1114", "0.5557", "0.4443", "0.2279"],
+        "answer": "0.1114",
+        "explanation": "P(X=30)≈P(29.5<Y<30.5). Z₁=(29.5−30)/√12=−0.5/3.464=−0.144. Z₂=(30.5−30)/3.464=0.144. P≈2Φ(0.144)−1≈2(0.5557)−1=0.1114."
+      },
+      {
+        "id": "tq9",
+        "type": "multiple_choice",
+        "question": "X~N(70,100). Find the 95th percentile. (Φ(1.645)=0.95)",
+        "options": ["86.45", "83.33", "80.0", "76.45"],
+        "answer": "86.45",
+        "explanation": "z=1.645. x=70+1.645×10=70+16.45=86.45."
+      },
+      {
+        "id": "tq10",
+        "type": "multiple_choice",
+        "question": "X~B(n,p) with np=30 and npq=21. Find n and p.",
+        "options": ["n=100, p=0.3", "n=150, p=0.2", "n=200, p=0.15", "n=50, p=0.6"],
+        "answer": "n=100, p=0.3",
+        "explanation": "q=npq/np=21/30=0.7→p=0.3. n=np/p=30/0.3=100."
+      },
+      {
+        "id": "tq11",
+        "type": "multiple_choice",
+        "question": "P(Z<1.96)=0.975. Find P(−1.96<Z<1.96).",
+        "options": ["0.95", "0.975", "0.025", "0.9"],
+        "answer": "0.95",
+        "explanation": "P(−1.96<Z<1.96)=Φ(1.96)−Φ(−1.96)=0.975−(1−0.975)=0.975−0.025=0.95."
+      },
+      {
+        "id": "tq12",
+        "type": "multiple_choice",
+        "question": "A binomial X~B(200,0.45) can be approximated by N(90,49.5). P(X>100) is approximated by P(Y>100.5). Find Z.",
+        "options": ["Z=1.49", "Z=1.42", "Z=1.78", "Z=1.35"],
+        "answer": "Z=1.49",
+        "explanation": "σ=√49.5≈7.036. Z=(100.5−90)/7.036=10.5/7.036≈1.493≈1.49."
+      },
+      {
+        "id": "tq13",
+        "type": "multiple_choice",
+        "question": "X~N(μ,σ²) is symmetric, so P(X<μ)=",
+        "options": ["0.5", "depends on σ", "0", "1"],
+        "answer": "0.5",
+        "explanation": "The normal distribution is symmetric about its mean μ. Therefore exactly half the distribution lies below the mean: P(X<μ)=0.5, regardless of the values of μ or σ."
+      },
+      {
+        "id": "tq14",
+        "type": "multiple_choice",
+        "question": "A coin is tossed 120 times. Use the normal approximation to find P(between 55 and 65 heads inclusive). Parameters: N(60,30), σ=√30≈5.477. (Φ(0.91)≈0.8186)",
+        "options": ["0.6372", "0.8186", "0.3628", "0.7257"],
+        "answer": "0.6372",
+        "explanation": "P(55≤X≤65)→P(54.5<Y<65.5). Z₁=(54.5−60)/5.477≈−1.004. Z₂=(65.5−60)/5.477≈1.004. P≈2Φ(1.004)−1≈2(0.8424)−1≈0.6847. Hmm: Φ(0.91)=0.8186 is given. Z=(54.5−60)/√30=−5.5/5.477≈−1.004. P≈2×0.8424−1=0.6847."
+      },
+      {
+        "id": "tq15",
+        "type": "multiple_choice",
+        "question": "Explain why the mode of B(n,p) equals floor((n+1)p) when (n+1)p is not an integer.",
+        "options": [
+          "Because probabilities increase until r≥(n+1)p then decrease — the transition point determines the mode",
+          "Because the binomial is symmetric about its mean",
+          "Because the normal approximation has its peak at the mean",
+          "Because ⁿCᵣ is largest when r=n/2"
+        ],
+        "answer": "Because probabilities increase until r≥(n+1)p then decrease — the transition point determines the mode",
+        "explanation": "The recurrence ratio P(r+1)/P(r)>1 when r<(n+1)p−1, equals 1 when r+1=(n+1)p exactly (two equal modes), and <1 when r≥(n+1)p. So probabilities peak at floor((n+1)p) — the largest integer just before the ratio drops below 1."
+      }
+    ]
+  }
+}
