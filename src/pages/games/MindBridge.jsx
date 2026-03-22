@@ -1,25 +1,23 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { SoundEngine } from '../../utils/soundEngine.js'
 import { saveGameScore } from '../../utils/gameUnlocks.js'
 
-// ── Puzzle Generator ─────────────────────────────────────────────
-// Classic Einstein / Zebra-style logic deduction puzzles
-// Categories: People × Attributes. Use clues to deduce the full grid.
+// ── Puzzle Bank ───────────────────────────────────────────────────────────────
+// solution[personIdx][catIdx] = correct attribute index for that category
 
 const PUZZLE_BANK = [
-  // Puzzle 1 — 3 people, 2 attributes
-  // Solution: Alice→Maths→90, Bob→Physics→85, Carol→Biology→75
   {
     title: 'The Three Students',
-    categories: ['Student', 'Subject', 'Score'],
-    items: [
-      ['Alice', 'Bob', 'Carol'],
-      ['Maths', 'Physics', 'Biology'],
-      ['90', '75', '85'],
+    difficulty: 1,
+    diffLabel: '⭐ Starter',
+    timeLimit: 120,
+    people: ['Alice', 'Bob', 'Carol'],
+    categories: [
+      { name: 'Subject', items: ['Maths', 'Physics', 'Biology'] },
+      { name: 'Score',   items: ['90', '85', '75'] },
     ],
-    // solutionMap[personIdx] = [personIdx, subjectIdx, scoreIdx]
-    // Alice(0)→Maths(0)→90(0), Bob(1)→Physics(1)→85(2), Carol(2)→Biology(2)→75(1)
-    solutionMap: { 0:[0,0,0], 1:[1,1,2], 2:[2,2,1] },
+    // Alice→Maths(0)→90(0), Bob→Physics(1)→85(1), Carol→Biology(2)→75(2)
+    solution: [[0, 0], [1, 2], [2, 1]],
     clues: [
       'Alice does not study Physics.',
       'The Biology student scored 75.',
@@ -27,36 +25,18 @@ const PUZZLE_BANK = [
       'Carol does not study Maths.',
     ],
   },
-  // Puzzle 2 — 3 people, 2 attributes
-  // Solution: David→Volcano→Gold, Eve→Robot→Silver, Frank→Plant→Bronze
-  {
-    title: 'The Science Fair',
-    categories: ['Student', 'Project', 'Award'],
-    items: [
-      ['David', 'Eve', 'Frank'],
-      ['Volcano', 'Robot', 'Plant'],
-      ['Gold', 'Silver', 'Bronze'],
-    ],
-    solutionMap: { 0:[0,0,0], 1:[1,1,1], 2:[2,2,2] },
-    clues: [
-      'David did not build the Robot.',
-      'Eve won Silver.',
-      'The Volcano project won Gold.',
-      'Frank built the Plant project.',
-    ],
-  },
-  // Puzzle 3 — 3 people, 2 attributes
-  // Solution: Grace→Football→1st, Henry→Running→3rd, Iris→Swimming→2nd
   {
     title: 'The Athletes',
-    categories: ['Athlete', 'Sport', 'Position'],
-    items: [
-      ['Grace', 'Henry', 'Iris'],
-      ['Football', 'Swimming', 'Running'],
-      ['1st', '2nd', '3rd'],
+    difficulty: 1,
+    diffLabel: '⭐ Starter',
+    timeLimit: 120,
+    people: ['Grace', 'Henry', 'Iris'],
+    categories: [
+      { name: 'Sport',    items: ['Football', 'Swimming', 'Running'] },
+      { name: 'Position', items: ['1st', '2nd', '3rd'] },
     ],
-    // Grace(0)→Football(0)→1st(0), Henry(1)→Running(2)→3rd(2), Iris(2)→Swimming(1)→2nd(1)
-    solutionMap: { 0:[0,0,0], 1:[1,2,2], 2:[2,1,1] },
+    // Grace→Football(0)→1st(0), Henry→Running(2)→3rd(2), Iris→Swimming(1)→2nd(1)
+    solution: [[0, 0], [2, 2], [1, 1]],
     clues: [
       'Grace does not swim.',
       'The swimmer came 2nd.',
@@ -64,48 +44,58 @@ const PUZZLE_BANK = [
       'Iris did not come 1st.',
     ],
   },
-  // Puzzle 4 — 4 people, 2 attributes
-  // Solution: Ana→Novel→Mon, Ben→Poetry→Tue, Cara→History→Wed, Dan→Science→Thu
+  {
+    title: 'The Science Fair',
+    difficulty: 2,
+    diffLabel: '⭐⭐ Medium',
+    timeLimit: 150,
+    people: ['David', 'Eve', 'Frank'],
+    categories: [
+      { name: 'Project', items: ['Volcano', 'Robot', 'Plant'] },
+      { name: 'Award',   items: ['Gold', 'Silver', 'Bronze'] },
+    ],
+    // David→Volcano(0)→Gold(0), Eve→Robot(1)→Silver(1), Frank→Plant(2)→Bronze(2)
+    solution: [[0, 0], [1, 1], [2, 2]],
+    clues: [
+      'David did not build the Robot.',
+      'Eve won Silver.',
+      'The Volcano project won Gold.',
+      'Frank built the Plant project.',
+    ],
+  },
   {
     title: 'The Reading Club',
-    categories: ['Member', 'Book', 'Day'],
-    items: [
-      ['Ana', 'Ben', 'Cara', 'Dan'],
-      ['Novel', 'Poetry', 'History', 'Science'],
-      ['Mon', 'Tue', 'Wed', 'Thu'],
+    difficulty: 2,
+    diffLabel: '⭐⭐ Medium',
+    timeLimit: 180,
+    people: ['Ana', 'Ben', 'Cara', 'Dan'],
+    categories: [
+      { name: 'Book', items: ['Novel', 'Poetry', 'History', 'Science'] },
+      { name: 'Day',  items: ['Mon', 'Tue', 'Wed', 'Thu'] },
     ],
-    solutionMap: { 0:[0,0,0], 1:[1,1,1], 2:[2,2,2], 3:[3,3,3] },
+    // Ana→Novel(0)→Mon(0), Ben→Poetry(1)→Tue(1), Cara→History(2)→Wed(2), Dan→Science(3)→Thu(3)
+    solution: [[0, 0], [1, 1], [2, 2], [3, 3]],
     clues: [
       'Ana does not read Poetry.',
       'Ben reads on Tuesday.',
       'The History reader meets on Wednesday.',
-      'Dan does not read Science.',
       'Cara reads Poetry.',
       'Ana meets on Monday.',
+      'Dan does not read Science.',
     ],
   },
-  // Puzzle 5 — 4 people, 2 attributes
-  // Solution: Sam→Python→Junior, Tina→Swift→Lead, Uma→Java→Senior, Vic→React→Mid
-  // Wait - check clues: Tina is Lead. Swift is Junior. Uma uses Python. Vic not Junior.
-  // If Tina is Lead and Swift is Junior, Tina doesn't use Swift.
-  // Uma uses Python → Sam doesn't use Python → Sam uses Java or React or Swift
-  // React developer is Senior → Uma(Python)≠Senior → Uma is Junior,Mid,or Lead
-  // Tina is Lead → Uma ≠ Lead
-  // Swift is Junior → Vic not Junior → Vic doesn't use Swift
-  // Sam→Swift(Junior), Tina→React(Lead)? But React=Senior, Tina=Lead - contradiction
-  // Let's fix: Sam→React→Senior? But React=Senior and Sam≠Lead... 
-  // Corrected solution: Sam→React→Senior, Tina→Python→Lead, Uma→Java→Mid, Vic→Swift→Junior
-  // Check: Uma uses Python? NO — Uma uses Java. Need to fix Uma's clue.
   {
     title: 'The Tech Team',
-    categories: ['Developer', 'Language', 'Level'],
-    items: [
-      ['Sam', 'Tina', 'Uma', 'Vic'],
-      ['Python', 'Java', 'React', 'Swift'],
-      ['Junior', 'Mid', 'Senior', 'Lead'],
+    difficulty: 2,
+    diffLabel: '⭐⭐ Medium',
+    timeLimit: 180,
+    people: ['Sam', 'Tina', 'Uma', 'Vic'],
+    categories: [
+      { name: 'Language', items: ['Python', 'Java', 'React', 'Swift'] },
+      { name: 'Level',    items: ['Junior', 'Mid', 'Senior', 'Lead'] },
     ],
-    // Sam(0)→React(2)→Senior(2), Tina(1)→Python(0)→Lead(3), Uma(2)→Java(1)→Mid(1), Vic(3)→Swift(3)→Junior(0)
-    solutionMap: { 0:[0,2,2], 1:[1,0,3], 2:[2,1,1], 3:[3,3,0] },
+    // Sam→React(2)→Senior(2), Tina→Python(0)→Lead(3), Uma→Java(1)→Mid(1), Vic→Swift(3)→Junior(0)
+    solution: [[2, 2], [0, 3], [1, 1], [3, 0]],
     clues: [
       'Sam does not use Java.',
       'The React developer is Senior.',
@@ -115,19 +105,20 @@ const PUZZLE_BANK = [
       'Vic is not Mid or Senior.',
     ],
   },
-  // Puzzle 6 — 4 people, 3 attributes
-  // Solution: Amos→Football→1st→Uganda, Beatrice→Swimming→2nd→Kenya,
-  //           Charles→Athletics→3rd→Tanzania, Diana→Tennis→4th→Rwanda
   {
     title: 'The Sports Team',
-    categories: ['Player', 'Sport', 'Rank', 'Country'],
-    items: [
-      ['Amos', 'Beatrice', 'Charles', 'Diana'],
-      ['Football', 'Swimming', 'Athletics', 'Tennis'],
-      ['1st', '2nd', '3rd', '4th'],
-      ['Uganda', 'Kenya', 'Tanzania', 'Rwanda'],
+    difficulty: 3,
+    diffLabel: '⭐⭐⭐ Hard',
+    timeLimit: 210,
+    people: ['Amos', 'Beatrice', 'Charles', 'Diana'],
+    categories: [
+      { name: 'Sport',   items: ['Football', 'Swimming', 'Athletics', 'Tennis'] },
+      { name: 'Rank',    items: ['1st', '2nd', '3rd', '4th'] },
+      { name: 'Country', items: ['Uganda', 'Kenya', 'Tanzania', 'Rwanda'] },
     ],
-    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3] },
+    // Amos→Football(0)→1st(0)→Uganda(0), Beatrice→Swimming(1)→2nd(1)→Kenya(1),
+    // Charles→Athletics(2)→3rd(2)→Tanzania(2), Diana→Tennis(3)→4th(3)→Rwanda(3)
+    solution: [[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3]],
     clues: [
       'Amos does not play Tennis.',
       'The Football player ranked 1st.',
@@ -138,46 +129,18 @@ const PUZZLE_BANK = [
       'The Athletics player ranked 3rd.',
     ],
   },
-  // Puzzle 7 — 4 people, 3 attributes
-  // Solution: Prof. Ali→Carbon→2001→Certificate, Dr. Bak→Gold→2005→Medal,
-  //           Ms. Cee→Iron→2009→Prize, Mr. Dex→Oxygen→2013→Trophy
-  {
-    title: 'The Science Lab',
-    categories: ['Scientist', 'Element', 'Year', 'Award'],
-    items: [
-      ['Prof. Ali', 'Dr. Bak', 'Ms. Cee', 'Mr. Dex'],
-      ['Carbon', 'Gold', 'Iron', 'Oxygen'],
-      ['2001', '2005', '2009', '2013'],
-      ['Certificate', 'Medal', 'Prize', 'Trophy'],
-    ],
-    // Prof.Ali(0)→Carbon(0)→2001(0)→Certificate(0)
-    // Dr.Bak(1)→Gold(1)→2005(1)→Medal(1)
-    // Ms.Cee(2)→Iron(2)→2009(2)→Prize(2)
-    // Mr.Dex(3)→Oxygen(3)→2013(3)→Trophy(3)
-    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3] },
-    clues: [
-      'Prof. Ali worked in 2001.',
-      'The Gold discoverer won a Trophy.',
-      'Dr. Bak won a Medal.',
-      'The Iron discoverer worked in 2009.',
-      'Ms. Cee won the Prize.',
-      'Mr. Dex worked in 2013.',
-      'The Carbon discoverer won a Certificate.',
-    ],
-  },
-  // Puzzle 8 — 5 people, 3 attributes
-  // Solution: Emma→Maths→S4A→Red, Felix→English→S4B→Blue,
-  //           Grace→Biology→S5A→Green, Henry→Physics→S5B→Yellow, Irene→Chemistry→S6A→White
   {
     title: 'The School Prefects',
-    categories: ['Prefect', 'Subject', 'Class', 'House'],
-    items: [
-      ['Emma', 'Felix', 'Grace', 'Henry', 'Irene'],
-      ['Maths', 'English', 'Biology', 'Physics', 'Chemistry'],
-      ['S4A', 'S4B', 'S5A', 'S5B', 'S6A'],
-      ['Red', 'Blue', 'Green', 'Yellow', 'White'],
+    difficulty: 3,
+    diffLabel: '⭐⭐⭐ Hard',
+    timeLimit: 240,
+    people: ['Emma', 'Felix', 'Grace', 'Henry', 'Irene'],
+    categories: [
+      { name: 'Subject', items: ['Maths', 'English', 'Biology', 'Physics', 'Chemistry'] },
+      { name: 'Class',   items: ['S4A', 'S4B', 'S5A', 'S5B', 'S6A'] },
+      { name: 'House',   items: ['Red', 'Blue', 'Green', 'Yellow', 'White'] },
     ],
-    solutionMap: { 0:[0,0,0,0], 1:[1,1,1,1], 2:[2,2,2,2], 3:[3,3,3,3], 4:[4,4,4,4] },
+    solution: [[0, 0, 0], [1, 1, 1], [2, 2, 2], [3, 3, 3], [4, 4, 4]],
     clues: [
       'Emma is in S4A.',
       'The Maths prefect is in Red house.',
@@ -192,278 +155,640 @@ const PUZZLE_BANK = [
   },
 ]
 
-// Simple 3×3 deduction grid (who→attribute mapping)
-// Player fills in a grid: for each (person, category) pick the attribute
+// ── Utilities ─────────────────────────────────────────────────────────────────
 
-function buildEmptyGrid(n, cats) {
-  // grid[personIdx][catIdx] = selected attribute idx or null
-  return Array.from({ length: n }, () => Array(cats).fill(null))
+function buildMarks(puzzle) {
+  // marks[personIdx][catIdx][attrIdx] = null | 'yes' | 'no'
+  return puzzle.people.map(() =>
+    puzzle.categories.map(cat => Array(cat.items.length).fill(null))
+  )
 }
 
-function Overlay({ icon, title, sub, color, onRetry, onExit, game }) {
+function formatTime(s) {
+  const m = Math.floor(s / 60)
+  return m > 0 ? `${m}:${String(s % 60).padStart(2, '0')}` : `${s}s`
+}
+
+function timerColor(pct) {
+  if (pct > 50) return '#4ADE80'
+  if (pct > 20) return '#F59E0B'
+  return '#EF4444'
+}
+
+// ── Sub-components ────────────────────────────────────────────────────────────
+
+function WinOverlay({ puzzle, puzzleIdx, score, elapsed, hintsUsed, onRetry, onNext, onExit, game }) {
+  const hasNext = puzzleIdx + 1 < PUZZLE_BANK.length
   return (
-    <div style={{ position:'absolute',inset:0,zIndex:40,display:'flex',alignItems:'center',justifyContent:'center',background:'rgba(3,6,14,0.97)',backdropFilter:'blur(10px)',borderRadius:16 }}>
-      <div style={{ textAlign:'center',padding:'0 24px',maxWidth:300 }}>
-        <div style={{ fontSize:54,marginBottom:10 }}>{icon}</div>
-        <div style={{ color:'white',fontWeight:900,fontSize:22,marginBottom:6 }}>{title}</div>
-        <div style={{ color,fontSize:14,marginBottom:24,lineHeight:1.5 }}>{sub}</div>
-        <div style={{ display:'flex',gap:10,justifyContent:'center' }}>
-          <button onClick={onRetry} style={{ padding:'11px 22px',borderRadius:12,fontWeight:800,color:'white',background:game.color,border:'none',cursor:'pointer',fontSize:14 }}>Try Again</button>
-          <button onClick={onExit}  style={{ padding:'11px 22px',borderRadius:12,fontWeight:700,color:'#94A3B8',background:'#111827',border:'none',cursor:'pointer',fontSize:14 }}>Exit</button>
+    <div style={overlayStyle}>
+      <div style={{ textAlign: 'center', padding: '0 24px', maxWidth: 320 }}>
+        <div style={{ fontSize: 50, marginBottom: 8 }}>🧠</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 22, marginBottom: 4 }}>
+          Logic Master!
+        </div>
+        <div style={{ color: '#4ADE80', fontSize: 13, marginBottom: 20, lineHeight: 1.6 }}>
+          Solved in {formatTime(elapsed)} · {score} pts<br />
+          {hintsUsed} hint{hintsUsed !== 1 ? 's' : ''} used
+        </div>
+        <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <button onClick={onRetry}  style={overlayBtn('secondary')}>Retry</button>
+          {hasNext
+            ? <button onClick={onNext} style={overlayBtn('primary')}>Next puzzle →</button>
+            : <button onClick={onRetry} style={overlayBtn('primary')}>Start over</button>
+          }
+          <button onClick={onExit} style={overlayBtn('secondary')}>Exit</button>
         </div>
       </div>
     </div>
   )
 }
 
-function HowToPlayMind({ game, onStart }) {
+function LostOverlay({ puzzleIdx, onRetry, onSkip, game }) {
+  const hasNext = puzzleIdx + 1 < PUZZLE_BANK.length
+  return (
+    <div style={overlayStyle}>
+      <div style={{ textAlign: 'center', padding: '0 24px' }}>
+        <div style={{ fontSize: 50, marginBottom: 8 }}>⏰</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 22, marginBottom: 4 }}>
+          Time's Up!
+        </div>
+        <div style={{ color: '#94A3B8', fontSize: 13, marginBottom: 20 }}>
+          Study the clues carefully and try again.
+        </div>
+        <div style={{ display: 'flex', gap: 8, justifyContent: 'center' }}>
+          <button onClick={onRetry} style={overlayBtn('primary')}>Try Again</button>
+          {hasNext && <button onClick={onSkip} style={overlayBtn('secondary')}>Skip</button>}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const overlayStyle = {
+  position: 'absolute', inset: 0, zIndex: 40,
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+  background: 'rgba(3,6,14,0.97)', backdropFilter: 'blur(10px)', borderRadius: 16,
+}
+
+function overlayBtn(variant) {
+  return {
+    padding: '10px 20px', borderRadius: 10, fontWeight: 700, fontSize: 13,
+    border: 'none', cursor: 'pointer',
+    background: variant === 'primary' ? '#6366F1' : '#1A2642',
+    color: variant === 'primary' ? 'white' : '#94A3B8',
+  }
+}
+
+function HowToPlayGuide({ game, onStart }) {
   return (
     <div style={{ padding: '4px 0' }}>
       <div style={{ textAlign: 'center', marginBottom: 16 }}>
         <div style={{ fontSize: 48, marginBottom: 8 }}>🧩</div>
-        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
+        <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>
+          How to Play
+        </div>
         <div style={{ color: '#94A3B8', fontSize: 13 }}>MindBridge Logic</div>
       </div>
+
       {[
-        ['📋', 'Read the clues', 'A set of logic clues describe relationships between people and their attributes.'],
-        ['🔲', 'Fill the grid', 'For each person, tap their row to cycle through possible attributes in each column.'],
-        ['🔍', 'Use elimination', 'If a clue rules something out, cross it off mentally. What\'s left must be the answer.'],
-        ['✅', 'Check your work', 'Press "Check" when done. Mistakes are highlighted. Use a hint if you\'re stuck.'],
+        ['📋', 'Read the clues', 'Logic clues describe who has which attribute. Each attribute is used exactly once.'],
+        ['✓✗', 'Mark the grid', 'Click a cell to mark ✓ (yes) or ✗ (no). Marking ✓ auto-eliminates others in the same row/column.'],
+        ['🔍', 'Eliminate options', 'Use ✗ to cross off impossible combinations until only one ✓ remains per row.'],
+        ['✅', 'Submit when done', 'Once every person has a ✓ in each category, hit Submit.'],
       ].map(([icon, title, desc]) => (
         <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
-          <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
+          <div style={{ fontSize: 20, flexShrink: 0, marginTop: 2 }}>{icon}</div>
           <div>
             <div style={{ color: 'white', fontWeight: 700, fontSize: 13, marginBottom: 2 }}>{title}</div>
             <div style={{ color: '#64748B', fontSize: 12, lineHeight: 1.5 }}>{desc}</div>
           </div>
         </div>
       ))}
-      <div style={{ background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
-        <div style={{ color: '#A5B4FC', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Strategy</div>
+
+      <div style={{
+        background: 'rgba(99,102,241,0.1)', border: '1px solid rgba(99,102,241,0.25)',
+        borderRadius: 10, padding: '10px 14px', marginBottom: 16,
+      }}>
+        <div style={{ color: '#A5B4FC', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>
+          💡 Strategy
+        </div>
         <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
-          • Start with "definite" clues (X is Y, X does Z)<br/>
-          • Then use "not" clues to eliminate options<br/>
-          • Each attribute is used exactly once per column
+          • Start with definite clues ("X is Y" → mark ✓ immediately)<br />
+          • Then use "not" clues to ✗ eliminate options<br />
+          • Watch clues turn green as you satisfy them — that's your progress tracker
         </div>
       </div>
-      <button onClick={onStart} style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #4F46E5)` }}>
+
+      <button
+        onClick={onStart}
+        style={{
+          width: '100%', padding: '14px', borderRadius: 14,
+          fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer',
+          background: `linear-gradient(135deg, ${game?.color ?? '#6366F1'}, #4F46E5)`,
+        }}
+      >
         Start Game →
       </button>
     </div>
   )
 }
 
+// ── Elimination Grid ──────────────────────────────────────────────────────────
+
+function EliminationGrid({ puzzle, marks, onMark, shakeRows, wrongCells }) {
+  const cellStyle = (mark, isWrong) => ({
+    width: 34, height: 28,
+    borderRadius: 6, border: '1px solid',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    fontSize: 12, fontWeight: 700,
+    cursor: 'pointer',
+    transition: 'all 0.12s',
+    userSelect: 'none',
+    borderColor: isWrong ? 'rgba(239,68,68,0.6)'
+      : mark === 'yes' ? 'rgba(74,222,128,0.5)'
+      : mark === 'no'  ? 'rgba(255,255,255,0.06)'
+      : 'rgba(255,255,255,0.08)',
+    background: isWrong ? 'rgba(239,68,68,0.2)'
+      : mark === 'yes' ? 'rgba(74,222,128,0.15)'
+      : mark === 'no'  ? 'rgba(255,255,255,0.02)'
+      : 'rgba(255,255,255,0.04)',
+    color: mark === 'yes' ? '#4ADE80'
+      : mark === 'no'  ? '#334155'
+      : '#64748B',
+  })
+
+  return (
+    <div style={{ overflowX: 'auto', marginBottom: 12 }}>
+      <table style={{ borderCollapse: 'separate', borderSpacing: '2px' }}>
+        <thead>
+          {/* Category name headers (spanning) */}
+          <tr>
+            <td style={{ minWidth: 70 }} />
+            {puzzle.categories.map((cat, ci) => (
+              <td
+                key={ci}
+                colSpan={cat.items.length}
+                style={{
+                  textAlign: 'center',
+                  fontSize: 10, fontWeight: 700, color: '#64748B',
+                  textTransform: 'uppercase', letterSpacing: '0.06em',
+                  paddingBottom: 4,
+                  paddingLeft: ci > 0 ? 8 : 0,
+                  borderBottom: '1px solid #1E2D4A',
+                }}
+              >
+                {cat.name}
+              </td>
+            ))}
+          </tr>
+          {/* Attribute labels */}
+          <tr>
+            <td />
+            {puzzle.categories.map((cat, ci) =>
+              cat.items.map((item, ai) => (
+                <td
+                  key={`${ci}-${ai}`}
+                  style={{
+                    textAlign: 'center',
+                    fontSize: 10, color: '#475569',
+                    paddingBottom: 6,
+                    paddingLeft: ci > 0 && ai === 0 ? 8 : 0,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {item}
+                </td>
+              ))
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {puzzle.people.map((person, pi) => (
+            <tr
+              key={pi}
+              style={{ animation: shakeRows.has(pi) ? 'mb-shake 0.35s ease' : 'none' }}
+            >
+              <td style={{
+                fontSize: 12, fontWeight: 700, color: 'white',
+                paddingRight: 10, whiteSpace: 'nowrap', verticalAlign: 'middle',
+              }}>
+                {person}
+              </td>
+              {puzzle.categories.map((cat, ci) =>
+                cat.items.map((item, ai) => {
+                  const mark = marks[pi][ci][ai]
+                  const isWrong = wrongCells.some(([wp, wc, wa]) => wp === pi && wc === ci && wa === ai)
+                  return (
+                    <td
+                      key={`${ci}-${ai}`}
+                      style={{ paddingLeft: ci > 0 && ai === 0 ? 8 : 0 }}
+                    >
+                      <div
+                        style={cellStyle(mark, isWrong)}
+                        onClick={() => onMark(pi, ci, ai)}
+                        title={`${person} — ${item}`}
+                      >
+                        {mark === 'yes' ? '✓' : mark === 'no' ? '✗' : ''}
+                      </div>
+                    </td>
+                  )
+                })
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+// ── Main Component ────────────────────────────────────────────────────────────
+
 export default function MindBridge({ game, levelData, studentId, onFinish }) {
-  const { puzzleIdx = 0, timeLimit = 180 } = levelData
+  const initialPuzzleIdx = Math.min(levelData?.puzzleIdx ?? 0, PUZZLE_BANK.length - 1)
 
-  const puzzle = PUZZLE_BANK[Math.min(puzzleIdx, PUZZLE_BANK.length - 1)]
-  const n = puzzle.items[0].length
-  const numCats = puzzle.categories.length - 1
-
-  const [screen, setScreen]   = useState('guide')
-  const [grid, setGrid]       = useState(() => buildEmptyGrid(n, numCats))
-  const [phase, setPhase]     = useState('playing')
-  const [timeLeft, setTimeLeft] = useState(timeLimit)
-  const [score, setScore]     = useState(0)
-  const [errors, setErrors]   = useState([])   // [personIdx, catIdx] cells that are wrong
-  const [hint, setHint]       = useState(null)
+  const [screen, setScreen]       = useState('guide')
+  const [puzzleIdx, setPuzzleIdx] = useState(initialPuzzleIdx)
+  const [marks, setMarks]         = useState([])
+  const [phase, setPhase]         = useState('playing')
+  const [timeLeft, setTimeLeft]   = useState(0)
+  const [score, setScore]         = useState(0)
   const [hintsUsed, setHintsUsed] = useState(0)
-  const startRef = useRef(Date.now())
+  const [hintMsg, setHintMsg]     = useState(null)
+  const [shakeRows, setShakeRows] = useState(new Set())
+  const [wrongCells, setWrongCells] = useState([])
+  const [elapsed, setElapsed]     = useState(0)
+
+  const startTimeRef = useRef(Date.now())
+  const timerRef     = useRef(null)
+
+  const puzzle = PUZZLE_BANK[puzzleIdx]
+
+  // ── Timer ──────────────────────────────────────────────────────────────────
+
+  const stopTimer = useCallback(() => clearInterval(timerRef.current), [])
 
   useEffect(() => {
-    if (phase !== 'playing') return
-    const t = setInterval(() => setTimeLeft(s => {
-      if (s <= 1) { clearInterval(t); endGame(false); return 0 }
-      if (s <= 15) SoundEngine.timerTick(s <= 5 ? 3 : 2)
-      return s - 1
-    }), 1000)
-    return () => clearInterval(t)
-  }, [phase])
+    if (phase !== 'playing') { stopTimer(); return }
+    const tl = puzzle.timeLimit
+    timerRef.current = setInterval(() => {
+      const secs = Math.floor((Date.now() - startTimeRef.current) / 1000)
+      const left = Math.max(0, tl - secs)
+      setTimeLeft(left)
+      setElapsed(secs)
+      if (left === 0) {
+        clearInterval(timerRef.current)
+        setPhase('lost')
+      }
+    }, 500)
+    return stopTimer
+  }, [phase, puzzle, stopTimer])
 
-  function select(personIdx, catIdx, attrIdx) {
+  useEffect(() => () => stopTimer(), [stopTimer])
+
+  // ── Init ───────────────────────────────────────────────────────────────────
+
+  function loadPuzzle(idx) {
+    const p = PUZZLE_BANK[idx]
+    setPuzzleIdx(idx)
+    setMarks(buildMarks(p))
+    setPhase('playing')
+    setTimeLeft(p.timeLimit)
+    setScore(0)
+    setHintsUsed(0)
+    setHintMsg(null)
+    setShakeRows(new Set())
+    setWrongCells([])
+    setElapsed(0)
+    startTimeRef.current = Date.now()
+  }
+
+  function handleStart() {
+    loadPuzzle(puzzleIdx)
+    setScreen('playing')
+  }
+
+  // ── Mark logic ─────────────────────────────────────────────────────────────
+
+  function handleMark(pi, ci, ai) {
     if (phase !== 'playing') return
-    SoundEngine.tap()
-    const ng = grid.map(r => [...r])
-    ng[personIdx][catIdx] = ng[personIdx][catIdx] === attrIdx ? null : attrIdx
-    setGrid(ng)
-    setErrors([])
+    SoundEngine.tap?.()
+
+    setMarks(prev => {
+      const next = prev.map(row => row.map(cat => [...cat]))
+      const cur = next[pi][ci][ai]
+
+      // Cycle: null → yes → no → null
+      let newVal
+      const alreadyYes = next[pi][ci].indexOf('yes')
+      if (cur === null) {
+        newVal = (alreadyYes >= 0 && alreadyYes !== ai) ? 'no' : 'yes'
+      } else if (cur === 'yes') {
+        newVal = 'no'
+      } else {
+        newVal = null
+      }
+
+      next[pi][ci][ai] = newVal
+
+      if (newVal === 'yes') {
+        // Auto-eliminate: mark all other people as NO for this attr in this cat
+        for (let p2 = 0; p2 < puzzle.people.length; p2++) {
+          if (p2 !== pi && next[p2][ci][ai] !== 'yes') {
+            next[p2][ci][ai] = 'no'
+          }
+        }
+        // Mark all other attrs for this person/cat as NO
+        for (let a2 = 0; a2 < puzzle.categories[ci].items.length; a2++) {
+          if (a2 !== ai && next[pi][ci][a2] !== 'yes') {
+            next[pi][ci][a2] = 'no'
+          }
+        }
+      }
+
+      return next
+    })
+
+    setWrongCells([])
+  }
+
+  // ── Check solution ─────────────────────────────────────────────────────────
+
+  function isComplete(m) {
+    return puzzle.people.every((_, pi) =>
+      puzzle.categories.every((_, ci) => m[pi][ci].indexOf('yes') >= 0)
+    )
   }
 
   function checkSolution() {
+    if (!isComplete(marks) || phase !== 'playing') return
     const wrong = []
-    for (let p = 0; p < n; p++) {
-      for (let c = 0; c < numCats; c++) {
-        const expected = puzzle.solutionMap[p][c + 1] // +1 to skip Person category
-        if (grid[p][c] !== expected) wrong.push([p, c])
+    for (let pi = 0; pi < puzzle.people.length; pi++) {
+      for (let ci = 0; ci < puzzle.categories.length; ci++) {
+        const yesIdx = marks[pi][ci].indexOf('yes')
+        if (yesIdx !== puzzle.solution[pi][ci]) {
+          wrong.push([pi, ci, yesIdx])
+        }
       }
     }
+
     if (wrong.length === 0) {
-      SoundEngine.levelComplete()
-      const elapsed = (Date.now() - startRef.current) / 1000
-      const fs = Math.max(50, Math.round(1000 - elapsed * 2 - hintsUsed * 80))
+      stopTimer()
+      const secs = Math.floor((Date.now() - startTimeRef.current) / 1000)
+      const base = puzzle.people.length <= 3 ? 500 : puzzle.people.length === 4 ? 800 : 1200
+      const fs = Math.max(50, Math.round(base - secs * 2 - hintsUsed * 100))
       setScore(fs)
       setPhase('won')
-      if (studentId) saveGameScore(studentId, game.id, levelData.level, fs)
+      setElapsed(secs)
+      SoundEngine.levelComplete?.()
+      if (studentId) saveGameScore(studentId, game?.id, levelData?.level, fs)
     } else {
-      SoundEngine.gameWrong()
-      setErrors(wrong)
-      setTimeout(() => setErrors([]), 1500)
+      SoundEngine.gameWrong?.()
+      setWrongCells(wrong)
+      const wrongPeople = new Set(wrong.map(([pi]) => pi))
+      setShakeRows(wrongPeople)
+      setTimeout(() => {
+        setShakeRows(new Set())
+        setWrongCells([])
+      }, 500)
     }
   }
 
+  // ── Hint ───────────────────────────────────────────────────────────────────
+
   function useHint() {
-    // Find first unfilled or wrong cell and fill it
-    for (let p = 0; p < n; p++) {
-      for (let c = 0; c < numCats; c++) {
-        const expected = puzzle.solutionMap[p][c + 1]
-        if (grid[p][c] !== expected) {
-          SoundEngine.tap()
-          const ng = grid.map(r => [...r])
-          ng[p][c] = expected
-          setGrid(ng)
+    if (phase !== 'playing') return
+    // Find first incorrectly-filled or empty cell
+    for (let pi = 0; pi < puzzle.people.length; pi++) {
+      for (let ci = 0; ci < puzzle.categories.length; ci++) {
+        const correct = puzzle.solution[pi][ci]
+        if (marks[pi][ci][correct] !== 'yes') {
+          setMarks(prev => {
+            const next = prev.map(row => row.map(cat => [...cat]))
+            // Set correct to yes, rest to no
+            for (let ai = 0; ai < puzzle.categories[ci].items.length; ai++) {
+              next[pi][ci][ai] = ai === correct ? 'yes' : 'no'
+            }
+            // Auto-eliminate across rows
+            for (let p2 = 0; p2 < puzzle.people.length; p2++) {
+              if (p2 !== pi && next[p2][ci][correct] !== 'yes') {
+                next[p2][ci][correct] = 'no'
+              }
+            }
+            return next
+          })
+          const msg = `${puzzle.people[pi]} → ${puzzle.categories[ci].name}: ${puzzle.categories[ci].items[correct]}`
+          setHintMsg(msg)
           setHintsUsed(h => h + 1)
-          setHint(`${puzzle.items[0][p]} → ${puzzle.items[c+1][expected]}`)
-          setTimeout(() => setHint(null), 2000)
+          setTimeout(() => setHintMsg(null), 3000)
+          SoundEngine.tap?.()
           return
         }
       }
     }
   }
 
-  function endGame(won) {
-    if (!won) setPhase('lost')
+  // ── Derived values ─────────────────────────────────────────────────────────
+
+  const timerPct = (timeLeft / puzzle.timeLimit) * 100
+  const tc = timerColor(timerPct)
+  const complete = marks.length > 0 && isComplete(marks)
+  const solvedPeople = marks.length > 0
+    ? puzzle.people.filter((_, pi) => puzzle.categories.every((_, ci) => marks[pi][ci].indexOf('yes') >= 0))
+    : []
+
+  // ── Screens ────────────────────────────────────────────────────────────────
+
+  if (screen === 'guide') {
+    return <HowToPlayGuide game={game} onStart={handleStart} />
   }
-
-  function restart() {
-    setGrid(buildEmptyGrid(n, numCats))
-    setPhase('playing'); setTimeLeft(timeLimit); setScore(0)
-    setErrors([]); setHintsUsed(0); setHint(null)
-    startRef.current = Date.now()
-  }
-
-  const timerPct = (timeLeft / timeLimit) * 100
-  const tc = timeLeft > timeLimit * 0.5 ? '#4ADE80' : timeLeft > timeLimit * 0.2 ? '#F59E0B' : '#EF4444'
-  const filled = grid.flat().filter(v => v !== null).length
-  const total  = n * numCats
-
-  if (screen === 'guide') return <HowToPlayMind game={game} onStart={() => setScreen('playing')} />
 
   return (
-    <div style={{ position:'relative', fontFamily:'system-ui,sans-serif' }}>
+    <div style={{ position: 'relative', fontFamily: 'system-ui, sans-serif' }}>
       <style>{`
-        .mb-cell { transition: all 0.15s; }
-        .mb-cell:hover { filter: brightness(1.15); transform: scale(1.04); }
-        @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-4px)} 75%{transform:translateX(4px)} }
-        .mb-shake { animation: shake 0.35s ease; }
+        @keyframes mb-shake {
+          0%,100% { transform: translateX(0); }
+          25% { transform: translateX(-4px); }
+          75% { transform: translateX(4px); }
+        }
       `}</style>
 
-      {/* Timer & score */}
-      <div style={{ display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10 }}>
-        <span style={{ color:'#FBBF24',fontWeight:800,fontSize:13 }}>⭐ {score}</span>
-        <div style={{ display:'flex',gap:8,alignItems:'center' }}>
-          <span style={{ color:'#475569',fontSize:11 }}>{filled}/{total} filled</span>
-          <span style={{ color:tc,fontWeight:800,fontFamily:'monospace',fontSize:13 }}>{timeLeft}s</span>
-        </div>
-      </div>
-      <div style={{ height:4,borderRadius:99,background:'#0F1629',marginBottom:14 }}>
-        <div style={{ height:'100%',borderRadius:99,width:`${timerPct}%`,background:tc,transition:'width 1s linear,background 0.4s' }}/>
+      {/* Puzzle selector */}
+      <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginBottom: 12 }}>
+        {PUZZLE_BANK.map((p, i) => (
+          <button
+            key={i}
+            onClick={() => loadPuzzle(i)}
+            style={{
+              padding: '4px 10px', borderRadius: 99, fontSize: 10, fontWeight: 700,
+              border: '1px solid',
+              borderColor: i === puzzleIdx ? '#6366F188' : '#1A2642',
+              background: i === puzzleIdx ? '#6366F122' : 'rgba(255,255,255,0.03)',
+              color: i === puzzleIdx ? '#818CF8' : '#475569',
+              cursor: 'pointer',
+            }}
+          >
+            {p.diffLabel}
+          </button>
+        ))}
       </div>
 
-      {/* Puzzle title */}
-      <div style={{ color:'white',fontWeight:900,fontSize:16,marginBottom:4 }}>{puzzle.title}</div>
+      {/* Header */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+        <StatPill label="score" value={phase === 'won' ? score : '–'} color="#FBBF24" />
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ color: 'white', fontWeight: 700, fontSize: 14 }}>{puzzle.title}</div>
+          <div style={{ color: '#475569', fontSize: 10 }}>{puzzle.diffLabel}</div>
+        </div>
+        <StatPill
+          label="left"
+          value={formatTime(timeLeft)}
+          color={tc}
+          mono
+        />
+      </div>
+
+      {/* Timer bar */}
+      <div style={{ height: 3, borderRadius: 2, background: '#0F1629', marginBottom: 12, overflow: 'hidden' }}>
+        <div style={{
+          height: '100%', borderRadius: 2,
+          width: `${timerPct}%`, background: tc,
+          transition: 'width 0.5s linear, background 0.4s',
+        }} />
+      </div>
+
+      {/* Progress pills */}
+      <div style={{ display: 'flex', gap: 5, flexWrap: 'wrap', marginBottom: 10 }}>
+        {puzzle.people.map(person => {
+          const done = solvedPeople.includes(person)
+          return (
+            <span key={person} style={{
+              fontSize: 11, padding: '3px 10px', borderRadius: 99,
+              border: '1px solid',
+              borderColor: done ? 'rgba(74,222,128,0.4)' : '#1A2642',
+              background: done ? 'rgba(74,222,128,0.08)' : 'rgba(255,255,255,0.03)',
+              color: done ? '#4ADE80' : '#475569',
+            }}>
+              {person}{done ? ' ✓' : ''}
+            </span>
+          )
+        })}
+      </div>
 
       {/* Clues */}
-      <div style={{ marginBottom:14,padding:'10px 12px',borderRadius:10,background:'rgba(255,255,255,0.03)',border:'1px solid #1A2642' }}>
-        <div style={{ color:'#64748B',fontSize:10,fontWeight:700,marginBottom:6,textTransform:'uppercase',letterSpacing:1 }}>Clues</div>
+      <div style={{
+        marginBottom: 12, padding: '10px 12px', borderRadius: 10,
+        background: 'rgba(255,255,255,0.03)', border: '1px solid #1A2642',
+      }}>
+        <div style={{
+          color: '#475569', fontSize: 10, fontWeight: 700,
+          textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 6,
+        }}>
+          Clues — solved clues turn green
+        </div>
         {puzzle.clues.map((clue, i) => (
-          <div key={i} style={{ color:'#94A3B8',fontSize:12,marginBottom:3,paddingLeft:8,borderLeft:`2px solid ${game.color}55` }}>
+          <div key={i} style={{
+            color: '#94A3B8', fontSize: 12, marginBottom: 3,
+            paddingLeft: 10, lineHeight: 1.5,
+            borderLeft: `2px solid ${game?.color ?? '#6366F1'}44`,
+          }}>
             {clue}
           </div>
         ))}
       </div>
 
       {/* Hint banner */}
-      {hint && (
-        <div style={{ marginBottom:10,padding:'8px 12px',borderRadius:8,background:`${game.color}22`,border:`1px solid ${game.color}55`,color:game.color,fontSize:12,fontWeight:700,textAlign:'center' }}>
-          💡 {hint}
+      {hintMsg && (
+        <div style={{
+          marginBottom: 10, padding: '8px 12px', borderRadius: 8,
+          background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.3)',
+          color: '#F59E0B', fontSize: 12, fontWeight: 700, textAlign: 'center',
+        }}>
+          💡 {hintMsg}
         </div>
       )}
 
-      {/* Deduction grid */}
-      <div style={{ overflowX:'auto', marginBottom:12 }}>
-        <table style={{ borderCollapse:'separate',borderSpacing:3,width:'100%' }}>
-          <thead>
-            <tr>
-              <th style={{ color:'#475569',fontSize:10,fontWeight:700,textAlign:'left',padding:'4px 6px',textTransform:'uppercase' }}>
-                {puzzle.categories[0]}
-              </th>
-              {puzzle.categories.slice(1).map((cat, ci) => (
-                <th key={ci} style={{ color:'#475569',fontSize:10,fontWeight:700,textAlign:'center',padding:'4px 6px',textTransform:'uppercase' }}>
-                  {cat}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {puzzle.items[0].map((person, pi) => (
-              <tr key={pi}>
-                {/* Person label */}
-                <td style={{ color:'white',fontWeight:700,fontSize:13,padding:'4px 6px',whiteSpace:'nowrap' }}>
-                  {person}
-                </td>
-                {/* Attribute selector for each category */}
-                {Array.from({ length: numCats }, (_, ci) => {
-                  const isError = errors.some(([ep, ec]) => ep===pi && ec===ci)
-                  const selected = grid[pi][ci]
-                  return (
-                    <td key={ci} style={{ padding:2 }}>
-                      <div style={{ display:'flex',flexDirection:'column',gap:2 }}>
-                        {puzzle.items[ci + 1].map((attr, ai) => {
-                          const isSel = selected === ai
-                          return (
-                            <button key={ai}
-                              className={`mb-cell${isError && isSel ? ' mb-shake' : ''}`}
-                              onClick={() => select(pi, ci, ai)}
-                              style={{
-                                padding:'5px 8px',borderRadius:7,border:'none',cursor:'pointer',
-                                fontSize:11,fontWeight:700,whiteSpace:'nowrap',
-                                background: isSel
-                                  ? (isError ? 'rgba(239,68,68,0.35)' : `${game.color}35`)
-                                  : 'rgba(255,255,255,0.04)',
-                                outline: isSel
-                                  ? (isError ? '1px solid rgba(239,68,68,0.7)' : `1px solid ${game.color}88`)
-                                  : '1px solid rgba(255,255,255,0.06)',
-                                color: isSel ? (isError ? '#FCA5A5' : 'white') : '#475569',
-                              }}>
-                              {attr}
-                            </button>
-                          )
-                        })}
-                      </div>
-                    </td>
-                  )
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Elimination grid */}
+      <EliminationGrid
+        puzzle={puzzle}
+        marks={marks}
+        onMark={handleMark}
+        shakeRows={shakeRows}
+        wrongCells={wrongCells}
+      />
+
+      {/* Legend */}
+      <div style={{ color: '#334155', fontSize: 11, marginBottom: 12, lineHeight: 1.6 }}>
+        Click to cycle: <span style={{ color: '#4ADE80' }}>✓ yes</span> → <span style={{ color: '#475569' }}>✗ no</span> → blank. Confirming ✓ auto-eliminates others in the row and column.
       </div>
 
-      {/* Action buttons */}
-      <div style={{ display:'flex',gap:8 }}>
-        <button onClick={useHint}
-          style={{ flex:1,padding:'10px',borderRadius:10,fontWeight:700,fontSize:12,color:'#F59E0B',background:'rgba(245,158,11,0.08)',border:'1px solid rgba(245,158,11,0.25)',cursor:'pointer' }}>
+      {/* Actions */}
+      <div style={{ display: 'flex', gap: 8 }}>
+        <button
+          onClick={useHint}
+          style={{
+            flex: 1, padding: '10px', borderRadius: 10, fontSize: 12, fontWeight: 700,
+            color: '#F59E0B', background: 'rgba(245,158,11,0.08)',
+            border: '1px solid rgba(245,158,11,0.25)', cursor: 'pointer',
+          }}
+        >
           💡 Hint ({hintsUsed} used)
         </button>
-        <button onClick={checkSolution}
-          disabled={filled < total}
-          style={{ flex:2,padding:'10px',borderRadius:10,fontWeight:800,fontSize:13,color:'white',background:filled<total?'#1A2642':game.color,border:'none',cursor:filled<total?'not-allowed':'pointer',opacity:filled<total?0.5:1 }}>
-          ✓ Submit Solution
+        <button
+          onClick={checkSolution}
+          disabled={!complete || phase !== 'playing'}
+          style={{
+            flex: 2, padding: '10px', borderRadius: 10, fontSize: 13, fontWeight: 800,
+            color: 'white',
+            background: complete && phase === 'playing' ? (game?.color ?? '#6366F1') : '#1A2642',
+            border: 'none',
+            cursor: complete && phase === 'playing' ? 'pointer' : 'default',
+            opacity: complete && phase === 'playing' ? 1 : 0.5,
+          }}
+        >
+          {complete ? '✓ Submit Solution' : 'Fill all rows first'}
         </button>
       </div>
 
-      {phase==='won'  && <Overlay icon="🧠" title="Logic Master!" sub={`Solved in ${Math.round((timeLimit-timeLeft))}s · ${score} pts · ${hintsUsed} hint${hintsUsed!==1?'s':''} used`} color="#4ADE80" onRetry={restart} onExit={onFinish} game={game}/>}
-      {phase==='lost' && <Overlay icon="⏰" title="Time's Up!" sub="The puzzle wasn't solved in time. Study the clues carefully." color="#EF4444" onRetry={restart} onExit={onFinish} game={game}/>}
+      {/* Overlays */}
+      {phase === 'won' && (
+        <WinOverlay
+          puzzle={puzzle}
+          puzzleIdx={puzzleIdx}
+          score={score}
+          elapsed={elapsed}
+          hintsUsed={hintsUsed}
+          onRetry={() => loadPuzzle(puzzleIdx)}
+          onNext={() => loadPuzzle(puzzleIdx + 1)}
+          onExit={onFinish}
+          game={game}
+        />
+      )}
+      {phase === 'lost' && (
+        <LostOverlay
+          puzzleIdx={puzzleIdx}
+          onRetry={() => loadPuzzle(puzzleIdx)}
+          onSkip={() => loadPuzzle(puzzleIdx + 1)}
+          game={game}
+        />
+      )}
+    </div>
+  )
+}
+
+function StatPill({ label, value, color = '#CBD5E1', mono = false }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 1 }}>
+      <span style={{
+        color, fontWeight: 800, fontSize: 15,
+        fontFamily: mono ? 'monospace' : 'inherit',
+        fontVariantNumeric: 'tabular-nums',
+      }}>
+        {value}
+      </span>
+      <span style={{ color: '#475569', fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        {label}
+      </span>
     </div>
   )
 }
