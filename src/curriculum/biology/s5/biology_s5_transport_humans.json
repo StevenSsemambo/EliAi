@@ -1,0 +1,619 @@
+{
+  "topic_id": "transport_humans",
+  "topic_title": "Transport in Humans",
+  "subject": "biology",
+  "class_level": "S5",
+  "term": 2,
+  "duration_periods": 80,
+  "ncdc_competency": "The learner appreciates the mechanisms of transport of substances in the blood, and the immune system's role in protecting the human body by analysing the processes and their role in the maintenance of human health, to prevent diseases in everyday life.",
+  "lessons": [
+    {
+      "id": "s5_bio_th_l1",
+      "title": "The Human Heart and Blood Circulation",
+      "duration_minutes": 40,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "The circulatory system is responsible for transporting oxygen, nutrients, hormones, and waste products throughout the body. In humans, it is a double circulatory system — blood passes through the heart twice for every complete circuit of the body."
+        },
+        {
+          "type": "heading",
+          "body": "Structure of the Human Heart"
+        },
+        {
+          "type": "list",
+          "items": [
+            "The heart is a muscular pump made mainly of cardiac muscle (myocardium). It has four chambers: right atrium, right ventricle, left atrium, left ventricle.",
+            "Atrioventricular valves: between atria and ventricles. Tricuspid valve (right side), bicuspid/mitral valve (left side). They prevent backflow from ventricles to atria during ventricular contraction.",
+            "Semilunar valves: at the base of the pulmonary artery (right) and aorta (left). Prevent backflow from arteries into ventricles when ventricles relax.",
+            "The left ventricle wall is thicker than the right ventricle — it must pump blood all the way around the body (systemic circulation), requiring more force.",
+            "Coronary arteries supply oxygenated blood to the heart muscle itself — blockage causes a heart attack (myocardial infarction)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Double Circulation"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Pulmonary circulation: right ventricle → pulmonary artery → lungs (for gas exchange) → pulmonary vein → left atrium.",
+            "Systemic circulation: left ventricle → aorta → body organs → vena cava → right atrium.",
+            "Advantage of double circulation: blood is re-pressurised by the left ventricle after losing pressure in lung capillaries — ensuring high-pressure delivery to body tissues."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Cardiac Cycle"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Diastole: both atria and ventricles relax. Blood flows from veins into atria and through to ventricles (atrioventricular valves open).",
+            "Atrial systole: atria contract, pushing remaining blood into ventricles.",
+            "Ventricular systole: ventricles contract. Pressure closes AV valves (prevents backflow) and opens semilunar valves — blood is ejected into arteries.",
+            "Heart rate in a healthy adult at rest: approximately 70 beats per minute."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Myogenic Control and Regulation of Heartbeat"
+        },
+        {
+          "type": "text",
+          "body": "The heart is myogenic — it generates its own electrical impulses without requiring nerve stimulation. This is essential for the heart to beat continuously throughout life."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Sinoatrial node (SAN): the natural pacemaker, located in the wall of the right atrium. It generates electrical impulses that spread across both atria, causing atrial contraction.",
+            "Atrioventricular node (AVN): located between atria and ventricles. It receives the impulse from the SAN and introduces a short delay (~0.1 seconds) — ensuring atria finish contracting before ventricles begin.",
+            "Bundle of His: conducting fibres that carry the impulse from the AVN down through the septum (the wall between ventricles).",
+            "Purkyne fibres (Purkinje fibres): branches of the Bundle of His that spread through the ventricular walls, causing ventricles to contract from the apex (bottom) upward — pushing blood efficiently out through the semilunar valves.",
+            "Nervous control: the medulla oblongata in the brain adjusts heart rate. The sympathetic nervous system (via noradrenaline) speeds up the SAN — e.g. during exercise. The parasympathetic nervous system (via acetylcholine, vagus nerve) slows the SAN — e.g. during rest.",
+            "Effect of CO₂: rising CO₂ levels in blood are detected by chemoreceptors in the aorta and carotid arteries. These send signals to the cardiac centre in the medulla, which sends sympathetic impulses to the SAN to increase heart rate — ensuring faster oxygen delivery to respiring tissues."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Athletes vs non-athletes",
+          "body": "A trained athlete typically has a resting heart rate of 40–60 beats per minute (bradycardia), compared to 70–80 bpm in an untrained person. This is because training causes the heart to develop a larger stroke volume (more blood pumped per beat), so fewer beats are needed per minute to maintain adequate cardiac output. During exercise, both athletes and non-athletes increase heart rate, but athletes recover (heart rate returns to resting) much faster because their cardiovascular system is more efficient."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A doctor listens to a patient's heart and hears an abnormal sound during ventricular contraction, suggesting blood is flowing back into the left atrium. Which valve is most likely faulty?",
+            "options": [
+              "Tricuspid valve",
+              "Pulmonary semilunar valve",
+              "Bicuspid (mitral) valve",
+              "Aortic semilunar valve"
+            ],
+            "answer": "Bicuspid (mitral) valve",
+            "explanation": "The bicuspid (mitral) valve is between the left atrium and left ventricle. If it fails during ventricular systole (contraction), blood leaks back into the left atrium — producing an abnormal heart sound (murmur). The tricuspid valve is on the right side."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The electrical impulse from the SAN is deliberately delayed at the AVN. The biological importance of this delay is:",
+            "options": [
+              "To reduce the heart rate during rest",
+              "To allow the atria to finish contracting before the ventricles contract",
+              "To increase blood pressure in the aorta",
+              "To prevent the Bundle of His from over-stimulating"
+            ],
+            "answer": "To allow the atria to finish contracting before the ventricles contract",
+            "explanation": "The AVN delay (about 0.1 seconds) ensures that the atria complete their contraction and fully empty blood into the ventricles before the ventricles contract. This maximises the volume of blood pumped per beat."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A patient exercises vigorously. Their blood CO₂ level rises. The sequence of events that increases heart rate is:",
+            "options": [
+              "CO₂ detected by chemoreceptors → medulla oblongata → sympathetic nerve → SAN speeds up",
+              "CO₂ detected by SAN directly → SAN speeds up",
+              "CO₂ detected by AVN → Bundle of His speeds up",
+              "CO₂ triggers parasympathetic nerve → SAN speeds up"
+            ],
+            "answer": "CO₂ detected by chemoreceptors → medulla oblongata → sympathetic nerve → SAN speeds up",
+            "explanation": "Rising CO₂ is detected by chemoreceptors in the aortic arch and carotid bodies. These send signals to the cardiovascular centre in the medulla oblongata, which activates sympathetic nerves to the SAN, releasing noradrenaline that increases the rate of SAN firing."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The left ventricle wall is significantly thicker than the right ventricle wall. The reason for this is:",
+            "options": [
+              "The left ventricle pumps blood to the lungs only",
+              "The left ventricle must generate more pressure to pump blood around the entire body",
+              "The left ventricle receives more blood than the right",
+              "The left ventricle contracts more slowly"
+            ],
+            "answer": "The left ventricle must generate more pressure to pump blood around the entire body",
+            "explanation": "The left ventricle pumps blood through the systemic circulation — all the way to the head, limbs, and organs. This requires much greater pressure than the right ventricle, which only pumps blood the short distance to the lungs. The greater muscle thickness generates the higher pressure needed."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The heart is described as myogenic. This means:",
+            "options": [
+              "It requires a nerve signal to beat",
+              "It generates its own electrical impulses from within",
+              "It is controlled by the autonomic nervous system only",
+              "Cardiac muscle is the same as skeletal muscle"
+            ],
+            "answer": "It generates its own electrical impulses from within",
+            "explanation": "Myogenic means the origin of contraction is within the muscle itself. The SAN in the heart wall spontaneously generates electrical impulses without requiring external nerve stimulation, allowing the heart to beat continuously and rhythmically throughout life."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_bio_th_l2",
+      "title": "Transport of Gases in the Blood",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Transport of Oxygen — Haemoglobin"
+        },
+        {
+          "type": "text",
+          "body": "Oxygen is carried in the blood mainly bound to haemoglobin inside red blood cells. Only about 2% of oxygen dissolves directly in plasma. Haemoglobin (Hb) is a globular protein with quaternary structure — 4 polypeptide chains (2 alpha, 2 beta), each containing an iron-containing haem group that reversibly binds one oxygen molecule."
+        },
+        {
+          "type": "list",
+          "heading": "Oxygen loading and unloading:",
+          "items": [
+            "In the lungs (high pO₂ — about 13 kPa): Hb has a high affinity for O₂ — it becomes saturated as oxyhaemoglobin (HbO₈). The reaction: Hb + 4O₂ → HbO₈.",
+            "In respiring tissues (low pO₂ — about 2–5 kPa): Hb releases O₂ — the reaction reverses. The O₂ diffuses into cells for aerobic respiration.",
+            "Cooperativity: when the first O₂ molecule binds to haem, it changes the shape of the haemoglobin molecule slightly, making the remaining three haem groups bind O₂ more easily. This produces the characteristic S-shaped (sigmoid) oxygen dissociation curve.",
+            "The sigmoid shape means Hb is very efficient — it loads O₂ rapidly at high pO₂ (lungs) and releases O₂ rapidly at low pO₂ (tissues)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "The Bohr Effect"
+        },
+        {
+          "type": "text",
+          "body": "The Bohr Effect describes how increasing CO₂ (and therefore decreasing pH) reduces haemoglobin's affinity for oxygen — causing it to release more O₂ to the tissues."
+        },
+        {
+          "type": "list",
+          "items": [
+            "In actively respiring tissues: CO₂ is produced → CO₂ dissolves in blood plasma forming carbonic acid (CO₂ + H₂O → H₂CO₃) → dissociates to H⁺ + HCO₃⁻ → blood pH falls.",
+            "The fall in pH causes Hb to change shape slightly, reducing its affinity for O₂ → the oxygen dissociation curve shifts to the right (Bohr shift).",
+            "Practical significance: during exercise, muscles produce more CO₂ → greater Bohr shift → Hb releases more O₂ exactly where it is needed most. This is an elegant automatic mechanism."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Transport of Carbon Dioxide"
+        },
+        {
+          "type": "text",
+          "body": "CO₂ produced in respiring tissues must be transported to the lungs for removal. It is transported in three ways:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "1. As bicarbonate ions (HCO₃⁻) — approximately 70% of CO₂: CO₂ enters red blood cells and combines with water, catalysed by carbonic anhydrase enzyme: CO₂ + H₂O ⇌ H₂CO₃ ⇌ H⁺ + HCO₃⁻. The HCO₃⁻ ions are transported out of red blood cells into plasma in exchange for Cl⁻ ions entering — this is the chloride shift (Hamburger shift). This maintains electrical neutrality of the red blood cell.",
+            "2. Bound to haemoglobin as carbaminohaemoglobin — approximately 23% of CO₂: CO₂ binds to the amino groups of globin (protein part of Hb), NOT the haem group. So O₂ and CO₂ can be carried simultaneously without direct competition.",
+            "3. Dissolved in plasma — approximately 7% of CO₂: CO₂ dissolves directly in blood plasma.",
+            "In the lungs: the reactions reverse — HCO₃⁻ moves back into red blood cells, combines with H⁺ to reform CO₂, which diffuses out of blood into the alveoli and is exhaled."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "In tissues (CO₂ produced):\nCO₂ + H₂O → H₂CO₃ → H⁺ + HCO₃⁻\n(carbonic anhydrase)\nHCO₃⁻ moves to plasma (Cl⁻ enters cell — chloride shift)\n\nIn lungs (CO₂ removed):\nH⁺ + HCO₃⁻ → H₂CO₃ → CO₂ + H₂O\nCO₂ diffuses into alveoli → exhaled"
+        },
+        {
+          "type": "heading",
+          "body": "Carbon Monoxide Poisoning"
+        },
+        {
+          "type": "text",
+          "body": "Carbon monoxide (CO) is a colourless, odourless gas produced by incomplete combustion of fuels — e.g. charcoal stoves in poorly ventilated rooms, vehicle exhaust. It is extremely dangerous."
+        },
+        {
+          "type": "list",
+          "items": [
+            "CO binds to the haem group of haemoglobin at the same site as O₂, forming carboxyhaemoglobin (HbCO).",
+            "CO has an affinity for Hb approximately 250 times greater than O₂ — so it displaces O₂ and the binding is almost irreversible.",
+            "HbCO cannot carry O₂ — effective oxygen-carrying capacity of blood is drastically reduced.",
+            "HbCO also shifts the oxygen dissociation curve to the left — even the remaining oxyhaemoglobin holds onto O₂ more tightly, making it harder for tissues to receive O₂.",
+            "Symptoms: headache, dizziness, confusion, loss of consciousness, death from tissue hypoxia (oxygen deprivation).",
+            "Treatment: remove from source, administer 100% oxygen to displace CO from Hb. Hyperbaric oxygen therapy in severe cases.",
+            "Prevention in Uganda: ensure adequate ventilation when using charcoal stoves, install CO detectors."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Highland vs Lowland dwellers",
+          "body": "People living at high altitude (e.g. Kabale, 1980 m above sea level) have lower atmospheric oxygen pressure. Their bodies adapt: red blood cell count increases, haemoglobin concentration rises, and their haemoglobin has a slightly lower affinity for O₂ (shifted oxygen dissociation curve) — allowing more efficient O₂ release to tissues. When lowland athletes train at altitude, they gain these adaptations temporarily, improving their performance when they return to lower altitude."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A person uses a charcoal stove in a closed room overnight. In the morning they are found unconscious. The blood test shows high levels of carboxyhaemoglobin. The immediate danger is:",
+            "options": [
+              "Excess CO₂ poisoning the nervous system",
+              "Inability of haemoglobin to carry oxygen, causing tissue hypoxia",
+              "Destruction of red blood cells by CO",
+              "Increased heart rate from CO stimulation"
+            ],
+            "answer": "Inability of haemoglobin to carry oxygen, causing tissue hypoxia",
+            "explanation": "CO binds irreversibly to Hb's haem group with 250× greater affinity than O₂, forming carboxyhaemoglobin that cannot carry oxygen. The body's tissues are starved of oxygen (hypoxia), causing loss of consciousness and potentially death."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The oxygen dissociation curve for haemoglobin is S-shaped (sigmoid). This shape is explained by:",
+            "options": [
+              "Each Hb molecule carrying only one oxygen molecule",
+              "Cooperativity — binding of first O₂ increases affinity of remaining haem groups for O₂",
+              "O₂ dissolving in plasma at high partial pressures",
+              "The Bohr effect shifting the curve left"
+            ],
+            "answer": "Cooperativity — binding of first O₂ increases affinity of remaining haem groups for O₂",
+            "explanation": "Haemoglobin has 4 haem groups. When the first O₂ binds, it causes a conformational change that increases the affinity of the other three haem groups — this cooperative binding creates the characteristic S-shaped curve, making loading in the lungs and unloading in tissues highly efficient."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "During the chloride shift, Cl⁻ ions move into red blood cells from the plasma. This occurs because:",
+            "options": [
+              "Cl⁻ is needed for carbonic anhydrase activity",
+              "HCO₃⁻ moves out of the red blood cell, and Cl⁻ enters to maintain electrical neutrality",
+              "Cl⁻ helps transport CO₂ bound to haemoglobin",
+              "Cl⁻ replaces O₂ on the haem group"
+            ],
+            "answer": "HCO₃⁻ moves out of the red blood cell, and Cl⁻ enters to maintain electrical neutrality",
+            "explanation": "As HCO₃⁻ (bicarbonate ions) are produced inside red blood cells and move out into plasma for transport, the cell would become positively charged. To maintain electrical neutrality, Cl⁻ ions move in from plasma — this exchange is the chloride shift (Hamburger shift)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "During intense exercise, a runner's muscles produce large amounts of CO₂. The Bohr Effect means that haemoglobin in the muscles will:",
+            "options": [
+              "Hold onto oxygen more tightly, reducing delivery to muscles",
+              "Release more oxygen to the muscles due to reduced pH",
+              "Bind more CO₂ directly on the haem group",
+              "Increase the rate of photosynthesis in muscle cells"
+            ],
+            "answer": "Release more oxygen to the muscles due to reduced pH",
+            "explanation": "More CO₂ → more carbonic acid → lower pH → H⁺ ions bind to haemoglobin → Bohr shift (curve shifts right) → Hb releases O₂ more readily at a given pO₂. This ensures working muscles receive extra O₂ exactly when they need it most."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Approximately what percentage of CO₂ is transported in the blood as bicarbonate ions (HCO₃⁻)?",
+            "options": [
+              "7%",
+              "23%",
+              "70%",
+              "95%"
+            ],
+            "answer": "70%",
+            "explanation": "About 70% of CO₂ is transported as HCO₃⁻ ions in plasma. About 23% is carried as carbaminohaemoglobin (bound to the globin protein part of Hb). Only about 7% dissolves directly in plasma."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_bio_th_l3",
+      "title": "Immunity: Innate and Adaptive Defence",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "The immune system is the body's defence against pathogens (bacteria, viruses, fungi, parasites) and other foreign substances. It has two interconnected arms: innate (non-specific) immunity and adaptive (specific) immunity."
+        },
+        {
+          "type": "heading",
+          "body": "Innate (Non-Specific) Immunity"
+        },
+        {
+          "type": "text",
+          "body": "Innate immunity is present from birth, responds rapidly (within minutes to hours), and does not distinguish between specific pathogens — it responds the same way to any pathogen."
+        },
+        {
+          "type": "list",
+          "heading": "First line of defence (physical and chemical barriers):",
+          "items": [
+            "Skin: tough keratinised layer prevents most pathogens from entering. Sebaceous glands secrete sebum (slightly acidic, antimicrobial).",
+            "Mucus membranes: line the respiratory, digestive, and urogenital tracts. Mucus traps pathogens. Cilia sweep mucus and trapped particles up and out of the respiratory tract.",
+            "Stomach acid: HCl (pH ~2) kills most pathogens that are swallowed.",
+            "Tears and saliva: contain lysozyme — an enzyme that destroys bacterial cell walls.",
+            "Normal flora: beneficial bacteria on skin and gut that compete with pathogens."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Second line of defence (cellular and chemical responses):",
+          "items": [
+            "Phagocytosis: neutrophils and macrophages engulf and digest pathogens. Process: chemotaxis (attracted to pathogen chemicals) → attachment → engulfment into phagosome → lysosomes fuse and release enzymes → pathogen digested.",
+            "Inflammation: damaged cells release histamine and prostaglandins → vasodilation (widening of blood vessels) and increased permeability → more phagocytes arrive at infection site. Signs: redness, heat, swelling, pain.",
+            "Fever: raised body temperature (>37.5°C) slows pathogen reproduction and speeds up immune cell activity.",
+            "Complement system: proteins in blood plasma that can destroy pathogens directly or mark them for phagocytosis (opsonisation).",
+            "Natural killer (NK) cells: destroy virus-infected cells and cancer cells by inducing apoptosis (programmed cell death)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Adaptive (Specific) Immunity"
+        },
+        {
+          "type": "text",
+          "body": "Adaptive immunity develops over days to weeks after first exposure to a pathogen. It is highly specific — different lymphocytes respond to different antigens. It has memory — a faster, stronger response on re-exposure."
+        },
+        {
+          "type": "list",
+          "heading": "Key cells:",
+          "items": [
+            "Antigens: molecules (usually proteins or polysaccharides) on the surface of pathogens that are recognised as foreign by the immune system.",
+            "B lymphocytes (B cells): produced and mature in bone marrow. When activated by an antigen (with T helper cell assistance), they differentiate into plasma cells (which secrete antibodies) and memory B cells.",
+            "T lymphocytes (T cells): produced in bone marrow, mature in thymus. Types: T helper cells (CD4⁺) — activate B cells and cytotoxic T cells; Cytotoxic T cells (CD8⁺) — kill infected cells directly; T memory cells — persist long-term.",
+            "Clonal selection and expansion: when a B or T cell recognises its specific antigen, it divides rapidly (clonal expansion) to produce many identical cells — all able to respond to that specific antigen."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Antibodies"
+        },
+        {
+          "type": "text",
+          "body": "Antibodies (immunoglobulins) are Y-shaped glycoproteins secreted by plasma cells. Each antibody has a specific antigen-binding site (variable region) complementary to its specific antigen."
+        },
+        {
+          "type": "list",
+          "heading": "Structure of an antibody:",
+          "items": [
+            "Two identical heavy chains and two identical light chains, joined by disulphide bonds.",
+            "Variable region (at the tips of the Y): unique to each antibody — determines which antigen it binds. Each antibody has two identical antigen-binding sites.",
+            "Constant region (the stem of the Y): determines the antibody class (IgG, IgM, IgA, IgE, IgD) and what immune response it triggers."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "How antibodies work:",
+          "items": [
+            "Neutralisation: antibodies bind to antigens on pathogens or toxins, blocking their ability to attach to host cells.",
+            "Agglutination: antibodies cross-link antigens on multiple pathogens, clumping them together — making phagocytosis more efficient.",
+            "Opsonisation: antibodies coat pathogens, marking them for destruction by phagocytes (phagocytes have receptors for the constant region of antibodies).",
+            "Complement activation: antibody-antigen complexes activate the complement cascade, leading to pathogen destruction.",
+            "Rapid test kits: HIV, malaria, and COVID-19 rapid test kits use antibodies specific to antigens of the pathogen to detect infections in minutes."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A patient has a deep wound infected with bacteria. Neutrophils arrive at the wound within minutes. This rapid, non-specific response is part of:",
+            "options": [
+              "Adaptive immunity",
+              "Innate immunity",
+              "Clonal selection",
+              "Antibody-mediated immunity"
+            ],
+            "answer": "Innate immunity",
+            "explanation": "Innate immunity responds rapidly (within minutes to hours) to any pathogen without needing prior exposure. Neutrophils are phagocytes that are part of the innate second line of defence, engulfing and destroying bacteria through phagocytosis."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "After recovering from malaria, a patient becomes ill with the same strain again six months later, but recovers much more quickly. This faster response is due to:",
+            "options": [
+              "The innate immune system being stronger after infection",
+              "Memory B cells and memory T cells responding rapidly to the same antigen",
+              "More phagocytes being produced permanently",
+              "The parasite being weaker the second time"
+            ],
+            "answer": "Memory B cells and memory T cells responding rapidly to the same antigen",
+            "explanation": "After the first infection, memory B and T cells persist in the body. On re-exposure to the same antigen, these memory cells rapidly proliferate and mount a faster, stronger immune response (secondary response) — producing more antibodies more quickly."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The variable region of an antibody molecule is significant because:",
+            "options": [
+              "It determines which class of antibody is produced",
+              "It is the antigen-binding site — unique to each antibody and complementary to a specific antigen",
+              "It attaches to phagocytes for opsonisation",
+              "It activates complement proteins"
+            ],
+            "answer": "It is the antigen-binding site — unique to each antibody and complementary to a specific antigen",
+            "explanation": "The variable region at the tips of the Y-shaped antibody has a unique amino acid sequence that creates a specific 3D shape — complementary to only one type of antigen. This specificity allows the immune system to distinguish millions of different pathogens."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "HIV destroys T helper cells (CD4⁺ T cells). Explain why this makes patients susceptible to many different infections:",
+            "options": [
+              "T helper cells produce all antibodies directly",
+              "T helper cells are needed to activate both B cells and cytotoxic T cells — their loss cripples both arms of adaptive immunity",
+              "T helper cells are the only cells that can perform phagocytosis",
+              "T helper cells produce interferon that blocks all viruses"
+            ],
+            "answer": "T helper cells are needed to activate both B cells and cytotoxic T cells — their loss cripples both arms of adaptive immunity",
+            "explanation": "T helper cells are the coordinators of adaptive immunity. They secrete cytokines that activate B cells (for antibody production) and cytotoxic T cells (for killing infected cells). When HIV destroys CD4⁺ T cells, both antibody-mediated and cell-mediated immunity are severely impaired, leaving the patient vulnerable to opportunistic infections."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Rapid test kits for detecting malaria use antibodies. The principle is that:",
+            "options": [
+              "The kit produces antibodies in the patient's blood",
+              "Antibodies specific to malaria antigens in the kit bind to malaria antigens in the patient's blood, producing a visible result",
+              "The kit activates the patient's innate immune system",
+              "Red blood cells are counted in the patient's blood"
+            ],
+            "answer": "Antibodies specific to malaria antigens in the kit bind to malaria antigens in the patient's blood, producing a visible result",
+            "explanation": "Rapid diagnostic test kits contain pre-made antibodies specific to malaria antigens (e.g. HRP-2 protein from P. falciparum). When patient blood containing these antigens flows across the test strip, antigen-antibody binding occurs, producing a coloured line — indicating a positive result."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_bio_th_l4",
+      "title": "Vaccination, Allergy and Rhesus Blood Groups",
+      "duration_minutes": 40,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Vaccination (Active Immunity)"
+        },
+        {
+          "type": "text",
+          "body": "Vaccination is the deliberate introduction of an antigen into the body to stimulate the adaptive immune system to produce memory cells — without causing the disease itself."
+        },
+        {
+          "type": "list",
+          "heading": "Types of vaccines:",
+          "items": [
+            "Live attenuated: weakened (but living) form of the pathogen. Produces a strong immune response with long-lasting memory. Examples: BCG (tuberculosis), oral polio vaccine, yellow fever. Risk: may revert to virulence in immunocompromised individuals.",
+            "Inactivated (killed): dead pathogens. Safe but may need booster doses. Examples: injectable polio vaccine, hepatitis A.",
+            "Subunit/component: only specific antigens (not the whole pathogen). Examples: hepatitis B vaccine, HPV vaccine. Very safe.",
+            "Toxoid: inactivated toxins. Examples: tetanus and diphtheria vaccines. Stimulates antibody production against the toxin.",
+            "mRNA vaccines: mRNA instructions cause body cells to produce a pathogen antigen → triggers immune response. Example: some COVID-19 vaccines."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "How vaccination works:",
+          "items": [
+            "Vaccine introduces antigen → antigen presented to T helper cells → B cells activated → clonal expansion → plasma cells (produce antibodies) + memory B cells.",
+            "Primary immune response: slow, produces limited antibodies — this is what happens during vaccination.",
+            "Secondary immune response: when exposed to the actual pathogen later, memory cells respond rapidly and produce large quantities of antibodies — preventing disease.",
+            "Herd immunity: when a large enough proportion of a population is immune (through vaccination or previous infection), the pathogen cannot spread effectively — protecting even unvaccinated individuals. Threshold varies: ~95% for measles, ~80% for polio."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Allergy and the Role of Histamine"
+        },
+        {
+          "type": "text",
+          "body": "An allergy is an exaggerated, harmful immune response to a harmless antigen (allergen). Examples: pollen, dust mites, peanuts, latex, bee stings, certain medicines."
+        },
+        {
+          "type": "list",
+          "heading": "Mechanism of allergic reaction:",
+          "items": [
+            "First exposure (sensitisation): allergen enters body → immune system produces IgE antibodies specific to the allergen → IgE binds to mast cells (in tissues) and basophils (in blood), sensitising them.",
+            "Second exposure: allergen binds to IgE on mast cells → mast cells degranulate → they release histamine and other chemicals.",
+            "Histamine causes: vasodilation (blood vessels widen) → increased blood flow to area (redness, heat); increased capillary permeability → fluid leaks into tissues (swelling, oedema); stimulation of mucus secretion (runny nose); smooth muscle contraction (in bronchioles → difficulty breathing in asthma).",
+            "Mild allergy: hay fever — sneezing, watery eyes, runny nose.",
+            "Severe allergy: anaphylaxis — massive histamine release causes life-threatening drop in blood pressure, airway constriction. Treated with adrenaline injection (EpiPen).",
+            "Antihistamines block histamine receptors, preventing histamine's effects — used to treat mild allergies."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Rhesus Blood Groups and Haemolytic Disease of the Newborn"
+        },
+        {
+          "type": "text",
+          "body": "In addition to ABO blood groups, humans have the Rhesus (Rh) system. Approximately 85% of Ugandans are Rh positive (Rh⁺) — meaning they have the Rh antigen (also called D antigen) on their red blood cells."
+        },
+        {
+          "type": "list",
+          "heading": "Rhesus incompatibility in pregnancy:",
+          "items": [
+            "If a Rh⁻ mother carries a Rh⁺ fetus (inherited from the father): during birth, fetal blood cells may enter the mother's circulation.",
+            "The mother's immune system recognises the Rh antigen as foreign → produces anti-Rh antibodies (IgG). This sensitisation usually happens at the first birth — the first baby is typically unaffected.",
+            "In subsequent pregnancies with Rh⁺ fetus: the mother already has memory cells → rapidly produces large quantities of anti-Rh IgG antibodies → these cross the placenta (IgG is small enough to cross) → destroy the fetal red blood cells.",
+            "This causes haemolytic disease of the newborn (HDN) — also called erythroblastosis fetalis: severe anaemia, jaundice, oedema, heart failure, and potentially death of the fetus.",
+            "Prevention: Rh⁻ mothers are given anti-D immunoglobulin (RhoGAM) injection within 72 hours of birth. Anti-D antibodies destroy any fetal Rh⁺ cells before they can sensitise the mother's immune system — preventing antibody production for future pregnancies.",
+            "ABO incompatibility also exists but is generally less severe than Rh incompatibility."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The BCG vaccine given to newborns in Uganda contains live attenuated Mycobacterium bovis. 'Attenuated' means the bacteria are:",
+            "options": [
+              "Killed by heat treatment",
+              "Weakened so they cannot cause disease but still stimulate immunity",
+              "Genetically modified to produce antigens only",
+              "Grown in a culture medium specific to Uganda"
+            ],
+            "answer": "Weakened so they cannot cause disease but still stimulate immunity",
+            "explanation": "Attenuation involves weakening the pathogen (usually through repeated culturing in unfavourable conditions) so it cannot cause disease in a healthy person, but still has the same antigens to stimulate a full immune response and memory cell formation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A child receives a measles vaccine at 9 months. Two years later, they are exposed to measles virus. They do not develop the disease. The most accurate explanation is:",
+            "options": [
+              "The vaccine permanently produced antibodies in the child",
+              "Memory B cells rapidly produce large amounts of antibodies when exposed to the measles antigen",
+              "The child's innate immunity destroyed the virus",
+              "The vaccine destroyed the measles virus before it could enter the body"
+            ],
+            "answer": "Memory B cells rapidly produce large amounts of antibodies when exposed to the measles antigen",
+            "explanation": "The vaccine stimulated a primary immune response and the formation of memory B cells. When the child encounters the actual measles virus, memory cells mount a rapid secondary immune response — producing large quantities of antibodies that neutralise the virus before it can cause disease."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A person with a bee sting allergy is stung and experiences severe breathing difficulties and low blood pressure within minutes. This life-threatening reaction is called:",
+            "options": [
+              "Hay fever",
+              "Anaphylaxis",
+              "Asthma",
+              "Urticaria"
+            ],
+            "answer": "Anaphylaxis",
+            "explanation": "Anaphylaxis is a severe, systemic allergic reaction caused by massive histamine release throughout the body. It causes dangerous vasodilation (low blood pressure) and bronchoconstriction (difficulty breathing). Emergency treatment is adrenaline injection."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A Rh⁻ woman gives birth to her second Rh⁺ child. The second child develops severe anaemia shortly after birth. The cause is:",
+            "options": [
+              "The mother passed malaria to the fetus through the placenta",
+              "Anti-Rh IgG antibodies from the mother crossed the placenta and destroyed fetal red blood cells",
+              "The father's blood type caused a direct reaction in the fetus",
+              "ABO incompatibility between mother and fetus"
+            ],
+            "answer": "Anti-Rh IgG antibodies from the mother crossed the placenta and destroyed fetal red blood cells",
+            "explanation": "During the first pregnancy, fetal Rh⁺ cells sensitised the Rh⁻ mother. She produced anti-Rh IgG antibodies. In the second pregnancy, these antibodies (being IgG, which can cross the placenta) attacked the Rh⁺ fetal red blood cells, causing haemolytic disease of the newborn."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Anti-D immunoglobulin (RhoGAM) is given to Rh⁻ mothers after the birth of their first Rh⁺ child. It works by:",
+            "options": [
+              "Stimulating the mother to produce her own anti-Rh antibodies faster",
+              "Destroying any Rh⁺ fetal cells in the mother's blood before her immune system is sensitised",
+              "Making future fetuses Rh negative",
+              "Blocking the placenta to prevent antibody transfer"
+            ],
+            "answer": "Destroying any Rh⁺ fetal cells in the mother's blood before her immune system is sensitised",
+            "explanation": "Anti-D immunoglobulin contains anti-Rh antibodies. When injected into the Rh⁻ mother after delivery, it destroys any Rh⁺ fetal cells that entered her blood before her immune system can respond to them. This prevents sensitisation and memory cell formation, protecting future pregnancies."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "topic_id": "respiration",
+  "topic_title": "Respiration",
+  "subject": "biology",
+  "class_level": "S5",
+  "term": 3,
+  "duration_periods": 30,
+  "ncdc_competency": "The learner appreciates how living organisms generate cellular energy, by analysing respiratory processes and the chemical breakdown of food within cells, to make informed decisions that promote good health and wellbeing.",
+  "lessons": [
+    {
+      "id": "s5_bio_resp_l1",
+      "title": "Mitochondrion Structure and ATP",
+      "duration_minutes": 40,
+      "xp_reward": 80,
+      "content": [
+        {
+          "type": "text",
+          "body": "Cellular respiration is the process by which living cells break down organic molecules (mainly glucose) to release energy, which is used to synthesise ATP (adenosine triphosphate) — the universal energy currency of all cells."
+        },
+        {
+          "type": "heading",
+          "body": "Why ATP?"
+        },
+        {
+          "type": "text",
+          "body": "Energy from food cannot be used directly to power cellular processes. It must first be captured in the form of ATP — a small, soluble molecule that can be transported anywhere in the cell and rapidly released on demand."
+        },
+        {
+          "type": "list",
+          "heading": "ATP structure and hydrolysis:",
+          "items": [
+            "ATP (adenosine triphosphate) = adenosine + 3 phosphate groups.",
+            "The bonds between the phosphate groups store energy. The terminal phosphate bond (between the 2nd and 3rd phosphate) is particularly energy-rich.",
+            "ATP hydrolysis: ATP + H₂O → ADP + Pi + energy (~30.5 kJ/mol released). This reaction is catalysed by ATPase enzyme.",
+            "ATP regeneration: ADP + Pi + energy → ATP. This occurs during respiration.",
+            "ATP is used for: muscle contraction, active transport (pumping ions across membranes), biosynthesis (building molecules), nerve impulse transmission, cell division.",
+            "ATP is not stored in large quantities — it is continuously recycled. A human body turns over its own weight in ATP every day."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Ultrastructure of the Mitochondrion"
+        },
+        {
+          "type": "text",
+          "body": "The mitochondrion is the organelle where aerobic respiration occurs. Its complex internal structure is directly related to its function."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Outer membrane: smooth, freely permeable to small molecules — surrounds the entire organelle.",
+            "Inner membrane: selectively permeable, highly folded into structures called cristae. Contains: electron carriers (protein complexes I, II, III, IV), ATP synthase (stalked particles / F₁F₀ ATPase — large protein complexes visible as knobs on the inner membrane). The folding into cristae greatly increases surface area for oxidative phosphorylation.",
+            "Intermembrane space: the narrow space between the outer and inner membranes. Protons (H⁺ ions) accumulate here during the electron transport chain, creating a proton gradient used to drive ATP synthesis.",
+            "Matrix: the fluid-filled inner compartment. Contains: enzymes for the Krebs cycle, mitochondrial DNA (circular, like prokaryotes — evidence for endosymbiotic origin), mitochondrial ribosomes (70S — smaller than cytoplasmic ribosomes), NAD and FAD coenzymes.",
+            "Cristae: infoldings of the inner membrane. Cells with high energy demands (e.g. cardiac muscle cells, liver cells, flight muscle cells in insects) have more cristae — more surface area = more ATP production."
+          ]
+        },
+        {
+          "type": "example",
+          "title": "Why cardiac muscle cells have many mitochondria with dense cristae",
+          "body": "The heart beats approximately 100,000 times per day without rest. Cardiac muscle cells contain up to 35% of their volume as mitochondria (more than almost any other cell type). Each mitochondrion has densely packed cristae for maximum ATP output. This ensures a constant supply of ATP for continuous muscle contraction — if ATP production fails even briefly, the consequences can be fatal."
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A poison blocks ATP synthase in mitochondria. What would be the immediate cellular effect?",
+            "options": [
+              "Cells would use glucose faster",
+              "ATP production from oxidative phosphorylation would stop, causing energy failure",
+              "The Krebs cycle would speed up to compensate",
+              "Cells would switch to using photosynthesis"
+            ],
+            "answer": "ATP production from oxidative phosphorylation would stop, causing energy failure",
+            "explanation": "ATP synthase uses the proton gradient across the inner mitochondrial membrane to synthesise ATP. Blocking it stops oxidative phosphorylation (the main source of ATP in aerobic cells). Without ATP, all energy-requiring processes — muscle contraction, active transport, biosynthesis — would fail."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why do mitochondria in liver cells have more cristae than mitochondria in skin cells?",
+            "options": [
+              "Liver cells are larger than skin cells",
+              "Liver cells have higher metabolic activity and require more ATP — more cristae provides more surface for ATP synthesis",
+              "Skin cells do not contain mitochondria",
+              "Liver cells perform photosynthesis"
+            ],
+            "answer": "Liver cells have higher metabolic activity and require more ATP — more cristae provides more surface for ATP synthesis",
+            "explanation": "Cristae increase the inner membrane surface area available for electron transport chains and ATP synthase. Liver cells perform many energy-intensive processes (protein synthesis, detoxification, gluconeogenesis) and therefore need more ATP — achieved by having mitochondria with more extensively folded cristae."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Mitochondria contain their own circular DNA and 70S ribosomes. This is used as evidence for:",
+            "options": [
+              "Mitochondria being able to photosynthesize",
+              "The endosymbiotic theory — that mitochondria evolved from ancient prokaryotes engulfed by early eukaryotic cells",
+              "Mitochondria being able to reproduce sexually",
+              "Mitochondrial DNA being identical to nuclear DNA"
+            ],
+            "answer": "The endosymbiotic theory — that mitochondria evolved from ancient prokaryotes engulfed by early eukaryotic cells",
+            "explanation": "Mitochondria have circular DNA (like bacteria), 70S ribosomes (prokaryotic size), a double membrane (the outer membrane from the original engulfment), and divide by binary fission. These features strongly support the endosymbiotic theory proposed by Lynn Margulis."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s5_bio_resp_l2",
+      "title": "Stages of Aerobic Respiration and ATP Production",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Aerobic respiration occurs in four stages: glycolysis (cytoplasm), link reaction (mitochondrial matrix), Krebs cycle (mitochondrial matrix), and oxidative phosphorylation (inner mitochondrial membrane). Note: detailed biochemistry of individual steps is not required in this syllabus — focus on inputs, outputs, and location of each stage."
+        },
+        {
+          "type": "heading",
+          "body": "Stage 1: Glycolysis (in the cytoplasm)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Location: cytoplasm of the cell — does NOT require mitochondria. Occurs in all living cells, both prokaryotes and eukaryotes.",
+            "Input: 1 glucose (6-carbon) molecule + 2 ATP (to activate glucose).",
+            "Process: glucose (6C) is phosphorylated and split into two 3-carbon molecules of pyruvate. NAD⁺ is reduced to NADH.",
+            "Net output per glucose: 2 pyruvate (3C each), net 2 ATP (by substrate-level phosphorylation), 2 NADH.",
+            "Does NOT require oxygen — this is why glycolysis can continue during anaerobic conditions.",
+            "If oxygen is absent: pyruvate is converted to lactate (in animals) or ethanol + CO₂ (in yeast/plants) — this regenerates NAD⁺ so glycolysis can continue. This is anaerobic respiration."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Stage 2: Link Reaction (in mitochondrial matrix)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Location: mitochondrial matrix.",
+            "Each pyruvate (3C) is converted to Acetyl Coenzyme A (Acetyl-CoA, 2C).",
+            "Process: pyruvate is decarboxylated (loses CO₂) and oxidised (loses H to reduce NAD⁺ to NADH). The remaining 2-carbon unit combines with coenzyme A to form Acetyl-CoA.",
+            "Output per pyruvate: 1 Acetyl-CoA (2C), 1 CO₂, 1 NADH.",
+            "Output per glucose: 2 Acetyl-CoA, 2 CO₂, 2 NADH.",
+            "Acetyl-CoA is a central metabolic hub — it is also produced from fatty acid oxidation (beta-oxidation) and from amino acid catabolism. This is why fats and proteins can also be respired."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Stage 3: Krebs Cycle (in mitochondrial matrix)"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Location: mitochondrial matrix. Named after Hans Krebs who described it in 1937.",
+            "Acetyl-CoA (2C) combines with oxaloacetate (4C) to form citrate (6C). CoA is released to pick up another acetyl group.",
+            "Citrate is progressively oxidised through a cycle of reactions — losing CO₂ (decarboxylation) and H (oxidation to reduce NAD⁺ and FAD to NADH and FADH₂).",
+            "The cycle regenerates oxaloacetate (4C) at the end — ready to accept another Acetyl-CoA.",
+            "Output per turn of the Krebs cycle (per Acetyl-CoA): 3 NADH, 1 FADH₂, 1 ATP (by substrate-level phosphorylation), 2 CO₂.",
+            "Output per glucose (2 turns): 6 NADH, 2 FADH₂, 2 ATP, 4 CO₂.",
+            "The CO₂ produced in the link reaction and Krebs cycle is the CO₂ we breathe out."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Stage 4: Oxidative Phosphorylation (inner mitochondrial membrane)"
+        },
+        {
+          "type": "text",
+          "body": "This is the final and most productive stage — producing about 26–28 of the ~30 ATP molecules from one glucose molecule."
+        },
+        {
+          "type": "list",
+          "items": [
+            "NADH and FADH₂ produced in the previous stages donate their electrons to the electron transport chain (ETC) — a series of protein complexes (I, II, III, IV) embedded in the inner mitochondrial membrane.",
+            "As electrons pass along the ETC, energy is released and used to actively pump protons (H⁺) from the matrix into the intermembrane space — creating a high concentration of protons in the intermembrane space (chemiosmosis).",
+            "The proton gradient (high concentration in intermembrane space → low in matrix) drives protons back through ATP synthase (also called F₁F₀ ATPase). The flow of protons through ATP synthase provides energy to phosphorylate ADP → ATP.",
+            "At the end of the ETC, electrons combine with protons and oxygen (the final electron acceptor): 4e⁻ + 4H⁺ + O₂ → 2H₂O. This is why oxygen is required — without it, the ETC stops, proton gradient collapses, and ATP synthesis from this stage ceases.",
+            "NADH yields approximately 2.5 ATP; FADH₂ yields approximately 1.5 ATP (FADH₂ enters the chain at a later point, bypassing one proton pump)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Effect of Cyanide on Respiration"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Cyanide (CN⁻) is a respiratory poison that binds irreversibly to cytochrome oxidase (Complex IV) — the final protein complex in the electron transport chain.",
+            "With Complex IV blocked, electrons cannot be transferred to oxygen, the entire ETC stops, the proton gradient across the inner membrane collapses, and ATP synthase can no longer make ATP.",
+            "Result: oxidative phosphorylation stops entirely. Cells rely on the tiny amount of ATP from glycolysis alone — completely inadequate for survival.",
+            "Tissues most affected: heart and brain (highest energy demands) fail rapidly. Death from tissue hypoxia occurs within minutes.",
+            "Paradox: cyanide poisoning victims often have bright red venous blood — because oxygen cannot be used by cells (ETC blocked), haemoglobin remains oxygenated even in veins."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "ATP Production Summary"
+        },
+        {
+          "type": "formula",
+          "body": "Summary of ATP yield per glucose (aerobic):\n\nStage             | NADH | FADH₂ | Direct ATP\nGlycolysis        |  2   |   0   |    2\nLink reaction (×2)|  2   |   0   |    0\nKrebs cycle (×2)  |  6   |   2   |    2\nOxidative phosph. | ~25 ATP from NADH + FADH₂\n\nTotal ≈ 30–32 ATP per glucose\n\nAnaerobic respiration yields only 2 ATP per glucose\n(glycolysis only)"
+        },
+        {
+          "type": "heading",
+          "body": "Effect of Exercise Intensity on ATP Production"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Low intensity exercise: aerobic respiration supplies all ATP needed. Fats are the primary fuel (high efficiency).",
+            "Moderate intensity: glucose becomes the primary fuel for aerobic respiration. Breathing rate and heart rate increase to supply more O₂.",
+            "High intensity (sprint): oxygen cannot be delivered fast enough. Muscles switch to anaerobic respiration (glycolysis only) — producing lactate. Only 2 ATP per glucose but very fast.",
+            "Lactate accumulates → lowers muscle pH → inhibits enzymes → causes muscle fatigue.",
+            "After exercise (recovery period): oxygen debt — extra O₂ is used to oxidise lactate back to pyruvate (→ enters aerobic pathway) and to restore ATP, creatine phosphate, and glycogen stores."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A yeast cell is placed in an anaerobic environment with glucose. After glycolysis, pyruvate is converted to ethanol and CO₂. The purpose of this conversion is to:",
+            "options": [
+              "Produce more ATP directly",
+              "Regenerate NAD⁺ so that glycolysis can continue",
+              "Enter the Krebs cycle without oxygen",
+              "Produce acetyl-CoA for the link reaction"
+            ],
+            "answer": "Regenerate NAD⁺ so that glycolysis can continue",
+            "explanation": "Glycolysis requires NAD⁺ as an electron acceptor to oxidise glucose. Under anaerobic conditions, NADH cannot be re-oxidised by the electron transport chain. Converting pyruvate to ethanol/CO₂ (or lactate in animals) re-oxidises NADH back to NAD⁺, allowing glycolysis to continue producing ATP."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The link reaction converts pyruvate to acetyl-CoA. Which two things are released during this conversion?",
+            "options": [
+              "O₂ and ATP",
+              "CO₂ and NADH",
+              "Water and FADH₂",
+              "Glucose and NAD⁺"
+            ],
+            "answer": "CO₂ and NADH",
+            "explanation": "In the link reaction, pyruvate is decarboxylated (loses one CO₂ — this is why CO₂ is produced even before the Krebs cycle) and oxidised (loses hydrogen to NAD⁺, producing NADH). The remaining 2-carbon unit bonds with coenzyme A to form acetyl-CoA."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Cyanide kills cells rapidly by blocking Complex IV of the electron transport chain. What happens to the proton gradient across the inner mitochondrial membrane?",
+            "options": [
+              "The proton gradient increases, making too much ATP",
+              "The proton gradient collapses as protons can no longer be pumped across the membrane",
+              "The proton gradient stays constant",
+              "Protons move into the matrix, powering ATP synthase in reverse"
+            ],
+            "answer": "The proton gradient collapses as protons can no longer be pumped across the membrane",
+            "explanation": "Electrons move along the ETC and their energy pumps protons across the inner membrane. If Complex IV is blocked, electrons cannot flow, no energy is released for proton pumping, and the gradient collapses. Without a gradient, ATP synthase cannot function, and oxidative phosphorylation stops."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why does FADH₂ produce fewer ATP molecules than NADH during oxidative phosphorylation?",
+            "options": [
+              "FADH₂ contains less energy than NADH",
+              "FADH₂ enters the electron transport chain at Complex II, bypassing one proton pump, so fewer protons are moved",
+              "FADH₂ is oxidised in the cytoplasm, not the mitochondria",
+              "FADH₂ requires more oxygen to be oxidised"
+            ],
+            "answer": "FADH₂ enters the electron transport chain at Complex II, bypassing one proton pump, so fewer protons are moved",
+            "explanation": "NADH donates electrons at Complex I (first complex), passing through all three proton pumps (Complexes I, III, IV) — contributing to pumping ~10 protons. FADH₂ donates electrons at Complex II, bypassing Complex I — only ~6 protons pumped. Fewer protons = less ATP from ATP synthase. Hence FADH₂ yields ~1.5 ATP vs ~2.5 ATP for NADH."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A sprinter feels burning pain in their legs during a 100m race. After the race, they must continue breathing heavily for several minutes. The burning sensation and continued heavy breathing are best explained by:",
+            "options": [
+              "Excess glucose accumulating in muscle cells",
+              "Lactate accumulation (from anaerobic respiration) causing low pH, and oxygen debt requiring extra O₂ to oxidise lactate and restore energy stores",
+              "The heart not pumping enough blood during exercise",
+              "Dehydration reducing oxygen delivery"
+            ],
+            "answer": "Lactate accumulation (from anaerobic respiration) causing low pH, and oxygen debt requiring extra O₂ to oxidise lactate and restore energy stores",
+            "explanation": "During a sprint, muscles use anaerobic respiration, producing lactate that lowers muscle pH and inhibits enzyme activity (causing burning/fatigue). After the race, the 'oxygen debt' must be repaid — extra O₂ is needed to oxidise lactate to pyruvate (then through aerobic respiration), replenish ATP, and restore creatine phosphate and glycogen."
+          }
+        ]
+      }
+    }
+  ]
+}
