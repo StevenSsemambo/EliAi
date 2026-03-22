@@ -1,0 +1,580 @@
+{
+  "topic_id": "inheritance_evolution",
+  "topic_title": "Inheritance and Evolution",
+  "subject": "biology",
+  "class_level": "S6",
+  "term": 2,
+  "duration_periods": 90,
+  "ncdc_competency": "The learner appreciates the transmission of traits from one generation to the next, and the mechanisms that drive change in a gene pool, by analysing the concepts of inheritance and evolution, so as to make informed decisions regarding inheritable conditions, for genetic engineering, conservation biology, and health.",
+  "lessons": [
+    {
+      "id": "s6_bio_ie_l1",
+      "title": "Nucleic Acids, DNA Replication and Protein Synthesis",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Structure of DNA and RNA"
+        },
+        {
+          "type": "list",
+          "heading": "DNA (deoxyribonucleic acid):",
+          "items": [
+            "Double-stranded helix. Two antiparallel polynucleotide strands wound around each other.",
+            "Each nucleotide: deoxyribose sugar + phosphate group + one of four bases (Adenine, Thymine, Guanine, Cytosine).",
+            "Base pairing rules: A pairs with T (2 hydrogen bonds); G pairs with C (3 hydrogen bonds).",
+            "Strands are antiparallel: one runs 5'→3', the other 3'→5'.",
+            "Found in nucleus (chromosomal DNA), mitochondria, and chloroplasts."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "RNA (ribonucleic acid):",
+          "items": [
+            "Single-stranded. Ribose sugar instead of deoxyribose. Uracil (U) replaces Thymine (T).",
+            "mRNA (messenger RNA): carries the genetic code from nucleus to ribosomes.",
+            "tRNA (transfer RNA): clover-leaf shape. Carries specific amino acids to the ribosome. Has an anticodon that pairs with mRNA codon.",
+            "rRNA (ribosomal RNA): component of ribosomes — provides the structural framework and catalytic function."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Properties of the Genetic Code"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Triplet code: three bases (a codon) code for one amino acid.",
+            "Degenerate: most amino acids are coded for by more than one codon (64 codons, only 20 amino acids).",
+            "Non-overlapping: each base is read only once.",
+            "Universal: the same codons specify the same amino acids in virtually all organisms — evidence of common ancestry.",
+            "Start codon: AUG (methionine — always the first amino acid).",
+            "Stop codons: UAA, UAG, UGA — signal end of translation."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Semi-Conservative DNA Replication"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Helicase unwinds and unzips the double helix by breaking hydrogen bonds between bases.",
+            "Each original strand acts as a template.",
+            "DNA polymerase adds free nucleotides complementary to each template strand (5'→3' direction).",
+            "Result: two identical DNA molecules, each with one original strand and one new strand (semi-conservative).",
+            "Evidence: Meselson and Stahl (1958) experiment using ¹⁵N / ¹⁴N nitrogen isotopes confirmed semi-conservative replication."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Protein Synthesis"
+        },
+        {
+          "type": "list",
+          "heading": "Transcription (in nucleus):",
+          "items": [
+            "RNA polymerase unwinds a section of DNA.",
+            "Free RNA nucleotides are assembled complementary to the template (antisense) strand.",
+            "U pairs with A; A pairs with T; C pairs with G.",
+            "A primary mRNA transcript is produced → introns are spliced out → mature mRNA.",
+            "mRNA moves out of the nucleus through nuclear pores to ribosomes."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Translation (at ribosomes):",
+          "items": [
+            "Ribosome binds to mRNA at the start codon (AUG).",
+            "tRNA molecules carry specific amino acids and have anticodons complementary to mRNA codons.",
+            "Each tRNA anticodon pairs with mRNA codon — the amino acid is brought into position.",
+            "Peptide bonds form between adjacent amino acids (catalysed by rRNA — ribozyme activity).",
+            "Ribosome moves along mRNA (translocation) — polypeptide chain grows.",
+            "Translation stops at a stop codon — polypeptide is released and folds into its functional shape."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Mutations and Cancer"
+        },
+        {
+          "type": "list",
+          "items": [
+            "A mutation is a change in the nucleotide sequence of DNA. Mutations can be spontaneous or caused by mutagens (UV radiation, X-rays, tobacco smoke chemicals).",
+            "Point mutation: change in a single base pair — may change one amino acid (missense), create a stop codon (nonsense), or have no effect (silent mutation due to degeneracy).",
+            "Frameshift mutation: insertion or deletion of a base → shifts the reading frame → all downstream codons change → usually catastrophic to protein function.",
+            "Proto-oncogenes: normal genes that control cell division. If mutated → oncogenes → uncontrolled cell division → cancer.",
+            "Tumour suppressor genes (e.g. p53): normally suppress cell division or trigger apoptosis (programmed cell death). If mutated and inactivated → cell division unchecked → cancer.",
+            "Carcinogens: chemicals (tobacco smoke, aflatoxin from mouldy groundnuts common in Uganda), radiation (UV, X-ray), and some viruses (HPV → cervical cancer, HBV → liver cancer) can cause mutations leading to cancer."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A DNA strand reads: 3'-TACGGATCC-5'. What is the sequence of the mRNA transcribed from this template strand?",
+            "options": [
+              "5'-ATGCCTAGG-3'",
+              "5'-AUGCCUAGG-3'",
+              "3'-AUGCCUAGG-5'",
+              "5'-TACGGATCC-3'"
+            ],
+            "answer": "5'-AUGCCUAGG-3'",
+            "explanation": "During transcription, the mRNA is complementary and antiparallel to the template (antisense) strand. T→A, A→U, C→G, G→C. Template 3'-TACGGATCC-5' gives mRNA 5'-AUGCCUAGG-3'. RNA uses U instead of T."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The genetic code is described as 'degenerate'. What does this mean?",
+            "options": [
+              "Some codons do not code for any amino acid",
+              "Most amino acids are coded for by more than one codon",
+              "The code changes over generations",
+              "Only 20 of the 64 codons are used in protein synthesis"
+            ],
+            "answer": "Most amino acids are coded for by more than one codon",
+            "explanation": "Degeneracy means that multiple different codons can specify the same amino acid. For example, leucine is coded by 6 different codons. This redundancy provides protection against the effects of some mutations — a base change may produce a synonymous codon that codes for the same amino acid (silent mutation)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In Uganda, liver cancer is strongly associated with hepatitis B virus (HBV) infection and consumption of aflatoxin from mouldy groundnuts. Both HBV and aflatoxin are risk factors because they:",
+            "options": [
+              "Directly destroy liver cell membranes",
+              "Act as mutagens that cause DNA mutations in proto-oncogenes or tumour suppressor genes",
+              "Inhibit the immune system from detecting cancer cells",
+              "Prevent DNA replication in all body cells"
+            ],
+            "answer": "Act as mutagens that cause DNA mutations in proto-oncogenes or tumour suppressor genes",
+            "explanation": "HBV integrates viral DNA into liver cell genomes and aflatoxin forms adducts with DNA — both cause mutations. These mutations can activate proto-oncogenes (to oncogenes) or inactivate tumour suppressor genes like p53, leading to uncontrolled liver cell division and hepatocellular carcinoma (liver cancer)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The Meselson-Stahl experiment proved that DNA replication is semi-conservative. This means:",
+            "options": [
+              "Only half of the DNA molecule is replicated each time",
+              "Each new DNA molecule consists of one original strand and one newly synthesised strand",
+              "DNA is replicated twice before cell division",
+              "Half of the base pairs are conserved between generations"
+            ],
+            "answer": "Each new DNA molecule consists of one original strand and one newly synthesised strand",
+            "explanation": "Semi-conservative replication means that after replication, each daughter DNA molecule retains one original (conserved) parental strand and has one newly synthesised complementary strand. Meselson and Stahl demonstrated this using bacteria grown on ¹⁵N then transferred to ¹⁴N medium and centrifuged to separate DNA by density."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ie_l2",
+      "title": "Gene Technology: Recombinant DNA, PCR and Cloning",
+      "duration_minutes": 40,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Recombinant DNA Technology"
+        },
+        {
+          "type": "text",
+          "body": "Recombinant DNA technology involves isolating a gene from one organism and inserting it into another organism (often a bacterium), so the bacterium expresses the gene and produces the desired protein. This is the basis of genetic engineering."
+        },
+        {
+          "type": "list",
+          "heading": "Steps in recombinant DNA technology:",
+          "items": [
+            "Isolation of gene: the desired gene (e.g. human insulin gene) is identified. It can be isolated by cutting DNA with restriction endonucleases (molecular scissors that cut DNA at specific palindromic sequences), leaving 'sticky ends'.",
+            "Alternatively, mRNA for the protein is isolated → reverse transcriptase makes complementary DNA (cDNA) — this has no introns, so bacteria can read it directly.",
+            "Vector preparation: a plasmid (small circular DNA from bacteria) is cut with the same restriction enzyme → same sticky ends.",
+            "Ligation: the gene is inserted into the plasmid using DNA ligase (molecular glue). The recombinant plasmid is formed.",
+            "Transformation: the recombinant plasmid is inserted into a host bacterium (e.g. E. coli) using heat shock or electroporation.",
+            "Selection: bacteria that have taken up the plasmid are identified (e.g. using antibiotic resistance markers).",
+            "Expression: the bacterium transcribes and translates the human gene, producing the desired protein."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Applications:",
+          "items": [
+            "Insulin production: human insulin gene expressed in E. coli — produces insulin identical to human insulin for diabetes treatment. Used in Uganda since the 1990s.",
+            "Vaccines: hepatitis B vaccine produced from yeast cells containing the HBV surface antigen gene — used in Uganda's infant immunisation programme.",
+            "Erythropoietin (EPO): hormone for treating anaemia — produced by recombinant technology.",
+            "Golden Rice: recombinant rice expressing beta-carotene (vitamin A precursor) — aimed at reducing vitamin A deficiency, which causes blindness in thousands of Ugandan children annually."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Polymerase Chain Reaction (PCR)"
+        },
+        {
+          "type": "text",
+          "body": "PCR amplifies (copies) a specific DNA sequence millions of times from a very small sample. It requires: template DNA, primers (short single-stranded DNA sequences complementary to the target region), free DNA nucleotides, and Taq DNA polymerase (heat-stable polymerase from Thermus aquaticus bacteria)."
+        },
+        {
+          "type": "list",
+          "heading": "PCR cycles (repeated 25–35 times):",
+          "items": [
+            "Denaturation (94°C): DNA double helix is separated — hydrogen bonds between base pairs broken.",
+            "Annealing (50–65°C): primers bind (anneal) to their complementary sequences on each single strand.",
+            "Extension (72°C): Taq polymerase extends from the primer, synthesising new complementary DNA strands."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Applications of PCR:",
+          "items": [
+            "Forensic science: DNA profiling from tiny samples (blood, hair, saliva) at crime scenes — used by Uganda Police.",
+            "Medical diagnosis: PCR detects HIV, COVID-19, tuberculosis, and malaria directly from patient samples — far more sensitive than antibody tests.",
+            "Ancestry and paternity testing.",
+            "Archaeological and evolutionary research: amplifying ancient DNA from fossils."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Gene Cloning and GMOs"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Gene cloning: producing many identical copies of a gene using bacterial host cells that replicate with the recombinant plasmid.",
+            "GMOs (Genetically Modified Organisms): organisms whose genome has been altered using gene technology. Examples: Bt cotton (contains Bacillus thuringiensis toxin gene — kills bollworm without pesticides), herbicide-resistant maize, virus-resistant cassava (being developed for Uganda).",
+            "Animal cloning: somatic cell nuclear transfer (SCNT) — nucleus from an adult body cell inserted into an enucleated egg cell → embryo → clone. Example: Dolly the sheep (1996)."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Ethical Issues in Gene Technology"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Playing God: concerns about humans altering fundamental biological processes.",
+            "GMO food safety: potential allergenicity and unknown long-term effects on human health.",
+            "Biodiversity: GMO crops might outcompete wild relatives and reduce genetic diversity.",
+            "Terminator genes: GM crops engineered to produce sterile seeds — farmers cannot save seeds → economic dependence on biotechnology companies.",
+            "Gene therapy: treating genetic diseases by inserting correct genes — raises issues about germline editing affecting future generations (e.g. CRISPR/Cas9).",
+            "Cloning: reproductive cloning of humans raises serious ethical and religious concerns.",
+            "Uganda's Biotechnology and Biosafety Act (2022) regulates GMO development and release in Uganda."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A biotechnology company wants to produce human insulin in bacteria. They isolate mRNA from pancreatic beta cells and use reverse transcriptase to make cDNA. Why is cDNA used rather than directly cutting the human insulin gene from genomic DNA?",
+            "options": [
+              "cDNA is cheaper to produce than isolating genomic DNA",
+              "cDNA contains no introns, so bacteria (which cannot splice introns) can transcribe and translate it directly",
+              "cDNA is more stable than genomic DNA",
+              "Bacteria cannot take up genomic DNA"
+            ],
+            "answer": "cDNA contains no introns, so bacteria (which cannot splice introns) can transcribe and translate it directly",
+            "explanation": "Human genes contain non-coding introns which must be spliced out during RNA processing. Bacteria lack the splicing machinery (spliceosomes). cDNA is made from processed mRNA (which has already had introns removed), so it contains only the exon sequence that bacteria can directly read and translate into insulin."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "During PCR, Taq DNA polymerase from Thermus aquaticus is used instead of normal human DNA polymerase. This is because:",
+            "options": [
+              "Taq polymerase is more accurate than human polymerase",
+              "Taq polymerase is heat-stable and remains active at 72°C after the 94°C denaturation step",
+              "Human DNA polymerase cannot recognise PCR primers",
+              "Taq polymerase can work without free nucleotides"
+            ],
+            "answer": "Taq polymerase is heat-stable and remains active at 72°C after the 94°C denaturation step",
+            "explanation": "PCR requires heating to 94°C to denature DNA. Normal DNA polymerase would be denatured and destroyed at this temperature. Taq polymerase from a hot spring bacterium is thermostable — it remains active after repeated heating cycles, making PCR practical and efficient."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A Uganda Police forensic team finds a tiny blood sample at a crime scene. They need enough DNA to create a DNA profile. The most appropriate technique is:",
+            "options": [
+              "Gel electrophoresis",
+              "Polymerase Chain Reaction (PCR)",
+              "Recombinant DNA technology",
+              "ELISA antibody testing"
+            ],
+            "answer": "Polymerase Chain Reaction (PCR)",
+            "explanation": "PCR amplifies specific DNA sequences from even tiny samples (nanograms of DNA) to produce millions of copies. The amplified DNA can then be analysed by gel electrophoresis for DNA profiling (DNA fingerprinting), identifying the suspect from the crime scene sample."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Golden Rice is a GMO crop that produces beta-carotene. Critics argue that farmers should not be able to save seeds from Golden Rice. If this 'terminator technology' were applied, the main concern for Ugandan smallholder farmers would be:",
+            "options": [
+              "The rice would have a different taste from traditional varieties",
+              "Farmers would become economically dependent on buying new seeds from biotechnology companies each season",
+              "Beta-carotene production would decrease in subsequent generations",
+              "The rice would cross-pollinate with wild rice and cause problems"
+            ],
+            "answer": "Farmers would become economically dependent on buying new seeds from biotechnology companies each season",
+            "explanation": "Ugandan smallholder farmers traditionally save seeds from their harvest for the next planting season. Terminator genes make seeds sterile, forcing farmers to purchase new seeds each year. This creates economic dependence on multinational companies, which is a major ethical and economic concern for food sovereignty in Uganda."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ie_l3",
+      "title": "Mendelian and Non-Mendelian Inheritance",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Mendel's Laws"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Law of Segregation (1st Law): each organism carries two alleles for each trait (one from each parent). During gamete formation, the two alleles separate so each gamete contains only one allele. On fertilisation, the offspring gets one allele from each parent.",
+            "Law of Independent Assortment (2nd Law): alleles of different genes are inherited independently of each other (provided they are on different chromosomes). This is because homologous chromosomes separate independently during meiosis I."
+          ]
+        },
+        {
+          "type": "formula",
+          "body": "Monohybrid cross example (sickle cell anaemia — important in Uganda):\nParents: Hb^A Hb^S (carrier) × Hb^A Hb^S (carrier)\nGametes: Hb^A or Hb^S     ×     Hb^A or Hb^S\n\nOffspring:\n         Hb^A      Hb^S\nHb^A   Hb^A Hb^A  Hb^A Hb^S\nHb^S   Hb^A Hb^S  Hb^S Hb^S\n\nRatio: 1 normal : 2 carriers : 1 sickle cell disease\n(Phenotypic ratio: 3 unaffected : 1 affected)"
+        },
+        {
+          "type": "heading",
+          "body": "Hardy-Weinberg Principle"
+        },
+        {
+          "type": "text",
+          "body": "The Hardy-Weinberg principle states that allele and genotype frequencies in a population remain constant from generation to generation in the absence of evolutionary forces. It provides a null model — deviations indicate evolution is occurring."
+        },
+        {
+          "type": "formula",
+          "body": "Hardy-Weinberg equations:\np + q = 1       (allele frequencies, p = dominant, q = recessive)\np² + 2pq + q² = 1   (genotype frequencies)\n\np² = frequency of homozygous dominant (AA)\n2pq = frequency of heterozygous (Aa)\nq² = frequency of homozygous recessive (aa)\n\nConditions for equilibrium: large population, random mating, no mutation, no natural selection, no migration"
+        },
+        {
+          "type": "example",
+          "title": "Hardy-Weinberg calculation: sickle cell in Uganda",
+          "body": "In a Ugandan population, 4% of people have sickle cell disease (Hb^S Hb^S). q² = 0.04, so q = 0.2 (frequency of Hb^S allele). p = 1 - 0.2 = 0.8. Carrier frequency (2pq) = 2 × 0.8 × 0.2 = 0.32 = 32% of the population are carriers. The sickle cell allele is maintained at high frequency because heterozygous carriers have partial protection against malaria — an example of balancing selection."
+        },
+        {
+          "type": "heading",
+          "body": "Non-Mendelian Inheritance: Allele Interactions"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Codominance: both alleles are expressed simultaneously in the heterozygote. Example: ABO blood groups — IA and IB alleles are both expressed in blood group AB. Neither is dominant over the other.",
+            "Incomplete dominance: neither allele is fully dominant — the heterozygote shows an intermediate phenotype. Example: snapdragon flower colour — red (RR) × white (rr) → pink (Rr). Ratio: 1 red : 2 pink : 1 white.",
+            "Multiple alleles: a gene exists in more than two allelic forms in a population. Example: ABO blood group gene has three alleles (IA, IB, i). Only two alleles present in any one individual.",
+            "Autosomal linkage: genes on the same chromosome tend to be inherited together (not independently). Crossing over during meiosis I can separate linked genes — recombinant offspring produced. Linkage reduces the expected 9:3:3:1 dihybrid ratio.",
+            "Sex-linked inheritance: genes carried on the X chromosome (X-linked). Males (XY) have only one allele — they are hemizygous. Recessive X-linked conditions express in males more frequently. Examples: haemophilia, red-green colour blindness."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Two parents are both carriers of sickle cell trait (Hb^A Hb^S). What is the probability that their child will have sickle cell disease (Hb^S Hb^S)?",
+            "options": [
+              "0%",
+              "25%",
+              "50%",
+              "75%"
+            ],
+            "answer": "25%",
+            "explanation": "Cross: Hb^A Hb^S × Hb^A Hb^S. Offspring: 1 Hb^A Hb^A : 2 Hb^A Hb^S : 1 Hb^S Hb^S. The probability of Hb^S Hb^S (sickle cell disease) is 1 in 4 = 25%. Genetic counselling using this Mendelian probability is important for at-risk Ugandan families."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A patient has blood group AB. Their red blood cells display both A and B antigens. This is an example of:",
+            "options": [
+              "Incomplete dominance",
+              "Codominance",
+              "Epistasis",
+              "Sex linkage"
+            ],
+            "answer": "Codominance",
+            "explanation": "In codominance, both alleles (IA and IB) are fully expressed in the heterozygote. Blood group AB individuals produce both A antigens (from IA) and B antigens (from IB) — neither allele is dominant over the other. This differs from incomplete dominance where an intermediate phenotype is produced."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In a Ugandan population, the frequency of albinism (autosomal recessive, aa) is 1 in 900. Using Hardy-Weinberg, what is the frequency of carriers (Aa) in the population?",
+            "options": [
+              "1/30",
+              "2/30",
+              "58/900",
+              "1/900"
+            ],
+            "answer": "2/30",
+            "explanation": "q² = 1/900, so q = 1/30 (frequency of a allele). p = 1 - 1/30 = 29/30. Carrier frequency 2pq = 2 × 29/30 × 1/30 = 58/900 ≈ 1/15.5. The closest answer is 2/30 (= 1/15). Approximately 1 in 15 Ugandans is a carrier of the albinism allele — far more than the 1 in 900 who are affected."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A woman is a carrier of haemophilia (X^H X^h). Her husband is unaffected (X^H Y). What percentage of their sons will have haemophilia?",
+            "options": [
+              "0%",
+              "25%",
+              "50%",
+              "100%"
+            ],
+            "answer": "50%",
+            "explanation": "Cross: X^H X^h (carrier mother) × X^H Y (normal father). Sons receive Y from father and either X^H or X^h from mother. Sons: 50% X^H Y (normal) and 50% X^h Y (haemophilia). Males are hemizygous — one copy of X-linked recessive is sufficient to express the condition."
+          }
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ie_l4",
+      "title": "Evolution, Speciation and Extinction",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "heading",
+          "body": "Evolutionary Advancements in Life Processes"
+        },
+        {
+          "type": "text",
+          "body": "Evolution is the change in allele frequencies in a population over generations. It is driven by natural selection, genetic drift, mutation, and migration. Evolutionary advancements in key life processes show progressive complexity from simple to complex organisms."
+        },
+        {
+          "type": "list",
+          "heading": "Circulatory system evolution:",
+          "items": [
+            "Single-celled organisms: diffusion only.",
+            "Fish: single circulation — blood passes through the heart once per circuit. Low pressure in body tissues.",
+            "Amphibians: double but incomplete circulation — two atria, one ventricle — some mixing of oxygenated and deoxygenated blood.",
+            "Mammals/birds: complete double circulation — four chambers — no mixing — high pressure in systemic circulation. More efficient oxygen delivery for high metabolic rates."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Gas exchange evolution:",
+          "items": [
+            "Flatworms: diffusion through body surface — limited to flat, thin organisms.",
+            "Fish: gills — countercurrent exchange system — highly efficient.",
+            "Terrestrial insects: tracheal system — direct oxygen delivery to cells without blood.",
+            "Mammals: lungs with alveoli — enormous surface area and rich blood supply."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Reproduction evolution:",
+          "items": [
+            "Fish/amphibians: external fertilisation — gametes released into water — high gamete numbers, low parental care.",
+            "Reptiles/birds: internal fertilisation, cleidoic (sealed) egg — protection from desiccation.",
+            "Mammals: internal fertilisation, placental development, parental care — fewer offspring but higher survival rate."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Speciation"
+        },
+        {
+          "type": "text",
+          "body": "Speciation is the formation of a new species from an existing one. A species is a group of organisms that can interbreed and produce fertile offspring."
+        },
+        {
+          "type": "list",
+          "heading": "Allopatric speciation (geographic isolation):",
+          "items": [
+            "A population is divided by a geographic barrier (mountain, river, sea).",
+            "The isolated populations no longer interbreed — no gene flow.",
+            "Each population accumulates different mutations and is subject to different selection pressures.",
+            "Over many generations, the populations diverge genetically until they can no longer interbreed even if reunited — new species formed.",
+            "East African example: The formation of the Rift Valley and Lake Victoria created isolation events that drove the spectacular diversification of cichlid fish species (~500 species in Lake Victoria — one of the fastest speciation events known)."
+          ]
+        },
+        {
+          "type": "list",
+          "heading": "Sympatric speciation (no geographic isolation):",
+          "items": [
+            "Speciation within the same geographic area.",
+            "Common through polyploidy in plants — chromosome duplication produces reproductively isolated individuals.",
+            "Example: bread wheat (hexaploid — 6 sets of chromosomes) arose from hybridisation and polyploidy events."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Antimicrobial and Pesticide Resistance"
+        },
+        {
+          "type": "text",
+          "body": "Resistance is evolution by natural selection in action. It is one of the most important public health issues in Uganda."
+        },
+        {
+          "type": "list",
+          "items": [
+            "Antibiotic resistance: random mutations in bacteria confer resistance. Antibiotic use kills susceptible bacteria — resistant bacteria survive and reproduce. Misuse of antibiotics in Uganda (sold without prescription) accelerates resistance. Multidrug-resistant tuberculosis (MDR-TB) is a growing crisis.",
+            "Antimalarial resistance: Plasmodium falciparum has evolved resistance to chloroquine and partial resistance to artemisinin in parts of Africa.",
+            "Pesticide resistance: agricultural pests (e.g. maize stalk borers in Uganda) evolve resistance to insecticides through the same selection mechanism."
+          ]
+        },
+        {
+          "type": "heading",
+          "body": "Mass Extinction Events"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Five major mass extinctions in Earth's history. Most famous: End-Cretaceous event (~66 million years ago) — asteroid impact eliminated dinosaurs and ~75% of all species.",
+            "End-Permian event (252 Mya) — largest extinction — ~96% of marine species lost.",
+            "Paradoxically, extinctions drive evolution: by eliminating dominant groups, they open ecological niches for survivors to diversify (adaptive radiation). Mammals diversified rapidly after dinosaurs disappeared.",
+            "Current sixth extinction: human activities (habitat destruction, hunting, climate change) are causing extinction rates 1000× the natural background rate. Uganda has lost over 60% of its natural forests. The mountain gorilla, African elephant, and shoebill stork are all threatened."
+          ]
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Lake Victoria's cichlid fish (over 500 species) evolved from a small number of ancestor species within a relatively short geological time. This rapid speciation was possible mainly because:",
+            "options": [
+              "The lake provided unlimited food, allowing genetic mutations to accumulate faster",
+              "Geographic isolation of sub-populations within the lake led to differential selection and reproductive isolation",
+              "Polyploidy events duplicated chromosomes in cichlid populations",
+              "Humans selectively bred different cichlid populations"
+            ],
+            "answer": "Geographic isolation of sub-populations within the lake led to differential selection and reproductive isolation",
+            "explanation": "Lake Victoria's rocky shores, deep basins, and changing water levels created isolated sub-populations of cichlids. Different selection pressures (food type, depth, mating signals) drove divergence. Cichlids also use visual signals for mate recognition — changes in water clarity affected mating choices — contributing to rapid speciation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Antibiotic resistance in bacteria is increasing rapidly in Uganda. This is best explained as:",
+            "options": [
+              "Bacteria deliberately mutating to become resistant when threatened",
+              "Natural selection — random mutations confer resistance; antibiotic use kills susceptible bacteria, leaving resistant ones to reproduce",
+              "Bacteria acquiring resistance genes from antibiotic molecules",
+              "Overuse of antibiotics directly causes mutations in bacteria"
+            ],
+            "answer": "Natural selection — random mutations confer resistance; antibiotic use kills susceptible bacteria, leaving resistant ones to reproduce",
+            "explanation": "Resistance arises by random mutation before antibiotic exposure. When antibiotics are used, susceptible bacteria are killed (selection pressure). Resistant bacteria have a survival advantage — they reproduce and pass on resistance genes. Antibiotic use does not cause the mutation but selects for pre-existing resistant variants."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The complete double circulation of mammals is an evolutionary advancement over the single circulation of fish. The main advantage is:",
+            "options": [
+              "Mammals have more blood than fish",
+              "Deoxygenated and oxygenated blood are kept separate — high-pressure systemic circulation delivers O₂ efficiently to tissues",
+              "The four-chambered heart beats faster than the two-chambered heart of fish",
+              "Mammal blood contains more haemoglobin per red blood cell"
+            ],
+            "answer": "Deoxygenated and oxygenated blood are kept separate — high-pressure systemic circulation delivers O₂ efficiently to tissues",
+            "explanation": "In fish, blood loses pressure as it passes through the gill capillaries before reaching body tissues. In mammals, the right ventricle pumps blood through the lungs at low pressure (protecting delicate alveoli), and the left ventricle separately pumps oxygenated blood at high pressure to all body tissues — much more efficient oxygen delivery."
+          }
+        ]
+      }
+    }
+  ]
+}

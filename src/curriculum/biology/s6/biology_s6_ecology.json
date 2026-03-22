@@ -1,0 +1,112 @@
+{
+  "topic_id": "ecology",
+  "topic_title": "Ecology",
+  "subject": "biology",
+  "class_level": "S6",
+  "term": 3,
+  "duration_periods": 90,
+  "ncdc_competency": "The learner evaluates the interactions within ecosystems by analysing data and personal experiences to develop strategies for enhancing food security and promoting sustainable management of natural resources.",
+  "lessons": [
+    {
+      "id": "s6_bio_ec_l1",
+      "title": "Population Ecology and Dynamics",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {"type": "text", "body": "Ecology is the study of interactions between organisms and their environment. Understanding population dynamics is essential for managing Uganda's wildlife, fisheries, forests, and agricultural pests."},
+        {"type": "heading", "body": "Population Characteristics"},
+        {"type": "list", "items": ["Population: a group of individuals of the same species living in the same area at the same time.", "Population density: number of individuals per unit area.", "Natality (birth rate): new individuals added per unit time.", "Mortality (death rate): individuals lost per unit time.", "Population growth rate = (Natality + Immigration) - (Mortality + Emigration)", "Age structure: proportion in different age groups — young-biased populations grow; old-biased populations decline."]},
+        {"type": "heading", "body": "Population Growth Models"},
+        {"type": "list", "items": ["Exponential (J-shaped) growth: unlimited resources — population doubles at a constant rate. Rare in nature for long.", "Logistic (S-shaped / sigmoid) growth: population slows as it approaches carrying capacity (K) — the maximum sustainable population size the environment supports.", "Density-dependent limiting factors: food, space, disease, predation — effects increase with density. Natural population regulators.", "Density-independent factors: fire, flood, drought — effects independent of density. Can cause sudden crashes."]},
+        {"type": "heading", "body": "Estimating Population Size"},
+        {"type": "list", "heading": "Quadrat method (sessile organisms — plants, invertebrates):", "items": ["Place square frames randomly in the study area.", "Count individuals in each quadrat.", "Population density = mean count per quadrat ÷ quadrat area.", "Random placement essential — avoids sampling bias."]},
+        {"type": "list", "heading": "Mark-release-recapture (Lincoln-Petersen) for mobile animals:", "items": ["Capture a sample — mark each individual — release.", "Allow time to mix with population.", "Capture a second sample — count marked individuals recaptured."]},
+        {"type": "formula", "body": "N = (M × C) ÷ R\nN = estimated population; M = first catch marked; C = second catch total; R = marked recaptured\n\nAssumptions: marks do not affect survival; marks not lost; population closed between catches; marked animals mix randomly."},
+        {"type": "example", "title": "Mark-recapture in Uganda's fisheries", "body": "Uganda Fisheries Authority uses T-bar anchor tags on Nile perch and tilapia in Lake Victoria. Population estimates guide sustainable catch quotas — preventing overexploitation of Uganda's most economically important fishery."}
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {"id": "q1", "type": "multiple_choice", "question": "A researcher captures 80 Uganda kob, ear-tags them, and releases them. Two weeks later she captures 60 kob, of which 12 are tagged. What is the estimated population?", "options": ["200", "300", "400", "600"], "answer": "400", "explanation": "N = (M × C) ÷ R = (80 × 60) ÷ 12 = 4800 ÷ 12 = 400. The Lincoln-Petersen estimate assumes marked animals mix randomly and marks do not affect survival."},
+          {"id": "q2", "type": "multiple_choice", "question": "As a tilapia population in a lake increases toward carrying capacity (K), growth rate slows. The main reason is:", "options": ["Birth rate permanently drops to zero", "Density-dependent factors (competition, disease, predation) intensify as density increases", "Fish run out of genetic variation", "Water temperature rises at high densities"], "answer": "Density-dependent factors (competition, disease, predation) intensify as density increases", "explanation": "As density increases, competition for food and space intensifies, disease spreads more easily, and predators are attracted. These density-dependent factors raise mortality and reduce birth rate, slowing growth toward the carrying capacity."},
+          {"id": "q3", "type": "multiple_choice", "question": "A student places all quadrats along a path to estimate grass cover in Bwindi National Park. Why are her results unreliable?", "options": ["Quadrats too close together", "Path-edge vegetation differs from the interior — introduces sampling bias", "Grass cannot be counted in quadrats", "Too few quadrats used"], "answer": "Path-edge vegetation differs from the interior — introduces sampling bias", "explanation": "Random placement ensures every part of the study area has an equal sampling probability. Paths disturb vegetation — they have different composition and density than undisturbed areas. Non-random sampling along paths gives a biased, unrepresentative estimate."}
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ec_l2",
+      "title": "Ecological Succession and Restoration",
+      "duration_minutes": 40,
+      "xp_reward": 80,
+      "content": [
+        {"type": "text", "body": "Ecological succession is the gradual, directional change in community composition over time. Each community modifies the environment, making conditions suitable for the next — eventually reaching a stable climax community."},
+        {"type": "heading", "body": "Primary Succession"},
+        {"type": "list", "items": ["Starts on bare, uninhabited substrate — bare rock, lava, sand dunes — where no soil exists.", "Pioneer species (lichens, mosses) colonise first — tolerant of extreme conditions. They weather rock and accumulate organic matter — soil begins to form.", "Progressive colonisation: grasses → shrubs → woodland → climax forest (tropical rainforest in Uganda).", "Example: rocky shores exposed by falling Lake Victoria water levels colonised over decades."]},
+        {"type": "heading", "body": "Secondary Succession"},
+        {"type": "list", "items": ["On disturbed land where soil already exists — after fire, deforestation, or abandoned farming.", "Faster than primary succession — soil, organic matter, and seed bank already present.", "Pioneer species: fast-growing weeds (Lantana, Chromolaena in Uganda) → grasses → shrubs → secondary forest.", "Abandoned Ugandan farmland can return to secondary forest within 20-50 years if protected."]},
+        {"type": "heading", "body": "Ecological Restoration in Uganda"},
+        {"type": "text", "body": "Uganda has lost over 60% of its natural forest cover since 1900. Active restoration is essential to recover ecosystem services — water catchment, carbon storage, and biodiversity."},
+        {"type": "list", "heading": "Restoration approaches:", "items": ["Natural regeneration: remove disturbance (fencing, stop cultivation) — cheapest but slowest.", "Assisted natural regeneration: protect naturally germinating native seedlings — faster than passive.", "Active replanting: nursery-grown native seedlings planted out — Uganda National Forestry Authority (NFA) programme.", "Agroforestry: trees integrated with crops (Acacia, Grevillea with coffee/maize) — income while restoring soil.", "Wetland restoration: restoring drained Kampala wetlands — Uganda has lost 30% of its wetlands. Restored wetlands filter water, reduce flooding, and provide habitat."]}
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {"id": "q1", "type": "multiple_choice", "question": "A new volcanic island forms in Lake Victoria. Over centuries it is gradually colonised by life. The first organisms to arrive are most likely to be:", "options": ["Large hardwood trees", "Fast-growing grass species", "Pioneer species such as lichens and mosses, tolerant of harsh conditions", "Maize planted by nearby farmers"], "answer": "Pioneer species such as lichens and mosses, tolerant of harsh conditions", "explanation": "Primary succession on bare rock begins with pioneer species that tolerate extreme conditions (no soil, temperature extremes, low nutrients). Lichens fix nitrogen and weather rock. As they die they contribute organic matter, gradually building soil that allows more demanding species to establish."},
+          {"id": "q2", "type": "multiple_choice", "question": "Secondary succession on an abandoned Ugandan farm proceeds much faster than primary succession on bare rock. The main reason is:", "options": ["Rainfall is greater on farmland", "Soil, organic matter, and a seed bank are already present on the farm", "Farmers leave fertilisers that speed up plant growth", "Secondary succession involves fewer seral stages"], "answer": "Soil, organic matter, and a seed bank are already present on the farm", "explanation": "Secondary succession starts from an advanced baseline — soil structure, nutrients, organic matter, and dormant seeds are already present. The slow pioneer stages of primary succession (rock weathering, soil formation) are bypassed, so vegetation develops much faster."}
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ec_l3",
+      "title": "Energy Flow, Bioaccumulation and Carbon Footprint",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {"type": "heading", "body": "Energy Flow Through Ecosystems"},
+        {"type": "text", "body": "Energy flows through ecosystems in one direction only — unlike nutrients which cycle. At each trophic level, energy is lost as heat and cannot be recycled."},
+        {"type": "list", "heading": "Trophic levels:", "items": ["Producers (TL1): photosynthetic organisms fix solar energy.", "Primary consumers (TL2): herbivores eat producers.", "Secondary consumers (TL3): carnivores eat herbivores.", "Tertiary consumers (TL4): top predators.", "Decomposers: fungi and bacteria break down dead matter at all levels — releasing nutrients."]},
+        {"type": "formula", "body": "Ecological efficiency ≈ 10% per trophic level.\n90% lost as: heat from respiration, indigestible egested material, energy in dead matter.\n\nExample: Producers fix 10,000 kJ → herbivores receive ~1,000 kJ → carnivores ~100 kJ.\n\nFood security implication: eating plant food is far more efficient than eating meat — one hectare of crops can feed many more people than the same hectare used for cattle."},
+        {"type": "heading", "body": "Feed Conversion Ratio (FCR)"},
+        {"type": "list", "items": ["FCR = mass of feed consumed ÷ mass gained. Lower FCR = more efficient.", "Fish: ~1.5; Chicken: ~2; Pig: ~3; Cattle: ~8.", "Implication: tilapia and poultry farming are far more feed-efficient than beef — important for Uganda's growing aquaculture industry."]},
+        {"type": "heading", "body": "Bioaccumulation and Biomagnification"},
+        {"type": "list", "items": ["Bioaccumulation: build-up of persistent fat-soluble toxins (DDT, PCBs, mercury) in an organism's tissues over its lifetime.", "Biomagnification: progressive increase in toxin concentration at each successive trophic level — each predator consumes many prey, accumulating all their toxins.", "Lake Victoria example: DDT used for malaria control accumulated in Nile perch at top of food chain — health risk for fishing communities and barrier to EU fish export.", "Health effects: reproductive failure (thin eggshells in birds of prey), neurological damage, cancer."]},
+        {"type": "heading", "body": "Carbon Footprint and Carbon Sequestration"},
+        {"type": "list", "items": ["Carbon footprint: total greenhouse gas emissions (CO₂, CH₄, N₂O) caused by an individual or organisation — measured in CO₂ equivalent.", "Major sources in Uganda: charcoal/firewood burning (90% of households cook with biomass), deforestation, cattle farming, Kampala vehicle traffic.", "Carbon sequestration: removal and long-term storage of CO₂ from atmosphere.", "Forests: most important land-based carbon sink. Uganda's forests store ~800 million tonnes of carbon — deforestation releases this.", "Wetlands: store large amounts of carbon in peat — draining releases CO₂ and methane.", "Solutions: REDD+ carbon credits for forest protection; switching to clean cooking energy; reforestation programmes."]}
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {"id": "q1", "type": "multiple_choice", "question": "In Lake Victoria: water = 0.000003 ppm DDT; phytoplankton = 0.04 ppm; small fish = 0.5 ppm; Nile perch = 2 ppm. This increasing concentration up the food chain is called:", "options": ["Bioaccumulation only", "Biomagnification", "DDT production by each organism", "Decomposition releasing DDT at each level"], "answer": "Biomagnification", "explanation": "Biomagnification is the progressive increase in toxin concentration at each successive trophic level. Each predator consumes many prey, accumulating all their DDT. At the top of the food chain, Nile perch have DDT concentrations hundreds of thousands of times higher than the surrounding water."},
+          {"id": "q2", "type": "multiple_choice", "question": "A nutritionist advises that eating beans and matooke can feed more people per hectare than beef. The ecological reason is:", "options": ["Beans contain more calories per kilogram than beef", "Only ~10% of energy transfers to the next trophic level — eating plants avoids losses through cattle metabolism", "Cattle require more water than crops", "Beef production emits more CO₂ than crop farming"], "answer": "Only ~10% of energy transfers to the next trophic level — eating plants avoids losses through cattle metabolism", "explanation": "Producing 1 kg of beef requires ~8 kg of plant feed — 90% of plant energy is lost as heat through cattle metabolism. Eating crops directly bypasses this loss, supporting far more people from the same agricultural land area."},
+          {"id": "q3", "type": "multiple_choice", "question": "Uganda is experiencing rapid deforestation. Beyond biodiversity loss, a major consequence for global climate change is:", "options": ["Increased rainfall in Uganda", "Release of stored carbon as CO₂, amplifying the greenhouse effect", "Reduced oxygen levels in the atmosphere", "Increased ozone depletion"], "answer": "Release of stored carbon as CO₂, amplifying the greenhouse effect", "explanation": "Trees store carbon in wood and roots. When burned or decomposed, this carbon is released as CO₂. Uganda's tropical forests store ~800 million tonnes of carbon — deforestation is a major greenhouse gas source contributing to global climate change."}
+        ]
+      }
+    },
+    {
+      "id": "s6_bio_ec_l4",
+      "title": "Invasive Species and Food Security",
+      "duration_minutes": 40,
+      "xp_reward": 85,
+      "content": [
+        {"type": "heading", "body": "Invasive Species"},
+        {"type": "text", "body": "An invasive species is a non-native organism introduced to a new area that spreads rapidly and causes ecological or economic harm. Uganda is severely affected by several major invasive species."},
+        {"type": "list", "heading": "Characteristics of successful invaders:", "items": ["Fast reproduction rate.", "Generalist diet or habitat.", "No natural predators, competitors, or pathogens in the new environment.", "Tolerance of a wide range of conditions.", "Effective dispersal mechanisms."]},
+        {"type": "list", "heading": "Major invasive species in Uganda:", "items": ["Water hyacinth (Eichhornia crassipes): South American floating plant. Blocks Lake Victoria waterways — prevents fishing and boat movement, kills fish by causing hypoxia. Costs Uganda ~$30 million/year.", "Nile perch (Lates niloticus): introduced to Lake Victoria in 1950s. Drove extinction of ~200+ endemic cichlid species. Radically changed the lake ecosystem.", "Lantana camara: invasive shrub from Central America. Invades disturbed land, reducing grazing area and native biodiversity.", "Fall armyworm (Spodoptera frugiperda): arrived Uganda 2016. Destroys maize crops — estimated 20-50% yield losses in affected areas."]},
+        {"type": "list", "heading": "Management strategies:", "items": ["Mechanical control: physical removal — e.g. harvesting water hyacinth by boat. Effective but expensive.", "Chemical control: herbicides/pesticides — risk of environmental harm and non-target species effects.", "Biological control: introducing natural enemies from the invader's native range. Example: Neochetina weevils from South America released to control water hyacinth in Lake Victoria. Self-sustaining, target-specific, preferred method.", "Prevention: border biosecurity and quarantine inspections to prevent new introductions.", "Public education: train boat operators, fishermen, and farmers to recognise and report invasive species."]},
+        {"type": "heading", "body": "Food Security: The Four Pillars"},
+        {"type": "text", "body": "Food security exists when all people have physical and economic access to sufficient, safe, and nutritious food at all times. The United Nations defines four pillars:"},
+        {"type": "list", "items": ["Availability: sufficient food produced. Uganda has good agricultural potential but losses from fall armyworm, drought, and poor storage reduce availability.", "Access: economic and physical ability to obtain food. Poverty is the main barrier — ~40% of Ugandans live below the poverty line.", "Utilisation: proper biological use — adequate nutrition, safe preparation, clean water, good health. Stunting and anaemia are widespread in northern Uganda.", "Stability: consistent access over time without shocks from drought, conflict, or economic crises. Northern Uganda is vulnerable to all three."]},
+        {"type": "list", "heading": "Sustainable agricultural practices for food security:", "items": ["Integrated Pest Management (IPM): combining biological, chemical, and cultural pest control — reduces pesticide costs.", "Drought-resistant varieties: NARO develops drought-tolerant maize, bean, and cassava for Uganda's changing climate.", "Conservation agriculture: minimum tillage, crop rotation, residue retention — preserves soil structure and water.", "Improved storage: metal silos and hermetic bags reduce post-harvest grain losses from the current ~30%.", "Agroforestry: trees with crops improve soil fertility, diversify income, and reduce climate risk."]}
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {"id": "q1", "type": "multiple_choice", "question": "Water hyacinth mats on Lake Victoria are being controlled by releasing Neochetina weevils from South America. This is preferred over herbicide use because:", "options": ["Weevils kill water hyacinth faster than herbicides", "Biological control is self-sustaining and target-specific, avoiding chemical pollution of the lake", "Weevils are cheaper to produce than herbicides", "Herbicides do not work on water hyacinth"], "answer": "Biological control is self-sustaining and target-specific, avoiding chemical pollution of the lake", "explanation": "Neochetina weevils feed specifically on water hyacinth, reproduce, and continue controlling the plant long-term without repeated human intervention. Herbicides risk harming non-target aquatic plants and animals, contaminating fish, and disrupting the lake ecosystem. Biological control is more ecologically sustainable."},
+          {"id": "q2", "type": "multiple_choice", "question": "In northern Uganda, food is produced in sufficient quantities during good seasons, but many families still cannot afford it. This is a failure of which food security pillar?", "options": ["Availability", "Access", "Utilisation", "Stability"], "answer": "Access", "explanation": "Access refers to the economic and physical ability to obtain food. If food is available in markets but families cannot afford to buy it due to poverty, the problem is access — not production. This is distinct from availability (is food being produced?) and utilisation (is food nutritious?)."},
+          {"id": "q3", "type": "multiple_choice", "question": "Fall armyworm arrived in Uganda in 2016 from the Americas and spread explosively through maize fields. The main reason it has been so destructive in Uganda is:", "options": ["Uganda's climate is hotter than its native range", "Uganda had no co-evolved natural enemies (predators, parasitoids, pathogens) to control its populations", "Ugandan maize varieties are especially attractive to fall armyworm", "Uganda's farmers had never used pesticides before"], "answer": "Uganda had no co-evolved natural enemies (predators, parasitoids, pathogens) to control its populations", "explanation": "In its native range (Americas), fall armyworm is controlled by numerous co-evolved parasitoid wasps, predatory insects, and naturally occurring fungi. These natural enemies are absent in Uganda. Without biological population controls, armyworm populations explode unchecked — this is the classic invasive species advantage of 'enemy release'."},
+          {"id": "q4", "type": "multiple_choice", "question": "NARO develops drought-tolerant cassava and maize for Ugandan farmers. This technology primarily addresses which food security pillar(s)?", "options": ["Access only", "Utilisation only", "Availability and stability", "All four pillars equally"], "answer": "Availability and stability", "explanation": "Drought-tolerant varieties produce reliable yields even in dry seasons (improving availability) and reduce vulnerability to rainfall shocks (improving stability). While this indirectly benefits access (more food means lower prices) and utilisation (more food available), the primary direct impact is on ensuring consistent food production."}
+        ]
+      }
+    }
+  ]
+}
