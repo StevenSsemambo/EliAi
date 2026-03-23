@@ -21,7 +21,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 2, chapter: 'Beginner', name: 'Uganda Market',
-    rule: 'A trader carries a Goat, Matooke and a Rat. Goat and Rat both eat the Matooke. Boat holds 1 passenger.',
+    rule: 'A trader carries a Goat, Matooke and a Rat. Both the Goat and Rat eat the Matooke. Boat holds 1 passenger.',
     cap: 1, min: 7,
     chars: [
       { id: 'trader',  em: '🧑', nm: 'Trader',  row: true  },
@@ -47,11 +47,15 @@ const RIVER_LEVELS = [
   },
   {
     id: 4, chapter: 'Medium', name: 'Missionaries & Cannibals',
-    rule: '3 Missionaries 😇 and 3 Cannibals 😈. If cannibals ever outnumber missionaries on either bank, they attack. Boat holds 2.',
+    rule: '3 Missionaries 😇 and 3 Cannibals 😈. If cannibals ever outnumber missionaries on either bank (with missionaries present), they attack. Boat holds 2.',
     cap: 2, min: 11, special: 'missionaries',
     chars: [
-      { id: 'm1', em: '😇', nm: 'M-1', row: true }, { id: 'm2', em: '😇', nm: 'M-2', row: true }, { id: 'm3', em: '😇', nm: 'M-3', row: true },
-      { id: 'c1', em: '😈', nm: 'C-1', row: true }, { id: 'c2', em: '😈', nm: 'C-2', row: true }, { id: 'c3', em: '😈', nm: 'C-3', row: true },
+      { id: 'm1', em: '😇', nm: 'M-1', row: true },
+      { id: 'm2', em: '😇', nm: 'M-2', row: true },
+      { id: 'm3', em: '😇', nm: 'M-3', row: true },
+      { id: 'c1', em: '😈', nm: 'C-1', row: true },
+      { id: 'c2', em: '😈', nm: 'C-2', row: true },
+      { id: 'c3', em: '😈', nm: 'C-3', row: true },
     ],
     bad: [],
     hints: ['Send 2 cannibals first, one comes back.', 'Send 1 more cannibal, then 1 comes back.', 'Now send 2 missionaries, 1 missionary + 1 cannibal come back.'],
@@ -61,9 +65,9 @@ const RIVER_LEVELS = [
     rule: '3 couples. No wife can be with another husband unless her own husband is present too. Boat holds 2, anyone rows.',
     cap: 2, min: 17, special: 'jealous',
     chars: [
-      { id: 'h1', em: '🧔',    nm: 'H-1', row: true }, { id: 'w1', em: '👱‍♀️', nm: 'W-1', row: true },
-      { id: 'h2', em: '👨‍🦱',  nm: 'H-2', row: true }, { id: 'w2', em: '👩‍🦰',  nm: 'W-2', row: true },
-      { id: 'h3', em: '🧑‍🦲',  nm: 'H-3', row: true }, { id: 'w3', em: '👩‍🦳',  nm: 'W-3', row: true },
+      { id: 'h1', em: '🧔',   nm: 'H-1', row: true }, { id: 'w1', em: '👱‍♀️', nm: 'W-1', row: true },
+      { id: 'h2', em: '👨‍🦱', nm: 'H-2', row: true }, { id: 'w2', em: '👩‍🦰',  nm: 'W-2', row: true },
+      { id: 'h3', em: '🧑‍🦲', nm: 'H-3', row: true }, { id: 'w3', em: '👩‍🦳',  nm: 'W-3', row: true },
     ],
     bad: [],
     hints: ['Start by sending all 3 wives together — or 2 wives across, 1 comes back.', 'Husbands cannot mix with the wrong wives on either bank.', 'Think of moving wives first, then husbands joining them.'],
@@ -83,7 +87,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 7, chapter: 'Expert', name: 'Wolf Pack',
-    rule: 'Ranger + 5 animals: 🐺Wolf, 🦌Deer, 🐇Rabbit, 🌿Grass, 🐛Caterpillar. Chain of who eats whom. Boat holds 1 passenger. Ranger must row.',
+    rule: 'Ranger + 5 animals: 🐺Wolf, 🦌Deer, 🐇Rabbit, 🌿Grass, 🐛Caterpillar. Wolf eats Deer, Deer eats Rabbit, Rabbit eats Grass, Grass feeds Caterpillar. Boat holds 1. Ranger must row.',
     cap: 1, min: 11,
     chars: [
       { id: 'ranger',      em: '🧑‍🌾', nm: 'Ranger',      row: true  },
@@ -98,7 +102,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 8, chapter: 'Expert', name: 'Night Crossing',
-    rule: '5 people must cross. Boat holds 2, but the Captain must row every trip. Anyone else can return alone.',
+    rule: '5 people must cross. The Captain must row every trip — no one else can operate the boat. Anyone else may return alone if needed.',
     cap: 2, min: 9, special: 'captain',
     chars: [
       { id: 'captain', em: '⚓', nm: 'Captain', row: true, captain: true },
@@ -113,7 +117,58 @@ const RIVER_LEVELS = [
 ]
 
 // ═══════════════════════════════════════════════════════
-// SHARED OVERLAY (same pattern as original)
+// PURE HELPERS — no React state closures
+// ═══════════════════════════════════════════════════════
+function getCharDef(lv, id) {
+  return lv.chars.find(c => c.id === id)
+}
+
+/**
+ * Returns a conflict message string, or null if everything is safe.
+ * Takes explicit bank arrays so it never reads stale React state.
+ */
+function checkConflict(lv, leftBank, rightBank, torchTime) {
+  for (const bankArr of [leftBank, rightBank]) {
+    if (bankArr.length === 0) continue
+
+    if (lv.special === 'missionaries') {
+      const ms = bankArr.filter(id => id.startsWith('m')).length
+      const cs = bankArr.filter(id => id.startsWith('c')).length
+      if (ms > 0 && cs > ms) return 'Cannibals outnumber missionaries! 💀'
+
+    } else if (lv.special === 'jealous') {
+      const husbands = ['h1', 'h2', 'h3']
+      const wives    = ['w1', 'w2', 'w3']
+      for (let i = 0; i < 3; i++) {
+        if (!bankArr.includes(wives[i])) continue
+        const otherH = husbands.filter((_, j) => j !== i)
+        if (otherH.some(h => bankArr.includes(h)) && !bankArr.includes(husbands[i])) {
+          return `${wives[i].toUpperCase()} is alone with another husband! 😤`
+        }
+      }
+
+    } else if (lv.special === 'torch') {
+      if (torchTime > 17) return `Time's up! ${torchTime} min used — need ≤17 🕐`
+
+    } else if (lv.special === 'captain') {
+      // no conflict rules
+
+    } else {
+      // Standard: bad pairs only dangerous when no rower/supervisor is present
+      const hasSupervisor = bankArr.some(id => getCharDef(lv, id)?.row)
+      if (hasSupervisor) continue
+      for (const [a, b] of lv.bad) {
+        if (bankArr.includes(a) && bankArr.includes(b)) {
+          return `The ${getCharDef(lv, a).nm} attacked the ${getCharDef(lv, b).nm}! 😱`
+        }
+      }
+    }
+  }
+  return null
+}
+
+// ═══════════════════════════════════════════════════════
+// OVERLAY — same structure/props as original
 // ═══════════════════════════════════════════════════════
 function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
   return (
@@ -132,7 +187,7 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
 }
 
 // ═══════════════════════════════════════════════════════
-// HOW TO PLAY (same naming pattern as original)
+// HOW TO PLAY — same function name as original
 // ═══════════════════════════════════════════════════════
 function HowToPlayGuide__QuasarChain({ game, onStart }) {
   return (
@@ -143,10 +198,10 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
         <div style={{ color: '#94A3B8', fontSize: 13 }}>River Crossing Puzzles</div>
       </div>
       {[
-        ['🎯', 'Cross the river', 'Get everyone from the left bank to the right bank safely — tap a character to select them, then tap Cross.'],
-        ['⛵', 'Mind the boat', 'The boat has a capacity limit. Only certain characters can row — the boat won\'t move without one.'],
-        ['⚠️', 'No dangerous pairs', 'Some characters can\'t be left alone together on a bank. Plan every move carefully.'],
-        ['↩️', 'Go back if needed', 'You can — and often must — bring someone back across. Don\'t fear going backwards.'],
+        ['🎯', 'Cross the river', 'Get everyone from the left bank to the right bank safely. Tap a character to select them, then tap Cross River.'],
+        ['⛵', 'Mind the boat', 'The boat has a capacity limit. Only certain characters can row — the button stays greyed until a rower boards.'],
+        ['⚠️', 'No dangerous pairs', "Some characters can't be left alone together. A conflict auto-undoes the crossing so you can try again."],
+        ['↩️', 'Going back is fine', "You often must bring someone back. Don't fear going backwards — it's part of every solution."],
       ].map(([icon, title, desc]) => (
         <div key={title} style={{ display: 'flex', gap: 12, marginBottom: 12, alignItems: 'flex-start' }}>
           <div style={{ fontSize: 22, flexShrink: 0, marginTop: 2 }}>{icon}</div>
@@ -160,8 +215,8 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
         <div style={{ color: '#FCD34D', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
         <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
           • The character causing the most conflict should cross early<br />
-          • Ask yourself: "what happens if I leave these two behind?"<br />
-          • Use Undo freely — experimenting is part of solving it
+          • Ask: "what happens if I leave these two behind?"<br />
+          • Use the Undo button freely — experimenting is part of it
         </div>
       </div>
       <button
@@ -175,85 +230,46 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
 }
 
 // ═══════════════════════════════════════════════════════
-// GAME STATE HELPERS
-// ═══════════════════════════════════════════════════════
-function charDef(lv, id) {
-  return lv.chars.find(c => c.id === id)
-}
-
-function checkConflict(lv, leftBank, rightBank, torchTime) {
-  for (const bankArr of [leftBank, rightBank]) {
-    if (bankArr.length === 0) continue
-    if (lv.special === 'missionaries') {
-      const ms = bankArr.filter(id => id.startsWith('m')).length
-      const cs = bankArr.filter(id => id.startsWith('c')).length
-      if (ms > 0 && cs > ms) return 'Cannibals outnumber missionaries! 💀'
-    } else if (lv.special === 'jealous') {
-      const husbands = ['h1', 'h2', 'h3']
-      const wives    = ['w1', 'w2', 'w3']
-      for (let i = 0; i < 3; i++) {
-        if (!bankArr.includes(wives[i])) continue
-        const otherH = husbands.filter((_, j) => j !== i)
-        if (otherH.some(h => bankArr.includes(h)) && !bankArr.includes(husbands[i])) {
-          return `${wives[i]} is alone with another husband! 😤`
-        }
-      }
-    } else if (lv.special === 'torch') {
-      if (torchTime > 17) return `Time's up! ${torchTime} min — need ≤17 🕐`
-    } else if (lv.special === 'captain') {
-      // no conflict rules
-    } else {
-      const hasSupervisor = bankArr.some(id => charDef(lv, id)?.row)
-      if (hasSupervisor) continue
-      for (const [a, b] of lv.bad) {
-        if (bankArr.includes(a) && bankArr.includes(b))
-          return `The ${charDef(lv, a).nm} attacked the ${charDef(lv, b).nm}! 😱`
-      }
-    }
-  }
-  return null
-}
-
-// ═══════════════════════════════════════════════════════
-// MAIN COMPONENT — drop-in replacement for QuasarChain
-// Props: game, levelData, studentId, onFinish
+// MAIN COMPONENT
+// Props: game, levelData, studentId, onFinish  (identical to original)
 // ═══════════════════════════════════════════════════════
 export default function QuasarChain({ game, levelData, studentId, onFinish }) {
-  // Pick puzzle index from levelData.level (cycles through 8 puzzles)
   const puzzleIdx = ((levelData.level || 1) - 1) % RIVER_LEVELS.length
   const lv        = RIVER_LEVELS[puzzleIdx]
 
   const [screen,     setScreen]     = useState('guide')
-  const [leftBank,   setLeftBank]   = useState(lv.chars.map(c => c.id))
+  const [leftBank,   setLeftBank]   = useState(() => lv.chars.map(c => c.id))
   const [rightBank,  setRightBank]  = useState([])
-  const [passengers, setPassengers] = useState([])
-  const [boatSide,   setBoatSide]   = useState('L') // 'L' | 'R'
+  const [passengers, setPassengers] = useState([])   // IDs on the boat right now
+  const [boatSide,   setBoatSide]   = useState('L')  // 'L' | 'R'
   const [moves,      setMoves]      = useState(0)
   const [torchTime,  setTorchTime]  = useState(0)
   const [history,    setHistory]    = useState([])
   const [hintsLeft,  setHintsLeft]  = useState(3)
-  const [toast,      setToast]      = useState(null)  // { msg, type }
+  const [toast,      setToast]      = useState(null) // { msg, type }
   const [crossing,   setCrossing]   = useState(false)
-  const [phase,      setPhase]      = useState('playing') // 'playing' | 'won' | 'conflict'
+  const [phase,      setPhase]      = useState('playing') // 'playing' | 'won'
   const [shaking,    setShaking]    = useState(false)
-  const scoreRef  = useRef(0)
+
+  const scoreRef   = useRef(0)
   const toastTimer = useRef(null)
 
-  // Score = moves-based: fewer moves = higher score
-  const computeScore = useCallback((mv) => {
-    const par = lv.min
-    const raw = Math.max(0, par - mv) * 100 + 500
-    return raw
-  }, [lv])
-
+  // ── toast ──
   function showToast(msg, type = 'info') {
     setToast({ msg, type })
     clearTimeout(toastTimer.current)
     toastTimer.current = setTimeout(() => setToast(null), 3200)
   }
 
-  function initLevel() {
-    setLeftBank(lv.chars.map(c => c.id))
+  // ── score: fewer moves = higher score ──
+  const computeScore = useCallback((mv) => {
+    return 500 + Math.max(0, lv.min - mv) * 100
+  }, [lv.min])
+
+  // ── reset to clean slate for a given puzzle level object ──
+  // FIX Bug 5: accepts explicit level so useEffect never reads stale lv
+  function initLevel(level) {
+    setLeftBank(level.chars.map(c => c.id))
     setRightBank([])
     setPassengers([])
     setBoatSide('L')
@@ -268,96 +284,124 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     scoreRef.current = 0
   }
 
-  // Re-init if puzzle changes
-  useEffect(() => { initLevel() }, [puzzleIdx])
+  // Re-init whenever the puzzle index changes
+  useEffect(() => {
+    initLevel(RIVER_LEVELS[puzzleIdx])
+  }, [puzzleIdx]) // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── board / de-board a character ──
+  // FIX Bug 1: cap check and toast are OUTSIDE setPassengers updater
   function tapCharacter(id) {
     if (crossing || phase !== 'playing') return
-    setPassengers(prev => {
-      if (prev.includes(id)) return prev.filter(x => x !== id)
-      if (prev.length >= lv.cap) {
-        showToast(`Boat fits only ${lv.cap}!`, 'err')
-        return prev
-      }
-      return [...prev, id]
-    })
+
+    // De-board if already on boat
+    if (passengers.includes(id)) {
+      setPassengers(prev => prev.filter(x => x !== id))
+      return
+    }
+
+    // FIX Bug 6: captain puzzle — guide the player to board captain first
+    if (lv.special === 'captain' && !passengers.includes('captain') && id !== 'captain') {
+      showToast('Board the Captain first — they must row every trip!', 'err')
+      return
+    }
+
+    // Capacity check
+    if (passengers.length >= lv.cap) {
+      showToast(`Boat fits only ${lv.cap} — remove someone first!`, 'err')
+      return
+    }
+
+    setPassengers(prev => [...prev, id])
   }
 
+  // ── attempt a crossing ──
   function doCross() {
     if (crossing || phase !== 'playing') return
 
-    // Validate rower
+    // Validate there's a rower on board
     if (lv.special === 'captain') {
       if (!passengers.includes('captain')) {
-        showToast('The Captain must be on board!', 'err'); return
+        showToast('The Captain must be on board every crossing!', 'err'); return
       }
     } else {
-      if (!passengers.some(id => charDef(lv, id)?.row)) {
-        showToast('Someone who can row must board first!', 'err'); return
+      if (!passengers.some(id => getCharDef(lv, id)?.row)) {
+        showToast('Someone who can row must be on the boat!', 'err'); return
       }
     }
 
-    // Torch: only 1 person can carry torch back
+    // Torch rule: only 1 person can carry the torch back
     let legTime = 0
     if (lv.special === 'torch') {
       if (boatSide === 'R' && passengers.length > 1) {
         showToast('Only 1 person can carry the torch back!', 'err'); return
       }
-      legTime = Math.max(...passengers.map(id => charDef(lv, id)?.speed || 1))
+      legTime = Math.max(...passengers.map(id => getCharDef(lv, id)?.speed || 1))
     }
 
     setCrossing(true)
     SoundEngine.tap()
 
-    // Snapshot for undo
-    setHistory(h => [...h, { leftBank: [...leftBank], rightBank: [...rightBank], boatSide, passengers: [...passengers], moves, torchTime }])
-
-    const from = boatSide === 'L' ? leftBank : rightBank
-    const to   = boatSide === 'L' ? rightBank : leftBank
-    const newFrom = from.filter(id => !passengers.includes(id))
-    const newTo   = [...to, ...passengers]
-    const newSide = boatSide === 'L' ? 'R' : 'L'
-    const newMoves = moves + 1
-    const newTorchTime = torchTime + legTime
-
-    if (boatSide === 'L') {
-      setLeftBank(newFrom); setRightBank(newTo)
-    } else {
-      setRightBank(newFrom); setLeftBank(newTo)
+    // FIX Bug 2: snapshot passengers as [] — boat is docked after crossing,
+    // player should re-select who to board from scratch on undo
+    const snapshot = {
+      leftBank:   [...leftBank],
+      rightBank:  [...rightBank],
+      boatSide,
+      passengers: [],
+      moves,
+      torchTime,
     }
+    setHistory(h => [...h, snapshot])
+
+    // Capture current passengers before clearing state
+    const boarding = [...passengers]
+
+    // Compute the definitive next bank state synchronously
+    // FIX Bug 3: derive newLeft/newRight before any boatSide flip
+    const fromArr  = boatSide === 'L' ? [...leftBank]  : [...rightBank]
+    const toArr    = boatSide === 'L' ? [...rightBank] : [...leftBank]
+    const newFrom  = fromArr.filter(id => !boarding.includes(id))
+    const newTo    = [...toArr, ...boarding]
+    const newLeft  = boatSide === 'L' ? newFrom : newTo   // absolute, not relative
+    const newRight = boatSide === 'L' ? newTo   : newFrom
+    const newSide  = boatSide === 'L' ? 'R' : 'L'
+    const newMoves = moves + 1
+    const newTorch = torchTime + legTime
+
+    // Apply all state changes
+    setLeftBank(newLeft)
+    setRightBank(newRight)
     setBoatSide(newSide)
     setMoves(newMoves)
-    setTorchTime(newTorchTime)
+    setTorchTime(newTorch)
     setPassengers([])
 
+    // After animation, validate and check win
     setTimeout(() => {
       setCrossing(false)
-      const newLeft  = boatSide === 'L' ? newFrom : newTo
-      const newRight = boatSide === 'L' ? newTo   : newFrom
-      const conflict = checkConflict(lv, newLeft, newRight, newTorchTime)
+
+      const conflict = checkConflict(lv, newLeft, newRight, newTorch)
       if (conflict) {
         SoundEngine.gameWrong()
         showToast(conflict, 'err')
         setShaking(true)
+        // FIX Bug 2: restore directly from snapshot (not from history state)
         setTimeout(() => {
           setShaking(false)
-          // Auto-undo
-          setHistory(h => {
-            const prev = h[h.length - 1]
-            if (!prev) return h
-            setLeftBank(prev.leftBank)
-            setRightBank(prev.rightBank)
-            setBoatSide(prev.boatSide)
-            setPassengers(prev.passengers)
-            setMoves(prev.moves)
-            setTorchTime(prev.torchTime)
-            setCrossing(false)
-            return h.slice(0, -1)
-          })
-        }, 420)
+          setLeftBank(snapshot.leftBank)
+          setRightBank(snapshot.rightBank)
+          setBoatSide(snapshot.boatSide)
+          setPassengers(snapshot.passengers)
+          setMoves(snapshot.moves)
+          setTorchTime(snapshot.torchTime)
+          setCrossing(false)
+          setHistory(h => h.slice(0, -1)) // pop the bad move
+        }, 480)
         return
       }
-      // Win check: left bank empty
+
+      // Win: all characters have crossed to the right bank
       if (newLeft.length === 0) {
         const finalScore = computeScore(newMoves)
         scoreRef.current = finalScore
@@ -365,10 +409,12 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         setPhase('won')
         if (studentId) saveGameScore(studentId, game.id, levelData.level, finalScore)
       }
-    }, 600)
+    }, 650)
   }
 
+  // ── manual undo (player-triggered) ──
   function doUndo() {
+    if (crossing) return
     if (!history.length) { showToast('Nothing to undo!', 'err'); return }
     const prev = history[history.length - 1]
     setHistory(h => h.slice(0, -1))
@@ -381,35 +427,32 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     setCrossing(false)
   }
 
+  // ── hint ──
   function doHint() {
-    if (hintsLeft <= 0) { showToast('No hints left!', 'err'); return }
-    const usedHints = 3 - hintsLeft
-    const msg = lv.hints[usedHints] || lv.hints[lv.hints.length - 1] || 'Keep thinking!'
+    if (hintsLeft <= 0) { showToast('No hints left for this puzzle!', 'err'); return }
+    const used = 3 - hintsLeft
+    const msg  = lv.hints[used] || lv.hints[lv.hints.length - 1] || 'Keep thinking — you can do it!'
     setHintsLeft(h => h - 1)
     showToast('💡 ' + msg, 'hint')
   }
 
-  function restart() {
-    initLevel()
-  }
+  function restart() { initLevel(lv) }
 
-  // ── derived UI values ──
-  const currentBank = boatSide === 'L' ? leftBank : rightBank
-  const otherBank   = boatSide === 'L' ? rightBank : leftBank
-  const progress    = rightBank.length / lv.chars.length
-  const canCross    = passengers.length > 0 && !crossing && phase === 'playing' &&
+  // ── derived UI ──
+  const progress = rightBank.length / lv.chars.length
+  const canCross = (
+    passengers.length > 0 &&
+    !crossing &&
+    phase === 'playing' &&
     (lv.special === 'captain'
       ? passengers.includes('captain')
-      : passengers.some(id => charDef(lv, id)?.row))
-
+      : passengers.some(id => getCharDef(lv, id)?.row))
+  )
   const moveLabel = lv.special === 'torch'
     ? `${torchTime}/${lv.min} min`
     : `${moves} moves`
 
-  // ── style helpers ──
   const C = {
-    bg:      '#080D16',
-    bg2:     '#0D1625',
     bg3:     '#111E30',
     bg4:     '#16263D',
     faint:   '#1E3252',
@@ -423,41 +466,86 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     text:    '#E2E8F0',
   }
 
-  const pill = (bg, border, color) => ({
-    background: bg, border: `1px solid ${border}`, borderRadius: 99,
-    padding: '3px 10px', fontSize: 11, fontWeight: 700, color,
-  })
+  // ── guide screen ──
+  if (screen === 'guide') {
+    return (
+      <HowToPlayGuide__QuasarChain
+        game={game}
+        onStart={() => { initLevel(lv); setScreen('playing') }}
+      />
+    )
+  }
 
-  if (screen === 'guide') return <HowToPlayGuide__QuasarChain game={game} onStart={() => { initLevel(); setScreen('playing') }} />
+  // ── bank renderer ──
+  function renderBank(ids, side, borderCol, labelCol, label) {
+    const onThisSide = boatSide === side
+    return (
+      <div style={{ flex: 1, background: C.bg3, border: `1.5px solid ${borderCol}`, borderRadius: 14, padding: 10, minHeight: 100 }}>
+        <div style={{ fontSize: 9, letterSpacing: 2, textTransform: 'uppercase', color: labelCol, fontWeight: 700, marginBottom: 8 }}>{label}</div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+          {ids.map(id => {
+            const c         = getCharDef(lv, id)
+            const aboard    = passengers.includes(id)
+            const clickable = onThisSide && !crossing && phase === 'playing'
+            return (
+              <button
+                key={id}
+                onClick={() => clickable && tapCharacter(id)}
+                title={c.nm}
+                style={{
+                  width: 46, height: 46, borderRadius: 12,
+                  border: `2px solid ${aboard ? C.gold : borderCol}`,
+                  background: aboard ? 'rgba(245,158,11,0.18)' : C.bg4,
+                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                  cursor: clickable ? 'pointer' : 'default',
+                  opacity: onThisSide ? 1 : 0.22,
+                  transition: 'all 0.15s',
+                  transform: aboard ? 'scale(1.1)' : 'scale(1)',
+                  boxShadow: aboard ? '0 0 10px rgba(245,158,11,0.35)' : 'none',
+                  outline: 'none',
+                }}
+              >
+                <span style={{ fontSize: 22, lineHeight: 1 }}>{c.em}</span>
+                <span style={{ fontSize: 7, color: aboard ? C.gold : C.muted, fontWeight: 700, marginTop: 1 }}>{c.nm}</span>
+              </button>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
 
+  // ── main render ──
   return (
     <div style={{ position: 'relative', fontFamily: 'inherit' }}>
 
-      {/* ── HEADER ── */}
+      {/* HEADER */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
         <div>
           <div style={{ color: C.muted, fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 1 }}>
-            {lv.chapter} · Level {lv.id}
+            {lv.chapter} · Puzzle {lv.id}
           </div>
           <div style={{ color: 'white', fontWeight: 900, fontSize: 15 }}>{lv.name}</div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <div style={{ color: C.muted, fontSize: 10, letterSpacing: 1, textTransform: 'uppercase' }}>Progress</div>
+          <div style={{ color: C.muted, fontSize: 10, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 1 }}>
+            {lv.special === 'torch' ? 'time' : 'moves'} · par {lv.min}
+          </div>
           <div style={{ color: C.accent, fontWeight: 800, fontSize: 14 }}>{moveLabel}</div>
         </div>
       </div>
 
-      {/* ── PROGRESS BAR ── */}
+      {/* PROGRESS BAR */}
       <div style={{ background: C.bg3, borderRadius: 99, height: 4, overflow: 'hidden', marginBottom: 8, border: `1px solid ${C.faint}` }}>
-        <div style={{ height: '100%', width: `${progress * 100}%`, background: `linear-gradient(90deg, ${C.accent2}, ${C.green})`, borderRadius: 99, transition: 'width .5s ease' }} />
+        <div style={{ height: '100%', width: `${progress * 100}%`, background: `linear-gradient(90deg,${C.accent2},${C.green})`, borderRadius: 99, transition: 'width .45s ease' }} />
       </div>
 
-      {/* ── RULE CARD ── */}
-      <div style={{ background: `rgba(14,165,233,0.07)`, borderLeft: `3px solid ${C.accent2}`, borderRadius: '0 10px 10px 0', padding: '8px 12px', marginBottom: 10, fontSize: 12, color: '#94A3B8', lineHeight: 1.6 }}>
+      {/* RULE */}
+      <div style={{ background: 'rgba(14,165,233,0.07)', borderLeft: `3px solid ${C.accent2}`, borderRadius: '0 10px 10px 0', padding: '8px 12px', marginBottom: 10, fontSize: 12, color: '#94A3B8', lineHeight: 1.6 }}>
         {lv.rule}
       </div>
 
-      {/* ── TOAST ── */}
+      {/* TOAST */}
       {toast && (
         <div style={{
           textAlign: 'center', marginBottom: 8, padding: '7px 16px', borderRadius: 99,
@@ -470,127 +558,89 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         </div>
       )}
 
-      {/* ── BANKS ── */}
+      {/* BANKS */}
       <div style={{ display: 'flex', gap: 8, marginBottom: 8 }}>
-        {/* Left / Start bank */}
-        <div style={{ flex: 1, background: C.bg3, border: `1.5px solid #1E3A5A`, borderRadius: 14, padding: 10, minHeight: 110 }}>
-          <div style={{ fontSize: 9, letterSpacing: 2, textTransform: 'uppercase', color: C.muted, fontWeight: 700, marginBottom: 8 }}>⛰ Start</div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
-            {leftBank.map(id => {
-              const c     = charDef(lv, id)
-              const onSide = boatSide === 'L'
-              const aboard = passengers.includes(id)
-              return (
-                <button key={id} onClick={() => onSide && tapCharacter(id)}
-                  style={{
-                    width: 46, height: 46, borderRadius: 12, border: `2px solid ${aboard ? C.gold : C.faint}`,
-                    background: aboard ? `rgba(245,158,11,0.15)` : C.bg4,
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    cursor: onSide && !crossing ? 'pointer' : 'default',
-                    opacity: onSide ? 1 : 0.2, transition: 'all 0.15s',
-                    transform: aboard ? 'scale(1.1)' : 'scale(1)',
-                    boxShadow: aboard ? `0 0 10px rgba(245,158,11,0.3)` : 'none',
-                  }}>
-                  <span style={{ fontSize: 22, lineHeight: 1 }}>{c.em}</span>
-                  <span style={{ fontSize: 7, color: C.muted, fontWeight: 700, marginTop: 1 }}>{c.nm}</span>
-                </button>
-              )
-            })}
-          </div>
-        </div>
-
-        {/* Right / Goal bank */}
-        <div style={{ flex: 1, background: C.bg3, border: `1.5px solid #064E3B`, borderRadius: 14, padding: 10, minHeight: 110 }}>
-          <div style={{ fontSize: 9, letterSpacing: 2, textTransform: 'uppercase', color: '#065F46', fontWeight: 700, marginBottom: 8 }}>✅ Goal</div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
-            {rightBank.map(id => {
-              const c     = charDef(lv, id)
-              const onSide = boatSide === 'R'
-              const aboard = passengers.includes(id)
-              return (
-                <button key={id} onClick={() => onSide && tapCharacter(id)}
-                  style={{
-                    width: 46, height: 46, borderRadius: 12, border: `2px solid ${aboard ? C.gold : '#064E3B'}`,
-                    background: aboard ? `rgba(245,158,11,0.15)` : `rgba(34,197,94,0.07)`,
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    cursor: onSide && !crossing ? 'pointer' : 'default',
-                    opacity: onSide ? 1 : 0.35, transition: 'all 0.15s',
-                    transform: aboard ? 'scale(1.1)' : 'scale(1)',
-                  }}>
-                  <span style={{ fontSize: 22, lineHeight: 1 }}>{c.em}</span>
-                  <span style={{ fontSize: 7, color: '#22C55E', fontWeight: 700, marginTop: 1 }}>{c.nm}</span>
-                </button>
-              )
-            })}
-          </div>
-        </div>
+        {renderBank(leftBank,  'L', '#1E3A5A', C.muted,  '⛰ Start')}
+        {renderBank(rightBank, 'R', '#064E3B', '#065F46', '✅ Goal')}
       </div>
 
-      {/* ── RIVER + BOAT ── */}
+      {/* RIVER + BOAT */}
       <div style={{
-        position: 'relative', height: 76, borderRadius: 14, overflow: 'hidden', marginBottom: 8,
-        animation: shaking ? 'riverShake 0.38s ease' : 'none',
+        position: 'relative', height: 80, borderRadius: 14, overflow: 'hidden', marginBottom: 8,
+        animation: shaking ? 'riverShake 0.42s ease' : 'none',
       }}>
-        {/* Animated river */}
         <div style={{ position: 'absolute', inset: 0, background: 'repeating-linear-gradient(90deg,#0C3254 0,#0E4470 52px,#0C3254 104px)', animation: 'riverFlow 5s linear infinite' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'repeating-linear-gradient(90deg,#0A2844 0,#0C3A62 64px,#0A2844 128px)', opacity: 0.5, animation: 'riverFlow 8s linear infinite reverse' }} />
 
         {/* Boat */}
         <div style={{
           position: 'absolute', bottom: 8, zIndex: 5,
-          left: boatSide === 'L' ? 8 : 'calc(100% - 90px)',
+          left: boatSide === 'L' ? 8 : 'calc(100% - 92px)',
           transition: 'left 0.65s cubic-bezier(0.34,1.56,0.64,1)',
           display: 'flex', flexDirection: 'column', alignItems: 'center',
         }}>
           <div style={{
             background: 'linear-gradient(180deg,#A35010,#7C350C)', borderRadius: '10px 10px 18px 18px',
-            width: 82, height: 36, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 4,
-            border: `2px solid #B45309`,
-            boxShadow: passengers.length > 0 ? '0 0 14px rgba(245,158,11,0.5)' : 'none',
+            width: 84, height: 38, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 3,
+            border: '2px solid #B45309',
+            boxShadow: passengers.length > 0 ? '0 0 16px rgba(245,158,11,0.55)' : 'none',
+            transition: 'box-shadow 0.2s',
           }}>
             <span style={{ fontSize: 13 }}>🚣</span>
             {passengers.map(id => (
-              <span key={id} style={{ fontSize: 17 }}>{charDef(lv, id)?.em}</span>
+              <span key={id} style={{ fontSize: 18, lineHeight: 1 }}>{getCharDef(lv, id)?.em}</span>
             ))}
           </div>
-          <span style={{ fontSize: 8, color: '#7DD3FC', fontWeight: 700, marginTop: 2, letterSpacing: 0.5 }}>cap {lv.cap}</span>
+          <span style={{ fontSize: 8, color: '#7DD3FC', fontWeight: 700, marginTop: 3, letterSpacing: 0.5 }}>
+            {passengers.length}/{lv.cap} aboard
+          </span>
         </div>
 
         {/* Cross button */}
-        <button onClick={doCross} disabled={!canCross}
+        <button
+          onClick={doCross}
+          disabled={!canCross}
           style={{
-            position: 'absolute', bottom: 6, left: '50%', transform: 'translateX(-50%)',
-            background: canCross ? `linear-gradient(135deg,#0EA5E9,#0369A1)` : C.bg3,
+            position: 'absolute', bottom: 8, left: '50%', transform: 'translateX(-50%)',
+            background: canCross ? 'linear-gradient(135deg,#0EA5E9,#0369A1)' : C.bg3,
             border: canCross ? 'none' : `1px solid ${C.faint}`,
-            borderRadius: 20, padding: '5px 18px', fontSize: 11, fontWeight: 800,
-            color: canCross ? 'white' : C.muted, cursor: canCross ? 'pointer' : 'not-allowed',
-            zIndex: 10, whiteSpace: 'nowrap', boxShadow: canCross ? '0 2px 12px rgba(14,165,233,0.4)' : 'none',
+            borderRadius: 20, padding: '6px 20px',
+            fontSize: 11, fontWeight: 800, letterSpacing: 0.3,
+            color: canCross ? 'white' : C.muted,
+            cursor: canCross ? 'pointer' : 'not-allowed',
+            zIndex: 10, whiteSpace: 'nowrap',
+            boxShadow: canCross ? '0 2px 14px rgba(14,165,233,0.45)' : 'none',
             transition: 'all 0.15s',
-          }}>
-          {crossing ? '...' : boatSide === 'L' ? 'Cross River →' : '← Cross Back'}
+          }}
+        >
+          {crossing ? '⏳ Crossing…' : boatSide === 'L' ? 'Cross River →' : '← Cross Back'}
         </button>
       </div>
 
-      {/* ── ACTION BUTTONS ── */}
+      {/* ACTIONS */}
       <div style={{ display: 'flex', gap: 7, marginBottom: 4 }}>
         {[
-          { label: '↩ Undo', onClick: doUndo, bg: C.bg3, color: C.muted, border: C.faint },
-          { label: '↺ Reset', onClick: restart, bg: 'rgba(239,68,68,0.08)', color: C.red, border: 'rgba(239,68,68,0.2)' },
-          { label: `💡 Hint (${hintsLeft})`, onClick: doHint, bg: 'rgba(167,139,250,0.08)', color: C.purple, border: 'rgba(167,139,250,0.2)' },
-        ].map(({ label, onClick, bg, color, border }) => (
-          <button key={label} onClick={onClick}
-            style={{ flex: 1, padding: '10px 4px', borderRadius: 12, border: `1px solid ${border}`, background: bg, color, fontSize: 11, fontWeight: 700, cursor: 'pointer', fontFamily: 'inherit' }}>
+          { label: '↩ Undo',             fn: doUndo,  bg: C.bg3,                      col: C.muted,  bdr: C.faint                   },
+          { label: '↺ Reset',             fn: restart, bg: 'rgba(239,68,68,0.08)',      col: C.red,    bdr: 'rgba(239,68,68,0.2)'     },
+          { label: `💡 Hint (${hintsLeft})`, fn: doHint,  bg: 'rgba(167,139,250,0.08)',  col: C.purple, bdr: 'rgba(167,139,250,0.2)'   },
+        ].map(({ label, fn, bg, col, bdr }) => (
+          <button key={label} onClick={fn} style={{
+            flex: 1, padding: '10px 4px', borderRadius: 12,
+            border: `1px solid ${bdr}`, background: bg,
+            color: col, fontSize: 11, fontWeight: 700,
+            cursor: 'pointer', fontFamily: 'inherit',
+          }}>
             {label}
           </button>
         ))}
       </div>
 
-      {/* ── WIN OVERLAY ── */}
+      {/* WIN OVERLAY */}
       {phase === 'won' && (
         <Overlay
-          title="Solved! 🎉"
-          sub={`${lv.special === 'torch' ? torchTime + ' minutes' : moves + ' moves'} · par is ${lv.min} · Score: ${scoreRef.current}`}
-          icon="⚓"
+          title="Puzzle Solved! 🎉"
+          sub={`${lv.special === 'torch' ? torchTime + ' minutes' : moves + ' moves'} · par ${lv.min} · Score: ${scoreRef.current}`}
+          icon="🏆"
           color={C.green}
           onRetry={restart}
           onExit={onFinish}
@@ -598,15 +648,18 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         />
       )}
 
-      {/* ── CSS KEYFRAMES ── */}
+      {/* SCOPED KEYFRAMES */}
       <style>{`
-        @keyframes riverFlow { from { transform: translateX(0) } to { transform: translateX(-33.33%) } }
+        @keyframes riverFlow {
+          from { transform: translateX(0)       }
+          to   { transform: translateX(-33.33%) }
+        }
         @keyframes riverShake {
-          0%,100% { transform: translateX(0) }
+          0%,100% { transform: translateX(0)   }
           20%     { transform: translateX(-8px) }
-          40%     { transform: translateX(8px) }
+          40%     { transform: translateX(8px)  }
           60%     { transform: translateX(-5px) }
-          80%     { transform: translateX(5px) }
+          80%     { transform: translateX(5px)  }
         }
       `}</style>
     </div>
