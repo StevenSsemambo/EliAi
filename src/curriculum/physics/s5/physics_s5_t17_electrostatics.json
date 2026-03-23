@@ -1,0 +1,709 @@
+{
+  "topic_id": "physics_s5_t17",
+  "topic_title": "Electrostatics",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t17_l1",
+      "title": "Production and Detection of Electric Charge",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time you pull a plastic comb through dry hair and watch pieces of paper jump toward it, or get a small shock touching a metal door handle after walking on a carpet, you are experiencing electrostatics — the study of electric charges at rest. Understanding charge is the gateway to understanding all of electricity, electronics, and even chemistry."
+        },
+        {
+          "type": "heading",
+          "body": "What is Electric Charge?"
+        },
+        {
+          "type": "text",
+          "body": "Electric charge is a fundamental property of matter. There are two types:\n\n- **Positive charge (+):** Associated with protons inside the nucleus of an atom.\n- **Negative charge (−):** Associated with electrons that orbit the nucleus.\n\nNormally, atoms have equal numbers of protons and electrons, so they are electrically neutral. Charge is measured in **Coulombs (C)**.\n\nCharge of one electron: e = −1.6 × 10⁻¹⁹ C\nCharge of one proton: e = +1.6 × 10⁻¹⁹ C\n\n**Law of Conservation of Charge:** Electric charge can neither be created nor destroyed; it can only be transferred from one object to another. The total charge in an isolated system remains constant.\n\n**Quantisation of charge:** Charge always exists in discrete multiples of the elementary charge e:\nQ = ne, where n = ±1, ±2, ±3, ...\n\nThis means you cannot have half an electron's worth of charge — charge comes in packets."
+        },
+        {
+          "type": "heading",
+          "body": "Methods of Charging Objects"
+        },
+        {
+          "type": "text",
+          "body": "**1. Charging by Friction (Triboelectric Effect)**\n\nWhen two different insulating materials are rubbed together, electrons are transferred from one to the other. The material that gains electrons becomes negatively charged; the one that loses electrons becomes positively charged.\n\nExamples:\n- Rubbing a glass rod with silk: glass becomes positive (+), silk becomes negative (−).\n- Rubbing an ebonite (hard rubber) rod with fur: ebonite becomes negative (−), fur becomes positive (+).\n- Rubbing a plastic ruler on hair: ruler becomes negative, hair becomes positive.\n\nThe Triboelectric Series ranks materials by their tendency to give up electrons (positive end) or gain electrons (negative end):\n(+) Glass → Nylon → Wool → Cotton → Paper → Rubber → PVC (−)\n\nNote: Both objects always acquire equal and opposite charges (conservation of charge).\n\n**2. Charging by Contact (Conduction)**\n\nWhen a charged conductor is touched to a neutral conductor, charge flows between them until they reach the same potential. The neutral object acquires the same sign of charge as the originally charged object.\n\nStep-by-step:\n1. Bring a positively charged rod near a neutral metal sphere.\n2. Touch the rod to the sphere — positive charge (or rather, electrons flow from sphere to rod, leaving the sphere positive).\n3. Remove the rod — sphere retains positive charge.\n\n**3. Charging by Induction**\n\nCharge can be induced on a conductor without touching the charged object:\n\nStep-by-step:\n1. Bring a negatively charged rod near a neutral metal sphere — free electrons in the sphere are repelled to the far side. The near side becomes positive, far side negative.\n2. While the rod is still held nearby, connect the far side to the earth (ground) — electrons flow to earth.\n3. Remove the earth connection first, then remove the rod.\n4. The sphere is left with a net positive charge (opposite to the rod).\n\nKey difference: Charging by induction leaves the object with the OPPOSITE sign of charge to the inducing object. Charging by contact leaves the SAME sign.\n\n**Why is induction possible only in conductors?**\nIn conductors (metals), electrons are free to move throughout. In insulators (rubber, plastic), electrons are tightly bound and cannot flow — only the surface molecules can become polarised."
+        },
+        {
+          "type": "heading",
+          "body": "Detection of Charge: The Gold-Leaf Electroscope"
+        },
+        {
+          "type": "text",
+          "body": "The **gold-leaf electroscope (GLE)** is the classic instrument for detecting and comparing charges.\n\n**Structure:**\n- A metal cap (disc) on top\n- A metal rod passing through an insulating stopper in a metal case\n- Two very thin gold leaves attached to the bottom of the rod\n- A transparent case (usually glass) to protect the leaves from air currents\n\n**How it works:**\n- When charge is given to the cap (by contact or induction), it spreads along the rod to both gold leaves.\n- Both leaves acquire the same sign of charge → they repel each other → they diverge (spread apart).\n- The greater the charge, the wider the divergence.\n- When the charge is removed (or the cap is earthed), leaves fall back together.\n\n**Testing the sign of charge:**\n1. First charge the GLE with a known positive charge (leaves diverge).\n2. Bring an unknown charge near the cap:\n   - If leaves diverge further → unknown charge is POSITIVE (same sign repels cap, adding to charge).\n   - If leaves converge (come together) → unknown charge is NEGATIVE (opposite sign attracted to cap, reducing net charge on leaves).\n\n**Modern alternative:** The electrostatic voltmeter — measures charge using a deflecting pointer.\n\n**Safety note:** Gold leaves are extremely delicate. Never give a very large charge to a GLE — the leaves could strike the case and discharge, or even tear."
+        },
+        {
+          "type": "heading",
+          "body": "Distribution of Charge on Conductors"
+        },
+        {
+          "type": "text",
+          "body": "When a conductor is charged, the charges distribute themselves on the **outer surface** only. This is because like charges repel each other and will spread as far apart as possible.\n\nKey principles of charge distribution:\n\n**1. Charge resides only on the surface of a conductor**\nThe interior of a charged conductor has zero electric field and zero net charge (proven by Faraday's ice pail experiment — discussed below).\n\n**2. Charge density is highest at sharp points (corners)**\nOn an irregular conductor, charge accumulates most densely where the surface has the smallest radius of curvature (sharpest points). This is because the repulsion between charges is most effective at driving charges away from flat surfaces and into corners.\n\n**3. Corona Discharge (Point Discharge / Action of Points)**\nAt a sharp point, the charge density is so high that the electric field is intense enough to ionise surrounding air molecules. Ions of opposite sign are attracted to the point and neutralise the charge; ions of same sign are repelled, creating an **electric wind**.\n\nApplications of corona discharge:\n- **Lightning conductor (lightning rod):** A pointed metal rod on top of a building, connected to the ground. Charge builds up on the point during a thunderstorm, ionising the air and providing a conducting path to earth — preventing a violent lightning strike. Common on tall buildings in Kampala.\n- **Van de Graaff generator:** Accumulates large charges on a spherical dome; used in physics demonstrations and particle accelerators.\n- **Electrostatic air cleaners:** Charge dust particles using corona discharge, then collect them on oppositely charged plates.\n- **Inkjet printers:** Electrically charged ink droplets are deflected onto paper.\n- **Electrostatic paint sprayers:** Charged paint droplets are attracted to the (earthed) object being painted — even coating difficult angles."
+        },
+        {
+          "type": "heading",
+          "body": "Faraday's Ice Pail Experiment"
+        },
+        {
+          "type": "text",
+          "body": "Michael Faraday performed this historic experiment in 1843 to prove that charge resides on the outer surface of a conductor.\n\n**Setup:**\n- A metal ice pail (hollow metal container) on an insulating stand, connected to a gold-leaf electroscope.\n- A charged metal ball on an insulating thread.\n\n**Results:**\n1. Lowering the charged ball INTO the pail (without touching): GLE diverges, showing induced charge on the outside of the pail.\n2. Touching the ball to the inside of the pail: No change in GLE divergence — all the charge on the ball has transferred to the outside of the pail.\n3. Removing the ball: Ball is found to be completely uncharged — all its charge transferred to the pail's outer surface.\n\n**Conclusions:**\n- Charge resides entirely on the outer surface of a conductor.\n- A charge placed inside a hollow conductor is completely transferred to the outer surface.\n- The interior of a conductor is shielded from external electric fields (**Faraday cage effect**).\n\n**Faraday Cage applications:**\n- Microwave oven metal casing (keeps microwaves inside).\n- Car body protects passengers from lightning.\n- Shielded cables in electronics prevent interference.\n- Metal elevator cabins block mobile phone signals."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Electric charge is a fundamental property; Q = ne (quantised). Conservation: charge cannot be created or destroyed. Three methods of charging: friction (both objects charged, opposite signs), contact (same sign transferred), induction (opposite sign). Charge on conductors resides on outer surface only; highest density at sharp points → corona discharge → applications (lightning rod, spray painting, air cleaners). Faraday's ice pail proves charge is on outer surface only."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Electric charge: fundamental property of matter; unit Coulomb (C); Q = ne\n• Triboelectric effect: charge produced by friction between two different materials\n• Charging by induction: charge induced without contact; object gets opposite sign to inducing charge\n• Gold-leaf electroscope: instrument that detects charge by leaf divergence\n• Corona discharge: ionisation of air at sharp points due to intense electric field; basis of lightning conductors\n• Faraday cage: interior of a hollow conductor shielded from external electric fields"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A glass rod is rubbed with silk. Which of the following correctly describes what happens?",
+            "options": [
+              "Both glass and silk become positively charged",
+              "Glass becomes positive, silk becomes negative",
+              "Glass becomes negative, silk becomes positive",
+              "No charge is created — charge is conserved"
+            ],
+            "answer": "Glass becomes positive, silk becomes negative",
+            "explanation": "When glass is rubbed with silk, electrons transfer from glass to silk. Glass loses electrons → becomes positive (+). Silk gains electrons → becomes negative (−). Total charge remains zero (conservation)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A negatively charged rod is brought near a neutral metal sphere. The sphere is then earthed (grounded) while the rod remains nearby, and then the earth connection is removed before the rod is taken away. What charge does the sphere have?",
+            "options": [
+              "Negative — same as the rod",
+              "Positive — opposite to the rod",
+              "Neutral — the charge returned through the earth",
+              "Positive — the rod transferred charge by contact"
+            ],
+            "answer": "Positive — opposite to the rod",
+            "explanation": "This is charging by induction. The negative rod repels electrons in the sphere to earth (they flow out through the earth connection). When earth is removed, these electrons cannot return. Sphere is left positive — opposite to the inducing rod."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How many electrons must be removed from a neutral body to give it a charge of +3.2 × 10⁻¹⁹ C?",
+            "options": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ],
+            "answer": "2",
+            "explanation": "Each electron carries charge e = 1.6 × 10⁻¹⁹ C. Number removed = Q/e = 3.2 × 10⁻¹⁹ / 1.6 × 10⁻¹⁹ = 2. Removing 2 electrons gives a positive charge of +3.2 × 10⁻¹⁹ C."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A charged gold-leaf electroscope has its leaves spread apart. When an unknown charge is brought near the cap, the leaves converge (come together). What can you conclude?",
+            "options": [
+              "The unknown charge has the same sign as the charge on the electroscope",
+              "The unknown charge has the opposite sign to the charge on the electroscope",
+              "The unknown object is not charged",
+              "The electroscope is discharging spontaneously"
+            ],
+            "answer": "The unknown charge has the opposite sign to the charge on the electroscope",
+            "explanation": "When opposite charge approaches the cap, it attracts the charge from the leaves toward the cap. This reduces the charge on the leaves, so they converge. If same sign approached, leaves would diverge further."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why does charge concentrate at sharp points on a conductor?",
+            "options": [
+              "Sharp points are made of better conducting material",
+              "The radius of curvature is small, so charge density and electric field are highest there",
+              "Gravity pulls charge toward sharp downward-pointing tips",
+              "Sharp points have more surface area per unit length"
+            ],
+            "answer": "The radius of curvature is small, so charge density and electric field are highest there",
+            "explanation": "Charge distributes itself on a conductor's surface. At sharp points (small r), charges are closer together and the resulting electric field is most intense. This is why lightning conductors use sharp points — the intense field ionises the air, providing a safe discharge path."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Faraday's ice pail experiment demonstrated that:",
+            "options": [
+              "Charge can be created by freezing water",
+              "Charge resides entirely on the outer surface of a conductor",
+              "Charge resides in the interior of a conductor",
+              "Equal charges always repel with the same force"
+            ],
+            "answer": "Charge resides entirely on the outer surface of a conductor",
+            "explanation": "When a charged ball was touched to the inside of the pail, the GLE showed no change — all charge had moved to the outside. The ball was found completely discharged. This proved charge lives on the outer surface only."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t17_l2",
+      "title": "Coulomb's Law and Electrostatic Force",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "We know that like charges repel and unlike charges attract — but how strong is this force? In 1785, Charles-Augustin de Coulomb used a torsion balance to measure the force between charged spheres precisely, and discovered the fundamental law governing all electrostatic interactions."
+        },
+        {
+          "type": "heading",
+          "body": "Coulomb's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** The electrostatic force between two point charges is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of the distance between them. The force acts along the line joining the two charges.\n\n**Mathematical expression:**\n\nF = kQ₁Q₂ / r²\n\nWhere:\n- F = electrostatic force (N)\n- Q₁, Q₂ = magnitudes of the two charges (C)\n- r = distance between the charges (m)\n- k = Coulomb's constant = 8.99 × 10⁹ N·m²/C² ≈ 9 × 10⁹ N·m²/C²\n\n**Alternative form using permittivity of free space (ε₀):**\n\nk = 1 / (4πε₀)\n\nWhere ε₀ = 8.85 × 10⁻¹² C²/(N·m²) is the permittivity of free space.\n\nSo: F = Q₁Q₂ / (4πε₀r²)\n\n**Sign convention:**\n- F is positive → repulsive force (like charges)\n- F is negative → attractive force (unlike charges)\n- The magnitude |F| is always used in calculations unless direction is needed.\n\n**Important notes:**\n- Coulomb's law applies to **point charges** (or uniformly charged spheres treated as point charges at their centres).\n- The law assumes charges are in a **vacuum** (or air, which is a good approximation).\n- In a medium with relative permittivity εᵣ (dielectric constant): F = kQ₁Q₂/(εᵣr²). The force is reduced by a factor of εᵣ."
+        },
+        {
+          "type": "heading",
+          "body": "Worked Examples — Coulomb's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Worked Example 1:** Two point charges Q₁ = +6 μC and Q₂ = −4 μC are placed 0.30 m apart in air. Find the electrostatic force between them.\n\nGiven: Q₁ = 6 × 10⁻⁶ C, Q₂ = 4 × 10⁻⁶ C (magnitudes), r = 0.30 m, k = 9 × 10⁹\n\nF = kQ₁Q₂/r² = (9 × 10⁹ × 6 × 10⁻⁶ × 4 × 10⁻⁶) / (0.30)²\n= (9 × 10⁹ × 24 × 10⁻¹²) / 0.09\n= (216 × 10⁻³) / 0.09\n= 2.4 N\n\nSince the charges have opposite signs, the force is **attractive** (2.4 N attraction).\n\n**Worked Example 2:** Two identical positive charges Q are placed 0.20 m apart and repel each other with a force of 0.045 N. Find Q.\n\nF = kQ²/r²\n0.045 = (9 × 10⁹ × Q²) / (0.20)²\n0.045 = (9 × 10⁹ × Q²) / 0.04\nQ² = 0.045 × 0.04 / (9 × 10⁹) = 1.8 × 10⁻³ / (9 × 10⁹) = 2 × 10⁻¹³\nQ = √(2 × 10⁻¹³) = 4.47 × 10⁻⁷ C ≈ 0.447 μC\n\n**Worked Example 3 (Three charges):** Charge Q₁ = +3 μC is at the origin. Q₂ = +2 μC is at x = 0.40 m. Q₃ = −1 μC is at x = 0.60 m. Find the net force on Q₂.\n\nForce on Q₂ from Q₁:\nF₂₁ = k × Q₁ × Q₂ / r₁₂² = 9×10⁹ × 3×10⁻⁶ × 2×10⁻⁶ / (0.40)²\n= 9×10⁹ × 6×10⁻¹² / 0.16 = 54×10⁻³/0.16 = 0.3375 N (repulsive → +x direction)\n\nForce on Q₂ from Q₃:\nr₂₃ = 0.60 − 0.40 = 0.20 m\nF₂₃ = k × Q₂ × Q₃ / r₂₃² = 9×10⁹ × 2×10⁻⁶ × 1×10⁻⁶ / (0.20)²\n= 9×10⁹ × 2×10⁻¹² / 0.04 = 18×10⁻³/0.04 = 0.45 N (attractive → +x direction, since Q₃ is to the right of Q₂ and Q₃ is negative)\n\nNet force on Q₂ = 0.3375 + 0.45 = 0.7875 N in +x direction."
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Coulomb's Law with Newton's Law of Gravitation"
+        },
+        {
+          "type": "text",
+          "body": "Both laws have a very similar mathematical form — this is not a coincidence:\n\n| Property | Coulomb's Law | Newton's Gravity |\n|---|---|---|\n| Formula | F = kQ₁Q₂/r² | F = Gm₁m₂/r² |\n| Constants | k = 9×10⁹ | G = 6.67×10⁻¹¹ |\n| Inverse square | Yes | Yes |\n| Acts between | Charges | Masses |\n| Can be repulsive? | Yes (like charges) | No (always attractive) |\n| Relative strength | ~10³⁶ times stronger | Much weaker |\n\n**Electrostatic force is enormously stronger than gravity:**\nFor two electrons separated by 1 m:\n- Coulomb force: F_E = ke²/r² = 9×10⁹ × (1.6×10⁻¹⁹)² = 2.3 × 10⁻²⁸ N\n- Gravitational force: F_G = Gm²/r² = 6.67×10⁻¹¹ × (9.11×10⁻³¹)² = 5.5 × 10⁻⁷¹ N\n- Ratio: F_E/F_G ≈ 4 × 10⁴² — electric force is 10⁴² times stronger!\n\nSo why does gravity dominate at large scales? Because matter is electrically neutral on average — positive and negative charges cancel. Gravity has no negative mass to cancel it."
+        },
+        {
+          "type": "heading",
+          "body": "The Principle of Superposition"
+        },
+        {
+          "type": "text",
+          "body": "When multiple charges are present, the **principle of superposition** states that the total force on any one charge is the vector sum of the forces exerted on it by each of the other charges individually.\n\nF_total = F₁ + F₂ + F₃ + ... (vector sum)\n\nThis means:\n1. Calculate the force on the charge of interest due to each other charge separately (using Coulomb's law).\n2. Add these forces as vectors (taking direction into account).\n\nFor charges in a line, choose a positive direction and assign + or − to each force.\nFor charges in 2D, resolve into x and y components and combine using Pythagoras.\n\n**Equilibrium of charges:**\nA charge is in equilibrium when the net force on it is zero. This is used to find positions where a charge can be placed in equilibrium between other charges.\n\n**Example:** Where must a charge Q₃ be placed on the line between Q₁ = +4 μC (at x=0) and Q₂ = +1 μC (at x=0.30 m) so that Q₃ is in equilibrium?\n\nLet Q₃ be at distance d from Q₁ (and 0.30−d from Q₂).\nFor equilibrium: F₃₁ = F₃₂\nkQ₃Q₁/d² = kQ₃Q₂/(0.30−d)²\n4/(d²) = 1/(0.30−d)²\n√4/d = 1/(0.30−d) → 2(0.30−d) = d → 0.60 = 3d → d = 0.20 m\nQ₃ must be placed 0.20 m from Q₁ (and 0.10 m from Q₂)."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Coulomb's Law: F = kQ₁Q₂/r² where k = 9×10⁹ N·m²/C². Force is along the line joining charges: repulsive for like charges, attractive for unlike. Compared to gravity: same inverse-square form but ~10⁴² times stronger and can be repulsive. Superposition: total force on a charge = vector sum of individual forces from all other charges. Equilibrium: net force = 0."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Coulomb's constant (k): k = 9 × 10⁹ N·m²/C² = 1/(4πε₀)\n• Permittivity of free space (ε₀): ε₀ = 8.85 × 10⁻¹² C²/(N·m²)\n• Point charge: A charge whose physical size is negligible compared to distances involved\n• Principle of superposition: Total electric force = vector sum of individual forces from each charge\n• Dielectric: An insulating material with permittivity εᵣ > 1 that reduces the electrostatic force"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Two charges of +5 μC and −5 μC are placed 0.20 m apart. What is the magnitude of the force between them? (k = 9 × 10⁹ N·m²/C²)",
+            "options": [
+              "5.625 N",
+              "11.25 N",
+              "2.81 N",
+              "0.56 N"
+            ],
+            "answer": "5.625 N",
+            "explanation": "F = kQ₁Q₂/r² = 9×10⁹ × 5×10⁻⁶ × 5×10⁻⁶ / (0.20)² = 9×10⁹ × 25×10⁻¹² / 0.04 = 225×10⁻³/0.04 = 5.625 N. The force is attractive (opposite signs)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "If the distance between two charges is tripled while the charges remain the same, the electrostatic force becomes:",
+            "options": [
+              "9 times larger",
+              "3 times smaller",
+              "9 times smaller",
+              "3 times larger"
+            ],
+            "answer": "9 times smaller",
+            "explanation": "F ∝ 1/r². If r → 3r, then F → k/(3r)² = k/9r² = F/9. Force decreases by a factor of 9 (inverse square law)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which is true when comparing the gravitational force and electrostatic force between two electrons?",
+            "options": [
+              "Gravitational force is stronger and always attractive",
+              "Electrostatic force is stronger and repulsive",
+              "Both forces are equal and attractive",
+              "Electrostatic force is stronger and attractive"
+            ],
+            "answer": "Electrostatic force is stronger and repulsive",
+            "explanation": "Both electrons are negatively charged, so the electrostatic force between them is repulsive. The electrostatic force is approximately 10⁴² times stronger than gravity between two electrons."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Two identical charges repel each other with force F. If one charge is doubled and the distance is halved, the new force is:",
+            "options": [
+              "2F",
+              "4F",
+              "8F",
+              "F/2"
+            ],
+            "answer": "8F",
+            "explanation": "F = kQ²/r². New: F' = k(2Q)²/(r/2)² = k×4Q²/(r²/4) = 16kQ²/r² = 16F/1 — wait: F' = 4kQ²×4/r² = 16kQ²/r² = 16F? Let me recalculate: F' = k(2Q)(Q)/(r/2)² — if one charge doubled: F' = k(2Q)(Q)/(r/2)² = 2kQ²×4/r² = 8kQ²/r² = 8F."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A charge of +2 μC is placed exactly between two charges of +8 μC (left) and +2 μC (right), separated by 0.60 m. In which direction does the net force on the middle charge act?",
+            "options": [
+              "Toward the +8 μC charge (left)",
+              "Toward the +2 μC charge (right)",
+              "The net force is zero",
+              "Perpendicular to the line joining the charges"
+            ],
+            "answer": "Toward the +2 μC charge (right)",
+            "explanation": "Middle charge is at 0.30 m from each. Force from +8μC (left): F₁ = k(8×10⁻⁶)(2×10⁻⁶)/(0.30)² pushing right. Force from +2μC (right): F₂ = k(2×10⁻⁶)(2×10⁻⁶)/(0.30)² pushing left. F₁ > F₂ so net force is toward the right (away from larger charge, since both are repulsive), i.e., toward +2μC."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Coulomb's law is F = kQ₁Q₂/r². What are the SI units of the Coulomb constant k?",
+            "options": [
+              "N·m/C",
+              "N·m²/C²",
+              "C²/N·m²",
+              "N/C²"
+            ],
+            "answer": "N·m²/C²",
+            "explanation": "Rearranging: k = Fr²/(Q₁Q₂). Units: [N × m²] / [C × C] = N·m²/C². The numerical value is k ≈ 9 × 10⁹ N·m²/C²."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t17_l3",
+      "title": "Electric Field: Concept, Intensity and Field Lines",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "How does one charge 'know' that another charge is nearby? The concept of the electric field answers this question. Instead of thinking of charges exerting forces directly on each other (action at a distance), we say that every charge creates an electric field in the surrounding space, and other charges respond to this field."
+        },
+        {
+          "type": "heading",
+          "body": "Electric Field Intensity (Electric Field Strength)"
+        },
+        {
+          "type": "text",
+          "body": "The **electric field intensity E** at a point in space is defined as the force per unit positive charge placed at that point:\n\n**E = F / q**\n\nWhere:\n- E = electric field intensity (N/C or V/m — these are equivalent)\n- F = force on the test charge (N)\n- q = small positive test charge (C)\n\nImportant: The test charge q must be small (infinitesimally small) so that it does not disturb the field being measured.\n\n**Electric field is a vector quantity** — it has both magnitude and direction. The direction of E at a point is the direction of the force on a **positive** test charge placed at that point.\n\n**Electric field due to a point charge Q:**\nSubstituting Coulomb's law (F = kQq/r²) into E = F/q:\n\n**E = kQ/r²** (or E = Q/(4πε₀r²))\n\nWhere:\n- Q = the source charge creating the field\n- r = distance from Q to the point\n- E points away from Q if Q > 0 (positive)\n- E points toward Q if Q < 0 (negative)\n\n**Worked Example 1:** Find the electric field strength 0.40 m from a charge of +3 μC.\n\nE = kQ/r² = 9×10⁹ × 3×10⁻⁶ / (0.40)² = 27×10³ / 0.16 = 1.6875 × 10⁵ N/C\nDirection: away from the positive charge.\n\n**Worked Example 2:** An electric field E = 5×10⁴ N/C acts on a proton (charge = +1.6×10⁻¹⁹ C). Find the force on the proton.\n\nF = qE = 1.6×10⁻¹⁹ × 5×10⁴ = 8×10⁻¹⁵ N\n(Force is in the direction of E for a positive charge.)"
+        },
+        {
+          "type": "heading",
+          "body": "Electric Field Lines (Lines of Force)"
+        },
+        {
+          "type": "text",
+          "body": "Electric field lines are imaginary lines drawn to represent the electric field visually. They were introduced by Michael Faraday.\n\n**Rules for drawing electric field lines:**\n1. Lines start on positive charges and end on negative charges (or go to infinity).\n2. The direction of the field at any point is tangent to the field line at that point.\n3. The density (closeness) of field lines represents the strength of the field — closer lines = stronger field.\n4. Field lines never cross each other (because the field has a unique direction at every point).\n5. Field lines are always perpendicular to the surface of a conductor.\n\n**Field patterns for common charge configurations:**\n\n**Single positive charge:** Lines radiate outward in all directions uniformly (like a hedgehog).\n\n**Single negative charge:** Lines point inward toward the charge from all directions.\n\n**Two equal positive charges (+Q and +Q):** Lines curve away from each charge; a neutral point exists exactly between them where the field is zero.\n\n**Electric dipole (+Q and −Q):** Lines emerge from + and curve around to end on −. A classic pattern showing the field between and around a dipole.\n\n**Uniform field (parallel plates):** Between two oppositely charged parallel plates, the electric field is uniform (constant magnitude and direction) everywhere between the plates (except near the edges). Field lines are straight, parallel, and equally spaced.\n\nFor parallel plates: **E = V/d**\nWhere V = potential difference between plates, d = separation."
+        },
+        {
+          "type": "heading",
+          "body": "Resultant Electric Field (Superposition)"
+        },
+        {
+          "type": "text",
+          "body": "The **principle of superposition** applies to electric fields:\nThe total electric field at any point is the vector sum of the electric fields due to each individual charge.\n\n**E_total = E₁ + E₂ + E₃ + ... (vector sum)**\n\n**Worked Example 3:** Charges Q₁ = +4 μC at the origin and Q₂ = −4 μC at x = 0.30 m. Find the resultant electric field at the midpoint (x = 0.15 m).\n\nAt midpoint (r = 0.15 m from each charge):\n\nE₁ = kQ₁/r² = 9×10⁹ × 4×10⁻⁶ / (0.15)² = 36×10³/0.0225 = 1.6 × 10⁶ N/C\nDirection: away from Q₁ (positive) → in +x direction.\n\nE₂ = kQ₂/r² = 9×10⁹ × 4×10⁻⁶ / (0.15)² = 1.6 × 10⁶ N/C\nDirection: toward Q₂ (negative) → also in +x direction.\n\nE_total = E₁ + E₂ = 1.6×10⁶ + 1.6×10⁶ = 3.2 × 10⁶ N/C in the +x direction.\n\n**Electric field inside a conductor: E = 0**\nIn electrostatic equilibrium, the electric field inside a conductor is always zero. If it were not zero, free electrons would continue to move until equilibrium is reached. This is the basis of electromagnetic shielding.\n\n**Neutral point:** The point where the resultant electric field is zero. For two like charges, the neutral point lies between them on the line joining them, closer to the smaller charge."
+        },
+        {
+          "type": "heading",
+          "body": "Motion of Charges in Electric Fields"
+        },
+        {
+          "type": "text",
+          "body": "A charged particle placed in an electric field experiences a force F = qE. If it is free to move:\n\n**For a positive charge:** accelerates in the direction of E.\n**For a negative charge:** accelerates opposite to E.\n\n**Acceleration:** From Newton's second law, F = ma:\na = qE/m\n\n**Uniform electric field — projectile-type motion:**\nA charged particle entering a uniform electric field perpendicular to the field lines undergoes motion similar to projectile motion:\n- Constant velocity in the direction parallel to the plates\n- Constant acceleration in the direction of the field\n\nThis principle is used in:\n- **Cathode Ray Tube (CRT):** electrons are deflected by electric fields to form images on a screen\n- **Ink-jet printers:** charged ink droplets deflected onto paper\n- **Mass spectrometers:** particles separated by their charge-to-mass ratio\n- **Millikan's oil drop experiment:** measured the charge on a single electron\n\n**Millikan's experiment:** Oil droplets of known radius r fall through air between charged plates. By adjusting the voltage V between the plates (separation d), the electric force qE can balance gravity:\nqE = mg\nq(V/d) = mg\nq = mgd/V\n\nMillikan found q was always a multiple of 1.6 × 10⁻¹⁹ C — proving charge quantisation."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Electric field E = F/q (force per unit positive charge); vector quantity; units N/C = V/m. Due to point charge: E = kQ/r². Direction: away from positive, toward negative charges. Field lines: start on +, end on −; never cross; perpendicular to conductors; density shows field strength. Superposition: E_total = vector sum of individual fields. E = 0 inside conductor (shielding). Uniform field between parallel plates: E = V/d."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Electric field intensity (E): Force per unit positive test charge; E = F/q; unit N/C or V/m\n• Electric field line: Imaginary line showing direction and relative strength of electric field\n• Neutral point: Point where resultant electric field is zero\n• Uniform electric field: Field of constant magnitude and direction, as between parallel plates\n• Millikan's experiment: Measured elementary charge e = 1.6×10⁻¹⁹ C by balancing electric force against gravity on oil drops"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The electric field at a point 0.50 m from a point charge of +2 μC is: (k = 9 × 10⁹)",
+            "options": [
+              "7.2 × 10⁴ N/C",
+              "3.6 × 10⁴ N/C",
+              "7.2 × 10³ N/C",
+              "3.6 × 10³ N/C"
+            ],
+            "answer": "7.2 × 10⁴ N/C",
+            "explanation": "E = kQ/r² = 9×10⁹ × 2×10⁻⁶ / (0.50)² = 18×10³ / 0.25 = 7.2 × 10⁴ N/C. Direction: away from the positive charge."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which statement about electric field lines is INCORRECT?",
+            "options": [
+              "Field lines always start on positive charges",
+              "Field lines can cross each other at right angles",
+              "Closer field lines indicate a stronger electric field",
+              "Field lines are perpendicular to conducting surfaces"
+            ],
+            "answer": "Field lines can cross each other at right angles",
+            "explanation": "Electric field lines NEVER cross. If they did, it would imply two different directions for the electric field at one point — impossible since E has a unique direction at every point."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "An electron (charge −1.6 × 10⁻¹⁹ C, mass 9.11 × 10⁻³¹ kg) is placed in a uniform electric field of 2 × 10⁴ N/C. What is its acceleration?",
+            "options": [
+              "3.51 × 10¹⁵ m/s²",
+              "1.75 × 10¹⁵ m/s²",
+              "3.51 × 10¹² m/s²",
+              "1.75 × 10¹² m/s²"
+            ],
+            "answer": "3.51 × 10¹⁵ m/s²",
+            "explanation": "F = qE = 1.6×10⁻¹⁹ × 2×10⁴ = 3.2×10⁻¹⁵ N. a = F/m = 3.2×10⁻¹⁵ / 9.11×10⁻³¹ = 3.51 × 10¹⁵ m/s². (The electron accelerates opposite to the field direction since it is negatively charged.)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The electric field inside a charged conductor in electrostatic equilibrium is:",
+            "options": [
+              "Maximum at the centre",
+              "Equal to the field just outside the surface",
+              "Zero everywhere inside",
+              "Directed radially inward"
+            ],
+            "answer": "Zero everywhere inside",
+            "explanation": "In electrostatic equilibrium, free electrons redistribute until there is no net force on any electron. This means E = 0 everywhere inside the conductor. This is the basis of Faraday shielding — the interior is screened from external fields."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two parallel plates are separated by 0.01 m and connected to a 500 V supply. What is the electric field between the plates?",
+            "options": [
+              "5 N/C",
+              "500 N/C",
+              "5000 N/C",
+              "50,000 N/C"
+            ],
+            "answer": "50,000 N/C",
+            "explanation": "For a uniform field between parallel plates: E = V/d = 500 / 0.01 = 50,000 N/C = 5 × 10⁴ N/C."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Millikan's oil drop experiment was important because it:",
+            "options": [
+              "Proved that electrons are negatively charged",
+              "Measured the mass of an electron",
+              "Proved that charge is quantised in units of 1.6 × 10⁻¹⁹ C",
+              "Discovered the proton"
+            ],
+            "answer": "Proved that charge is quantised in units of 1.6 × 10⁻¹⁹ C",
+            "explanation": "Millikan measured the charge on many oil droplets and found every result was a whole-number multiple of 1.6 × 10⁻¹⁹ C. This proved charge quantisation: Q = ne, where e = 1.6 × 10⁻¹⁹ C is the elementary charge."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t17_l4",
+      "title": "Electric Potential, Work Done and Potential Difference",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The concept of electric potential is just as important as the electric field — and often more useful in solving circuit problems. It is the electrical equivalent of gravitational potential energy, and it tells us how much energy a charge has at a given location in an electric field."
+        },
+        {
+          "type": "heading",
+          "body": "Electric Potential Energy and Work Done"
+        },
+        {
+          "type": "text",
+          "body": "When a charge q moves in an electric field, work is done either by the field or against the field. This work is stored as electric potential energy.\n\n**Work done by an electric field:**\nW = F × d = qE × d (for uniform field, charge moving parallel to field)\n\nMore generally, the work done by the electric field when a charge q moves from point A to point B:\nW = q(V_A − V_B)\n\nWhere V_A and V_B are the electric potentials at points A and B.\n\nIf the charge moves from high potential to low potential (downhill in the energy sense for positive charges), the field does positive work on the charge — it speeds up.\n\nIf positive charge is pushed from low to high potential (uphill), external work must be done against the field.\n\n**Key analogy:**\n- Electric potential ↔ Gravitational height\n- Positive charge ↔ Mass (flows downhill in potential)\n- Electric field ↔ Gravitational field strength\n- Potential difference ↔ Height difference"
+        },
+        {
+          "type": "heading",
+          "body": "Electric Potential (V)"
+        },
+        {
+          "type": "text",
+          "body": "**Electric potential V** at a point is defined as the work done per unit positive charge in bringing a small positive test charge from infinity to that point:\n\n**V = W/q**\n\nWhere W = work done (J), q = charge (C), V = potential (V = J/C = Volt)\n\n**Electric potential due to a point charge Q:**\n\n**V = kQ/r**\n\nWhere:\n- k = 9 × 10⁹ N·m²/C²\n- Q = source charge\n- r = distance from the source charge\n\nNote: Potential is a **scalar** quantity — it has magnitude only (no direction). It can be positive (near positive charges) or negative (near negative charges).\n\nAt infinity: V = 0 (reference point).\n\n**Comparison: E vs V for a point charge:**\nE = kQ/r² (falls as 1/r²)\nV = kQ/r (falls as 1/r)\n\n**Worked Example 1:** Find the electric potential 0.30 m from a charge of +5 μC.\n\nV = kQ/r = 9×10⁹ × 5×10⁻⁶ / 0.30 = 45×10³ / 0.30 = 1.5 × 10⁵ V\n\n**Worked Example 2:** Find the work done in bringing a charge of +2 μC from infinity to a point 0.30 m from a +5 μC charge.\n\nV = 1.5 × 10⁵ V (from above)\nW = qV = 2×10⁻⁶ × 1.5×10⁵ = 0.30 J\n\n(This work is positive because both charges are positive — external agent does work pushing against the repulsion.)"
+        },
+        {
+          "type": "heading",
+          "body": "Potential Difference and the Electronvolt"
+        },
+        {
+          "type": "text",
+          "body": "**Potential difference (V or ΔV)** between two points A and B is:\n\n**V_AB = V_A − V_B**\n\nWork done moving charge q from A to B:\n**W = q × V_AB = q(V_A − V_B)**\n\nIf V_A > V_B and q is positive: field does positive work → charge gains kinetic energy.\nIf V_A < V_B and q is positive: agent does work against field → charge gains potential energy.\n\n**The Electronvolt (eV):** A convenient unit of energy for atomic/nuclear physics:\n1 eV = energy gained by one electron (e = 1.6×10⁻¹⁹ C) accelerated through a potential difference of 1 V:\n1 eV = 1.6×10⁻¹⁹ × 1 = 1.6×10⁻¹⁹ J\n\n**Worked Example 3:** An electron is accelerated through a potential difference of 500 V. Find its final kinetic energy and speed (m_e = 9.11×10⁻³¹ kg).\n\nKE = qV = 1.6×10⁻¹⁹ × 500 = 8×10⁻¹⁷ J = 500 eV\n½mv² = 8×10⁻¹⁷\nv² = 2 × 8×10⁻¹⁷ / 9.11×10⁻³¹ = 1.756×10¹⁴\nv = 1.33 × 10⁷ m/s (about 4% of speed of light)\n\n**Equipotential surfaces:**\nAn equipotential surface is a surface on which every point is at the same electric potential. No work is done moving a charge along an equipotential surface.\n\nProperties:\n- Always perpendicular to electric field lines\n- For an isolated point charge: equipotentials are concentric spheres\n- For a uniform field: equipotentials are parallel planes perpendicular to the field\n- A conductor in equilibrium is an equipotential body (entire surface at same potential)"
+        },
+        {
+          "type": "heading",
+          "body": "Superposition of Potential"
+        },
+        {
+          "type": "text",
+          "body": "Since potential is a **scalar**, superposition is simply **algebraic addition** (not vector addition like for E):\n\nV_total = V₁ + V₂ + V₃ + ...\n\nThis makes calculating potential easier than calculating the field in many situations.\n\n**Worked Example 4:** A charge Q₁ = +6 μC is at x = 0 and Q₂ = −3 μC is at x = 0.40 m. Find the total electric potential at the midpoint (x = 0.20 m).\n\nV₁ = kQ₁/r₁ = 9×10⁹ × 6×10⁻⁶ / 0.20 = 2.7 × 10⁵ V\nV₂ = kQ₂/r₂ = 9×10⁹ × (−3×10⁻⁶) / 0.20 = −1.35 × 10⁵ V\nV_total = V₁ + V₂ = 2.7×10⁵ − 1.35×10⁵ = 1.35 × 10⁵ V\n\n**Relationship between E and V:**\nFor a uniform field: E = −ΔV/Δx = V/d (magnitude)\nFor a general field: E = −dV/dr\n\nThe electric field always points from high potential to low potential (from + to −, like water flowing downhill). The negative sign shows E points in the direction of decreasing V.\n\n**Variation with distance (point charge):**\n- V = kQ/r → V ∝ 1/r (falls more slowly)\n- E = kQ/r² → E ∝ 1/r² (falls more quickly)\n\nThis means: at large distances, potential is still significant when the field has become very small."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Electric potential V = W/q = work per unit charge; scalar; unit Volt (J/C). Due to point charge: V = kQ/r. Potential difference: V_AB = V_A − V_B; work done W = qV_AB. Superposition: V_total = algebraic sum (scalar). Equipotential surfaces perpendicular to field lines. E = −dV/dr (field points from high to low potential). 1 eV = 1.6 × 10⁻¹⁹ J."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Electric potential (V): Work done per unit positive charge bringing charge from infinity; V = kQ/r; unit Volt\n• Potential difference: Difference in electric potential between two points; V_AB = V_A − V_B\n• Electronvolt (eV): Energy gained by electron through 1 V p.d.; 1 eV = 1.6 × 10⁻¹⁹ J\n• Equipotential surface: Surface of constant potential; always perpendicular to field lines\n• Potential gradient: Rate of change of potential with distance; related to field by E = −dV/dr"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The electric potential at a distance of 0.20 m from a charge of −8 μC is: (k = 9 × 10⁹)",
+            "options": [
+              "+3.6 × 10⁵ V",
+              "−3.6 × 10⁵ V",
+              "+1.8 × 10⁵ V",
+              "−1.8 × 10⁵ V"
+            ],
+            "answer": "−3.6 × 10⁵ V",
+            "explanation": "V = kQ/r = 9×10⁹ × (−8×10⁻⁶) / 0.20 = −72×10³/0.20 = −3.6 × 10⁵ V. Potential is negative near a negative charge."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A positive charge of 4 μC moves from a point at potential 300 V to a point at potential 100 V. How much work is done by the electric field?",
+            "options": [
+              "+8 × 10⁻⁴ J",
+              "−8 × 10⁻⁴ J",
+              "+4 × 10⁻⁴ J",
+              "−4 × 10⁻⁴ J"
+            ],
+            "answer": "+8 × 10⁻⁴ J",
+            "explanation": "W = q(V_A − V_B) = 4×10⁻⁶ × (300 − 100) = 4×10⁻⁶ × 200 = 8×10⁻⁴ J. Positive work done by field (charge moved from high to low potential — field does positive work, charge gains kinetic energy)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "How much energy in joules does a proton gain when accelerated through a potential difference of 10,000 V?",
+            "options": [
+              "1.6 × 10⁻²³ J",
+              "1.6 × 10⁻¹⁵ J",
+              "1.6 × 10⁻¹⁹ J",
+              "1.6 × 10⁻² J"
+            ],
+            "answer": "1.6 × 10⁻¹⁵ J",
+            "explanation": "W = qV = 1.6×10⁻¹⁹ × 10⁴ = 1.6 × 10⁻¹⁵ J. Equivalently, the proton gains 10,000 eV = 10 keV of kinetic energy."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which property makes potential easier to work with than electric field when multiple charges are present?",
+            "options": [
+              "Potential is larger in magnitude than the field",
+              "Potential is a scalar — superposition is algebraic, not vector addition",
+              "Potential does not depend on distance",
+              "Potential is always positive"
+            ],
+            "answer": "Potential is a scalar — superposition is algebraic, not vector addition",
+            "explanation": "Because V is a scalar, we simply add up the potentials from each charge algebraically (with signs). For electric field (a vector), we must find x and y components and combine using Pythagoras — much more work."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Equipotential surfaces and electric field lines always:",
+            "options": [
+              "Run parallel to each other",
+              "Cross at 45°",
+              "Are perpendicular to each other",
+              "Are parallel near charges and perpendicular far away"
+            ],
+            "answer": "Are perpendicular to each other",
+            "explanation": "No work is done moving a charge along an equipotential. But the electric field does work on a charge moving along a field line. For both to be true simultaneously, field lines must be perpendicular to equipotential surfaces."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two point charges produce a combined potential of zero at a point P between them. What must be true?",
+            "options": [
+              "Both charges are positive",
+              "Both charges are negative",
+              "The charges are equal and opposite in sign",
+              "The charges are equal and the same sign"
+            ],
+            "answer": "The charges are equal and opposite in sign",
+            "explanation": "V_total = kQ₁/r₁ + kQ₂/r₂ = 0 requires Q₁/r₁ = −Q₂/r₂. For a point between two charges, this is satisfied when the charges are opposite in sign (one positive, one negative) with appropriate magnitudes relative to their distances."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t17_l5",
+      "title": "Applications of Electrostatics",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Electrostatics is not just a topic in a textbook — it is the foundation of several important technologies that you encounter in daily life in Uganda and around the world. From the printer in your school office to the paint on vehicles, from lightning protection to dust removal in factories, electrostatics shapes our modern world."
+        },
+        {
+          "type": "heading",
+          "body": "The Van de Graaff Generator"
+        },
+        {
+          "type": "text",
+          "body": "The **Van de Graaff generator** is a machine that accumulates very large static charges on a hollow metal sphere (the dome).\n\n**Principle of operation:**\n1. An electric motor drives a rubber or silk belt between two rollers.\n2. At the lower roller (near a comb or brush connected to the positive terminal of a power supply), charges are sprayed onto the belt by corona discharge.\n3. The belt carries these charges upward.\n4. At the upper roller (inside the dome), another comb or brush removes the charges from the belt and transfers them to the inside of the dome.\n5. By Faraday's principle, charges immediately move to the outside of the dome.\n6. The belt continuously brings more charge — the dome accumulates very high voltage (can reach millions of volts).\n\n**Why does charge keep accumulating?**\nBecause the charge always moves to the OUTER surface of the dome (hollow conductor), the inside is always at zero potential, and charge continues to flow from the belt to the dome regardless of how much charge is already on the outside.\n\n**Applications of the Van de Graaff generator:**\n- Physics demonstrations (making hair stand on end)\n- Particle accelerators (early nuclear physics)\n- Medical X-ray machines (older designs)\n- High-voltage insulation testing\n\n**Safety consideration:** Very high voltages (millions of volts) but tiny currents — the stored energy is relatively small, so shocks are surprising but rarely lethal for brief contact."
+        },
+        {
+          "type": "heading",
+          "body": "The Inkjet Printer"
+        },
+        {
+          "type": "text",
+          "body": "The inkjet printer uses electrostatic deflection to place ink droplets precisely on paper.\n\n**How it works:**\n1. Ink is forced through a tiny nozzle and broken into tiny droplets.\n2. Each droplet passes through a **charging electrode** — by induction, the droplet is given a controlled amount of charge (or no charge, for some designs).\n3. The charged droplets pass between two **deflection plates** connected to a high voltage — creating a uniform electric field.\n4. The electric field deflects the charged droplets by an amount proportional to their charge — like a charged particle in a uniform electric field (similar to a CRT).\n5. Droplets with the correct charge are deflected to the correct position on the paper.\n6. Uncharged droplets pass straight through to a gutter and are recycled.\n7. A computer controls the charging to create text and images.\n\n**Physics involved:** F = qE, constant acceleration between plates, parabolic trajectory — same analysis as a projectile in a gravitational field."
+        },
+        {
+          "type": "heading",
+          "body": "Electrostatic Paint Spraying"
+        },
+        {
+          "type": "text",
+          "body": "Electrostatic paint spraying gives a more even coat and wastes less paint than conventional spraying.\n\n**Principle:**\n1. Paint is atomised into tiny droplets by a spray gun.\n2. The droplets are given a negative charge by passing through a corona discharge region.\n3. The object being painted (e.g., a car body, a metal gate) is connected to earth (grounded) — it becomes the positive 'electrode'.\n4. The negatively charged droplets are attracted to the grounded object by the electric field.\n5. The droplets coat all surfaces, including hidden edges and the back of the object — because the field lines 'wrap around' the object, pulling droplets to all surfaces.\n\n**Advantages:**\n- Less overspray (waste) — paint attracted to object, not surroundings\n- More uniform coating — even coverage including corners\n- Faster coating — electric attraction is faster than relying on spray alone\n- Less solvent needed — lower environmental impact\n\n**Applications:** Car manufacturing, furniture coating, agricultural pesticide spraying, powder coating of metal fences and gates (common in Uganda)."
+        },
+        {
+          "type": "heading",
+          "body": "The Electrostatic Air Cleaner (Precipitator)"
+        },
+        {
+          "type": "text",
+          "body": "Industrial chimneys and air conditioning systems use electrostatic precipitators to remove dust, smoke, and pollutant particles from air.\n\n**How it works:**\n1. Dirty air enters a chamber containing a thin wire (discharge wire) at the centre.\n2. A very high voltage (typically 50,000 V) is applied to the wire — corona discharge ionises the air around it.\n3. The ions attach to dust and smoke particles — the particles become charged.\n4. Oppositely charged collecting plates (walls of the chamber) attract the charged particles.\n5. The particles stick to the plates and fall into collection hoppers when the plates are rapped (knocked).\n6. Clean air exits from the other end.\n\n**Applications:**\n- Power station chimneys (reducing particle emissions)\n- Cement factories\n- Steel mills\n- Home air purifiers\n- Hospital clean rooms\n\n**Relevance to Uganda:** Electrostatic precipitators could significantly reduce air pollution from brick kilns, boda-boda exhaust, and industrial facilities in Kampala and other urban areas.\n\n**Photocopier and laser printer:**\nAlso based on electrostatics:\n1. A drum is uniformly charged.\n2. Light from the image (or laser) discharges selected areas.\n3. Toner (charged powder) sticks only to charged areas.\n4. Toner is transferred to paper and fused by heat.\n5. The drum is cleaned and re-charged for the next copy."
+        },
+        {
+          "type": "heading",
+          "body": "Lightning Conductors (Rods)"
+        },
+        {
+          "type": "text",
+          "body": "Lightning is a massive electrostatic discharge between a charged cloud and the earth (or between clouds). Understanding it allowed Benjamin Franklin to invent the lightning rod — one of the most important safety inventions in history.\n\n**How lightning forms:**\n1. In a thundercloud, ice crystals and water droplets collide, separating charge — negative charge settles at the cloud base, positive at the top.\n2. The negative cloud base repels electrons in the ground below, making the ground locally positive.\n3. When the potential difference becomes large enough (~100 MV), the air breaks down and a conducting channel forms — lightning.\n\n**How a lightning conductor works:**\n1. A sharply pointed metal rod is mounted at the top of a building.\n2. It is connected by a thick copper conductor to a metal plate buried in the earth.\n3. As the charged cloud approaches:\n   a. **Preferred discharge path:** The pointed rod concentrates charge → corona discharge ionises the air → provides a conducting path for lightning to follow safely to earth.\n   b. **Gradual discharge:** The continuous corona discharge slowly neutralises the charge between cloud and building, preventing a sudden violent strike.\n4. Even if lightning does strike, it follows the low-resistance metal conductor to earth, bypassing the building.\n\n**Important in Uganda:** Uganda has one of the highest lightning strike rates in Africa — affecting rural communities (metal-roofed buildings especially vulnerable), schools, and churches. Lightning conductors are a cheap, reliable life-saving technology.\n\n**Hazards from static electricity:**\n- Fuel tanker fires: static sparks from fuel flow can ignite vapour → tankers are earthed during fuelling\n- Electronics damage: static sparks destroy sensitive components → anti-static wristbands and mats used\n- Grain elevator explosions: static sparks in flour or grain dust → earthing and humidity control\n- Hospital operating theatre fires: anaesthetic gases + static → anti-static footwear required"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Key applications of electrostatics: (1) Van de Graaff generator — accumulates charge on dome by Faraday's principle; used in demonstrations and accelerators. (2) Inkjet printer — charged droplets deflected by electric field onto paper. (3) Electrostatic paint spraying — charged paint attracted to earthed object; even coating, less waste. (4) Electrostatic precipitator — corona discharge charges particles; collected on oppositely charged plates; reduces air pollution. (5) Lightning conductor — pointed rod provides safe discharge path for lightning; uses corona discharge to gradually neutralise charge."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Van de Graaff generator: Device accumulating large charges on a dome via a moving belt; uses Faraday's principle\n• Electrostatic precipitator: Device removing charged particles from gas using electric fields; reduces industrial pollution\n• Corona discharge: Ionisation of air at sharp points due to intense electric field; basis of lightning conductors and precipitators\n• Electrostatic paint spraying: Charged paint droplets attracted to earthed objects; gives uniform coating\n• Lightning conductor: Pointed earthed metal rod that provides a safe path for lightning, protecting buildings"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a Van de Graaff generator, charge accumulates on the dome because:",
+            "options": [
+              "The dome is made of insulating material that stores charge",
+              "The belt repels charge onto the dome by friction",
+              "Charge on the inside immediately moves to the outer surface (Faraday's principle), so the inside is always available to receive more",
+              "The dome is connected to the positive terminal of the power supply"
+            ],
+            "answer": "Charge on the inside immediately moves to the outer surface (Faraday's principle), so the inside is always available to receive more",
+            "explanation": "The key is Faraday's principle: charge placed inside a hollow conductor immediately moves to the outer surface. The inside remains at zero potential, allowing continuous charge transfer from the belt, regardless of how much charge is already on the outside."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In an electrostatic precipitator, smoke particles are removed from air because:",
+            "options": [
+              "The particles are slowed down by the electric field",
+              "Corona discharge charges the particles, which are then attracted to oppositely charged collector plates",
+              "The particles are filtered through a fine mesh",
+              "Gravity pulls the charged particles downward"
+            ],
+            "answer": "Corona discharge charges the particles, which are then attracted to oppositely charged collector plates",
+            "explanation": "Corona discharge from the high-voltage wire ionises surrounding air. Ions attach to dust/smoke particles, giving them charge. The charged particles are then attracted to collector plates of opposite sign and stick there, cleaning the air."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A car body is earthed (grounded) and charged paint droplets are sprayed toward it. The paint coats the BACK of the car body (not facing the spray gun) because:",
+            "options": [
+              "The spray gun rotates around the car",
+              "Electric field lines from the charged droplets wrap around the earthed car body, attracting droplets to all surfaces",
+              "The paint has enough momentum to travel around the car",
+              "Gravity pulls the droplets downward around the car"
+            ],
+            "answer": "Electric field lines from the charged droplets wrap around the earthed car body, attracting droplets to all surfaces",
+            "explanation": "The electric field between charged droplets and the earthed (positive) car body curves around all surfaces of the car. This wrapping of field lines attracts paint droplets to even hidden surfaces — a key advantage over conventional spraying."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why is Uganda particularly at risk from lightning strikes?",
+            "options": [
+              "Uganda is at a higher altitude than most African countries",
+              "Uganda has one of the highest lightning strike rates in Africa, partly due to its equatorial location and weather patterns",
+              "Uganda has more metal-roofed buildings than other countries",
+              "Uganda's soil is more conductive than that of other countries"
+            ],
+            "answer": "Uganda has one of the highest lightning strike rates in Africa, partly due to its equatorial location and weather patterns",
+            "explanation": "Uganda's position near the equator, near the equatorial convergence zone, high temperatures, and moisture from Lake Victoria contribute to frequent, intense thunderstorms. This makes lightning conductors especially important for Ugandan buildings."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a photocopier, toner (charged powder) sticks to specific areas of the drum because:",
+            "options": [
+              "The drum is heated and the toner melts onto it",
+              "The drum is uniformly magnetised and toner is magnetic",
+              "Light has discharged those areas, leaving charge patterns that attract the oppositely charged toner",
+              "The drum rotates at the right speed to pick up toner"
+            ],
+            "answer": "Light has discharged those areas, leaving charge patterns that attract the oppositely charged toner",
+            "explanation": "The drum is first uniformly charged. Light reflected from the document (or a laser) discharges specific areas, creating a charge pattern (latent image). Oppositely charged toner particles are attracted to and stick only to the remaining charged areas, creating the image."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A fuel tanker is connected to earth before fuelling begins. This is because:",
+            "options": [
+              "Earthing increases the rate of fuel flow",
+              "Static charge built up during fuel flow could produce a spark, igniting fuel vapour — earthing prevents charge accumulation",
+              "The fuel is a conductor and flows to earth if the tanker is not earthed",
+              "Earthing cools the tanker and reduces evaporation"
+            ],
+            "answer": "Static charge built up during fuel flow could produce a spark, igniting fuel vapour — earthing prevents charge accumulation",
+            "explanation": "Flowing fuel through pipes generates static charge by friction. Without earthing, this charge accumulates until a spark jumps — which could ignite fuel vapour. Connecting to earth allows charge to dissipate continuously, preventing dangerous build-up."
+          }
+        ]
+      }
+    }
+  ]
+}

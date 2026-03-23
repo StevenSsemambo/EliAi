@@ -1,0 +1,709 @@
+{
+  "topic_id": "physics_s5_t18",
+  "topic_title": "Capacitors",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t18_l1",
+      "title": "Capacitance and the Parallel Plate Capacitor",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time you take a flash photograph with a camera, listen to music through a speaker, or use a computer, capacitors are at work. A capacitor is one of the three fundamental components of all electronic circuits — alongside resistors and inductors. It stores electric charge and can release it rapidly, making it essential in timing circuits, filters, power supplies, and energy storage systems. Understanding capacitors begins with the concept of capacitance."
+        },
+        {
+          "type": "heading",
+          "body": "What is a Capacitor?"
+        },
+        {
+          "type": "text",
+          "body": "A **capacitor** is a device that stores electric charge. In its simplest form, a capacitor consists of two conducting plates (or surfaces) separated by an insulating material called a **dielectric**.\n\nWhen a capacitor is connected to a battery:\n- The battery pushes electrons onto one plate — that plate becomes negatively charged (−Q).\n- Electrons are pulled away from the other plate — that plate becomes positively charged (+Q).\n- The two plates carry equal and opposite charges, +Q and −Q.\n- An electric field builds up between the plates.\n- This continues until the potential difference (voltage) across the capacitor equals the battery voltage.\n\n**Symbol in circuit diagrams:** Two parallel lines of equal length (representing the two plates).\n\n**Note:** A capacitor does NOT store charge in the sense that the total charge is zero (one plate has +Q, the other −Q). It stores charge SEPARATION — and with it, electrical energy. When we say a capacitor stores charge Q, we mean each plate carries magnitude Q."
+        },
+        {
+          "type": "heading",
+          "body": "Capacitance: Definition and Units"
+        },
+        {
+          "type": "text",
+          "body": "The **capacitance C** of a capacitor is defined as the ratio of the charge Q stored on one plate to the potential difference V across the plates:\n\n**C = Q / V**\n\nRearranging:\n- Q = CV (charge stored)\n- V = Q/C (voltage across capacitor)\n\n**Units:** The SI unit of capacitance is the **Farad (F)**, named after Michael Faraday.\n1 Farad = 1 Coulomb per Volt (1 F = 1 C/V)\n\nThe Farad is an enormous unit — a 1 F capacitor would be the size of a refrigerator! In practice, we use:\n- **μF (microfarad):** 1 μF = 10⁻⁶ F (common in electronic circuits)\n- **nF (nanofarad):** 1 nF = 10⁻⁹ F (common in radio circuits)\n- **pF (picofarad):** 1 pF = 10⁻¹² F (common in high-frequency circuits)\n\n**Physical meaning of capacitance:**\nCapacitance measures how much charge a capacitor can store per volt of potential difference applied. A capacitor with large capacitance:\n- Stores more charge for the same voltage, OR\n- Requires less voltage for the same charge.\n\nThink of capacitance like the size of a water tank — a larger tank (higher C) holds more water (charge) at the same water level (voltage).\n\n**Worked Example 1:** A capacitor stores 120 μC of charge when connected to a 12 V battery. What is its capacitance?\n\nGiven: Q = 120 × 10⁻⁶ C, V = 12 V\nC = Q/V = 120 × 10⁻⁶ / 12 = 10 × 10⁻⁶ F = **10 μF**\n\n**Worked Example 2:** A 47 μF capacitor is connected to a 9 V battery. How much charge does it store?\n\nGiven: C = 47 × 10⁻⁶ F, V = 9 V\nQ = CV = 47 × 10⁻⁶ × 9 = 423 × 10⁻⁶ C = **423 μC**\n\n**Worked Example 3:** A capacitor holds 500 μC of charge and the voltage across it is 250 V. Find the capacitance in μF.\n\nC = Q/V = 500 × 10⁻⁶ / 250 = 2 × 10⁻⁶ F = **2 μF**"
+        },
+        {
+          "type": "heading",
+          "body": "The Parallel Plate Capacitor"
+        },
+        {
+          "type": "text",
+          "body": "The simplest and most analysed capacitor design is the **parallel plate capacitor**: two flat, parallel conducting plates each of area A, separated by distance d, with a dielectric (or vacuum/air) between them.\n\n**Electric field between the plates (uniform field):**\nFor a parallel plate capacitor with charge Q on each plate and plate area A:\n\nSurface charge density: σ = Q/A\n\nElectric field between plates: **E = σ/ε₀ = Q/(ε₀A)**  (for vacuum/air between plates)\n\nThe field is **uniform** (same everywhere between the plates, except near the edges).\n\n**Potential difference between plates:**\nV = E × d = Qd/(ε₀A)\n\n**Capacitance of a parallel plate capacitor:**\nC = Q/V = Q / [Qd/(ε₀A)] = ε₀A/d\n\n**C = ε₀A/d**  (for vacuum or air between plates)\n\nWith a dielectric material of relative permittivity εᵣ:\n\n**C = ε₀εᵣA/d**\n\nWhere:\n- ε₀ = 8.85 × 10⁻¹² F/m (permittivity of free space)\n- εᵣ = relative permittivity of the dielectric (dimensionless; εᵣ > 1 always)\n- A = area of each plate (m²)\n- d = separation between plates (m)\n\n**What this equation tells us:**\n| Factor | Effect on C | Physical reason |\n|---|---|---|\n| Increase area A | C increases | More plate area → more charge can be stored at same voltage |\n| Decrease separation d | C increases | Stronger E-field attraction between plates pulls more charge onto plates |\n| Increase εᵣ (dielectric) | C increases | Dielectric weakens E-field → more charge needed for same voltage |\n\n**Worked Example 4:** A parallel plate capacitor has plate area 200 cm² and plate separation 2.0 mm. Calculate the capacitance with (a) air, (b) mica (εᵣ = 7) between the plates. (ε₀ = 8.85 × 10⁻¹² F/m)\n\nGiven: A = 200 × 10⁻⁴ m² = 0.020 m², d = 2.0 × 10⁻³ m\n\n(a) Air (εᵣ ≈ 1):\nC = ε₀A/d = 8.85 × 10⁻¹² × 0.020 / (2.0 × 10⁻³)\n= 8.85 × 10⁻¹² × 10 = **88.5 × 10⁻¹² F = 88.5 pF**\n\n(b) Mica (εᵣ = 7):\nC = ε₀εᵣA/d = 7 × 88.5 pF = **619.5 pF ≈ 620 pF**\n\nThe mica dielectric increases capacitance by a factor of 7.\n\n**Worked Example 5:** A parallel plate capacitor has capacitance 500 pF with air between the plates. The plate area is 0.050 m². Find the separation between the plates.\n\nC = ε₀A/d → d = ε₀A/C = 8.85×10⁻¹² × 0.050 / (500×10⁻¹²)\n= 4.425×10⁻¹³ / 5×10⁻¹⁰ = **8.85 × 10⁻⁴ m ≈ 0.885 mm**"
+        },
+        {
+          "type": "heading",
+          "body": "The Role of the Dielectric"
+        },
+        {
+          "type": "text",
+          "body": "A **dielectric** is an insulating material placed between the plates of a capacitor. Common dielectrics include:\n\n| Dielectric Material | Relative Permittivity (εᵣ) | Typical Use |\n|---|---|---|\n| Vacuum | 1.000 | Reference |\n| Air | 1.0006 | General purpose |\n| Paper | 3.5 | Old capacitors |\n| Mica | 3–7 | Precision capacitors |\n| Glass | 5–10 | High voltage |\n| Ceramic | 10–10,000 | Compact electronics |\n| Water | 80 | (Not practical) |\n\n**Why does a dielectric increase capacitance?**\n\nWhen a dielectric is inserted between charged plates:\n1. The electric field between the plates partially aligns the polar molecules (or induces dipoles) in the dielectric.\n2. These aligned dipoles create an opposing internal electric field — effectively reducing the net field E between the plates.\n3. Reduced E means reduced voltage V = Ed across the capacitor.\n4. Since C = Q/V and Q hasn't changed, a lower V means higher C.\n\nAlternatively: with the dielectric in, more charge must be placed on the plates to maintain the same voltage → higher C.\n\n**The dielectric constant εᵣ** is the factor by which capacitance is increased compared to vacuum:\nεᵣ = C_with_dielectric / C_vacuum\n\nThe actual permittivity of the material is ε = ε₀εᵣ.\n\n**Two additional roles of a dielectric:**\n1. **Electrical insulation:** Prevents charge from jumping between plates (allowing smaller d without short-circuit).\n2. **Mechanical support:** Holds the plates apart at precise separation, maintaining d.\n\nBoth effects together allow real capacitors to be made smaller and higher in capacitance than air-gap capacitors."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "A capacitor stores charge separation on two conducting plates separated by a dielectric. Capacitance C = Q/V; unit Farad (F). For a parallel plate capacitor: C = ε₀εᵣA/d. Capacitance increases with larger plate area, smaller plate separation, and higher dielectric constant. The dielectric increases C by reducing the electric field between plates (molecular polarisation), and also prevents short-circuits between plates."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Capacitor: Device storing electric charge on two conducting plates separated by a dielectric\n• Capacitance (C): Charge stored per unit voltage; C = Q/V; unit Farad (F)\n• Dielectric: Insulating material between capacitor plates; increases capacitance by factor εᵣ\n• Relative permittivity (εᵣ): Factor by which a dielectric increases capacitance compared to vacuum; εᵣ = C_material/C_vacuum\n• Permittivity of free space (ε₀): ε₀ = 8.85 × 10⁻¹² F/m; fundamental constant relating charge, field and geometry\n• Parallel plate capacitor: Two flat parallel conducting plates of area A separated by distance d; C = ε₀εᵣA/d"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A capacitor is connected to a 24 V supply and stores 360 μC of charge. What is the capacitance?",
+            "options": [
+              "0.067 μF",
+              "15 μF",
+              "8640 μF",
+              "6.67 μF"
+            ],
+            "answer": "15 μF",
+            "explanation": "C = Q/V = 360 × 10⁻⁶ / 24 = 15 × 10⁻⁶ F = 15 μF. Remember C = Q/V always. Always check units: Q in coulombs, V in volts gives C in farads."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A parallel plate capacitor has plate area 400 cm² and separation 1.0 mm. What is its capacitance with air between the plates? (ε₀ = 8.85 × 10⁻¹² F/m)",
+            "options": [
+              "3.54 nF",
+              "35.4 pF",
+              "354 pF",
+              "35.4 nF"
+            ],
+            "answer": "354 pF",
+            "explanation": "A = 400 × 10⁻⁴ m² = 0.04 m², d = 1.0 × 10⁻³ m. C = ε₀A/d = 8.85×10⁻¹² × 0.04 / 10⁻³ = 8.85×10⁻¹² × 40 = 354 × 10⁻¹² F = 354 pF."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A capacitor's plate separation is halved while the plate area is doubled. What happens to the capacitance?",
+            "options": [
+              "Unchanged",
+              "Doubled",
+              "Quadrupled (×4)",
+              "Halved"
+            ],
+            "answer": "Quadrupled (×4)",
+            "explanation": "C = ε₀A/d. If A → 2A and d → d/2: C_new = ε₀(2A)/(d/2) = 4ε₀A/d = 4C. Doubling area doubles C; halving d doubles C again. Combined effect: C × 4."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why does inserting a dielectric between capacitor plates increase capacitance?",
+            "options": [
+              "The dielectric increases the charge on the plates directly",
+              "The dielectric repels electrons from the negative plate, increasing charge",
+              "Molecular polarisation in the dielectric creates an opposing field, reducing voltage for the same charge — so C = Q/V increases",
+              "The dielectric increases the plate area effectively"
+            ],
+            "answer": "Molecular polarisation in the dielectric creates an opposing field, reducing voltage for the same charge — so C = Q/V increases",
+            "explanation": "The dielectric's polar molecules align with the field, creating an opposing internal field. Net field E (and thus voltage V = Ed) decreases. Since C = Q/V and Q is unchanged, lower V means higher C. The dielectric constant εᵣ tells us by how much: C_new = εᵣ × C_air."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A 220 pF capacitor is connected to a 50 V supply. How much charge is stored?",
+            "options": [
+              "4.4 μC",
+              "11 nC",
+              "4.4 nC",
+              "11 μC"
+            ],
+            "answer": "11 nC",
+            "explanation": "Q = CV = 220 × 10⁻¹² × 50 = 11,000 × 10⁻¹² C = 11 × 10⁻⁹ C = 11 nC. Note: pF × V gives pC, and 11,000 pC = 11 nC."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A parallel plate air capacitor has capacitance 60 pF. A dielectric with εᵣ = 5 is inserted between the plates without changing the plate separation or area. The new capacitance is:",
+            "options": [
+              "12 pF",
+              "60 pF",
+              "300 pF",
+              "3000 pF"
+            ],
+            "answer": "300 pF",
+            "explanation": "C_new = εᵣ × C_air = 5 × 60 = 300 pF. The dielectric multiplies capacitance by εᵣ because it reduces the effective electric field between the plates by the same factor."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t18_l2",
+      "title": "Capacitors in Series and Parallel Networks",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Just as resistors can be combined in series or parallel to achieve desired resistance values, capacitors can be combined to create a required capacitance. However, the rules for capacitors are the OPPOSITE of those for resistors — parallel capacitors add directly (like series resistors) and series capacitors add as reciprocals (like parallel resistors). Understanding why requires thinking carefully about charge and voltage distribution in each configuration."
+        },
+        {
+          "type": "heading",
+          "body": "Capacitors in Parallel"
+        },
+        {
+          "type": "text",
+          "body": "When capacitors are connected in **parallel**, their top plates are all connected together (to the positive terminal) and their bottom plates all connected together (to the negative terminal).\n\n**Key relationships for parallel capacitors:**\n- **Voltage is the same** across each capacitor: V₁ = V₂ = V₃ = V\n  (All top plates at the same potential; all bottom plates at the same potential.)\n- **Charge is shared** among the capacitors: Q_total = Q₁ + Q₂ + Q₃\n\n**Derivation of equivalent capacitance (parallel):**\n\nFor each capacitor: Q₁ = C₁V, Q₂ = C₂V, Q₃ = C₃V\n\nTotal charge:\nQ_total = Q₁ + Q₂ + Q₃ = C₁V + C₂V + C₃V = (C₁ + C₂ + C₃)V\n\nEquivalent capacitance C_eq = Q_total / V:\n\n**C_eq = C₁ + C₂ + C₃ + ... (parallel)**\n\n**Physical understanding:** Connecting capacitors in parallel effectively increases the total plate area available to store charge, without changing the plate separation. Since C ∝ A, total C increases.\n\n**Worked Example 1:** Three capacitors of 10 μF, 22 μF, and 33 μF are connected in parallel across a 12 V supply. Find:\n(a) The equivalent capacitance\n(b) The total charge stored\n(c) The charge on each capacitor\n\n(a) C_eq = 10 + 22 + 33 = **65 μF**\n\n(b) Q_total = C_eq × V = 65 × 10⁻⁶ × 12 = **780 μC**\n\n(c) Each capacitor has 12 V across it:\nQ₁ = 10 × 10⁻⁶ × 12 = 120 μC\nQ₂ = 22 × 10⁻⁶ × 12 = 264 μC\nQ₃ = 33 × 10⁻⁶ × 12 = 396 μC\nCheck: 120 + 264 + 396 = 780 μC ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Capacitors in Series"
+        },
+        {
+          "type": "text",
+          "body": "When capacitors are connected in **series**, they are joined end-to-end so that the only path for current (and charge movement) is through each capacitor in turn.\n\n**Key relationships for series capacitors:**\n- **Charge is the same** on each capacitor: Q₁ = Q₂ = Q₃ = Q\n  (Why? The inner plates between capacitors form isolated conducting segments. When charge +Q arrives on the left plate of C₁, by induction −Q appears on C₁'s right plate; the isolated segment must then have +Q on C₂'s left plate; and so on. The same Q appears on every capacitor.)\n- **Voltage is shared** among the capacitors: V_total = V₁ + V₂ + V₃\n\n**Derivation of equivalent capacitance (series):**\n\nFor each capacitor: V₁ = Q/C₁, V₂ = Q/C₂, V₃ = Q/C₃\n\nTotal voltage:\nV_total = V₁ + V₂ + V₃ = Q/C₁ + Q/C₂ + Q/C₃ = Q(1/C₁ + 1/C₂ + 1/C₃)\n\nEquivalent capacitance C_eq = Q/V_total:\n\n**1/C_eq = 1/C₁ + 1/C₂ + 1/C₃ + ... (series)**\n\n**Important result:** The equivalent capacitance of capacitors in series is ALWAYS LESS than the smallest individual capacitor.\n\n**For two capacitors in series only:**\nC_eq = C₁C₂ / (C₁ + C₂)  (product over sum — same as parallel resistors)\n\n**Physical understanding:** Connecting capacitors in series effectively increases the total plate separation d (the charge must travel through the combined gap). Since C ∝ 1/d, total C decreases.\n\n**Worked Example 2:** Three capacitors of 6 μF, 12 μF, and 4 μF are connected in series across a 24 V supply. Find:\n(a) The equivalent capacitance\n(b) The charge on each capacitor\n(c) The voltage across each capacitor\n\n(a) 1/C_eq = 1/6 + 1/12 + 1/4 = 2/12 + 1/12 + 3/12 = 6/12 = 1/2\nC_eq = **2 μF**\n\n(b) Q = C_eq × V_total = 2 × 10⁻⁶ × 24 = **48 μC** (same on all three)\n\n(c) V₁ = Q/C₁ = 48 × 10⁻⁶ / 6 × 10⁻⁶ = **8 V**\nV₂ = Q/C₂ = 48 × 10⁻⁶ / 12 × 10⁻⁶ = **4 V**\nV₃ = Q/C₃ = 48 × 10⁻⁶ / 4 × 10⁻⁶ = **12 V**\nCheck: 8 + 4 + 12 = 24 V ✓\nNote: The smallest capacitor (4 μF) has the LARGEST voltage across it."
+        },
+        {
+          "type": "heading",
+          "body": "Mixed Networks: Series-Parallel Combinations"
+        },
+        {
+          "type": "text",
+          "body": "Real circuits often contain capacitors in both series and parallel. The strategy is:\n1. Identify groups of capacitors that are purely in parallel — combine them first using C_eq(parallel) = ΣC.\n2. Identify groups purely in series — combine using 1/C_eq = Σ(1/C).\n3. Repeat until a single equivalent capacitance remains.\n\n**Worked Example 3:** A circuit has C₁ = 4 μF and C₂ = 6 μF in parallel; this combination is in series with C₃ = 2 μF. The whole circuit is connected to a 30 V supply. Find:\n(a) The equivalent capacitance of the entire network\n(b) The charge on C₃\n(c) The voltage across the parallel combination (C₁ and C₂)\n(d) The charge on C₁ and C₂\n\n(a) Step 1: C₁ and C₂ in parallel:\nC₁₂ = 4 + 6 = 10 μF\n\nStep 2: C₁₂ in series with C₃:\n1/C_eq = 1/10 + 1/2 = 1/10 + 5/10 = 6/10\nC_eq = 10/6 = **5/3 μF ≈ 1.67 μF**\n\n(b) Total charge (= charge on C₃ in series section):\nQ_total = C_eq × V = (5/3) × 10⁻⁶ × 30 = **50 μC**\nSo Q₃ = 50 μC\n\n(c) Voltage across C₃:\nV₃ = Q₃/C₃ = 50 × 10⁻⁶ / 2 × 10⁻⁶ = 25 V\nVoltage across parallel combination:\nV₁₂ = V_total − V₃ = 30 − 25 = **5 V**\n\n(d) Q₁ = C₁ × V₁₂ = 4 × 10⁻⁶ × 5 = **20 μC**\nQ₂ = C₂ × V₁₂ = 6 × 10⁻⁶ × 5 = **30 μC**\nCheck: Q₁ + Q₂ = 20 + 30 = 50 μC = Q_total ✓\n\n**Worked Example 4 — Two equal capacitors:** Two identical capacitors C are first connected in series, then in parallel across the same voltage V. Compare the total charge stored in each case.\n\nSeries: C_eq = C/2; Q_series = (C/2) × V = CV/2\nParallel: C_eq = 2C; Q_parallel = 2C × V = 2CV\nRatio: Q_parallel / Q_series = 2CV / (CV/2) = 4\nParallel stores FOUR TIMES as much charge as series for the same voltage."
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Capacitors and Resistors in Combinations"
+        },
+        {
+          "type": "text",
+          "body": "Students often confuse the rules for capacitors and resistors. This table clarifies:\n\n| Configuration | Resistors | Capacitors |\n|---|---|---|\n| In SERIES | R_eq = R₁+R₂+R₃ (adds up) | 1/C_eq = 1/C₁+1/C₂+1/C₃ (reciprocals add) |\n| In PARALLEL | 1/R_eq = 1/R₁+1/R₂+1/R₃ (reciprocals add) | C_eq = C₁+C₂+C₃ (adds up) |\n| Same in series | Current I | Charge Q |\n| Same in parallel | Voltage V | Voltage V |\n| Series result | Larger R_eq | Smaller C_eq |\n| Parallel result | Smaller R_eq | Larger C_eq |\n\n**Memory aid:**\n- Capacitors in PARALLEL behave like resistors in SERIES (add directly).\n- Capacitors in SERIES behave like resistors in PARALLEL (add as reciprocals).\n\nThe reason is fundamental: resistors impede current (add in series because current must pass through both), while capacitors store charge (add in parallel because charge is split between them)."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Parallel capacitors: same voltage V across each; total charge Q_total = ΣQᵢ; C_eq = C₁ + C₂ + C₃ (equivalent C is largest). Series capacitors: same charge Q on each; total voltage V_total = ΣVᵢ; 1/C_eq = 1/C₁ + 1/C₂ + 1/C₃ (equivalent C is smallest, always less than the smallest individual C). Mixed networks: reduce parallel groups first, then series (or vice versa). Key contrast with resistors: capacitor rules are 'swapped' — parallel adds, series takes reciprocals."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Capacitors in parallel: C_eq = C₁ + C₂ + ...; voltage same across all; charge splits proportionally to capacitance\n• Capacitors in series: 1/C_eq = 1/C₁ + 1/C₂ + ...; charge same on all; voltage splits inversely proportional to capacitance\n• Equivalent capacitance: Single capacitance that stores the same charge at the same voltage as the network\n• Charge sharing (series): All series capacitors carry the same charge Q due to charge conservation on isolated internal plates"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Three capacitors of 8 μF, 12 μF, and 24 μF are connected in parallel. What is the equivalent capacitance?",
+            "options": [
+              "4 μF",
+              "44 μF",
+              "14.4 μF",
+              "2304 μF"
+            ],
+            "answer": "44 μF",
+            "explanation": "Parallel: C_eq = C₁ + C₂ + C₃ = 8 + 12 + 24 = 44 μF. For parallel capacitors, simply add all capacitances directly."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Three capacitors of 8 μF, 12 μF, and 24 μF are connected in series. What is the equivalent capacitance?",
+            "options": [
+              "44 μF",
+              "4 μF",
+              "1.6 μF",
+              "14.4 μF"
+            ],
+            "answer": "4 μF",
+            "explanation": "1/C_eq = 1/8 + 1/12 + 1/24 = 3/24 + 2/24 + 1/24 = 6/24 = 1/4. Therefore C_eq = 4 μF. Note: this is less than the smallest individual capacitor (8 μF). ✓"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two capacitors, 10 μF and 40 μF, are connected in series across a 100 V supply. What is the voltage across the 10 μF capacitor?",
+            "options": [
+              "20 V",
+              "80 V",
+              "50 V",
+              "10 V"
+            ],
+            "answer": "80 V",
+            "explanation": "Series: same charge Q on both. C_eq = (10×40)/(10+40) = 400/50 = 8 μF. Q = 8×10⁻⁶ × 100 = 800 μC. V₁₀ = Q/C₁ = 800×10⁻⁶/10×10⁻⁶ = 80 V. V₄₀ = 800/40 = 20 V. Check: 80+20 = 100 V ✓. The smaller capacitor gets the larger voltage — always true for series capacitors."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 5 μF and a 20 μF capacitor are connected in parallel across a 60 V supply. What is the total charge stored?",
+            "options": [
+              "300 μC",
+              "1200 μC",
+              "1500 μC",
+              "288 μC"
+            ],
+            "answer": "1500 μC",
+            "explanation": "Parallel: C_eq = 5 + 20 = 25 μF. Q_total = C_eq × V = 25 × 10⁻⁶ × 60 = 1500 μC. Alternatively: Q₅ = 5×60 = 300 μC; Q₂₀ = 20×60 = 1200 μC; Total = 1500 μC ✓."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which statement about capacitors in series is CORRECT?",
+            "options": [
+              "The equivalent capacitance is larger than the largest individual capacitor",
+              "Each capacitor has a different charge but the same voltage",
+              "Each capacitor stores the same charge Q",
+              "The voltage is the same across all capacitors"
+            ],
+            "answer": "Each capacitor stores the same charge Q",
+            "explanation": "In series, the same charge Q flows to each capacitor because the isolated inner conducting segments (between capacitors) cannot gain or lose charge overall. Voltage, however, splits: V = Q/C, so the capacitor with smallest C has the largest voltage."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A 6 μF capacitor and a 3 μF capacitor are in series, and this series combination is in parallel with a 4 μF capacitor. What is the total equivalent capacitance?",
+            "options": [
+              "13 μF",
+              "6 μF",
+              "1.71 μF",
+              "10 μF"
+            ],
+            "answer": "6 μF",
+            "explanation": "Step 1: Series pair: C_series = (6×3)/(6+3) = 18/9 = 2 μF. Step 2: This 2 μF in parallel with 4 μF: C_eq = 2 + 4 = 6 μF."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t18_l3",
+      "title": "Charging and Discharging a Capacitor",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a capacitor is connected to a battery through a resistor, it does not charge instantaneously — the charge builds up gradually, following an exponential pattern. Similarly, a charged capacitor does not release all its energy in an instant. This time-varying behaviour is described by exponential equations and is fundamental to how capacitors are used in timing circuits, camera flashes, filters, and many other applications."
+        },
+        {
+          "type": "heading",
+          "body": "Charging a Capacitor Through a Resistor"
+        },
+        {
+          "type": "text",
+          "body": "**Circuit setup:** A battery of EMF ε, a resistor R, a capacitor C, and a switch S are all connected in series.\n\n**What happens when S is closed (charging begins):**\n\n- At t = 0 (switch just closed): The capacitor is uncharged (V_C = 0), so the full EMF drives a maximum current through R.\n  - Initial current: I₀ = ε/R\n  - Initial voltage across C: V_C = 0\n\n- As charge builds on the capacitor: V_C increases, so the remaining voltage across R (= ε − V_C) decreases.\n  - Current: I = (ε − V_C)/R = decreasing\n\n- At t → ∞ (fully charged): V_C = ε, no current flows (I = 0), capacitor is fully charged.\n  - Final charge: Q₀ = Cε\n\n**Exponential equations for charging:**\n\nCharge at time t:\n**Q(t) = Q₀(1 − e^(−t/RC))**\n\nVoltage across capacitor at time t:\n**V_C(t) = ε(1 − e^(−t/RC))**\n\nCurrent at time t:\n**I(t) = I₀ × e^(−t/RC) = (ε/R) × e^(−t/RC)**\n\nWhere:\n- Q₀ = Cε = maximum (final) charge\n- ε = battery EMF\n- R = resistance (Ω)\n- C = capacitance (F)\n- t = time (s)\n- e = Euler's number ≈ 2.718\n- RC = **time constant τ** (tau)\n\n**Key observations:**\n- Q and V_C grow from 0 toward their maximum values (exponential growth approaching a limit).\n- Current I decays exponentially from its maximum value toward zero.\n- The charging curves for Q and V_C are mirror images of the current curve."
+        },
+        {
+          "type": "heading",
+          "body": "The Time Constant τ = RC"
+        },
+        {
+          "type": "text",
+          "body": "The **time constant τ = RC** is the most important parameter describing how fast a capacitor charges or discharges.\n\n**Unit:** τ = RC → [Ω × F] = [V/A × C/V] = [C/A] = [C/(C/s)] = seconds (s)\n\n**Physical meaning of τ:**\n- τ is the time it takes for the charge (or voltage) on a charging capacitor to reach **1 − 1/e ≈ 63.2%** of its final value.\n- τ is the time it takes for the charge (or voltage) on a discharging capacitor to fall to **1/e ≈ 36.8%** of its initial value.\n\n**Charging table (values of V_C/ε at multiples of τ):**\n| Time | V_C (as fraction of ε) | % of maximum |\n|---|---|---|\n| t = 0 | 0 | 0% |\n| t = τ | 1 − e⁻¹ = 0.632 | 63.2% |\n| t = 2τ | 1 − e⁻² = 0.865 | 86.5% |\n| t = 3τ | 1 − e⁻³ = 0.950 | 95.0% |\n| t = 4τ | 1 − e⁻⁴ = 0.982 | 98.2% |\n| t = 5τ | 1 − e⁻⁵ ≈ 0.993 | 99.3% |\n\nIn practice, a capacitor is considered **fully charged** after 5τ (99.3% of maximum).\n\n**Large RC → slow charging; small RC → fast charging.**\n- Large R limits current → slow charging\n- Large C needs more charge → slow charging\n- Small R and small C → fast charging\n\n**Worked Example 1:** A 100 μF capacitor is charged through a 47 kΩ resistor from a 9 V supply.\n(a) Find the time constant τ.\n(b) What is the charge on the capacitor after one time constant?\n(c) What is the current after 2τ?\n\n(a) τ = RC = 47 × 10³ × 100 × 10⁻⁶ = **4.7 s**\n\n(b) Q₀ = Cε = 100 × 10⁻⁶ × 9 = 900 μC\nQ(τ) = Q₀(1 − e⁻¹) = 900 × 0.632 = **568.8 μC ≈ 569 μC**\n\n(c) I₀ = ε/R = 9 / 47 × 10³ = 1.915 × 10⁻⁴ A ≈ 191.5 μA\nI(2τ) = I₀ × e⁻² = 191.5 × 10⁻⁶ × 0.135 = **25.9 μA**"
+        },
+        {
+          "type": "heading",
+          "body": "Discharging a Capacitor Through a Resistor"
+        },
+        {
+          "type": "text",
+          "body": "**Circuit:** A fully charged capacitor (initial charge Q₀, initial voltage V₀) is connected across a resistor R (battery removed or switched out).\n\n**What happens when discharge begins:**\n- At t = 0: V_C = V₀, initial current I₀ = V₀/R flows (from + plate, through R, to − plate).\n- As charge flows off the plates: V_C decreases → current decreases.\n- At t → ∞: V_C = 0, I = 0, capacitor fully discharged.\n\n**Exponential equations for discharging:**\n\nCharge at time t:\n**Q(t) = Q₀ × e^(−t/RC)**\n\nVoltage at time t:\n**V_C(t) = V₀ × e^(−t/RC)**\n\nCurrent at time t:\n**I(t) = I₀ × e^(−t/RC) = (V₀/R) × e^(−t/RC)**\n\n**Key observations:**\n- Q, V_C, and I all decay exponentially from their initial values toward zero.\n- After time τ = RC: Q has fallen to Q₀/e ≈ 36.8% of its initial value.\n- All three quantities (Q, V, I) follow the SAME exponential decay curve shape.\n- The current is in the OPPOSITE direction to the charging current.\n\n**Discharging table (values of V_C/V₀ at multiples of τ):**\n| Time | V_C / V₀ | % remaining |\n|---|---|---|\n| t = 0 | 1.000 | 100% |\n| t = τ | e⁻¹ = 0.368 | 36.8% |\n| t = 2τ | e⁻² = 0.135 | 13.5% |\n| t = 3τ | e⁻³ = 0.050 | 5.0% |\n| t = 5τ | e⁻⁵ ≈ 0.007 | 0.7% |\n\nThe capacitor is considered **fully discharged** after 5τ.\n\n**Worked Example 2:** A 470 μF capacitor charged to 12 V is discharged through a 1000 Ω resistor.\n(a) Find the time constant τ.\n(b) Find the voltage after 0.5 s.\n(c) How long until voltage falls to 1.5 V?\n\n(a) τ = RC = 1000 × 470 × 10⁻⁶ = **0.470 s**\n\n(b) V(t) = V₀ × e^(−t/τ) = 12 × e^(−0.5/0.47) = 12 × e^(−1.064)\n= 12 × 0.3453 = **4.14 V**\n\n(c) 1.5 = 12 × e^(−t/0.47)\ne^(−t/0.47) = 1.5/12 = 0.125\n−t/0.47 = ln(0.125) = −2.079\nt = 2.079 × 0.47 = **0.977 s ≈ 0.98 s**\n\n(Alternatively: 1.5 V = 12/8 = 12 × 2⁻³ → 3 half-lives. Half-life T₁/₂ = 0.693τ = 0.693 × 0.47 = 0.326 s. t = 3 × 0.326 = 0.977 s ✓)\n\n**Half-life of capacitor discharge:**\nThe time for voltage (or charge) to halve:\n**T₁/₂ = 0.693 × τ = 0.693 × RC**\n\n(Same formula as radioactive decay — the mathematics of exponential decay is identical!)"
+        },
+        {
+          "type": "heading",
+          "body": "Graphs of Charging and Discharging"
+        },
+        {
+          "type": "text",
+          "body": "**Charging curves (Q vs t and V_C vs t):**\n- Start at zero (t = 0)\n- Rise steeply at first, then level off\n- Approach the maximum value (Q₀ or ε) asymptotically\n- Shape: exponential approach to limit (concave down)\n- The tangent at t = 0 reaches the maximum value at t = τ (useful for graphical determination of τ)\n\n**Charging curve for current (I vs t):**\n- Starts at maximum I₀ = ε/R\n- Decays exponentially to zero\n- Shape: exponential decay (concave up)\n\n**Discharging curves (Q vs t, V_C vs t, and I vs t):**\n- All start at their maximum values\n- All decay exponentially toward zero\n- Shape: exponential decay (concave up)\n\n**How to find τ from a graph:**\nMethod 1: On a V-t discharging graph, find the time at which V has fallen to 37% (≈ 1/3) of its initial value → that time is τ.\nMethod 2: On a ln(V) vs t graph: ln(V) = ln(V₀) − t/τ → straight line with slope = −1/τ. Plot ln(V) vs t, measure the gradient → τ = −1/gradient.\n\n**Worked Example 3 (graphical method):** A capacitor discharging through a resistor gives the following data:\n| t (s) | V (V) | ln(V) |\n|---|---|---|\n| 0 | 10.0 | 2.303 |\n| 5 | 6.07 | 1.803 |\n| 10 | 3.68 | 1.303 |\n| 15 | 2.23 | 0.803 |\n| 20 | 1.35 | 0.303 |\n\nGradient of ln(V) vs t = (0.303 − 2.303)/(20 − 0) = −2.000/20 = −0.100 s⁻¹\nτ = −1/gradient = −1/(−0.100) = **10 s**\n(Confirm: at t = 10s, V = 3.68 V = 10/e ≈ 3.68 V ✓ — this is exactly τ)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Charging: V_C = ε(1 − e^−t/RC), Q = Q₀(1 − e^−t/RC), I = (ε/R)e^−t/RC. Discharging: V_C = V₀e^−t/RC, Q = Q₀e^−t/RC, I = I₀e^−t/RC. Time constant τ = RC (seconds). After τ: charging reaches 63.2% of max; discharging falls to 36.8% of initial. Fully charged/discharged after ~5τ. Half-life T₁/₂ = 0.693τ. Large RC = slow; small RC = fast. Graphical method: plot ln(V) vs t → slope = −1/τ."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Time constant (τ): τ = RC; time for charging capacitor to reach 63.2% of max, or for discharging to fall to 36.8% of initial; unit seconds\n• Exponential decay: Mathematical form Q = Q₀e^−t/RC; applies to discharging voltage, charge, and current\n• Exponential growth: Mathematical form Q = Q₀(1 − e^−t/RC); applies to charging charge and voltage\n• Half-life (T₁/₂): Time for discharge quantity to halve; T₁/₂ = 0.693τ\n• Initial current: I₀ = ε/R (charging) or I₀ = V₀/R (discharging); maximum current at t = 0"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 50 μF capacitor is charged through a 20 kΩ resistor. What is the time constant?",
+            "options": [
+              "0.001 s",
+              "1.0 s",
+              "2.5 ms",
+              "400 s"
+            ],
+            "answer": "1.0 s",
+            "explanation": "τ = RC = 20 × 10³ × 50 × 10⁻⁶ = 1.0 s. Check units: Ω × F = (V/A)(C/V) = C/A = C/(C/s) = s ✓."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A capacitor charged to 20 V discharges through a resistor. After one time constant τ, the voltage across the capacitor is approximately:",
+            "options": [
+              "10 V",
+              "13.6 V",
+              "7.36 V",
+              "6.32 V"
+            ],
+            "answer": "7.36 V",
+            "explanation": "After one time constant: V = V₀ × e⁻¹ = 20 × (1/2.718) = 20 × 0.368 = 7.36 V. The voltage falls to 36.8% of its initial value after one time constant during discharge."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A capacitor is charged through a resistor. After how many time constants is the capacitor considered effectively fully charged?",
+            "options": [
+              "1τ (63% charged)",
+              "2τ (86% charged)",
+              "3τ (95% charged)",
+              "5τ (99.3% charged)"
+            ],
+            "answer": "5τ (99.3% charged)",
+            "explanation": "By convention, a capacitor is considered fully charged after 5 time constants (5τ), when it has reached 99.3% of its maximum charge. After 3τ it is 95% charged — close, but not considered 'complete' in most applications."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 200 μF capacitor, initially charged to 15 V, discharges through a 500 Ω resistor. What is the initial discharge current?",
+            "options": [
+              "3 mA",
+              "30 mA",
+              "300 mA",
+              "0.3 mA"
+            ],
+            "answer": "30 mA",
+            "explanation": "At t = 0, the capacitor acts like a voltage source of 15 V. Initial current I₀ = V₀/R = 15/500 = 0.030 A = 30 mA. After this, current decays exponentially as the capacitor voltage falls."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "To double the time constant of a charging circuit, you could:",
+            "options": [
+              "Halve the resistance only",
+              "Double the capacitance only",
+              "Double both R and C",
+              "Double the supply voltage"
+            ],
+            "answer": "Double the capacitance only",
+            "explanation": "τ = RC. Doubling C doubles τ (since τ is directly proportional to both R and C). Doubling both R and C would quadruple τ. Halving R would halve τ. Supply voltage does not affect τ — only R and C determine the time constant."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "On a ln(V) vs time graph for a discharging capacitor, the gradient is measured as −0.25 s⁻¹. What is the time constant?",
+            "options": [
+              "0.25 s",
+              "2.5 s",
+              "4 s",
+              "0.4 s"
+            ],
+            "answer": "4 s",
+            "explanation": "V = V₀e^(−t/τ) → ln(V) = ln(V₀) − t/τ. The gradient of ln(V) vs t = −1/τ = −0.25 s⁻¹. Therefore τ = 1/0.25 = 4 s. This graphical method is how τ is found experimentally."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t18_l4",
+      "title": "Energy Stored in a Capacitor",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A charged capacitor stores electrical energy — this is what makes capacitors so useful. A camera flash discharges a large capacitor through a flashlamp in milliseconds, delivering a burst of energy far greater than a battery could provide so quickly. Defibrillators in hospitals charge a capacitor and then discharge it through the patient's chest to restart a stopped heart. Understanding how much energy is stored in a capacitor — and where that energy resides — is the focus of this lesson."
+        },
+        {
+          "type": "heading",
+          "body": "Deriving the Energy Stored in a Capacitor"
+        },
+        {
+          "type": "text",
+          "body": "**Method: Work done in charging the capacitor**\n\nImagine charging a capacitor gradually, starting from Q = 0. At any moment when the charge on the capacitor is q, the voltage across it is v = q/C.\n\nTo add a small additional charge dq against this voltage requires work:\ndW = v × dq = (q/C) × dq\n\nTo find the total work W done to charge the capacitor from 0 to final charge Q:\nW = ∫₀^Q (q/C) dq = [q²/2C]₀^Q = Q²/2C\n\n**This work is stored as electrical energy E in the capacitor:**\n\n**E = Q²/(2C)**\n\nUsing Q = CV, we can write this in three equivalent forms:\n\n**E = Q²/(2C) = ½CV² = ½QV**\n\nWhere:\n- E = energy stored (J)\n- Q = charge on the capacitor (C)\n- V = voltage across the capacitor (V)\n- C = capacitance (F)\n\n**Physical interpretation:** The ½ factor arises because the voltage builds up gradually from 0 to V during charging — the average voltage is V/2. So total energy = charge × average voltage = Q × V/2 = ½QV.\n\n**Graphical derivation:** On a Q-V graph (charge vs voltage), the relationship is a straight line Q = CV. The energy stored equals the area of the triangle under the Q-V line:\nArea of triangle = ½ × base × height = ½ × V × Q = ½QV ✓\n\n**Worked Example 1:** A 500 μF capacitor is charged to 200 V. Calculate the energy stored.\n\nMethod 1: E = ½CV² = ½ × 500 × 10⁻⁶ × (200)² = ½ × 500 × 10⁻⁶ × 40000\n= ½ × 20 = **10 J**\n\nMethod 2: Q = CV = 500 × 10⁻⁶ × 200 = 0.1 C\nE = ½QV = ½ × 0.1 × 200 = **10 J** ✓\n\n**Worked Example 2:** A defibrillator capacitor stores 360 J of energy at 5000 V. What is the capacitance?\n\nE = ½CV² → C = 2E/V² = 2 × 360 / (5000)² = 720 / (25 × 10⁶) = **28.8 × 10⁻⁶ F = 28.8 μF**\n\n**Worked Example 3:** A capacitor stores 90 J with a charge of 6 C. Find the capacitance and voltage.\n\nE = Q²/2C → C = Q²/2E = (6)²/(2 × 90) = 36/180 = **0.2 F = 200,000 μF**\nV = Q/C = 6/0.2 = **30 V**\nCheck: E = ½ × 0.2 × (30)² = ½ × 0.2 × 900 = 90 J ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Energy Stored in the Electric Field"
+        },
+        {
+          "type": "text",
+          "body": "The energy stored in a capacitor is actually stored in the **electric field** between the plates — not on the plates themselves. This is a profound insight: fields carry energy.\n\n**Energy density (energy per unit volume of the field):**\nFor a parallel plate capacitor with plate area A, separation d, and field E:\n\nVolume of field = A × d\nCapacitance C = ε₀A/d\nVoltage V = Ed\n\nEnergy = ½CV² = ½(ε₀A/d)(Ed)² = ½ε₀E² × Ad\n\n**Energy density u = Energy/Volume = ½ε₀E²**\n\nThis formula is remarkable — it says the energy density anywhere in space depends only on the local electric field strength E. This result extends far beyond capacitors: ANY region of space with an electric field E stores energy at density ½ε₀E² per cubic metre.\n\n**Worked Example 4:** A parallel plate capacitor has plate area 0.020 m², separation 2.0 mm, and is charged to 400 V. Find:\n(a) The electric field between the plates\n(b) The energy density\n(c) The total energy stored — verify using ½CV²\n\n(a) E = V/d = 400 / (2.0 × 10⁻³) = **2.0 × 10⁵ V/m**\n\n(b) u = ½ε₀E² = ½ × 8.85 × 10⁻¹² × (2.0 × 10⁵)²\n= ½ × 8.85 × 10⁻¹² × 4 × 10¹⁰\n= ½ × 354 × 10⁻³ = **0.177 J/m³**\n\n(c) Total energy = u × Volume = 0.177 × (0.020 × 2.0 × 10⁻³)\n= 0.177 × 4 × 10⁻⁵ = 7.08 × 10⁻⁶ J\n\nVerification using ½CV²:\nC = ε₀A/d = 8.85 × 10⁻¹² × 0.020 / 2 × 10⁻³ = 88.5 × 10⁻¹² F = 88.5 pF\nE = ½ × 88.5 × 10⁻¹² × (400)² = ½ × 88.5 × 10⁻¹² × 160,000\n= ½ × 14.16 × 10⁻⁶ = 7.08 × 10⁻⁶ J ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Energy Loss When Capacitors are Connected Together"
+        },
+        {
+          "type": "text",
+          "body": "An important and surprising result occurs when a charged capacitor is connected to an uncharged capacitor: energy is LOST — even though charge is conserved!\n\n**Worked Example 5 (Energy loss on sharing charge):**\nA capacitor C₁ = 4 μF is charged to V₀ = 100 V. It is then connected directly across an uncharged capacitor C₂ = 6 μF. Find:\n(a) Initial energy stored\n(b) Final common voltage\n(c) Final energy stored\n(d) Energy lost\n\n(a) Initial energy:\nE_initial = ½C₁V₀² = ½ × 4 × 10⁻⁶ × (100)² = ½ × 4 × 10⁻⁶ × 10⁴ = **0.20 J**\n\n(b) Charge is conserved: total charge Q stays the same.\nQ = C₁V₀ = 4 × 10⁻⁶ × 100 = 400 μC\n\nAfter connection, both capacitors reach common voltage V_f:\nQ = (C₁ + C₂) × V_f  (in parallel now)\n400 × 10⁻⁶ = (4 + 6) × 10⁻⁶ × V_f\nV_f = 400/10 = **40 V**\n\n(c) Final energy:\nE_final = ½(C₁ + C₂)V_f² = ½ × 10 × 10⁻⁶ × (40)² = ½ × 10 × 10⁻⁶ × 1600\n= **0.08 J**\n\n(d) Energy lost = E_initial − E_final = 0.20 − 0.08 = **0.12 J**\n\n**Where did the 0.12 J go?**\nWhen the capacitors are connected, a sudden large current flows briefly as charge redistributes. This current heats the connecting wires (even if R is very small, all the energy loss appears as heat — this is a fundamental result that holds even in the limit R → 0). Some energy may also be radiated as electromagnetic waves.\n\n**General formula for energy loss (charge sharing):**\nΔE = Q²ΔC / (2C₁(C₁ + C₂)) — or simply calculate initial and final energies separately.\n\n**Key principle: Charge is conserved; energy is NOT conserved** when capacitors are simply connected together (without a resistor to do controlled work)."
+        },
+        {
+          "type": "heading",
+          "body": "Practical Applications of Capacitor Energy Storage"
+        },
+        {
+          "type": "text",
+          "body": "**1. Camera flash units:**\n- A capacitor (typically 100–1000 μF) is slowly charged from a small battery over 5–10 seconds.\n- When the shutter button is pressed, the capacitor discharges through the flashlamp in about 1 millisecond.\n- The power during discharge (Energy/time ≈ 1 J / 0.001 s = 1000 W) far exceeds what the battery could deliver directly.\n- This is the key advantage of capacitor energy storage: deliver large power over a short time.\n\n**2. Cardiac defibrillator:**\n- A large capacitor (~30–100 μF) is charged to 1000–5000 V, storing 100–400 J.\n- When activated, the capacitor discharges through the patient's chest in about 10 ms.\n- Peak current through the heart can be 20–40 A — stopping ventricular fibrillation and allowing the sinoatrial node to re-establish normal rhythm.\n- Used in hospitals throughout Uganda (Mulago, Nsambya) and in public places.\n\n**3. Power supply smoothing:**\n- After rectifying AC to pulsing DC, a large capacitor is placed in parallel with the load.\n- The capacitor charges during voltage peaks and discharges during voltage troughs — smoothing the output.\n- Larger C → smoother output (smaller ripple voltage).\n\n**4. Supercapacitors (Ultracapacitors):**\n- Capacitors with capacitances of 1–10,000 F, using electrochemical double-layer technology.\n- Used in regenerative braking in electric vehicles: the braking energy charges the supercapacitor, and this energy is released again during acceleration.\n- Also used in backup power for computer memory (SRAM) during power cuts — relevant for Uganda's frequent power outages.\n\n**5. Energy stored in lightning:**\nLightning stores enormous energy in electric fields in clouds. A typical lightning bolt delivers ~1–5 GJ/m³ of energy in microseconds. While this energy could theoretically power a town, capturing it is impractical due to its random, brief nature."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Energy stored in a capacitor: E = Q²/2C = ½CV² = ½QV (all equivalent). Derived from work done charging: area under Q-V graph = ½QV. Energy stored in the electric field: energy density u = ½ε₀E² (J/m³). When capacitors are connected: charge is conserved, but energy is lost (as heat in connecting wires). Applications: camera flash, defibrillator, power smoothing, supercapacitors. Key formula: E = ½CV²."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Energy stored (E): E = ½CV² = Q²/2C = ½QV; unit Joule\n• Energy density (u): Energy per unit volume of electric field; u = ½ε₀E²; unit J/m³\n• Charge sharing: When capacitors are connected, charge redistributes; energy is lost as heat even if charge is conserved\n• Defibrillator: Medical device storing energy in a capacitor and discharging through a patient's chest to restore heart rhythm\n• Supercapacitor: Capacitor with very large C (up to 10,000 F); used in regenerative braking and backup power"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 40 μF capacitor is charged to 150 V. How much energy is stored?",
+            "options": [
+              "0.30 J",
+              "0.45 J",
+              "3.0 J",
+              "0.60 J"
+            ],
+            "answer": "0.45 J",
+            "explanation": "E = ½CV² = ½ × 40 × 10⁻⁶ × (150)² = ½ × 40 × 10⁻⁶ × 22,500 = ½ × 0.90 = 0.45 J."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A capacitor stores 2 J of energy with 0.04 C of charge. What is the voltage across the capacitor?",
+            "options": [
+              "25 V",
+              "50 V",
+              "100 V",
+              "200 V"
+            ],
+            "answer": "100 V",
+            "explanation": "E = ½QV → V = 2E/Q = 2 × 2 / 0.04 = 4/0.04 = 100 V. Then C = Q/V = 0.04/100 = 4 × 10⁻⁴ F = 400 μF. Check: E = Q²/2C = (0.04)²/(2 × 4×10⁻⁴) = 1.6×10⁻³/(8×10⁻⁴) = 2 J ✓."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 10 μF capacitor charged to 200 V is connected directly to an uncharged 10 μF capacitor. What is the final energy stored (total)?",
+            "options": [
+              "0.40 J",
+              "0.20 J",
+              "0.10 J",
+              "0.80 J"
+            ],
+            "answer": "0.10 J",
+            "explanation": "Initial energy: E_i = ½ × 10×10⁻⁶ × 200² = 0.20 J. Charge: Q = 10×10⁻⁶ × 200 = 2000 μC. Final voltage: V_f = Q/(C₁+C₂) = 2000/(10+10) = 100 V. Final energy: E_f = ½(20×10⁻⁶)(100)² = ½ × 20×10⁻⁶ × 10⁴ = 0.10 J. Energy lost = 0.10 J (as heat in the connecting wires)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The energy density of an electric field is given by u = ½ε₀E². If the electric field doubles in strength, the energy density:",
+            "options": [
+              "Doubles",
+              "Triples",
+              "Quadruples (×4)",
+              "Increases by 8 times"
+            ],
+            "answer": "Quadruples (×4)",
+            "explanation": "u = ½ε₀E². If E → 2E: u_new = ½ε₀(2E)² = ½ε₀ × 4E² = 4 × ½ε₀E² = 4u. Energy density is proportional to E², so doubling the field quadruples the energy density."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A defibrillator capacitor stores 200 J at a voltage of 4000 V. What is its capacitance?",
+            "options": [
+              "25 μF",
+              "50 μF",
+              "0.1 μF",
+              "100 μF"
+            ],
+            "answer": "25 μF",
+            "explanation": "E = ½CV² → C = 2E/V² = (2 × 200)/(4000)² = 400/(16 × 10⁶) = 25 × 10⁻⁶ F = 25 μF."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is energy lost when a charged capacitor is connected to an uncharged capacitor, even with a perfectly conducting wire?",
+            "options": [
+              "Some charge is lost through the connecting wire",
+              "The charge rearranges itself by radiation of electromagnetic energy, and as heat dissipated in any resistance — which cannot be eliminated even in theory for ideal conductors connected abruptly",
+              "The uncharged capacitor absorbs energy from nothing",
+              "Charge conservation is violated during the connection"
+            ],
+            "answer": "The charge rearranges itself by radiation of electromagnetic energy, and as heat dissipated in any resistance — which cannot be eliminated even in theory for ideal conductors connected abruptly",
+            "explanation": "Charge is always conserved, but energy is not. When connection is made, a transient current flows. Even for zero resistance, energy is radiated as EM waves during the brief transient. This energy loss = ½Q²/2C₁ − ½Q²/2(C₁+C₂) can be shown to always be positive — it is a fundamental consequence of charge redistribution."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t18_l5",
+      "title": "Applications of Capacitors in Electronic and Electrical Devices",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Capacitors are among the most versatile components in electronics. Every radio, television, telephone, computer, medical device, and power supply relies on capacitors performing one or more of their key functions. In this lesson we examine in detail how capacitors are used in real circuits — understanding both the physics behind each application and why capacitors are chosen for each role."
+        },
+        {
+          "type": "heading",
+          "body": "Types of Capacitors Used in Practice"
+        },
+        {
+          "type": "text",
+          "body": "Before examining applications, it is useful to know the main types of capacitors and their characteristics:\n\n| Type | Capacitance Range | Max Voltage | Key Feature |\n|---|---|---|---|\n| Electrolytic (aluminium) | 1 μF – 100,000 μF | 6–600 V | Large C; polarised (must connect + correctly); used for power smoothing |\n| Ceramic disc | 1 pF – 100 nF | 50–1000 V | Small, cheap; general purpose |\n| Polyester (film) | 1 nF – 10 μF | 100–630 V | Stable, non-polarised; audio circuits |\n| Mica | 1 pF – 10 nF | 100–500 V | Very precise and stable; RF circuits |\n| Tantalum | 0.1 μF – 1000 μF | 6–35 V | Small, polarised; used in phones/laptops |\n| Supercapacitor | 0.1 F – 10,000 F | 2.7–5 V | Huge C; energy storage; electric vehicles |\n| Variable (tuning) | 10 pF – 500 pF | — | Adjustable; used in radio tuning |\n\n**Polarised capacitors** (electrolytic, tantalum) must be connected with the correct polarity or they can be destroyed — the dielectric breaks down if reverse-biased.\n\n**Electrolytic capacitor construction:** The dielectric is a very thin layer of aluminium oxide (formed electrochemically), allowing enormous capacitance in a small volume. The thin oxide layer (~ a few nm) gives very small d in C = ε₀A/d."
+        },
+        {
+          "type": "heading",
+          "body": "1. Smoothing Rectified AC (Power Supply Filter)"
+        },
+        {
+          "type": "text",
+          "body": "**The problem:** Mains electricity is AC (alternating current). Most electronic devices need smooth DC. A rectifier (diodes) converts AC to pulsating DC — a voltage that varies from 0 to V_max repeatedly. This pulsating DC is not smooth enough for sensitive electronics.\n\n**The solution:** Connect a large capacitor in parallel with the load.\n\n**How the smoothing capacitor works:**\n- During each voltage peak: the capacitor charges up to the peak voltage V_max.\n- As the AC voltage falls below V_max: the capacitor begins to discharge through the load, maintaining the voltage.\n- As the next peak arrives: the capacitor charges up again.\n- Result: the output voltage stays close to V_max, with only a small variation called the **ripple voltage**.\n\n**Ripple voltage ΔV** (approximate formula):\nΔV ≈ Q discharged / C = (I_load × T) / C = I_load / (f × C)\n\nWhere:\n- I_load = average current drawn by the load (A)\n- f = frequency of the AC mains (Hz) — 50 Hz in Uganda\n- C = capacitance of the smoothing capacitor (F)\n\n**Worked Example 1:** A power supply delivers 200 mA to a load. The mains frequency is 50 Hz. What capacitance is needed to keep the ripple below 0.5 V?\n\nΔV = I_load / (f × C) → C = I_load / (f × ΔV)\nC = 0.200 / (50 × 0.5) = 0.200 / 25 = **8000 μF**\n\nThis is why power supply circuits use very large electrolytic capacitors (thousands of μF).\n\n**Larger C → smaller ripple → smoother DC output.**"
+        },
+        {
+          "type": "heading",
+          "body": "2. Radio Tuning — The Resonant Circuit"
+        },
+        {
+          "type": "text",
+          "body": "**The problem:** A radio antenna receives signals from hundreds of radio stations simultaneously, all at different frequencies. How does the radio select just one station?\n\n**The solution:** A tuning circuit consisting of a capacitor C and an inductor L in parallel (or series), known as an LC circuit or tank circuit.\n\n**Principle of resonance:**\nAn LC circuit has a natural (resonant) frequency:\n**f₀ = 1 / (2π√(LC))**\n\n- At the resonant frequency, the circuit's impedance is very high (or very low, depending on configuration) — it responds strongly to signals at exactly f₀.\n- At all other frequencies, the response is very weak.\n\n**How tuning works:**\n- A variable capacitor (vari-cap or turning capacitor) is mechanically connected to the tuning knob.\n- Rotating the knob changes C → changes f₀ = 1/(2π√(LC)).\n- When f₀ matches a radio station's carrier frequency, that station's signal is amplified strongly.\n- All other stations are rejected.\n\n**Example:** To receive a station at 600 kHz with L = 100 μH:\nf₀ = 600 × 10³ Hz\nC = 1/(4π²f₀²L) = 1/(4π² × (6×10⁵)² × 10⁻⁴)\n= 1/(4 × 9.87 × 3.6×10¹¹ × 10⁻⁴)\n= 1/(1.42 × 10⁹) ≈ **703 pF**\n\nThis variable capacitor would be adjusted to ~703 pF to tune the station. The range of the variable capacitor determines which stations can be received."
+        },
+        {
+          "type": "heading",
+          "body": "3. Blocking DC While Passing AC (Coupling Capacitor)"
+        },
+        {
+          "type": "text",
+          "body": "**The problem:** In audio amplifier circuits, different stages of amplification operate at different DC voltages (bias levels). But the audio signal (AC) must pass from one stage to the next. Connecting stages directly would disturb the DC bias of the next stage.\n\n**The solution:** A coupling (or blocking) capacitor between stages.\n\n**Why capacitors block DC:**\n- A capacitor in steady state (DC) charges up until V_C = V_supply → no current flows → DC is blocked.\n\n**Why capacitors pass AC:**\n- For alternating voltages, the capacitor continuously charges and discharges → current flows in and out continuously.\n- The opposition to AC current through a capacitor is called **capacitive reactance X_C**:\n  **X_C = 1/(2πfC)**\n  - At high frequency f → X_C small → capacitor passes AC easily.\n  - At low frequency f → X_C large → capacitor opposes AC.\n  - At DC (f = 0) → X_C = ∞ → capacitor blocks completely.\n\n**Worked Example 2:** What is the reactance of a 10 μF coupling capacitor at (a) 1 kHz audio frequency and (b) DC?\n\n(a) X_C = 1/(2πfC) = 1/(2π × 1000 × 10 × 10⁻⁶) = 1/(0.0628) = **15.9 Ω**\n(Very low — capacitor barely opposes the 1 kHz audio signal.)\n\n(b) At DC, f = 0: X_C = 1/(0) → **∞ Ω**\n(Infinite resistance — DC cannot flow.)\n\n**Applications:** Coupling between amplifier stages; connecting microphones to amplifiers; separating DC bias from AC audio signals in speakers and headphones."
+        },
+        {
+          "type": "heading",
+          "body": "4. Timing Circuits (RC Oscillators and Delays)"
+        },
+        {
+          "type": "text",
+          "body": "The predictable exponential charging and discharging of capacitors makes them ideal for timing applications.\n\n**Basic RC timing circuit:**\n- A capacitor charges through a resistor.\n- When the capacitor voltage reaches a threshold voltage V_th, a trigger activates (e.g., switches on a transistor or changes a logic state).\n- The time delay t depends on R, C, and V_th:\n  V_th = ε(1 − e^(−t/RC)) → t = −RC × ln(1 − V_th/ε)\n\n**Worked Example 3:** A 555 timer circuit uses C = 10 μF and R = 100 kΩ. The trigger voltage is 2/3 of the supply voltage (a common standard). Find the delay time.\n\nt = −RC × ln(1 − 2/3) = −(100×10³)(10×10⁻⁶) × ln(1/3)\n= −1.0 × (−1.099) = **1.099 s ≈ 1.1 s**\n\nBy choosing R and C, any desired delay from microseconds to hours can be achieved. This is used in:\n- Delay circuits (automatic lights that stay on after you leave)\n- Wiper intervals in car windscreen wipers\n- Heartbeat timing in pacemakers\n- Flashing LED indicators\n- Burglar alarm delays (entry/exit delays)\n\n**Variable timing:** Using a variable resistor (potentiometer) in place of R allows adjustable timing — like the delay knob on a photographic enlarger timer, or the 'sleep' timer on a radio."
+        },
+        {
+          "type": "heading",
+          "body": "5. Other Important Applications"
+        },
+        {
+          "type": "text",
+          "body": "**5a. Touch screens (capacitive touchscreens):**\nModern smartphone screens (as used by millions of Ugandans) use a grid of transparent capacitors. When a finger (which conducts electricity) touches the screen, it changes the capacitance at that point. The electronics detect which capacitor's value changed → identifies the touch location. This is how swipe, pinch, and multi-touch work.\n\n**5b. Capacitor microphones (condenser microphones):**\n- One plate of a capacitor is a thin, flexible membrane (the diaphragm).\n- Sound waves cause the membrane to vibrate → d changes → C = ε₀A/d changes.\n- Changing C causes changing voltage (V = Q/C; with Q fixed, V changes as C changes).\n- This changing voltage is the electrical signal representing the sound.\n- Used in high-quality studio microphones and hearing aids.\n\n**5c. Memory capacitors (DRAM):**\n- Each bit (0 or 1) of computer RAM is stored as charge (or no charge) on a tiny capacitor (~50 fF).\n- A modern smartphone or computer contains billions of these capacitors.\n- Data must be refreshed periodically (capacitors slowly discharge) — this is why computers use a small amount of power even in 'sleep' mode.\n\n**5d. Camera flash:**\n- As detailed in Lesson 4: a large capacitor (~ 1000 μF at 300 V) stores ~45 J and releases it in ~1 ms through a xenon flashlamp → burst of 45,000 W for a millisecond. Far exceeds the battery's power delivery capability.\n\n**5e. Loudspeakers (crossover networks):**\n- In a loudspeaker system, a capacitor in series with the tweeter (high-frequency speaker) blocks low-frequency bass signals (high X_C at low f) while passing treble (low X_C at high f).\n- An inductor does the opposite for the woofer (bass speaker).\n- This frequency-selective network is called a crossover filter."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Capacitors serve five main roles in circuits: (1) Smoothing: large electrolytic capacitor in parallel with load eliminates AC ripple in power supplies; ΔV = I/(fC). (2) Tuning: variable capacitor with inductor selects radio frequency; f₀ = 1/(2π√LC). (3) Coupling/blocking: capacitor passes AC but blocks DC; X_C = 1/(2πfC). (4) Timing: RC charging curve gives predictable delay t = −RC ln(1 − Vth/ε); used in 555 timers, pacemakers, delays. (5) Sensing: capacitive touch screens, condenser microphones, DRAM memory — all detect physical changes through resulting changes in capacitance."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Smoothing capacitor: Large capacitor in parallel with load in a power supply; charges during voltage peaks and discharges during troughs to reduce ripple\n• Ripple voltage: Small AC variation remaining on the DC output of a power supply; ΔV = I_load/(f × C)\n• Capacitive reactance (X_C): Opposition of a capacitor to AC current; X_C = 1/(2πfC); unit ohm (Ω)\n• Coupling capacitor: Capacitor placed between circuit stages to block DC while passing AC signals\n• Resonant frequency (f₀): Frequency at which LC circuit responds most strongly; f₀ = 1/(2π√LC)\n• Crossover network: Filter using capacitors and inductors to direct correct frequency ranges to different speakers"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A smoothing capacitor in a power supply should be connected:",
+            "options": [
+              "In series with the load to limit current",
+              "In parallel with the load to maintain voltage during voltage troughs",
+              "In series with the rectifier diodes",
+              "In parallel with the AC input"
+            ],
+            "answer": "In parallel with the load to maintain voltage during voltage troughs",
+            "explanation": "The smoothing capacitor charges up to the peak voltage and then discharges through the load when the rectified voltage falls below V_max. This maintains the load voltage close to V_max, greatly reducing ripple. It must be in parallel with the load to achieve this."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The capacitive reactance X_C = 1/(2πfC). What happens to X_C as the frequency of the applied AC increases?",
+            "options": [
+              "X_C increases — capacitor blocks high frequencies",
+              "X_C decreases — capacitor passes high frequencies more easily",
+              "X_C remains constant regardless of frequency",
+              "X_C first increases then decreases"
+            ],
+            "answer": "X_C decreases — capacitor passes high frequencies more easily",
+            "explanation": "X_C = 1/(2πfC). As f increases, X_C = 1/(2πfC) decreases. At very high frequency, X_C → 0 (capacitor acts like a short circuit). At DC (f = 0), X_C → ∞ (capacitor blocks). This frequency-dependence is why capacitors are used as AC coupling and high-pass filters."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A power supply delivers 100 mA at 50 Hz. What smoothing capacitor is needed to keep ripple below 1.0 V?",
+            "options": [
+              "200 μF",
+              "2000 μF",
+              "5000 μF",
+              "50 μF"
+            ],
+            "answer": "2000 μF",
+            "explanation": "ΔV = I_load/(f × C) → C = I_load/(f × ΔV) = 0.100/(50 × 1.0) = 0.100/50 = 0.002 F = 2000 μF. This explains why power supply units contain large electrolytic capacitors."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In a capacitor microphone, the audio output signal is created because:",
+            "options": [
+              "Sound waves move electric charges directly in the diaphragm",
+              "The vibrating diaphragm changes the plate separation d, changing C and hence the voltage V = Q/C",
+              "Sound is converted to heat in the diaphragm which causes charge to flow",
+              "The diaphragm acts as a battery when it vibrates"
+            ],
+            "answer": "The vibrating diaphragm changes the plate separation d, changing C and hence the voltage V = Q/C",
+            "explanation": "In a condenser microphone, one plate (the diaphragm) vibrates with the sound. This changes d → changes C = ε₀A/d → since charge Q is held approximately constant by a bias voltage circuit, V = Q/C changes. This varying voltage is the electrical audio signal."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "An LC tuning circuit has L = 200 μH and must resonate at 1.0 MHz (AM radio). What capacitance is required?",
+            "options": [
+              "127 pF",
+              "12.7 pF",
+              "1.27 nF",
+              "127 nF"
+            ],
+            "answer": "127 pF",
+            "explanation": "f₀ = 1/(2π√(LC)) → LC = 1/(4π²f₀²) → C = 1/(4π²f₀²L) = 1/(4π² × (10⁶)² × 200×10⁻⁶) = 1/(4 × 9.87 × 10¹² × 2×10⁻⁴) = 1/(7.896×10⁹) ≈ 1.27×10⁻¹⁰ F = 127 pF."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is an electrolytic capacitor used for power supply smoothing rather than a ceramic or mica capacitor?",
+            "options": [
+              "Electrolytic capacitors are cheaper and easier to solder",
+              "Electrolytic capacitors provide very large capacitance (thousands of μF) needed for effective smoothing, due to their very thin oxide dielectric layer",
+              "Ceramic and mica capacitors cannot handle any voltage above 10 V",
+              "Electrolytic capacitors are non-polarised so they work in AC circuits"
+            ],
+            "answer": "Electrolytic capacitors provide very large capacitance (thousands of μF) needed for effective smoothing, due to their very thin oxide dielectric layer",
+            "explanation": "Smoothing requires C = I/(fΔV) — often thousands of μF. Only electrolytic capacitors (using a nanometre-thin aluminium oxide dielectric grown electrochemically) can achieve this in a reasonable physical size. Ceramic and mica types are limited to nF or small μF ranges. Note: electrolytic capacitors ARE polarised — they must be connected the correct way in DC circuits."
+          }
+        ]
+      }
+    }
+  ]
+}

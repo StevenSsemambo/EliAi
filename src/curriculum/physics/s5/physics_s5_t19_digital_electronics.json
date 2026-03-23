@@ -1,0 +1,701 @@
+{
+  "topic_id": "physics_s5_t19",
+  "topic_title": "Digital Electronics",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t19_l1",
+      "title": "Number Systems and Digital Logic",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every mobile phone, laptop, digital radio, ATM machine, and modern medical device in Uganda operates on the same fundamental principle: information is represented as a series of 1s and 0s, and all calculations are performed using just two voltage levels — HIGH and LOW. This is the world of digital electronics. Unlike analogue electronics, where signals can take any value within a range, digital electronics uses only two distinct states. This makes digital systems far more reliable, less susceptible to noise, and infinitely programmable. Understanding how digital systems work begins with understanding how they represent and process numbers."
+        },
+        {
+          "type": "heading",
+          "body": "Analogue vs Digital Signals"
+        },
+        {
+          "type": "text",
+          "body": "**Analogue signals** vary continuously and can take any value within a range. Examples:\n- The output of a microphone (varies with sound intensity)\n- Temperature reading from a thermometer\n- The voltage waveform from a guitar pickup\n\n**Digital signals** take only discrete values — in binary digital electronics, only two values: HIGH (logic 1) and LOW (logic 0). Examples:\n- The output of a light switch (on or off)\n- Data stored in a computer's memory\n- The signal transmitted by a mobile phone\n\n**Why digital is preferred in modern electronics:**\n| Property | Analogue | Digital |\n|---|---|---|\n| Noise immunity | Poor — noise adds to signal | Excellent — only needs to distinguish HIGH from LOW |\n| Signal copying | Degrades with each copy | Perfect — 1s and 0s can be copied indefinitely |\n| Processing | Analogue circuits required | Any operation done by logic gates |\n| Storage | Difficult (degrades over time) | Easy and reliable (memory chips) |\n| Encryption | Very difficult | Straightforward |\n\n**Voltage levels in digital systems:**\nIn a typical 5 V digital system:\n- Logic 1 (HIGH): voltage between 2 V and 5 V (typically 5 V)\n- Logic 0 (LOW): voltage between 0 V and 0.8 V (typically 0 V)\n- Voltages between 0.8 V and 2 V are undefined / forbidden — this 'forbidden zone' ensures reliable operation even with some electrical noise."
+        },
+        {
+          "type": "heading",
+          "body": "The Binary Number System"
+        },
+        {
+          "type": "text",
+          "body": "Digital systems use the **binary (base-2) number system**, which uses only two digits: 0 and 1 (called **bits** — binary digits).\n\n**Denary (base-10) reminder:** In everyday (denary) numbers, each digit position represents a power of 10:\n- 375 = 3×10² + 7×10¹ + 5×10⁰ = 300 + 70 + 5\n\n**Binary:** Each digit position represents a power of 2:\n- The rightmost bit is the **Least Significant Bit (LSB)** = 2⁰ = 1\n- Moving left: 2¹=2, 2², 2³, 2⁴, ...\n- The leftmost bit is the **Most Significant Bit (MSB)**\n\n**Powers of 2 reference table:**\n| 2⁷ | 2⁶ | 2⁵ | 2⁴ | 2³ | 2² | 2¹ | 2⁰ |\n|---|---|---|---|---|---|---|---|\n| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |\n\n**Converting Binary to Denary:**\nMultiply each bit by its positional value and add:\n\nExample 1: Convert 1 0 1 1 0 1₂ to denary\n= 1×32 + 0×16 + 1×8 + 1×4 + 0×2 + 1×1\n= 32 + 0 + 8 + 4 + 0 + 1 = **45₁₀**\n\nExample 2: Convert 1 1 0 0 1 0 0 0₂ to denary\n= 128 + 64 + 0 + 0 + 8 + 0 + 0 + 0 = **200₁₀**\n\n**Converting Denary to Binary:**\nRepeatedly divide by 2 and record remainders (read remainders bottom-up):\n\nExample 3: Convert 53₁₀ to binary:\n53 ÷ 2 = 26 remainder **1**\n26 ÷ 2 = 13 remainder **0**\n13 ÷ 2 = 6  remainder **1**\n6  ÷ 2 = 3  remainder **0**\n3  ÷ 2 = 1  remainder **1**\n1  ÷ 2 = 0  remainder **1**\nReading remainders bottom to top: **110101₂**\nCheck: 32+16+0+4+0+1 = 53 ✓\n\nExample 4: Convert 200₁₀ to binary:\n200 ÷ 2 = 100 r **0**\n100 ÷ 2 = 50 r **0**\n50 ÷ 2 = 25 r **0**\n25 ÷ 2 = 12 r **1**\n12 ÷ 2 = 6  r **0**\n6 ÷ 2 = 3   r **0**\n3 ÷ 2 = 1   r **1**\n1 ÷ 2 = 0   r **1**\nReading bottom to top: **11001000₂** ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Binary Addition and Other Number Bases"
+        },
+        {
+          "type": "text",
+          "body": "**Binary addition rules:**\n0 + 0 = 0\n0 + 1 = 1\n1 + 0 = 1\n1 + 1 = 10 (0, carry 1)\n1 + 1 + 1 = 11 (1, carry 1)\n\n**Example: Add 1011₂ + 0110₂**\n```\n  1 0 1 1\n+ 0 1 1 0\n---------\n  carry: 1 1 0\n  1 0 0 0 1  → wait, let us work column by column:\n```\nRightmost: 1+0 = 1\nNext: 1+1 = 10 → write 0, carry 1\nNext: 0+1+1(carry) = 10 → write 0, carry 1\nNext: 1+0+1(carry) = 10 → write 0, carry 1\nFinal carry: write 1\nResult: **10001₂ = 17₁₀** ✓ (11 + 6 = 17 ✓)\n\n**The Hexadecimal (base-16) system:**\nHex uses 16 symbols: 0–9 then A(10), B(11), C(12), D(13), E(14), F(15).\nIt is a compact way to write binary — each hex digit represents exactly 4 binary bits.\n\n| Denary | Binary | Hex |\n|---|---|---|\n| 0 | 0000 | 0 |\n| 5 | 0101 | 5 |\n| 9 | 1001 | 9 |\n| 10 | 1010 | A |\n| 12 | 1100 | C |\n| 15 | 1111 | F |\n\n**Convert 11010110₂ to hex:**\nGroup in 4s from right: 1101 | 0110\n1101₂ = 13₁₀ = D₁₆\n0110₂ = 6₁₀ = 6₁₆\nResult: **D6₁₆**\n\n**Why hexadecimal matters:**\nComputer memory addresses, colour codes (e.g. #FF5733 on web pages), and machine code are all written in hex because it is far more compact than binary. A byte (8 bits) takes only 2 hex digits instead of 8 binary digits.\n\n**Bits, Bytes and Words:**\n- 1 bit: smallest unit (0 or 1)\n- 4 bits = 1 nibble (one hex digit)\n- 8 bits = 1 byte (values 0–255)\n- 16 bits = 1 word (values 0–65535)\n- 32 bits = 1 double word\n- 64 bits = 1 quad word\n\nA mobile phone photo (12 megapixels, 24-bit colour) = 12×10⁶ × 3 bytes = 36 MB of raw data."
+        },
+        {
+          "type": "heading",
+          "body": "Logic Levels and the Potential Divider in Digital Circuits"
+        },
+        {
+          "type": "text",
+          "body": "Before examining logic gates, it is important to understand how physical circuits produce logic HIGH and LOW voltage levels.\n\n**The potential divider as a logic level generator:**\nA resistor and a sensor (LDR — light-dependent resistor, thermistor, etc.) form a potential divider. The voltage at the junction can switch between HIGH and LOW depending on the sensor's condition.\n\n**Example — LDR light sensor:**\n- In bright light: LDR resistance is LOW (say 500 Ω)\n- In darkness: LDR resistance is HIGH (say 100 kΩ)\n\nCircuit: 5 V → R_fixed (10 kΩ) → junction → LDR → 0 V\nV_junction = 5 × LDR/(R_fixed + LDR)\n\nIn bright light: V = 5 × 500/(10,000 + 500) = 5 × 500/10,500 = **0.24 V (LOW = logic 0)**\nIn darkness: V = 5 × 100,000/(10,000 + 100,000) = 5 × 100,000/110,000 = **4.55 V (HIGH = logic 1)**\n\nThis output can drive the input of a logic gate, creating an automatic light-activated switch — a real application used in streetlights and security systems in Uganda.\n\n**Bistable switches:**\nDigital circuits can also use bistable switches — components with two stable states (0 or 1). The most important is the flip-flop (covered in more advanced electronics). A light switch is a physical example of a bistable: it is either fully UP (logic 1) or fully DOWN (logic 0) — never in between."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Digital signals use only two states: HIGH (logic 1) and LOW (logic 0). The binary (base-2) system represents numbers using only 0 and 1, with each position a power of 2. Converting binary→denary: multiply each bit by its positional value and sum. Converting denary→binary: divide repeatedly by 2, read remainders upward. Binary addition uses carry rules: 1+1 = 10. Hexadecimal (base-16) groups 4 binary bits per digit, giving compact notation. Potential dividers with sensors generate logic levels for gate inputs."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Bit: A single binary digit (0 or 1); the smallest unit of digital information\n• Byte: 8 bits; can represent values 0–255\n• Binary: Base-2 number system using digits 0 and 1; position values are powers of 2\n• Hexadecimal: Base-16 number system; each hex digit = 4 binary bits\n• Logic HIGH (1): Voltage level representing digital 1; typically 2–5 V in 5 V systems\n• Logic LOW (0): Voltage level representing digital 0; typically 0–0.8 V in 5 V systems\n• Most Significant Bit (MSB): The leftmost (highest value) bit in a binary number\n• Least Significant Bit (LSB): The rightmost (lowest value) bit in a binary number"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Convert the binary number 1 0 1 1 0₂ to denary.",
+            "options": [
+              "18",
+              "22",
+              "26",
+              "30"
+            ],
+            "answer": "22",
+            "explanation": "10110₂ = 1×16 + 0×8 + 1×4 + 1×2 + 0×1 = 16 + 0 + 4 + 2 + 0 = 22₁₀."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Convert the denary number 45 to binary.",
+            "options": [
+              "101101₂",
+              "110101₂",
+              "101011₂",
+              "100111₂"
+            ],
+            "answer": "101101₂",
+            "explanation": "45 ÷ 2 = 22 r 1; 22÷2=11 r 0; 11÷2=5 r 1; 5÷2=2 r 1; 2÷2=1 r 0; 1÷2=0 r 1. Reading remainders upward: 101101₂. Check: 32+0+8+4+0+1 = 45 ✓."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is 1101₂ + 0111₂?",
+            "options": [
+              "10000₂",
+              "10100₂",
+              "11000₂",
+              "10010₂"
+            ],
+            "answer": "10100₂",
+            "explanation": "1101 (13) + 0111 (7) = 20₁₀ = 10100₂. Column by column: 1+1=10 (0,c1); 0+1+1=10 (0,c1); 1+1+1=11 (1,c1); 1+0+1=10 (0,c1); final carry=1. Result: 10100₂ = 20 ✓."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which of the following is the correct hexadecimal representation of 11111111₂?",
+            "options": [
+              "EF₁₆",
+              "FF₁₆",
+              "FE₁₆",
+              "EE₁₆"
+            ],
+            "answer": "FF₁₆",
+            "explanation": "Group 11111111 in nibbles: 1111|1111. Each 1111₂ = 15₁₀ = F₁₆. So 11111111₂ = FF₁₆ = 255₁₀. This is the maximum value of one byte."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A potential divider has a fixed 10 kΩ resistor at top and an LDR at the bottom, connected to 5 V. In bright light the LDR is 1 kΩ. What is the output voltage at the junction (between resistor and LDR)?",
+            "options": [
+              "4.55 V",
+              "0.45 V",
+              "2.50 V",
+              "1.00 V"
+            ],
+            "answer": "0.45 V",
+            "explanation": "V_out = 5 × R_LDR/(R_fixed + R_LDR) = 5 × 1000/(10000+1000) = 5000/11000 = 0.455 V ≈ 0.45 V (logic LOW). In bright light the LDR has low resistance, so it takes a small fraction of the supply voltage."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "What is the main advantage of digital signals over analogue signals in communications?",
+            "options": [
+              "Digital signals travel faster than analogue signals",
+              "Digital signals carry more power",
+              "Digital signals are immune to noise accumulation — only HIGH and LOW need to be distinguished",
+              "Digital signals use less bandwidth"
+            ],
+            "answer": "Digital signals are immune to noise accumulation — only HIGH and LOW need to be distinguished",
+            "explanation": "Any noise added to a digital signal can be removed by a regenerator circuit that simply decides whether the signal is above or below the threshold. Analogue noise, however, permanently corrupts the signal. This is why digital audio (MP3, CD) and digital communications (4G, WiFi) are vastly superior to their analogue predecessors."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t19_l2",
+      "title": "Logic Gates: NOT, AND, OR and their Truth Tables",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Logic gates are the basic building blocks of all digital circuits. Every decision a computer makes — from running a calculation to displaying a character on screen — ultimately comes down to combinations of logic gates. Each gate performs a specific Boolean logic operation on its input(s) and produces a single output. Understanding these basic gates, their symbols, and truth tables is the foundation of all digital electronics."
+        },
+        {
+          "type": "heading",
+          "body": "Introduction to Logic Gates"
+        },
+        {
+          "type": "text",
+          "body": "A **logic gate** is an electronic circuit with one or more binary inputs (each either 0 or 1) and one binary output (0 or 1). The output depends entirely on the inputs and the type of gate.\n\n**Truth table:** A table listing all possible combinations of inputs and the corresponding output. For n inputs, there are 2ⁿ rows in the truth table.\n\n**Boolean algebra:** The mathematical language of logic gates, using variables that can only be 0 or 1. Boolean expressions use:\n- AND: A·B or AB\n- OR: A+B\n- NOT: Ā (A-bar) or A'\n\nLogic gates are implemented physically using transistors. Modern microchips contain billions of transistors, each acting as a switch to implement logic operations.\n\n**Positive logic convention:**\n- Logic 1 = HIGH voltage (e.g. 5V or 3.3V)\n- Logic 0 = LOW voltage (e.g. 0V)"
+        },
+        {
+          "type": "heading",
+          "body": "The NOT Gate (Inverter)"
+        },
+        {
+          "type": "text",
+          "body": "The **NOT gate** (also called an inverter) has ONE input and ONE output. It simply reverses (inverts) the input: 0 becomes 1, and 1 becomes 0.\n\n**Boolean expression:** Q = Ā (Q equals NOT A)\n\n**Symbol:** A rectangle or triangle with a small circle (bubble) at the output.\n\n**Truth table:**\n| Input A | Output Q = Ā |\n|---|---|\n| 0 | 1 |\n| 1 | 0 |\n\n**Physical interpretation:**\nWhen the input is LOW (0 V), the output is HIGH (5 V).\nWhen the input is HIGH (5 V), the output is LOW (0 V).\n\nThis is achieved by a transistor acting as a switch: when the input is HIGH, the transistor turns on (conducts), pulling the output LOW. When the input is LOW, the transistor is off, and the output is pulled HIGH through a resistor.\n\n**Application examples:**\n- Alarm system: When door sensor is open (1), NOT gate outputs 0 to disable alarm; when door closes (0), NOT gate outputs 1 to arm alarm\n- Traffic lights: When GREEN is on (1), NOT feeds STOP signal → output 0 (stop signal off); when GREEN off (0), NOT → output 1 (stop signal on)\n- Complementing a binary number: inverting all bits of 1010 gives 0101"
+        },
+        {
+          "type": "heading",
+          "body": "The AND Gate"
+        },
+        {
+          "type": "text",
+          "body": "The **AND gate** has TWO or more inputs and ONE output. The output is HIGH (1) ONLY when ALL inputs are HIGH (1). If any input is LOW, the output is LOW.\n\n**Boolean expression:** Q = A·B (Q equals A AND B)\n\n**Symbol:** A flat-backed shape with a curved (D-shaped) front — like a capital D.\n\n**Truth table (2-input AND):**\n| Input A | Input B | Output Q = A·B |\n|---|---|---|\n| 0 | 0 | 0 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 1 |\n\n**Memory aid:** AND is like a series circuit — current only flows if switch A AND switch B are both closed.\n\n**3-input AND gate:**\nOutput Q = A·B·C is 1 only when A=1 AND B=1 AND C=1.\nAll other combinations give output 0 (seven rows output 0, one row outputs 1).\n\n**Application examples:**\n- Safety interlock: A machine starts only when the power switch AND the safety guard AND the operator button are all pressed (1) simultaneously.\n- Combination lock: Electronic lock opens only when correct digit 1 AND correct digit 2 AND correct digit 3 are all entered correctly.\n- Burglar alarm: Alert sounds only if the window sensor AND the motion detector AND the alarm is armed — all active at once.\n\n**Worked Example 1:** A 3-input AND gate has inputs A=1, B=0, C=1. What is the output?\nQ = A·B·C = 1·0·1 = 0. Since B=0, output is 0. All inputs must be 1 for output to be 1."
+        },
+        {
+          "type": "heading",
+          "body": "The OR Gate"
+        },
+        {
+          "type": "text",
+          "body": "The **OR gate** has TWO or more inputs and ONE output. The output is HIGH (1) when ANY ONE OR MORE inputs are HIGH (1). The output is LOW (0) only when ALL inputs are LOW (0).\n\n**Boolean expression:** Q = A + B (Q equals A OR B)\n\n**Symbol:** A curved shape with a concave back — like a curved shield pointing right.\n\n**Truth table (2-input OR):**\n| Input A | Input B | Output Q = A+B |\n|---|---|---|\n| 0 | 0 | 0 |\n| 0 | 1 | 1 |\n| 1 | 0 | 1 |\n| 1 | 1 | 1 |\n\n**Memory aid:** OR is like a parallel circuit — current flows if switch A OR switch B (or both) is closed.\n\n**3-input OR gate:**\nOutput Q = A+B+C is 0 only when ALL inputs are 0. All other seven combinations give output 1.\n\n**Application examples:**\n- Hospital call system: Nurse alert sounds if patient A OR patient B OR patient C presses their call button.\n- Seat belt warning: Warning activates if driver door is open OR seat belt is unfastened.\n- Fire alarm: Alarm sounds if smoke detector A OR smoke detector B OR heat detector triggers.\n\n**Worked Example 2:** An OR gate has inputs A=0 and B=1. What is the output?\nQ = A+B = 0+1 = 1. At least one input is 1, so output is 1.\n\n**Worked Example 3:** Three sensors feed a 3-input OR gate. The gate output controls an alarm. Sensor readings are: Smoke=0, Heat=0, Gas=0. Is the alarm triggered?\nQ = 0+0+0 = 0. All sensors read 0 (no hazard detected) → alarm not triggered. If even one sensor becomes 1, the alarm activates immediately."
+        },
+        {
+          "type": "heading",
+          "body": "Combining NOT with AND and OR: Identifying Patterns"
+        },
+        {
+          "type": "text",
+          "body": "One of the most important skills in digital electronics is reading truth tables and writing Boolean expressions for any given logic behaviour.\n\n**Key rules for reading truth tables:**\n- AND gate: Output is 1 ONLY for the row where ALL inputs = 1.\n- OR gate: Output is 0 ONLY for the row where ALL inputs = 0.\n- NOT gate: Output is always the opposite of the input.\n\n**Summary comparison table:**\n| Gate | Boolean | Output is 1 when... | Output is 0 when... |\n|---|---|---|---|\n| NOT | Q = Ā | A = 0 | A = 1 |\n| AND | Q = A·B | A=1 AND B=1 | Any input = 0 |\n| OR | Q = A+B | Any input = 1 | ALL inputs = 0 |\n\n**Worked Example 4 — Reading a truth table:**\nGiven this truth table, identify which gate produces it:\n| A | B | Q |\n|---|---|---|\n| 0 | 0 | 0 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 1 |\nOutput is 1 ONLY when BOTH A=1 AND B=1 → This is an **AND gate**.\n\n**Worked Example 5 — Writing a Boolean expression:**\nA security system activates when (door sensor A is triggered) AND (either motion sensor B OR infrared sensor C detects movement). Write the Boolean expression.\n\nStep 1: B OR C → (B + C)\nStep 2: A AND the result → A·(B + C)\nBoolean expression: **Q = A·(B + C)**\n\nThis combined expression requires a combination of gates to implement — covered in the next lesson."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Three fundamental gates: NOT (Q = Ā; output = inverse of input), AND (Q = A·B; output 1 only when ALL inputs are 1), OR (Q = A+B; output 1 when ANY input is 1, output 0 only when all inputs are 0). Truth tables list all 2ⁿ input combinations and corresponding outputs. AND resembles series switches; OR resembles parallel switches. Boolean algebra uses · for AND and + for OR. Real-world applications: AND for safety interlocks; OR for multi-source alarms; NOT for signal inversion."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Logic gate: Electronic circuit performing a Boolean logic operation on binary inputs to produce one binary output\n• Truth table: Table showing all possible input combinations and the resulting output for a logic gate or circuit\n• NOT gate (inverter): Q = Ā; inverts input; only gate with one input\n• AND gate: Q = A·B; output HIGH only when all inputs HIGH\n• OR gate: Q = A+B; output HIGH when any input is HIGH; output LOW only when all inputs LOW\n• Boolean algebra: Mathematical system for working with binary variables using AND (·), OR (+), NOT (overbar)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 2-input AND gate has inputs A = 1 and B = 0. What is the output?",
+            "options": [
+              "0",
+              "1",
+              "Undefined",
+              "Depends on the supply voltage"
+            ],
+            "answer": "0",
+            "explanation": "AND gate: Q = A·B = 1·0 = 0. The AND gate outputs 1 ONLY when ALL inputs are 1. Since B=0, output is 0 regardless of A."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which gate has an output of 0 ONLY when all inputs are 0?",
+            "options": [
+              "AND gate",
+              "NOT gate",
+              "OR gate",
+              "None of the above"
+            ],
+            "answer": "OR gate",
+            "explanation": "OR gate: Q = A+B. Output = 0 only when A=0 AND B=0. For every other input combination (01, 10, 11), output = 1. Compare with AND: output = 1 only when all inputs are 1."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A NOT gate has input A = 1. Its output feeds into one input of an AND gate. The other AND input is B = 1. What is the final output Q?",
+            "options": [
+              "0",
+              "1",
+              "Same as A",
+              "Same as B"
+            ],
+            "answer": "0",
+            "explanation": "NOT gate output = Ā = NOT 1 = 0. AND gate: Q = Ā·B = 0·1 = 0. The AND gate receives 0 and 1 as inputs → output = 0. This combination implements the Boolean expression Q = Ā·B (A-bar AND B)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A fire alarm system sounds if smoke detector A OR heat detector B triggers. This is implemented using:",
+            "options": [
+              "An AND gate",
+              "An OR gate",
+              "A NOT gate",
+              "Two NOT gates in series"
+            ],
+            "answer": "An OR gate",
+            "explanation": "The alarm needs to sound when A=1 OR B=1 (either sensor triggers). Q = A+B is an OR function. An AND gate would only sound if BOTH sensors triggered simultaneously — which would miss many real fire scenarios."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "How many rows are in the truth table for a 3-input logic gate?",
+            "options": [
+              "3",
+              "6",
+              "8",
+              "16"
+            ],
+            "answer": "8",
+            "explanation": "For n inputs, the truth table has 2ⁿ rows (one for each possible combination of input values). For 3 inputs: 2³ = 8 rows. The combinations are 000, 001, 010, 011, 100, 101, 110, 111."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A machine should only start when: the power key is turned (P=1) AND the safety door is closed (D=1). The Boolean expression for the start signal is:",
+            "options": [
+              "Q = P + D",
+              "Q = P · D",
+              "Q = P̄ · D",
+              "Q = P + D̄"
+            ],
+            "answer": "Q = P · D",
+            "explanation": "The machine starts only when P=1 AND D=1 — this is an AND function. Q = P·D = 1 only when both P=1 and D=1. This is a safety interlock — a common industrial application of AND gates."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t19_l3",
+      "title": "NAND, NOR and XOR Gates — Universal Gates and Combinations",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "While NOT, AND, and OR are the fundamental gates, the real workhorses of digital electronics are the NAND and NOR gates. These are called 'universal gates' because any other logic gate — and any logic circuit imaginable — can be built using only NAND gates, or using only NOR gates. This makes them extremely important for manufacturing, since a chip factory only needs to make one type of gate to implement any digital system."
+        },
+        {
+          "type": "heading",
+          "body": "The NAND Gate (NOT-AND)"
+        },
+        {
+          "type": "text",
+          "body": "The **NAND gate** is equivalent to an AND gate followed by a NOT gate. Its output is the inverse of the AND output — it is LOW only when ALL inputs are HIGH; for all other input combinations, the output is HIGH.\n\n**Boolean expression:** Q = A·B̄  (overbar covers the entire AND: Q = NOT(A AND B) = (AB)'\n**Written more explicitly:** Q = ¬(A·B)\n\n**Symbol:** Same as AND gate but with a small circle (bubble) at the output.\n\n**Truth table (2-input NAND):**\n| Input A | Input B | A·B | Output Q = (A·B)' |\n|---|---|---|---|\n| 0 | 0 | 0 | **1** |\n| 0 | 1 | 0 | **1** |\n| 1 | 0 | 0 | **1** |\n| 1 | 1 | 1 | **0** |\n\n**Memory aid:** NAND output is 0 ONLY when ALL inputs are 1. Otherwise output is 1.\n\n**Why NAND is the universal gate:**\n\nUsing ONLY NAND gates, you can implement NOT, AND, and OR:\n\n1. **NOT from NAND:** Connect both inputs of a NAND gate together (A = B).\n   When A=0: Q = NOT(0·0) = NOT(0) = 1 ✓\n   When A=1: Q = NOT(1·1) = NOT(1) = 0 ✓\n   → A NAND gate with tied inputs acts as a NOT gate.\n\n2. **AND from NAND:** Put a NAND gate followed by a NOT-NAND (inverter).\n   First NAND: Q₁ = (A·B)'\n   Second NAND (as inverter): Q = Q₁' = ((A·B)')' = A·B ✓\n\n3. **OR from NAND:** Put NOT gates on each input, then a NAND gate on the results.\n   A' NAND B' = (A'·B')' = A'' + B'' = A + B (by De Morgan's theorem) ✓\n\n**Application example:**\nNAND gates are used extensively in CMOS technology (the dominant technology in all modern chips — phones, computers, tablets). NAND flash memory (in USB drives, SSDs, phones) is named after the NAND gate structure used in its memory cells."
+        },
+        {
+          "type": "heading",
+          "body": "The NOR Gate (NOT-OR)"
+        },
+        {
+          "type": "text",
+          "body": "The **NOR gate** is equivalent to an OR gate followed by a NOT gate. Its output is the inverse of the OR output — it is HIGH only when ALL inputs are LOW; for all other input combinations, the output is LOW.\n\n**Boolean expression:** Q = (A + B)' = NOT(A OR B)\n\n**Symbol:** Same as OR gate but with a small circle (bubble) at the output.\n\n**Truth table (2-input NOR):**\n| Input A | Input B | A+B | Output Q = (A+B)' |\n|---|---|---|---|\n| 0 | 0 | 0 | **1** |\n| 0 | 1 | 1 | **0** |\n| 1 | 0 | 1 | **0** |\n| 1 | 1 | 1 | **0** |\n\n**Memory aid:** NOR output is 1 ONLY when ALL inputs are 0. Otherwise output is 0.\n\n**Why NOR is also a universal gate:**\n\nUsing ONLY NOR gates, you can implement NOT, OR, and AND:\n\n1. **NOT from NOR:** Connect both inputs together.\n   A=0: Q = (0+0)' = 0' = 1 ✓ ; A=1: Q = (1+1)' = 1' = 0 ✓\n\n2. **OR from NOR:** NOR followed by a NOT-NOR (inverter).\n   ((A+B)')' = A+B ✓\n\n3. **AND from NOR:** A NOR A', then B NOR B' — apply De Morgan's.\n   (A'+B')' = A''·B'' = A·B ✓\n\n**Comparison — NAND vs NOR:**\n| Property | NAND | NOR |\n|---|---|---|\n| Based on | NOT(AND) | NOT(OR) |\n| Output is 0 when | ALL inputs = 1 | ANY input = 1 |\n| Output is 1 when | ANY input = 0 | ALL inputs = 0 |\n| Universal? | YES | YES |\n| Most common use | Flash memory, logic circuits | Flip-flops, control circuits |"
+        },
+        {
+          "type": "heading",
+          "body": "The XOR Gate (Exclusive OR)"
+        },
+        {
+          "type": "text",
+          "body": "The **XOR gate** (Exclusive OR, pronounced 'ex-OR') has a special rule: its output is HIGH when the inputs are DIFFERENT, and LOW when the inputs are the SAME.\n\n**Boolean expression:** Q = A ⊕ B (A XOR B)\nEquivalent to: Q = A·B' + A'·B (A AND NOT-B, OR NOT-A AND B)\n\n**Symbol:** Same as OR gate but with an extra curved line on the curved input side.\n\n**Truth table (2-input XOR):**\n| Input A | Input B | Output Q = A ⊕ B |\n|---|---|---|\n| 0 | 0 | **0** (same → 0) |\n| 0 | 1 | **1** (different → 1) |\n| 1 | 0 | **1** (different → 1) |\n| 1 | 1 | **0** (same → 0) |\n\n**Memory aid:**\n- XOR = '1 if inputs are different'\n- XOR = '1 if an ODD number of inputs are 1'\n- OR = '1 if ANY input is 1' (including BOTH)\n- XOR = '1 if EXACTLY ONE input is 1'\n\n**The XNOR gate (Exclusive NOR):**\nThe complement of XOR: output is 1 when inputs are the SAME.\nQ = (A ⊕ B)' = A·B + A'·B'\n| 0,0 → 1 | 0,1 → 0 | 1,0 → 0 | 1,1 → 1 |\n\n**Critical applications of XOR:**\n\n**1. Binary half-adder:**\nA half-adder adds two bits A and B:\n- Sum bit S = A ⊕ B (use XOR)\n- Carry bit C = A·B (use AND)\n\n| A | B | Sum S = A⊕B | Carry C = A·B |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 0 |\n| 1 | 0 | 1 | 0 |\n| 1 | 1 | 0 | 1 |\nCheck: 1+1 = 10₂ (sum=0, carry=1) ✓ — this is binary addition!\n\n**2. Parity checker:**\nXOR of multiple bits gives a parity bit — used to detect transmission errors in digital data.\n\n**3. Comparator:**\nXNOR of two bits gives 1 if they are equal — used in digital comparators to check if two numbers are equal.\n\n**4. Encryption:**\nXOR is fundamental to many encryption algorithms — XOR-ing data with a key encrypts it; XOR-ing again with the same key decrypts it."
+        },
+        {
+          "type": "heading",
+          "body": "De Morgan's Theorems"
+        },
+        {
+          "type": "text",
+          "body": "**De Morgan's theorems** are two powerful rules for simplifying Boolean expressions, especially useful for converting between NAND/NOR and AND/OR/NOT expressions.\n\n**Theorem 1:** (A·B)' = A' + B'\n'NOT(A AND B) = (NOT A) OR (NOT B)'\n\n**Theorem 2:** (A+B)' = A'·B'\n'NOT(A OR B) = (NOT A) AND (NOT B)'\n\n**In words:**\n- To negate an AND expression: break the bar and change AND to OR (and vice versa).\n- To negate an OR expression: break the bar and change OR to AND.\n\n**Proof of Theorem 1 by truth table:**\n| A | B | A·B | (A·B)' | A' | B' | A'+B' |\n|---|---|---|---|---|---|---|\n| 0 | 0 | 0 | 1 | 1 | 1 | 1 ✓ |\n| 0 | 1 | 0 | 1 | 1 | 0 | 1 ✓ |\n| 1 | 0 | 0 | 1 | 0 | 1 | 1 ✓ |\n| 1 | 1 | 1 | 0 | 0 | 0 | 0 ✓ |\nColumns (A·B)' and A'+B' are identical → theorem proved.\n\n**Practical use — NAND implementation of OR:**\nBy De Morgan's Theorem 1: A' NAND B' = (A'·B')' = A''+B'' = A+B\nSo: two NOT gates feeding a NAND gate produces an OR gate.\n\n**Worked Example:** Simplify Q = ((A+B)·C)'\nApply De Morgan to the outermost bar:\nQ = (A+B)' + C'\nApply De Morgan to (A+B)':\nQ = A'·B' + C'\nThis simplified expression is easier to implement with logic gates.\n\n**All 6 gates summary table:**\n| Gate | Symbol addition | Boolean | Output = 1 when |\n|---|---|---|---|\n| NOT | Bubble at output | Q = A' | A = 0 |\n| AND | D-shape | Q = AB | All inputs = 1 |\n| OR | Curved shield | Q = A+B | Any input = 1 |\n| NAND | AND + bubble | Q = (AB)' | Not all inputs = 1 |\n| NOR | OR + bubble | Q = (A+B)' | All inputs = 0 |\n| XOR | OR + extra line | Q = A⊕B | Inputs are different |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "NAND gate: output = NOT(AND) = 0 only when ALL inputs are 1; universal gate (can make NOT, AND, OR from NAND alone). NOR gate: output = NOT(OR) = 1 only when ALL inputs are 0; also universal. XOR gate: output = 1 when inputs DIFFER; implements binary addition sum bit. De Morgan's theorems: (AB)' = A'+B' and (A+B)' = A'·B'; essential for simplification and NAND/NOR implementation. Half-adder = XOR (sum) + AND (carry)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• NAND gate: Q = (A·B)'; output LOW only when ALL inputs HIGH; universal gate\n• NOR gate: Q = (A+B)'; output HIGH only when ALL inputs LOW; universal gate\n• XOR gate: Q = A⊕B; output HIGH when inputs are DIFFERENT; used in adders and comparators\n• Universal gate: A gate from which ALL other logic gates can be constructed (NAND or NOR)\n• De Morgan's theorems: (AB)' = A'+B' and (A+B)' = A'·B'; rules for inverting Boolean expressions\n• Half-adder: Circuit adding two bits; Sum = A⊕B (XOR), Carry = AB (AND)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A NAND gate has inputs A = 1 and B = 1. What is the output?",
+            "options": [
+              "0",
+              "1",
+              "Same as AND gate",
+              "Undefined"
+            ],
+            "answer": "0",
+            "explanation": "NAND: Q = (A·B)' = (1·1)' = 1' = 0. NAND output is 0 ONLY when ALL inputs are 1 — this is the one and only row where a NAND gate outputs 0. For all other input combinations (00, 01, 10), NAND outputs 1."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A NOR gate has inputs A = 0 and B = 0. What is the output?",
+            "options": [
+              "0",
+              "1",
+              "Same as OR gate",
+              "Depends on supply voltage"
+            ],
+            "answer": "1",
+            "explanation": "NOR: Q = (A+B)' = (0+0)' = 0' = 1. NOR output is 1 ONLY when ALL inputs are 0 — this is the only case where a NOR gate outputs 1. For any other input combination, NOR outputs 0."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "An XOR gate has inputs A = 1 and B = 1. What is the output?",
+            "options": [
+              "0",
+              "1",
+              "Same as OR",
+              "Same as AND"
+            ],
+            "answer": "0",
+            "explanation": "XOR: Q = A⊕B. Output is 1 when inputs are DIFFERENT; 0 when inputs are the SAME. Since A=B=1 (same), Q=0. This distinguishes XOR from OR: OR gives 1 for (1,1), but XOR gives 0 for (1,1)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Using De Morgan's theorem, (A + B)' is equivalent to:",
+            "options": [
+              "A' + B'",
+              "A · B",
+              "A' · B'",
+              "A + B'"
+            ],
+            "answer": "A' · B'",
+            "explanation": "De Morgan's second theorem: (A+B)' = A'·B'. To negate an OR expression: invert each variable AND change OR to AND. This means a NOR gate is equivalent to inverters on each input feeding into an AND gate."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A half-adder adds bits A=1 and B=1. What are the Sum and Carry outputs?",
+            "options": [
+              "Sum=1, Carry=0",
+              "Sum=0, Carry=0",
+              "Sum=0, Carry=1",
+              "Sum=1, Carry=1"
+            ],
+            "answer": "Sum=0, Carry=1",
+            "explanation": "Sum S = A⊕B = 1⊕1 = 0 (XOR: same inputs → 0). Carry C = A·B = 1·1 = 1 (AND). So 1+1 in binary = 10₂: sum bit = 0, carry bit = 1. This correctly represents 1+1=2, written as 10 in binary."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why are NAND gates called 'universal gates'?",
+            "options": [
+              "They are used in all countries universally",
+              "They can replace any other gate — NOT, AND, and OR can all be built from NAND gates alone",
+              "They work with both analogue and digital signals",
+              "They have the highest output current of any gate"
+            ],
+            "answer": "They can replace any other gate — NOT, AND, and OR can all be built from NAND gates alone",
+            "explanation": "A single NAND gate with tied inputs makes NOT. Two NANDs make AND. Three NANDs (two as inverters + one NAND) make OR. Since any Boolean function can be expressed with NOT, AND, and OR, any circuit can be built with NAND gates only. This simplifies manufacturing: only one gate type needed."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t19_l4",
+      "title": "Semiconductors, p-n Junction Diodes and Their Characteristics",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "All digital and analogue electronic devices are built from semiconductor materials. The transistors, diodes, and integrated circuits in every phone, computer, and radio in Uganda are made from silicon — a semiconductor. Understanding what makes a semiconductor special, how adding impurities changes its properties, and how a p-n junction diode works is the foundation for understanding all modern electronics."
+        },
+        {
+          "type": "heading",
+          "body": "Conductors, Insulators and Semiconductors"
+        },
+        {
+          "type": "text",
+          "body": "Materials are classified by their ability to conduct electric current, which depends on the availability of free charge carriers (electrons).\n\n**Energy band theory:**\nIn a solid, electrons can only exist in allowed energy bands separated by forbidden gaps (band gaps).\n\n- **Valence band:** The highest energy band that is full of electrons at 0 K. Electrons here are bound to atoms.\n- **Conduction band:** The next band above the valence band. Electrons here are free to move and conduct current.\n- **Band gap (E_g):** The forbidden energy gap between the valence and conduction bands. Its size determines whether the material is a conductor, semiconductor, or insulator.\n\n**Conductors (e.g. copper, aluminium, gold):**\n- Band gap = 0 eV (bands overlap)\n- Valence and conduction bands overlap — electrons are always free\n- Very low resistance; excellent current flow\n- Example: copper wires used in electrical installations throughout Uganda\n\n**Insulators (e.g. rubber, glass, plastic):**\n- Band gap > 5 eV (very large)\n- Electrons need enormous energy to jump from valence to conduction band\n- Practically no free electrons — extremely high resistance\n- Examples: PVC cable insulation, ceramic insulators on power lines\n\n**Semiconductors (e.g. silicon Si, germanium Ge, gallium arsenide GaAs):**\n- Band gap ≈ 0.7–3 eV (small but non-zero)\n  - Silicon: E_g = 1.1 eV\n  - Germanium: E_g = 0.7 eV\n- At room temperature, some electrons have enough thermal energy to cross the gap\n- As temperature increases, more electrons jump → conductivity increases (opposite of metals!)\n- With a modest band gap, conductivity can be controlled by:\n  1. Temperature\n  2. Light (photons give electrons energy to cross the gap)\n  3. Adding impurities (doping) — the most important method\n\n**Why silicon dominates:**\n- Abundant (silicon is the second most common element in Earth's crust — sand is SiO₂)\n- Band gap of 1.1 eV is ideal for room-temperature electronics\n- Can be grown as perfect single crystals\n- Forms an excellent insulating oxide (SiO₂) for chip fabrication"
+        },
+        {
+          "type": "heading",
+          "body": "Doping: Creating n-type and p-type Semiconductors"
+        },
+        {
+          "type": "text",
+          "body": "Pure (intrinsic) silicon has equal numbers of electrons and holes. **Doping** is the deliberate addition of tiny amounts of impurity atoms to vastly increase the number of one type of charge carrier.\n\n**Silicon's crystal structure:**\nEach silicon atom has 4 valence electrons and forms 4 covalent bonds with its neighbours, creating a rigid tetrahedral lattice.\n\n**n-type semiconductor (negative charge carriers dominate):**\n\nDoped with a Group V element (5 valence electrons): phosphorus (P), arsenic (As), or antimony (Sb) — called **donor impurities**.\n\n- The impurity atom occupies a silicon site and forms 4 bonds with neighbours using 4 of its 5 valence electrons.\n- The 5th electron is not needed for bonding — it is loosely bound and easily promoted to the conduction band at room temperature.\n- Result: one extra FREE ELECTRON per donor atom, with no corresponding hole.\n- Majority carriers: electrons (negative)\n- Minority carriers: holes (positive)\n- The material is electrically neutral overall (the dopant atom has a fixed positive ion core, balancing the free electron).\n\n**p-type semiconductor (positive charge carriers dominate):**\n\nDoped with a Group III element (3 valence electrons): boron (B), aluminium (Al), or indium (In) — called **acceptor impurities**.\n\n- The impurity atom has only 3 valence electrons — it cannot complete all 4 bonds with its silicon neighbours.\n- The missing bond creates a **hole** (an absence of an electron that behaves like a positive charge carrier).\n- The hole can accept an electron from a neighbouring bond, effectively moving through the crystal.\n- Result: one extra HOLE per acceptor atom.\n- Majority carriers: holes (positive)\n- Minority carriers: electrons (negative)\n\n**How holes conduct electricity:**\nA hole is not a physical particle — it is the absence of an electron in a bond. When an electron from an adjacent bond fills the hole, the hole appears to move in the opposite direction. In an electric field, holes move toward the negative terminal (opposite to electron flow), carrying positive charge.\n\n**Doping levels:**\nTypical doping: 1 impurity atom per 10⁷ to 10⁸ silicon atoms. This small concentration dramatically changes conductivity — semiconductor conductivity can be varied by a factor of ~10⁶ through doping.\n\n**Worked Example 1:** Pure silicon has 1.5 × 10¹⁰ free electrons/cm³ at room temperature. After doping with phosphorus at a concentration of 10¹⁶ atoms/cm³, how does the electron concentration change?\n\nThe donor atoms each contribute one free electron:\nNew electron concentration ≈ 10¹⁶/cm³ — an increase by a factor of about 10⁶!\nThe hole concentration is now tiny (minority carriers): p = nᵢ²/n = (1.5×10¹⁰)²/10¹⁶ ≈ 2.25×10⁴/cm³"
+        },
+        {
+          "type": "heading",
+          "body": "The p-n Junction"
+        },
+        {
+          "type": "text",
+          "body": "When p-type and n-type semiconductors are joined together, something remarkable happens at the boundary — a **p-n junction** forms, and this junction is the key to all semiconductor devices.\n\n**Formation of the depletion region:**\n1. At the junction, electrons from the n-side diffuse across into the p-side (high concentration → low concentration).\n2. Holes from the p-side diffuse into the n-side.\n3. As electrons cross to the p-side, they leave behind positively charged donor ions in the n-side.\n4. As holes cross to the n-side, they leave behind negatively charged acceptor ions in the p-side.\n5. These fixed charges create an electric field pointing from the positive n-side ions toward the negative p-side ions.\n6. This field opposes further diffusion — equilibrium is reached when the electric field's drift current exactly balances the diffusion current.\n7. The region near the junction, depleted of free carriers, is called the **depletion layer** (or depletion region).\n\n**Built-in potential (contact potential):**\nThe charge separation creates a potential barrier across the depletion layer:\n- Silicon: V₀ ≈ 0.6–0.7 V\n- Germanium: V₀ ≈ 0.2–0.3 V\n\nThis built-in voltage prevents net current flow with no external bias.\n\n**Forward bias:**\nConnect the positive terminal of a battery to the p-side and negative to the n-side:\n- The external voltage opposes the built-in potential\n- When V_external > V₀ (≈ 0.7 V for Si), the depletion layer narrows and disappears\n- Current flows freely: conventional current flows from p to n through the junction\n- The diode is ON: current increases exponentially with voltage\n- The threshold voltage (turn-on voltage) ≈ 0.6–0.7 V for silicon\n\n**Reverse bias:**\nConnect positive terminal to n-side and negative to p-side:\n- The external voltage adds to the built-in potential\n- The depletion layer widens\n- Almost no current flows — only a tiny reverse saturation current I₀ (nA range) due to thermally generated minority carriers\n- The diode is OFF: it blocks current\n- If reverse voltage is too large (the breakdown voltage, typically 50–1000 V), the junction breaks down and a large current flows (potentially destroying the diode unless protected)"
+        },
+        {
+          "type": "heading",
+          "body": "The I-V Characteristics of a Diode"
+        },
+        {
+          "type": "text",
+          "body": "The **I-V characteristic** (current-voltage characteristic) is a graph of the current I through the diode against the voltage V across it. It shows clearly the one-way conducting behaviour.\n\n**Forward bias region (V > 0):**\n- For V < 0.6 V (Si): very small current flows (≈ 0)\n- At V ≈ 0.6–0.7 V (threshold voltage / turn-on voltage / knee voltage): current increases rapidly\n- For V > 0.7 V: current increases almost exponentially (can become very large)\n- The diode must always have a series resistor to limit forward current (otherwise it burns out)\n\n**Reverse bias region (V < 0):**\n- Very small reverse saturation current flows (nanoamperes): nearly constant regardless of reverse voltage\n- At the breakdown voltage (V_BR, typically −50 V to −1000 V): large reverse current flows (dangerous unless using Zener diode)\n\n**The ideal diode model (for circuit calculations):**\n- Forward biased: acts like a closed switch with 0 V drop (OR a switch with 0.7 V drop for more accuracy)\n- Reverse biased: acts like an open switch (infinite resistance)\n\n**Worked Example 2:** A silicon diode is connected in series with a 330 Ω resistor across a 5 V supply. Find the current flowing and the voltage across the resistor. (Assume diode turn-on voltage = 0.7 V)\n\nVoltage across resistor = V_supply − V_diode = 5.0 − 0.7 = 4.3 V\nCurrent I = V_R / R = 4.3 / 330 = **0.013 A = 13 mA**\nPower dissipated in diode = V_diode × I = 0.7 × 0.013 = 9.1 mW\n\n**Worked Example 3:** A diode has breakdown voltage 50 V. A 100 V reverse voltage is applied. What happens?\nThe reverse voltage (100 V) exceeds the breakdown voltage (50 V) → the diode breaks down. Large reverse current flows → diode likely destroyed unless current is limited by an external resistor.\n\n**The Zener diode:**\nA specially designed diode that operates in controlled breakdown (called Zener breakdown), maintaining a precise reverse voltage. Used as a voltage regulator in power supplies. The Zener voltage V_Z (e.g. 5.1 V, 12 V) is the regulated output voltage.\n\n**Applications of p-n junction diodes:**\n- **Rectification:** Converting AC to DC (used in every phone charger, power supply)\n- **Signal detection:** AM radio demodulation\n- **Voltage reference:** Zener diode\n- **Light emission:** LEDs (Light Emitting Diodes) — streetlights, screens, torches\n- **Light detection:** Photodiodes — solar cells, camera sensors\n- **Protection:** Preventing reverse current in circuits"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Semiconductors (Si, Ge) have a small band gap (~1 eV) — conductivity can be controlled by doping. n-type: doped with Group V (donor) impurities → extra free electrons as majority carriers. p-type: doped with Group III (acceptor) impurities → extra holes as majority carriers. p-n junction: depletion region forms at the boundary with a built-in potential (~0.7 V for Si). Forward bias (V > 0.7 V) → depletion region disappears → current flows. Reverse bias → depletion region widens → current blocked. I-V characteristic shows exponential forward conduction and near-zero reverse current."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Semiconductor: Material with band gap ~0.7–3 eV; conductivity between conductor and insulator; increases with temperature\n• Doping: Adding impurity atoms to a semiconductor to increase a specific type of charge carrier\n• n-type: Semiconductor doped with donor (Group V) atoms; electrons are majority carriers\n• p-type: Semiconductor doped with acceptor (Group III) atoms; holes are majority carriers\n• Hole: Absence of an electron in a covalent bond; behaves as a positive charge carrier\n• Depletion region: Region near p-n junction depleted of free carriers; acts as an insulating barrier\n• Forward bias: p-side connected to + terminal; reduces depletion region → current flows\n• Reverse bias: p-side connected to − terminal; widens depletion region → current blocked\n• Turn-on voltage: Forward voltage needed to overcome built-in potential; ~0.6–0.7 V for Si, ~0.2–0.3 V for Ge"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A semiconductor is doped with phosphorus (Group V). What type of semiconductor is formed and what are the majority charge carriers?",
+            "options": [
+              "p-type; holes",
+              "n-type; holes",
+              "n-type; electrons",
+              "p-type; electrons"
+            ],
+            "answer": "n-type; electrons",
+            "explanation": "Phosphorus has 5 valence electrons. In the silicon lattice, 4 are used for bonding. The 5th becomes a free electron (donor). This creates n-type semiconductor with electrons as majority carriers. Group V dopants are called donor impurities."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The depletion region in a p-n junction is formed because:",
+            "options": [
+              "The manufacturer removes charge carriers from the junction region",
+              "Electrons and holes diffuse across the junction and recombine, leaving fixed charged ions behind",
+              "The electric field from the battery pushes carriers away from the junction",
+              "The junction insulating material absorbs all charge carriers"
+            ],
+            "answer": "Electrons and holes diffuse across the junction and recombine, leaving fixed charged ions behind",
+            "explanation": "Electrons diffuse from n-side to p-side; holes diffuse from p-side to n-side. They recombine near the junction. Left behind are: positive donor ions (n-side) and negative acceptor ions (p-side). This creates a built-in electric field that opposes further diffusion — equilibrium depletion region."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A silicon diode in series with a 1 kΩ resistor is connected to a 6 V supply (forward biased). Assuming a turn-on voltage of 0.7 V, what current flows?",
+            "options": [
+              "6.0 mA",
+              "5.3 mA",
+              "0.7 mA",
+              "6.7 mA"
+            ],
+            "answer": "5.3 mA",
+            "explanation": "Voltage across resistor = 6.0 − 0.7 = 5.3 V. Current I = V_R/R = 5.3/1000 = 5.3 × 10⁻³ A = 5.3 mA. Always subtract the diode's 0.7 V turn-on voltage from the supply before calculating current."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What happens when a diode is reverse biased?",
+            "options": [
+              "Large current flows from n to p",
+              "The diode glows (emits light)",
+              "The depletion region widens and only a tiny leakage current flows",
+              "The diode acts as a capacitor and stores charge"
+            ],
+            "answer": "The depletion region widens and only a tiny leakage current flows",
+            "explanation": "Reverse bias adds to the built-in potential, widening the depletion region. This increases the barrier to carrier diffusion. Only thermally generated minority carriers cross the junction, giving a tiny reverse saturation current (nanoamperes for Si). The diode effectively blocks current."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why does a semiconductor's conductivity INCREASE with temperature, unlike a metal's?",
+            "options": [
+              "Semiconductors expand when heated, increasing cross-sectional area",
+              "Heating increases the number of electrons that can jump the band gap into the conduction band",
+              "Heating decreases atomic vibrations in semiconductors",
+              "Semiconductors have more free electrons at higher temperatures due to different crystal structure"
+            ],
+            "answer": "Heating increases the number of electrons that can jump the band gap into the conduction band",
+            "explanation": "In a semiconductor, more thermal energy means more electrons can be promoted across the band gap (e.g. 1.1 eV for Si) into the conduction band — exponentially more charge carriers at higher T → lower resistance. In metals, the band gap is 0 (bands overlap), so temperature only increases lattice vibrations that hinder electron flow → resistance increases with temperature."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A Zener diode is used in a circuit where it maintains 5.1 V across a load despite supply voltage variations between 8 V and 15 V. The Zener operates in:",
+            "options": [
+              "Forward bias, below the turn-on voltage",
+              "Forward bias, above the turn-on voltage",
+              "Reverse bias, in controlled breakdown at 5.1 V",
+              "No bias — it stores the voltage passively"
+            ],
+            "answer": "Reverse bias, in controlled breakdown at 5.1 V",
+            "explanation": "Zener diodes are designed to operate in reverse breakdown. When reverse voltage reaches the Zener voltage (5.1 V here), the diode conducts in reverse and holds the voltage steady at 5.1 V regardless of supply variations. This is used in voltage regulators in phone chargers and power supplies."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t19_l5",
+      "title": "Transistors: Operation, Characteristics and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The transistor is arguably the most important invention of the 20th century. Invented in 1947 at Bell Labs, it replaced bulky, fragile, power-hungry vacuum tubes and enabled the miniaturisation revolution. A modern smartphone contains over 10 billion transistors on a chip smaller than your fingernail. The transistor does two things: it amplifies weak signals and it switches between ON and OFF states — which is exactly what every logic gate in digital electronics does. Understanding how a bipolar junction transistor (BJT) works unlocks the door to understanding all of modern electronics."
+        },
+        {
+          "type": "heading",
+          "body": "Structure of the Bipolar Junction Transistor (BJT)"
+        },
+        {
+          "type": "text",
+          "body": "A **Bipolar Junction Transistor (BJT)** consists of three layers of doped semiconductor, creating two p-n junctions back-to-back. There are two types:\n\n**n-p-n transistor:** n-type | p-type | n-type (most common)\n**p-n-p transistor:** p-type | n-type | p-type\n\n**The three regions and terminals:**\n| Region | Symbol | Role |\n|---|---|---|\n| Emitter (E) | E | Highly doped; emits majority carriers into the base |\n| Base (B) | B | Very thin, lightly doped; controls current flow |\n| Collector (C) | C | Lightly doped; collects carriers that pass through the base |\n\n**Circuit symbols:**\n- n-p-n: The emitter arrow points OUTWARD (away from base), from emitter to circuit\n- p-n-p: The emitter arrow points INWARD (toward base)\n\n**Memory aid for n-p-n vs p-n-p arrow direction:**\n- n-p-n: Not Pointing iN (arrow points out)\n- p-n-p: Pointing iN Please (arrow points in)\n\n**Key construction details:**\n- The base is made extremely thin (typically 1–10 μm) — this is crucial to transistor action\n- The emitter is very heavily doped\n- The collector is lightly doped and physically larger (to collect carriers and dissipate heat)\n\n**Two p-n junctions in a BJT:**\n1. Emitter-Base junction (E-B junction): forward biased during normal operation\n2. Collector-Base junction (C-B junction): reverse biased during normal operation\n\nThis combination — forward-biased E-B junction and reverse-biased C-B junction — is the **active mode** of operation (used for amplification)."
+        },
+        {
+          "type": "heading",
+          "body": "How an n-p-n Transistor Works (Transistor Action)"
+        },
+        {
+          "type": "text",
+          "body": "Understanding transistor action for an n-p-n transistor:\n\n**Step 1: Emitter-Base forward bias**\nThe E-B junction is forward biased (base is positive relative to emitter by >0.6V). This causes electrons to be injected from the heavily doped emitter into the thin p-type base.\n\n**Step 2: Electrons in the base**\nThe injected electrons are minority carriers in the p-type base. Two things can happen to them:\n- Some electrons recombine with holes in the base → form the base current I_B (very small)\n- Most electrons diffuse across the very thin base to the collector-base junction\n\n**Why most electrons reach the collector:**\nThe base is made deliberately very thin so that electrons cross it before they have time to recombine with holes. Typically, only ~1% of electrons recombine in the base; ~99% reach the collector.\n\n**Step 3: Collector-Base reverse bias**\nThe C-B junction is reverse biased. For minority carriers (electrons from the emitter, now at the collector junction), this reverse bias is actually a FORWARD sweep — the electric field sweeps the electrons into the collector.\n\n**Result: The three currents**\n- **Emitter current I_E:** Large; total current from emitter\n- **Base current I_B:** Very small; only the electrons that recombined in the base (≈ 1% of I_E)\n- **Collector current I_C:** Large; approximately equal to I_E (≈ 99% of I_E)\n\n**Kirchhoff's Current Law applied:**\n**I_E = I_B + I_C**\n\n**The crucial relationship:** A small base current I_B controls a much larger collector current I_C.\n\n**Current gain (hFE or β):**\n**β = I_C / I_B**\n\nTypical β values: 50–500 (often written as h_FE in datasheets).\n\nThis means: if β = 100, a base current of 0.1 mA produces a collector current of 10 mA — the transistor amplifies the current by a factor of 100.\n\n**Also useful:**\n**α = I_C / I_E = β/(β+1)** (typically ≈ 0.99)\n\n**Worked Example 1:** A transistor has β = 150. If the base current is 40 μA, find:\n(a) The collector current\n(b) The emitter current\n\n(a) I_C = β × I_B = 150 × 40 × 10⁻⁶ = 6000 × 10⁻⁶ A = **6.0 mA**\n(b) I_E = I_B + I_C = 0.04 mA + 6.0 mA = **6.04 mA**\n(Note: I_E ≈ I_C when β is large)"
+        },
+        {
+          "type": "heading",
+          "body": "The Transistor as a Switch"
+        },
+        {
+          "type": "text",
+          "body": "The transistor switch is the foundation of all digital logic gates and computer memory. In switching mode, the transistor is operated in one of two extreme states:\n\n**Cut-off (transistor OFF):**\n- V_BE < 0.6 V (E-B junction not sufficiently forward biased)\n- I_B ≈ 0, I_C ≈ 0\n- Transistor acts like an OPEN SWITCH\n- Output voltage V_CE ≈ V_CC (supply voltage — full voltage appears across the 'open switch')\n\n**Saturation (transistor ON):**\n- V_BE > 0.7 V (E-B junction forward biased)\n- I_B is large enough that I_C = β × I_B is limited by the external circuit\n- V_CE ≈ 0.1–0.2 V (the transistor is 'saturated' — collector-emitter acts like a CLOSED SWITCH with small voltage drop)\n- Output voltage V_CE ≈ 0 V\n\n**The basic transistor switch circuit:**\nCircuit: V_CC → R_C (collector resistor) → Collector → Emitter → Ground\nBase connected through R_B (base resistor) to input signal V_in\n\n- When V_in = LOW (0 V): V_BE < 0.6 V → transistor OFF → I_C = 0 → no voltage drop across R_C → V_out = V_CC = HIGH\n- When V_in = HIGH (5 V): V_BE ≈ 0.7 V → transistor ON → large I_C → large voltage drop across R_C → V_out ≈ 0 V = LOW\n\nOutput is the INVERSE of input → **this circuit is a NOT gate (inverter)!**\n\n**Worked Example 2:** In a transistor switch circuit, V_CC = 9 V, R_C = 1 kΩ, R_B = 100 kΩ, β = 200. The input voltage is 5 V. Check if the transistor is in saturation.\n\nStep 1: Find I_B:\nV_BE = 0.7 V (assume silicon)\nV across R_B = V_in − V_BE = 5.0 − 0.7 = 4.3 V\nI_B = 4.3 / 100,000 = 43 × 10⁻⁶ A = 43 μA\n\nStep 2: Find the collector current if transistor is in active mode:\nI_C (active) = β × I_B = 200 × 43 × 10⁻⁶ = 8.6 mA\n\nStep 3: Find the maximum I_C the circuit allows (saturation current):\nI_C (max) = V_CC / R_C = 9 / 1000 = 9 mA\n\nStep 4: Compare:\nI_C (active) = 8.6 mA < I_C (max) = 9 mA\nSo I_B = 43 μA is just enough to drive the transistor toward saturation. V_CE ≈ V_CC − I_C × R_C ≈ 9 − 8.6×1 = **0.4 V** (approaching saturation)\n\n**Designing the base resistor R_B:**\nFor guaranteed saturation: I_B needed = I_C(sat)/β = (V_CC/R_C)/β\nR_B = (V_in − 0.7) / I_B"
+        },
+        {
+          "type": "heading",
+          "body": "The Transistor as an Amplifier"
+        },
+        {
+          "type": "text",
+          "body": "In amplifier mode, the transistor is biased in the **active region** — between cut-off and saturation. A small varying base current produces a large varying collector current.\n\n**Common-emitter amplifier:**\nThe emitter is connected to ground (common terminal). Input is applied to base; output taken from collector.\n\n**Voltage gain A_V:**\nA_V = V_out / V_in = −(R_C × I_C) / (R_B × I_B) = −(R_C/R_B) × β\n\nThe negative sign means the output is inverted (180° phase shift).\n\n**Worked Example 3:** A common-emitter amplifier has R_C = 5 kΩ, R_B = 500 kΩ, β = 200.\nFind the voltage gain.\n\nA_V = −(R_C/R_B) × β = −(5000/500000) × 200 = −(0.01) × 200 = **−2**\n\nThe negative sign means inversion — a +1 V input gives −2 V output change (or 2 V output, inverted).\nMagnitude of gain = 2 (the output voltage is twice the input).\n\n**I-V Characteristics of the transistor:**\n\nThe output characteristics graph (I_C vs V_CE for various I_B values):\n- Shows a family of curves, one for each base current value\n- **Cut-off region:** I_B = 0 → I_C ≈ 0 (horizontal line near zero)\n- **Saturation region:** V_CE < 0.2 V → all curves bunch together; I_C determined by circuit, not I_B\n- **Active region:** I_C ≈ β × I_B; curves are nearly horizontal (I_C almost independent of V_CE)\n\nThe spacing between curves is proportional to β — equally spaced curves mean constant β.\n\n**Practical applications of transistor amplifiers:**\n- Amplifying the weak signal from a microphone to drive a speaker\n- Radio frequency amplifiers in mobile phone receivers\n- Hearing aids (amplify sound for hearing-impaired people)\n- Medical monitoring devices (ECG — amplifying heart electrical signals)\n- Guitar amplifiers\n\n**Applications of transistor switches:**\n- All logic gates in digital circuits (billions per chip)\n- Relay drivers (transistor switches a small current to control a large current through a relay)\n- Motor controllers in fans, pumps, boda-boda electric vehicles\n- LED drivers and lighting controllers\n- Automatic systems (e.g. borehole pump controllers in rural Uganda)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "BJT transistor has three regions: Emitter (heavily doped), Base (very thin, lightly doped), Collector (lightly doped). Normal operation: E-B forward biased, C-B reverse biased. Transistor action: electrons injected from emitter cross thin base and are collected — a tiny I_B controls a large I_C. Current gain β = I_C/I_B (typically 50–500). Kirchhoff: I_E = I_B + I_C. Switch mode: Cut-off (transistor OFF, output HIGH) or Saturation (transistor ON, output LOW). Transistor switch = inverter = NOT gate. Amplifier mode: active region, A_V = −(R_C/R_B)×β."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Bipolar Junction Transistor (BJT): Three-layer semiconductor device (n-p-n or p-n-p) that amplifies or switches current\n• Current gain (β or hFE): Ratio of collector to base current; β = I_C/I_B; typical values 50–500\n• Active region: Operating region for amplification; E-B forward biased, C-B reverse biased; I_C = β·I_B\n• Cut-off: Both junctions reverse biased; I_B ≈ 0, I_C ≈ 0; transistor OFF (open switch)\n• Saturation: Both junctions forward biased; V_CE ≈ 0 V; transistor ON (closed switch)\n• Common-emitter configuration: Emitter is common terminal; input at base, output at collector; inverts signal; provides voltage gain\n• Load line: Line on I_C vs V_CE graph representing the external circuit constraints; intersection with characteristic curve gives operating point"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A transistor has a current gain β = 120. If the base current is 50 μA, what is the collector current?",
+            "options": [
+              "0.42 mA",
+              "6.0 mA",
+              "12.0 mA",
+              "2.4 mA"
+            ],
+            "answer": "6.0 mA",
+            "explanation": "I_C = β × I_B = 120 × 50 × 10⁻⁶ = 6000 × 10⁻⁶ A = 6.0 mA. This demonstrates current amplification: a 50 μA base current controls a 6 mA collector current — a 120-times amplification."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In a transistor, I_B = 0.1 mA and I_C = 15 mA. What is the emitter current I_E?",
+            "options": [
+              "14.9 mA",
+              "15.1 mA",
+              "150 mA",
+              "15.0 mA"
+            ],
+            "answer": "15.1 mA",
+            "explanation": "Kirchhoff's current law at the transistor: I_E = I_B + I_C = 0.1 + 15 = 15.1 mA. The emitter current is always the largest of the three; the base current is the smallest. Also: β = I_C/I_B = 15/0.1 = 150."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In a transistor switch circuit, the input is HIGH (logic 1). The output is:",
+            "options": [
+              "HIGH — the transistor conducts, raising output voltage",
+              "HIGH — the base current switches the supply to the output",
+              "LOW — the transistor saturates, pulling the output to near 0 V",
+              "Unchanged — the transistor only works in analogue mode"
+            ],
+            "answer": "LOW — the transistor saturates, pulling the output to near 0 V",
+            "explanation": "HIGH input → V_BE > 0.7 V → transistor saturates → large I_C flows through R_C → large voltage drop across R_C → V_out = V_CC − I_C×R_C ≈ 0 V (LOW). This is inverter behaviour: HIGH in → LOW out. This is also how a NOT gate is implemented."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why must the base region of a transistor be made very thin?",
+            "options": [
+              "To reduce the overall size of the chip",
+              "To increase the base current",
+              "So that most injected minority carriers diffuse across the base to the collector before recombining",
+              "To increase the breakdown voltage"
+            ],
+            "answer": "So that most injected minority carriers diffuse across the base to the collector before recombining",
+            "explanation": "Transistor action depends on injected electrons (n-p-n) crossing the thin base before they recombine with holes. A thin base (~1-10 μm) means transit time is short — ~99% of electrons reach the collector, giving high β. A thick base would allow more recombination → most electrons lost in base → I_B large, I_C small → poor current gain."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A common-emitter amplifier has R_C = 10 kΩ, R_B = 1 MΩ, and β = 100. What is the voltage gain?",
+            "options": [
+              "+1",
+              "−1",
+              "+10",
+              "−1"
+            ],
+            "answer": "−1",
+            "explanation": "A_V = −(R_C/R_B) × β = −(10,000/1,000,000) × 100 = −(0.01) × 100 = −1. The gain is −1, meaning the output equals the input in magnitude but is inverted (180° phase shift). To get larger gain, reduce R_B or increase R_C."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "An n-p-n transistor is connected with the emitter grounded, collector to +9 V through 2 kΩ, and base to +5 V through 200 kΩ. β = 100. Assuming V_BE = 0.7 V, what is I_C?",
+            "options": [
+              "0.22 mA",
+              "2.15 mA",
+              "4.5 mA",
+              "21.5 mA"
+            ],
+            "answer": "2.15 mA",
+            "explanation": "I_B = (V_in − V_BE)/R_B = (5 − 0.7)/200,000 = 4.3/200,000 = 21.5 μA. I_C (active) = β × I_B = 100 × 21.5×10⁻⁶ = 2.15 mA. Check saturation: I_C (max) = 9/2000 = 4.5 mA. Since 2.15 mA < 4.5 mA, transistor is in active mode (not saturated). V_CE = 9 − 2.15×10⁻³ × 2000 = 9 − 4.3 = 4.7 V."
+          }
+        ]
+      }
+    }
+  ]
+}
