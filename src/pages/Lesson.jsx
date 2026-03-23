@@ -3,11 +3,41 @@ import { useParams, useLocation, useNavigate } from 'react-router-dom'
 import { useUser } from '../context/UserContext.jsx'
 import { progressDB, bookmarkDB, notesDB } from '../db/progressDB.js'
 import { useSubjectTheme } from '../context/SubjectThemeContext.jsx'
-import { SoundEngine, Speaker } from '../utils/soundEngine.js'
+import { SoundEngine } from '../utils/soundEngine.js'
 import { AmbientEngine, AMBIENT_SOUNDS } from '../utils/ambientSounds.js'
 import { recordLessonLearned, recordStudySession } from '../ai/learning.js'
 import { invalidateProfileCache } from '../ai/cache.js'
 import { LessonSkeleton } from '../components/Skeletons.jsx'
+
+
+// ── Built-in Text-to-Speech Speaker ──────────────────────────────────────────
+const Speaker = {
+  isSupported(){ return 'speechSynthesis' in window },
+  speak(text){
+    if(!this.isSupported()) return
+    window.speechSynthesis.cancel()
+    const chunks = text.match(/[^.!?]{1,200}(?:[.!?]|$)/g) || [text]
+    let idx = 0
+    const sayNext = () => {
+      if(idx >= chunks.length) return
+      const utt = new SpeechSynthesisUtterance(chunks[idx++])
+      utt.lang  = 'en-US'
+      utt.rate  = 0.92
+      utt.pitch = 1.0
+      utt.volume = 1.0
+      utt.onend  = sayNext
+      window.speechSynthesis.speak(utt)
+    }
+    sayNext()
+  },
+  stop(){
+    if(this.isSupported()) window.speechSynthesis.cancel()
+  },
+  isSpeaking(){
+    return this.isSupported() && window.speechSynthesis.speaking
+  },
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 // Curriculum file map — used to look up lessons when navigating directly by URL
 const ALL_SUBJECT_FILES={
@@ -126,10 +156,13 @@ export default function Lesson(){
   function startHandsFree(){
     if(!lesson)return
     setHandsFree(true)
-    // Build lesson text
-    const parts=[`${lesson.title}. `]
-    ;(lesson.content||[]).forEach(item=>{ if(item.body) parts.push(item.body) })
-    const fullText=parts.join('. ')
+    // Build lesson text — skip formulas
+    const parts=[lesson.title + '.']
+    ;(lesson.content||[]).forEach(item=>{
+      if(item.type==='formula') return
+      if(item.body) parts.push(item.body)
+    })
+    const fullText = parts.join(' ')
     Speaker.speak(fullText)
     setSpeaking(true)
     // When lesson finishes reading, auto-read first quiz question
@@ -160,16 +193,21 @@ export default function Lesson(){
   function speakLesson(){
     if(!lesson)return
     if(speaking){ Speaker.stop(); setSpeaking(false); return }
-    // Build full text from all content items
-    const parts=[lesson.title]
+    // Build readable text — skip formula blocks, include everything else
+    const parts=[lesson.title + '.']
     ;(lesson.content||[]).forEach(item=>{
-      if(item.body) parts.push(item.body)
-      if(item.title) parts.push(item.title)
+      if(item.type==='formula') return  // skip raw formula syntax
+      if(item.type==='heading' && item.body) parts.push(item.body + '.')
+      if(item.type==='example'){
+        if(item.title) parts.push(item.title + '.')
+        if(item.body)  parts.push(item.body)
+      }
+      if(item.body && item.type!=='heading' && item.type!=='example') parts.push(item.body)
     })
-    const fullText=parts.join('. ')
+    const fullText = parts.join(' ')
     Speaker.speak(fullText)
     setSpeaking(true)
-    // Poll until done
+    // Poll until speech finishes then reset button state
     const poll=setInterval(()=>{
       if(!Speaker.isSpeaking()){ setSpeaking(false); clearInterval(poll) }
     },500)
