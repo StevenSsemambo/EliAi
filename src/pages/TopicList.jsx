@@ -18,8 +18,8 @@ const SUBJECT_FILES = {
     s2: ['current_electricity','electronics','heat_transfer','magnetism_heat','sound','waves_electricity'],
     s3: ['electromagnetic','kinematics','motion_kinematics','pressure_fluids','radioactivity'],
     s4: ['ac_circuits','circular_gravitation','electricity_detail','electronics','optics_full'],
-    s5: ['physics_s5_measurement_dimensions','physics_s5_statics','physics_s5_linear_motion','physics_s5_motion_gravity','physics_s5_work_energy_power','physics_s5_solid_friction','physics_s5_fluid_mechanics','physics_s5_mechanical_properties','physics_s5_thermometry','physics_s5_heat_quantities','physics_s5_transfer_of_heat','physics_s5_behaviour_of_gases','physics_s5_thermodynamics','physics_s5_reflection_of_light','physics_s5_refraction_of_light','physics_s5_optical_instruments'],
-    s6: ['astrophysics','modern_physics','particle_physics','quantum_mechanics','relativity'],
+    s5: ['physics_s5_measurement_dimensions','physics_s5_statics','physics_s5_linear_motion','physics_s5_motion_gravity','physics_s5_work_energy_power','physics_s5_solid_friction','physics_s5_fluid_mechanics','physics_s5_mechanical_properties','physics_s5_thermometry','physics_s5_heat_quantities','physics_s5_transfer_of_heat','physics_s5_behaviour_of_gases','physics_s5_thermodynamics','physics_s5_reflection_of_light','physics_s5_refraction_of_light','physics_s5_optical_instruments','physics_s5_t17_electrostatics','physics_s5_t18_capacitors','physics_s5_t19_digital_electronics'],
+    s6: ['physics_s6_t20_circular_motion','physics_s6_t21_shm','physics_s6_t22_gravitation','physics_s6_t23_progressive_waves','physics_s6_t24_stationary_waves','physics_s6_t25_sound_waves','physics_s6_t26_current_electricity','physics_s6_t27_magnetism_in_matter'],
   },
   biology: {
     s1: ['cells','classification','diffusion_osmosis','movement_in_plants','nutrition_plants_animals','photosynthesis_respiration'],
