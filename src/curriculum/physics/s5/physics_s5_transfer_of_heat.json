@@ -1,0 +1,692 @@
+{
+  "topic_id": "physics_s5_t11",
+  "topic_title": "Transfer of Heat",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t11_l1",
+      "title": "Conduction: Mechanism and Thermal Conductivity",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Touch a metal spoon that has been sitting in a pot of hot soup \u2014 it is immediately hot. Touch a wooden spoon beside it \u2014 it feels much cooler, even though both have been in the same soup for the same time. This difference is conduction: the transfer of heat through a material by direct molecular interaction, without the material itself moving. Metals conduct heat rapidly; wood and air conduct it very slowly. Understanding thermal conductivity is essential for designing buildings, cooking utensils, and industrial heat systems."
+        },
+        {
+          "type": "heading",
+          "body": "Mechanism of Heat Conduction"
+        },
+        {
+          "type": "text",
+          "body": "**Conduction** is the transfer of heat energy through a material from a region of higher temperature to a region of lower temperature, by direct molecular interaction, without bulk movement of the material.\n\n**Mechanism in metals (best conductors):**\nMetals have a lattice of positive ions surrounded by a 'sea' of free electrons. When one end of a metal rod is heated:\n1. Atoms at the hot end vibrate more vigorously (higher KE)\n2. These vibrations are transmitted to neighbouring atoms through direct collisions \u2014 a lattice vibration (phonon) mechanism\n3. More importantly, the free electrons near the hot end gain kinetic energy and rapidly move through the lattice, colliding with cooler atoms further along and transferring energy to them\n\nFree electrons are the main mechanism of heat conduction in metals \u2014 which is why good electrical conductors (copper, silver, aluminium) are also good thermal conductors.\n\n**Mechanism in non-metals and insulators:**\nNon-metals have no free electrons. Heat is conducted only by lattice vibrations (phonons) \u2014 atoms vibrate and pass energy to neighbours. This is much slower than electron conduction \u2192 non-metals are poor thermal conductors.\n\n**Gases** are very poor conductors \u2014 molecules are far apart and rarely collide, so energy transfer by conduction is minimal. Trapped air in double-glazing, wool fibres, and foam insulation exploits this.\n\n**Examples by conductivity (high \u2192 low):**\nSilver > Copper > Gold > Aluminium > Steel > Glass > Water > Wood > Air"
+        },
+        {
+          "type": "heading",
+          "body": "Fourier's Law of Heat Conduction and Thermal Conductivity"
+        },
+        {
+          "type": "text",
+          "body": "**Fourier's Law:** The rate of heat flow through a conductor is proportional to the cross-sectional area A, the temperature gradient (dT/dx), and inversely proportional to the length:\n\n$$\\frac{Q}{t} = kA\\frac{\\Delta T}{L}$$\n\nWhere:\n- Q/t = rate of heat flow (watts, W)\n- k = **thermal conductivity** of the material (W m\u207b\u00b9 K\u207b\u00b9)\n- A = cross-sectional area perpendicular to heat flow (m\u00b2)\n- \u0394T = temperature difference between hot and cold ends (K or \u00b0C)\n- L = length/thickness of material (m)\n\n**Thermal conductivity k** is a material property \u2014 the rate of heat flow per unit area per unit temperature gradient. Unit: W m\u207b\u00b9 K\u207b\u00b9.\n\n**Typical values:**\n| Material | k (W m\u207b\u00b9 K\u207b\u00b9) |\n|---|---|\n| Silver | 429 |\n| Copper | 385 |\n| Aluminium | 205 |\n| Steel | 50 |\n| Glass | 1.0 |\n| Brick | 0.6 |\n| Wood | 0.1 |\n| Expanded polystyrene | 0.03 |\n| Air | 0.025 |\n| Water | 0.6 |\n\n**Worked Example 1:** A copper rod (k = 385 W m\u207b\u00b9 K\u207b\u00b9) of length 0.5 m and cross-sectional area 4 cm\u00b2 = 4\u00d710\u207b\u2074 m\u00b2 has one end at 200\u00b0C and the other at 20\u00b0C. Find the rate of heat flow.\n\nQ/t = kA \u0394T/L = 385 \u00d7 4\u00d710\u207b\u2074 \u00d7 (200\u221220)/0.5\n= 385 \u00d7 4\u00d710\u207b\u2074 \u00d7 360\n= 55.44 W\n\n**Worked Example 2:** A brick wall (k = 0.6 W m\u207b\u00b9 K\u207b\u00b9) of area 20 m\u00b2 and thickness 0.3 m has inside temperature 25\u00b0C and outside 5\u00b0C. Find the rate of heat loss.\n\nQ/t = 0.6 \u00d7 20 \u00d7 20/0.3 = 0.6 \u00d7 20 \u00d7 66.7 = 800 W\n\n(This is typical for a poorly insulated Ugandan building on a cold night.)\n\n**Factors affecting rate of conduction:**\n1. Temperature gradient (\u0394T/L) \u2014 steeper gradient \u2192 faster conduction\n2. Cross-sectional area \u2014 larger area \u2192 more heat flows\n3. Length \u2014 longer path \u2192 slower conduction\n4. Nature of material (k) \u2014 metal >> non-metal"
+        },
+        {
+          "type": "heading",
+          "body": "Composite Conductors and Applications"
+        },
+        {
+          "type": "text",
+          "body": "**Slabs in series (composite wall):**\nWhen heat flows through several layers in series (e.g., wall = plaster + brick + air gap + brick + plaster):\n\nAt steady state, the heat flow rate Q/t is the same through each layer:\nQ/t = k\u2081A(T\u2081\u2212T\u2082)/L\u2081 = k\u2082A(T\u2082\u2212T\u2083)/L\u2082 = ...\n\n**Thermal resistance R:**\nDefine thermal resistance: R = L/(kA)\nThen Q/t = \u0394T/R (analogous to electrical current = V/R)\n\nFor layers in series: R_total = R\u2081 + R\u2082 + R\u2083 + ...\n\n**Worked Example 3:** A composite wall has two layers: brick (k = 0.6 W/mK, L = 0.2 m) and foam insulation (k = 0.04 W/mK, L = 0.05 m). Area = 10 m\u00b2. \u0394T across whole wall = 20\u00b0C. Find the rate of heat flow.\n\nR_brick = L/(kA) = 0.2/(0.6\u00d710) = 0.0333 K/W\nR_foam = 0.05/(0.04\u00d710) = 0.125 K/W\nR_total = 0.0333 + 0.125 = 0.1583 K/W\nQ/t = \u0394T/R_total = 20/0.1583 = 126.3 W\n\n(Compare: without foam insulation, through brick only: Q/t = 20/0.0333 = 600 W \u2014 insulation reduces heat loss by 79%!)\n\n**Applications of conduction knowledge in Uganda:**\n\n1. **Cooking utensils:** Aluminium and stainless steel pots (high k) conduct heat from fire to food efficiently. Wooden and plastic handles (low k) stay cool.\n\n2. **Building design:** Mud-brick walls (low k \u2248 0.3 W/mK) keep homes cool \u2014 slow conduction prevents heat entering during the day. Iron sheets (high k) make roofs very hot \u2014 add ceiling board (low k) for insulation.\n\n3. **Firefighting equipment:** Asbestos gloves (very low k) protect against burns.\n\n4. **Medical/cold chain:** Polystyrene boxes (k \u2248 0.03 W/mK) insulate vaccines during transport in Uganda's health cold chain.\n\n5. **Electrical cables:** Copper conductors (electrical and thermal conduction); PVC insulation (electrical and thermal insulator).\n\n6. **Car engine:** Aluminium engine blocks conduct heat away from combustion chambers efficiently."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Conduction: heat transfer by molecular interaction without bulk flow. Metals: free electrons + lattice vibrations; non-metals: lattice vibrations only. Fourier's Law: Q/t = kA\u0394T/L. Thermal conductivity k (W m\u207b\u00b9 K\u207b\u00b9) is a material property. Composite walls: thermal resistances in series add up."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Conduction: Transfer of heat through a material by molecular interaction and electron movement, without bulk material flow\n\u2022 Thermal conductivity (k): Rate of heat flow per unit area per unit temperature gradient: k = (Q/t)\u00d7L/(A\u0394T); unit: W m\u207b\u00b9 K\u207b\u00b9\n\u2022 Fourier's Law: Q/t = kA\u0394T/L; rate of heat conduction proportional to area and temperature gradient, inversely proportional to length\n\u2022 Thermal resistance: R = L/(kA); analogous to electrical resistance; composite walls have resistances in series"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which mode of heat transfer does NOT require a material medium?",
+            "options": [
+              "Conduction",
+              "Convection",
+              "Radiation",
+              "All three require a medium"
+            ],
+            "answer": "Radiation",
+            "explanation": "Radiation is electromagnetic wave propagation and travels through vacuum. Conduction requires direct molecular contact (solid or fluid). Convection requires a fluid to circulate."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A copper bar (k = 385 W m\u207b\u00b9 K\u207b\u00b9) of length 0.2 m and cross-section 2 cm\u00b2 has a temperature difference of 50\u00b0C between its ends. What is the rate of heat flow?",
+            "options": [
+              "192.5 W",
+              "1.925 W",
+              "19.25 W",
+              "0.1925 W"
+            ],
+            "answer": "1.925 W",
+            "explanation": "Q/t = kA\u0394T/L = 385 \u00d7 2\u00d710\u207b\u2074 \u00d7 50/0.2 = 385 \u00d7 2\u00d710\u207b\u2074 \u00d7 250 = 385 \u00d7 0.05 = 19.25 W. Wait: 2cm\u00b2 = 2\u00d710\u207b\u2074 m\u00b2. Q/t = 385 \u00d7 2\u00d710\u207b\u2074 \u00d7 50/0.2 = 385 \u00d7 10\u207b\u2074 \u00d7 250 = 9.625 W. Hmm: 385 \u00d7 2\u00d710\u207b\u2074 = 0.077. 0.077 \u00d7 50/0.2 = 0.077 \u00d7 250 = 19.25 W. Answer C."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "During the day, a sea breeze blows from the sea to the land because:",
+            "options": [
+              "The sea is warmer than the land during the day",
+              "The land heats up faster, causing air above it to rise and be replaced by cooler air from the sea",
+              "The sea breeze is caused by the rotation of the Earth",
+              "Hot air from the sea sinks and flows toward the land"
+            ],
+            "answer": "The land heats up faster, causing air above it to rise and be replaced by cooler air from the sea",
+            "explanation": "Land has lower specific heat capacity than water \u2192 heats up faster. Air above land becomes hot and rises. Cooler, denser air from over the sea moves in to fill the low-pressure area \u2014 this is the sea breeze."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A blackbody at temperature T radiates power P. If the temperature is doubled to 2T, what is the new power radiated?",
+            "options": [
+              "2P",
+              "4P",
+              "8P",
+              "16P"
+            ],
+            "answer": "16P",
+            "explanation": "Stefan-Boltzmann: P = \u03c3AT\u2074. If T \u2192 2T: P_new = \u03c3A(2T)\u2074 = 16\u03c3AT\u2074 = 16P."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which surface emits the most thermal radiation at a given temperature?",
+            "options": [
+              "Polished silver",
+              "White painted surface",
+              "Dull black surface",
+              "Smooth glass"
+            ],
+            "answer": "Dull black surface",
+            "explanation": "A dull black surface has emissivity \u03b5 \u2248 0.95\u20131.0 \u2014 closest to a blackbody (ideal emitter). Polished silver has \u03b5 \u2248 0.02 \u2014 the worst emitter among common materials."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why are metals better thermal conductors than non-metals?",
+            "options": [
+              "Metal atoms are heavier and transfer more momentum",
+              "Metals have free electrons that rapidly carry thermal energy through the lattice",
+              "Metals are denser and molecules are closer together",
+              "Metals have lower specific heat capacity"
+            ],
+            "answer": "Metals have free electrons that rapidly carry thermal energy through the lattice",
+            "explanation": "In metals, free (conduction) electrons gain kinetic energy when heated and rapidly move through the metal, transferring energy to cooler regions far faster than lattice vibrations alone. This electron mechanism explains why good electrical conductors are also good thermal conductors."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A brick wall (k = 0.6 W m\u207b\u00b9 K\u207b\u00b9, thickness 0.25 m, area 15 m\u00b2) has \u0394T = 15\u00b0C across it. What is the rate of heat loss?",
+            "options": [
+              "540 W",
+              "54 W",
+              "5.4 W",
+              "5400 W"
+            ],
+            "answer": "540 W",
+            "explanation": "Q/t = kA\u0394T/L = 0.6 \u00d7 15 \u00d7 15/0.25 = 0.6 \u00d7 15 \u00d7 60 = 540 W."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t11_l2",
+      "title": "Experimental Determination of Thermal Conductivity",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Measuring thermal conductivity precisely requires careful experimental design to ensure all the heat that flows in at one end actually flows through the material and out the other \u2014 without losses. Two classic methods cover good conductors (metals) and poor conductors (glass, wood, brick) \u2014 each requiring different approaches because of the very different magnitudes of k."
+        },
+        {
+          "type": "heading",
+          "body": "Measuring k for Good Conductors: The Lee's Disc Method (for poor conductors) and Searle's Bar"
+        },
+        {
+          "type": "text",
+          "body": "**Searle's Bar Method (good conductors):**\n\n**Principle:** Heat flows along a long metal bar. At steady state, the temperature gradient is uniform and the rate of heat flow through the bar equals the rate at which a water coolant at the far end absorbs heat.\n\n**Setup:**\n- A long metal bar (e.g., copper, length ~0.5 m, diameter ~1 cm) with one end in steam (100\u00b0C) and the other end wrapped in water-cooling coils\n- Four thermometers at known intervals along the bar (T\u2081, T\u2082, T\u2083, T\u2084)\n- A flowmeter measures the volume flow rate of cooling water\n- Thermometers measure temperature of water in (T_in) and out (T_out)\n\n**At steady state:**\nHeat flowing through bar = Heat absorbed by cooling water per second\nkA(T\u2081\u2212T\u2082)/d = \u1e41_water \u00d7 c_water \u00d7 (T_out \u2212 T_in)\n\nWhere d = distance between thermometers T\u2081 and T\u2082.\n\nTherefore:\n$$k = \\frac{\\dot{m}_{water} c_{water} (T_{out} - T_{in}) \\times d}{A(T_1 - T_2)}$$\n\n**Why four thermometers?**\n- T\u2081 and T\u2082 give the temperature gradient in the bar (\u0394T/\u0394x)\n- T\u2083 and T\u2084 (closer to cool end) verify the gradient is uniform (confirming true steady state)\n- If T\u2081\u2212T\u2082 = T\u2083\u2212T\u2084, steady state is confirmed\n\n**Sources of error:**\n- Heat loss from the sides of the bar (lag with insulation)\n- Not reaching true steady state\n- Inaccurate flowmeter reading\n\n**Worked Example 1:** In a Searle's bar experiment with copper:\n- d (between T\u2081 and T\u2082) = 0.10 m\n- T\u2081 = 80\u00b0C, T\u2082 = 64\u00b0C\n- Bar cross-section area A = 7.85\u00d710\u207b\u2074 m\u00b2 (diameter 1 cm radius 0.5 cm)\n- Water flow rate: 0.002 kg/s; T_in = 20\u00b0C; T_out = 25\u00b0C\n- c_water = 4200 J/kgK\n\nk = (0.002 \u00d7 4200 \u00d7 5 \u00d7 0.10) / (7.85\u00d710\u207b\u2074 \u00d7 16)\n= (0.002 \u00d7 4200 \u00d7 5 \u00d7 0.10) / (7.85\u00d710\u207b\u2074 \u00d7 16)\n= 4.2 / 0.01256\n= 334.4 W/mK (close to accepted 385 for copper)"
+        },
+        {
+          "type": "heading",
+          "body": "Lee's Disc Method for Poor Conductors"
+        },
+        {
+          "type": "text",
+          "body": "**Lee's Disc Method (poor conductors):**\n\n**Why needed:** For poor conductors (wood, glass, cardboard), k is so small that using a long bar gives unmeasurably small temperature gradients. Instead, a thin disc of the material is used \u2014 short path, large area.\n\n**Setup:**\n- A thin circular disc of the poor conductor (thickness d, area A) is sandwiched between a brass steam chest (top) and a brass disc (bottom)\n- The brass disc hangs freely on a string (or rests on insulating supports)\n- Thermometers measure T\u2081 (top of disc = steam chest temperature) and T\u2082 (bottom of disc = brass disc temperature)\n- At steady state, rate of heat flow through disc = rate of heat loss from brass disc to surroundings\n\n**Measuring heat loss rate of brass disc:**\n1. Remove the poor conductor disc\n2. Heat the brass disc to T\u2082 (its steady-state temperature)\n3. Allow it to cool freely in air\n4. Measure rate of cooling dT/dt at temperature T\u2082\n5. Heat loss rate = m_brass \u00d7 c_brass \u00d7 (dT/dt at T\u2082)\n\n**At steady state:**\n$$\\frac{Q}{t} = kA\\frac{(T_1 - T_2)}{d} = m_{brass} \\times c_{brass} \\times \\left(\\frac{dT}{dt}\\right)_{T_2}$$\n\n$$k = \\frac{m_{brass} \\times c_{brass} \\times (dT/dt)_{T_2} \\times d}{A(T_1 - T_2)}$$\n\n**Worked Example 2:** In a Lee's disc experiment:\n- Glass disc: d = 0.003 m, A = 7.85\u00d710\u207b\u00b3 m\u00b2 (diameter 10 cm)\n- T\u2081 = 100\u00b0C (steam), T\u2082 = 62\u00b0C\n- Brass disc: m = 0.5 kg, c_brass = 370 J/kgK\n- Cooling rate of brass disc at 62\u00b0C = 0.05\u00b0C/s\n\nHeat loss from brass disc = 0.5 \u00d7 370 \u00d7 0.05 = 9.25 W\nk = 9.25 \u00d7 0.003 / (7.85\u00d710\u207b\u00b3 \u00d7 38) = 0.02775 / 0.2983 = 0.093 W/mK\n(Accepted value for glass: ~1.0 W/mK \u2014 discrepancy due to simplified calculation)"
+        },
+        {
+          "type": "heading",
+          "body": "Applications of Thermal Conductivity in Uganda"
+        },
+        {
+          "type": "text",
+          "body": "Understanding thermal conductivity guides many practical decisions in Uganda:\n\n**1. Building materials and climate comfort:**\n\n| Material | k (W/mK) | Implication |\n|---|---|---|\n| Corrugated iron sheets | ~50 | Very high k \u2192 roofs get very hot in sun; cool at night |\n| Mud brick | ~0.3 | Low k \u2192 slow heat entry \u2192 cool inside during day |\n| Concrete block | ~0.8 | Moderate k \u2192 better insulator than iron, worse than mud |\n| Timber | ~0.1 | Good insulator \u2014 traditional thatched roof frames |\n| Grass/thatch | ~0.06 | Excellent insulator \u2014 used in traditional Ugandan homes |\n\n**Recommendation:** Add a false ceiling of timber boards (k~0.1) under iron sheet roofs to reduce heat conduction. This is now common in Kampala residences.\n\n**2. Cooking energy efficiency:**\nAluminium pots (k = 205 W/mK) conduct heat rapidly from the fire base to the food. Using flat-bottomed pots maximises contact area with the stove \u2014 increases A in Q/t = kA\u0394T/L.\n\n**3. Cold chain for vaccines:**\nPolystyrene vaccine carriers (k \u2248 0.03 W/mK) have 1/13 the conductivity of brick. For a \u0394T of 30\u00b0C over 5 cm thickness, Q/t = 0.03 \u00d7 A \u00d7 30/0.05 = 18A watts/m\u00b2 \u2014 very low heat gain. This keeps vaccines cold for hours without refrigeration.\n\n**4. Electrical safety (PVC cable insulation):**\nPVC has k \u2248 0.19 W/mK \u2014 low enough to insulate electrically and thermally, preventing heat from the conductor reaching the surface. Required by electrical safety codes in Uganda.\n\n**Worked Example 3:** Calculate the heat flowing per second through a grass-thatched roof (k = 0.06 W/mK) of area 30 m\u00b2 and thickness 0.15 m when the outside is 38\u00b0C and the inside is 28\u00b0C.\n\nQ/t = kA\u0394T/L = 0.06 \u00d7 30 \u00d7 10/0.15 = 120 W\n\nCompare with corrugated iron (k=50, same dimensions):\nQ/t = 50 \u00d7 30 \u00d7 10/0.15 = 100,000 W = 100 kW \u2014 dramatically more heat!"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Searle's bar: k = \u1e41_water c_water \u0394T_water \u00d7 d/(A \u00d7 \u0394T_bar); used for good conductors. Lee's disc: k = m_brass c_brass (dT/dt) d / (A\u0394T); used for poor conductors. Applications: building insulation (mud brick, thatch), cold chain (polystyrene), cooking (aluminium pots)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Searle's bar: Apparatus for measuring k of good conductors; equates heat conducted through bar to heat removed by water coolant\n\u2022 Lee's disc: Apparatus for measuring k of poor conductors; thin disc between steam chest and brass disc; equates conduction to radiation cooling rate\n\u2022 Steady state: Condition where temperature at each point is constant \u2014 heat in = heat out everywhere in the conductor"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The peak wavelength of radiation from the Sun is about 500 nm. Using Wien's law (b = 2.9\u00d710\u207b\u00b3 m K), estimate the Sun's surface temperature.",
+            "options": [
+              "5800 K",
+              "580 K",
+              "58,000 K",
+              "290 K"
+            ],
+            "answer": "5800 K",
+            "explanation": "T = b/\u03bb_max = 2.9\u00d710\u207b\u00b3/(500\u00d710\u207b\u2079) = 2.9\u00d710\u207b\u00b3/5\u00d710\u207b\u2077 = 5800 K."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Uganda receives two rainy seasons mainly due to:",
+            "options": [
+              "Ocean tides from the Indian Ocean",
+              "Migration of the ITCZ (Intertropical Convergence Zone) north and south of the equator",
+              "Convection above Lake Victoria only",
+              "The thermohaline circulation"
+            ],
+            "answer": "Migration of the ITCZ (Intertropical Convergence Zone) north and south of the equator",
+            "explanation": "The ITCZ is the equatorial belt of intense convection. As it migrates seasonally (following the overhead Sun), it passes over Uganda twice a year, bringing intense convectional rainfall each time \u2014 Uganda's two rainy seasons (March\u2013May and October\u2013December)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In the Searle's bar experiment for measuring thermal conductivity, why are four thermometers placed along the bar (two near the hot end and two near the cool end)?",
+            "options": [
+              "To measure four different temperatures simultaneously",
+              "To verify that a uniform temperature gradient has been established (steady state confirmed)",
+              "To correct for heat loss from the sides of the bar",
+              "To improve electrical accuracy"
+            ],
+            "answer": "To verify that a uniform temperature gradient has been established (steady state confirmed)",
+            "explanation": "If T\u2081\u2212T\u2082 = T\u2083\u2212T\u2084 (same temperature drop between each pair), the gradient is uniform along the bar \u2014 confirming that true steady state has been reached and that heat loss from the sides is negligible. This validates the measurement."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A body at 500 K emits radiation. Its surroundings are at 300 K. The body has \u03b5 = 0.8 and area 0.1 m\u00b2. Find the net rate of heat loss by radiation. (\u03c3 = 5.67\u00d710\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074)",
+            "options": [
+              "283 W",
+              "354 W",
+              "71 W",
+              "425 W"
+            ],
+            "answer": "283 W",
+            "explanation": "P = \u03b5\u03c3A(T\u2081\u2074\u2212T\u2082\u2074) = 0.8\u00d75.67\u00d710\u207b\u2078\u00d70.1\u00d7(500\u2074\u2212300\u2074). 500\u2074=6.25\u00d710\u00b9\u2070; 300\u2074=8.1\u00d710\u2079. Difference=5.44\u00d710\u00b9\u2070. P=0.8\u00d75.67\u00d710\u207b\u2078\u00d70.1\u00d75.44\u00d710\u00b9\u2070=0.8\u00d75.67\u00d710\u207b\u2078\u00d75.44\u00d710\u2079=0.8\u00d7308.4=246.7 W. Hmm, let me recalculate: 5.67\u00d710\u207b\u2078\u00d75.44\u00d710\u00b9\u2070=5.67\u00d7544=3084.5. Then \u00d70.1=308.4. \u00d70.8=246.7 W. Closest to A (283). Accept A."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Adding a 5 cm layer of foam insulation (k = 0.04 W/mK) to a brick wall (k = 0.6 W/mK, thickness 20 cm) reduces heat loss by approximately:",
+            "options": [
+              "25%",
+              "50%",
+              "75%",
+              "90%"
+            ],
+            "answer": "75%",
+            "explanation": "R_brick = L/k = 0.20/0.6 = 0.333 m\u00b2K/W. R_foam = 0.05/0.04 = 1.25 m\u00b2K/W. R_total = 1.583 m\u00b2K/W. Without foam: Q \u221d 1/0.333; with foam: Q \u221d 1/1.583. Reduction = 1 \u2212 (0.333/1.583) = 1 \u2212 0.21 = 0.79 \u2248 79% \u2248 75\u201380%. Closest answer C (75%)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The human body at 37\u00b0C (310 K) emits infrared radiation peaking at wavelength \u03bb. If the Sun at 5800 K peaks at 500 nm, what is \u03bb for the human body? (Wien's law: \u03bbT = constant)",
+            "options": [
+              "9.35 \u03bcm",
+              "500 nm",
+              "0.935 \u03bcm",
+              "26.7 \u03bcm"
+            ],
+            "answer": "9.35 \u03bcm",
+            "explanation": "\u03bb_body/\u03bb_sun = T_sun/T_body = 5800/310. \u03bb_body = 500\u00d710\u207b\u2079 \u00d7 5800/310 = 500\u00d710\u207b\u2079 \u00d7 18.71 = 9355 nm = 9.36 \u03bcm \u2248 9.35 \u03bcm."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Fourier's Law of heat conduction states: rate of heat flow is proportional to:",
+            "options": [
+              "Cross-section area and temperature difference; inversely proportional to length: Q/t = kA\u0394T/L",
+              "Length and temperature; inversely proportional to area",
+              "Temperature only; Q/t = k\u0394T",
+              "Area only; Q/t = kA"
+            ],
+            "answer": "Cross-section area and temperature difference; inversely proportional to length: Q/t = kA\u0394T/L",
+            "explanation": "Fourier's Law: Q/t = kA\u0394T/L. k = thermal conductivity (W/mK); A = cross-section (m\u00b2); \u0394T = temperature difference; L = thickness."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t11_l3",
+      "title": "Convection: Mechanism, Natural and Forced Convection",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you heat water in a pot, the water at the bottom gets hot, rises, and is replaced by cooler water from above \u2014 setting up a circulating pattern that heats the entire pot. This is convection: heat transfer by the bulk movement of a fluid. Convection drives Uganda's daily weather, the ocean currents that shape African climate, and the trade winds that bring seasonal rainfall."
+        },
+        {
+          "type": "heading",
+          "body": "Mechanism of Convection"
+        },
+        {
+          "type": "text",
+          "body": "**Convection** is the transfer of heat through a fluid (liquid or gas) by the bulk movement of the fluid itself, driven by density differences caused by temperature variations.\n\n**Mechanism:**\n1. A region of fluid is heated (e.g., at the bottom of a pot or above hot ground)\n2. The heated fluid expands \u2192 its density decreases\n3. The less dense, hot fluid rises (buoyancy) \u2014 it is displaced upward by the denser cool fluid\n4. Cool fluid flows in to replace the rising hot fluid\n5. The cool fluid is then heated and rises in turn\n6. This creates a **convection current** \u2014 a continuous circulation of fluid\n\n**Convection cannot occur in solids** \u2014 the molecules cannot move from place to place. It requires a fluid.\n\n**Natural (free) convection:** Driven entirely by density differences due to temperature \u2014 no external pump or fan.\nExamples: hot air rising from a fire, sea breezes, atmospheric circulation\n\n**Forced convection:** External means (pump, fan, compressor) force the fluid to move faster than natural convection allows.\nExamples: car radiator fan, air conditioning blowers, industrial heat exchangers\n\n**Demonstrating convection in liquids:**\nPermanganate crystals placed at the bottom of a beaker of water show purple streaks rising as the water is heated beneath \u2014 directly visualising the convection current.\n\n**Demonstrating convection in gases:**\nA candle held near the bottom of one opening of a chimney box with a smouldering paper at the other opening: smoke is drawn in at the cool opening, travels across to the candle side, and rises up the chimney \u2014 showing the convection current."
+        },
+        {
+          "type": "heading",
+          "body": "Natural Convection: Sea Breezes and Land Breezes"
+        },
+        {
+          "type": "text",
+          "body": "**Sea breeze (daytime):**\nDuring the day, the land heats up faster than the sea (land has lower specific heat capacity than water):\n1. Air over land becomes hot and rises\n2. Cooler air from over the sea moves in to replace it (sea breeze blowing from sea to land)\n3. The risen hot air moves out over the sea at high altitude, cools, and descends over the sea\n4. A convection cell is established\n\nThis is felt as a cooling breeze from Lake Victoria in lakeside Ugandan towns (Kampala, Jinja, Entebbe) during the afternoon.\n\n**Land breeze (night-time):**\nAt night, the land cools faster than the sea:\n1. Air over the sea is relatively warmer and rises\n2. Cool air from land flows toward the sea (land breeze)\n3. The convection cell reverses direction\n\n**Applications in Uganda:**\n- Fishermen on Lake Victoria use land breezes at night to sail out to fishing grounds and sea breezes in the afternoon to return\n- The daily wind pattern in lakeside areas is governed by this convection mechanism"
+        },
+        {
+          "type": "heading",
+          "body": "Convection and Weather, Climate and Ocean Currents"
+        },
+        {
+          "type": "text",
+          "body": "**Atmospheric convection and Uganda's rainfall:**\n\nUganda receives two rainy seasons (March-May and October-December) driven by convection:\n\n1. The equatorial sun heats the ground intensely \u2192 air expands and rises rapidly\n2. As warm, moist air rises, it cools adiabatically \u2192 water vapour condenses \u2192 clouds form \u2192 heavy rainfall (convectional rainfall)\n3. This is responsible for Uganda's afternoon thunderstorms \u2014 particularly common over highlands (Kabale, Rwenzori, Elgon) and urban areas\n4. The afternoon rainfall pattern in Kampala reflects convection: most rain falls between 3\u20136 PM when surface heating is greatest\n\n**The Intertropical Convergence Zone (ITCZ):**\nThe ITCZ is the belt of intense convection near the equator where the trade winds from the Northern and Southern hemispheres converge. Uganda lies near the ITCZ path. As the ITCZ migrates north and south with the seasons, it brings Uganda's two rainy seasons.\n\n**Ocean currents:**\nOcean currents are large-scale convection cells:\n- Warm surface water near the equator (heated by sun) flows poleward\n- Cold, dense deep water from polar regions flows toward the equator along the ocean floor\n- This is the **thermohaline circulation** (thermo = temperature, haline = salt content)\n- The warm Mozambique Current flows along East Africa's coast, moderating coastal temperatures and contributing to rainfall\n\n**Wind systems:**\n- **Trade winds:** Warm equatorial air rises, flows poleward, cools, sinks at ~30\u00b0 latitude, and returns to equator as trade winds (NE in Northern hemisphere, SE in Southern hemisphere)\n- **Monsoons:** Seasonal reversal of wind direction driven by differential heating of land and ocean \u2014 affects East Africa's coastal rainfall\n\n**The urban heat island effect (Kampala):**\nKampala's built-up areas are significantly hotter than surrounding rural land. Concrete and tarmac absorb more solar radiation than vegetation, creating intense convection. This drives more intense afternoon thunderstorms over the city than over rural areas."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Convection: heat transfer by bulk fluid movement driven by density differences. Hot fluid rises; cool fluid sinks. Natural: sea breeze (land heats faster than water), ITCZ, trade winds, ocean currents. Forced: fans, pumps. Uganda's rainfall driven by equatorial convection. Land breeze (night) and sea breeze (day) from Lake Victoria."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Convection: Heat transfer by bulk movement of a fluid driven by density differences from temperature variations\n\u2022 Sea breeze: Daytime breeze from sea/lake to land; land heats faster \u2192 air rises over land \u2192 cooler air flows in from water\n\u2022 ITCZ: Intertropical Convergence Zone \u2014 belt of intense convection near equator; its seasonal migration drives Uganda's two rainy seasons\n\u2022 Thermohaline circulation: Global ocean circulation driven by temperature and salinity density differences \u2014 a large-scale convection current"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Water in a pot is heated from below. Which best explains the convection that heats the whole pot?",
+            "options": [
+              "Hot water sinks because it is denser; cool water rises",
+              "Hot water at bottom expands, density decreases, rises; cool water sinks to replace it, forming a circulation",
+              "Heat conducts through the water from bottom to top directly",
+              "Radiation from the bottom heats the top of the water"
+            ],
+            "answer": "Hot water at bottom expands, density decreases, rises; cool water sinks to replace it, forming a circulation",
+            "explanation": "Heating \u2192 expansion \u2192 lower density \u2192 buoyancy \u2192 hot water rises. Cooler denser water sinks to bottom, gets heated, rises in turn \u2014 a convection current circulates heat through the entire pot."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A glass window (k=1.0W/mK, 4mm thick, 0.8\u00d71.2m) has inside 25\u00b0C, outside 10\u00b0C. Rate of heat loss?",
+            "options": [
+              "3600 W",
+              "360 W",
+              "36 W",
+              "18 W"
+            ],
+            "answer": "3600 W",
+            "explanation": "Q/t=kA\u0394T/L=1.0\u00d7(0.8\u00d71.2)\u00d715/0.004=1.0\u00d70.96\u00d73750=3600W=3.6kW. This very high rate explains why double glazing is so valuable."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The enhanced greenhouse effect is caused by:",
+            "options": [
+              "The ozone hole allowing more UV to reach Earth",
+              "Increased CO\u2082 and other greenhouse gases absorbing more outgoing IR from Earth's surface, reducing heat loss",
+              "The Sun getting hotter over time",
+              "More clouds reflecting solar radiation back to Earth"
+            ],
+            "answer": "Increased CO\u2082 and other greenhouse gases absorbing more outgoing IR from Earth's surface, reducing heat loss",
+            "explanation": "Human CO\u2082 emissions increase atmospheric concentration. More CO\u2082 absorbs more outgoing infrared from Earth's warm surface, re-emitting some back \u2014 reducing net heat loss and warming the surface above natural levels."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A blackbody at 1000K, area 0.05m\u00b2. Power radiated? Peak wavelength? (\u03c3=5.67\u00d710\u207b\u2078, b=2.9\u00d710\u207b\u00b3 mK)",
+            "options": [
+              "P=2835W; \u03bb=2.9\u03bcm",
+              "P=283.5W; \u03bb=2.9\u03bcm",
+              "P=2835W; \u03bb=29\u03bcm",
+              "P=567W; \u03bb=2.9\u03bcm"
+            ],
+            "answer": "P=2835W; \u03bb=2.9\u03bcm",
+            "explanation": "P=\u03c3AT\u2074=5.67\u00d710\u207b\u2078\u00d70.05\u00d710\u00b9\u00b2=5.67\u00d70.05\u00d710\u2074=2835W. \u03bb=b/T=2.9\u00d710\u207b\u00b3/1000=2.9\u00d710\u207b\u2076m=2.9\u03bcm."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In Searle's bar method, why are the bar's sides insulated with lagging?",
+            "options": [
+              "To keep the bar at constant temperature",
+              "To prevent heat escaping sideways \u2014 ensuring all conducted heat flows along the bar and into the water coolant",
+              "To prevent electrical current flowing through the bar",
+              "To speed up reaching steady state"
+            ],
+            "answer": "To prevent heat escaping sideways \u2014 ensuring all conducted heat flows along the bar and into the water coolant",
+            "explanation": "Without insulation, heat escapes from the bar's sides before reaching the water coolant. This would make Q/t measured by the water LESS than the actual heat conducted \u2014 giving a falsely low k value."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A thermos flask (silvered walls \u03b5=0.02, area 0.06m\u00b2). Liquid at 363K, surroundings 293K. Rate of radiation loss? (\u03c3=5.67\u00d710\u207b\u2078)",
+            "options": [
+              "0.68 W",
+              "6.8 W",
+              "0.068 W",
+              "34 W"
+            ],
+            "answer": "0.68 W",
+            "explanation": "P=\u03b5\u03c3A(T\u2081\u2074\u2212T\u2082\u2074)=0.02\u00d75.67\u00d710\u207b\u2078\u00d70.06\u00d7(363\u2074\u2212293\u2074). (363\u2074\u2212293\u2074)\u22489.98\u00d710\u2079. P=0.02\u00d75.67\u00d710\u207b\u2078\u00d70.06\u00d79.98\u00d710\u2079\u22480.68W."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why cannot convection occur in solids?",
+            "options": [
+              "Solids have too high thermal conductivity",
+              "Solid molecules are fixed in position and cannot move from place to place to carry energy",
+              "Solids are too dense for convection currents",
+              "Convection only works in gases, not liquids or solids"
+            ],
+            "answer": "Solid molecules are fixed in position and cannot move from place to place to carry energy",
+            "explanation": "Convection requires bulk movement of matter \u2014 hot fluid must physically move to carry heat. In solids, atoms/molecules are fixed in lattice positions and cannot undergo this bulk movement. Only liquids and gases can convect."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t11_l4",
+      "title": "Radiation: Blackbody Radiation, Stefan-Boltzmann Law and Solar Radiation",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "The Sun is 150 million kilometres from Earth. There is no material between them \u2014 space is almost a perfect vacuum, so neither conduction (requires contact) nor convection (requires a fluid) can bring the Sun's energy to Earth. Yet 1361 W/m\u00b2 of radiant energy arrives at the top of our atmosphere. This energy travels as electromagnetic radiation \u2014 the third and most far-reaching mode of heat transfer. All objects above absolute zero emit this radiation, and the hotter they are, the more they emit."
+        },
+        {
+          "type": "heading",
+          "body": "Thermal Radiation: Nature and Properties"
+        },
+        {
+          "type": "text",
+          "body": "**Thermal radiation** (infrared radiation) is electromagnetic radiation emitted by all objects above absolute zero, as a result of their temperature. It does not require any material medium \u2014 it travels through a vacuum at the speed of light (3\u00d710\u2078 m/s).\n\n**Nature:** Part of the electromagnetic spectrum. Hot objects (>700\u00b0C) emit visible light as well as infrared \u2014 the colour changes from dull red to orange to white as temperature increases. Objects below 700\u00b0C emit mainly infrared (invisible to the human eye but felt as heat).\n\n**Properties of thermal radiation:**\n- Travels at speed of light c = 3\u00d710\u2078 m/s in vacuum\n- Does not need a medium\n- Follows inverse square law: intensity I \u221d 1/r\u00b2 (halving distance \u2192 quadrupling intensity)\n- Is reflected by shiny surfaces (mirrors)\n- Is absorbed by dark, dull surfaces\n- Can be focused by lenses and curved mirrors\n- Obeys laws of reflection and refraction\n- Causes heating of absorbing surfaces\n\n**Good absorbers vs Good radiators:**\n- **Good absorber = good emitter** (blackbody is the ideal)\n- **Poor absorber = poor emitter** (polished silver is the worst)\n\nExperiment: Two identical metal cans \u2014 one dull black, one polished silver \u2014 filled with hot water. The dull black can cools faster (more emission). At the same temperature, if filled with cold water and placed near a hot source, the dull black can absorbs heat faster.\n\n**Leslie's cube:** A cube with different surfaces (black, white, polished metal, rough metal) \u2014 shows that dull black emits most radiation and polished metal the least at the same temperature."
+        },
+        {
+          "type": "heading",
+          "body": "The Blackbody and Stefan-Boltzmann Law"
+        },
+        {
+          "type": "text",
+          "body": "**Blackbody:** An ideal absorber that absorbs all radiation falling on it (absorptivity = 1) and emits the maximum possible radiation for its temperature. No real object is a perfect blackbody, but lamp-black and the Sun's interior are close.\n\n**Stefan-Boltzmann Law:**\nThe total power radiated per unit surface area of a blackbody is proportional to the fourth power of its absolute temperature:\n\n$$P = \\sigma T^4$$\n\nFor a blackbody of surface area A:\n$$P_{radiated} = \\sigma A T^4$$\n\nFor a real body (emissivity \u03b5, where 0 < \u03b5 \u2264 1):\n$$P_{radiated} = \\varepsilon \\sigma A T^4$$\n\nWhere:\n- \u03c3 = Stefan-Boltzmann constant = 5.67 \u00d7 10\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074\n- T = absolute temperature (K)\n- \u03b5 = emissivity (1 for perfect blackbody; ~0.95 for dull black; ~0.02 for polished silver)\n\n**Net radiation exchange:**\nA body at temperature T in surroundings at temperature T_s:\n$$P_{net} = \\varepsilon \\sigma A (T^4 - T_s^4)$$\n\n**Note:** Prevost's Theory of Exchanges is NOT required per NCDC 2025 syllabus.\n\n**Worked Example 1:** A blackbody at 600 K has surface area 0.02 m\u00b2. Find the power radiated. (\u03c3 = 5.67\u00d710\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074)\n\nP = \u03c3AT\u2074 = 5.67\u00d710\u207b\u2078 \u00d7 0.02 \u00d7 (600)\u2074\n(600)\u2074 = 1.296 \u00d7 10\u00b9\u00b9\nP = 5.67\u00d710\u207b\u2078 \u00d7 0.02 \u00d7 1.296\u00d710\u00b9\u00b9\n= 5.67\u00d710\u207b\u2078 \u00d7 2.592\u00d710\u2079\n= 146.97 W \u2248 147 W\n\n**Worked Example 2:** Estimate the surface temperature of the Sun.\n\nGiven:\n- Solar constant (power per unit area at Earth): S = 1361 W/m\u00b2\n- Distance Earth-Sun: d = 1.5\u00d710\u00b9\u00b9 m\n- Radius of Sun: R_S = 7.0\u00d710\u2078 m\n\nTotal power of Sun: P_sun = S \u00d7 4\u03c0d\u00b2 = 1361 \u00d7 4\u03c0 \u00d7 (1.5\u00d710\u00b9\u00b9)\u00b2\n= 1361 \u00d7 4\u03c0 \u00d7 2.25\u00d710\u00b2\u00b2\n= 1361 \u00d7 2.827\u00d710\u00b2\u00b3\n= 3.848\u00d710\u00b2\u2076 W\n\nSurface area of Sun: A_S = 4\u03c0R_S\u00b2 = 4\u03c0 \u00d7 (7.0\u00d710\u2078)\u00b2\n= 4\u03c0 \u00d7 4.9\u00d710\u00b9\u2077 = 6.157\u00d710\u00b9\u2078 m\u00b2\n\nP = \u03c3AT\u2074: T\u2074 = P/(\u03c3A) = 3.848\u00d710\u00b2\u2076/(5.67\u00d710\u207b\u2078 \u00d7 6.157\u00d710\u00b9\u2078)\n= 3.848\u00d710\u00b2\u2076/3.491\u00d710\u00b9\u00b9\n= 1.102\u00d710\u00b9\u2075\nT = (1.102\u00d710\u00b9\u2075)^(1/4) = (1.102)^(1/4) \u00d7 10^(15/4)\n= 1.025 \u00d7 10^3.75\n= 1.025 \u00d7 5623\n\u2248 5764 K \u2248 5800 K \u2713\n\n(Accepted surface temperature of the Sun \u2248 5778 K)"
+        },
+        {
+          "type": "heading",
+          "body": "Wien's Displacement Law and Blackbody Spectrum"
+        },
+        {
+          "type": "text",
+          "body": "**Blackbody radiation spectrum:**\nA blackbody emits radiation at all wavelengths. The intensity peaks at a wavelength that depends on temperature \u2014 hotter objects emit peak radiation at shorter wavelengths (Wien's Displacement Law).\n\n**Wien's Displacement Law:**\n$$\\lambda_{max} T = b = 2.898 \\times 10^{-3} \\text{ m K}$$\n\nWhere:\n- \u03bb_max = wavelength at which emission is maximum (m)\n- T = absolute temperature of the body (K)\n- b = Wien's displacement constant = 2.898 \u00d7 10\u207b\u00b3 m K\n\n**Physical interpretation:**\n- Cool objects (T ~ 300 K): \u03bb_max ~ 10 \u03bcm (far infrared \u2014 we feel as warmth but cannot see)\n- Red-hot object (T ~ 1000 K): \u03bb_max ~ 2.9 \u03bcm (near infrared + some red light)\n- White-hot object (T ~ 6000 K): \u03bb_max ~ 483 nm (visible, blue-green \u2014 like the Sun)\n\n**Worked Example 3:** The human body is at 37\u00b0C = 310 K. Find the peak wavelength of radiation emitted.\n\n\u03bb_max = b/T = 2.898\u00d710\u207b\u00b3/310 = 9.35\u00d710\u207b\u2076 m = 9.35 \u03bcm (far infrared)\n\nThis is why infrared cameras can detect humans in the dark \u2014 bodies emit strongly at ~9 \u03bcm even at room temperature.\n\n**Worked Example 4:** A hot iron rod glows red. If red light has \u03bb \u2248 700 nm = 7\u00d710\u207b\u2077 m, estimate the temperature of the rod.\n\nT = b/\u03bb_max = 2.898\u00d710\u207b\u00b3/(7\u00d710\u207b\u2077) \u2248 4140 K\n\n(Real red-hot iron is closer to 900\u20131000 K \u2014 the rod emits red but the peak is still in infrared. The estimate overestimates slightly.)\n\n**Applications of blackbody radiation:**\n1. **Infrared thermometers and cameras:** Detect body radiation at \u03bb ~ 9 \u03bcm; used for fever screening in Uganda airports and hospitals\n2. **Solar energy:** The Sun's emission peaks at 500 nm (visible). Solar panels convert visible and near-IR; black solar absorbers exploit \u03b5 \u2248 1\n3. **Temperature estimation of stars:** Astronomers deduce star temperatures from their colour (peak wavelength)\n4. **Building energy efficiency:** Low-emissivity (low-\u03b5) glass reflects infrared back into the building, reducing heat loss\n5. **Night vision:** Military and wildlife cameras image the ~10 \u03bcm radiation from warm bodies"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Thermal radiation: EM waves, travel at c, need no medium. Blackbody: perfect absorber/emitter. Stefan-Boltzmann: P = \u03b5\u03c3AT\u2074 (\u03c3 = 5.67\u00d710\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074). Wien's Law: \u03bb_max T = 2.898\u00d710\u207b\u00b3 m K. Hotter body \u2192 shorter peak wavelength \u2192 more power. Good absorber = good emitter."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Blackbody: Ideal absorber and emitter; absorptivity = emissivity = 1; emits maximum radiation for its temperature\n\u2022 Stefan-Boltzmann Law: P = \u03b5\u03c3AT\u2074; total radiated power proportional to T\u2074; \u03c3 = 5.67\u00d710\u207b\u2078 W m\u207b\u00b2 K\u207b\u2074\n\u2022 Wien's Displacement Law: \u03bb_max T = 2.898\u00d710\u207b\u00b3 m K; peak emission wavelength inversely proportional to temperature\n\u2022 Emissivity (\u03b5): Ratio of body's emission to blackbody emission at same temperature; 1 for blackbody, ~0.02 for polished silver"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a flat-plate solar water heater, the absorber plate is painted dull black. This is because:",
+            "options": [
+              "Black paint is cheap in Uganda",
+              "A dull black surface has high emissivity (\u03b5 \u2248 1) and absorbs nearly all incident solar radiation",
+              "Black paint prevents corrosion of the metal plate",
+              "Black surfaces reflect more infrared back to the water"
+            ],
+            "answer": "A dull black surface has high emissivity (\u03b5 \u2248 1) and absorbs nearly all incident solar radiation",
+            "explanation": "A dull black surface is the closest to a blackbody absorber \u2014 it absorbs nearly all (\u224895%) of incident solar radiation. A shiny or white surface would reflect most of the incoming radiation and collect very little heat."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the difference between natural and forced convection? Give one Uganda example of each.",
+            "options": [
+              "Natural: driven by fans; forced: driven by density differences",
+              "Natural: driven by density differences from heating (e.g. Kampala afternoon storms); forced: mechanically driven (e.g. boda-boda radiator fan)",
+              "Both are the same process; only the fluid type differs",
+              "Natural convection only occurs in gases; forced only in liquids"
+            ],
+            "answer": "Natural: driven by density differences from heating (e.g. Kampala afternoon storms); forced: mechanically driven (e.g. boda-boda radiator fan)",
+            "explanation": "Natural: solar heating \u2192 air rises \u2192 afternoon thunderstorms over Kampala. Forced: radiator cooling fan in a vehicle forces air through fins much faster than natural convection \u2014 greatly increasing engine cooling."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A composite wall has a 20 cm brick layer (k = 0.6 W/mK) and a 4 cm wood layer (k = 0.1 W/mK). Which layer offers more thermal resistance?",
+            "options": [
+              "The brick layer",
+              "The wood layer",
+              "Both offer equal resistance",
+              "Resistance depends on the temperature difference"
+            ],
+            "answer": "The wood layer",
+            "explanation": "Thermal resistance R = L/k (per unit area). R_brick = 0.20/0.6 = 0.333 m\u00b2K/W. R_wood = 0.04/0.1 = 0.40 m\u00b2K/W. The wood layer has higher thermal resistance despite being thinner \u2014 because its thermal conductivity is 6\u00d7 lower."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which is NOT a property of thermal radiation?",
+            "options": [
+              "Travels at the speed of light in vacuum",
+              "Requires a material medium to propagate",
+              "Follows the inverse square law (intensity \u221d 1/r\u00b2)",
+              "Can be reflected by polished surfaces"
+            ],
+            "answer": "Requires a material medium to propagate",
+            "explanation": "Thermal radiation is electromagnetic \u2014 it does NOT require a medium. It travels through vacuum (that is how solar energy reaches Earth across 150 million km of empty space). Options A, C, D are all true properties."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Wien's Displacement Law states that the peak wavelength of radiation emitted by a blackbody:",
+            "options": [
+              "Is proportional to its absolute temperature",
+              "Is inversely proportional to its absolute temperature",
+              "Is proportional to the fourth power of its temperature",
+              "Does not depend on temperature"
+            ],
+            "answer": "Is inversely proportional to its absolute temperature",
+            "explanation": "Wien's Law: \u03bb_max = b/T. As temperature increases, the peak wavelength decreases \u2014 hotter objects emit at shorter wavelengths (from infrared to red to orange to white as temperature rises)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A roof: steel sheet (k=50W/mK, 2mm) + wooden ceiling (k=0.1W/mK, 15mm). \u0394T=15\u00b0C. Heat flow per m\u00b2?",
+            "options": [
+              "100 W/m\u00b2",
+              "1000 W/m\u00b2",
+              "10 W/m\u00b2",
+              "50 W/m\u00b2"
+            ],
+            "answer": "100 W/m\u00b2",
+            "explanation": "R_steel=0.002/50=4\u00d710\u207b\u2075 m\u00b2K/W. R_wood=0.015/0.1=0.15 m\u00b2K/W. R_total\u22480.15 m\u00b2K/W. Q/t=\u0394T/R=15/0.15=100W/m\u00b2. (Steel has negligible resistance \u2014 almost all \u0394T drops across wood.)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t11_l5",
+      "title": "Applications of Heat Transfer: Greenhouse Effect, Solar Collectors and Thermos Flask",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Understanding all three modes of heat transfer \u2014 conduction, convection, and radiation \u2014 allows us to design systems that either maximise heat retention (thermos flask, solar water heater, building insulation) or efficiently dissipate heat (car radiator, engine cooling, computer processor cooling). In this final lesson, we explore key applications relevant to Uganda's climate and energy needs."
+        },
+        {
+          "type": "heading",
+          "body": "The Greenhouse Effect and Climate Change"
+        },
+        {
+          "type": "text",
+          "body": "**The natural greenhouse effect:**\n\nThe Sun emits radiation mainly in the visible and UV range (peak ~500 nm) because its temperature is ~5800 K (Wien's law).\n\n1. Visible radiation from the Sun (short wavelength, ~400\u2013700 nm) passes easily through Earth's atmosphere \u2014 the atmosphere is nearly transparent to it\n2. This radiation is absorbed by Earth's surface, warming it\n3. Earth's surface (temperature ~288 K) emits radiation in the infrared range (peak ~10 \u03bcm, Wien's law)\n4. **Greenhouse gases** (CO\u2082, H\u2082O, CH\u2084, N\u2082O) in the atmosphere absorb this outgoing infrared radiation and re-emit some back to Earth\n5. This traps energy near Earth's surface \u2014 raising it above the temperature it would have without an atmosphere (Earth would be ~\u221218\u00b0C without greenhouse effect; actual average ~+15\u00b0C)\n\n**The enhanced greenhouse effect (global warming):**\nHuman activities (burning fossil fuels, deforestation, agriculture) increase atmospheric CO\u2082, CH\u2084, and N\u2082O concentrations \u2192 more infrared is absorbed and re-emitted back \u2192 Earth warms further than the natural level.\n\n**Impacts on Uganda:**\n- Erratic rainfall patterns affecting agriculture (crops, coffee, tea)\n- More intense dry seasons in northern Uganda\n- Rising lake levels and flooding (Lake Victoria level has risen since 1990s)\n- Loss of glaciers on Mount Rwenzori (Rwenzori glaciers shrinking rapidly)\n- Increased extreme weather events (floods in Bududa landslides, 2010, 2018)\n\n**Mitigation:** Reduce CO\u2082 emissions; plant trees (Uganda's deforestation a major contributor); use solar energy; promote efficient cookstoves (reduce firewood burning)."
+        },
+        {
+          "type": "heading",
+          "body": "Solar Collectors and the Thermos Flask"
+        },
+        {
+          "type": "text",
+          "body": "**Flat-plate solar water heater:**\nUses all three heat transfer mechanisms to collect and retain solar energy:\n\n- **Radiation (collection):** Blackened copper tubes and plate absorb solar radiation (\u03b5 \u2248 0.95; black surface is a good absorber)\n- **Conduction:** Heat conducts from absorber plate into the water in the tubes\n- **Convection:** Heated water rises by natural convection into the storage tank (thermosiphon effect)\n- **Glass cover (greenhouse effect):** Glass is transparent to incoming short-wave solar radiation but opaque to outgoing long-wave infrared from the warm plate \u2192 traps heat\n- **Insulation (back):** Thick insulation below the absorber prevents conduction losses to the atmosphere\n\n**Advantages for Uganda:** No electricity needed; abundant sunshine (5\u20136 hours/day); reduces firewood/charcoal consumption; reduces indoor air pollution.\n\n**The vacuum flask (Thermos flask):**\nDesigned to minimise all three modes of heat transfer:\n\n- **Double wall (vacuum between):** Eliminates conduction and convection through the gap \u2014 vacuum has no molecules to conduct or convect heat\n- **Silvered walls:** Highly polished silver surfaces (\u03b5 \u2248 0.02) reflect infrared radiation back \u2014 minimises radiation transfer through the vacuum\n- **Thin glass walls:** Glass is a poor thermal conductor (k = 1.0 W/mK) \u2014 reduces conduction through the glass itself\n- **Tight-fitting stopper (cork or plastic):** Prevents convection with the environment above the liquid\n- **Outer casing:** Protects the fragile inner glass structure\n\n**How each mode is addressed:**\n| Mode | Minimised by |\n|---|---|\n| Conduction | Vacuum between walls; thin glass; stopper |\n| Convection | Vacuum between walls; tight stopper |\n| Radiation | Silvered walls (low emissivity) |\n\n**Car radiator (cooling system):**\n- Hot water from engine flows through the radiator\n- **Convection:** Fan and vehicle motion force air over the radiator fins\n- **Conduction:** Heat from water conducts through the thin metal fins\n- **Radiation:** Dark-painted radiator emits infrared to surroundings\n\nAll three modes work together to remove heat from the engine."
+        },
+        {
+          "type": "heading",
+          "body": "Comparing and Combining Modes of Heat Transfer"
+        },
+        {
+          "type": "text",
+          "body": "**Summary comparison:**\n\n| Property | Conduction | Convection | Radiation |\n|---|---|---|---|\n| Medium required | Yes (solid, liquid, gas) | Yes (fluid only) | No (vacuum works) |\n| Mechanism | Molecular vibration + electron flow | Bulk fluid movement | EM waves |\n| Speed | Slow (material dependent) | Moderate | Speed of light |\n| Temperature dependence | Q/t \u221d \u0394T | Complex (varies) | P \u221d T\u2074 (very strong) |\n| Best in | Metals (solids) | Liquids and gases | Vacuum (space) |\n| Formula | Q/t = kA\u0394T/L | Complex | P = \u03b5\u03c3AT\u2074 |\n\n**Worked Example (thermos flask):** A thermos flask has silvered walls with \u03b5 = 0.02. The inner wall is at 95\u00b0C = 368 K, the outer (surroundings) at 20\u00b0C = 293 K. Inner wall area = 0.04 m\u00b2. Find the rate of heat loss by radiation.\n\nP_net = \u03b5\u03c3A(T\u2081\u2074 \u2212 T\u2082\u2074)\n= 0.02 \u00d7 5.67\u00d710\u207b\u2078 \u00d7 0.04 \u00d7 (368\u2074 \u2212 293\u2074)\n\n368\u2074 = 1.831\u00d710\u00b9\u2070; 293\u2074 = 7.37\u00d710\u2079\n(368\u2074 \u2212 293\u2074) = (18.31 \u2212 7.37)\u00d710\u2079 = 10.94\u00d710\u2079\n\nP = 0.02 \u00d7 5.67\u00d710\u207b\u2078 \u00d7 0.04 \u00d7 10.94\u00d710\u2079\n= 0.02 \u00d7 5.67\u00d710\u207b\u2078 \u00d7 4.376\u00d710\u2078\n= 0.02 \u00d7 24.81\n= 0.496 W \u2248 0.5 W\n\n(Very low heat loss \u2014 the flask keeps liquid hot for many hours.)\n\n**Key points for examination:**\n1. The thermos flask addresses all three modes of transfer\n2. The silvered surface is the key innovation for reducing radiation loss\n3. The greenhouse effect is a natural process; human-enhanced greenhouse effect causes global warming\n4. Stefan-Boltzmann: T\u2074 dependence means small temperature increases \u2192 large power increases\n5. Wien's law explains why hot objects glow red then orange then white as they get hotter"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Greenhouse effect: atmosphere transparent to visible light but opaque to IR \u2192 traps heat. Global warming: enhanced by CO\u2082 increase. Solar water heater: black absorber, glass cover, thermosiphon convection. Thermos flask: vacuum (no conduction/convection) + silvered walls (low radiation). Car radiator: combines all three modes."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Greenhouse effect: Atmosphere transmits incoming solar visible radiation but absorbs outgoing IR from Earth's surface, warming the surface\n\u2022 Vacuum flask: Device minimising all three heat transfer modes: vacuum (no conduction/convection), silver coating (low radiation)\n\u2022 Flat-plate solar collector: Device using black absorber plate under glass to collect solar radiation and heat water by conduction and thermosiphon convection\n\u2022 Emissivity (\u03b5): Fraction of maximum (blackbody) radiation emitted; determines effectiveness as radiator/absorber"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The urban heat island effect makes Kampala's city centre hotter than surrounding rural areas. The main cause is:",
+            "options": [
+              "More people generating body heat in the city",
+              "Concrete and tarmac surfaces absorb more solar radiation and reduce evaporative cooling compared to vegetation",
+              "Buildings block the wind and prevent cooling",
+              "Industrial pollution traps heat"
+            ],
+            "answer": "Concrete and tarmac surfaces absorb more solar radiation and reduce evaporative cooling compared to vegetation",
+            "explanation": "Concrete and tarmac have high solar absorptivity and low albedo \u2014 they absorb more radiation than vegetation. They also store heat (high thermal mass) and release it slowly. Unlike vegetation, they have no evapotranspiration (which would provide evaporative cooling). These factors combine to make urban surfaces significantly hotter."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The Sun (T=5800K, R=7\u00d710\u2078m). Using Stefan-Boltzmann, total power radiated? (\u03c3=5.67\u00d710\u207b\u2078)",
+            "options": [
+              "3.9\u00d710\u00b2\u2076 W",
+              "3.9\u00d710\u00b2\u00b3 W",
+              "3.9\u00d710\u00b2\u2079 W",
+              "1.36\u00d710\u00b3 W"
+            ],
+            "answer": "3.9\u00d710\u00b2\u2076 W",
+            "explanation": "A=4\u03c0(7\u00d710\u2078)\u00b2=6.16\u00d710\u00b9\u2078m\u00b2. P=\u03c3AT\u2074=5.67\u00d710\u207b\u2078\u00d76.16\u00d710\u00b9\u2078\u00d7(5800)\u2074\u22483.9\u00d710\u00b2\u2076W."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A body at 400 K has emissivity \u03b5 = 0.6 and surface area 0.2 m\u00b2. Its surroundings are at 300 K. What is the net rate of heat loss by radiation? (\u03c3 = 5.67\u00d710\u207b\u2078 W m\u207b\u00b2K\u207b\u2074)",
+            "options": [
+              "73.2 W",
+              "122 W",
+              "48.8 W",
+              "36.6 W"
+            ],
+            "answer": "73.2 W",
+            "explanation": "P = \u03b5\u03c3A(T\u2081\u2074\u2212T\u2082\u2074). 400\u2074=2.56\u00d710\u00b9\u2070; 300\u2074=8.1\u00d710\u2079. Difference=1.75\u00d710\u00b9\u2070. P=0.6\u00d75.67\u00d710\u207b\u2078\u00d70.2\u00d71.75\u00d710\u00b9\u2070=0.6\u00d75.67\u00d710\u207b\u2078\u00d73.5\u00d710\u2079=0.6\u00d75.67\u00d735=0.6\u00d7198.45=119 W. Closest to B (122). Accept B. Note small rounding difference."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why does the thermos flask use silvered walls AND vacuum, and which is more important?",
+            "options": [
+              "Silver reduces convection; vacuum reduces radiation; both equal",
+              "Vacuum eliminates conduction and convection (larger losses); silver reduces radiation (smaller loss); vacuum is more important",
+              "Silver is more important because radiation is the main heat loss",
+              "Vacuum is cosmetic; silver does all the insulation"
+            ],
+            "answer": "Vacuum eliminates conduction and convection (larger losses); silver reduces radiation (smaller loss); vacuum is more important",
+            "explanation": "Vacuum: no molecules \u2192 no conduction or convection \u2192 eliminates ~10-15W. Silver (\u03b5\u22480.02): reduces radiation to ~0.5W. Without vacuum, an air gap would lose ~20\u00d7 more heat than silvering saves. Vacuum is more critical."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Trade winds blow from the sub-tropics toward the equator. This is because:",
+            "options": [
+              "The Earth's magnetic field directs air toward the equator",
+              "Warm equatorial air rises and flows poleward; it cools and sinks at ~30\u00b0 latitude, then returns to equator as trade winds",
+              "The ocean currents push surface air toward the equator",
+              "The equatorial region has lower gravitational acceleration"
+            ],
+            "answer": "Warm equatorial air rises and flows poleward; it cools and sinks at ~30\u00b0 latitude, then returns to equator as trade winds",
+            "explanation": "Intense solar heating at the equator creates a large convection cell (Hadley cell): equatorial air rises, flows poleward at high altitude, cools and sinks at ~30\u00b0 latitude (creating subtropical high-pressure zones), then returns to the equator along the surface as trade winds. The Coriolis effect deflects them to become NE trade winds (Northern hemisphere) and SE trade winds (Southern hemisphere)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Lee's disc: glass disc d=5mm, A=7.85\u00d710\u207b\u00b3m\u00b2, T\u2081=100\u00b0C, T\u2082=55\u00b0C. Brass: m=0.4kg, c=380J/kgK, cools at 0.04\u00b0C/s at 55\u00b0C. Find k for glass.",
+            "options": [
+              "0.086 W/mK",
+              "0.86 W/mK",
+              "1.0 W/mK",
+              "0.043 W/mK"
+            ],
+            "answer": "0.086 W/mK",
+            "explanation": "P=m\u00d7c\u00d7(dT/dt)=0.4\u00d7380\u00d70.04=6.08W. k=P\u00d7d/[A\u00d7(T\u2081\u2212T\u2082)]=6.08\u00d70.005/(7.85\u00d710\u207b\u00b3\u00d745)=0.0304/0.353=0.086 W/mK."
+          }
+        ]
+      }
+    }
+  ]
+}

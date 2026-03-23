@@ -1,0 +1,759 @@
+{
+  "topic_id": "physics_s5_t3",
+  "topic_title": "Linear Motion",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t3_l1",
+      "title": "Terminology of Motion: Distance, Displacement, Speed, Velocity and Acceleration",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time a boda-boda rider accelerates away from a stage, a football is kicked across a pitch, or a bird takes flight over Lake Victoria, the laws of motion are at work. Before we can describe or predict the motion of any object, we need a precise language \u2014 a set of clearly defined terms. In this lesson, we establish that language."
+        },
+        {
+          "type": "heading",
+          "body": "Distance and Displacement"
+        },
+        {
+          "type": "text",
+          "body": "**Distance** is the total length of the path travelled by an object, regardless of direction. It is a scalar quantity measured in metres (m).\n\n**Displacement** is the straight-line distance from the initial position to the final position, measured in a specified direction. It is a vector quantity, also measured in metres (m).\n\n**Example:** A student walks 400 m north, then 300 m east.\n- Distance = 400 + 300 = 700 m\n- Displacement = \u221a(400\u00b2 + 300\u00b2) = \u221a(160000 + 90000) = \u221a250000 = 500 m at arctan(300/400) = 36.9\u00b0 east of north\n\n**Key distinction:** If a car drives in a circle and returns to its starting point, the distance travelled equals the circumference of the circle, but the displacement is zero."
+        },
+        {
+          "type": "heading",
+          "body": "Speed and Velocity"
+        },
+        {
+          "type": "text",
+          "body": "**Speed** is the rate of change of distance. It is a scalar:\nSpeed = Distance / Time\nUnit: m s\u207b\u00b9\n\n**Velocity** is the rate of change of displacement. It is a vector:\nVelocity = Displacement / Time\nUnit: m s\u207b\u00b9 (but direction must be specified)\n\n**Average speed** = total distance / total time\n**Average velocity** = total displacement / total time\n\n**Instantaneous velocity** is the velocity at a specific instant \u2014 it is the gradient of the displacement-time graph at that point.\n\n**Worked Example 1:** A car travels 240 km from Kampala to Mbale in 3 hours.\n- Average speed = 240/3 = 80 km/h = 22.2 m/s\n- If Mbale is 200 km from Kampala (straight-line distance) at a bearing of 060\u00b0:\n  Average velocity = 200/3 = 66.7 km/h at bearing 060\u00b0\n\n**Worked Example 2:** A runner completes a 400 m circular track in 50 s.\n- Average speed = 400/50 = 8 m/s\n- Average velocity = 0/50 = 0 m/s (displacement = 0, returned to start)"
+        },
+        {
+          "type": "heading",
+          "body": "Acceleration"
+        },
+        {
+          "type": "text",
+          "body": "**Acceleration** is the rate of change of velocity. It is a vector:\na = (v \u2212 u) / t = \u0394v / \u0394t\nUnit: m s\u207b\u00b2\n\nWhere:\n- u = initial velocity\n- v = final velocity\n- t = time taken\n\n**Uniform (constant) acceleration:** acceleration is the same at every instant \u2014 this is the special case we focus on in this topic.\n\n**Deceleration** (or retardation) is negative acceleration \u2014 the object is slowing down. Technically, deceleration occurs when the acceleration vector is opposite to the velocity vector.\n\n**Worked Example 3:** A car at rest accelerates to 30 m/s in 10 s. Find its acceleration.\na = (30 \u2212 0)/10 = 3 m/s\u00b2\n\n**Worked Example 4:** A bus travelling at 25 m/s brakes to rest in 5 s. Find the deceleration.\na = (0 \u2212 25)/5 = \u22125 m/s\u00b2 (deceleration of 5 m/s\u00b2)\n\n**Instantaneous acceleration** is the acceleration at a specific moment \u2014 it is the gradient of the velocity-time graph at that point."
+        },
+        {
+          "type": "heading",
+          "body": "Graphical Representation of Motion"
+        },
+        {
+          "type": "text",
+          "body": "**Displacement-Time (s-t) graphs:**\n- Gradient = velocity\n- Horizontal line \u2192 stationary (v = 0)\n- Straight line with positive gradient \u2192 constant velocity\n- Curve \u2192 changing velocity (acceleration)\n- Negative gradient \u2192 moving in negative direction\n\n**Velocity-Time (v-t) graphs:**\n- Gradient = acceleration\n- Horizontal line \u2192 constant velocity (a = 0)\n- Straight line with positive gradient \u2192 constant positive acceleration\n- Straight line with negative gradient \u2192 deceleration\n- Area under the graph = displacement\n\n**Acceleration-Time (a-t) graphs:**\n- Horizontal line \u2192 constant acceleration\n- Area under graph = change in velocity\n\n**Worked Example 5:** From a v-t graph: a car accelerates uniformly from 0 to 20 m/s in 5 s, then travels at 20 m/s for 10 s, then decelerates uniformly to rest in 4 s.\n\nPhase 1: a = 20/5 = 4 m/s\u00b2; displacement = \u00bd \u00d7 5 \u00d7 20 = 50 m (triangle area)\nPhase 2: a = 0; displacement = 20 \u00d7 10 = 200 m (rectangle area)\nPhase 3: a = \u221220/4 = \u22125 m/s\u00b2; displacement = \u00bd \u00d7 4 \u00d7 20 = 40 m (triangle area)\nTotal displacement = 50 + 200 + 40 = 290 m"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Distance (scalar) vs displacement (vector); speed (scalar) vs velocity (vector). Acceleration = rate of change of velocity. On s-t graphs, gradient = velocity; on v-t graphs, gradient = acceleration and area = displacement."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Displacement: Vector quantity \u2014 straight-line distance from start to finish with direction\n\u2022 Velocity: Vector rate of change of displacement; v = \u0394s/\u0394t\n\u2022 Acceleration: Vector rate of change of velocity; a = \u0394v/\u0394t\n\u2022 Uniform acceleration: Acceleration that is constant in both magnitude and direction"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A car accelerates uniformly from rest to 20 m/s in 5 s. What is its acceleration?",
+            "options": [
+              "100 m/s\u00b2",
+              "4 m/s\u00b2",
+              "0.25 m/s\u00b2",
+              "25 m/s\u00b2"
+            ],
+            "answer": "4 m/s\u00b2",
+            "explanation": "a = (v \u2212 u)/t = (20 \u2212 0)/5 = 4 m/s\u00b2"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which equation of motion is used when time is not known and not required?",
+            "options": [
+              "v = u + at",
+              "s = ut + \u00bdat\u00b2",
+              "v\u00b2 = u\u00b2 + 2as",
+              "s = \u00bd(u + v)t"
+            ],
+            "answer": "v\u00b2 = u\u00b2 + 2as",
+            "explanation": "v\u00b2 = u\u00b2 + 2as links initial velocity, final velocity, acceleration and displacement \u2014 with no time term. Use this when time is not given and not needed."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 3 kg object moving at 4 m/s collides and sticks to a 5 kg stationary object. What is their common velocity after collision?",
+            "options": [
+              "4 m/s",
+              "2.4 m/s",
+              "1.5 m/s",
+              "3 m/s"
+            ],
+            "answer": "1.5 m/s",
+            "explanation": "Conservation of momentum: 3\u00d74 + 5\u00d70 = (3+5)\u00d7v. 12 = 8v. v = 1.5 m/s."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Newton's first law of motion is sometimes called the law of:",
+            "options": [
+              "Momentum",
+              "Inertia",
+              "Action and reaction",
+              "Acceleration"
+            ],
+            "answer": "Inertia",
+            "explanation": "Newton's 1st Law states that objects resist changes to their state of motion \u2014 this property is inertia. The law is also known as the Law of Inertia."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Train A moves north at 40 m/s and train B moves south at 30 m/s. What is the velocity of A relative to B?",
+            "options": [
+              "10 m/s north",
+              "70 m/s south",
+              "70 m/s north",
+              "10 m/s south"
+            ],
+            "answer": "70 m/s north",
+            "explanation": "Taking north positive: v_A/B = v_A \u2212 v_B = 40 \u2212 (\u221230) = 70 m/s northward."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A ball is thrown upward at 15 m/s. Taking g = 10 m/s\u00b2, what is the maximum height reached?",
+            "options": [
+              "22.5 m",
+              "11.25 m",
+              "15 m",
+              "1.5 m"
+            ],
+            "answer": "11.25 m",
+            "explanation": "At max height, v = 0. v\u00b2 = u\u00b2 \u2212 2gs: 0 = 225 \u2212 2\u00d710\u00d7s. s = 225/20 = 11.25 m."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t3_l2",
+      "title": "Equations of Uniformly Accelerated Motion",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a car brakes on the Kampala-Entebbe expressway, when a stone is dropped from a building, or when an aeroplane accelerates for take-off \u2014 the motion involves uniform acceleration. There are four fundamental equations that describe all uniformly accelerated linear motion. In this lesson, we derive these equations from first principles and apply them."
+        },
+        {
+          "type": "heading",
+          "body": "Derivation of the Equations of Motion"
+        },
+        {
+          "type": "text",
+          "body": "Consider an object with:\n- Initial velocity: u\n- Final velocity: v\n- Uniform acceleration: a\n- Time taken: t\n- Displacement: s\n\n**Equation 1: v = u + at**\nFrom the definition of acceleration: a = (v \u2212 u)/t\nRearranging: v = u + at \u2713\n\n**Equation 2: s = ut + \u00bdat\u00b2**\nDisplacement = average velocity \u00d7 time\nFor uniform acceleration, average velocity = (u + v)/2\ns = [(u + v)/2] \u00d7 t\nSubstituting v = u + at:\ns = [(u + u + at)/2] \u00d7 t\ns = [(2u + at)/2] \u00d7 t\ns = ut + \u00bdat\u00b2 \u2713\n\n**Equation 3: v\u00b2 = u\u00b2 + 2as**\nFrom Equation 1: t = (v \u2212 u)/a\nSubstitute into s = [(u + v)/2] \u00d7 t:\ns = [(u + v)/2] \u00d7 [(v \u2212 u)/a]\ns = (v\u00b2 \u2212 u\u00b2)/(2a)\n\u2234 v\u00b2 = u\u00b2 + 2as \u2713\n\n**Equation 4: s = \u00bd(u + v)t**\ns = average velocity \u00d7 time = [(u + v)/2] \u00d7 t \u2713\n\n**Summary of four equations:**\n1. v = u + at\n2. s = ut + \u00bdat\u00b2\n3. v\u00b2 = u\u00b2 + 2as\n4. s = \u00bd(u + v)t\n\n**Note:** These equations only apply when:\n- Motion is along a straight line\n- Acceleration is uniform (constant)\n- Positive direction must be defined clearly"
+        },
+        {
+          "type": "heading",
+          "body": "Applying the Equations: Strategy"
+        },
+        {
+          "type": "text",
+          "body": "**Problem-solving strategy:**\n1. Draw a diagram and define positive direction\n2. List the known quantities (u, v, a, s, t)\n3. Identify the unknown quantity\n4. Choose the equation that links the known and unknown quantities\n5. Substitute and solve\n6. Check units and whether the answer is physically reasonable\n\n**Worked Example 1:** A motorcycle starts from rest and accelerates uniformly at 3 m/s\u00b2. Find (a) its velocity after 8 s, and (b) the distance covered in 8 s.\n\nGiven: u = 0, a = 3 m/s\u00b2, t = 8 s\n\n(a) v = u + at = 0 + 3\u00d78 = 24 m/s\n(b) s = ut + \u00bdat\u00b2 = 0\u00d78 + \u00bd\u00d73\u00d78\u00b2 = 0 + \u00bd\u00d73\u00d764 = 96 m\n\n**Worked Example 2:** A train moving at 30 m/s decelerates uniformly at 0.5 m/s\u00b2. (a) How far does it travel before stopping? (b) How long does it take to stop?\n\nGiven: u = 30 m/s, v = 0, a = \u22120.5 m/s\u00b2\n\n(a) v\u00b2 = u\u00b2 + 2as: 0 = 900 + 2\u00d7(\u22120.5)\u00d7s \u2192 s = 900 m\n(b) v = u + at: 0 = 30 + (\u22120.5)t \u2192 t = 60 s\n\n**Worked Example 3:** A stone is thrown upward with velocity 20 m/s. Taking g = 10 m/s\u00b2 downward (a = \u221210 m/s\u00b2):\n(a) What is the maximum height reached?\n(b) When does it return to the starting point?\n\nGiven: u = +20 m/s, a = \u221210 m/s\u00b2\n\n(a) At maximum height, v = 0:\nv\u00b2 = u\u00b2 + 2as: 0 = 400 + 2\u00d7(\u221210)\u00d7s\ns = 400/20 = 20 m\n\n(b) Returning to start means s = 0:\ns = ut + \u00bdat\u00b2: 0 = 20t + \u00bd\u00d7(\u221210)\u00d7t\u00b2\n0 = 20t \u2212 5t\u00b2 = t(20 \u2212 5t)\nt = 0 (initial) or t = 4 s\nIt returns after 4 s."
+        },
+        {
+          "type": "heading",
+          "body": "More Complex Applications"
+        },
+        {
+          "type": "text",
+          "body": "**Worked Example 4:** Two cars A and B are at the same position. Car A starts from rest with acceleration 2 m/s\u00b2. Car B starts 4 s later with acceleration 3 m/s\u00b2. When and where does B overtake A?\n\nLet t = time after A starts. B starts at t = 4 s.\n\nPosition of A: s_A = \u00bd \u00d7 2 \u00d7 t\u00b2 = t\u00b2\nPosition of B (starts 4 s later): s_B = \u00bd \u00d7 3 \u00d7 (t\u22124)\u00b2 = 1.5(t\u22124)\u00b2 [for t > 4]\n\nB overtakes A when s_B = s_A:\n1.5(t\u22124)\u00b2 = t\u00b2\n1.5(t\u00b2 \u2212 8t + 16) = t\u00b2\n1.5t\u00b2 \u2212 12t + 24 = t\u00b2\n0.5t\u00b2 \u2212 12t + 24 = 0\nt\u00b2 \u2212 24t + 48 = 0\nt = [24 \u00b1 \u221a(576 \u2212 192)]/2 = [24 \u00b1 \u221a384]/2 = [24 \u00b1 19.6]/2\nt = 21.8 s or t = 2.2 s (invalid, B hasn't started yet)\n\nAt t = 21.8 s: s_A = (21.8)\u00b2 = 475.2 m\n\n**Worked Example 5:** A car is travelling at 20 m/s when the driver sees an obstacle 50 m ahead and brakes. The reaction time is 0.5 s (during which the car travels at constant velocity), then the car decelerates at 8 m/s\u00b2. Does the car stop in time?\n\nDistance during reaction time: s\u2081 = 20 \u00d7 0.5 = 10 m\nDistance during braking: v\u00b2 = u\u00b2 + 2as \u2192 0 = 400 + 2\u00d7(\u22128)\u00d7s\u2082 \u2192 s\u2082 = 25 m\nTotal stopping distance = 10 + 25 = 35 m < 50 m \u2713\nThe car stops safely with 15 m to spare."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "The four equations of uniformly accelerated motion (v=u+at; s=ut+\u00bdat\u00b2; v\u00b2=u\u00b2+2as; s=\u00bd(u+v)t) apply only to straight-line, constant-acceleration motion. Always define a positive direction, list known quantities, and pick the right equation."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Uniform acceleration: Constant acceleration \u2014 the velocity changes by the same amount each second\n\u2022 Reaction time: The time between perceiving a stimulus and beginning to react; typically 0.2\u20130.5 s for humans\n\u2022 Stopping distance: Thinking distance (reaction time \u00d7 speed) plus braking distance"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A force of 100 N acts on a 20 kg object for 3 s. What is the change in momentum?",
+            "options": [
+              "60 kg m/s",
+              "300 kg m/s",
+              "2000 kg m/s",
+              "15 kg m/s"
+            ],
+            "answer": "300 kg m/s",
+            "explanation": "Change in momentum = Impulse = F \u00d7 t = 100 \u00d7 3 = 300 N s = 300 kg m/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 70 kg person stands in a lift accelerating upward at 3 m/s\u00b2. What is the normal reaction force? (g = 10 m/s\u00b2)",
+            "options": [
+              "700 N",
+              "490 N",
+              "910 N",
+              "210 N"
+            ],
+            "answer": "910 N",
+            "explanation": "N = m(g + a) = 70 \u00d7 (10 + 3) = 70 \u00d7 13 = 910 N."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "On a velocity-time graph, what does the area under the graph represent?",
+            "options": [
+              "Acceleration",
+              "Speed",
+              "Displacement",
+              "Force"
+            ],
+            "answer": "Displacement",
+            "explanation": "Area under a v-t graph = \u222bv dt = displacement. The gradient of a v-t graph gives acceleration."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A boat can travel at 6 m/s in still water. A river current flows at 4 m/s. If the boat heads straight across a 60 m wide river, how far downstream does it drift?",
+            "options": [
+              "40 m",
+              "60 m",
+              "24 m",
+              "10 m"
+            ],
+            "answer": "40 m",
+            "explanation": "Time to cross = width / boat speed = 60/6 = 10 s. Drift = current \u00d7 time = 4 \u00d7 10 = 40 m."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A car starts from rest and accelerates at 2 m/s\u00b2. A second car starts from the same point 5 s later and accelerates at 4.5 m/s\u00b2. After how many seconds from the start of the first car does the second car overtake the first?",
+            "options": [
+              "10 s",
+              "15 s",
+              "12 s",
+              "8 s"
+            ],
+            "answer": "15 s",
+            "explanation": "Let t = time from start of car 1. Car 1 position: s\u2081 = \u00bd\u00d72\u00d7t\u00b2 = t\u00b2. Car 2 starts at t=5, position: s\u2082 = \u00bd\u00d74.5\u00d7(t\u22125)\u00b2 = 2.25(t\u22125)\u00b2. Overtake when s\u2082 = s\u2081: 2.25(t\u22125)\u00b2 = t\u00b2. 2.25(t\u00b2\u221210t+25) = t\u00b2. 2.25t\u00b2\u221222.5t+56.25 = t\u00b2. 1.25t\u00b2\u221222.5t+56.25 = 0. t\u00b2\u221218t+45 = 0. t = [18 \u00b1 \u221a(324\u2212180)]/2 = [18 \u00b1 12]/2. t = 15 s or t = 3 s (invalid). t = 15 s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two masses 8 kg and 4 kg are connected over a frictionless pulley (Atwood's machine). What is the acceleration? (g = 10 m/s\u00b2)",
+            "options": [
+              "10 m/s\u00b2",
+              "3.33 m/s\u00b2",
+              "5 m/s\u00b2",
+              "2 m/s\u00b2"
+            ],
+            "answer": "3.33 m/s\u00b2",
+            "explanation": "a = (m\u2081\u2212m\u2082)g/(m\u2081+m\u2082) = (8\u22124)\u00d710/(8+4) = 40/12 = 3.33 m/s\u00b2."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t3_l3",
+      "title": "Relative Motion and Closest Approach",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you are sitting in a bus that overtakes another bus, the other bus appears to move backward \u2014 even though it is actually moving forward. This is relative motion: all motion is observed relative to some reference frame. Understanding relative motion is essential for predicting collisions, navigating rivers, and understanding how vehicles safely pass each other on Uganda's roads."
+        },
+        {
+          "type": "heading",
+          "body": "Relative Velocity"
+        },
+        {
+          "type": "text",
+          "body": "The velocity of object A relative to object B is:\n**v_A/B = v_A \u2212 v_B**\n\nThis is the velocity that A appears to have when observed from B (treating B as stationary).\n\nConversely, the velocity of B relative to A is:\nv_B/A = v_B \u2212 v_A = \u2212v_A/B\n\n**Case 1: Objects moving in the same direction**\n\nIf car A moves at 25 m/s east and car B moves at 15 m/s east:\nv_A/B = 25 \u2212 15 = +10 m/s east (A appears to move at 10 m/s east as seen from B)\nv_B/A = 15 \u2212 25 = \u221210 m/s (B appears to move at 10 m/s westward as seen from A)\n\nSo B appears to fall behind A at 10 m/s.\n\n**Case 2: Objects moving in opposite directions**\n\nIf car A moves at 25 m/s east and car B moves at 20 m/s west (take east as positive, so v_B = \u221220 m/s):\nv_A/B = 25 \u2212 (\u221220) = 45 m/s east\nv_B/A = \u221220 \u2212 25 = \u221245 m/s (westward)\n\nThe cars approach each other at 45 m/s \u2014 this is why head-on collisions at high speed are so deadly.\n\n**Worked Example 1:** Two trains on parallel tracks are approaching each other. Train P moves north at 30 m/s; Train Q moves south at 20 m/s. Find the velocity of P relative to Q.\n\nTake north as positive: v_P = +30 m/s, v_Q = \u221220 m/s\nv_P/Q = v_P \u2212 v_Q = 30 \u2212 (\u221220) = 50 m/s northward\n\nTo a passenger in Q, train P appears to approach at 50 m/s."
+        },
+        {
+          "type": "heading",
+          "body": "Relative Motion in Two Dimensions"
+        },
+        {
+          "type": "text",
+          "body": "When objects move in different directions, we must use vector subtraction.\n\n**v_A/B = v_A \u2212 v_B** (as vectors)\n\n**Worked Example 2: River crossing**\n\nA boat can travel at 5 m/s in still water. A river flows at 3 m/s eastward. The boat aims directly north (perpendicular to the current).\n\nVelocity of boat relative to ground:\nv_east = 3 m/s (from current)\nv_north = 5 m/s (boat's own velocity)\n\nResultant velocity = \u221a(3\u00b2 + 5\u00b2) = \u221a34 = 5.83 m/s\nDirection: arctan(3/5) = 31\u00b0 east of north\n\nThe boat ends up going northeast, not due north. If the river is 100 m wide:\nTime to cross = 100/5 = 20 s (only the north component matters for crossing time)\nDrift = 3 \u00d7 20 = 60 m downstream (east)\n\n**Worked Example 3: To cross straight across (no drift)**\n\nThe boat must aim upstream so that the northward component of its velocity is directed north and the eastward component cancels the river current.\n\nIf boat aims at angle \u03b8 west of north:\nEast component: 5 sin \u03b8 (westward) must equal river current 3 m/s (eastward)\n5 sin \u03b8 = 3 \u2192 sin \u03b8 = 0.6 \u2192 \u03b8 = 36.9\u00b0\n\nNorth component = 5 cos \u03b8 = 5 \u00d7 0.8 = 4 m/s\nTime to cross 100 m river = 100/4 = 25 s\nThe boat crosses straight, with zero drift."
+        },
+        {
+          "type": "heading",
+          "body": "Distance of Closest Approach"
+        },
+        {
+          "type": "text",
+          "body": "When two objects are moving (not necessarily toward each other), we often need to find the minimum distance between them.\n\n**Method:** Consider the motion of one object relative to the other. The distance of closest approach occurs when the relative velocity vector is perpendicular to the line joining the two objects (i.e., the relative velocity has no component along the line joining them).\n\n**Worked Example 4:**\n\nAt time t = 0, car A is at position 0 m moving east at 20 m/s. Car B is 200 m ahead (also on the east road) moving east at 30 m/s. Find:\n(a) The initial separation\n(b) Whether they ever meet\n\nRelative velocity of A with respect to B:\nv_A/B = 20 \u2212 30 = \u221210 m/s (i.e., A moves at 10 m/s westward relative to B)\n\n(b) A moves away from B in the relative frame \u2014 they never meet. The initial separation is 200 m and it increases by 10 m every second.\n\n**Worked Example 5: Closest approach (vehicles on crossing roads)**\n\nVehicle A is at position (0, 0) moving at 10 m/s along the positive x-axis.\nVehicle B is at position (0, 100) moving at 10 m/s along the negative y-axis (southward).\n\nAt time t:\nPosition of A: (10t, 0)\nPosition of B: (0, 100 \u2212 10t)\n\nSeparation\u00b2 = (10t \u2212 0)\u00b2 + (0 \u2212 (100 \u2212 10t))\u00b2\n= 100t\u00b2 + (100 \u2212 10t)\u00b2\n= 100t\u00b2 + 10000 \u2212 2000t + 100t\u00b2\n= 200t\u00b2 \u2212 2000t + 10000\n\nMinimise by differentiating: d(D\u00b2)/dt = 400t \u2212 2000 = 0 \u2192 t = 5 s\n\nAt t = 5 s:\nPosition of A: (50, 0)\nPosition of B: (0, 50)\nD = \u221a(50\u00b2 + 50\u00b2) = \u221a5000 = 50\u221a2 \u2248 70.7 m\n\nThis is the distance of closest approach. They are 70.7 m apart at their nearest point."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Relative velocity of A relative to B is v_A/B = v_A \u2212 v_B (as vectors). Objects moving in opposite directions have a relative speed equal to the sum of their speeds. The distance of closest approach occurs when the rate of change of separation is zero."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Relative velocity: The velocity of one object as measured by an observer on another moving object: v_A/B = v_A \u2212 v_B\n\u2022 Distance of closest approach: The minimum distance between two moving objects during their motion\n\u2022 Reference frame: The coordinate system and state of motion of the observer used to describe motion"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 2 kg ball moving at 5 m/s east makes a perfectly elastic collision with a 2 kg ball at rest. What happens after the collision?",
+            "options": [
+              "Both balls move at 2.5 m/s east",
+              "First ball stops; second ball moves at 5 m/s east",
+              "First ball moves at 5 m/s east; second ball moves at 5 m/s west",
+              "Both balls remain at rest"
+            ],
+            "answer": "First ball stops; second ball moves at 5 m/s east",
+            "explanation": "In a perfectly elastic collision between equal masses, the first mass stops and the second acquires all the velocity. This is a classic result. Conservation of momentum: 2\u00d75 = 2v\u2081+2v\u2082 \u2192 v\u2081+v\u2082=5. Conservation of KE: 5\u00b2 = v\u2081\u00b2+v\u2082\u00b2 \u2192 v\u2081\u00b2+v\u2082\u00b2=25. Solving: (5\u2212v\u2081)\u00b2 + v\u2081\u00b2 = 25... gives v\u2081=0, v\u2082=5."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which correctly derives the equation s = ut + \u00bdat\u00b2 from first principles?",
+            "options": [
+              "s = average velocity \u00d7 t = \u00bd(u+v)t; substitute v=u+at \u2192 s = ut + \u00bdat\u00b2 \u2713",
+              "s = vt \u2212 \u00bdat\u00b2 (using final velocity)",
+              "s = ut + at\u00b2 (without the \u00bd factor)",
+              "s = (v\u2212u)t (difference of velocities)"
+            ],
+            "answer": "s = average velocity \u00d7 t = \u00bd(u+v)t; substitute v=u+at \u2192 s = ut + \u00bdat\u00b2 \u2713",
+            "explanation": "Average velocity for uniform acceleration = (u+v)/2. s = [(u+v)/2]\u00d7t. Substitute v=u+at: s = [(u+u+at)/2]\u00d7t = ut + \u00bdat\u00b2. \u2713"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Newton's Second Law is best expressed as:",
+            "options": [
+              "F = mv (force = mass \u00d7 velocity)",
+              "F = ma (resultant force = mass \u00d7 acceleration)",
+              "F = \u0394p (force = change in momentum)",
+              "F = dp (force = momentum)"
+            ],
+            "answer": "F = ma (resultant force = mass \u00d7 acceleration)",
+            "explanation": "Newton's 2nd Law: The resultant force on a body equals its rate of change of momentum. For constant mass: F = ma. The full form is F = dp/dt."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A train decelerates from 54 km/h (15 m/s) at 0.5 m/s\u00b2. How far does it travel before stopping?",
+            "options": [
+              "112.5 m",
+              "225 m",
+              "30 m",
+              "450 m"
+            ],
+            "answer": "225 m",
+            "explanation": "v\u00b2 = u\u00b2 + 2as: 0 = 225 \u2212 2\u00d70.5\u00d7s. s = 225 m. Time: v = u + at: t = 15/0.5 = 30 s."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which statement correctly uses Newton's Third Law to derive conservation of momentum?",
+            "options": [
+              "F_AB = F_BA (forces are equal), so impulses are equal, so momentum change is zero for the system",
+              "F_AB = \u2212F_BA, both act for time t, so \u0394p_A = \u2212\u0394p_B, meaning total momentum is conserved",
+              "Equal forces mean equal accelerations, so speeds are the same after collision",
+              "The third law only applies to static systems, not collisions"
+            ],
+            "answer": "F_AB = \u2212F_BA, both act for time t, so \u0394p_A = \u2212\u0394p_B, meaning total momentum is conserved",
+            "explanation": "Newton's 3rd: F_AB = \u2212F_BA. Both act for same time t. Impulse: F_AB\u00d7t = \u0394p_B and F_BA\u00d7t = \u0394p_A. Since F_BA = \u2212F_AB: \u0394p_A = \u2212\u0394p_B. Total: \u0394p_A + \u0394p_B = 0. Momentum conserved."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A swimmer (speed 2 m/s in still water) crosses a river flowing at 1.5 m/s with zero drift. At what angle to the bank must they aim?",
+            "options": [
+              "41.4\u00b0 upstream from the bank",
+              "48.6\u00b0 to the bank (upstream)",
+              "90\u00b0 to the bank (straight across)",
+              "36.9\u00b0 upstream from the bank"
+            ],
+            "answer": "41.4\u00b0 upstream from the bank",
+            "explanation": "For zero drift: 2 sin\u03b1 = 1.5 (where \u03b1 is angle from perpendicular). sin\u03b1 = 0.75, \u03b1 = 48.6\u00b0 from perpendicular = 90\u00b0\u221248.6\u00b0 = 41.4\u00b0 from the bank (upstream)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t3_l4",
+      "title": "Momentum and Impulse",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why is it much harder to stop a 40-tonne lorry moving at 20 m/s than a bicycle moving at the same speed? Why do cars have crumple zones and airbags? The answer lies in momentum and impulse \u2014 concepts that explain why changing the motion of massive, fast-moving objects requires large forces, and why reducing the rate of that change can save lives."
+        },
+        {
+          "type": "heading",
+          "body": "Linear Momentum"
+        },
+        {
+          "type": "text",
+          "body": "**Linear momentum** (p) of an object is the product of its mass and velocity:\n\n**p = mv**\n\nWhere:\n- m = mass (kg)\n- v = velocity (m/s)\n- p = momentum (kg m/s or N s)\n\nMomentum is a vector quantity \u2014 it has both magnitude and direction (the same direction as velocity).\n\n**Dimensions of momentum:** [p] = MLT\u207b\u00b9\n\n**Worked Example 1:** Calculate the momentum of:\n(a) A 1200 kg car moving at 25 m/s north\n(b) A 0.145 kg cricket ball moving at 35 m/s east\n\n(a) p = 1200 \u00d7 25 = 30,000 kg m/s northward = 3.0 \u00d7 10\u2074 N s north\n(b) p = 0.145 \u00d7 35 = 5.075 kg m/s east \u2248 5.1 N s east"
+        },
+        {
+          "type": "heading",
+          "body": "Impulse and the Impulse-Momentum Theorem"
+        },
+        {
+          "type": "text",
+          "body": "**Impulse** is the product of force and the time for which it acts:\n\n**Impulse J = F \u00d7 t** (for constant force)\n\nUnit: N s (same as momentum)\n\n**Impulse-Momentum Theorem:**\nFrom Newton's Second Law: F = ma = m(v\u2212u)/t\nSo: Ft = mv \u2212 mu = \u0394p\n\n**The impulse equals the change in momentum:**\n**J = \u0394p = mv \u2212 mu**\n\nFor a variable force, impulse = area under the force-time graph.\n\n**Worked Example 2:** A football of mass 0.45 kg is kicked from rest to a speed of 22 m/s. The contact time is 0.05 s. Find:\n(a) The impulse on the ball\n(b) The average force during the kick\n\n(a) J = \u0394p = mv \u2212 mu = 0.45 \u00d7 22 \u2212 0 = 9.9 N s\n(b) F = J/t = 9.9/0.05 = 198 N\n\n**Application \u2014 Safety in cars:**\nIn a crash, a car occupant undergoes the same change in momentum (same \u0394p = m\u0394v) regardless of whether the car has a crumple zone. However:\n- Without crumple zone: small t \u2192 very large F (dangerous)\n- With crumple zone: larger t \u2192 smaller F (safer)\n\nAirbags and seat belts work the same way \u2014 they increase the time over which the change in momentum occurs, reducing the peak force on the body.\n\n**Worked Example 3:** A 75 kg passenger in a car travels at 15 m/s. The car crashes and stops in:\n(a) 0.05 s (without airbag): F = 75\u00d715/0.05 = 22,500 N (likely fatal)\n(b) 0.3 s (with airbag): F = 75\u00d715/0.3 = 3,750 N (survivable)"
+        },
+        {
+          "type": "heading",
+          "body": "Principle of Conservation of Linear Momentum"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** If no external force acts on a system of objects, the total linear momentum of the system remains constant.\n\n\u03a3p_initial = \u03a3p_final\nm\u2081u\u2081 + m\u2082u\u2082 = m\u2081v\u2081 + m\u2082v\u2082\n\n**Derivation from Newton's Third Law:**\nWhen two objects A and B collide:\n- Force of A on B = F_AB\n- Force of B on A = F_BA = \u2212F_AB (Newton's 3rd Law)\n- They act for the same time t\n- Impulse on B = F_AB \u00d7 t = m_B(v_B \u2212 u_B)\n- Impulse on A = F_BA \u00d7 t = \u2212F_AB \u00d7 t = m_A(v_A \u2212 u_A)\n- Adding: m_A(v_A \u2212 u_A) + m_B(v_B \u2212 u_B) = 0\n- \u2234 m_A u_A + m_B u_B = m_A v_A + m_B v_B \u2713\n\n**Types of collision:**\n\n1. **Elastic collision:** Both momentum AND kinetic energy are conserved.\nRelative speed of approach = relative speed of separation\n(v\u2082 \u2212 v\u2081) = (u\u2081 \u2212 u\u2082)\n\n2. **Inelastic collision:** Momentum is conserved but kinetic energy is NOT (some is converted to heat, sound, deformation).\n\n3. **Perfectly inelastic (plastic) collision:** Objects stick together after collision \u2014 maximum KE loss.\n\n**Worked Example 4:** A 2 kg ball moving at 6 m/s east collides with a 3 kg ball at rest. After collision, the 2 kg ball moves at 2 m/s west. Find the velocity of the 3 kg ball after collision.\n\nTake east as positive: u\u2081 = +6, u\u2082 = 0, v\u2081 = \u22122 m/s (west)\n\nConservation of momentum:\n2\u00d76 + 3\u00d70 = 2\u00d7(\u22122) + 3\u00d7v\u2082\n12 = \u22124 + 3v\u2082\n3v\u2082 = 16\nv\u2082 = 5.33 m/s east\n\nCheck energy: KE_initial = \u00bd\u00d72\u00d736 = 36 J\nKE_final = \u00bd\u00d72\u00d74 + \u00bd\u00d73\u00d728.4 = 4 + 42.6 = 46.6 J\nKE_final > KE_initial \u2014 IMPOSSIBLE. Something is wrong.\n\nLet me redo: KE_final = \u00bd\u00d72\u00d7(2\u00b2) + \u00bd\u00d73\u00d7(5.33\u00b2) = 4 + 0.5\u00d73\u00d728.4 = 4 + 42.6 = 46.6 J > 36 J. This violates energy conservation even for inelastic. This means v\u2081 = \u22122 m/s is not physically possible here. In exam problems, given data should be consistent \u2014 students check this.\n\n**Worked Example 5 (corrected \u2014 common UNEB type):** A 5 kg trolley moving at 4 m/s collides with a stationary 3 kg trolley. They stick together. Find their common velocity.\n\nm\u2081u\u2081 + m\u2082u\u2082 = (m\u2081 + m\u2082)v\n5\u00d74 + 3\u00d70 = 8\u00d7v\nv = 20/8 = 2.5 m/s in the original direction\n\nKE lost = \u00bd\u00d75\u00d716 \u2212 \u00bd\u00d78\u00d76.25 = 40 \u2212 25 = 15 J (converted to heat/deformation)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Momentum p = mv (vector). Impulse = Ft = change in momentum. Conservation of momentum: total momentum before = total momentum after (when no external forces act). In elastic collisions, KE is also conserved. Impulse applications explain car safety features."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Linear momentum: p = mv; the product of mass and velocity; unit: kg m s\u207b\u00b9 or N s\n\u2022 Impulse: J = Ft = \u0394p; the product of force and time, equal to the change in momentum\n\u2022 Elastic collision: A collision in which both momentum and kinetic energy are conserved\n\u2022 Perfectly inelastic collision: Objects stick together after collision; maximum kinetic energy is lost, but momentum is still conserved"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 6 kg block on a smooth 30\u00b0 incline is connected by string over a pulley to a 4 kg hanging mass. What is the acceleration? (g=10 m/s\u00b2)",
+            "options": [
+              "2 m/s\u00b2",
+              "1 m/s\u00b2",
+              "4 m/s\u00b2",
+              "0 m/s\u00b2"
+            ],
+            "answer": "1 m/s\u00b2",
+            "explanation": "Net force = 4\u00d710 \u2212 6\u00d710\u00d7sin30\u00b0 = 40 \u2212 30 = 10 N. Total mass = 10 kg. a = 10/10 = 1 m/s\u00b2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 20 g bullet at 300 m/s embeds in a 2 kg block. What is the velocity of the block after impact?",
+            "options": [
+              "3.0 m/s",
+              "2.97 m/s",
+              "0.3 m/s",
+              "300 m/s"
+            ],
+            "answer": "2.97 m/s",
+            "explanation": "Conservation of momentum: 0.02\u00d7300 = 2.02\u00d7v. v = 6/2.02 = 2.97 m/s."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What does the gradient of a displacement-time graph represent?",
+            "options": [
+              "Acceleration",
+              "Velocity",
+              "Distance",
+              "Force"
+            ],
+            "answer": "Velocity",
+            "explanation": "Gradient of s-t graph = ds/dt = velocity. Gradient of v-t graph = acceleration."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Two blocks A (3 kg) and B (5 kg) are connected by a string on a smooth horizontal surface. A force of 16 N pulls block A. What is the tension in the string between A and B?",
+            "options": [
+              "16 N",
+              "6 N",
+              "10 N",
+              "12 N"
+            ],
+            "answer": "10 N",
+            "explanation": "System acceleration: a = 16/(3+5) = 2 m/s\u00b2. Tension acts only on B: T = m_B \u00d7 a = 5 \u00d7 2 = 10 N."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a collision between a moving object and a stationary object of equal mass that is perfectly elastic, what happens to the kinetic energy of the first object?",
+            "options": [
+              "It is completely destroyed",
+              "It is halved",
+              "It is completely transferred to the second object",
+              "It remains with the first object"
+            ],
+            "answer": "It is completely transferred to the second object",
+            "explanation": "In a perfectly elastic collision between equal masses, all momentum and kinetic energy are transferred from the first to the second. The first stops completely."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t3_l5",
+      "title": "Newton's Laws of Motion",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Isaac Newton published his three laws of motion in 1687, and they remain the foundation of classical mechanics. Every vehicle on Uganda's roads, every aircraft in its skies, and every boat on Lake Victoria obeys these laws. In this lesson, we state, derive, and apply all three laws \u2014 with particular attention to the common real-life situations that appear in examinations."
+        },
+        {
+          "type": "heading",
+          "body": "Newton's First Law of Motion"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** A body remains at rest or continues to move with uniform velocity in a straight line unless acted upon by a resultant external force.\n\nThis is also called the **Law of Inertia**.\n\n**Inertia** is the property of a body that resists changes to its state of motion. The greater the mass, the greater the inertia.\n\n**Implications:**\n- A stationary object will not start moving unless a force acts on it\n- A moving object will not change speed or direction unless a force acts on it\n- In space (no air resistance, no gravity), an object would travel in a straight line forever\n\n**Real-life examples:**\n- Passengers lurch forward when a bus brakes suddenly (passengers' inertia keeps them moving forward while the bus decelerates)\n- A tablecloth can be pulled from under plates quickly \u2014 the plates' inertia keeps them stationary\n- A coin on a card can be flicked off without moving the glass beneath"
+        },
+        {
+          "type": "heading",
+          "body": "Newton's Second Law of Motion"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** The resultant force acting on a body is proportional to the rate of change of momentum of the body, and acts in the direction of that change.\n\n**F = dp/dt = d(mv)/dt**\n\nFor constant mass: **F = ma**\n\nWhere:\n- F = resultant (net) force (N)\n- m = mass (kg)\n- a = acceleration (m/s\u00b2)\n\n**Derivation:**\nF \u221d rate of change of momentum = \u0394p/\u0394t = m(v\u2212u)/t = ma\nWith the unit of force (newton) defined so the constant of proportionality = 1:\nF = ma\n\n**Important:** F is the NET (resultant) force \u2014 the vector sum of all forces.\n\n**Worked Example 1:** A 1500 kg car has a driving force of 3000 N and a friction/air resistance of 800 N. Find its acceleration.\n\nNet force F = 3000 \u2212 800 = 2200 N\na = F/m = 2200/1500 = 1.47 m/s\u00b2\n\n**Worked Example 2:** A 10 kg block is pushed with 30 N on a surface with friction force 6 N. Find its acceleration.\n\nNet F = 30 \u2212 6 = 24 N\na = 24/10 = 2.4 m/s\u00b2\n\n**The weight equation:**\nWeight W = mg (gravitational force on mass m)\nOn Earth's surface, g = 9.81 m/s\u00b2 \u2248 10 m/s\u00b2\n\n**Note:** Mass (kg) \u2260 weight (N). A 70 kg person has weight = 70 \u00d7 9.81 = 686.7 N \u2248 700 N."
+        },
+        {
+          "type": "heading",
+          "body": "Newton's Third Law of Motion"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** If body A exerts a force on body B, then body B exerts an equal and opposite force on body A. These forces are equal in magnitude, opposite in direction, and act on different bodies.\n\nF_AB = \u2212F_BA\n\n**Key features of Newton's 3rd law pairs:**\n1. They always occur in pairs\n2. They are equal in magnitude\n3. They are opposite in direction\n4. They act on DIFFERENT objects (not on the same object)\n5. They are of the same type (both contact, or both gravitational, etc.)\n\n**Common misconception:** People often mistake Newton's 3rd law pairs for balanced forces. They are NOT balanced forces \u2014 balanced forces act on the SAME object and can be from different force types.\n\n**Examples of 3rd law pairs:**\n- You push the Earth downward (weight); the Earth pushes you upward (normal reaction)\n- A rocket expels gas backward; the gas pushes the rocket forward\n- A swimmer pushes water backward; the water pushes the swimmer forward\n- A bat hits a ball forward; the ball hits the bat backward (with equal force)\n\n**Worked Example 3:** A 60 kg person stands in a lift. The lift cable pulls the lift upward.\n\n(a) When the lift accelerates upward at 2 m/s\u00b2:\nNet force = ma = 60 \u00d7 2 = 120 N upward\nN \u2212 W = 120\nN = 120 + mg = 120 + 60\u00d710 = 720 N\n(Person feels heavier)\n\n(b) When the lift decelerates at 3 m/s\u00b2 while moving upward:\nNet force = ma = 60 \u00d7 (\u22123) = \u2212180 N (downward)\nN \u2212 W = \u2212180\nN = W \u2212 180 = 600 \u2212 180 = 420 N\n(Person feels lighter)\n\n(c) When the cable breaks (free fall, a = g downward):\nN \u2212 W = \u2212mg \u2192 N = W \u2212 mg = mg \u2212 mg = 0 N\n(Person feels weightless)"
+        },
+        {
+          "type": "heading",
+          "body": "Applications: Connected Particles and Atwood's Machine"
+        },
+        {
+          "type": "text",
+          "body": "**Connected particles on a horizontal surface:**\n\nTwo blocks A (mass m_A) and B (mass m_B) connected by a light string, pulled by force F on a smooth surface. Find the acceleration and tension.\n\nFor the system: F = (m_A + m_B) \u00d7 a \u2192 a = F/(m_A + m_B)\n\nFor block A alone: F \u2212 T = m_A \u00d7 a \u2192 T = F \u2212 m_A \u00d7 a = m_A \u00d7 m_B \u00d7 F / (m_A(m_A + m_B))... \nActually: T = m_B \u00d7 a = m_B \u00d7 F/(m_A + m_B)\n\n**Worked Example 4:** F = 60 N, m_A = 4 kg (front), m_B = 6 kg (rear), smooth surface.\na = 60/(4+6) = 6 m/s\u00b2\nT (tension in string between them) = 6 \u00d7 6 = 36 N (only m_B is accelerated by T)\n\n**Atwood's Machine:**\nTwo masses m\u2081 and m\u2082 (m\u2081 > m\u2082) connected over a frictionless pulley by a light string.\n\nFor m\u2081 (heavier, goes down): m\u2081g \u2212 T = m\u2081a ...(1)\nFor m\u2082 (lighter, goes up): T \u2212 m\u2082g = m\u2082a ...(2)\n\nAdding (1) and (2): (m\u2081 \u2212 m\u2082)g = (m\u2081 + m\u2082)a\na = (m\u2081 \u2212 m\u2082)g / (m\u2081 + m\u2082)\n\nFrom (2): T = m\u2082(g + a) = 2m\u2081m\u2082g / (m\u2081 + m\u2082)\n\n**Worked Example 5:** m\u2081 = 6 kg, m\u2082 = 4 kg, g = 10 m/s\u00b2\na = (6\u22124)\u00d710/(6+4) = 20/10 = 2 m/s\u00b2\nT = 4\u00d7(10+2) = 4\u00d712 = 48 N\n\nCheck with m\u2081: 6\u00d710 \u2212 48 = 60 \u2212 48 = 12 = 6\u00d72 \u2713"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Newton's 1st Law: objects resist changes to their motion (inertia). Newton's 2nd Law: F = ma (resultant force = mass \u00d7 acceleration). Newton's 3rd Law: forces come in equal, opposite pairs acting on different objects. Applications include lifts, connected particles, and Atwood's machine."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Inertia: The tendency of an object to resist changes to its state of motion; proportional to mass\n\u2022 Net force: The vector sum of all forces acting on an object; determines acceleration via F = ma\n\u2022 Newton's third law pair: Two forces that are equal in magnitude, opposite in direction, of the same type, acting on different objects\n\u2022 Atwood's machine: Two masses connected over a pulley, used to study Newton's laws with reduced effective acceleration"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A car at 108 km/h (30 m/s) brakes at 6 m/s\u00b2 with reaction time 0.25 s. What is the total stopping distance?",
+            "options": [
+              "75 m",
+              "82.5 m",
+              "90 m",
+              "67.5 m"
+            ],
+            "answer": "82.5 m",
+            "explanation": "Thinking: 30\u00d70.25=7.5 m. Braking: v\u00b2=u\u00b2+2as \u2192 0=900\u221212s \u2192 s=75 m. Total = 7.5+75 = 82.5 m."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Car A (15 m/s east) and Car B (300 m ahead, 10 m/s east) \u2014 how long for A to catch B?",
+            "options": [
+              "30 s",
+              "60 s",
+              "20 s",
+              "45 s"
+            ],
+            "answer": "60 s",
+            "explanation": "Relative velocity of A toward B = 15\u221210 = 5 m/s. Time = 300/5 = 60 s."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which of the following is a Newton's Third Law pair?",
+            "options": [
+              "Weight and normal reaction on a book resting on a table",
+              "Weight of a book and the gravitational pull the book exerts on the Earth",
+              "Friction and normal reaction on a sliding object",
+              "Tension and weight in a hanging object"
+            ],
+            "answer": "Weight of a book and the gravitational pull the book exerts on the Earth",
+            "explanation": "The Earth pulls the book downward (weight) AND the book pulls the Earth upward with an equal force. These act on different bodies (Earth pulls book; book pulls Earth) \u2014 this is a 3rd Law pair. Normal reaction and weight act on the SAME object (the book), so they are NOT a 3rd Law pair."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An object is thrown vertically upward and returns to the same height. Taking g = 10 m/s\u00b2 and initial speed 20 m/s, what is the total time of flight?",
+            "options": [
+              "2 s",
+              "4 s",
+              "1 s",
+              "10 s"
+            ],
+            "answer": "4 s",
+            "explanation": "s = ut + \u00bdat\u00b2. For return to start, s = 0: 0 = 20t \u2212 5t\u00b2 = t(20 \u2212 5t). t = 0 or t = 4 s. Total flight time = 4 s."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A rocket in outer space (no air) fires its engine. Which correctly explains the propulsion?",
+            "options": [
+              "The rocket pushes against space itself",
+              "By Newton's 3rd Law, exhaust gases push backward on rocket while rocket pushes forward on gases",
+              "Newton's laws don't apply in space",
+              "The rocket engine creates air pressure behind it"
+            ],
+            "answer": "By Newton's 3rd Law, exhaust gases push backward on rocket while rocket pushes forward on gases",
+            "explanation": "Newton's 3rd: rocket exerts backward force on exhaust; exhaust exerts equal forward force on rocket. No medium needed \u2014 conservation of momentum drives propulsion."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t3_l6",
+      "title": "Applications of Newton's Laws: Lifts, Inclined Planes and Road Safety",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Newton's laws of motion are not merely theoretical \u2014 they explain why seat belts save lives, why a vehicle takes longer to stop on a wet road, and how to design safe lifts and escalators. In this final lesson of the topic, we apply Newton's laws systematically to the real-world situations most common in Uganda and in UNEB A-Level examinations."
+        },
+        {
+          "type": "heading",
+          "body": "Motion on Inclined Planes"
+        },
+        {
+          "type": "text",
+          "body": "When an object moves along a slope, we resolve forces parallel and perpendicular to the slope.\n\nFor a block of mass m on a smooth slope at angle \u03b8:\n- Component of weight along slope (down the slope) = mg sin \u03b8\n- Component of weight perpendicular to slope (into slope) = mg cos \u03b8\n- Normal reaction N = mg cos \u03b8 (since no acceleration perpendicular to slope)\n\n**Motion down a smooth slope:**\na = g sin \u03b8\n\n**Motion down a rough slope (friction coefficient \u03bc):**\nFriction force up slope = \u03bcN = \u03bcmg cos \u03b8\nNet force = mg sin \u03b8 \u2212 \u03bcmg cos \u03b8 = mg(sin \u03b8 \u2212 \u03bc cos \u03b8)\na = g(sin \u03b8 \u2212 \u03bc cos \u03b8)\n\n**Worked Example 1:** A 5 kg block slides down a smooth slope of 30\u00b0. Find:\n(a) The acceleration\n(b) The normal reaction\n\n(a) a = g sin 30\u00b0 = 10 \u00d7 0.5 = 5 m/s\u00b2\n(b) N = mg cos 30\u00b0 = 5 \u00d7 10 \u00d7 0.866 = 43.3 N\n\n**Worked Example 2:** A 10 kg block is pushed up a slope of 25\u00b0 with force F parallel to the slope. The coefficient of friction is 0.3. The block accelerates at 1.5 m/s\u00b2. Find F.\n\nForces up slope: F (applied)\nForces down slope: mg sin 25\u00b0 + \u03bcmg cos 25\u00b0\n= 10\u00d710\u00d70.423 + 0.3\u00d710\u00d710\u00d70.906\n= 42.3 + 27.2 = 69.5 N\n\nF \u2212 69.5 = 10 \u00d7 1.5 = 15\nF = 84.5 N"
+        },
+        {
+          "type": "heading",
+          "body": "Lifts and Apparent Weight"
+        },
+        {
+          "type": "text",
+          "body": "The 'apparent weight' (what a person feels, or reads on a weighing scale) is the normal reaction force N.\n\n**Equations of motion in a lift (taking upward as positive):**\n\nNet force = ma:\nN \u2212 mg = ma\nN = m(g + a)\n\n**When lift accelerates upward (a > 0):** N > mg \u2192 person feels heavier\n**When lift moves at constant velocity (a = 0):** N = mg \u2192 person feels normal weight\n**When lift decelerates going up (a < 0):** N < mg \u2192 person feels lighter\n**When lift is in free fall (a = \u2212g):** N = 0 \u2192 person feels weightless\n\n**Worked Example 3:** A 50 kg student stands on a scale in a lift. Find the scale reading when:\n(a) Lift moves up at constant velocity\n(b) Lift accelerates downward at 4 m/s\u00b2\n(c) Lift accelerates upward at 2 m/s\u00b2\n\n(a) N = 50 \u00d7 10 = 500 N (normal)\n(b) N = 50(10 \u2212 4) = 50 \u00d7 6 = 300 N (lighter)\n(c) N = 50(10 + 2) = 50 \u00d7 12 = 600 N (heavier)"
+        },
+        {
+          "type": "heading",
+          "body": "Road Safety and Stopping Distances"
+        },
+        {
+          "type": "text",
+          "body": "This section directly connects Newton's laws to real road safety issues in Uganda.\n\n**Total stopping distance = thinking distance + braking distance**\n\nThinking distance = u \u00d7 t_reaction (constant speed during reaction time)\nBraking distance: from v\u00b2 = u\u00b2 + 2as with v = 0: s = u\u00b2/(2a) where a is the braking deceleration\n\n**Worked Example 4:** A car moves at 20 m/s. Reaction time = 0.3 s. Braking deceleration = 6 m/s\u00b2. Find total stopping distance.\n\nThinking distance = 20 \u00d7 0.3 = 6 m\nBraking distance = 20\u00b2/(2\u00d76) = 400/12 = 33.3 m\nTotal = 6 + 33.3 = 39.3 m\n\n**Effect of speed:** If speed doubles (40 m/s):\nThinking distance = 12 m (doubles)\nBraking distance = 40\u00b2/12 = 133.3 m (quadruples!)\nTotal = 145.3 m \u2248 4\u00d7 the original distance\n\n\u2192 **Doubling speed more than quadruples stopping distance.** This is why speed limits in towns (50 km/h) are much lower than on highways.\n\n**Effect of wet roads:** Lower friction \u2192 lower a \u2192 longer braking distance.\nIf \u03bc on dry road = 0.8, on wet road = 0.4:\nDry braking deceleration = \u03bcg = 0.8 \u00d7 10 = 8 m/s\u00b2\nWet braking deceleration = 0.4 \u00d7 10 = 4 m/s\u00b2\nBraking distance on wet road is twice that on dry road.\n\n**Worked Example 5:** A lorry of mass 8000 kg travelling at 15 m/s must stop before a school crossing 40 m away. The driver's reaction time is 0.4 s. What minimum braking force is needed?\n\nThinking distance = 15 \u00d7 0.4 = 6 m\nAvailable braking distance = 40 \u2212 6 = 34 m\n\nv\u00b2 = u\u00b2 + 2as: 0 = 225 + 2\u00d7a\u00d734\na = \u2212225/68 = \u22123.31 m/s\u00b2\n\nBraking force = ma = 8000 \u00d7 3.31 = 26,470 N \u2248 26.5 kN"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "On inclined planes, resolve forces parallel and perpendicular to the slope. In lifts, N = m(g+a); apparent weight changes with acceleration. Stopping distance = thinking distance + braking distance; braking distance \u221d u\u00b2, making high speed extremely dangerous."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Apparent weight: The reading on a scale (normal reaction force), which differs from true weight when the body is accelerating\n\u2022 Thinking distance: Distance travelled at constant speed during the driver's reaction time\n\u2022 Braking distance: Distance travelled during braking; proportional to the square of initial speed\n\u2022 Coefficient of friction: The ratio of friction force to normal force; lower on wet or icy surfaces"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "10 kg trolley at 6 m/s east collides with 6 kg trolley at 2 m/s west. After, the 10 kg moves at 1 m/s east. What is the velocity of the 6 kg trolley?",
+            "options": [
+              "6.33 m/s east",
+              "4 m/s east",
+              "6.33 m/s west",
+              "2 m/s west"
+            ],
+            "answer": "6.33 m/s east",
+            "explanation": "Conservation: 10\u00d76 + 6\u00d7(\u22122) = 10\u00d71 + 6\u00d7v\u2082. 60\u221212 = 10+6v\u2082. 48=10+6v\u2082. v\u2082 = 38/6 = 6.33 m/s east."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A block slides down a smooth inclined plane of angle 30\u00b0. What is its acceleration? (g = 10 m/s\u00b2)",
+            "options": [
+              "10 m/s\u00b2",
+              "8.66 m/s\u00b2",
+              "5 m/s\u00b2",
+              "5.77 m/s\u00b2"
+            ],
+            "answer": "5 m/s\u00b2",
+            "explanation": "On a smooth incline, net force = mg sin\u03b8. a = g sin\u03b8 = 10 \u00d7 sin30\u00b0 = 10 \u00d7 0.5 = 5 m/s\u00b2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 3 kg gun fires a 0.01 kg bullet at 400 m/s. What is the recoil speed of the gun?",
+            "options": [
+              "1.33 m/s",
+              "4 m/s",
+              "0.013 m/s",
+              "133 m/s"
+            ],
+            "answer": "1.33 m/s",
+            "explanation": "Conservation of momentum (both at rest initially): 0 = 0.01\u00d7400 + 3\u00d7v_gun. v_gun = \u22124/3 = \u22121.33 m/s (recoil)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A car moving at 20 m/s has a reaction time of 0.5 s and then decelerates at 5 m/s\u00b2. What is the total stopping distance?",
+            "options": [
+              "40 m",
+              "50 m",
+              "30 m",
+              "10 m"
+            ],
+            "answer": "50 m",
+            "explanation": "Thinking distance = 20\u00d70.5 = 10 m. Braking: 0 = 400 \u2212 2\u00d75\u00d7s \u2192 s = 40 m. Total = 10+40 = 50 m."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Atwood's machine: 7 kg and 3 kg connected over a pulley. What is the acceleration? (g=10 m/s\u00b2)",
+            "options": [
+              "4 m/s\u00b2",
+              "10 m/s\u00b2",
+              "7 m/s\u00b2",
+              "2 m/s\u00b2"
+            ],
+            "answer": "4 m/s\u00b2",
+            "explanation": "a = (m\u2081\u2212m\u2082)g/(m\u2081+m\u2082) = (7\u22123)\u00d710/(7+3) = 40/10 = 4 m/s\u00b2."
+          }
+        ]
+      }
+    }
+  ]
+}

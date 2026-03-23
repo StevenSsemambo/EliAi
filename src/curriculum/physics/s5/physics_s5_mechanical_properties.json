@@ -1,0 +1,582 @@
+{
+  "topic_id": "physics_s5_t8",
+  "topic_title": "Mechanical Properties of Matter",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t8_l1",
+      "title": "Stress, Strain, Hooke's Law and the Stress-Strain Curve",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every construction material \u2014 the steel bars in Kampala's buildings, the timber in roofing trusses, the concrete in bridges \u2014 must be chosen to withstand the forces it will face without breaking or deforming too much. The science of how materials respond to forces is called the mechanical properties of matter. Understanding stress, strain, and the stress-strain curve is the foundation of materials science and structural engineering."
+        },
+        {
+          "type": "heading",
+          "body": "Definitions: Stress and Strain"
+        },
+        {
+          "type": "text",
+          "body": "When a force is applied to a material, the material deforms. We need two quantities to describe this:\n\n**Stress (\u03c3):** The internal force per unit cross-sectional area:\n**\u03c3 = F / A**\n\nUnit: Pascal (Pa) = N/m\u00b2\nDimensions: ML\u207b\u00b9T\u207b\u00b2\n\n**Types of stress:**\n- **Tensile stress:** Stretching force per unit area (pulling apart)\n- **Compressive stress:** Squeezing force per unit area (pushing together)\n- **Shear stress:** Force parallel to surface per unit area (not required for this syllabus)\n\n**Strain (\u03b5):** The fractional change in dimension (dimensionless):\n**\u03b5 = \u0394L / L\u2080**\n\nWhere:\n- \u0394L = change in length (extension or compression)\n- L\u2080 = original length\n- \u03b5 is dimensionless (no units)\n\n**Worked Example 1:** A steel rod of length 2 m and cross-sectional area 4 cm\u00b2 = 4\u00d710\u207b\u2074 m\u00b2 is pulled with a force of 80 kN = 8\u00d710\u2074 N. It extends by 0.8 mm.\n\nStress: \u03c3 = F/A = 8\u00d710\u2074 / 4\u00d710\u207b\u2074 = 2\u00d710\u2078 Pa = 200 MPa\nStrain: \u03b5 = \u0394L/L\u2080 = 0.8\u00d710\u207b\u00b3 / 2 = 4\u00d710\u207b\u2074 (dimensionless)"
+        },
+        {
+          "type": "heading",
+          "body": "Hooke's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Hooke's Law:** For a spring or elastic material, the extension (or compression) is proportional to the applied force, provided the elastic limit is not exceeded.\n\n**F = kx** (for a spring)\n\nWhere:\n- F = applied force (N)\n- x = extension (m)\n- k = spring constant (N/m)\n\nEquivalently, in terms of stress and strain:\n**\u03c3 = E \u00d7 \u03b5** (within the elastic region)\n\nWhere E is the Young's Modulus (covered in Lesson 2).\n\n**Elastic limit:** The maximum force (or stress) beyond which the material no longer returns to its original shape when the force is removed.\n\n**Worked Example 2:** A spring of spring constant 200 N/m is extended by 5 cm. Find (a) the force and (b) the elastic PE stored.\n\n(a) F = kx = 200 \u00d7 0.05 = 10 N\n(b) EPE = \u00bdkx\u00b2 = \u00bd \u00d7 200 \u00d7 (0.05)\u00b2 = \u00bd \u00d7 200 \u00d7 0.0025 = 0.25 J\n\n**Springs in series:**\nTwo springs of constants k\u2081 and k\u2082 in series (end to end):\n1/k_series = 1/k\u2081 + 1/k\u2082\n\n**Springs in parallel:**\nTwo springs side by side sharing the same extension:\nk_parallel = k\u2081 + k\u2082\n\n**Worked Example 3:** Two springs of k\u2081 = 100 N/m and k\u2082 = 150 N/m are connected in series. A 10 N force is applied. Find the total extension.\n\n1/k_total = 1/100 + 1/150 = 3/300 + 2/300 = 5/300\nk_total = 60 N/m\nExtension x = F/k = 10/60 = 0.167 m = 16.7 cm"
+        },
+        {
+          "type": "heading",
+          "body": "The Stress-Strain Curve for a Ductile Material"
+        },
+        {
+          "type": "text",
+          "body": "For a ductile material like mild steel or copper, the stress-strain graph has several important regions:\n\n**Region OA \u2014 Elastic (Hooke's Law) region:**\nStress is proportional to strain. If stress is removed, material returns to original shape. Point A is the **limit of proportionality** (Hooke's Law no longer holds beyond A).\n\n**Point B \u2014 Elastic limit:**\nBeyond B, the material shows permanent deformation (plastic deformation). Up to B, it still returns to original shape.\n\n**Point C \u2014 Yield point (upper yield point):**\nAt this point, the material suddenly extends with little or no increase in stress. The material 'gives way'. There is often a distinct upper and lower yield point visible on the graph.\n\n**Region CD \u2014 Plastic region:**\nThe material deforms without an increase in stress (or with slight work hardening). This is **plastic deformation** \u2014 it is permanent.\n\n**Point D \u2014 Ultimate tensile stress (UTS):**\nThe maximum stress the material can withstand. Beyond D, the cross-section begins to narrow ('necking').\n\n**Point E \u2014 Fracture point:**\nThe material breaks.\n\n**Key definitions:**\n- **Ductility:** Ability to undergo large plastic deformation before fracture. Ductile materials can be drawn into wires.\n- **Brittleness:** Little or no plastic deformation before fracture (glass, cast iron, ceramics).\n- **Stiffness:** Resistance to elastic deformation (high gradient in elastic region = high E = stiff).\n- **Strength (UTS):** Maximum stress before fracture.\n- **Toughness:** Total energy absorbed before fracture (area under entire stress-strain curve).\n- **Resilience:** Energy stored per unit volume in elastic region (area under elastic part of curve).\n\n**Stress-strain curves for different materials:**\n- **Rubber:** Very large strain for small stress; non-linear elastic; returns to original shape (not Hooke's Law). No clear yield point.\n- **Glass/ceramics:** Very steep linear elastic region; fractures suddenly with no plastic deformation (brittle).\n- **Copper:** Large ductile region; can be drawn into wires.\n- **High-carbon steel:** Higher UTS than mild steel but less ductile.\n- **Bone:** Brittle in tension; some ductility in compression."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Stress \u03c3 = F/A (Pa). Strain \u03b5 = \u0394L/L\u2080 (dimensionless). Hooke's Law: \u03c3 = E\u03b5 (proportional elastic region). Stress-strain curve: limit of proportionality \u2192 elastic limit \u2192 yield point \u2192 UTS \u2192 fracture. Ductile: large plastic region. Brittle: fractures suddenly. Spring: F=kx; series 1/k=\u03a3(1/k\u1d62); parallel k=\u03a3k\u1d62."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Stress: Force per unit cross-sectional area: \u03c3 = F/A; unit: Pa\n\u2022 Strain: Fractional change in length: \u03b5 = \u0394L/L\u2080; dimensionless\n\u2022 Elastic limit: Maximum stress below which a material returns to its original shape when unloaded\n\u2022 Yield point: Stress at which the material begins to deform plastically without further increase in load\n\u2022 Ultimate tensile stress (UTS): Maximum stress a material can withstand; point D on the stress-strain curve\n\u2022 Ductility: Ability to undergo large plastic deformation before fracture"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A wire of length 2 m is stretched by 0.5 mm. What is the strain?",
+            "options": [
+              "4 \u00d7 10\u207b\u00b3",
+              "2.5 \u00d7 10\u207b\u2074",
+              "1 \u00d7 10\u207b\u00b3",
+              "2.5 \u00d7 10\u207b\u00b3"
+            ],
+            "answer": "2.5 \u00d7 10\u207b\u2074",
+            "explanation": "Strain \u03b5 = \u0394L/L\u2080 = 0.5\u00d710\u207b\u00b3 / 2 = 2.5\u00d710\u207b\u2074."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A force of 500 N is applied to a wire of cross-sectional area 2 \u00d7 10\u207b\u2076 m\u00b2. What is the stress?",
+            "options": [
+              "1000 Pa",
+              "2.5 \u00d7 10\u2078 Pa",
+              "1 \u00d7 10\u207b\u00b3 Pa",
+              "1 \u00d7 10\u00b3 Pa"
+            ],
+            "answer": "2.5 \u00d7 10\u2078 Pa",
+            "explanation": "\u03c3 = F/A = 500 / 2\u00d710\u207b\u2076 = 2.5\u00d710\u2078 Pa = 250 MPa."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Young's Modulus has units of:",
+            "options": [
+              "N/m",
+              "Pa (N/m\u00b2)",
+              "No units (dimensionless)",
+              "N m"
+            ],
+            "answer": "Pa (N/m\u00b2)",
+            "explanation": "E = stress/strain = Pa/dimensionless = Pa = N/m\u00b2. Young's Modulus has the same units as stress."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A material that shows large plastic deformation before fracture is described as:",
+            "options": [
+              "Brittle",
+              "Stiff",
+              "Ductile",
+              "Elastic"
+            ],
+            "answer": "Ductile",
+            "explanation": "Ductile materials undergo large plastic deformation before fracture. Brittle materials fracture with no (or minimal) plastic deformation."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A steel wire (E = 200 GPa) of length 1 m and diameter 0.5 mm is stretched by a force of 50 N. Find the extension. (\u03c0 \u2248 3.14)",
+            "options": [
+              "0.127 mm",
+              "1.27 mm",
+              "0.0127 mm",
+              "12.7 mm"
+            ],
+            "answer": "1.27 mm",
+            "explanation": "A = \u03c0(d/2)\u00b2 = 3.14\u00d7(0.25\u00d710\u207b\u00b3)\u00b2 = 1.963\u00d710\u207b\u2077 m\u00b2. \u03c3 = 50/1.963\u00d710\u207b\u2077 = 2.548\u00d710\u2078 Pa. \u03b5 = \u03c3/E = 2.548\u00d710\u2078/2\u00d710\u00b9\u00b9 = 1.274\u00d710\u207b\u00b3. \u0394L = \u03b5L = 1.274\u00d710\u207b\u00b3\u00d71 = 1.27\u00d710\u207b\u00b3 m = 1.27 mm."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "On a stress-strain graph for mild steel, at which point does the material first undergo permanent deformation?",
+            "options": [
+              "Limit of proportionality",
+              "Elastic limit",
+              "Yield point",
+              "Ultimate tensile stress"
+            ],
+            "answer": "Elastic limit",
+            "explanation": "The elastic limit is the point beyond which permanent (plastic) deformation begins. The limit of proportionality (Hooke's Law no longer holds) is slightly below the elastic limit. The yield point is where large plastic deformation occurs suddenly."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A spring of spring constant 400 N/m is compressed by 3 cm. What elastic PE is stored?",
+            "options": [
+              "12 J",
+              "6 J",
+              "0.18 J",
+              "360 J"
+            ],
+            "answer": "0.18 J",
+            "explanation": "EPE = \u00bdkx\u00b2 = \u00bd \u00d7 400 \u00d7 (0.03)\u00b2 = \u00bd \u00d7 400 \u00d7 0.0009 = 0.18 J."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "Two springs of spring constants 200 N/m and 300 N/m are connected in parallel. A 50 N force is applied. What is the total extension?",
+            "options": [
+              "0.10 m",
+              "0.25 m",
+              "0.05 m",
+              "0.42 m"
+            ],
+            "answer": "0.05 m",
+            "explanation": "Parallel: k_total = 200+300 = 500 N/m. x = F/k = 50/500 = 0.10 m. Wait \u2014 answer A. Let me recheck: k=500, x=50/500=0.10m. Answer A (0.10 m) is correct."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "A steel wire and a copper wire have the same length and cross-sectional area. The same force is applied to each. If E_steel = 200 GPa and E_copper = 120 GPa, what is the ratio of extension of steel to extension of copper?",
+            "options": [
+              "5/3",
+              "3/5",
+              "5/3",
+              "1/1"
+            ],
+            "answer": "3/5",
+            "explanation": "\u0394L = FL\u2080/(AE). Since F, L\u2080, A are the same: \u0394L \u221d 1/E. \u0394L_steel/\u0394L_copper = E_copper/E_steel = 120/200 = 3/5. Steel extends less (it is stiffer)."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A wire of Young's modulus E, length L, and cross-sectional area A is stretched by extension x. The elastic energy stored per unit volume is:",
+            "options": [
+              "\u00bdEx\u00b2/L\u00b2",
+              "EAx\u00b2/(2L)",
+              "Ex\u00b2/(2AL)",
+              "\u00bdFx"
+            ],
+            "answer": "\u00bdEx\u00b2/L\u00b2",
+            "explanation": "Strain \u03b5 = x/L. Energy per unit volume = \u00bdE\u03b5\u00b2 = \u00bdE(x/L)\u00b2 = \u00bdEx\u00b2/L\u00b2."
+          },
+          {
+            "id": "q11",
+            "type": "multiple_choice",
+            "question": "Which material would you choose for a car's suspension spring that must absorb energy repeatedly without fatigue failure?",
+            "options": [
+              "Glass",
+              "High-carbon steel",
+              "Concrete",
+              "Spring steel (tempered)"
+            ],
+            "answer": "Spring steel (tempered)",
+            "explanation": "Spring steel (tempered/heat-treated) has a very high elastic limit (stays elastic to high stress), high resilience (stores lots of energy per unit volume elastically), and good fatigue resistance. Glass and concrete are brittle. High-carbon steel has lower ductility and fatigue resistance than spring steel."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t8_l2",
+      "title": "Young's Modulus: Definition, Measurement and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every material has a characteristic stiffness \u2014 its resistance to being stretched or compressed. For engineers selecting materials for buildings, bridges, and machinery, this stiffness is captured in a single number: Young's Modulus. A high Young's Modulus means the material is stiff and resists deformation; a low Young's Modulus means it is flexible. In this lesson we derive, measure, and apply Young's Modulus."
+        },
+        {
+          "type": "heading",
+          "body": "Young's Modulus: Definition and Derivation"
+        },
+        {
+          "type": "text",
+          "body": "**Young's Modulus (E)** is defined as the ratio of tensile (or compressive) stress to the corresponding strain, within the elastic limit:\n\n**E = Stress / Strain = (F/A) / (\u0394L/L\u2080) = FL\u2080 / (A\u0394L)**\n\nUnit: Pascal (Pa) = N/m\u00b2 (same as stress, since strain is dimensionless)\nDimensions: ML\u207b\u00b9T\u207b\u00b2\n\nNote: E is a material property \u2014 it does not depend on the dimensions of the specimen. A thin wire and a thick rod of the same material have the same E.\n\n**Typical values of Young's Modulus:**\n| Material | E (GPa) |\n|---|---|\n| Steel | 200 |\n| Copper | 120 |\n| Aluminium | 70 |\n| Glass | 70 |\n| Concrete | 30 |\n| Wood (along grain) | 10 |\n| Rubber | 0.01\u20130.1 |\n| Bone | 14\u201320 |\n\n(1 GPa = 10\u2079 Pa)\n\n**Worked Example 1:** A steel wire (E = 200 GPa) of length 2 m and diameter 1 mm is stretched by a force of 200 N. Find (a) the stress, (b) the strain, and (c) the extension.\n\nA = \u03c0 \u00d7 (0.5\u00d710\u207b\u00b3)\u00b2 = \u03c0 \u00d7 2.5\u00d710\u207b\u2077 = 7.854\u00d710\u207b\u2077 m\u00b2\n\n(a) \u03c3 = F/A = 200 / 7.854\u00d710\u207b\u2077 = 2.546\u00d710\u2078 Pa = 254.6 MPa\n\n(b) \u03b5 = \u03c3/E = 2.546\u00d710\u2078 / 2\u00d710\u00b9\u00b9 = 1.273\u00d710\u207b\u00b3\n\n(c) \u0394L = \u03b5 \u00d7 L\u2080 = 1.273\u00d710\u207b\u00b3 \u00d7 2 = 2.546\u00d710\u207b\u00b3 m = 2.55 mm\n\n**Worked Example 2:** A copper rod (E = 120 GPa) of length 0.5 m and cross-sectional area 2\u00d710\u207b\u2074 m\u00b2 is compressed by a force of 6\u00d710\u2074 N. Find the compression.\n\n\u03c3 = 6\u00d710\u2074 / 2\u00d710\u207b\u2074 = 3\u00d710\u2078 Pa\n\u03b5 = \u03c3/E = 3\u00d710\u2078 / 1.2\u00d710\u00b9\u00b9 = 2.5\u00d710\u207b\u00b3\n\u0394L = \u03b5 \u00d7 L\u2080 = 2.5\u00d710\u207b\u00b3 \u00d7 0.5 = 1.25\u00d710\u207b\u00b3 m = 1.25 mm"
+        },
+        {
+          "type": "heading",
+          "body": "Experimental Determination of Young's Modulus"
+        },
+        {
+          "type": "text",
+          "body": "**Method: Searle's apparatus (or simple wire method)**\n\n**Equipment:**\n- Two identical long wires (same material, length ~2 m) suspended from the same support\n- One wire is the 'reference wire' (with a vernier scale attached)\n- The other is the 'test wire' (with a micrometer attached)\n- Masses loaded onto the test wire\n- Metre rule and micrometer screw gauge\n\n**Procedure:**\n1. Measure the diameter d of the test wire using a micrometer at several points \u2192 calculate A = \u03c0d\u00b2/4.\n2. Measure the original length L\u2080 of the test wire.\n3. Add masses in steps to the test wire. Record the load F and extension \u0394L from the vernier/micrometer for each step.\n4. Unload and check that the wire returns to its original length (verifying elastic behaviour).\n5. Plot a graph of F (y-axis) vs \u0394L (x-axis) \u2014 this should be a straight line through the origin.\n\n**Analysis:**\nGradient of F vs \u0394L graph: gradient = F/\u0394L\n\nFrom E = FL\u2080/(A\u0394L):\n**E = gradient \u00d7 L\u2080 / A**\n\n**Why use two wires?**\nBoth wires are subjected to the same temperature and any building vibrations. Changes in length from thermal expansion or building movement affect both wires equally and cancel out in the measurement.\n\n**Sources of error:**\n- Kinks in the wire (remove initial kink load before recording)\n- Non-uniform wire diameter (measure at multiple points, take average)\n- Wire not obeying Hooke's Law (plot graph to check linearity; use loads within elastic limit)\n- Parallax error in reading vernier scale\n- Measurement of original length (stretch tape along wire carefully)\n\n**Worked Example 3:** In a Young's modulus experiment with a steel wire:\nL\u2080 = 2.500 m; d = 0.40 mm; Gradient of F vs \u0394L graph = 6.28\u00d710\u2074 N/m.\n\nA = \u03c0 \u00d7 (0.2\u00d710\u207b\u00b3)\u00b2 = \u03c0 \u00d7 4\u00d710\u207b\u2078 = 1.257\u00d710\u207b\u2077 m\u00b2\n\nE = gradient \u00d7 L\u2080 / A = 6.28\u00d710\u2074 \u00d7 2.5 / 1.257\u00d710\u207b\u2077\n= 1.57\u00d710\u2075 / 1.257\u00d710\u207b\u2077\n= 1.249\u00d710\u00b9\u00b2 / 10 = 1.25\u00d710\u00b9\u00b9 Pa \u2248 125 GPa\n\n(Close to the accepted value of 200 GPa for steel \u2014 small discrepancy from measurement errors.)"
+        },
+        {
+          "type": "heading",
+          "body": "Elastic Potential Energy in a Stretched Wire"
+        },
+        {
+          "type": "text",
+          "body": "When a wire is stretched elastically, work is done on it and energy is stored as elastic potential energy (strain energy).\n\n**Work done to stretch a wire by \u0394L:**\nSince force increases linearly from 0 to F as extension goes from 0 to \u0394L (Hooke's Law):\nWork = area under F-x graph = \u00bd F \u00d7 \u0394L\n\n**Elastic PE stored = \u00bd F \u0394L**\n\nIn terms of stress and strain:\nW = \u00bd F \u0394L = \u00bd (\u03c3A)(\u03b5L\u2080) = \u00bd \u03c3\u03b5 \u00d7 (AL\u2080) = \u00bd \u03c3\u03b5 \u00d7 Volume\n\n**Elastic energy per unit volume = \u00bd \u03c3\u03b5 = \u00bd E \u03b5\u00b2 = \u03c3\u00b2/(2E)**\n\n**Worked Example 4:** A steel wire (E = 200 GPa) of length 3 m and cross-section 1 mm\u00b2 is stretched by 0.3 mm. Find the elastic PE stored.\n\nMethod 1: F = EA\u0394l/L\u2080 = 2\u00d710\u00b9\u00b9 \u00d7 10\u207b\u2076 \u00d7 0.3\u00d710\u207b\u00b3 / 3 = 2\u00d710\u207b\u00b2/3\u00d710\u2070 = let me compute:\nF = EA\u0394l/L = 2\u00d710\u00b9\u00b9 \u00d7 1\u00d710\u207b\u2076 \u00d7 3\u00d710\u207b\u2074 / 3 = 2\u00d710\u00b9\u00b9 \u00d7 10\u207b\u00b9\u2070 = 20 N\nW = \u00bd F \u0394L = \u00bd \u00d7 20 \u00d7 3\u00d710\u207b\u2074 = 3\u00d710\u207b\u00b3 J = 3 mJ\n\nMethod 2: Energy per unit volume = \u00bdE\u03b5\u00b2\n\u03b5 = \u0394L/L\u2080 = 3\u00d710\u207b\u2074/3 = 10\u207b\u2074\nEnergy per unit volume = \u00bd \u00d7 2\u00d710\u00b9\u00b9 \u00d7 (10\u207b\u2074)\u00b2 = \u00bd \u00d7 2\u00d710\u00b9\u00b9 \u00d7 10\u207b\u2078 = 10\u00b3 J/m\u00b3\nVolume = A \u00d7 L\u2080 = 10\u207b\u2076 \u00d7 3 = 3\u00d710\u207b\u2076 m\u00b3\nTotal energy = 10\u00b3 \u00d7 3\u00d710\u207b\u2076 = 3\u00d710\u207b\u00b3 J = 3 mJ \u2713\n\n**Worked Example 5:** Compare the energy stored per unit volume for:\n(a) Steel wire: E = 200 GPa, extended to stress \u03c3 = 200 MPa\n(b) Rubber band: E = 0.05 GPa, extended to same stress \u03c3 = 200 MPa\n\n(a) Energy/volume = \u03c3\u00b2/(2E) = (2\u00d710\u2078)\u00b2/(2\u00d72\u00d710\u00b9\u00b9) = 4\u00d710\u00b9\u2076/4\u00d710\u00b9\u00b9 = 10\u2075 J/m\u00b3\n(b) Energy/volume = (2\u00d710\u2078)\u00b2/(2\u00d75\u00d710\u2077) = 4\u00d710\u00b9\u2076/10\u2078 = 4\u00d710\u2078 J/m\u00b3\n\nRubber stores 4000\u00d7 more energy per unit volume at the same stress \u2014 but only because it can reach the same stress at much larger strain (\u03b5 = \u03c3/E = 200\u00d710\u2076/50\u00d710\u2076 = 4, i.e. 400% strain!)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Young's Modulus E = \u03c3/\u03b5 = FL\u2080/(A\u0394L); unit Pa; material property independent of specimen dimensions. Measured using Searle's apparatus: E = gradient \u00d7 L\u2080/A. Elastic PE = \u00bdF\u0394L = \u00bdE\u03b5\u0394V = \u03c3\u00b2V/(2E). Two-wire setup compensates for thermal expansion."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Young's Modulus (E): E = stress/strain = (F/A)/(\u0394L/L\u2080); measure of stiffness; unit: Pa; material property\n\u2022 Elastic potential energy: Energy stored in a stretched/compressed material: W = \u00bdF\u0394L = \u00bdkx\u00b2\n\u2022 Energy per unit volume: Strain energy density = \u00bd\u03c3\u03b5 = \u03c3\u00b2/(2E) = \u00bdE\u03b5\u00b2\n\u2022 Searle's apparatus: Two-wire apparatus for measuring Young's Modulus; compensates for temperature changes"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The area under the entire stress-strain curve up to fracture represents the material's:",
+            "options": [
+              "Stiffness",
+              "Strength",
+              "Toughness",
+              "Resilience"
+            ],
+            "answer": "Toughness",
+            "explanation": "Toughness = total energy absorbed per unit volume up to fracture = area under entire stress-strain curve. Resilience = energy per unit volume in elastic region only. Stiffness = slope of elastic region = E."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Hooke's Law states that:",
+            "options": [
+              "Force is proportional to acceleration",
+              "Extension is proportional to force, within the elastic limit",
+              "Stress is equal to Young's Modulus",
+              "Strain energy equals the work done by gravity"
+            ],
+            "answer": "Extension is proportional to force, within the elastic limit",
+            "explanation": "Hooke's Law: F = kx; extension is proportional to the applied force, provided the elastic limit is not exceeded."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the difference between the elastic limit and the limit of proportionality?",
+            "options": [
+              "They are the same point on the stress-strain curve",
+              "Limit of proportionality: Hooke's Law ends; elastic limit: permanent deformation begins (slightly higher stress)",
+              "Elastic limit: Hooke's Law ends; limit of proportionality: permanent deformation begins",
+              "Limit of proportionality is always above the elastic limit"
+            ],
+            "answer": "Limit of proportionality: Hooke's Law ends; elastic limit: permanent deformation begins (slightly higher stress)",
+            "explanation": "Limit of proportionality (A): stress no longer proportional to strain. Elastic limit (B): maximum stress before permanent deformation. B is slightly above A \u2014 the material can still return to shape between A and B."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which correctly states two properties of Young's Modulus that make it useful?",
+            "options": [
+              "It depends on specimen dimensions; it changes with temperature",
+              "It is a material property (independent of specimen dimensions); it quantifies stiffness for structural design",
+              "It equals the breaking stress of the material",
+              "It only applies to metals, not polymers"
+            ],
+            "answer": "It is a material property (independent of specimen dimensions); it quantifies stiffness for structural design",
+            "explanation": "E = \u03c3/\u03b5 is a material property \u2014 the same for thin wire and thick rod of same material. It quantifies stiffness (resistance to elastic deformation) \u2014 engineers use it to predict deflections in beams and structures."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A wire (length 3m, diameter 0.6mm) gives a gradient of F vs \u0394L of 3.14\u00d710\u2074 N/m. What is E? (\u03c0=3.14)",
+            "options": [
+              "111 GPa",
+              "222 GPa",
+              "333 GPa",
+              "55 GPa"
+            ],
+            "answer": "333 GPa",
+            "explanation": "A=\u03c0(0.3\u00d710\u207b\u00b3)\u00b2=2.83\u00d710\u207b\u2077 m\u00b2. E=gradient\u00d7L/A=3.14\u00d710\u2074\u00d73/(2.83\u00d710\u207b\u2077)=9.42\u00d710\u2074/2.83\u00d710\u207b\u2077=3.33\u00d710\u00b9\u00b9 Pa=333 GPa."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which correctly compares stress-strain curves of rubber and mild steel?",
+            "options": [
+              "Rubber: linear elastic, brittle fracture; Steel: non-linear, very ductile",
+              "Steel: linear elastic with large plastic region (ductile); Rubber: non-linear elastic, huge strain, no plastic region",
+              "Both have identical stress-strain curves",
+              "Rubber has higher Young's Modulus than steel"
+            ],
+            "answer": "Steel: linear elastic with large plastic region (ductile); Rubber: non-linear elastic, huge strain, no plastic region",
+            "explanation": "Steel: linear (Hooke's Law) \u2192 yield \u2192 plastic region \u2192 UTS \u2192 fracture (ductile). Rubber: non-linear, very large strain (100s%), returns to shape (no plastic region), hysteresis. E_steel(200GPa) >> E_rubber(0.01-0.1GPa)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A copper wire (E=120GPa, length 2.5m, diameter 1mm) is stretched by 1.5mm. What is the force? (\u03c0=3.14)",
+            "options": [
+              "28.3 N",
+              "56.5 N",
+              "113 N",
+              "14.1 N"
+            ],
+            "answer": "56.5 N",
+            "explanation": "\u03b5=0.0015/2.5=6\u00d710\u207b\u2074. \u03c3=E\u03b5=1.2\u00d710\u00b9\u00b9\u00d76\u00d710\u207b\u2074=7.2\u00d710\u2077 Pa. A=\u03c0(0.5\u00d710\u207b\u00b3)\u00b2=7.85\u00d710\u207b\u2077 m\u00b2. F=\u03c3A=7.2\u00d710\u2077\u00d77.85\u00d710\u207b\u2077=56.5 N."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In Searle's apparatus for Young's Modulus, why are two identical wires used?",
+            "options": [
+              "To double the measurement range",
+              "Both wires experience the same thermal expansion \u2014 temperature changes cancel out, leaving only load extension",
+              "One wire measures E and the other measures the spring constant",
+              "Safety in case one wire breaks"
+            ],
+            "answer": "Both wires experience the same thermal expansion \u2014 temperature changes cancel out, leaving only load extension",
+            "explanation": "Both wires hang from the same support at the same temperature. Thermal expansion affects both equally \u2014 their relative extension (what is measured) is due to load only, not temperature. This eliminates systematic thermal errors."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "A steel rod (E=200GPa, L=0.5m, A=4cm\u00b2) compresses by 0.04mm under a hanging mass. What is the mass? (g=10)",
+            "options": [
+              "320 kg",
+              "640 kg",
+              "160 kg",
+              "480 kg"
+            ],
+            "answer": "640 kg",
+            "explanation": "\u03b5=4\u00d710\u207b\u2075/0.5=8\u00d710\u207b\u2075. \u03c3=E\u03b5=2\u00d710\u00b9\u00b9\u00d78\u00d710\u207b\u2075=1.6\u00d710\u2077 Pa. F=\u03c3A=1.6\u00d710\u2077\u00d74\u00d710\u207b\u2074=6400 N. m=6400/10=640 kg."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "The elastic potential energy stored in a wire stretched by force F through extension \u0394L is:",
+            "options": [
+              "F \u00d7 \u0394L",
+              "\u00bd F \u00d7 \u0394L",
+              "F\u00b2 \u00d7 \u0394L",
+              "2 F \u00d7 \u0394L"
+            ],
+            "answer": "\u00bd F \u00d7 \u0394L",
+            "explanation": "For a wire obeying Hooke's Law, F increases linearly from 0 to F as extension goes from 0 to \u0394L. Work done = area of triangle = \u00bd \u00d7 F \u00d7 \u0394L."
+          },
+          {
+            "id": "q11",
+            "type": "multiple_choice",
+            "question": "A wire is stretched beyond its elastic limit and then the load is removed. What happens?",
+            "options": [
+              "The wire returns to exactly its original length",
+              "The wire becomes shorter than its original length",
+              "The wire has a permanent extension \u2014 it is longer than originally",
+              "The wire breaks immediately"
+            ],
+            "answer": "The wire has a permanent extension \u2014 it is longer than originally",
+            "explanation": "Beyond the elastic limit, plastic deformation occurs. When the load is removed, the elastic portion of the deformation recovers, but the plastic portion remains. The wire is permanently longer than before."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t8_l3",
+      "title": "Material Behaviour: Load-Extension Graphs and Material Selection",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Engineers in Uganda choosing materials for construction \u2014 whether selecting reinforcing steel rods (deformed bars) for a concrete building, choosing wire for electrical transmission lines, or picking shock-absorbing materials for vehicle suspension \u2014 need to understand how different materials behave under load. In this lesson we compare load-extension and stress-strain graphs for different materials and develop the ability to select appropriate materials for specific applications."
+        },
+        {
+          "type": "heading",
+          "body": "Load-Extension Graphs for Different Materials"
+        },
+        {
+          "type": "text",
+          "body": "**1. Mild steel (typical ductile metal):**\nLinear elastic region up to proportionality limit. Clear yield point where wire suddenly extends without extra force. Then work hardening (slight increase in load). Necking before fracture. Large plastic deformation = ductile.\n\n**2. High-carbon steel:**\nSteeper elastic region (stiffer). Higher proportionality limit and UTS. But less plastic deformation before fracture = less ductile (more brittle than mild steel).\n\n**3. Copper:**\nLinear elastic region, then extensive plastic region without a clear yield point. Very ductile \u2014 used for electrical wires because it can be drawn to very thin gauges.\n\n**4. Glass:**\nLinear elastic up to fracture point \u2014 no plastic region. Brittle fracture. Cannot be drawn. High Young's Modulus (stiff) but low fracture stress.\n\n**5. Rubber:**\nNon-linear elastic behaviour (does NOT obey Hooke's Law). Very large strains (several hundred percent) for moderate stresses. Returns completely to original shape. Energy stored per unit volume very high. The loading and unloading curves form a loop (hysteresis) \u2014 energy is lost as heat per cycle.\n\n**6. Bone:**\nHarder to test (living tissue). Behaves elastically up to about 1% strain, then fractures. Brittle in tension; more ductile in compression. Young's Modulus \u2248 14\u201320 GPa.\n\n**Comparing properties in a table:**\n| Material | E (GPa) | UTS (MPa) | Ductility | Application |\n|---|---|---|---|---|\n| Steel | 200 | 400\u2013800 | High | Beams, rebar |\n| Copper | 120 | 200\u2013400 | Very high | Wires |\n| Glass | 70 | 50 (tension) | None (brittle) | Windows |\n| Rubber | 0.01\u20130.1 | 15\u201330 | Very high | Tyres, seals |\n| Concrete | 30 | 40 (compression) | None | Foundations |"
+        },
+        {
+          "type": "heading",
+          "body": "Material Selection for Construction in Uganda"
+        },
+        {
+          "type": "text",
+          "body": "Selecting materials for construction requires matching material properties to the demands of the application.\n\n**1. Reinforced concrete (RC) structures:**\nConcrete is strong in compression (UTS_compression \u2248 40 MPa) but weak in tension (UTS_tension \u2248 4 MPa). Steel rods (deformed bars/rebar) have high tensile strength (400+ MPa). By embedding steel rods in concrete, we create a composite material that is strong in both tension and compression.\n\nPhysics: In a beam under load, the bottom fibres are in tension (stress direction tries to pull them apart) while the top fibres are in compression. Steel rebar is placed in the tension zone.\n\n**2. Electrical transmission wires:**\nRequirements: High electrical conductivity; sufficient tensile strength to support its own weight over long spans; not too heavy.\nSolution: Aluminium conductor steel reinforced (ACSR) \u2014 aluminium outer strands (light, conductive) wrapped around a steel core (strong). Uganda Electricity Transmission Company (UETCL) uses ACSR for its high-voltage lines.\n\n**3. Structural steel for roofing:**\nRequirements: High stiffness (resist deflection), high UTS, weldable.\nSolution: Mild steel sections (I-beams, angle sections). Young's Modulus ensures deflection stays within acceptable limits.\n\n**4. Tyres and rubber seals:**\nRequirements: Absorb energy (from road bumps); recover shape; withstand repeated loading.\nSolution: Rubber \u2014 low Young's Modulus allows large elastic deformation; hysteresis absorbs energy (damping).\n\n**5. Earthquake-resistant design:**\nIn Uganda (some seismic activity in the western rift valley \u2014 Kabale, Kasese):\nDuctile materials (mild steel, ductile concrete mixes) absorb energy through plastic deformation before catastrophic fracture \u2014 providing warning before collapse.\nBrittle materials (glass, unreinforced concrete, masonry) fracture suddenly without warning.\n\n**Worked Example 1:** A concrete pillar of cross-section 0.3 m \u00d7 0.3 m and height 4 m supports a load of 500 kN. E_concrete = 30 GPa. Find (a) the compressive stress and (b) the shortening of the pillar.\n\n(a) A = 0.3 \u00d7 0.3 = 0.09 m\u00b2\n\u03c3 = F/A = 5\u00d710\u2075/0.09 = 5.56\u00d710\u2076 Pa = 5.56 MPa\n(Well within safe compressive strength of ~40 MPa \u2713)\n\n(b) \u03b5 = \u03c3/E = 5.56\u00d710\u2076/3\u00d710\u00b9\u2070 = 1.85\u00d710\u207b\u2074\n\u0394L = \u03b5 \u00d7 L\u2080 = 1.85\u00d710\u207b\u2074 \u00d7 4 = 7.4\u00d710\u207b\u2074 m = 0.74 mm"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Different materials have characteristic stress-strain curves: ductile metals (steel, copper) have large plastic regions; brittle materials (glass, ceramics) fracture suddenly; rubber is non-linearly elastic with high strain capacity. Material selection balances stiffness (E), strength (UTS), ductility, and cost."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Ductile fracture: Fracture preceded by large plastic deformation; provides warning before failure\n\u2022 Brittle fracture: Sudden fracture with no plastic deformation; no warning before failure\n\u2022 Reinforced concrete: Composite material combining concrete (strong in compression) with steel rebar (strong in tension)\n\u2022 Hysteresis: Energy loss per loading-unloading cycle shown by a rubber's non-coinciding loading and unloading curves"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Why is reinforced concrete used rather than plain concrete alone?",
+            "options": [
+              "Concrete is too expensive alone so steel reduces cost",
+              "Concrete is strong in compression but weak in tension; steel rebar in the tension zone gives strength in both modes",
+              "Steel makes the concrete dry faster",
+              "Concrete without steel is too heavy"
+            ],
+            "answer": "Concrete is strong in compression but weak in tension; steel rebar in the tension zone gives strength in both modes",
+            "explanation": "Plain concrete: strong in compression (~40 MPa) but weak in tension (~4 MPa). Steel rebar (UTS >400 MPa) placed in tension zones of beams carries tensile stress. Together: strong in both compression and tension."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which statement correctly describes the difference between 'strength' and 'stiffness' of a material?",
+            "options": [
+              "Strength is the Young's Modulus; stiffness is the UTS",
+              "Strength (UTS) is the maximum stress before fracture; stiffness is resistance to elastic deformation (E)",
+              "Strength and stiffness are the same property",
+              "Stiffness is the area under the stress-strain curve; strength is the gradient"
+            ],
+            "answer": "Strength (UTS) is the maximum stress before fracture; stiffness is resistance to elastic deformation (E)",
+            "explanation": "Strength (UTS) = maximum stress before fracture (point D on stress-strain curve). Stiffness = Young's Modulus E = gradient of elastic region of stress-strain curve = resistance to elastic deformation. A material can be stiff but weak (glass) or flexible but strong (high-strength rubber)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two wires in series: steel (E=200GPa, L=2m, d=2mm) and copper (E=120GPa, L=3m, d=1mm). Force F=500N. Total extension? (\u03c0=3.14)",
+            "options": [
+              "3.2 mm",
+              "17.5 mm",
+              "1.6 mm",
+              "8.8 mm"
+            ],
+            "answer": "17.5 mm",
+            "explanation": "A_steel=\u03c0(10\u207b\u00b3)\u00b2=3.14\u00d710\u207b\u2076 m\u00b2. \u0394L_steel=500\u00d72/(2\u00d710\u00b9\u00b9\u00d73.14\u00d710\u207b\u2076)=1.59\u00d710\u207b\u00b3 m. A_Cu=\u03c0(0.5\u00d710\u207b\u00b3)\u00b2=7.85\u00d710\u207b\u2077 m\u00b2. \u0394L_Cu=500\u00d73/(1.2\u00d710\u00b9\u00b9\u00d77.85\u00d710\u207b\u2077)=15.9\u00d710\u207b\u00b3 m. Total\u224817.5 mm."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A wire is loaded to the yield point and then unloaded. The stress-strain graph of the unloading follows a straight line parallel to the original elastic region. What can be concluded?",
+            "options": [
+              "The wire has a higher Young's Modulus after loading",
+              "The wire has the same Young's Modulus but a permanent plastic strain",
+              "The wire has been strengthened and will not yield again",
+              "The wire has been permanently compressed"
+            ],
+            "answer": "The wire has the same Young's Modulus but a permanent plastic strain",
+            "explanation": "The unloading line has the same gradient (slope) as the initial elastic region \u2192 same E. But it intercepts the strain axis at a non-zero value \u2192 permanent plastic strain. The wire has been permanently extended. Work hardening may slightly raise the new yield stress."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which mechanical property is most important for a car suspension spring that must absorb repeated impacts without breaking?",
+            "options": [
+              "High brittleness \u2014 fractures cleanly",
+              "High resilience (high elastic energy per unit volume) and good fatigue resistance",
+              "High ductility \u2014 permanent deformation is acceptable",
+              "Low Young's Modulus \u2014 very flexible"
+            ],
+            "answer": "High resilience (high elastic energy per unit volume) and good fatigue resistance",
+            "explanation": "A suspension spring must store and release elastic energy repeatedly without fatigue failure. High resilience (large area under elastic part of stress-strain curve) and fatigue resistance are essential. Spring steel (tempered) has these properties."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Two springs of spring constants k\u2081 and k\u2082 are connected in series. What is the effective spring constant?",
+            "options": [
+              "k\u2081 + k\u2082",
+              "k\u2081 \u00d7 k\u2082",
+              "k\u2081k\u2082/(k\u2081+k\u2082)",
+              "(k\u2081+k\u2082)/(k\u2081k\u2082)"
+            ],
+            "answer": "k\u2081k\u2082/(k\u2081+k\u2082)",
+            "explanation": "1/k_series = 1/k\u2081 + 1/k\u2082 = (k\u2081+k\u2082)/(k\u2081k\u2082). So k_series = k\u2081k\u2082/(k\u2081+k\u2082)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "In a stress-strain curve for mild steel, the fracture stress is LOWER than the UTS because:",
+            "options": [
+              "The steel softens after the UTS",
+              "After UTS, the specimen necks (cross-section decreases) \u2014 engineering stress (force/original area) falls even though true stress rises",
+              "Temperature drops after UTS causing embrittlement",
+              "The testing machine applies less force after UTS"
+            ],
+            "answer": "After UTS, the specimen necks (cross-section decreases) \u2014 engineering stress (force/original area) falls even though true stress rises",
+            "explanation": "After UTS, localised necking begins \u2014 cross-section at one point decreases. Engineering stress = F/A\u2080 (original area) falls as F decreases. But true stress (F/actual area) continues rising until fracture. Engineering curve shows fracture below UTS."
+          },
+          {
+            "id": "q8",
+            "type": "multiple_choice",
+            "question": "In a Young's modulus experiment with a wire, doubling the diameter of the wire while keeping all other factors constant would:",
+            "options": [
+              "Double the extension",
+              "Halve the extension",
+              "Reduce the extension to one quarter",
+              "Have no effect on the extension"
+            ],
+            "answer": "Reduce the extension to one quarter",
+            "explanation": "\u0394L = FL\u2080/(AE). Area A = \u03c0d\u00b2/4 \u221d d\u00b2. If d doubles, A quadruples, so \u0394L decreases to \u0394L/4."
+          },
+          {
+            "id": "q9",
+            "type": "multiple_choice",
+            "question": "The bungee cord (k=50 N/m, natural length 10m) is attached to a 70 kg person. What is the maximum extension? (g=10)",
+            "options": [
+              "14 m",
+              "35.8 m",
+              "28 m",
+              "56 m"
+            ],
+            "answer": "35.8 m",
+            "explanation": "Energy conservation: mg(10+x)=\u00bdkx\u00b2. 700(10+x)=25x\u00b2. 25x\u00b2\u2212700x\u22127000=0. x\u00b2\u221228x\u2212280=0. x=[28+\u221a(784+1120)]/2=[28+43.6]/2=35.8 m."
+          },
+          {
+            "id": "q10",
+            "type": "multiple_choice",
+            "question": "A glass window and a steel beam have the same cross-section and are subjected to the same tensile force. The steel beam stretches but does not break. The glass cracks. This is because:",
+            "options": [
+              "Glass has a higher Young's Modulus than steel",
+              "Glass is brittle \u2014 it fractures suddenly without plastic deformation when its fracture stress is reached",
+              "Steel is heavier than glass",
+              "Glass has a lower Young's Modulus than steel"
+            ],
+            "answer": "Glass is brittle \u2014 it fractures suddenly without plastic deformation when its fracture stress is reached",
+            "explanation": "Glass is brittle \u2014 it has essentially no plastic region. When the applied stress reaches its fracture stress, it breaks suddenly with no warning. Steel is ductile \u2014 it yields plastically and deforms extensively before fracture. (Glass actually has a similar E to steel.)"
+          },
+          {
+            "id": "q11",
+            "type": "multiple_choice",
+            "question": "For a steel specimen at stress 100 MPa (E=200 GPa), the energy stored per unit volume is:",
+            "options": [
+              "50 kJ/m\u00b3",
+              "25 kJ/m\u00b3",
+              "100 kJ/m\u00b3",
+              "12.5 kJ/m\u00b3"
+            ],
+            "answer": "25 kJ/m\u00b3",
+            "explanation": "Energy/volume = \u00bd\u03c3\u03b5 = \u00bd\u00d7\u03c3\u00b2/E = (10\u2078)\u00b2/(2\u00d72\u00d710\u00b9\u00b9) = 10\u00b9\u2076/(4\u00d710\u00b9\u00b9) = 2.5\u00d710\u2074 J/m\u00b3 = 25 kJ/m\u00b3."
+          }
+        ]
+      }
+    }
+  ]
+}

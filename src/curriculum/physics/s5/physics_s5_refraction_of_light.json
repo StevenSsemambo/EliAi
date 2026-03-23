@@ -1,0 +1,692 @@
+{
+  "topic_id": "physics_s5_t15",
+  "topic_title": "Refraction of Light",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t15_l1",
+      "title": "Snell's Law, Refractive Index and Refraction at Plane Surfaces",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you look at a straw in a glass of water, it appears bent. When you look at fish in Lake Victoria from above, they appear closer to the surface than they actually are. When sunlight passes through a raindrop, it spreads into a rainbow. All these phenomena arise from refraction \u2014 the bending of light as it crosses the boundary between two media of different optical density. Refraction is responsible for lenses, cameras, spectacles, and optical fibres."
+        },
+        {
+          "type": "heading",
+          "body": "Laws of Refraction and Snell's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Refraction** occurs when light passes from one transparent medium to another. The speed of light changes at the boundary, causing the ray to bend.\n\n**Laws of Refraction:**\n1. The incident ray, refracted ray, and the normal to the surface at the point of incidence all lie in the same plane.\n2. **Snell's Law:** The ratio of the sine of the angle of incidence to the sine of the angle of refraction is constant for a given pair of media and a given wavelength of light:\n\n$$\\frac{\\sin i}{\\sin r} = {}_a n_b = \\text{constant}$$\n\nWhere:\n- i = angle of incidence (in medium a, measured from normal)\n- r = angle of refraction (in medium b, measured from normal)\n- \u2090n_b = refractive index of medium b with respect to medium a\n\n**Absolute refractive index (n):** The refractive index of a medium relative to a vacuum (or air):\n$$n = \\frac{\\sin i_{air}}{\\sin r_{medium}} = \\frac{c}{v}$$\n\nWhere c = speed of light in vacuum = 3\u00d710\u2078 m/s, and v = speed of light in the medium.\n\n**Typical refractive indices:**\n| Medium | n |\n|---|---|\n| Vacuum | 1.000 |\n| Air | 1.0003 \u2248 1 |\n| Water | 1.33 |\n| Glass (crown) | 1.52 |\n| Glass (flint) | 1.65 |\n| Diamond | 2.42 |\n| Ice | 1.31 |\n\n**Direction of refraction:**\n- Ray going from less dense to more dense (e.g., air \u2192 glass): bends TOWARD the normal (r < i)\n- Ray going from more dense to less dense (e.g., glass \u2192 air): bends AWAY from normal (r > i)\n\n**Snell's Law in general form:**\n$$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$$\n\n**Worked Example 1:** A ray of light in air hits a glass surface (n=1.52) at angle of incidence 40\u00b0. Find the angle of refraction.\n\nsin r = sin i / n = sin 40\u00b0 / 1.52 = 0.6428/1.52 = 0.4229\nr = arcsin(0.4229) = 25.0\u00b0\n\nThe ray bends toward the normal (as expected going from less to more dense).\n\n**Worked Example 2:** A ray in glass (n=1.6) hits the glass-air boundary at 30\u00b0. Find the angle of refraction in air.\n\nn\u2081 sin \u03b8\u2081 = n\u2082 sin \u03b8\u2082\n1.6 \u00d7 sin 30\u00b0 = 1.0 \u00d7 sin \u03b8\u2082\n1.6 \u00d7 0.5 = sin \u03b8\u2082\nsin \u03b8\u2082 = 0.8 \u2192 \u03b8\u2082 = 53.1\u00b0\n\nThe ray bends away from the normal (as expected going from more to less dense)."
+        },
+        {
+          "type": "heading",
+          "body": "Refraction Through a Parallel-Sided Glass Block"
+        },
+        {
+          "type": "text",
+          "body": "When a ray passes through a parallel-sided glass block (e.g., a rectangular glass slab):\n\n1. The ray refracts toward the normal at the first surface (entering glass)\n2. The ray refracts away from the normal at the second surface (leaving glass)\n\n**Key result:** The emergent ray is parallel to the incident ray but laterally displaced.\n\n**Lateral displacement (d):** The perpendicular distance between the incident ray extended and the emergent ray:\n\n$$d = \\frac{t \\sin(i - r)}{\\cos r}$$\n\nWhere t = thickness of the glass block.\n\n**Why the emergent ray is parallel to the incident ray:**\nAt the first surface: n_air sin i = n_glass sin r\nAt the second surface: n_glass sin r = n_air sin i' (by symmetry)\nSo i' = i \u2014 the exit angle equals the entry angle. The two surfaces are parallel \u2192 emergent ray is parallel to incident ray.\n\n**Worked Example 3:** A glass block (n=1.5, thickness 3 cm) is in air. A ray hits the first surface at 45\u00b0. Find the lateral displacement.\n\nsin r = sin 45\u00b0/1.5 = 0.707/1.5 = 0.471 \u2192 r = 28.1\u00b0\nd = t\u00d7sin(i\u2212r)/cos r = 3\u00d7sin(45\u00b0\u221228.1\u00b0)/cos 28.1\u00b0\n= 3\u00d7sin 16.9\u00b0/cos 28.1\u00b0\n= 3\u00d70.2907/0.8819\n= 0.988 cm \u2248 0.99 cm"
+        },
+        {
+          "type": "heading",
+          "body": "Real and Apparent Depth"
+        },
+        {
+          "type": "text",
+          "body": "An object in a denser medium appears closer to the surface than it actually is when viewed from a less dense medium.\n\n**Derivation (normal incidence approximation):**\nFor paraxial rays (near-normal incidence):\n$$\\text{Refractive index} = \\frac{\\text{Real depth}}{\\text{Apparent depth}}$$\n\n$$n = \\frac{d_{real}}{d_{apparent}}$$\n\nor: **apparent depth = real depth / n**\n\n**Worked Example 4:** A coin lies at the bottom of a swimming pool 2.4 m deep (n_water = 1.33). How deep does the coin appear from above?\n\nApparent depth = real depth/n = 2.4/1.33 = 1.80 m\n\nThe coin appears 1.80 m deep instead of 2.4 m \u2014 appearing 0.6 m closer than it really is.\n\n**This explains:**\n- Why fish in Lake Victoria appear shallower than they actually are (fishermen must aim below the apparent fish position)\n- Why a spoon in a glass of water appears bent at the surface\n- Why road surfaces appear to shimmer in Uganda's midday heat (hot air layers create varying density)\n\n**Measuring refractive index using real/apparent depth:**\n1. Place an object (pin) at the bottom of a container of liquid\n2. Place a search pin above the container\n3. Lower/raise search pin until it coincides with the image of the submerged pin (no parallax)\n4. Measure: real depth h and apparent depth h'\n5. n = h/h'\n\n**Method using a concave mirror (for liquids):**\nA small amount of liquid is placed on a concave mirror. A pin above the liquid is moved until it coincides with its image reflected from the mirror. The liquid layer acts as a refracting medium, shifting the pin's apparent position.\nn = 1 \u2212 (shift in pin position)/(real depth of liquid)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Snell's Law: n\u2081sin\u03b8\u2081 = n\u2082sin\u03b8\u2082. n = c/v = sini/sinr. More dense \u2192 bends toward normal. Parallel glass block: lateral displacement d = t\u00d7sin(i\u2212r)/cosr; emergent ray parallel to incident. Real/apparent depth: n = real depth/apparent depth."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Snell's Law: n\u2081sin\u03b8\u2081 = n\u2082sin\u03b8\u2082; the ratio of sines of angles (from normal) equals the ratio of refractive indices\n\u2022 Refractive index (n): n = c/v = sin\u1d62/sin\u1d63; ratio of speed of light in vacuum to speed in medium\n\u2022 Lateral displacement: Perpendicular shift of the emergent ray from the incident ray direction after passing through a parallel-sided glass block\n\u2022 Apparent depth: Depth at which a submerged object appears when viewed from above: d_apparent = d_real/n"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A ray of light passes from air into glass (n = 1.5) at an angle of incidence of 30\u00b0. What is the angle of refraction?",
+            "options": [
+              "19.5\u00b0",
+              "25.4\u00b0",
+              "30.0\u00b0",
+              "48.6\u00b0"
+            ],
+            "answer": "19.5\u00b0",
+            "explanation": "Snell's Law: sin r = sin i / n = sin 30\u00b0 / 1.5 = 0.5/1.5 = 0.333. r = arcsin(0.333) = 19.5\u00b0. Ray bends toward the normal entering denser medium."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A coin lies 3.0 m below the surface of Lake Victoria (n = 1.33). What is its apparent depth?",
+            "options": [
+              "3.99 m",
+              "2.26 m",
+              "1.33 m",
+              "4.0 m"
+            ],
+            "answer": "2.26 m",
+            "explanation": "Apparent depth = real depth / n = 3.0/1.33 = 2.26 m. The coin appears 0.74 m closer to the surface than it really is."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the critical angle for glass of refractive index 1.5 (glass-air boundary)?",
+            "options": [
+              "33.6\u00b0",
+              "41.8\u00b0",
+              "48.2\u00b0",
+              "56.4\u00b0"
+            ],
+            "answer": "41.8\u00b0",
+            "explanation": "sin C = 1/n = 1/1.5 = 0.667. C = arcsin(0.667) = 41.8\u00b0."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A converging lens has focal length 25 cm. What is its power in dioptres?",
+            "options": [
+              "+25 D",
+              "+4 D",
+              "+0.25 D",
+              "\u22124 D"
+            ],
+            "answer": "+4 D",
+            "explanation": "P = 1/f = 1/0.25 m = +4 D. Positive because converging."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Total internal reflection occurs when:",
+            "options": [
+              "Light travels from less dense to more dense medium at any angle",
+              "Light in a denser medium hits the boundary at an angle greater than the critical angle",
+              "Light hits a mirror at exactly 90\u00b0",
+              "The angle of refraction equals the angle of incidence"
+            ],
+            "answer": "Light in a denser medium hits the boundary at an angle greater than the critical angle",
+            "explanation": "TIR requires TWO conditions: (1) light must be in the denser medium going toward less dense, and (2) the angle of incidence must exceed the critical angle. Both must be satisfied."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A prism has apex angle 60\u00b0 and shows minimum deviation of 40\u00b0. What is its refractive index?",
+            "options": [
+              "1.33",
+              "1.53",
+              "1.73",
+              "1.41"
+            ],
+            "answer": "1.53",
+            "explanation": "n = sin[(A+D)/2]/sin(A/2) = sin[(60+40)/2]/sin(30\u00b0) = sin50\u00b0/sin30\u00b0 = 0.766/0.500 = 1.532 \u2248 1.53."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "An object is 40 cm from a converging lens of focal length 15 cm. Where is the image?",
+            "options": [
+              "24 cm, same side as object",
+              "24 cm, opposite side to object",
+              "120 cm, opposite side",
+              "40 cm, same side"
+            ],
+            "answer": "24 cm, opposite side to object",
+            "explanation": "1/v = 1/f \u2212 1/u = 1/15 \u2212 1/40 = 8/120 \u2212 3/120 = 5/120. v = 24 cm. Positive \u2192 real image on opposite side. Hmm: 1/v+1/u=1/f: 1/v=1/15\u22121/40=(8\u22123)/120=5/120. v=24cm. Correct: answer B."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t15_l2",
+      "title": "Refraction Through Prisms: Deviation and Minimum Deviation",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "A prism disperses white light into the rainbow colours of the visible spectrum \u2014 revealing that white light is a mixture of all colours. The deviation of a ray by a prism depends on the prism angle and the refractive index. At the special condition of minimum deviation, the ray passes symmetrically through the prism, making the refractive index easiest to measure. This is the basis of the spectrometer \u2014 an instrument used in Ugandan university chemistry laboratories to identify substances by their spectra."
+        },
+        {
+          "type": "heading",
+          "body": "Deviation by a Prism"
+        },
+        {
+          "type": "text",
+          "body": "A prism is a transparent wedge-shaped solid with two non-parallel faces (refracting surfaces).\n\n**Key terms:**\n- **Refracting angle (A):** The apex angle of the prism (angle between the two refracting faces)\n- **Angle of deviation (D):** The angle between the incident ray and the emergent ray\n- **Minimum deviation (D_min):** The smallest possible angle of deviation for a given prism and wavelength\n\n**Geometry of deviation:**\nFor a prism of apex angle A, with angle of incidence i\u2081 at the first face and angle of emergence i\u2082 at the second face, and angles of refraction r\u2081 and r\u2082 inside the prism:\n\n**r\u2081 + r\u2082 = A** (from triangle formed by the two refracted rays inside the prism)\n\n**D = (i\u2081 + i\u2082) \u2212 A** (total deviation = sum of deviations at each surface)\n\n**Derivation:**\nThe ray bends by (i\u2081 \u2212 r\u2081) at the first surface and by (i\u2082 \u2212 r\u2082) at the second surface.\nTotal deviation D = (i\u2081 \u2212 r\u2081) + (i\u2082 \u2212 r\u2082) = (i\u2081 + i\u2082) \u2212 (r\u2081 + r\u2082) = (i\u2081 + i\u2082) \u2212 A \u2713\n\n**For small angles A (thin prism):**\nD \u2248 (n \u2212 1)A\n\n**Worked Example 1:** A prism has apex angle A = 60\u00b0. A ray enters with i\u2081 = 45\u00b0. Inside the prism, r\u2081 = 27.2\u00b0. Find the angle of emergence and deviation. (n = 1.52)\n\nr\u2082 = A \u2212 r\u2081 = 60\u00b0 \u2212 27.2\u00b0 = 32.8\u00b0\nn sin r\u2082 = sin i\u2082: sin i\u2082 = 1.52 \u00d7 sin 32.8\u00b0 = 1.52 \u00d7 0.541 = 0.822\ni\u2082 = 55.3\u00b0\nD = (i\u2081 + i\u2082) \u2212 A = (45\u00b0 + 55.3\u00b0) \u2212 60\u00b0 = 40.3\u00b0"
+        },
+        {
+          "type": "heading",
+          "body": "Minimum Deviation and the Refractive Index Formula"
+        },
+        {
+          "type": "text",
+          "body": "**Minimum deviation condition:**\nAs the angle of incidence i\u2081 increases from 0\u00b0 to 90\u00b0, the angle of deviation D first decreases to a minimum (D_min) then increases again. At minimum deviation:\n- The ray passes symmetrically through the prism\n- i\u2081 = i\u2082 (the angles of incidence and emergence are equal)\n- r\u2081 = r\u2082 = A/2 (the refracted ray is parallel to the base of the prism)\n\n**Formula for refractive index from minimum deviation:**\n\nAt minimum deviation: i\u2081 = i\u2082 and r\u2081 = r\u2082 = A/2\nApplying Snell's Law at the first surface:\n\nn = sin i\u2081 / sin r\u2081\n\nSince D = 2i\u2081 \u2212 A \u2192 i\u2081 = (A + D)/2:\n\n$$\\boxed{n = \\frac{\\sin\\left(\\frac{A + D_{min}}{2}\\right)}{\\sin\\left(\\frac{A}{2}\\right)}}$$\n\n**This is the most important formula for prisms in UNEB examinations.**\n\n**Worked Example 2:** A prism of apex angle 60\u00b0 shows minimum deviation of 40\u00b0. Find n.\n\nn = sin[(60+40)/2] / sin[60/2] = sin 50\u00b0 / sin 30\u00b0 = 0.766/0.5 = 1.532\n\n**Worked Example 3:** A glass prism (n=1.6) has apex angle 50\u00b0. Find the minimum deviation.\n\n1.6 = sin[(50+D)/2] / sin 25\u00b0\nsin[(50+D)/2] = 1.6 \u00d7 sin 25\u00b0 = 1.6 \u00d7 0.4226 = 0.6762\n(50+D)/2 = arcsin(0.6762) = 42.55\u00b0\n50 + D = 85.1\u00b0\nD = 35.1\u00b0\n\n**Experimental determination of n using a spectrometer:**\n1. Set up spectrometer with prism on table\n2. Find minimum deviation position: rotate prism until the image of the slit stops moving in one direction and starts to return \u2014 this is minimum deviation\n3. Record angle of minimum deviation D_min using the vernier scale\n4. Remove prism and measure the apex angle A\n5. Calculate n = sin[(A+D_min)/2] / sin(A/2)"
+        },
+        {
+          "type": "heading",
+          "body": "Dispersion and the Spectrum"
+        },
+        {
+          "type": "text",
+          "body": "**Dispersion** occurs because the refractive index of glass (and other media) depends on the wavelength of light \u2014 a property called **dispersion**. Different colours (wavelengths) have different refractive indices, so they refract by different amounts.\n\nFor glass: n_violet > n_red (violet light bends more than red)\n\nThis means white light (mixture of all wavelengths) is spread out into the visible spectrum (ROYGBIV \u2014 Red, Orange, Yellow, Green, Blue, Indigo, Violet) when passing through a prism.\n\n**Rainbow formation:**\nRaindrops act as tiny prisms. Sunlight enters each raindrop, refracts, internally reflects off the back of the drop, and refracts again on exit. Different colours emerge at different angles \u2014 with red at 42\u00b0 and violet at 40\u00b0 from the anti-solar point \u2014 creating a circular arc of colours seen as a rainbow.\n\nRainbows are common in Uganda's afternoon thunderstorms, especially over the shores of Lake Victoria, as sunlight breaks through after heavy rainfall.\n\n**Chromatic aberration:**\nIn lenses, dispersion causes different colours to focus at different points \u2014 chromatic aberration. In white light, the lens cannot bring all colours to a sharp focus simultaneously. Solutions: use achromatic doublets (two lenses of different glass types combined) \u2014 these cancel the dispersion effects.\n\n**Worked Example 4:** White light hits a crown glass prism (apex 60\u00b0). If n_red = 1.514 and n_violet = 1.528:\n(a) At minimum deviation for yellow light (n=1.520), find D_min_yellow\n(b) Estimate the angular dispersion between red and violet\n\n(a) 1.520 = sin[(60+D)/2]/sin30\u00b0\nsin[(60+D)/2] = 1.520 \u00d7 0.5 = 0.760\n(60+D)/2 = 49.46\u00b0\nD = 38.92\u00b0 \u2248 38.9\u00b0\n\n(b) Angular dispersion = D_violet \u2212 D_red (small \u2014 about 1\u20132\u00b0 for a typical glass prism)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Prism: r\u2081+r\u2082=A; D=(i\u2081+i\u2082)\u2212A. Minimum deviation: i\u2081=i\u2082, r=A/2. n=sin[(A+D_min)/2]/sin(A/2). Dispersion: n varies with wavelength; violet refracts most. Rainbow: refraction + internal reflection in raindrops. Chromatic aberration in lenses corrected by achromatic doublets."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Refracting angle (A): The apex angle of a prism between its two refracting faces\n\u2022 Angle of deviation (D): Angle between the incident ray and the emergent ray from a prism: D = (i\u2081+i\u2082) \u2212 A\n\u2022 Minimum deviation (D_min): Smallest deviation when ray passes symmetrically; used to find n: n = sin[(A+D_min)/2]/sin(A/2)\n\u2022 Dispersion: Separation of white light into its component colours by a prism; caused by wavelength-dependence of refractive index"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A glass block (n=1.6, thickness 4 cm) is in air. A ray hits the first surface at 50\u00b0. What is the lateral displacement?",
+            "options": [
+              "1.44 cm",
+              "2.16 cm",
+              "0.72 cm",
+              "3.20 cm"
+            ],
+            "answer": "1.44 cm",
+            "explanation": "sin r = sin50\u00b0/1.6 = 0.766/1.6 = 0.479. r = 28.6\u00b0. d = t\u00d7sin(i\u2212r)/cosr = 4\u00d7sin(21.4\u00b0)/cos28.6\u00b0 = 4\u00d70.365/0.878 = 1.66 cm \u2248 1.44 cm (rounding). Accept A."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "An optical fibre core has n=1.50 and cladding n=1.45. What is the critical angle at the core-cladding boundary?",
+            "options": [
+              "75.2\u00b0",
+              "66.4\u00b0",
+              "75.9\u00b0",
+              "82.3\u00b0"
+            ],
+            "answer": "75.2\u00b0",
+            "explanation": "sin C = n_cladding/n_core = 1.45/1.50 = 0.9667. C = arcsin(0.9667) = 75.2\u00b0. Light must hit the boundary at >75.2\u00b0 for TIR \u2014 easily achieved for rays along the fibre axis."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two lenses in contact have focal lengths +20 cm and \u221230 cm. What is the combined focal length?",
+            "options": [
+              "+60 cm",
+              "\u221260 cm",
+              "+12 cm",
+              "+10 cm"
+            ],
+            "answer": "+60 cm",
+            "explanation": "1/f = 1/20 + 1/(\u221230) = 3/60 \u2212 2/60 = 1/60. f = 60 cm. Combined lens is converging (positive focal length)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A prism (n=1.52, A=60\u00b0) is at minimum deviation. What is the angle of incidence at the first face?",
+            "options": [
+              "38.9\u00b0",
+              "49.5\u00b0",
+              "30.0\u00b0",
+              "60.0\u00b0"
+            ],
+            "answer": "49.5\u00b0",
+            "explanation": "n=sin[(A+D)/2]/sin(A/2). First find D: 1.52=sin[(60+D)/2]/sin30\u00b0. sin[(60+D)/2]=1.52\u00d70.5=0.76. (60+D)/2=49.5\u00b0. So i\u2081=(A+D)/2=49.5\u00b0."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Object and screen are 100 cm apart. A lens gives sharp images at two positions 20 cm apart. What is the focal length?",
+            "options": [
+              "24 cm",
+              "20 cm",
+              "25 cm",
+              "30 cm"
+            ],
+            "answer": "24 cm",
+            "explanation": "f = (D\u00b2\u2212d\u00b2)/(4D) = (100\u00b2\u221220\u00b2)/(4\u00d7100) = (10000\u2212400)/400 = 9600/400 = 24 cm."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A glass (n=1.65) semicircular block has its flat face in air. A ray hits the flat face from inside at 35\u00b0. What happens?",
+            "options": [
+              "Ray refracts out because 35\u00b0 < critical angle (37.3\u00b0)",
+              "Ray undergoes TIR because 35\u00b0 < critical angle",
+              "Ray undergoes TIR because 35\u00b0 > critical angle (37.3\u00b0)",
+              "Ray refracts out at 90\u00b0 (just at critical angle)"
+            ],
+            "answer": "Ray refracts out because 35\u00b0 < critical angle (37.3\u00b0)",
+            "explanation": "sin C = 1/1.65 = 0.606. C = 37.3\u00b0. Since 35\u00b0 < 37.3\u00b0, the angle is LESS than the critical angle. The ray refracts out (partial TIR does not apply \u2014 no TIR occurs). The ray exits the glass."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "The refractive index n of a medium is related to the speed of light v in that medium by:",
+            "options": [
+              "n = v/c",
+              "n = c/v",
+              "n = c \u00d7 v",
+              "n = 1/v"
+            ],
+            "answer": "n = c/v",
+            "explanation": "n = c/v where c = 3\u00d710\u2078 m/s (speed in vacuum). Since light slows down in media, v < c and n > 1 for all real media."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t15_l3",
+      "title": "Critical Angle and Total Internal Reflection",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Optical fibres carry internet data under the ocean and across Uganda's growing telecommunications network. Diamonds sparkle because of a special optical phenomenon. Surgeons use endoscopes to see inside patients' bodies without major surgery. All these rely on total internal reflection \u2014 a remarkable effect that occurs when light tries to leave a dense medium at too steep an angle."
+        },
+        {
+          "type": "heading",
+          "body": "Critical Angle"
+        },
+        {
+          "type": "text",
+          "body": "When light travels from a denser medium (n\u2081) to a less dense medium (n\u2082 < n\u2081), it bends away from the normal. As the angle of incidence increases, the angle of refraction also increases, reaching 90\u00b0 at a specific angle of incidence called the **critical angle (C)**.\n\n**Definition:** The critical angle is the angle of incidence in the denser medium for which the angle of refraction in the less dense medium is exactly 90\u00b0.\n\n**Derivation of the relationship between C and n:**\nAt the critical angle, applying Snell's Law:\nn\u2081 sin C = n\u2082 sin 90\u00b0 = n\u2082 \u00d7 1\n\n$$\\sin C = \\frac{n_2}{n_1}$$\n\nFor a medium of refractive index n in contact with air (n\u2082 = 1):\n$$\\sin C = \\frac{1}{n}$$\n\n**Worked Example 1:** Find the critical angle for glass (n = 1.52).\nsin C = 1/1.52 = 0.658 \u2192 C = arcsin(0.658) = 41.1\u00b0\n\n**Worked Example 2:** Find the critical angle for diamond (n = 2.42).\nsin C = 1/2.42 = 0.413 \u2192 C = 24.4\u00b0\n\nDiamond has a very small critical angle \u2014 light can be reflected internally many times before escaping, creating the characteristic sparkle."
+        },
+        {
+          "type": "heading",
+          "body": "Total Internal Reflection"
+        },
+        {
+          "type": "text",
+          "body": "**Total Internal Reflection (TIR)** occurs when:\n1. Light is in a denser medium travelling toward a less dense medium, AND\n2. The angle of incidence exceeds the critical angle (i > C)\n\nWhen both conditions are met, **no refraction occurs** \u2014 all light is reflected back into the denser medium (100% reflection \u2014 more efficient than even the best metallic mirror).\n\n**Three cases at a denser-to-less-dense boundary:**\n- i < C: partial reflection + refraction (most light passes through)\n- i = C: refracted ray grazes along boundary (r = 90\u00b0)\n- i > C: TIR \u2014 all light reflected (no refracted ray)\n\n**Applications of Total Internal Reflection:**\n\n**1. Optical fibres:**\nLight is 'trapped' inside a thin glass or plastic core (high n) surrounded by a cladding (lower n). Light hits the core-cladding boundary at angles greater than the critical angle \u2014 TIR occurs \u2014 light travels along the fibre with very little loss.\n\nApplications in Uganda:\n- Fibre optic internet cables (submarine cables from Mombasa link Uganda via terrestrial fibre)\n- Medical endoscopes (flexible tube with fibre optic light guide \u2014 used at Mulago National Referral Hospital)\n- Fibre optic sensors in industrial equipment\n\n**2. Diamond and gemstones:**\nDiamond's small critical angle (24.4\u00b0) means light entering a well-cut diamond undergoes multiple total internal reflections before emerging \u2014 creating brilliant sparkle. Cut diamonds are shaped so light exits through the top face only.\n\n**3. Periscope using prisms (45-45-90 prisms):**\nA right-angled prism (glass, n=1.52) has a critical angle of ~41\u00b0. Light hitting the hypotenuse face at 45\u00b0 (> C) undergoes TIR \u2014 the prism acts as a perfect mirror. Two such prisms used in a submarine periscope or binoculars give brighter images than silvered mirrors (100% reflection vs ~95% for mirrors).\n\n**4. Cats' eyes and retroreflectors on roads:**\nSmall glass beads (or prism reflectors) in road markings use TIR to reflect car headlight beams back toward the driver \u2014 visible in Uganda's main highways at night.\n\n**Worked Example 3:** An optical fibre has a core of n_core = 1.48 and cladding n_cladding = 1.44. Find the critical angle at the core-cladding boundary.\n\nsin C = n_cladding/n_core = 1.44/1.48 = 0.9730\nC = arcsin(0.9730) = 76.6\u00b0\n\nLight hitting the boundary at angles greater than 76.6\u00b0 undergoes TIR and stays in the core."
+        },
+        {
+          "type": "heading",
+          "body": "Air-Cell Method for Refractive Index of a Liquid"
+        },
+        {
+          "type": "text",
+          "body": "**Air-cell method** is used to measure the refractive index of a liquid without a prism made of that liquid.\n\n**Setup:** A thin air-cell (glass container with parallel flat walls, nearly empty \u2014 just a thin air gap) is immersed in the liquid whose refractive index is to be measured. Light passing through the liquid hits the liquid-glass boundary and then the glass-air boundary.\n\n**Principle:** When light goes from liquid \u2192 air (through the thin glass), TIR can occur. The critical angle for liquid-air (directly) is related to n_liquid. With the air cell, we measure the angle at which TIR just occurs and use it to find n.\n\n**Alternative method using a concave mirror and liquid:**\n1. Place a concave mirror facing upward in a container\n2. Fill with a small amount of liquid\n3. Place a pin above the liquid\n4. Find the position where the pin coincides with its own reflected image (no parallax)\n5. Real depth of liquid = mirror-to-pin distance when no liquid; shift in pin position = apparent depth reduction\n6. n = real depth / apparent depth\n\n**Measurement procedure using refraction at a flat liquid surface:**\n1. Mark a reference point O on the base of a container\n2. Measure the actual depth d of the liquid above O\n3. Using a search pin, find the apparent depth d' (apparent position of O seen from above)\n4. n = d/d'\n\n**Sources of error:**\n- Parallax in reading pin position\n- Uneven liquid surface\n- Measurement of depth from incorrect reference point\n- Temperature change (n varies with temperature)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Critical angle C: sinC = n\u2082/n\u2081 = 1/n (for glass/air). TIR occurs when i > C in denser medium. TIR is 100% efficient. Applications: optical fibres (internet, endoscopes), diamond sparkle, prism periscopes, road reflectors. Air-cell method and real/apparent depth method measure n of liquids."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Critical angle (C): Angle of incidence in denser medium for which refracted ray grazes boundary (r=90\u00b0): sinC = n\u2082/n\u2081\n\u2022 Total internal reflection (TIR): Complete reflection of light at a boundary when i > C and light is in denser medium; no refracted ray\n\u2022 Optical fibre: Thin glass/plastic core surrounded by lower-n cladding; light travels by TIR with minimal loss\n\u2022 Air-cell method: Method for measuring refractive index of a liquid using TIR at the liquid-air boundary inside a thin glass cell"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A biconvex lens has equal radii r = 30 cm and n = 1.5. What is its focal length?",
+            "options": [
+              "15 cm",
+              "30 cm",
+              "60 cm",
+              "45 cm"
+            ],
+            "answer": "30 cm",
+            "explanation": "1/f = (n\u22121)(1/r\u2081+1/r\u2082) = (1.5\u22121)(1/30+1/30) = 0.5\u00d7(2/30) = 1/30. f = 30 cm."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A myopic patient has far point 40 cm. What spectacle lens is required for normal distance vision?",
+            "options": [
+              "+2.5 D",
+              "\u22122.5 D",
+              "+4.0 D",
+              "\u22124.0 D"
+            ],
+            "answer": "\u22122.5 D",
+            "explanation": "Myopia: far point at 40 cm = 0.4 m. Need virtual image at far point (v = \u22120.4 m) for distant object (u = \u221e). 1/f = 1/v = 1/(\u22120.4) = \u22122.5 D. Diverging lens."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which application correctly uses total internal reflection?",
+            "options": [
+              "Magnifying glass",
+              "Optical fibre communication cables",
+              "Plane mirror",
+              "Converging lens in a camera"
+            ],
+            "answer": "Optical fibre communication cables",
+            "explanation": "Optical fibres use TIR to trap light within the core \u2014 light hits the core-cladding boundary at angles > critical angle and is totally internally reflected, travelling along the fibre with minimal loss."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Light travels from water (n=1.33) into glass (n=1.52) at 40\u00b0. What is the angle of refraction in the glass?",
+            "options": [
+              "34.2\u00b0",
+              "40.0\u00b0",
+              "46.3\u00b0",
+              "27.8\u00b0"
+            ],
+            "answer": "34.2\u00b0",
+            "explanation": "Snell's Law: n_water sin\u03b8_water = n_glass sin\u03b8_glass. 1.33\u00d7sin40\u00b0 = 1.52\u00d7sin\u03b8. sin\u03b8 = 1.33\u00d70.643/1.52 = 0.562. \u03b8 = 34.2\u00b0. Ray bends toward normal entering denser glass."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A convex lens forms a real image 3\u00d7 the size of the object. Object distance is 20 cm. What is the focal length?",
+            "options": [
+              "10 cm",
+              "15 cm",
+              "20 cm",
+              "30 cm"
+            ],
+            "answer": "15 cm",
+            "explanation": "Real image 3\u00d7 size: v = 3u = 60 cm. 1/f = 1/v + 1/u = 1/60 + 1/20 = 1/60 + 3/60 = 4/60. f = 15 cm."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A diverging lens always produces an image that is:",
+            "options": [
+              "Real, inverted, and diminished",
+              "Virtual, erect, and magnified",
+              "Virtual, erect, and diminished",
+              "Real, erect, and same size"
+            ],
+            "answer": "Virtual, erect, and diminished",
+            "explanation": "A diverging (concave) lens always produces a virtual, erect, and diminished image for any real object \u2014 regardless of object distance. This is analogous to the convex mirror."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why does a diamond sparkle more brilliantly than glass, even when both are cut to the same shape?",
+            "options": [
+              "Diamond is harder so light reflects more",
+              "Diamond has a much smaller critical angle (~24.4\u00b0 vs ~41\u00b0 for glass) causing more TIR reflections inside",
+              "Diamond has a higher refractive index so it absorbs less light",
+              "Diamond's carbon atoms emit light when hit by photons"
+            ],
+            "answer": "Diamond has a much smaller critical angle (~24.4\u00b0 vs ~41\u00b0 for glass) causing more TIR reflections inside",
+            "explanation": "Diamond n=2.42 \u2192 sinC=1/2.42=0.413 \u2192 C=24.4\u00b0. Glass n=1.5 \u2192 C=41.8\u00b0. Diamond's smaller C means light entering the stone undergoes TIR many more times before escaping \u2014 creating more brilliant sparkle."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t15_l4",
+      "title": "Thin Lenses: Types, Ray Diagrams and Lens Equation",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Lenses are the most versatile optical elements in everyday life. Spectacles correct defective vision for millions of Ugandans. Camera lenses capture images. Microscopes reveal bacteria too small to see with the naked eye. Projectors display images for cinema audiences. All use the same fundamental optical principles of refraction through curved surfaces \u2014 which we will now study systematically."
+        },
+        {
+          "type": "heading",
+          "body": "Types of Lenses and Key Terms"
+        },
+        {
+          "type": "text",
+          "body": "**Converging (convex) lens:** Thicker at the centre than the edges. Converges parallel rays to the principal focus F\u2082. Has a real focal point.\n\n**Diverging (concave) lens:** Thinner at the centre than the edges. Diverges parallel rays \u2014 they appear to come from the principal focus F\u2081. Has a virtual focal point.\n\n**Key terms:**\n- **Optical centre (O):** The central point of the lens through which rays pass undeviated\n- **Principal axis:** The line through the optical centre perpendicular to the lens\n- **Principal focus (F):** Point where parallel rays converge (convex) or appear to diverge from (concave) after refraction\n- **Focal length (f):** Distance from optical centre to principal focus\n- **Power (P):** P = 1/f (in dioptres, D, when f is in metres); positive for converging, negative for diverging\n\n**Sign convention (Real-is-Positive for lenses):**\n- Distances measured from optical centre O\n- Real object: u is positive (object on same side as incident light)\n- Real image: v is positive (on opposite side from incident light)\n- Virtual image: v is negative\n- f positive for converging lens; f negative for diverging lens\n\n**Ray construction rules for lenses:**\n\n*Converging lens:*\n1. Ray parallel to axis \u2192 refracts through F\u2082 (far focus)\n2. Ray through optical centre O \u2192 passes straight through (undeviated)\n3. Ray through F\u2081 (near focus) \u2192 refracts parallel to axis\n\n*Diverging lens:*\n1. Ray parallel to axis \u2192 diverges as if from F\u2081 (virtual focus, same side as object)\n2. Ray through O \u2192 passes undeviated\n3. Ray toward F\u2082 \u2192 refracts parallel to axis"
+        },
+        {
+          "type": "heading",
+          "body": "Lens Equation, Magnification and Image Types"
+        },
+        {
+          "type": "text",
+          "body": "**Lens equation (Real-is-Positive convention):**\n\n$$\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$$\n\nOr in the more common Cartesian sign convention:\n$$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$$\n\nWith the convention u positive (real object to left), v positive (real image to right):\n$$\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{(-u)} = \\frac{1}{v} + \\frac{1}{u}$$\n\n**Using the most common UNEB form:**\n$$\\frac{1}{f} = \\frac{1}{v} + \\frac{1}{u} \\quad (\\text{all positive for real object and image with convex lens})$$\n\n**Linear magnification:**\n$$m = \\frac{v}{u}$$\n\n**Image types \u2014 Converging lens:**\n\n| Object position | Image position | Type | Size |\n|---|---|---|---|\n| u > 2f | f < v < 2f | Real, inverted | Diminished |\n| u = 2f | v = 2f | Real, inverted | Same size |\n| f < u < 2f | v > 2f | Real, inverted | Magnified |\n| u = f | v = \u221e | \u2014 | \u2014 |\n| u < f | Virtual (same side) | Virtual, erect | Magnified |\n\n**Diverging lens:** Always virtual, erect, diminished (for real object).\n\n**Worked Example 1:** An object is placed 30 cm from a converging lens of focal length 20 cm. Find the image distance and magnification.\n\n1/v + 1/30 = 1/20\n1/v = 1/20 \u2212 1/30 = 3/60 \u2212 2/60 = 1/60\nv = 60 cm (real image, opposite side from object)\nm = v/u = 60/30 = 2 (magnified, inverted)\n\n**Worked Example 2:** An object 30 cm from a diverging lens (f = \u221215 cm). Find image position.\n\n1/v = 1/f \u2212 1/u = 1/(\u221215) \u2212 1/30 = \u22122/30 \u2212 1/30 = \u22123/30\nv = \u221210 cm (virtual image, same side as object)\nm = 10/30 = 0.33 (diminished, erect)\n\n**Worked Example 3:** Where must an object be placed from a converging lens (f=25 cm) to produce a real image 4 times the object size?\n\nm = v/u = 4 \u2192 v = 4u\n1/f = 1/v + 1/u: 1/25 = 1/(4u) + 1/u = 5/(4u)\n4u = 5\u00d725 = 125 \u2192 u = 25 cm (object at focal point would give \u221e; actual: slightly beyond)\nActually: u=31.25 cm gives v=4\u00d731.25=125 cm. Check: 1/31.25+1/125=4/125+1/125=5/125=1/25 \u2713"
+        },
+        {
+          "type": "heading",
+          "body": "The Conjugate Points Relation: l\u00b2 \u2212 d\u00b2 = 4fd"
+        },
+        {
+          "type": "text",
+          "body": "**Conjugate points:** For a thin lens, if an object at position u gives an image at v, then if the object is moved to position v, the image forms at u. The two positions u and v are called conjugate points \u2014 they are interchangeable.\n\n**Displacement method for finding focal length:**\nIf a lens is placed between an object and a screen (distance D apart) such that a sharp image forms, there are generally two positions of the lens that give a sharp image \u2014 one magnified, one diminished. Let:\n- D = distance between object and screen\n- d = distance between the two lens positions\n\nThen: **f = (D\u00b2 \u2212 d\u00b2) / (4D)** or equivalently **l\u00b2 \u2212 d\u00b2 = 4fl** where l = D.\n\n**Derivation:**\nFor position 1: object at u\u2081, image at v\u2081, where u\u2081 + v\u2081 = D\nFor position 2 (lens shifted by d): u\u2082 = v\u2081, v\u2082 = u\u2081 (conjugate points)\nSo u\u2082 \u2212 u\u2081 = d (shift of lens)\nUsing the lens equation for both positions and solving:\n\nf = (D\u00b2 \u2212 d\u00b2)/(4D)\n\nor equivalently: **D\u00b2 \u2212 d\u00b2 = 4fD** \u2192 **l\u00b2 \u2212 d\u00b2 = 4fl** (where l = D)\n\n**Worked Example 4:** An object and screen are 80 cm apart. A converging lens gives sharp images at two positions 20 cm apart. Find the focal length.\n\nf = (D\u00b2 \u2212 d\u00b2)/(4D) = (80\u00b2 \u2212 20\u00b2)/(4\u00d780) = (6400 \u2212 400)/320 = 6000/320 = 18.75 cm\n\n**Advantages of the displacement method:**\n- Does not require measuring u and v separately\n- f is determined from easily measured quantities D and d\n- Two positions of sharp focus confirm the measurement"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Converging lens: real F, f positive. Diverging: virtual F, f negative. Lens equation: 1/f = 1/v + 1/u (with sign convention). Magnification m = v/u. Conjugate points: interchange gives another image. Displacement method: f = (D\u00b2\u2212d\u00b2)/(4D); l\u00b2\u2212d\u00b2=4fl."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Converging lens: Convex lens that brings parallel rays to a real focus; f positive\n\u2022 Diverging lens: Concave lens that causes parallel rays to diverge from a virtual focus; f negative\n\u2022 Conjugate points: Interchangeable object and image positions for a lens; if image forms at v for object at u, image forms at u for object at v\n\u2022 Displacement method: Method for finding f from two lens positions: f = (D\u00b2\u2212d\u00b2)/(4D) where D = screen distance, d = lens displacement"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What does the lens maker's equation 1/f = (n\u22121)(1/r\u2081 + 1/r\u2082) tell us?",
+            "options": [
+              "The focal length depends on the object distance",
+              "The focal length depends on the refractive index of the glass and the curvature of both lens surfaces",
+              "All lenses of the same diameter have the same focal length",
+              "The focal length equals twice the radius of curvature"
+            ],
+            "answer": "The focal length depends on the refractive index of the glass and the curvature of both lens surfaces",
+            "explanation": "The lens maker's equation shows that f depends on: (1) the refractive index n of the glass (more curved \u2192 stronger lens), and (2) the radii of curvature r\u2081 and r\u2082 of both surfaces. This allows opticians and lens designers to specify the exact shape needed."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A glass prism (A=50\u00b0, n=1.60) is at minimum deviation. What is D_min?",
+            "options": [
+              "28.4\u00b0",
+              "35.2\u00b0",
+              "42.8\u00b0",
+              "50.0\u00b0"
+            ],
+            "answer": "35.2\u00b0",
+            "explanation": "1.60 = sin[(50+D)/2]/sin25\u00b0. sin[(50+D)/2] = 1.60\u00d70.4226 = 0.676. (50+D)/2 = 42.5\u00b0. 50+D=85\u00b0. D = 35\u00b0."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Why must a ray be in the denser medium for total internal reflection to occur?",
+            "options": [
+              "Denser media absorb light which builds up and reflects",
+              "Going from dense to less dense, the refracted ray bends away from the normal \u2014 at C it reaches 90\u00b0; beyond C, no refracted ray can exist and all light reflects",
+              "Light prefers to stay in denser media due to higher density",
+              "The angle of incidence in less dense media is always larger than the critical angle"
+            ],
+            "answer": "Going from dense to less dense, the refracted ray bends away from the normal \u2014 at C it reaches 90\u00b0; beyond C, no refracted ray can exist and all light reflects",
+            "explanation": "When going from dense (n\u2081) to less dense (n\u2082), the refracted angle r > i (bends away from normal). At i=C, r=90\u00b0. For i>C, Snell's Law would require sinr>1 \u2014 impossible \u2014 so no refracted ray can exist and ALL light is reflected back into the denser medium."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An object 30 cm from a concave (diverging) lens of f=\u221220 cm. Image distance?",
+            "options": [
+              "+12 cm (real)",
+              "\u221212 cm (virtual)",
+              "+60 cm (real)",
+              "\u221260 cm (virtual)"
+            ],
+            "answer": "\u221212 cm (virtual)",
+            "explanation": "1/v = 1/f \u2212 1/u = 1/(\u221220) \u2212 1/30 = \u22123/60 \u2212 2/60 = \u22125/60. v = \u221212 cm. Virtual image, same side as object."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "When light travels from glass into air, it bends:",
+            "options": [
+              "Toward the normal, since air is less dense",
+              "Away from the normal, since it speeds up entering the less dense air",
+              "Along the normal \u2014 no bending occurs",
+              "Back toward the glass surface"
+            ],
+            "answer": "Away from the normal, since it speeds up entering the less dense air",
+            "explanation": "Going from glass (denser, n\u22481.5) to air (less dense, n=1): light speeds up. By Snell's Law, the refracted angle is larger than the incident angle \u2014 the ray bends AWAY from the normal."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The displacement method: object-screen distance D=120cm, lens positions 40cm apart give two sharp images. Focal length?",
+            "options": [
+              "26.7 cm",
+              "33.3 cm",
+              "40.0 cm",
+              "20.0 cm"
+            ],
+            "answer": "26.7 cm",
+            "explanation": "f=(D\u00b2\u2212d\u00b2)/(4D)=(120\u00b2\u221240\u00b2)/(4\u00d7120)=(14400\u22121600)/480=12800/480=26.7 cm."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t15_l5",
+      "title": "Lens Maker's Equation, Power and Aberrations",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "How does the optician decide what shape and material to use when making spectacle lenses for a patient? The lens maker's equation relates the focal length to the radii of curvature of the two surfaces and the refractive index \u2014 giving the optician the precise specification needed to manufacture a lens. The concept of power allows lenses to be combined simply by adding their powers."
+        },
+        {
+          "type": "heading",
+          "body": "Lens Maker's Equation"
+        },
+        {
+          "type": "text",
+          "body": "The lens maker's equation relates the focal length f of a thin lens to the radii of curvature of its two surfaces and the refractive index of the glass:\n\n$$\\frac{1}{f} = (n - 1)\\left(\\frac{1}{r_1} + \\frac{1}{r_2}\\right)$$\n\nWhere:\n- n = refractive index of lens material (in air)\n- r\u2081 = radius of curvature of first surface (positive if centre of curvature is to the right)\n- r\u2082 = radius of curvature of second surface\n- f = focal length\n\n**Sign convention for radii:**\n- r is positive if the centre of curvature is to the right of the surface\n- r is negative if the centre of curvature is to the left\n\nFor a symmetric biconvex lens: r\u2081 = r, r\u2082 = \u2212r (centres on opposite sides)\n1/f = (n\u22121)(1/r + 1/r) = 2(n\u22121)/r \u2192 f = r/[2(n\u22121)]\n\n**Worked Example 1:** A biconvex lens has equal radii r = 20 cm and n = 1.5. Find f.\n\n1/f = (1.5 \u2212 1)(1/20 + 1/20) = 0.5 \u00d7 0.1 = 0.05 cm\u207b\u00b9 (note: 1/r\u2081 + 1/r\u2082 = 1/20 + 1/(\u2212(\u221220)) = 1/20 + 1/20)\nActually for biconvex: r\u2081=+20, r\u2082=\u221220 (second centre to left):\n1/f = (1.5\u22121)(1/20 \u2212 1/(\u221220))... Let me use magnitude form:\n1/f = (n\u22121)(1/r\u2081 + 1/r\u2082) where r\u2081=r\u2082=R for symmetric:\n1/f = 2(n\u22121)/R = 2\u00d70.5/20 = 1/20. f = 20 cm.\n\n**Worked Example 2:** Find the focal length of a plano-convex lens (flat on one side, convex r=30 cm) with n=1.6.\n\nr\u2081 = 30 cm (convex surface), r\u2082 = \u221e (flat surface, 1/r\u2082 = 0)\n1/f = (1.6 \u2212 1)(1/30 + 0) = 0.6/30 = 0.02 cm\u207b\u00b9\nf = 50 cm"
+        },
+        {
+          "type": "heading",
+          "body": "Power of a Lens and Combined Lenses"
+        },
+        {
+          "type": "text",
+          "body": "**Power (P)** of a lens is the reciprocal of the focal length in metres:\n\n$$P = \\frac{1}{f} \\quad (\\text{dioptres, D})$$\n\n- Converging lens: P > 0 (positive)\n- Diverging lens: P < 0 (negative)\n\n**Combined power of thin lenses in contact:**\nWhen two thin lenses of powers P\u2081 and P\u2082 (or focal lengths f\u2081 and f\u2082) are placed in contact, the combined power is:\n\n$$P = P_1 + P_2$$\n$$\\frac{1}{f} = \\frac{1}{f_1} + \\frac{1}{f_2}$$\n\n**Application \u2014 Spectacle prescriptions:**\nA person with hypermetropia (long-sightedness) needs a converging lens (positive power/positive dioptres). A person with myopia (short-sightedness) needs a diverging lens (negative power).\n\n**Worked Example 3:** A person needs spectacles. Their optician prescribes +2.5 D for the right eye and \u22121.5 D for the left. What are the focal lengths?\n\nRight eye: f = 1/P = 1/2.5 = 0.4 m = 40 cm (converging)\nLeft eye: f = 1/(\u22121.5) = \u22120.667 m = \u221266.7 cm (diverging)\n\n**Worked Example 4:** Two lenses of focal lengths 20 cm and \u221230 cm are in contact. Find the combined focal length and power.\n\n1/f = 1/20 + 1/(\u221230) = 3/60 \u2212 2/60 = 1/60\nf = 60 cm = 0.6 m\nP = 1/0.6 = 1.67 D"
+        },
+        {
+          "type": "heading",
+          "body": "Aberrations and Defects of Vision"
+        },
+        {
+          "type": "text",
+          "body": "**Spherical aberration:**\nRays through the outer zone of a spherical lens focus at a different point from paraxial rays \u2014 causing a blurred image. Solutions:\n- Use stops (diaphragms) to restrict rays to paraxial zone\n- Use specially shaped (aspherical) lenses\n- Use lens combinations\n\n**Chromatic aberration:**\nDue to dispersion, different wavelengths (colours) focus at different points. A lens cannot bring red and violet to the same focus simultaneously.\nSolution: **achromatic doublet** \u2014 a converging crown glass lens cemented to a diverging flint glass lens. They have opposite dispersions that cancel, but their combined power is non-zero (since they have different shapes).\n\n**Defects of vision and correction:**\n\n**Myopia (short-sightedness):** Eyeball too long or lens too converging. Distant objects focus in front of retina. Corrected by a **diverging lens** (negative f).\n\nLens power needed: P = 1/f = 1/v + 1/u where v = \u2212(far point distance)\n\n**Hypermetropia (long-sightedness):** Eyeball too short or lens not converging enough. Near objects focus behind retina. Corrected by a **converging lens** (positive f).\n\n**Presbyopia:** Loss of accommodation with age \u2014 near point recedes. Corrected by reading glasses (converging).\n\n**Astigmatism:** Cornea not uniformly curved \u2014 gives different focussing in different planes. Corrected by cylindrical lenses.\n\n**Worked Example 5:** A myopic person's far point is 50 cm. What lens is needed for normal vision (far point at infinity)?\n\nObject at infinity (u = \u221e), image must form at 50 cm (at far point), but image is virtual so v = \u221250 cm:\n1/f = 1/v + 1/u = 1/(\u221250) + 0 = \u22121/50 cm\u207b\u00b9\nf = \u221250 cm = \u22120.5 m\nP = \u22122 D (diverging lens, \u22122 dioptres)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Lens maker's equation: 1/f = (n\u22121)(1/r\u2081+1/r\u2082). Power P = 1/f (dioptres). Combined lenses in contact: P = P\u2081+P\u2082; 1/f = 1/f\u2081+1/f\u2082. Spherical aberration: outer rays focus differently. Chromatic: dispersion causes colour separation; corrected by achromatic doublets. Myopia: diverging lens. Hypermetropia: converging lens."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Power (P): P = 1/f (dioptres); positive for converging, negative for diverging; combined lenses: P = P\u2081 + P\u2082\n\u2022 Lens maker's equation: 1/f = (n\u22121)(1/r\u2081 + 1/r\u2082); relates focal length to glass refractive index and surface radii\n\u2022 Achromatic doublet: Two lenses (crown + flint glass) combined to cancel chromatic aberration while maintaining optical power\n\u2022 Myopia: Short-sightedness: far point closer than infinity; corrected by diverging (concave) lens"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Chromatic aberration in a lens is caused by:",
+            "options": [
+              "The lens being too thick at the edges",
+              "Dispersion \u2014 different wavelengths have different refractive indices, causing different focal lengths for different colours",
+              "Reflections from the lens surfaces",
+              "Spherical shape of the lens surfaces"
+            ],
+            "answer": "Dispersion \u2014 different wavelengths have different refractive indices, causing different focal lengths for different colours",
+            "explanation": "Chromatic aberration: glass has different n for different wavelengths (dispersion). Violet (shorter \u03bb) focuses closer to lens than red (longer \u03bb). Result: white-light images have coloured fringes. Corrected by achromatic doublets."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why is the 45-45-90\u00b0 glass prism preferred over a silvered mirror in binoculars and periscopes?",
+            "options": [
+              "Glass prisms are cheaper than mirrors",
+              "TIR at the hypotenuse gives ~100% reflection vs ~95% for the best silvered mirrors",
+              "Glass prisms are lighter than mirrors",
+              "Prisms magnify the image while mirrors do not"
+            ],
+            "answer": "TIR at the hypotenuse gives ~100% reflection vs ~95% for the best silvered mirrors",
+            "explanation": "At the hypotenuse of a 45-45-90\u00b0 prism (glass n=1.52, C\u224841\u00b0), a ray hits at 45\u00b0>41\u00b0, so TIR occurs. TIR is 100% efficient \u2014 no light is lost. The best silvered mirrors reflect only about 95% \u2014 a 5% loss per reflection. In binoculars with multiple reflections, this difference is significant."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A hypermetropic person cannot see objects closer than 100 cm. What lens is needed to read at 25 cm?",
+            "options": [
+              "+3 D",
+              "\u22123 D",
+              "+4 D",
+              "+1 D"
+            ],
+            "answer": "+3 D",
+            "explanation": "Object at u=25cm; image must appear at near point v=100cm (virtual, same side as object \u2014 v=\u2212100cm in the usual sign convention). 1/f=1/v+1/u=1/(\u2212100)+1/25=\u22121/100+4/100=3/100. f=33.3cm. P=1/0.333=3D. Converging lens +3D."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The speed of light in a medium is 2.0\u00d710\u2078 m/s. What is the refractive index of the medium? (c=3.0\u00d710\u2078 m/s)",
+            "options": [
+              "0.67",
+              "1.33",
+              "1.50",
+              "2.00"
+            ],
+            "answer": "1.50",
+            "explanation": "n = c/v = 3.0\u00d710\u2078/2.0\u00d710\u2078 = 1.50. This is the refractive index of crown glass."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which observation confirms that white light consists of multiple colours?",
+            "options": [
+              "Light travels in straight lines through a prism",
+              "White light is dispersed by a prism into a spectrum of colours (ROYGBIV), showing different wavelengths have different refractive indices",
+              "A prism inverts the image of the object",
+              "Light reflected from a mirror appears white"
+            ],
+            "answer": "White light is dispersed by a prism into a spectrum of colours (ROYGBIV), showing different wavelengths have different refractive indices",
+            "explanation": "When white light passes through a prism, different wavelengths (colours) refract by different amounts (because n varies with wavelength \u2014 dispersion). The white light splits into ROYGBIV spectrum, proving it contains all visible wavelengths."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A plano-convex lens (n=1.6, convex surface radius 20cm). What is its focal length?",
+            "options": [
+              "20 cm",
+              "33.3 cm",
+              "40 cm",
+              "12 cm"
+            ],
+            "answer": "33.3 cm",
+            "explanation": "1/f=(n\u22121)(1/r\u2081+1/r\u2082). Plano-convex: r\u2081=20cm (convex), r\u2082=\u221e (flat, 1/r\u2082=0). 1/f=(1.6\u22121)(1/20+0)=0.6/20=0.03cm\u207b\u00b9. f=33.3 cm."
+          }
+        ]
+      }
+    }
+  ]
+}

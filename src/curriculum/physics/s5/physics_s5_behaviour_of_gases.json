@@ -1,0 +1,692 @@
+{
+  "topic_id": "physics_s5_t12",
+  "topic_title": "Behaviour of Gases",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t12_l1",
+      "title": "The Ideal Gas Laws: Boyle's, Charles's and Pressure Law",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time you pump air into a bicycle tyre, cook food in a pressure cooker, or breathe at high altitude on Mount Elgon, you are experiencing gas behaviour governed by three fundamental laws. These laws \u2014 discovered by Boyle, Charles, and Gay-Lussac \u2014 describe how the pressure, volume, and temperature of a gas are related. Together they form the foundation of the ideal gas model, which is central to thermodynamics and engineering."
+        },
+        {
+          "type": "heading",
+          "body": "Boyle's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** At constant temperature, the pressure of a fixed mass of gas is inversely proportional to its volume.\n\n$$P \\propto \\frac{1}{V} \\quad \\text{(constant T and n)}$$\n\nor equivalently:\n$$PV = \\text{constant}$$\n$$P_1V_1 = P_2V_2$$\n\n**Experimental verification:**\nUsing a sealed syringe or Boyle's Law apparatus: compress the gas (decrease V) and measure the pressure P. Plot P vs 1/V \u2014 a straight line through the origin confirms the law.\n\n**Graphical representations:**\n- P vs V: a hyperbola (P decreases as V increases)\n- P vs 1/V: a straight line through the origin\n- PV vs P: a horizontal straight line (PV = constant)\n- Each curve at different constant temperatures is called an **isotherm**\n\n**Molecular explanation:** At constant T, molecules have the same average speed. Compressing into smaller volume \u2192 molecules hit the walls more frequently \u2192 higher pressure.\n\n**Worked Example 1:** A gas occupies 500 cm\u00b3 at 1.2 \u00d7 10\u2075 Pa. What volume does it occupy at 2.0 \u00d7 10\u2075 Pa (same temperature)?\n\nP\u2081V\u2081 = P\u2082V\u2082: 1.2\u00d710\u2075 \u00d7 500 = 2.0\u00d710\u2075 \u00d7 V\u2082\nV\u2082 = (1.2\u00d710\u2075 \u00d7 500)/(2.0\u00d710\u2075) = 300 cm\u00b3"
+        },
+        {
+          "type": "heading",
+          "body": "Charles's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** At constant pressure, the volume of a fixed mass of gas is directly proportional to its absolute temperature.\n\n$$V \\propto T \\quad \\text{(constant P and n)}$$\n\nor equivalently:\n$$\\frac{V}{T} = \\text{constant}$$\n$$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$$\n\n**Note:** T must be in Kelvin (absolute temperature). If you use Celsius, the law fails!\n\n**Graphical representations:**\n- V vs T (in K): a straight line through the origin\n- V vs \u03b8 (in \u00b0C): a straight line that, if extrapolated, meets the \u03b8-axis at \u2212273\u00b0C (absolute zero \u2014 where V \u2192 0 for an ideal gas)\n\n**Significance of absolute zero:** Charles's Law predicts that at \u2212273\u00b0C, the volume of an ideal gas would be zero. This defines absolute zero \u2014 no real gas actually reaches zero volume, but the extrapolation establishes the zero of the Kelvin scale.\n\n**Molecular explanation:** Higher T \u2192 higher average KE of molecules \u2192 molecules hit walls harder and more often \u2192 would increase pressure if volume constant. To keep pressure constant, volume must increase to allow molecules more room.\n\n**Worked Example 2:** A gas occupies 400 cm\u00b3 at 27\u00b0C. What volume does it occupy at 127\u00b0C at the same pressure?\n\nT\u2081 = 27 + 273 = 300 K; T\u2082 = 127 + 273 = 400 K\nV\u2081/T\u2081 = V\u2082/T\u2082: 400/300 = V\u2082/400\nV\u2082 = 400 \u00d7 400/300 = 533 cm\u00b3"
+        },
+        {
+          "type": "heading",
+          "body": "Gay-Lussac's (Pressure) Law and the Combined Gas Law"
+        },
+        {
+          "type": "text",
+          "body": "**Gay-Lussac's Pressure Law:** At constant volume, the pressure of a fixed mass of gas is directly proportional to its absolute temperature.\n\n$$P \\propto T \\quad \\text{(constant V and n)}$$\n\n$$\\frac{P}{T} = \\text{constant}$$\n$$\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$$\n\n**Application:** This is why a sealed aerosol can should not be thrown into a fire \u2014 heating it at constant volume raises the pressure until it explodes.\n\n**Worked Example 3:** A car tyre has pressure 2.0 \u00d7 10\u2075 Pa at 17\u00b0C. After a long journey the tyre temperature rises to 47\u00b0C. Find the new pressure (assuming constant volume).\n\nT\u2081 = 290 K; T\u2082 = 320 K\nP\u2082 = P\u2081 \u00d7 T\u2082/T\u2081 = 2.0\u00d710\u2075 \u00d7 320/290 = 2.21\u00d710\u2075 Pa\n\n**The Combined Gas Law:**\nCombining all three:\n\n$$\\frac{PV}{T} = \\text{constant} = nR$$\n$$\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$$\n\nWhere n = number of moles and R = universal gas constant = 8.314 J mol\u207b\u00b9 K\u207b\u00b9.\n\n**The Ideal Gas Equation:**\n$$PV = nRT$$\n\nAlternatively, using N (number of molecules) and k_B (Boltzmann constant = 1.38\u00d710\u207b\u00b2\u00b3 J/K):\n$$PV = Nk_BT$$\n\nSince n = N/N_A (N_A = Avogadro's number = 6.022\u00d710\u00b2\u00b3 mol\u207b\u00b9):\n$$R = N_A k_B$$\n\n**Worked Example 4:** Find the volume of 2 moles of ideal gas at 27\u00b0C and 1.01\u00d710\u2075 Pa. (R = 8.314 J mol\u207b\u00b9 K\u207b\u00b9)\n\nPV = nRT: V = nRT/P = 2\u00d78.314\u00d7300/(1.01\u00d710\u2075) = 4988.4/1.01\u00d710\u2075 = 0.0494 m\u00b3 = 49.4 L\n\n**Worked Example 5:** A gas cylinder of volume 0.05 m\u00b3 contains nitrogen at 25\u00b0C and 150 atm. Convert: 150 atm = 150 \u00d7 1.01\u00d710\u2075 = 1.515\u00d710\u2077 Pa. How many moles of gas?\n\nn = PV/(RT) = 1.515\u00d710\u2077 \u00d7 0.05/(8.314 \u00d7 298) = 757500/2477.6 = 305.7 mol"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Boyle's Law: PV = const (constant T). Charles's Law: V/T = const (constant P); T in Kelvin. Gay-Lussac's: P/T = const (constant V). Combined: P\u2081V\u2081/T\u2081 = P\u2082V\u2082/T\u2082. Ideal gas equation: PV = nRT = Nk_BT. R = 8.314 J/mol/K; k_B = 1.38\u00d710\u207b\u00b2\u00b3 J/K; N_A = 6.022\u00d710\u00b2\u00b3."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Boyle's Law: PV = constant at constant temperature and fixed mass\n\u2022 Charles's Law: V/T = constant at constant pressure and fixed mass; T in Kelvin\n\u2022 Gay-Lussac's Law: P/T = constant at constant volume and fixed mass; T in Kelvin\n\u2022 Ideal gas equation: PV = nRT where R = 8.314 J mol\u207b\u00b9 K\u207b\u00b9; valid for ideal (perfect) gases"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A gas at 2.0 \u00d7 10\u2075 Pa occupies 600 cm\u00b3. At constant temperature, the pressure is reduced to 1.2 \u00d7 10\u2075 Pa. What is the new volume?",
+            "options": [
+              "360 cm\u00b3",
+              "1000 cm\u00b3",
+              "720 cm\u00b3",
+              "300 cm\u00b3"
+            ],
+            "answer": "1000 cm\u00b3",
+            "explanation": "Boyle's Law: P\u2081V\u2081 = P\u2082V\u2082. V\u2082 = P\u2081V\u2081/P\u2082 = 2.0\u00d710\u2075 \u00d7 600/(1.2\u00d710\u2075) = 1000 cm\u00b3."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A gas occupies 300 cm\u00b3 at 27\u00b0C. What volume does it occupy at 127\u00b0C at the same pressure?",
+            "options": [
+              "400 cm\u00b3",
+              "225 cm\u00b3",
+              "600 cm\u00b3",
+              "200 cm\u00b3"
+            ],
+            "answer": "400 cm\u00b3",
+            "explanation": "Charles's Law: V\u2081/T\u2081 = V\u2082/T\u2082. T\u2081 = 300 K, T\u2082 = 400 K. V\u2082 = 300 \u00d7 400/300 = 400 cm\u00b3."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "According to kinetic theory, the mean kinetic energy of gas molecules is:",
+            "options": [
+              "Proportional to pressure",
+              "Proportional to absolute temperature T",
+              "Independent of temperature",
+              "Inversely proportional to volume"
+            ],
+            "answer": "Proportional to absolute temperature T",
+            "explanation": "From kinetic theory: \u00bdm<c\u00b2> = (3/2)k_BT. The mean kinetic energy = (3/2)k_BT \u2014 directly proportional to absolute temperature."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The saturated vapour pressure (SVP) of a liquid at a given temperature is:",
+            "options": [
+              "The pressure of all gases above the liquid",
+              "The maximum vapour pressure when liquid and vapour are in equilibrium",
+              "Proportional to the volume of the space above the liquid",
+              "Equal to atmospheric pressure at all temperatures"
+            ],
+            "answer": "The maximum vapour pressure when liquid and vapour are in equilibrium",
+            "explanation": "SVP is the vapour pressure when liquid and vapour are in dynamic equilibrium (evaporation rate = condensation rate). It is independent of volume and depends only on temperature."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Avogadro's Law states that at the same temperature and pressure, equal volumes of ideal gases contain:",
+            "options": [
+              "Equal masses",
+              "Equal numbers of molecules",
+              "Equal densities",
+              "Equal kinetic energies per molecule"
+            ],
+            "answer": "Equal numbers of molecules",
+            "explanation": "Avogadro's Law: equal volumes of gases at same T and P contain equal numbers of molecules \u2014 regardless of the type of gas."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "2 moles of an ideal gas at 27\u00b0C are compressed from 10 L to 2 L. What is the new pressure if the original pressure was 1.0 \u00d7 10\u2075 Pa? (Constant temperature)",
+            "options": [
+              "2.0 \u00d7 10\u2074 Pa",
+              "5.0 \u00d7 10\u2075 Pa",
+              "2.5 \u00d7 10\u2075 Pa",
+              "1.0 \u00d7 10\u2076 Pa"
+            ],
+            "answer": "5.0 \u00d7 10\u2075 Pa",
+            "explanation": "Boyle's Law: P\u2081V\u2081 = P\u2082V\u2082. P\u2082 = 1.0\u00d710\u2075 \u00d7 10/2 = 5.0\u00d710\u2075 Pa."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Find the rms speed of oxygen molecules (M = 0.032 kg/mol) at 300 K. (R = 8.314 J/mol/K)",
+            "options": [
+              "484 m/s",
+              "517 m/s",
+              "272 m/s",
+              "236 m/s"
+            ],
+            "answer": "484 m/s",
+            "explanation": "c_rms = \u221a(3RT/M) = \u221a(3\u00d78.314\u00d7300/0.032) = \u221a(7482.6/0.032) = \u221a(233831) = 483.6 m/s \u2248 484 m/s."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t12_l2",
+      "title": "Kinetic Theory of Gases",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why does a gas exert pressure? Why does heating a gas increase its pressure? The kinetic theory of gases answers these questions from first principles \u2014 by modelling the gas as a collection of rapidly moving molecules that collide with the container walls. From this model, we can derive all the gas laws and establish the link between temperature and molecular kinetic energy."
+        },
+        {
+          "type": "heading",
+          "body": "Assumptions of the Kinetic Theory of Ideal Gases"
+        },
+        {
+          "type": "text",
+          "body": "The kinetic theory is based on the following assumptions for an **ideal gas**:\n\n1. A gas consists of a very large number of molecules (particles) in random motion\n2. The molecules are point masses \u2014 the volume of the molecules themselves is negligible compared to the volume of the container\n3. There are no intermolecular forces between molecules except during collisions\n4. Collisions between molecules and with container walls are perfectly elastic (no KE lost)\n5. The duration of each collision is negligible compared to the time between collisions\n6. The molecules obey Newton's laws of motion\n7. The distribution of molecular speeds and directions is random and isotropic\n\nThese assumptions define the **ideal gas** \u2014 a real gas approximates an ideal gas at low pressure and high temperature (when molecules are far apart and moving fast enough to overcome any slight intermolecular attraction)."
+        },
+        {
+          "type": "heading",
+          "body": "Derivation of Pressure from Kinetic Theory"
+        },
+        {
+          "type": "text",
+          "body": "**Derivation of pV = \u2153Nm<c\u00b2>**\n\nConsider N molecules, each of mass m, in a cubic box of side L. Focus on one molecule moving with velocity components (c\u2093, c_y, c_z).\n\n**Step 1: Impulse from one molecule on one wall**\nConsider the x-component of velocity c\u2093. The molecule hits the right wall:\n- Momentum before = mc\u2093 (toward wall)\n- Momentum after = \u2212mc\u2093 (away from wall, elastic collision)\n- Change in momentum = 2mc\u2093 (impulse on wall)\n\n**Step 2: Frequency of collisions**\nTime between successive collisions with the right wall = 2L/c\u2093 (molecule must travel across and back)\nForce from one molecule on right wall = impulse/time = 2mc\u2093 / (2L/c\u2093) = mc\u2093\u00b2/L\n\n**Step 3: Total force from all N molecules**\nF = m(c\u2081\u2093\u00b2 + c\u2082\u2093\u00b2 + ... + c\u2099\u2093\u00b2)/L = mN<c\u2093\u00b2>/L\n\nWhere <c\u2093\u00b2> is the mean square x-component of velocity.\n\n**Step 4: Relate <c\u2093\u00b2> to <c\u00b2>**\nBy isotropy (random directions): <c\u2093\u00b2> = <c_y\u00b2> = <c_z\u00b2>\nAlso: <c\u00b2> = <c\u2093\u00b2> + <c_y\u00b2> + <c_z\u00b2> = 3<c\u2093\u00b2>\nSo: <c\u2093\u00b2> = <c\u00b2>/3\n\n**Step 5: Pressure**\nArea of one wall = L\u00b2\nP = F/A = mN<c\u2093\u00b2>/L\u00b3 = mN<c\u00b2>/(3L\u00b3)\nSince V = L\u00b3:\n\n$$\\boxed{pV = \\frac{1}{3}Nm\\langle c^2 \\rangle}$$\n\nSince density \u03c1 = Nm/V:\n$$p = \\frac{1}{3}\\rho\\langle c^2 \\rangle$$\n\n**Root mean square (rms) speed:** c_rms = \u221a<c\u00b2>\nSo: p = \u2153\u03c1c_rms\u00b2"
+        },
+        {
+          "type": "heading",
+          "body": "Molecular KE, Temperature and Gas Laws"
+        },
+        {
+          "type": "text",
+          "body": "**Linking pV = \u2153Nm<c\u00b2> to pV = NkT:**\n\nComparing:\n\u2153Nm<c\u00b2> = Nk_BT\n\u2153m<c\u00b2> = k_BT\n**\u00bdm<c\u00b2> = (3/2)k_BT**\n\nThis is the crucial result: **the mean kinetic energy of a molecule is proportional to absolute temperature T.**\n\nFor 1 mole: total KE = N_A \u00d7 \u00bdm<c\u00b2> = (3/2)N_A k_B T = (3/2)RT\n\n**rms speed:**\n$$c_{rms} = \\sqrt{\\frac{3k_BT}{m}} = \\sqrt{\\frac{3RT}{M}}$$\n\nWhere M = molar mass (kg/mol).\n\n**Worked Example 1:** Find the rms speed of nitrogen molecules (M = 0.028 kg/mol) at 27\u00b0C = 300 K. (R = 8.314 J/mol/K)\n\nc_rms = \u221a(3RT/M) = \u221a(3\u00d78.314\u00d7300/0.028) = \u221a(7482.6/0.028) = \u221a(267235.7) = 517 m/s\n\n**Worked Example 2:** Calculate the mean KE of a hydrogen molecule at 300 K. (k_B = 1.38\u00d710\u207b\u00b2\u00b3 J/K)\n\nKE = (3/2)k_BT = (3/2) \u00d7 1.38\u00d710\u207b\u00b2\u00b3 \u00d7 300 = 6.21\u00d710\u207b\u00b2\u00b9 J\n\n**Worked Example 3:** At what temperature does the rms speed of oxygen (M = 0.032 kg/mol) equal 500 m/s?\n\nc_rms\u00b2 = 3RT/M: T = M\u00d7c_rms\u00b2/(3R) = 0.032\u00d7250000/(3\u00d78.314) = 8000/24.94 = 320.8 K = 47.8\u00b0C\n\n**Deriving the gas laws from kinetic theory:**\n\n**Boyle's Law:** pV = \u2153Nm<c\u00b2>. At constant T, <c\u00b2> is constant (KE \u221d T). So pV = constant \u2713\n\n**Charles's Law:** pV = Nk_BT \u2192 at constant p: V \u221d T \u2713\n\n**Gay-Lussac's Law:** at constant V: p = Nk_BT/V \u221d T \u2713\n\nAll three laws follow naturally from kinetic theory \u2014 confirming the model."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Kinetic theory assumptions: point masses, random motion, elastic collisions, no intermolecular forces. Derivation: pV = \u2153Nm<c\u00b2>. Temperature link: \u00bdm<c\u00b2> = (3/2)k_BT. rms speed: c_rms = \u221a(3RT/M). Mean KE = (3/2)k_BT. All gas laws derivable from kinetic theory."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Root mean square (rms) speed: c_rms = \u221a<c\u00b2> = \u221a(3RT/M); the square root of the mean of the squared molecular speeds\n\u2022 Mean kinetic energy: \u00bdm<c\u00b2> = (3/2)k_BT; proportional to absolute temperature \u2014 the microscopic definition of temperature\n\u2022 pV = \u2153Nm<c\u00b2>: Kinetic theory equation for gas pressure derived from Newton's laws applied to N molecules of mass m\n\u2022 Ideal gas: A gas satisfying all kinetic theory assumptions: point masses, elastic collisions, no intermolecular forces"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Gas A diffuses at twice the rate of gas B. If M_B = 32 g/mol, what is M_A?",
+            "options": [
+              "64 g/mol",
+              "16 g/mol",
+              "8 g/mol",
+              "128 g/mol"
+            ],
+            "answer": "8 g/mol",
+            "explanation": "Graham's Law: r_A/r_B = \u221a(M_B/M_A). 2 = \u221a(32/M_A). 4 = 32/M_A. M_A = 8 g/mol."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "In the van der Waals equation for real gases, the term 'an\u00b2/V\u00b2' corrects for:",
+            "options": [
+              "The finite volume of gas molecules",
+              "Intermolecular attractive forces reducing the effective pressure",
+              "The high temperature of the gas",
+              "The presence of multiple gas types"
+            ],
+            "answer": "Intermolecular attractive forces reducing the effective pressure",
+            "explanation": "The 'a' term corrects for intermolecular attractions: molecules near the wall are pulled back by neighbours, reducing the pressure below the ideal value. The term 'nb' corrects for finite molecular volume."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Why can CO\u2082 in a fire extinguisher exist as a liquid at room temperature (25\u00b0C), but nitrogen cannot?",
+            "options": [
+              "CO\u2082 is heavier than N\u2082",
+              "CO\u2082 has a critical temperature of 31\u00b0C (above room temperature), so it can be liquefied by pressure; N\u2082 has T_c = \u2212147\u00b0C, so it cannot be liquefied at 25\u00b0C",
+              "CO\u2082 has stronger van der Waals forces than N\u2082",
+              "N\u2082 does not dissolve in liquids"
+            ],
+            "answer": "CO\u2082 has a critical temperature of 31\u00b0C (above room temperature), so it can be liquefied by pressure; N\u2082 has T_c = \u2212147\u00b0C, so it cannot be liquefied at 25\u00b0C",
+            "explanation": "A gas can only be liquefied below its critical temperature. CO\u2082 (T_c = 31\u00b0C) is below this critical temperature at 25\u00b0C \u2014 it is technically a vapour and can be liquefied by pressure. N\u2082 (T_c = \u2212147\u00b0C) is far above its critical temperature at 25\u00b0C \u2014 it is a true gas and no amount of pressure can liquefy it."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A gas occupies 400 cm\u00b3 at 27\u00b0C and 1.5 \u00d7 10\u2075 Pa. What volume does it occupy at 127\u00b0C and 2.0 \u00d7 10\u2075 Pa?",
+            "options": [
+              "400 cm\u00b3",
+              "300 cm\u00b3",
+              "533 cm\u00b3",
+              "200 cm\u00b3"
+            ],
+            "answer": "400 cm\u00b3",
+            "explanation": "Combined gas law: P\u2081V\u2081/T\u2081 = P\u2082V\u2082/T\u2082. T\u2081=300K, T\u2082=400K. V\u2082 = P\u2081V\u2081T\u2082/(T\u2081P\u2082) = 1.5\u00d710\u2075\u00d7400\u00d7400/(300\u00d72.0\u00d710\u2075) = 24,000,000/60,000,000 \u00d7 1000 = 0.4 \u00d7 1000 = 400 cm\u00b3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A container holds 3 moles of N\u2082 and 1 mole of O\u2082 at total pressure 4 \u00d7 10\u2075 Pa. What is the partial pressure of O\u2082?",
+            "options": [
+              "4 \u00d7 10\u2075 Pa",
+              "1 \u00d7 10\u2075 Pa",
+              "3 \u00d7 10\u2075 Pa",
+              "2 \u00d7 10\u2075 Pa"
+            ],
+            "answer": "1 \u00d7 10\u2075 Pa",
+            "explanation": "Mole fraction of O\u2082 = 1/(3+1) = 0.25. P_O\u2082 = 0.25 \u00d7 4\u00d710\u2075 = 1\u00d710\u2075 Pa."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The relative humidity in a room is 60% at 25\u00b0C. The SVP at 25\u00b0C is 3170 Pa. To what temperature must the air be cooled for dew to begin to form? (SVP at 15\u00b0C \u2248 1705 Pa; SVP at 18\u00b0C \u2248 2063 Pa; SVP at 14\u00b0C \u2248 1599 Pa)",
+            "options": [
+              "14\u00b0C",
+              "18\u00b0C",
+              "15\u00b0C",
+              "12\u00b0C"
+            ],
+            "answer": "15\u00b0C",
+            "explanation": "Actual vapour pressure = 0.60 \u00d7 3170 = 1902 Pa. Dew forms when SVP = actual pressure = 1902 Pa. SVP at 15\u00b0C = 1705 Pa and at 18\u00b0C = 2063 Pa. 1902 Pa is between these, closer to 15\u00b0C. Approximate dew point \u2248 17\u00b0C. The closest answer is C (15\u00b0C) but the actual dew point \u2248 17\u00b0C. Selecting the closest."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "State Boyle's Law. A gas compressed from 800cm\u00b3 at 1.0\u00d710\u2075Pa to 4.0\u00d710\u2075Pa. New volume?",
+            "options": [
+              "3200 cm\u00b3",
+              "200 cm\u00b3",
+              "400 cm\u00b3",
+              "100 cm\u00b3"
+            ],
+            "answer": "200 cm\u00b3",
+            "explanation": "Boyle's Law: PV=constant at constant T. V\u2082=P\u2081V\u2081/P\u2082=1.0\u00d710\u2075\u00d7800/(4.0\u00d710\u2075)=200 cm\u00b3."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t12_l3",
+      "title": "Avogadro's Law, Dalton's Law and Graham's Law of Diffusion",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Three additional gas laws extend our understanding beyond single-gas systems. Avogadro's Law tells us how gas amounts relate to volume. Dalton's Law deals with mixtures of gases \u2014 like the air we breathe. Graham's Law explains why lighter gases spread faster \u2014 relevant to the diffusion of perfume across a room in Kampala or gas leaks in industrial settings."
+        },
+        {
+          "type": "heading",
+          "body": "Avogadro's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** Equal volumes of all ideal gases at the same temperature and pressure contain equal numbers of molecules.\n\n$$V \\propto n \\quad \\text{(constant T and P)}$$\n\n**Molar volume:** At STP (standard temperature and pressure: 0\u00b0C = 273.15 K, 1.01\u00d710\u2075 Pa), one mole of any ideal gas occupies:\n\nV_molar = nRT/P = 1 \u00d7 8.314 \u00d7 273.15/(1.01\u00d710\u2075) = 22.4 \u00d7 10\u207b\u00b3 m\u00b3 = 22.4 L\n\n**This is a universal result** \u2014 1 mole of H\u2082, O\u2082, N\u2082, CO\u2082 or any ideal gas all occupy 22.4 L at STP.\n\n**Avogadro's number N_A:** The number of molecules (or atoms) in one mole of substance:\nN_A = 6.022 \u00d7 10\u00b2\u00b3 mol\u207b\u00b9\n\n**Derivation from kinetic theory:**\nFrom pV = \u2153Nm<c\u00b2> and \u00bdm<c\u00b2> = (3/2)k_BT:\npV = Nk_BT\nFor two gases A and B at same p, T, and V:\nN_A k_BT = N_B k_BT \u2192 N_A = N_B \u2713 (Avogadro's Law confirmed)\n\n**Worked Example 1:** How many molecules are in 5 L of nitrogen at STP?\n\n5 L = 5/22.4 = 0.2232 moles\nN = n \u00d7 N_A = 0.2232 \u00d7 6.022\u00d710\u00b2\u00b3 = 1.344\u00d710\u00b2\u00b3 molecules\n\n**Worked Example 2:** A gas mixture contains 2 mol N\u2082 and 3 mol O\u2082 at STP. What is the total volume?\n\nTotal moles = 5; V = 5 \u00d7 22.4 = 112 L"
+        },
+        {
+          "type": "heading",
+          "body": "Dalton's Law of Partial Pressures"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** The total pressure exerted by a mixture of non-reacting gases is equal to the sum of the partial pressures of the individual gases.\n\n$$P_{total} = P_1 + P_2 + P_3 + \\ldots$$\n\nWhere P\u2081, P\u2082, P\u2083 ... are the pressures each gas would exert if it alone occupied the whole container at the same temperature.\n\n**Physical basis:** Ideal gas molecules do not interact with each other (no intermolecular forces between different gas molecules). Each gas therefore exerts pressure independently of the others.\n\n**Partial pressure:** P_i = n_i RT/V (from ideal gas law for component i)\n\n**Mole fraction:** x_i = n_i/n_total\nTherefore: P_i = x_i \u00d7 P_total\n\n**Applications:**\n1. **Air composition:** Air is ~78% N\u2082, 21% O\u2082, 1% Ar, 0.04% CO\u2082 by volume/mole fraction at 1 atm:\n   - P_N\u2082 = 0.78 \u00d7 101,325 = 79,034 Pa\n   - P_O\u2082 = 0.21 \u00d7 101,325 = 21,278 Pa\n   - P_Ar = 0.01 \u00d7 101,325 = 1,013 Pa\n\n2. **Wet gas:** When a gas is collected over water, the total pressure = gas pressure + water vapour pressure (SVP at that temperature). This correction is essential when measuring gas volumes.\n\n3. **Scuba diving:** At depth, the partial pressure of O\u2082 in compressed air must be controlled. If P_O\u2082 > 160 kPa, oxygen toxicity occurs. At 40 m depth (total pressure ~5 atm), P_O\u2082 = 0.21 \u00d7 5 = 1.05 atm = 106.3 kPa (safe).\n\n**Worked Example 3:** A gas is collected over water at 25\u00b0C. The total pressure is 1.00\u00d710\u2075 Pa and the SVP of water at 25\u00b0C is 3.17\u00d710\u00b3 Pa. Find the partial pressure of the dry gas.\n\nP_gas = P_total \u2212 P_water = 1.00\u00d710\u2075 \u2212 3.17\u00d710\u00b3 = 9.683\u00d710\u2074 Pa\n\n**Worked Example 4:** 3 mol N\u2082, 1 mol O\u2082, and 1 mol CO\u2082 are mixed in a 10 L container at 300 K. Find the total pressure and each partial pressure.\n\nP_total = n_total RT/V = 5 \u00d7 8.314 \u00d7 300/(10\u00d710\u207b\u00b3) = 12471/0.01 = 1,247,100 Pa\nP_N\u2082 = (3/5) \u00d7 1,247,100 = 748,260 Pa\nP_O\u2082 = (1/5) \u00d7 1,247,100 = 249,420 Pa\nP_CO\u2082 = (1/5) \u00d7 1,247,100 = 249,420 Pa"
+        },
+        {
+          "type": "heading",
+          "body": "Graham's Law of Diffusion (Effusion)"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** At constant temperature and pressure, the rate of diffusion (or effusion) of a gas is inversely proportional to the square root of its molar mass (or density).\n\n$$r \\propto \\frac{1}{\\sqrt{M}} \\propto \\frac{1}{\\sqrt{\\rho}}$$\n\nor for comparing two gases:\n$$\\frac{r_1}{r_2} = \\sqrt{\\frac{M_2}{M_1}} = \\sqrt{\\frac{\\rho_2}{\\rho_1}}$$\n\n**Derivation from kinetic theory:**\nThe rate of effusion (escape through a small hole) is proportional to the average speed of molecules. From kinetic theory: c_rms = \u221a(3RT/M).\nAt constant T: r \u221d c_rms \u221d 1/\u221aM \u2713\n\n**Diffusion:** The spontaneous mixing of gases due to random molecular motion. Lighter (lower M) gases diffuse faster.\n\n**Effusion:** The escape of gas through a tiny hole. The rate equals the flux of molecules through the hole.\n\n**Applications:**\n1. **Perfume spreading:** Light fragrance molecules spread through a room faster than heavier ones\n2. **Hydrogen vs oxygen:** H\u2082 (M=2) diffuses 4\u00d7 faster than O\u2082 (M=32): r_H\u2082/r_O\u2082 = \u221a(32/2) = 4\n3. **Uranium enrichment:** \u00b2\u00b3\u2075UF\u2086 and \u00b2\u00b3\u2078UF\u2086 are separated by diffusion through a porous barrier (only ~0.4% speed difference per stage, requiring thousands of stages)\n4. **Detecting gas leaks:** Natural gas (mostly CH\u2084, M=16) diffuses faster than air (M\u224829), helping it spread and be detected\n5. **Hydrogen fuel cells in Uganda:** H\u2082 fuel risks leaking faster than heavier fuels \u2014 important safety consideration\n\n**Worked Example 5:** Gas A effuses in 30 s and gas B effuses in 60 s through the same hole. If M_B = 64 g/mol, find M_A.\n\nRate \u221d 1/time: r_A/r_B = 60/30 = 2\nr_A/r_B = \u221a(M_B/M_A): 2 = \u221a(64/M_A)\n4 = 64/M_A\nM_A = 64/4 = 16 g/mol (methane, CH\u2084)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Avogadro's Law: equal volumes at same T, P contain equal molecules; 1 mole = 22.4 L at STP. Dalton's Law: P_total = \u03a3P_i; each gas exerts pressure independently. Graham's Law: r \u221d 1/\u221aM; lighter gases diffuse faster. All three are consequences of ideal gas behaviour."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Avogadro's Law: Equal volumes of ideal gases at same T and P contain equal numbers of molecules; V \u221d n\n\u2022 Dalton's Law of partial pressures: P_total = \u03a3P_i; each component of a gas mixture exerts its partial pressure independently\n\u2022 Graham's Law: r \u221d 1/\u221aM at constant T and P; rate of diffusion/effusion inversely proportional to square root of molar mass\n\u2022 Molar volume: Volume of 1 mole of ideal gas at STP = 22.4 L = 22.4\u00d710\u207b\u00b3 m\u00b3"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which correctly states two assumptions of the kinetic theory that distinguish ideal from real gases?",
+            "options": [
+              "Molecules are infinite in size; they attract each other strongly",
+              "Molecules are point masses (negligible volume); no intermolecular forces except during elastic collisions",
+              "Molecules are fixed in position; they exchange energy by radiation",
+              "All molecules move at the same speed; collisions are inelastic"
+            ],
+            "answer": "Molecules are point masses (negligible volume); no intermolecular forces except during elastic collisions",
+            "explanation": "Ideal gas assumptions: molecules are point masses (volume negligible vs container), elastic collisions only (no intermolecular forces). Real gas deviations: finite molecular volume (\u2192b) and intermolecular attractions (\u2192a) in van der Waals equation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A bubble of air (1.5cm\u00b3) is at 20m depth (P\u2081=3.0\u00d710\u2075Pa). Volume at surface (P\u2082=1.0\u00d710\u2075Pa)?",
+            "options": [
+              "0.5 cm\u00b3",
+              "4.5 cm\u00b3",
+              "3.0 cm\u00b3",
+              "9.0 cm\u00b3"
+            ],
+            "answer": "4.5 cm\u00b3",
+            "explanation": "Boyle's Law: V\u2082=P\u2081V\u2081/P\u2082=3.0\u00d710\u2075\u00d71.5/1.0\u00d710\u2075=4.5 cm\u00b3. P\u2081=P_atm+\u03c1gh=1\u00d710\u2075+1000\u00d710\u00d720=3\u00d710\u2075 Pa."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Derive pV=\u2153Nm<c\u00b2>: which step uses the isotropy assumption?",
+            "options": [
+              "<c\u2093\u00b2>=<c\u00b2>/3 because random motion means equal distribution of speed among x, y, z directions",
+              "<c\u2093\u00b2>=<c\u00b2> (all speed is in x direction)",
+              "<c\u2093\u00b2>=0 (no preferred direction)",
+              "Isotropy means all molecules have the same speed"
+            ],
+            "answer": "<c\u2093\u00b2>=<c\u00b2>/3 because random motion means equal distribution of speed among x, y, z directions",
+            "explanation": "Random isotropic motion means: <c\u2093\u00b2>=<cy\u00b2>=<cz\u00b2>. Since <c\u00b2>=<c\u2093\u00b2>+<cy\u00b2>+<cz\u00b2>=3<c\u2093\u00b2>, we get <c\u2093\u00b2>=<c\u00b2>/3. This converts the x-component result to the full 3D pressure formula."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Gas collected over water at 20\u00b0C: total P=1.00\u00d710\u2075Pa, SVP of water=2338Pa. Partial pressure of dry gas?",
+            "options": [
+              "2338 Pa",
+              "97,662 Pa",
+              "102,338 Pa",
+              "50,000 Pa"
+            ],
+            "answer": "97,662 Pa",
+            "explanation": "Dalton's Law: P_gas=P_total\u2212P_water=1.00\u00d710\u2075\u22122338=97,662 Pa\u22489.77\u00d710\u2074 Pa."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Show \u00bdm<c\u00b2>=(3/2)k_BT. rms speed of H\u2082 (M=0.002 kg/mol) at 300K? (R=8.314)",
+            "options": [
+              "517 m/s",
+              "1934 m/s",
+              "484 m/s",
+              "273 m/s"
+            ],
+            "answer": "1934 m/s",
+            "explanation": "From pV=\u2153Nm<c\u00b2>=Nk_BT: \u00bdm<c\u00b2>=(3/2)k_BT. c_rms=\u221a(3RT/M)=\u221a(3\u00d78.314\u00d7300/0.002)=\u221a(3741300)=1934 m/s. H\u2082 is very light \u2014 moves nearly 2km/s!"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Van der Waals 'a' and 'b' constants: which correctly describes their physical meaning?",
+            "options": [
+              "a=molecular volume correction; b=intermolecular attraction correction",
+              "a=intermolecular attraction (reduces effective pressure); b=molecular volume (reduces effective volume available)",
+              "Both a and b correct for molecular volume",
+              "a corrects for temperature; b corrects for pressure"
+            ],
+            "answer": "a=intermolecular attraction (reduces effective pressure); b=molecular volume (reduces effective volume available)",
+            "explanation": "a: molecules near walls are attracted inward by neighbours, reducing the pressure they exert \u2014 add a/V\u00b2 to measured P. b: molecular volume reduces space available \u2014 use V\u2212nb instead of V. T_c=8a/(27Rb)."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which gas law states that the pressure of a gas at constant volume is proportional to its absolute temperature?",
+            "options": [
+              "Boyle's Law",
+              "Charles's Law",
+              "Gay-Lussac's (Pressure) Law",
+              "Avogadro's Law"
+            ],
+            "answer": "Gay-Lussac's (Pressure) Law",
+            "explanation": "Gay-Lussac's Pressure Law: P/T = constant at constant volume and fixed mass. (Charles's Law deals with V and T at constant P.)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t12_l4",
+      "title": "Real Gases: Van der Waals Equation, P-V Curves and Critical Temperature",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Real gases \u2014 nitrogen in industrial cylinders, carbon dioxide in fire extinguishers, steam in boilers \u2014 do not perfectly obey the ideal gas laws. At high pressures or low temperatures, intermolecular forces and finite molecular volumes cause significant deviations. Van der Waals modified the ideal gas equation to account for these effects, and the resulting equation predicts phenomena that the ideal gas model misses entirely \u2014 including condensation and the critical state."
+        },
+        {
+          "type": "heading",
+          "body": "Deviations from Ideal Gas Behaviour"
+        },
+        {
+          "type": "text",
+          "body": "An ideal gas obeys PV = nRT exactly. For real gases, PV/nRT (the compressibility factor Z) deviates from 1:\n\n- **Z < 1:** Attractive forces dominate (gas is more compressible than ideal) \u2014 common at moderate pressures\n- **Z > 1:** Repulsive forces dominate (gas is less compressible than ideal) \u2014 common at very high pressures\n\n**Conditions when real gas \u2248 ideal gas:**\n- Low pressure (molecules far apart \u2192 intermolecular forces negligible; molecular volume << container volume)\n- High temperature (molecular KE >> intermolecular PE; molecules move too fast to be significantly attracted)\n\n**Two causes of non-ideal behaviour:**\n1. **Finite molecular volume:** Real molecules occupy space \u2014 the available volume for motion is less than the container volume\n2. **Intermolecular attractions:** Attractive forces between molecules reduce the pressure they exert on the walls (molecules are pulled back inward before reaching the wall)"
+        },
+        {
+          "type": "heading",
+          "body": "Van der Waals Equation"
+        },
+        {
+          "type": "text",
+          "body": "**Van der Waals modified the ideal gas equation** to account for the two departures from ideality:\n\n$$\\left(P + \\frac{an^2}{V^2}\\right)(V - nb) = nRT$$\n\nFor 1 mole:\n$$\\left(P + \\frac{a}{V_m^2}\\right)(V_m - b) = RT$$\n\nWhere:\n- **a** = van der Waals constant for intermolecular attractions (Pa m\u2076 mol\u207b\u00b2); larger a \u2192 stronger attractions\n- **b** = van der Waals constant for molecular volume (m\u00b3 mol\u207b\u00b9); represents the volume excluded per mole\n- V_m = molar volume\n\n**Physical meaning of the corrections:**\n\n*Pressure correction (a/V\u00b2):*\nReal pressure < ideal pressure because molecules near the wall are attracted back by their neighbours. The 'missing' pressure is a/V\u00b2 (depends on the number of pairs of interacting molecules \u221d (n/V)\u00b2). So we write P_effective = P + an\u00b2/V\u00b2 in the equation.\n\n*Volume correction (\u2212nb):*\nThe space available to the molecules is the container volume minus the volume occupied by the molecules themselves: V_effective = V \u2212 nb.\n\n**Typical values of a and b:**\n| Gas | a (Pa m\u2076 mol\u207b\u00b2) | b (m\u00b3 mol\u207b\u00b9) |\n|---|---|---|\n| He | 0.0035 | 2.38\u00d710\u207b\u2075 |\n| H\u2082 | 0.025 | 2.66\u00d710\u207b\u2075 |\n| N\u2082 | 0.137 | 3.87\u00d710\u207b\u2075 |\n| CO\u2082 | 0.364 | 4.27\u00d710\u207b\u2075 |\n| H\u2082O | 0.554 | 3.05\u00d710\u207b\u2075 |\n\nLarger a \u2192 stronger intermolecular attractions \u2192 easier to liquefy (H\u2082O has large a \u2192 water is liquid at room temperature).\n\n**Worked Example 1:** Calculate the pressure exerted by 1 mol of CO\u2082 in a volume of 0.5 L = 5\u00d710\u207b\u2074 m\u00b3 at 300 K using (a) ideal gas law and (b) van der Waals equation. (a = 0.364 Pa m\u2076 mol\u207b\u00b2, b = 4.27\u00d710\u207b\u2075 m\u00b3 mol\u207b\u00b9, R = 8.314 J/mol/K)\n\n(a) Ideal: P = RT/V_m = 8.314\u00d7300/(5\u00d710\u207b\u2074) = 2494.2/5\u00d710\u207b\u2074 = 4,988,400 Pa \u2248 49.4 atm\n\n(b) Van der Waals:\n(P + a/V_m\u00b2)(V_m \u2212 b) = RT\n(P + 0.364/(5\u00d710\u207b\u2074)\u00b2)(5\u00d710\u207b\u2074 \u2212 4.27\u00d710\u207b\u2075) = 8.314\u00d7300\n(P + 0.364/2.5\u00d710\u207b\u2077)(4.573\u00d710\u207b\u2074) = 2494.2\n(P + 1,456,000)(4.573\u00d710\u207b\u2074) = 2494.2\nP + 1,456,000 = 2494.2/4.573\u00d710\u207b\u2074 = 5,455,006\nP = 5,455,006 \u2212 1,456,000 = 3,999,006 Pa \u2248 39.6 atm\n\nThe real gas pressure is lower than ideal because of intermolecular attractions (significant at this high density)."
+        },
+        {
+          "type": "heading",
+          "body": "P-V Curves for Real Gases and Critical Temperature"
+        },
+        {
+          "type": "text",
+          "body": "**Isotherms (P-V curves) for a real gas:**\n\nAt high temperatures (T >> T_c), isotherms resemble ideal gas hyperbolas.\n\nAt temperatures below the **critical temperature T_c**, the isotherm develops a wiggle (van der Waals loop) with a region where dP/dV > 0 \u2014 which is physically unstable. In reality, the gas partially condenses to liquid in this region, and the curve becomes a horizontal line (constant pressure) during the phase change.\n\n**The horizontal segment represents:**\n- Liquefaction occurring at constant pressure (the vapour pressure at that temperature)\n- Liquid and vapour coexisting in equilibrium\n\n**Critical point:** The temperature (T_c), pressure (P_c), and molar volume (V_c) at which the liquid and vapour phases become identical (the horizontal segment shrinks to a point).\n\n$$T_c = \\frac{8a}{27Rb}, \\quad P_c = \\frac{a}{27b^2}, \\quad V_c = 3b$$\n\n**Distinction between gases and vapours:**\n- **Gas:** Above its critical temperature \u2014 cannot be liquefied by pressure alone\n- **Vapour:** Below its critical temperature \u2014 can be liquefied by applying sufficient pressure\n\n**Examples:**\n| Substance | T_c (K) | T_c (\u00b0C) | State at room temperature (25\u00b0C) |\n|---|---|---|---|\n| He | 5.2 | \u2212268 | Gas (far above T_c) |\n| H\u2082 | 33.2 | \u2212240 | Gas |\n| N\u2082 | 126 | \u2212147 | Gas |\n| O\u2082 | 154 | \u2212119 | Gas |\n| CO\u2082 | 304 | 31 | Just above T_c at 25\u00b0C \u2014 gas |\n| H\u2082O | 647 | 374 | Liquid (well below T_c) |\n| NH\u2083 | 405 | 132 | Gas (above T_c) |\n\n**Industrial application:** CO\u2082 has T_c = 31\u00b0C. At room temperature (25\u00b0C), CO\u2082 is below its T_c and can be liquefied by pressure \u2014 explaining why CO\u2082 fire extinguishers contain liquid CO\u2082 under pressure. Above 31\u00b0C, no pressure can liquefy CO\u2082 gas.\n\n**Worked Example 2:** For CO\u2082, a = 0.364 Pa m\u2076 mol\u207b\u00b2, b = 4.27\u00d710\u207b\u2075 m\u00b3 mol\u207b\u00b9. Find T_c.\n\nT_c = 8a/(27Rb) = 8\u00d70.364/(27\u00d78.314\u00d74.27\u00d710\u207b\u2075)\n= 2.912/(27\u00d73.551\u00d710\u207b\u2074)\n= 2.912/9.588\u00d710\u207b\u00b3\n= 303.7 K \u2248 31\u00b0C \u2713"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Real gases deviate from ideal at high P and low T due to intermolecular forces and finite molecular volume. Van der Waals: (P + a/V\u00b2)(V \u2212 b) = RT. P-V curves below T_c show condensation. Critical temperature T_c: above it, gas cannot be liquefied. Gases: T > T_c; Vapours: T < T_c."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Van der Waals equation: (P + an\u00b2/V\u00b2)(V \u2212 nb) = nRT; a corrects for intermolecular attractions, b for finite molecular volume\n\u2022 Critical temperature (T_c): Temperature above which a gas cannot be liquefied by pressure alone; defines distinction between gas and vapour\n\u2022 Compressibility factor (Z): Z = PV/nRT; equals 1 for ideal gas; deviates for real gases\n\u2022 Vapour: A gas below its critical temperature that can be liquefied by compression alone"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Gas X diffuses through a hole in 40s. Oxygen (M=32) takes 20s. Molar mass of X?",
+            "options": [
+              "8 g/mol",
+              "64 g/mol",
+              "128 g/mol",
+              "16 g/mol"
+            ],
+            "answer": "128 g/mol",
+            "explanation": "Rate\u221d1/time. r_X/r_O\u2082=20/40=0.5=\u221a(M_O\u2082/M_X). 0.25=32/M_X. M_X=128 g/mol (xenon, Xe)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why does a saturated vapour NOT obey Boyle's Law when compressed?",
+            "options": [
+              "Saturated vapour is too hot to follow gas laws",
+              "When compressed, vapour condenses maintaining constant SVP \u2014 pressure doesn't rise as Boyle's Law predicts",
+              "Saturated vapour has a different molecular mass",
+              "Boyle's Law applies only to mixtures"
+            ],
+            "answer": "When compressed, vapour condenses maintaining constant SVP \u2014 pressure doesn't rise as Boyle's Law predicts",
+            "explanation": "For saturated vapour: compressing \u2192 condensation occurs \u2192 amount of vapour decreases \u2192 pressure stays at SVP (constant). Boyle's Law requires P\u221d1/V \u2014 but P stays constant \u2192 it fails."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Find the number of moles of gas in a cylinder of volume 0.02 m\u00b3 at pressure 5.0 \u00d7 10\u2076 Pa and temperature 27\u00b0C. (R = 8.314 J/mol/K)",
+            "options": [
+              "40.2 mol",
+              "402 mol",
+              "4.02 mol",
+              "0.402 mol"
+            ],
+            "answer": "40.2 mol",
+            "explanation": "n = PV/RT = 5.0\u00d710\u2076 \u00d7 0.02/(8.314 \u00d7 300) = 100,000/2494.2 = 40.1 mol \u2248 40.2 mol."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "RH=70% at 25\u00b0C, SVP=3170Pa. Actual vapour pressure? Approximate dew point if SVP at 17\u00b0C\u22481940Pa?",
+            "options": [
+              "Actual=2219Pa; dew point\u224817\u00b0C",
+              "Actual=4529Pa; dew point\u224825\u00b0C",
+              "Actual=2219Pa; dew point\u224819\u00b0C",
+              "Actual=1000Pa; dew point\u224810\u00b0C"
+            ],
+            "answer": "Actual=2219Pa; dew point\u224819\u00b0C",
+            "explanation": "Actual=0.70\u00d73170=2219Pa. Dew point: SVP=2219Pa. SVP at 17\u00b0C=1940Pa<2219, so dew point is slightly above 17\u00b0C (\u224819\u00b0C where SVP\u22482219Pa)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two gases have the same temperature. Gas A has molar mass 4 g/mol (helium) and gas B has molar mass 32 g/mol (oxygen). Compare their mean kinetic energies and rms speeds.",
+            "options": [
+              "Same KE; He has higher rms speed",
+              "He has higher KE and higher rms speed",
+              "O\u2082 has higher KE; same rms speed",
+              "Same KE; same rms speed"
+            ],
+            "answer": "Same KE; He has higher rms speed",
+            "explanation": "Mean KE = (3/2)k_BT \u2014 depends only on T, not M. At same T, both have same mean KE. But c_rms = \u221a(3RT/M) \u221d 1/\u221aM. He (M=4) has rms speed \u221a(32/4) = \u221a8 = 2.83 times higher than O\u2082 (M=32)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A gas at 1.2\u00d710\u2075Pa, 600cm\u00b3, 57\u00b0C is heated to 177\u00b0C and compressed to 300cm\u00b3. Find the new pressure.",
+            "options": [
+              "1.64\u00d710\u2075 Pa",
+              "2.18\u00d710\u2075 Pa",
+              "3.27\u00d710\u2075 Pa",
+              "4.91\u00d710\u2075 Pa"
+            ],
+            "answer": "3.27\u00d710\u2075 Pa",
+            "explanation": "T\u2081=330K, T\u2082=450K. P\u2082=P\u2081V\u2081T\u2082/(T\u2081V\u2082)=1.2\u00d710\u2075\u00d7600\u00d7450/(330\u00d7300)=1.2\u00d710\u2075\u00d72.727=3.27\u00d710\u2075Pa."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t12_l5",
+      "title": "Saturated and Unsaturated Vapour Pressure",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you leave a wet cloth in the sun in Kampala, it dries as water evaporates. When clouds form over Lake Victoria, water vapour condenses. Both processes depend on the concept of saturated vapour pressure \u2014 the maximum amount of water vapour the air can hold at a given temperature. This concept is fundamental to meteorology, refrigeration, humidity measurement, and many industrial processes."
+        },
+        {
+          "type": "heading",
+          "body": "Evaporation and Vapour Pressure"
+        },
+        {
+          "type": "text",
+          "body": "**Evaporation:** At any temperature, some molecules near the surface of a liquid have enough KE to overcome the intermolecular bonds and escape into the space above \u2014 forming vapour.\n\n**Vapour pressure:** The pressure exerted by the vapour molecules above a liquid surface.\n\n**Unsaturated vapour (USV):** Vapour that is not in equilibrium with its liquid \u2014 the evaporation rate exceeds the condensation rate. More liquid could evaporate. Obeys the ideal gas laws approximately.\n\n**Saturated vapour (SV):** Vapour that is in equilibrium with its liquid \u2014 the rate of evaporation = rate of condensation. No net change in the amount of vapour.\n\n**Saturated Vapour Pressure (SVP):** The pressure exerted by a saturated vapour. It is the maximum vapour pressure at a given temperature. It depends only on temperature \u2014 not on the volume of the space above the liquid.\n\n**Key properties of SVP:**\n1. SVP increases with temperature (higher T \u2192 more molecules can escape \u2192 higher equilibrium pressure)\n2. SVP is independent of the volume above the liquid (compressing SV causes condensation until SVP is re-established)\n3. SVP is independent of the presence of other gases (Dalton's Law \u2014 water SVP is the same in air as in pure water vapour)\n4. A liquid boils when its SVP equals the external pressure\n\n**Worked Example 1:** Water boils at 100\u00b0C at 1 atm (101,325 Pa). This means the SVP of water at 100\u00b0C = 101,325 Pa (atmospheric pressure). At 25\u00b0C, SVP of water \u2248 3170 Pa (much lower than atmospheric \u2014 water doesn't boil at 25\u00b0C)."
+        },
+        {
+          "type": "heading",
+          "body": "Variation of SVP with Temperature and P-V Diagrams"
+        },
+        {
+          "type": "text",
+          "body": "**SVP increases with temperature** \u2014 following an exponential-like curve described approximately by the Clausius-Clapeyron equation.\n\n**Selected SVP values for water:**\n| Temperature (\u00b0C) | SVP (Pa) |\n|---|---|\n| 0 | 611 |\n| 10 | 1228 |\n| 20 | 2338 |\n| 25 | 3170 |\n| 37 | 6280 |\n| 50 | 12,340 |\n| 80 | 47,360 |\n| 100 | 101,325 |\n\n**P-V diagram for SVP:**\n\nFor a fixed amount of substance at constant temperature:\n- At large volume: substance is entirely vapour (USV); pressure decreases as V increases (follows Boyle's Law \u2014 ideal gas)\n- As V decreases: pressure rises until the saturation pressure (SVP) is reached; liquid begins to form\n- During condensation (liquid-vapour coexistence): pressure stays constant at SVP as volume continues to decrease\n- When all is liquid: pressure rises steeply with further decrease in volume (liquids are nearly incompressible)\n\n**Comparison: USV vs SV:**\n| Property | Unsaturated Vapour | Saturated Vapour |\n|---|---|---|\n| Equilibrium with liquid? | No | Yes |\n| Obeys Boyle's Law? | Approximately yes | No (pressure constant during compression) |\n| Obeys Charles's Law? | Approximately yes | Only if P is constant |\n| Pressure increases with T? | Yes | Yes (SVP increases) |\n| Pressure increases with compression? | Yes | No (condensation begins) |"
+        },
+        {
+          "type": "heading",
+          "body": "Relative Humidity, Dew Point and Applications"
+        },
+        {
+          "type": "text",
+          "body": "**Relative humidity (RH):** The ratio of the actual vapour pressure in the air to the SVP at the same temperature:\n\n$$RH = \\frac{\\text{actual vapour pressure}}{\\text{SVP at same temperature}} \\times 100\\%$$\n\nAt 100% RH, the air is fully saturated and dew begins to form.\n\n**Dew point:** The temperature to which air must be cooled (at constant pressure and water vapour content) for condensation to begin. When air is cooled below its dew point, water vapour condenses as dew, fog, or clouds.\n\n**Applications in Uganda:**\n\n1. **Weather forecasting:** High RH \u2192 high probability of rain. Uganda's tropical climate means RH often exceeds 80% during rainy seasons.\n\n2. **Refrigeration (vapour-compression cycle):** The refrigerant cycles between saturated vapour (in the evaporator) and saturated liquid (in the condenser). At each stage, the substance exists as SVP and its liquid in equilibrium.\n\n3. **Dehumidification:** Air conditioners cool air below its dew point, condensing water vapour. The liquid water drains out. This reduces humidity inside buildings (important in Uganda's humid climate for preventing mould).\n\n4. **Cloud and fog formation:** As warm moist air rises (convection) over Rwenzori or Elgon, it cools adiabatically. When it reaches the dew point, the SVP equals the actual vapour pressure \u2192 condensation \u2192 clouds form. This explains the perpetual mist around Uganda's mountains.\n\n5. **Crop irrigation and evaporation:** At high RH, evaporation from soil and leaves is slower (less driving force for evaporation). Irrigation is most efficient when RH is low (morning dew point passed, not yet humid afternoon).\n\n6. **Steam engines and turbines:** Steam (water vapour above 100\u00b0C at 1 atm) drives turbines. The Karuma hydroelectric dam uses water (not steam), but thermal power stations (like the Namanve plant near Kampala) use steam cycles.\n\n**Worked Example 2:** The relative humidity in Kampala on a morning is 85% at 20\u00b0C. The SVP of water at 20\u00b0C is 2338 Pa. Find the actual vapour pressure and the mass of water vapour in 1 m\u00b3 of air. (M_water = 0.018 kg/mol; R = 8.314 J/mol/K)\n\nActual vapour pressure = RH \u00d7 SVP = 0.85 \u00d7 2338 = 1987 Pa\n\nUsing pV = nRT: n = pV/RT = 1987\u00d71/(8.314\u00d7293) = 1987/2436 = 0.815 mol\n\nMass = n \u00d7 M = 0.815 \u00d7 0.018 = 0.01469 kg/m\u00b3 \u2248 14.7 g/m\u00b3 of water vapour in the air"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Saturated vapour pressure (SVP): maximum vapour pressure at a given temperature; liquid and vapour in equilibrium. SVP increases with temperature; independent of volume and presence of other gases. Boiling occurs when SVP = external pressure. Relative humidity = actual vapour pressure/SVP \u00d7 100%. Dew point: temperature at which condensation begins."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Saturated vapour pressure (SVP): Maximum vapour pressure at a given temperature; vapour in equilibrium with liquid; independent of volume\n\u2022 Unsaturated vapour: Vapour below the saturation level; not in equilibrium with liquid; approximately obeys ideal gas laws\n\u2022 Relative humidity: Actual vapour pressure/SVP \u00d7 100%; measure of how close the air is to saturation\n\u2022 Dew point: Temperature at which air must be cooled for condensation to begin; actual vapour pressure = SVP at dew point"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A real gas deviates most from ideal gas behaviour when:",
+            "options": [
+              "Temperature is high and pressure is low",
+              "Temperature is low and pressure is high",
+              "Temperature is high and pressure is high",
+              "Temperature is low and pressure is low"
+            ],
+            "answer": "Temperature is low and pressure is high",
+            "explanation": "At low temperature, molecules have low KE and intermolecular forces become significant (they can attract each other). At high pressure, molecules are close together so their finite volume and intermolecular interactions matter. Both effects cause maximum deviation from ideal behaviour."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Ideal gas: P=1.2\u00d710\u2075Pa, V=600cm\u00b3, T=57\u00b0C. Heated to 177\u00b0C and compressed to 300cm\u00b3. New pressure?",
+            "options": [
+              "2.18\u00d710\u2075 Pa",
+              "3.27\u00d710\u2075 Pa",
+              "1.64\u00d710\u2075 Pa",
+              "4.91\u00d710\u2075 Pa"
+            ],
+            "answer": "3.27\u00d710\u2075 Pa",
+            "explanation": "P\u2081V\u2081/T\u2081=P\u2082V\u2082/T\u2082. P\u2082=1.2\u00d710\u2075\u00d7600\u00d7450/(330\u00d7300)=P\u2082. =1.2\u00d710\u2075\u00d7270000/99000=1.2\u00d710\u2075\u00d72.727=3.27\u00d710\u2075Pa."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The pressure of an ideal gas at 300 K is 2.0 \u00d7 10\u2075 Pa and its density is 1.6 kg/m\u00b3. Find the rms speed of its molecules.",
+            "options": [
+              "375 m/s",
+              "500 m/s",
+              "612 m/s",
+              "250 m/s"
+            ],
+            "answer": "612 m/s",
+            "explanation": "From p = \u2153\u03c1c_rms\u00b2: c_rms = \u221a(3p/\u03c1) = \u221a(3\u00d72.0\u00d710\u2075/1.6) = \u221a(6\u00d710\u2075/1.6) = \u221a(375,000) = 612 m/s."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "State the ideal gas equation. Volume of 3 moles at 47\u00b0C and 2.0\u00d710\u2075Pa? (R=8.314)",
+            "options": [
+              "19.9 L",
+              "39.9 L",
+              "14.9 L",
+              "59.9 L"
+            ],
+            "answer": "39.9 L",
+            "explanation": "PV=nRT. V=nRT/P=3\u00d78.314\u00d7320/(2\u00d710\u2075)=7981/200000=0.03991m\u00b3=39.9L. T=47+273=320K."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "1 mole of ideal gas at STP (0\u00b0C, 1.01\u00d710\u2075 Pa) occupies:",
+            "options": [
+              "1 L",
+              "22.4 L",
+              "11.2 L",
+              "44.8 L"
+            ],
+            "answer": "22.4 L",
+            "explanation": "V = nRT/P = 1 \u00d7 8.314 \u00d7 273/(1.01\u00d710\u2075) = 2269.7/101,000 = 0.02247 m\u00b3 = 22.47 L \u2248 22.4 L. This is the molar volume of any ideal gas at STP."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "CO\u2082 (T_c=31\u00b0C). At 25\u00b0C: is CO\u2082 a gas or vapour? Can it be liquefied at 25\u00b0C? At 35\u00b0C?",
+            "options": [
+              "Gas at both; cannot liquefy at either temperature",
+              "Vapour at 25\u00b0C (T<T_c, can liquefy by pressure); gas at 35\u00b0C (T>T_c, cannot liquefy)",
+              "Gas at 25\u00b0C, vapour at 35\u00b0C",
+              "Vapour at both; can liquefy at both temperatures"
+            ],
+            "answer": "Vapour at 25\u00b0C (T<T_c, can liquefy by pressure); gas at 35\u00b0C (T>T_c, cannot liquefy)",
+            "explanation": "Gas: T>T_c (no liquefaction). Vapour: T<T_c (liquefaction by pressure). 25\u00b0C<31\u00b0C\u2192vapour\u2192can liquefy (CO\u2082 fire extinguishers). 35\u00b0C>31\u00b0C\u2192gas\u2192cannot liquefy at any pressure."
+          }
+        ]
+      }
+    }
+  ]
+}

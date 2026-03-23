@@ -1,0 +1,759 @@
+{
+  "topic_id": "physics_s5_t1",
+  "topic_title": "Measurement and Dimensions of Physical Quantities",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t1_l1",
+      "title": "Physical Quantities, Units and Scientific Notation",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Physics is the science of measurement. Before we can understand any physical phenomenon \u2014 whether it is the speed of a boda-boda, the temperature of Lake Victoria, or the current flowing through a torch bulb \u2014 we must first be able to measure it accurately. In this lesson, we explore what physical quantities are, how we classify them, and how to write measurements in a form that scientists everywhere can understand."
+        },
+        {
+          "type": "heading",
+          "body": "What is a Physical Quantity?"
+        },
+        {
+          "type": "text",
+          "body": "A physical quantity is any property of matter or energy that can be measured and expressed as a number with a unit. Examples include length, mass, time, temperature, electric current, velocity, force, and energy.\n\nNot everything in physics is a physical quantity \u2014 qualities like beauty or taste are not physical quantities because they cannot be measured with an instrument.\n\nPhysical quantities are divided into two main categories:\n\n**Fundamental (Base) Quantities** \u2014 These are quantities that cannot be defined in terms of other quantities. The International System of Units (SI) recognises seven fundamental quantities:\n\n| Fundamental Quantity | SI Unit | Symbol |\n|---|---|---|\n| Length | metre | m |\n| Mass | kilogram | kg |\n| Time | second | s |\n| Electric current | ampere | A |\n| Temperature | kelvin | K |\n| Amount of substance | mole | mol |\n| Luminous intensity | candela | cd |\n\n**Derived Quantities** \u2014 These are quantities obtained by combining fundamental quantities through multiplication or division. For example:\n- Speed = distance \u00f7 time \u2192 unit: m/s (or m s\u207b\u00b9)\n- Force = mass \u00d7 acceleration \u2192 unit: kg m s\u207b\u00b2 (called the newton, N)\n- Energy = force \u00d7 distance \u2192 unit: kg m\u00b2 s\u207b\u00b2 (called the joule, J)\n- Pressure = force \u00f7 area \u2192 unit: kg m\u207b\u00b9 s\u207b\u00b2 (called the pascal, Pa)"
+        },
+        {
+          "type": "heading",
+          "body": "SI Prefixes and Scientific Notation"
+        },
+        {
+          "type": "text",
+          "body": "Physical quantities can range from extremely small (the size of an atom, about 0.0000000001 m) to extremely large (the distance to the sun, about 150,000,000,000 m). Writing these as ordinary numbers is inconvenient and error-prone. We use two tools to handle this:\n\n**SI Prefixes** are standard multipliers attached to unit symbols:\n\n| Prefix | Symbol | Multiplier |\n|---|---|---|\n| tera | T | 10\u00b9\u00b2 |\n| giga | G | 10\u2079 |\n| mega | M | 10\u2076 |\n| kilo | k | 10\u00b3 |\n| milli | m | 10\u207b\u00b3 |\n| micro | \u03bc | 10\u207b\u2076 |\n| nano | n | 10\u207b\u2079 |\n| pico | p | 10\u207b\u00b9\u00b2 |\n\nExample: 0.000005 m = 5 \u00d7 10\u207b\u2076 m = 5 \u03bcm (5 micrometres)\n\n**Scientific Notation** expresses any number in the form A \u00d7 10\u207f, where 1 \u2264 A < 10 and n is an integer.\n\nExamples:\n- 150,000,000,000 m = 1.5 \u00d7 10\u00b9\u00b9 m\n- 0.00000000001 m = 1.0 \u00d7 10\u207b\u00b9\u2070 m\n- 9,460,000,000,000,000 m (one light-year) = 9.46 \u00d7 10\u00b9\u2075 m\n\n**Worked Example 1:** The mass of an electron is 0.000000000000000000000000000000911 kg. Express this in scientific notation.\n\nSolution: 0.000000000000000000000000000000911 kg = 9.11 \u00d7 10\u207b\u00b3\u00b9 kg\n\n**Worked Example 2:** A radio transmitter broadcasts at a frequency of 98,000,000 Hz. Express this using an appropriate prefix.\n\nSolution: 98,000,000 Hz = 9.8 \u00d7 10\u2077 Hz = 98 MHz (98 megahertz)"
+        },
+        {
+          "type": "heading",
+          "body": "Significant Figures"
+        },
+        {
+          "type": "text",
+          "body": "When we make measurements, we must report them with the correct number of significant figures (s.f.) \u2014 digits that carry meaning about the precision of the measurement.\n\n**Rules for counting significant figures:**\n1. All non-zero digits are significant. (345 has 3 s.f.)\n2. Zeros between non-zero digits are significant. (3005 has 4 s.f.)\n3. Trailing zeros after a decimal point are significant. (3.50 has 3 s.f.)\n4. Leading zeros are NOT significant. (0.0045 has 2 s.f.)\n5. Trailing zeros in a whole number are ambiguous \u2014 use scientific notation. (3500 could be 2, 3, or 4 s.f.; write 3.5 \u00d7 10\u00b3 for 2 s.f.)\n\n**Rules for calculations:**\n- For multiplication and division: the answer has the same number of s.f. as the measurement with the fewest s.f.\n- For addition and subtraction: the answer has the same number of decimal places as the measurement with the fewest decimal places.\n\n**Worked Example 3:** A rectangular plot of land measures 45.6 m \u00d7 12 m. Calculate its area to the correct number of significant figures.\n\nSolution: Area = 45.6 \u00d7 12 = 547.2 m\u00b2\n12 has 2 s.f., so the answer should be 2 s.f.: Area = 550 m\u00b2 = 5.5 \u00d7 10\u00b2 m\u00b2\n\n**Worked Example 4:** A student measures two lengths as 23.45 cm and 1.2 cm and adds them. What should the answer be?\n\nSolution: 23.45 + 1.2 = 24.65 cm\n1.2 has 1 decimal place, so the answer = 24.6 cm (1 decimal place)"
+        },
+        {
+          "type": "heading",
+          "body": "Interconversion of Units"
+        },
+        {
+          "type": "text",
+          "body": "In Uganda, you may encounter measurements in non-SI units \u2014 distances in miles (on old road signs), land in acres, temperatures in Fahrenheit (on some thermometers). A physicist must be able to convert between unit systems.\n\n**Method:** Use conversion factors as fractions equal to 1.\n\nFor example, since 1 km = 1000 m, the conversion factor is (1000 m / 1 km) = 1.\n\n**Worked Example 5:** A car travels 120 km/h on the Kampala-Jinja highway. Convert this to m/s.\n\nSolution:\n120 km/h \u00d7 (1000 m / 1 km) \u00d7 (1 h / 3600 s)\n= 120 \u00d7 1000 / 3600 m/s\n= 33.3 m/s\n\n**Worked Example 6:** The area of a farm is 5.0 acres. Convert to m\u00b2. (1 acre = 4047 m\u00b2)\n\nSolution: 5.0 acres \u00d7 (4047 m\u00b2 / 1 acre) = 20235 m\u00b2 \u2248 2.0 \u00d7 10\u2074 m\u00b2\n\n**Worked Example 7:** A container holds 3.5 litres of water. What is this in m\u00b3? (1 litre = 10\u207b\u00b3 m\u00b3)\n\nSolution: 3.5 \u00d7 10\u207b\u00b3 m\u00b3"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Physical quantities are classified as fundamental (7 base quantities in SI) or derived (combinations of base quantities). Scientific notation and SI prefixes allow us to express very large or small numbers conveniently. Significant figures indicate the precision of a measurement, and conversion factors allow us to move between different units."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Physical quantity: A property of matter or energy that can be measured and expressed as a number with a unit\n\u2022 Fundamental quantity: A physical quantity that cannot be defined in terms of other quantities; one of the 7 SI base quantities\n\u2022 Derived quantity: A physical quantity defined by an equation combining fundamental quantities\n\u2022 Scientific notation: A way of expressing numbers in the form A \u00d7 10\u207f where 1 \u2264 A < 10\n\u2022 Significant figures: Digits in a measurement that carry meaningful information about its precision"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which of the following is a fundamental (base) quantity in the SI system?",
+            "options": [
+              "Force",
+              "Velocity",
+              "Electric current",
+              "Pressure"
+            ],
+            "answer": "Electric current",
+            "explanation": "Electric current (measured in amperes, A) is one of the seven SI base quantities. Force, velocity, and pressure are all derived quantities."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "How many significant figures are in the number 0.00450?",
+            "options": [
+              "5",
+              "3",
+              "6",
+              "2"
+            ],
+            "answer": "3",
+            "explanation": "In 0.00450, the leading zeros are not significant. The significant figures are 4, 5, and 0 (the trailing zero after the 5 is significant because it appears after the decimal point). So there are 3 significant figures."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What are the dimensions of momentum?",
+            "options": [
+              "MLT\u207b\u00b2",
+              "ML\u00b2T\u207b\u00b9",
+              "MLT\u207b\u00b9",
+              "ML\u207b\u00b9T\u207b\u00b9"
+            ],
+            "answer": "MLT\u207b\u00b9",
+            "explanation": "Momentum p = mv. [p] = [m][v] = M \u00d7 LT\u207b\u00b9 = MLT\u207b\u00b9"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What are the dimensions of pressure?",
+            "options": [
+              "MLT\u207b\u00b2",
+              "ML\u207b\u00b9T\u207b\u00b2",
+              "ML\u00b2T\u207b\u00b2",
+              "ML\u207b\u00b2T\u207b\u00b9"
+            ],
+            "answer": "ML\u207b\u00b9T\u207b\u00b2",
+            "explanation": "Pressure P = Force/Area. [P] = MLT\u207b\u00b2 / L\u00b2 = ML\u207b\u00b9T\u207b\u00b2"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A vernier calliper has a main scale reading of 12 mm and the 6th vernier division aligns with a main scale division. What is the reading? (vernier reads to 0.1 mm)",
+            "options": [
+              "12.6 mm",
+              "12.06 mm",
+              "1.26 mm",
+              "126 mm"
+            ],
+            "answer": "12.6 mm",
+            "explanation": "Reading = main scale + vernier = 12 mm + (6 \u00d7 0.1) mm = 12 + 0.6 = 12.6 mm"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Which of the following equations is dimensionally consistent? (where s = displacement, u = initial velocity, t = time, a = acceleration, F = force, m = mass)",
+            "options": [
+              "s = ut\u00b2 + \u00bda",
+              "F = ma\u00b2",
+              "s = ut + \u00bdat\u00b2",
+              "u = s + at"
+            ],
+            "answer": "s = ut + \u00bdat\u00b2",
+            "explanation": "For s = ut + \u00bdat\u00b2: [ut] = LT\u207b\u00b9 \u00d7 T = L; [at\u00b2] = LT\u207b\u00b2 \u00d7 T\u00b2 = L; [s] = L. All terms have dimension L. \u2713\nOption A: [ut\u00b2] = LT; [a] = LT\u207b\u00b2 \u2014 inconsistent. Option B: [ma\u00b2] = MLT\u207b\u2074 \u2260 MLT\u207b\u00b2 \u2014 wrong. Option D: [s] = L but [at] = LT\u207b\u00b9 \u2014 inconsistent."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t1_l2",
+      "title": "Measuring Instruments and Accuracy",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "A measurement is only as good as the instrument used to make it. In this lesson, we examine the key measuring instruments you will use throughout your A-Level Physics course \u2014 the ruler, vernier callipers, and micrometer screw gauge \u2014 and learn how to use them correctly, record readings to the right number of decimal places, and minimise errors."
+        },
+        {
+          "type": "heading",
+          "body": "Accuracy, Precision, and Resolution"
+        },
+        {
+          "type": "text",
+          "body": "Before discussing instruments, we need three important concepts:\n\n**Accuracy** refers to how close a measurement is to the true value. A measurement can be precise but not accurate (like a watch that is consistently 10 minutes fast \u2014 it gives precise readings, but they are all wrong by the same amount).\n\n**Precision** refers to how consistent repeated measurements are. Precise measurements have small random scatter.\n\n**Resolution** (or least count) is the smallest difference that an instrument can detect. It determines how many decimal places you should use when recording readings.\n\nExamples of resolution:\n- Metre rule: 1 mm = 0.001 m \u2192 record to nearest mm (e.g., 23.5 cm)\n- Vernier callipers: 0.1 mm = 0.01 cm \u2192 record to nearest 0.1 mm\n- Micrometer screw gauge: 0.01 mm \u2192 record to nearest 0.01 mm\n- Digital balance (0.01 g resolution): record to nearest 0.01 g"
+        },
+        {
+          "type": "heading",
+          "body": "Vernier Callipers"
+        },
+        {
+          "type": "text",
+          "body": "Vernier callipers measure lengths to a precision of 0.1 mm (or 0.02 mm for some models). They are used for measuring:\n- External dimensions (diameter of a cylindrical rod)\n- Internal dimensions (inside diameter of a tube)\n- Depths (depth of a hole)\n\n**How to read a vernier calliper (standard 0.1 mm vernier):**\n\nStep 1: Read the main scale \u2014 note the last millimetre mark before (to the left of) the zero mark of the vernier scale. This gives the reading to the nearest millimetre.\n\nStep 2: Read the vernier scale \u2014 find which vernier division lines up exactly with a main scale division. Multiply this vernier reading by 0.1 mm.\n\nStep 3: Add the two readings.\n\n**Worked Example 1:** The main scale reads 2.3 cm (i.e., 23 mm). The 4th vernier division aligns with a main scale mark. What is the reading?\n\nSolution:\nMain scale: 23 mm\nVernier: 4 \u00d7 0.1 mm = 0.4 mm\nTotal: 23.4 mm = 2.34 cm\n\n**Zero error:** Before measuring, close the jaws and check if the zero on the vernier aligns with the zero on the main scale. If not, note the zero error and subtract it from all readings.\n- If the vernier zero is to the right of the main zero: positive zero error (+)\n- If to the left: negative zero error (\u2212)\n\n**Corrected reading = Raw reading \u2212 Zero error**\n\nWorked Example 2: A vernier calliper has a zero error of +0.2 mm. A rod diameter reads 15.6 mm. What is the true diameter?\n\nSolution: True diameter = 15.6 \u2212 0.2 = 15.4 mm"
+        },
+        {
+          "type": "heading",
+          "body": "Micrometer Screw Gauge"
+        },
+        {
+          "type": "text",
+          "body": "The micrometer screw gauge measures lengths to a precision of 0.01 mm. It uses a screw with a pitch (distance advanced per turn) of 0.5 mm, and the thimble is divided into 50 divisions, giving 0.5/50 = 0.01 mm per division.\n\n**How to read a micrometer:**\n\nStep 1: Read the main scale (sleeve) \u2014 note the reading in mm, including any visible 0.5 mm mark.\n\nStep 2: Read the thimble scale \u2014 read the thimble division that aligns with the horizontal line on the sleeve.\n\nStep 3: Add the readings: Total = sleeve reading + (thimble reading \u00d7 0.01 mm)\n\n**Worked Example 3:** The sleeve reads 7.5 mm (the 0.5 mark is visible). The thimble reads 32. What is the measurement?\n\nSolution:\nSleeve: 7.5 mm\nThimble: 32 \u00d7 0.01 = 0.32 mm\nTotal: 7.5 + 0.32 = 7.82 mm\n\n**Worked Example 4:** A micrometer has a zero error of \u22120.03 mm. It reads 4.56 mm when measuring a wire. What is the true diameter?\n\nSolution: True diameter = 4.56 \u2212 (\u22120.03) = 4.56 + 0.03 = 4.59 mm\n\n**Practical note:** Always use the ratchet (the knurled knob at the end) to tighten the micrometer \u2014 never the thimble directly. The ratchet slips when the correct pressure is applied, preventing damage to the object and ensuring consistent readings."
+        },
+        {
+          "type": "heading",
+          "body": "Sources of Error and How to Minimise Them"
+        },
+        {
+          "type": "text",
+          "body": "All measurements contain some degree of error. Understanding these errors allows us to take steps to minimise them.\n\n**Types of error:**\n\n**1. Systematic errors** \u2014 errors that are consistent and always in the same direction (always too high or always too low). They affect accuracy.\n- Examples: zero error on instruments, a ruler with a worn end, parallax error when reading a scale at an angle\n- How to minimise: calibrate instruments before use, check for and correct zero errors, always read scales at eye level (perpendicular to scale)\n\n**2. Random errors** \u2014 errors that vary unpredictably from one measurement to the next. They affect precision.\n- Examples: slight variations in how you position an object, vibrations, fluctuations in temperature\n- How to minimise: take multiple readings and calculate the mean; use more sensitive instruments\n\n**Parallax error** occurs when you read a scale from an angle. For example, reading a thermometer from the side gives a different value than reading it straight on. Always position your eye directly in line with the scale you are reading.\n\n**Calculating percentage error:**\nPercentage error = (Absolute error / Measured value) \u00d7 100%\n\nWorked Example 5: A student measures the length of a pencil as 14.5 cm. The true length is 14.8 cm. Calculate the percentage error.\n\nAbsolute error = |14.5 \u2212 14.8| = 0.3 cm\nPercentage error = (0.3 / 14.8) \u00d7 100% = 2.03% \u2248 2.0%"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "The resolution of an instrument determines the number of decimal places in a reading. Vernier callipers read to 0.1 mm and micrometers to 0.01 mm. Systematic errors are consistent and can be corrected; random errors are unpredictable and minimised by averaging multiple readings. Zero errors must be identified and subtracted from all readings."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Accuracy: How close a measurement is to the true value\n\u2022 Precision: How consistent repeated measurements are with each other\n\u2022 Resolution: The smallest difference an instrument can detect\n\u2022 Zero error: A systematic error where an instrument does not read zero when it should\n\u2022 Systematic error: An error that is consistently in the same direction, affecting accuracy\n\u2022 Random error: An error that varies unpredictably between measurements, affecting precision\n\u2022 Parallax error: The apparent change in a reading caused by viewing a scale from an angle"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A micrometer screw gauge has a zero error of +0.03 mm. When measuring the diameter of a wire, it reads 1.47 mm. What is the true diameter?",
+            "options": [
+              "1.50 mm",
+              "1.44 mm",
+              "1.47 mm",
+              "1.74 mm"
+            ],
+            "answer": "1.44 mm",
+            "explanation": "True diameter = Measured reading \u2212 Zero error = 1.47 \u2212 0.03 = 1.44 mm"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The kinetic energy E of a body is suspected to depend on mass m and velocity v such that E = kmavc. By dimensional analysis, what are the values of a and c?",
+            "options": [
+              "a = 1, c = 2",
+              "a = 2, c = 1",
+              "a = 1, c = 1",
+              "a = 2, c = 2"
+            ],
+            "answer": "a = 1, c = 2",
+            "explanation": "[E] = ML\u00b2T\u207b\u00b2. [mavc] = M\u1d43(LT\u207b\u00b9)\u1d9c = M\u1d43 L\u1d9cT\u207b\u1d9c. Equating: M: 1=a; T: \u22122=\u2212c so c=2; L: 2=c=2 \u2713. So a=1, c=2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A student calculates the volume of a cylinder: radius = (2.50 \u00b1 0.05) cm, height = (10.0 \u00b1 0.2) cm. What is the percentage uncertainty in the calculated volume?",
+            "options": [
+              "2.0%",
+              "4.0%",
+              "6.0%",
+              "8.0%"
+            ],
+            "answer": "6.0%",
+            "explanation": "V = \u03c0r\u00b2h. \u0394V/V = 2(\u0394r/r) + \u0394h/h = 2(0.05/2.50) + (0.2/10.0) = 2(0.02) + 0.02 = 0.04 + 0.02 = 0.06 = 6%"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The dimensions of the gravitational constant G are:",
+            "options": [
+              "M\u207b\u00b9L\u00b3T\u207b\u00b2",
+              "MLT\u207b\u00b2",
+              "ML\u00b3T\u207b\u00b2",
+              "M\u207b\u00b9L\u00b2T\u207b\u00b2"
+            ],
+            "answer": "M\u207b\u00b9L\u00b3T\u207b\u00b2",
+            "explanation": "From F = Gm\u2081m\u2082/r\u00b2: G = Fr\u00b2/m\u00b2 = (MLT\u207b\u00b2)(L\u00b2)/M\u00b2 = ML\u00b3T\u207b\u00b2/M\u00b2 = M\u207b\u00b9L\u00b3T\u207b\u00b2"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The frequency f of oscillation of a mass m on a spring of force constant k (dimensions MT\u207b\u00b2) is given by f = (1/2\u03c0)\u221a(k/m). What are the dimensions of f?",
+            "options": [
+              "T\u207b\u00b2",
+              "T\u207b\u00b9",
+              "T",
+              "Dimensionless"
+            ],
+            "answer": "T\u207b\u00b9",
+            "explanation": "[k/m] = MT\u207b\u00b2/M = T\u207b\u00b2. So \u221a(k/m) has dimensions T\u207b\u00b9. Since 2\u03c0 is dimensionless, [f] = T\u207b\u00b9, which is the dimension of frequency. \u2713"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The density of a metal cube is measured from its side length l = (5.0 \u00b1 0.1) cm and mass m = (1000 \u00b1 5) g. What is the approximate percentage uncertainty in the density?",
+            "options": [
+              "6.5%",
+              "2.5%",
+              "3.5%",
+              "8.0%"
+            ],
+            "answer": "6.5%",
+            "explanation": "\u03c1 = m/l\u00b3. \u0394\u03c1/\u03c1 = \u0394m/m + 3\u0394l/l = 5/1000 + 3(0.1/5.0) = 0.005 + 3(0.02) = 0.005 + 0.06 = 0.065 = 6.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t1_l3",
+      "title": "Dimensions of Physical Quantities",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every physical quantity has a dimension \u2014 a way of expressing what it is fundamentally made of in terms of the basic measurable properties of the universe: length (L), mass (M), time (T), electric current (I), temperature (\u03b8), amount of substance (N), and luminous intensity (J). Dimensional analysis is one of the most powerful tools in physics, allowing you to check whether equations make sense, derive relationships between quantities, and convert units."
+        },
+        {
+          "type": "heading",
+          "body": "What Are Dimensions?"
+        },
+        {
+          "type": "text",
+          "body": "Dimensions describe the physical nature of a quantity \u2014 what fundamental properties it is composed of. The seven fundamental dimensions correspond to the seven SI base quantities:\n\n| Fundamental Quantity | Dimension | Symbol |\n|---|---|---|\n| Length | Length | L |\n| Mass | Mass | M |\n| Time | Time | T |\n| Electric current | Current | I |\n| Temperature | Temperature | \u03b8 |\n| Amount of substance | Amount | N |\n| Luminous intensity | Luminous intensity | J |\n\nNote: Dimensions are written in square brackets. The dimension of velocity is written [velocity] = LT\u207b\u00b9.\n\nA **dimensionless quantity** has no dimensions \u2014 it is a pure number. Examples include: angles (in radians), refractive index, efficiency, relative density, and strain.\n\n**Important distinction:** Dimensions describe the nature of a quantity; units describe the scale. Velocity always has dimension LT\u207b\u00b9, whether measured in m/s, km/h, or miles per hour."
+        },
+        {
+          "type": "heading",
+          "body": "Dimensions of Common Derived Quantities"
+        },
+        {
+          "type": "text",
+          "body": "To find the dimension of a derived quantity, use its defining equation and substitute the dimensions of each quantity.\n\n**Velocity:**\nv = displacement / time\n[v] = L / T = LT\u207b\u00b9\n\n**Acceleration:**\na = change in velocity / time\n[a] = LT\u207b\u00b9 / T = LT\u207b\u00b2\n\n**Force (from Newton's 2nd Law: F = ma):**\n[F] = [m][a] = M \u00d7 LT\u207b\u00b2 = MLT\u207b\u00b2\n\n**Work / Energy (W = Fd):**\n[W] = [F][d] = MLT\u207b\u00b2 \u00d7 L = ML\u00b2T\u207b\u00b2\n\n**Power (P = W/t):**\n[P] = ML\u00b2T\u207b\u00b2 / T = ML\u00b2T\u207b\u00b3\n\n**Pressure (P = F/A):**\n[P] = MLT\u207b\u00b2 / L\u00b2 = ML\u207b\u00b9T\u207b\u00b2\n\n**Momentum (p = mv):**\n[p] = M \u00d7 LT\u207b\u00b9 = MLT\u207b\u00b9\n\n**Density (\u03c1 = m/V):**\n[\u03c1] = M / L\u00b3 = ML\u207b\u00b3\n\n**Frequency (f = 1/T):**\n[f] = 1/T = T\u207b\u00b9\n\n**Electric charge (Q = It):**\n[Q] = I \u00d7 T = IT\n\n**Potential difference (V = W/Q):**\n[V] = ML\u00b2T\u207b\u00b2 / (IT) = ML\u00b2T\u207b\u00b3I\u207b\u00b9\n\n**Resistance (R = V/I):**\n[R] = ML\u00b2T\u207b\u00b3I\u207b\u00b9 / I = ML\u00b2T\u207b\u00b3I\u207b\u00b2\n\n**Surface tension (\u03b3 = F/l):**\n[\u03b3] = MLT\u207b\u00b2 / L = MT\u207b\u00b2\n\n**Dynamic viscosity (\u03b7, from F = \u03b7A dv/dx):**\n[\u03b7] = MLT\u207b\u00b2 / (L\u00b2 \u00d7 LT\u207b\u00b9/L) = MLT\u207b\u00b2 / (LT\u207b\u00b9) = ML\u207b\u00b9T\u207b\u00b9"
+        },
+        {
+          "type": "heading",
+          "body": "Summary Table of Common Dimensions"
+        },
+        {
+          "type": "text",
+          "body": "| Quantity | Dimension |\n|---|---|\n| Length | L |\n| Mass | M |\n| Time | T |\n| Velocity | LT\u207b\u00b9 |\n| Acceleration | LT\u207b\u00b2 |\n| Force | MLT\u207b\u00b2 |\n| Energy/Work | ML\u00b2T\u207b\u00b2 |\n| Power | ML\u00b2T\u207b\u00b3 |\n| Momentum | MLT\u207b\u00b9 |\n| Pressure/Stress | ML\u207b\u00b9T\u207b\u00b2 |\n| Density | ML\u207b\u00b3 |\n| Frequency | T\u207b\u00b9 |\n| Charge | IT |\n| Potential difference | ML\u00b2T\u207b\u00b3I\u207b\u00b9 |\n| Resistance | ML\u00b2T\u207b\u00b3I\u207b\u00b2 |\n| Surface tension | MT\u207b\u00b2 |\n| Dynamic viscosity | ML\u207b\u00b9T\u207b\u00b9 |\n| Gravitational constant G | M\u207b\u00b9L\u00b3T\u207b\u00b2 |\n| Planck's constant h | ML\u00b2T\u207b\u00b9 |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Dimensions express the physical nature of a quantity in terms of the fundamental properties M, L, T, I, \u03b8, N, J. To find dimensions of a derived quantity, substitute into its defining equation. The same quantity always has the same dimensions, regardless of the unit system used."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Dimension: The expression of a physical quantity in terms of fundamental properties (M, L, T, I, \u03b8, N, J)\n\u2022 Dimensional formula: The expression showing how a quantity relates to fundamental dimensions\n\u2022 Dimensionless quantity: A pure number with no physical dimensions (e.g., refractive index, efficiency)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The equation for the escape velocity from a planet is v = \u221a(2GM/R). Which of the following shows the correct dimensional check?",
+            "options": [
+              "[2GM/R] = L\u00b2T\u207b\u00b2, so [v] = LT\u207b\u00b9 \u2713",
+              "[2GM/R] = LT\u207b\u00b2, so [v] = L^(1/2)T\u207b\u00b9",
+              "[2GM/R] = ML\u00b2T\u207b\u00b2, so equation is wrong",
+              "[2GM/R] = M\u207b\u00b9L\u00b3T\u207b\u00b2, so equation is wrong"
+            ],
+            "answer": "[2GM/R] = L\u00b2T\u207b\u00b2, so [v] = LT\u207b\u00b9 \u2713",
+            "explanation": "[GM/R] = (M\u207b\u00b9L\u00b3T\u207b\u00b2)(M)/(L) = L\u00b2T\u207b\u00b2. So [\u221a(GM/R)] = LT\u207b\u00b9 = [v] \u2713"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Express 72 km/h in m/s.",
+            "options": [
+              "20 m/s",
+              "25.9 m/s",
+              "0.02 m/s",
+              "7.2 m/s"
+            ],
+            "answer": "20 m/s",
+            "explanation": "72 km/h \u00f7 3.6 = 20 m/s. (To convert km/h to m/s, divide by 3.6.)"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Write 0.000000045 m in standard scientific notation.",
+            "options": [
+              "4.5 \u00d7 10\u207b\u2077 m",
+              "4.5 \u00d7 10\u207b\u2078 m",
+              "45 \u00d7 10\u207b\u2079 m",
+              "4.5 \u00d7 10\u207b\u2079 m"
+            ],
+            "answer": "4.5 \u00d7 10\u207b\u2078 m",
+            "explanation": "0.000000045 = 4.5 \u00d7 10\u207b\u2078 m. Count 8 places from the decimal point to after the 4. (Also equal to 45 nm.)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What are the dimensions of power?",
+            "options": [
+              "MLT\u207b\u00b2",
+              "ML\u00b2T\u207b\u00b2",
+              "ML\u00b2T\u207b\u00b3",
+              "ML\u207b\u00b9T\u207b\u00b2"
+            ],
+            "answer": "ML\u00b2T\u207b\u00b3",
+            "explanation": "Power = Energy/time. [Energy] = ML\u00b2T\u207b\u00b2. [Power] = ML\u00b2T\u207b\u00b2/T = ML\u00b2T\u207b\u00b3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The kinetic energy formula is KE = \u00bdmv\u00b2. Which option correctly verifies its dimensional consistency?",
+            "options": [
+              "[\u00bdmv\u00b2] = M(LT\u207b\u00b9)\u00b2 = ML\u00b2T\u207b\u00b2 = [Work] \u2713",
+              "[\u00bdmv\u00b2] = MLT\u207b\u00b2 (force) \u2713",
+              "[\u00bdmv\u00b2] = ML\u00b2T\u207b\u00b9 (momentum \u00d7 speed) \u2713",
+              "[\u00bdmv\u00b2] = M\u00b2L\u00b2T\u207b\u00b2 \u2713"
+            ],
+            "answer": "[\u00bdmv\u00b2] = M(LT\u207b\u00b9)\u00b2 = ML\u00b2T\u207b\u00b2 = [Work] \u2713",
+            "explanation": "[\u00bdmv\u00b2] = M \u00d7 (LT\u207b\u00b9)\u00b2 = ML\u00b2T\u207b\u00b2. [Work] = force \u00d7 distance = MLT\u207b\u00b2 \u00d7 L = ML\u00b2T\u207b\u00b2. Both sides match \u2014 dimensionally consistent."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A block has dimensions (20.0 \u00b1 0.5) cm \u00d7 (10.0 \u00b1 0.2) cm \u00d7 (5.0 \u00b1 0.1) cm. What is the percentage uncertainty in the volume?",
+            "options": [
+              "2.5%",
+              "4.0%",
+              "6.5%",
+              "8.0%"
+            ],
+            "answer": "6.5%",
+            "explanation": "%\u0394V = \u0394l/l + \u0394w/w + \u0394h/h = 0.5/20 + 0.2/10 + 0.1/5 = 2.5% + 2.0% + 2.0% = 6.5%."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t1_l4",
+      "title": "Dimensional Analysis: Checking Equations",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "One of the most powerful applications of dimensions is checking whether physics equations are dimensionally consistent \u2014 that is, whether both sides of an equation have the same dimensions. This technique, called dimensional analysis, cannot prove that an equation is correct, but it can immediately show if an equation is wrong. It can also be used to derive equations from scratch."
+        },
+        {
+          "type": "heading",
+          "body": "The Principle of Dimensional Homogeneity"
+        },
+        {
+          "type": "text",
+          "body": "A physical equation is dimensionally homogeneous (dimensionally consistent) if and only if every term on both sides has exactly the same dimensions.\n\n**The rule:** You can only add, subtract, or equate quantities that have the same dimensions. You cannot add a velocity to a force \u2014 they have different dimensions.\n\nThis is the same as saying: you cannot add 5 kg to 3 metres. The numbers might add to 8, but 8 what? It means nothing physically.\n\n**Worked Example 1:** Check whether the equation v = u + at is dimensionally consistent.\n\nLeft-hand side (LHS): [v] = LT\u207b\u00b9\n\nRight-hand side (RHS):\n- [u] = LT\u207b\u00b9\n- [at] = [a][t] = LT\u207b\u00b2 \u00d7 T = LT\u207b\u00b9\n- [u + at] = LT\u207b\u00b9 + LT\u207b\u00b9 = LT\u207b\u00b9 \u2713\n\nSince [LHS] = [RHS] = LT\u207b\u00b9, the equation is dimensionally consistent. \u2713\n\n**Worked Example 2:** Check whether the equation s = ut + \u00bdat\u00b2 is dimensionally consistent.\n\n[s] = L\n[ut] = LT\u207b\u00b9 \u00d7 T = L\n[\u00bdat\u00b2] = LT\u207b\u00b2 \u00d7 T\u00b2 = L\nAll three terms have dimension L. \u2713 Consistent.\n\n**Worked Example 3:** Check whether the equation F = mv/t\u00b2 is dimensionally consistent.\n\n[F] = MLT\u207b\u00b2 (from F = ma)\n[mv/t\u00b2] = M \u00d7 LT\u207b\u00b9 / T\u00b2 = MLT\u207b\u00b3\n\nMLT\u207b\u00b2 \u2260 MLT\u207b\u00b3 \u2717 The equation is NOT dimensionally consistent \u2014 there is an error."
+        },
+        {
+          "type": "heading",
+          "body": "Using Dimensions to Find Unknown Powers"
+        },
+        {
+          "type": "text",
+          "body": "If you know a quantity depends on certain other quantities but don't know the exact relationship, dimensional analysis can give you the form of the equation.\n\n**Method:** Assume the quantity Q = k \u00d7 A\u1d43 \u00d7 B\u1d47 \u00d7 C\u1d9c where k is a dimensionless constant. Write dimensions of both sides and equate the powers of M, L, and T.\n\n**Worked Example 4:** The period T of a simple pendulum is thought to depend on its length l, the mass m of the bob, and acceleration due to gravity g. Find how T depends on these quantities.\n\nAssume T = k \u00d7 l\u1d43 \u00d7 m\u1d47 \u00d7 g\u1d9c\n\nDimensions:\n[T] = T\n[k \u00d7 l\u1d43 \u00d7 m\u1d47 \u00d7 g\u1d9c] = L\u1d43 \u00d7 M\u1d47 \u00d7 (LT\u207b\u00b2)\u1d9c = M^b \u00d7 L^(a+c) \u00d7 T^(\u22122c)\n\nEquating powers:\nFor T: 1 = \u22122c \u2192 c = \u2212\u00bd\nFor M: 0 = b \u2192 b = 0\nFor L: 0 = a + c \u2192 a = \u2212c = \u00bd\n\nTherefore T = k \u00d7 l^(1/2) \u00d7 m^0 \u00d7 g^(\u22121/2) = k\u221a(l/g)\n\nThis is indeed the correct formula! (The constant k = 2\u03c0, which dimensional analysis cannot determine.)\n\n**Key insight:** The period does NOT depend on mass \u2014 confirmed by the dimensional analysis giving b = 0.\n\n**Worked Example 5:** The velocity v of a wave on a stretched string depends on the tension F and the mass per unit length \u03bc (mass per unit length, [\u03bc] = ML\u207b\u00b9). Find the expression for v.\n\nAssume v = k \u00d7 F\u1d43 \u00d7 \u03bc\u1d47\n\n[v] = LT\u207b\u00b9\n[F\u1d43 \u00d7 \u03bc\u1d47] = (MLT\u207b\u00b2)\u1d43 \u00d7 (ML\u207b\u00b9)\u1d47 = M^(a+b) \u00d7 L^(a\u2212b) \u00d7 T^(\u22122a)\n\nFor M: 0 = a + b\nFor T: \u22121 = \u22122a \u2192 a = \u00bd\nFor L: 1 = a \u2212 b \u2192 b = a \u2212 1 = \u2212\u00bd\n\nv = k \u00d7 F^(1/2) \u00d7 \u03bc^(\u22121/2) = k\u221a(F/\u03bc)\n\nThe correct formula is v = \u221a(F/\u03bc) (k = 1 in this case)."
+        },
+        {
+          "type": "heading",
+          "body": "Merits and Limitations of Dimensional Analysis"
+        },
+        {
+          "type": "text",
+          "body": "**Merits:**\n1. It can quickly check whether an equation is physically plausible \u2014 if the dimensions don't balance, the equation is definitely wrong.\n2. It can be used to derive the form of physical equations from basic principles.\n3. It helps identify the possible relationships between physical quantities.\n4. It is a useful tool for converting units between different systems.\n5. It helps identify which variables are relevant to a physical problem.\n\n**Limitations:**\n1. It cannot determine dimensionless constants (like 2\u03c0, \u00bd, \u221a3).\n2. It cannot distinguish between sin(x) and cos(x), or between e^x and ln(x), since these functions are dimensionless.\n3. It does not work for equations involving sums of terms that happen to have the same dimensions but different physical meanings.\n4. An equation can be dimensionally consistent but physically wrong.\n5. It cannot be used to derive relationships involving more than three unknown powers without additional information."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Dimensional homogeneity requires every term in a valid equation to have the same dimensions. Dimensional analysis can check equation consistency, derive the form of equations (but not constants), and reveal which variables a quantity depends on. It cannot determine dimensionless constants or validate equations involving trigonometric or logarithmic functions."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Dimensional homogeneity: The condition where every term in an equation has the same dimensions\n\u2022 Dimensional analysis: A method of checking equations and deriving relationships by examining dimensions\n\u2022 Dimensionless constant: A numerical factor in an equation that has no units and cannot be found by dimensional analysis"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The period of a planet is T = 2\u03c0\u221a(r\u00b3/GM). What are the dimensions of G?",
+            "options": [
+              "M\u207b\u00b9L\u00b3T\u207b\u00b2",
+              "ML\u00b3T\u207b\u00b2",
+              "M\u207b\u00b9L\u00b2T\u207b\u00b2",
+              "ML\u207b\u00b9T\u207b\u00b2"
+            ],
+            "answer": "M\u207b\u00b9L\u00b3T\u207b\u00b2",
+            "explanation": "From T = 2\u03c0\u221a(r\u00b3/GM): [T\u00b2] = [r\u00b3/GM] = L\u00b3/(ML\u00b3T\u207b\u00b2/L\u00b3 \u00d7 M)... Working: [G] = [r\u00b3/(T\u00b2M)] = L\u00b3/(T\u00b2M) = M\u207b\u00b9L\u00b3T\u207b\u00b2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The speed of sound in a gas depends on pressure P and density \u03c1. Dimensional analysis gives c = k\u221a(P/\u03c1). What are the dimensions of P/\u03c1?",
+            "options": [
+              "L\u00b2T\u207b\u00b2",
+              "LT\u207b\u00b2",
+              "MLT\u207b\u00b2",
+              "M\u207b\u00b9L\u00b3"
+            ],
+            "answer": "L\u00b2T\u207b\u00b2",
+            "explanation": "[P] = ML\u207b\u00b9T\u207b\u00b2; [\u03c1] = ML\u207b\u00b3. [P/\u03c1] = ML\u207b\u00b9T\u207b\u00b2/ML\u207b\u00b3 = L\u00b2T\u207b\u00b2. \u221a(L\u00b2T\u207b\u00b2) = LT\u207b\u00b9 = speed \u2713."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which instrument measures length to the nearest 0.01 mm?",
+            "options": [
+              "Metre rule",
+              "Vernier callipers",
+              "Micrometer screw gauge",
+              "Measuring tape"
+            ],
+            "answer": "Micrometer screw gauge",
+            "explanation": "The micrometer screw gauge has a resolution of 0.01 mm (10 micrometres). Vernier callipers read to 0.1 mm; a metre rule reads to about 0.5\u20131 mm."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A dimensionless quantity is one that:",
+            "options": [
+              "Has no unit but has dimensions",
+              "Has dimensions but a very small value",
+              "Has no dimensions and no unit",
+              "Can only be expressed in SI units"
+            ],
+            "answer": "Has no dimensions and no unit",
+            "explanation": "A dimensionless quantity is a pure number \u2014 it has neither dimensions nor units. Examples include refractive index, efficiency, strain, and angles (in radians)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A student measures the same length five times and gets: 45.3, 45.5, 45.2, 45.6, 45.4 mm. What is the best estimate of the length and its uncertainty?",
+            "options": [
+              "(45.4 \u00b1 0.2) mm",
+              "(45.4 \u00b1 0.1) mm",
+              "(45.5 \u00b1 0.2) mm",
+              "(45.3 \u00b1 0.4) mm"
+            ],
+            "answer": "(45.4 \u00b1 0.2) mm",
+            "explanation": "Mean = (45.3+45.5+45.2+45.6+45.4)/5 = 227.0/5 = 45.4 mm. Range = 45.6 \u2212 45.2 = 0.4 mm. Uncertainty = range/2 = 0.2 mm. Answer: (45.4 \u00b1 0.2) mm."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t1_l5",
+      "title": "Errors in Measurements: Types, Calculations and Propagation",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "No measurement is perfectly exact. Every measurement has some uncertainty \u2014 a range within which the true value is likely to lie. In this lesson, we go deeper into errors: how to quantify them, how they combine when you do calculations with measured quantities, and how to report measurements correctly with their uncertainties. This is essential for any experimental physics work."
+        },
+        {
+          "type": "heading",
+          "body": "Expressing Uncertainty"
+        },
+        {
+          "type": "text",
+          "body": "When you report a measurement, you should state the value and its uncertainty. There are three ways to express uncertainty:\n\n**1. Absolute uncertainty (\u0394x):** The uncertainty in the same units as the measurement.\nExample: length = (23.4 \u00b1 0.1) cm\nHere \u0394x = 0.1 cm\n\n**2. Fractional (relative) uncertainty:** Absolute uncertainty divided by the measured value (dimensionless).\nFractional uncertainty = \u0394x / x = 0.1 / 23.4 = 0.0043\n\n**3. Percentage uncertainty:** Fractional uncertainty \u00d7 100%\nPercentage uncertainty = 0.0043 \u00d7 100% = 0.43%\n\n**Estimating uncertainty from a single measurement:**\nFor a single reading, the uncertainty is typically \u00b1 half the smallest division of the instrument.\n- Metre rule (1 mm divisions): uncertainty = \u00b10.5 mm\n- Vernier callipers (0.1 mm): uncertainty = \u00b10.05 mm\n- Micrometer (0.01 mm): uncertainty = \u00b10.005 mm\n\n**Estimating uncertainty from repeated measurements:**\nTake the mean (average) of repeated readings. The uncertainty is half the range:\nUncertainty = (x_max \u2212 x_min) / 2"
+        },
+        {
+          "type": "heading",
+          "body": "Propagation of Errors in Calculations"
+        },
+        {
+          "type": "text",
+          "body": "When you calculate a derived quantity from measured values, the uncertainties in the measurements contribute to the uncertainty in the result.\n\n**Rule 1: Addition and Subtraction**\nIf Q = x + y or Q = x \u2212 y, then:\n\u0394Q = \u0394x + \u0394y\n(Absolute uncertainties add)\n\nWorked Example 1: A student measures two lengths: x = (12.3 \u00b1 0.2) cm and y = (5.1 \u00b1 0.1) cm.\nFind the sum z = x + y with uncertainty.\n\nz = 12.3 + 5.1 = 17.4 cm\n\u0394z = 0.2 + 0.1 = 0.3 cm\nAnswer: z = (17.4 \u00b1 0.3) cm\n\n**Rule 2: Multiplication and Division**\nIf Q = xy or Q = x/y, then:\n\u0394Q/Q = \u0394x/x + \u0394y/y\n(Fractional uncertainties add)\n\nWorked Example 2: The length of a wire is (50.0 \u00b1 0.5) cm and its diameter is (0.80 \u00b1 0.02) mm.\nFind the fractional uncertainty in the cross-sectional area A = \u03c0(d/2)\u00b2.\n\nA = \u03c0d\u00b2/4\n\u0394A/A = 2 \u00d7 \u0394d/d (the 2 appears because d is squared)\n\u0394A/A = 2 \u00d7 (0.02/0.80) = 2 \u00d7 0.025 = 0.05 = 5%\n\nNote: When a quantity is raised to a power n, multiply its fractional uncertainty by n.\n\n**Rule 3: Powers**\nIf Q = x\u207f, then \u0394Q/Q = n \u00d7 (\u0394x/x)\n\nWorked Example 3: The radius of a sphere is measured as r = (5.0 \u00b1 0.1) cm. Find the percentage uncertainty in its volume V = (4/3)\u03c0r\u00b3.\n\n\u0394V/V = 3 \u00d7 (\u0394r/r) = 3 \u00d7 (0.1/5.0) = 3 \u00d7 0.02 = 0.06 = 6%\n\n**Combined Example:**\nWorked Example 4: The density of a cylinder is found from \u03c1 = m/V = m/(\u03c0r\u00b2h).\nMass m = (200.0 \u00b1 0.5) g, radius r = (3.00 \u00b1 0.05) cm, height h = (10.0 \u00b1 0.1) cm.\nFind the percentage uncertainty in density.\n\n\u0394\u03c1/\u03c1 = \u0394m/m + 2\u0394r/r + \u0394h/h\n= 0.5/200.0 + 2(0.05/3.00) + 0.1/10.0\n= 0.0025 + 0.0333 + 0.010\n= 0.046 = 4.6%"
+        },
+        {
+          "type": "heading",
+          "body": "Accuracy of Calculated Values: Combining Significant Figures and Uncertainty"
+        },
+        {
+          "type": "text",
+          "body": "When reporting a calculated result:\n1. Calculate the value and its uncertainty.\n2. Round the uncertainty to 1 or 2 significant figures.\n3. Round the calculated value to the same decimal place as the uncertainty.\n\nWorked Example 5: A student calculates a density as 8.4563 g/cm\u00b3 with a calculated uncertainty of 0.23 g/cm\u00b3.\n\nStep 1: Round uncertainty to 1 s.f.: \u0394\u03c1 \u2248 0.2 g/cm\u00b3\nStep 2: Round the value to the same decimal place (1 d.p.): \u03c1 \u2248 8.5 g/cm\u00b3\nResult: \u03c1 = (8.5 \u00b1 0.2) g/cm\u00b3\n\n**Important:** A result like \u03c1 = (8.4563 \u00b1 0.2) g/cm\u00b3 is meaningless \u2014 the extra decimal places in the value are beyond what the uncertainty allows.\n\n**Common mistakes to avoid:**\n- Never give more significant figures in a result than the least precise measurement allows\n- Never give fewer significant figures than the measurements justify\n- Always carry an extra digit in intermediate calculations and round only at the end"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Uncertainty can be expressed as absolute, fractional, or percentage. For addition/subtraction, absolute uncertainties add; for multiplication/division/powers, fractional uncertainties add (with the power as a multiplier). Results should be reported to match the precision of the uncertainty."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Absolute uncertainty: The uncertainty expressed in the same units as the measurement\n\u2022 Percentage uncertainty: Absolute uncertainty divided by the measured value, expressed as a percentage\n\u2022 Error propagation: The process of calculating how uncertainties in measured values affect the uncertainty in a calculated quantity"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In the equation F = 6\u03c0\u03b7rv, where F is drag force, \u03b7 is viscosity, r is radius and v is velocity, what are the dimensions of viscosity \u03b7?",
+            "options": [
+              "ML\u207b\u00b9T\u207b\u00b9",
+              "MLT\u207b\u00b9",
+              "ML\u207b\u00b2T\u207b\u00b9",
+              "MLT\u207b\u00b2"
+            ],
+            "answer": "ML\u207b\u00b9T\u207b\u00b9",
+            "explanation": "[F] = [\u03b7rv] \u2192 MLT\u207b\u00b2 = [\u03b7](L)(LT\u207b\u00b9) = [\u03b7]L\u00b2T\u207b\u00b9. So [\u03b7] = MLT\u207b\u00b2/L\u00b2T\u207b\u00b9 = ML\u207b\u00b9T\u207b\u00b9."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The dimensions of the Planck constant h are the same as the dimensions of:",
+            "options": [
+              "Energy",
+              "Momentum",
+              "Angular momentum",
+              "Power"
+            ],
+            "answer": "Angular momentum",
+            "explanation": "[h] = ML\u00b2T\u207b\u00b9 (from E = hf, so [h] = ML\u00b2T\u207b\u00b2/T\u207b\u00b9). Angular momentum L = mvr, [L] = M(LT\u207b\u00b9)(L) = ML\u00b2T\u207b\u00b9. These are the same!"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which is an advantage of a micrometer screw gauge over vernier callipers?",
+            "options": [
+              "Micrometer has lower resolution (0.1 mm vs 0.01 mm)",
+              "Micrometer has higher resolution (0.01 mm vs 0.1 mm for vernier)",
+              "Micrometer can measure longer lengths",
+              "Micrometer does not need to be zeroed before use"
+            ],
+            "answer": "Micrometer has higher resolution (0.01 mm vs 0.1 mm for vernier)",
+            "explanation": "A micrometer can read to 0.01 mm (some to 0.001 mm), compared to 0.1 mm for a vernier calliper. This higher resolution makes it better for very small precise measurements like wire diameters."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A wire has resistivity \u03c1, length l, cross-section A. Resistance R = \u03c1l/A. What are the dimensions of resistivity \u03c1?",
+            "options": [
+              "ML\u00b3T\u207b\u00b3I\u207b\u00b2",
+              "ML\u00b2T\u207b\u00b3I\u207b\u00b2",
+              "MLT\u207b\u00b3I\u207b\u00b2",
+              "ML\u00b3T\u207b\u00b2I\u207b\u00b2"
+            ],
+            "answer": "ML\u00b3T\u207b\u00b3I\u207b\u00b2",
+            "explanation": "[\u03c1] = [RA/l] = (ML\u00b2T\u207b\u00b3I\u207b\u00b2)(L\u00b2)/L = ML\u00b3T\u207b\u00b3I\u207b\u00b2."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The frequency f of a vibrating string depends on tension T (MLT\u207b\u00b2), length L (L), and linear density \u03bc (ML\u207b\u00b9). Dimensional analysis gives f = k\u221a(T/\u03bcL\u00b2). What is the power of T in this expression?",
+            "options": [
+              "1",
+              "-1",
+              "\u00bd",
+              "-\u00bd"
+            ],
+            "answer": "\u00bd",
+            "explanation": "f \u221d T^a L^b \u03bc^c. [T\u207b\u00b9] = (MLT\u207b\u00b2)^a L^b (ML\u207b\u00b9)^c. Solving: a = \u00bd. So f \u221d T^(1/2) \u2014 tension appears with power \u00bd."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t1_l6",
+      "title": "Advanced Dimensional Analysis and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this lesson, we apply dimensional analysis to more complex and realistic problems \u2014 finding the dimensions of physical constants, deriving the form of important physics equations, and using dimensional consistency as a powerful checking tool for multi-step calculations. These skills will serve you throughout the whole of A-Level Physics and beyond."
+        },
+        {
+          "type": "heading",
+          "body": "Dimensions of Physical Constants"
+        },
+        {
+          "type": "text",
+          "body": "Physical constants appear throughout physics. Knowing their dimensions lets you use them correctly in calculations.\n\n**Newton's Law of Gravitation:** F = Gm\u2081m\u2082/r\u00b2\nSolving for G: G = Fr\u00b2/(m\u2081m\u2082)\n[G] = MLT\u207b\u00b2 \u00d7 L\u00b2 / M\u00b2 = M\u207b\u00b9L\u00b3T\u207b\u00b2\nValue: G = 6.67 \u00d7 10\u207b\u00b9\u00b9 N m\u00b2 kg\u207b\u00b2 = 6.67 \u00d7 10\u207b\u00b9\u00b9 M\u207b\u00b9L\u00b3T\u207b\u00b2 (in dimensions)\n\n**Coulomb's Law:** F = kq\u2081q\u2082/r\u00b2\nSolving for k: k = Fr\u00b2/(q\u2081q\u2082)\n[k] = MLT\u207b\u00b2 \u00d7 L\u00b2 / (IT)\u00b2 = ML\u00b3T\u207b\u2074I\u207b\u00b2\n\n**Planck's Constant:** E = hf\n[h] = [E]/[f] = ML\u00b2T\u207b\u00b2 / T\u207b\u00b9 = ML\u00b2T\u207b\u00b9\nValue: h = 6.63 \u00d7 10\u207b\u00b3\u2074 J s\n\n**Boltzmann's Constant:** E = kT (E is energy, T is temperature)\n[k] = ML\u00b2T\u207b\u00b2 / \u03b8 = ML\u00b2T\u207b\u00b2\u03b8\u207b\u00b9\nValue: k = 1.38 \u00d7 10\u207b\u00b2\u00b3 J K\u207b\u00b9\n\n**Speed of light:** [c] = LT\u207b\u00b9\nIt is already a fundamental measured constant: c = 3.0 \u00d7 10\u2078 m s\u207b\u00b9"
+        },
+        {
+          "type": "heading",
+          "body": "Deriving Equations Using Dimensional Analysis"
+        },
+        {
+          "type": "text",
+          "body": "**Worked Example 1:** The pressure difference \u0394P inside a spherical soap bubble is thought to depend on surface tension \u03b3 and radius r. Derive the relationship.\n\nAssume \u0394P = k \u00d7 \u03b3\u1d43 \u00d7 r\u1d47\n\n[\u0394P] = ML\u207b\u00b9T\u207b\u00b2\n[\u03b3] = MT\u207b\u00b2 (surface tension = force/length)\n[r] = L\n\nSo: ML\u207b\u00b9T\u207b\u00b2 = (MT\u207b\u00b2)\u1d43 \u00d7 L\u1d47 = M^a \u00d7 T^(\u22122a) \u00d7 L^b\n\nFor M: 1 = a\nFor T: \u22122 = \u22122a \u2192 a = 1 \u2713\nFor L: \u22121 = b \u2192 b = \u22121\n\n\u0394P = k \u00d7 \u03b3/r\n\n(The full derivation gives \u0394P = 4\u03b3/r for a soap bubble with two surfaces; \u0394P = 2\u03b3/r for a single surface.)\n\n**Worked Example 2:** The terminal velocity v of a sphere of radius r falling through a fluid of viscosity \u03b7 and density \u03c1 under gravity g depends on r, \u03b7, \u03c1 and g. The sphere has density \u03c1_s. Assuming only \u03b7, r, g and (\u03c1_s - \u03c1) matter, derive the expression.\n\nAssume v = k \u00d7 \u03b7\u1d43 \u00d7 r\u1d47 \u00d7 g\u1d9c \u00d7 (\u03c1_s - \u03c1)^d\n\n[v] = LT\u207b\u00b9\n[\u03b7] = ML\u207b\u00b9T\u207b\u00b9\n[r] = L\n[g] = LT\u207b\u00b2\n[\u03c1_s - \u03c1] = ML\u207b\u00b3\n\nLT\u207b\u00b9 = (ML\u207b\u00b9T\u207b\u00b9)^a \u00d7 L^b \u00d7 (LT\u207b\u00b2)^c \u00d7 (ML\u207b\u00b3)^d\n= M^(a+d) \u00d7 L^(\u2212a+b+c\u22123d) \u00d7 T^(\u2212a\u22122c)\n\nFor M: 0 = a + d\nFor T: \u22121 = \u2212a \u2212 2c\nFor L: 1 = \u2212a + b + c \u2212 3d\n\nThis has 4 unknowns and 3 equations. Stokes' law (F = 6\u03c0\u03b7rv) tells us a = 1, giving d = \u22121, c = 0... wait, let us try assuming d = 1 (Stokes approach):\n\nWith a = \u22121, d = 1, c = 1:\nFrom T: \u22121 = 1 \u2212 2c \u2192 c = 1 \u2713\nFrom L: 1 = 1 + b + 1 \u2212 3 \u2192 b = 2 \u2713\n\nSo v \u221d r\u00b2g(\u03c1_s \u2212 \u03c1)/\u03b7\nThe full result is: v = 2r\u00b2(\u03c1_s \u2212 \u03c1)g / (9\u03b7)"
+        },
+        {
+          "type": "heading",
+          "body": "Common Examination Applications"
+        },
+        {
+          "type": "text",
+          "body": "In Uganda A-Level examinations, dimensional analysis questions often ask you to:\n\n1. **Find the dimensions of a quantity** \u2014 substitute into a defining equation.\n\n2. **Check if an equation is homogeneous** \u2014 find dimensions of each term and check they are equal.\n\n3. **Find the value of an unknown power** in an assumed relationship.\n\n4. **Find the dimensions of a constant** in a given equation.\n\n**Examination-style Worked Example:**\nThe viscous drag F on a sphere depends on viscosity \u03b7, radius r, and velocity v. Given that F = k\u03b7rv, find the dimensions of k and hence show that k is dimensionless.\n\n[F] = MLT\u207b\u00b2\n[\u03b7rv] = (ML\u207b\u00b9T\u207b\u00b9)(L)(LT\u207b\u00b9) = MLT\u207b\u00b2 \u00d7 (something?)\n\nLet's check: [\u03b7][r][v] = ML\u207b\u00b9T\u207b\u00b9 \u00d7 L \u00d7 LT\u207b\u00b9 = ML\u00b9T\u207b\u00b2... = MLT\u207b\u00b2\n\nSo [k] = [F] / [\u03b7rv] = MLT\u207b\u00b2 / MLT\u207b\u00b2 = dimensionless \u2713\n(In fact, k = 6\u03c0 for a sphere \u2014 this is Stokes' Law)\n\n**Key examination tip:** Always show your working clearly. State what equation you are using, write the dimensions of each quantity, equate powers, solve for unknowns, and state the final answer with dimensions."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Dimensional analysis applies to physical constants, complex derived equations, and checking multi-step calculations. The dimensions of constants like G, h, k can be determined from the equations they appear in. Deriving equations requires equating powers of M, L, T (and I, \u03b8 if needed). Dimensional analysis is indispensable throughout A-Level Physics."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Gravitational constant G: The proportionality constant in Newton's law of gravitation; dimensions M\u207b\u00b9L\u00b3T\u207b\u00b2\n\u2022 Planck's constant h: The proportionality constant relating photon energy and frequency; dimensions ML\u00b2T\u207b\u00b9\n\u2022 Stokes' Law: The drag force on a sphere moving through a viscous fluid: F = 6\u03c0\u03b7rv"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A micrometer reads 6.50 mm but was not zeroed (zero error: +0.08 mm meaning it reads high by 0.08 mm). What is the true diameter?",
+            "options": [
+              "6.42 mm",
+              "6.58 mm",
+              "6.50 mm",
+              "6.08 mm"
+            ],
+            "answer": "6.42 mm",
+            "explanation": "If the micrometer reads 0.08 mm high (positive zero error), subtract it: true = 6.50 \u2212 0.08 = 6.42 mm."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Capacitance C has dimensions M\u207b\u00b9L\u207b\u00b2T\u2074I\u00b2. The energy in a capacitor is E = Q\u00b2/2C. Verify E has dimensions of energy.",
+            "options": [
+              "[Q\u00b2/2C] = (IT)\u00b2/(M\u207b\u00b9L\u207b\u00b2T\u2074I\u00b2) = ML\u00b2T\u207b\u00b2 \u2713",
+              "[Q\u00b2/2C] = MLT\u207b\u00b2 (force) \u2014 not energy",
+              "[Q\u00b2/2C] = ML\u00b2T\u207b\u00b9 (angular momentum)",
+              "[Q\u00b2/2C] = MT\u207b\u00b2 (surface tension)"
+            ],
+            "answer": "[Q\u00b2/2C] = (IT)\u00b2/(M\u207b\u00b9L\u207b\u00b2T\u2074I\u00b2) = ML\u00b2T\u207b\u00b2 \u2713",
+            "explanation": "[Q\u00b2] = (IT)\u00b2 = I\u00b2T\u00b2. [Q\u00b2/C] = I\u00b2T\u00b2/(M\u207b\u00b9L\u207b\u00b2T\u2074I\u00b2) = I\u00b2T\u00b2 \u00d7 ML\u00b2/(T\u2074I\u00b2) = ML\u00b2T\u207b\u00b2 = [Energy] \u2713."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which of the following is NOT a source of systematic error?",
+            "options": [
+              "A balance that reads 0.5 g when nothing is placed on it",
+              "A slightly tilted metre rule",
+              "Slight variations in how a student presses a stopwatch button",
+              "A thermometer that reads 1\u00b0C too high throughout"
+            ],
+            "answer": "Slight variations in how a student presses a stopwatch button",
+            "explanation": "Slight variations in pressing a stopwatch button produce inconsistent, unpredictable errors \u2014 this is a random error. All the others (unbalanced scale, tilted ruler, consistently wrong thermometer) produce systematic errors that are always in the same direction."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What are the dimensions of the universal gas constant R in the equation PV = nRT (where P = pressure, V = volume, n = amount of substance, T = temperature)?",
+            "options": [
+              "ML\u00b2T\u207b\u00b2\u03b8\u207b\u00b9N\u207b\u00b9",
+              "ML\u00b2T\u207b\u00b2",
+              "MLT\u207b\u00b2",
+              "ML\u207b\u00b9T\u207b\u00b2"
+            ],
+            "answer": "ML\u00b2T\u207b\u00b2\u03b8\u207b\u00b9N\u207b\u00b9",
+            "explanation": "[R] = [PV]/[nT] = (ML\u207b\u00b9T\u207b\u00b2)(L\u00b3) / (N \u00d7 \u03b8) = ML\u00b2T\u207b\u00b2 / (N\u03b8) = ML\u00b2T\u207b\u00b2N\u207b\u00b9\u03b8\u207b\u00b9. In SI units: J mol\u207b\u00b9 K\u207b\u00b9."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A rectangular sheet has length (29.7 \u00b1 0.05) cm and width (21.0 \u00b1 0.05) cm. What is the absolute uncertainty in the area?",
+            "options": [
+              "\u00b12.48 cm\u00b2",
+              "\u00b14.95 cm\u00b2",
+              "\u00b10.25 cm\u00b2",
+              "\u00b11.24 cm\u00b2"
+            ],
+            "answer": "\u00b12.48 cm\u00b2",
+            "explanation": "A = 29.7 \u00d7 21.0 = 623.7 cm\u00b2. %\u0394A = 0.05/29.7 + 0.05/21.0 = 0.00168 + 0.00238 = 0.00406. \u0394A = 0.00406 \u00d7 623.7 = 2.53 \u2248 2.5 cm\u00b2. Closest: A (\u00b12.48 cm\u00b2)."
+          }
+        ]
+      }
+    }
+  ]
+}

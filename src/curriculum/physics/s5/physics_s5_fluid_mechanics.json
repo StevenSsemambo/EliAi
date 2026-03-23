@@ -1,0 +1,700 @@
+{
+  "topic_id": "physics_s5_t7",
+  "topic_title": "Fluid Mechanics",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t7_l1",
+      "title": "Surface Tension: Causes, Measurement and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why does a mosquito walk on water? Why does water form spherical droplets? Why does water rise in a narrow tube inserted in soil? These phenomena all arise from surface tension \u2014 the tendency of a liquid surface to behave like a stretched elastic membrane. Surface tension is a direct consequence of intermolecular forces, and it has profound implications for biology, engineering, and everyday life in Uganda."
+        },
+        {
+          "type": "heading",
+          "body": "Origin of Surface Tension: Intermolecular Forces"
+        },
+        {
+          "type": "text",
+          "body": "Molecules in a liquid attract each other through intermolecular forces (van der Waals forces, hydrogen bonds, etc.). A molecule deep inside the liquid is surrounded by neighbours on all sides \u2014 the net force on it is zero.\n\nA molecule at the surface, however, has neighbours only below and to the sides \u2014 there are very few molecules above (only vapour). It therefore experiences a net downward (inward) force pulling it into the bulk liquid.\n\nThis creates a tendency for the surface to contract \u2014 to minimise its area. The surface behaves like a stretched elastic skin.\n\n**Surface tension \u03b3 (gamma)** is defined as the force per unit length acting along the surface, perpendicular to any line drawn in the surface:\n\n**\u03b3 = F / L**\n\nWhere:\n- F = force (N)\n- L = length of the line (m)\n- \u03b3 = surface tension (N/m or J/m\u00b2)\n\nAlternatively, \u03b3 = surface energy per unit area (J/m\u00b2) \u2014 the work done to increase the surface area by 1 m\u00b2.\n\nTypical values (at 20\u00b0C):\n| Liquid | \u03b3 (N/m) |\n|---|---|\n| Water | 0.073 |\n| Mercury | 0.485 |\n| Soapy water | 0.025 |\n| Ethanol | 0.022 |\n| Oil | 0.030 |\n\n**Why clean water has high surface tension:**\nWater molecules form strong hydrogen bonds. Disrupting these to create new surface requires significant energy \u2192 high \u03b3.\n\n**Why soap reduces surface tension:**\nSoap molecules (surfactants) have a hydrophilic head and hydrophobic tail. They position themselves at the surface with tails pointing outward, disrupting hydrogen bonds between water molecules and reducing \u03b3."
+        },
+        {
+          "type": "heading",
+          "body": "Surface Energy and Work Done to Extend a Surface"
+        },
+        {
+          "type": "text",
+          "body": "Surface tension can also be understood as the energy stored per unit area of surface:\n\n\u03b3 = W / \u0394A\n\nWhere W = work done to create additional surface area \u0394A.\n\n**Worked Example 1:** A rectangular wire frame has a moveable wire on one side. A soap film is formed on the frame. The moveable wire has length L = 0.10 m and is pulled a distance x = 0.05 m (creating new area). What force F is needed and how much work is done? (\u03b3_soap = 0.025 N/m)\n\nNote: A soap film has TWO surfaces (front and back). Total length of line = 2L.\nF = \u03b3 \u00d7 2L = 0.025 \u00d7 2 \u00d7 0.10 = 0.005 N\nWork done = F \u00d7 x = 0.005 \u00d7 0.05 = 2.5 \u00d7 10\u207b\u2074 J\nOr: W = \u03b3 \u00d7 \u0394A = 0.025 \u00d7 (2 \u00d7 0.10 \u00d7 0.05) = 0.025 \u00d7 0.01 = 2.5 \u00d7 10\u207b\u2074 J \u2713\n\n**Shapes of liquid surfaces \u2014 why spheres?**\nA sphere has the minimum surface area for a given volume. Since surface tension acts to minimise surface area, free liquid drops become spherical (when gravity effects are negligible \u2014 small drops).\n\nIn Uganda, drops of morning dew on spiderwebs and car bonnets are spherical for this reason."
+        },
+        {
+          "type": "heading",
+          "body": "Excess Pressure in Bubbles and Droplets"
+        },
+        {
+          "type": "text",
+          "body": "Surface tension creates an excess pressure inside curved liquid surfaces.\n\n**Pressure inside a liquid droplet (one surface):**\n\u0394P = 2\u03b3/r\n\n**Derivation:** Consider a droplet of radius r. If it expands by dr, new surface area = 4\u03c0(r+dr)\u00b2 \u2248 4\u03c0r\u00b2 + 8\u03c0r\u00b7dr. New surface area created = 8\u03c0r\u00b7dr. Work done by excess pressure = \u0394P \u00d7 4\u03c0r\u00b2 \u00d7 dr. Work done against surface tension = \u03b3 \u00d7 8\u03c0r\u00b7dr.\n\nSetting equal: \u0394P \u00d7 4\u03c0r\u00b2 \u00d7 dr = \u03b3 \u00d7 8\u03c0r\u00b7dr\n\u0394P = 2\u03b3/r \u2713\n\n**Pressure inside a soap bubble (two surfaces \u2014 inner and outer):**\n\u0394P = 4\u03b3/r\n\n(Twice as much because there are two liquid surfaces in a soap bubble.)\n\n**Worked Example 2:** A soap bubble has diameter 4 cm. \u03b3 = 0.025 N/m. Find the excess pressure inside the bubble.\n\nr = 0.02 m\n\u0394P = 4\u03b3/r = 4 \u00d7 0.025 / 0.02 = 5 Pa\n\n**Worked Example 3:** Two soap bubbles of radii r\u2081 = 3 cm and r\u2082 = 5 cm are connected. Which way does air flow?\n\nP\u2081 = 4\u03b3/r\u2081 = 4\u03b3/0.03 = 133\u03b3\nP\u2082 = 4\u03b3/r\u2082 = 4\u03b3/0.05 = 80\u03b3\nP\u2081 > P\u2082 \u2192 air flows from the smaller bubble into the larger one.\nThe smaller bubble shrinks and the larger one grows \u2014 this is why it is harder to blow up a deflated balloon than to add air to an already-inflated one!"
+        },
+        {
+          "type": "heading",
+          "body": "Capillarity and Angle of Contact"
+        },
+        {
+          "type": "text",
+          "body": "**Capillarity** (capillary action) is the rise or depression of a liquid in a narrow tube due to surface tension.\n\n**Angle of contact \u03b8** is the angle between the liquid surface and the solid wall, measured through the liquid.\n\n- **\u03b8 < 90\u00b0 (wetting liquid):** Adhesive forces (liquid-solid) > Cohesive forces (liquid-liquid). Liquid wets the surface, meniscus curves upward \u2192 capillary RISE. Example: water in glass.\n- **\u03b8 > 90\u00b0 (non-wetting liquid):** Cohesive > Adhesive. Liquid does not wet the surface, meniscus curves downward \u2192 capillary DEPRESSION. Example: mercury in glass.\n\n**Formula for capillary rise/fall:**\nHeight h of liquid column:\n**h = 2\u03b3 cos \u03b8 / (\u03c1gr)**\n\nWhere:\n- \u03b3 = surface tension\n- \u03b8 = angle of contact\n- \u03c1 = density of liquid\n- g = gravitational acceleration\n- r = radius of tube\n\n**Derivation:**\nUpward force (surface tension, acting around circumference of tube): F = 2\u03c0r \u00d7 \u03b3 cos \u03b8\nWeight of liquid column: W = \u03c1g \u00d7 \u03c0r\u00b2 \u00d7 h\n\nFor equilibrium: F = W\n2\u03c0r\u03b3 cos \u03b8 = \u03c1g\u03c0r\u00b2h\nh = 2\u03b3 cos \u03b8 / (\u03c1gr) \u2713\n\n**Worked Example 4:** Water (\u03b3 = 0.073 N/m, \u03b8 = 0\u00b0, \u03c1 = 1000 kg/m\u00b3) rises in a capillary tube of radius 0.5 mm. Find the height of rise. (g = 10 m/s\u00b2)\n\nh = 2 \u00d7 0.073 \u00d7 cos 0\u00b0 / (1000 \u00d7 10 \u00d7 0.0005)\n= 0.146 / 5 = 0.0292 m = 2.92 cm\n\n**Applications of capillarity:**\n- Water rises in soil pores and tree xylem vessels (vital for plant nutrition in Uganda's farms)\n- Blotting paper absorbs ink by capillary action\n- Wicks in oil lamps draw up fuel\n- Blood spreads in capillary tubes used for blood tests\n- Building dampness: water rises through brick and mortar (damp-proof course prevents this)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Surface tension \u03b3 = F/L = surface energy per unit area. Arises from unbalanced intermolecular forces at the liquid surface. Excess pressure: liquid droplet \u0394P = 2\u03b3/r; soap bubble \u0394P = 4\u03b3/r. Capillary rise h = 2\u03b3cos\u03b8/(\u03c1gr). Wetting liquids (\u03b8 < 90\u00b0) rise; non-wetting (\u03b8 > 90\u00b0) fall."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Surface tension (\u03b3): Force per unit length along a liquid surface; \u03b3 = F/L; unit: N/m\n\u2022 Angle of contact (\u03b8): Angle between liquid surface and solid wall measured through the liquid; < 90\u00b0 for wetting, > 90\u00b0 for non-wetting\n\u2022 Capillarity: Rise or depression of a liquid in a narrow tube: h = 2\u03b3cos\u03b8/(\u03c1gr)\n\u2022 Excess pressure: Extra pressure inside a curved liquid surface: \u0394P = 2\u03b3/r (droplet) or 4\u03b3/r (soap bubble)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Surface tension is defined as:",
+            "options": [
+              "Force per unit area on a liquid surface",
+              "Force per unit length along a liquid surface",
+              "Energy per unit volume of a liquid",
+              "Pressure inside a liquid droplet"
+            ],
+            "answer": "Force per unit length along a liquid surface",
+            "explanation": "Surface tension \u03b3 = F/L; force per unit length acting along the liquid surface (or equivalently, surface energy per unit area). Unit: N/m."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Archimedes' principle states that the upthrust on a body immersed in a fluid equals:",
+            "options": [
+              "The weight of the body",
+              "The weight of fluid displaced",
+              "The pressure at the base of the body times its area",
+              "The density of the fluid times the body's volume"
+            ],
+            "answer": "The weight of fluid displaced",
+            "explanation": "Archimedes' principle: upthrust = weight of fluid displaced = \u03c1_f \u00d7 V_displaced \u00d7 g."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Water flows through a pipe that narrows from area A to area A/4. If the speed in the wide section is v, what is the speed in the narrow section?",
+            "options": [
+              "v/4",
+              "v/2",
+              "2v",
+              "4v"
+            ],
+            "answer": "4v",
+            "explanation": "Continuity: A\u2081v\u2081 = A\u2082v\u2082. A\u00d7v = (A/4)\u00d7v\u2082. v\u2082 = 4v."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A hydraulic press has pistons of areas 2 cm\u00b2 and 50 cm\u00b2. A force of 20 N is applied to the small piston. What force is produced at the large piston?",
+            "options": [
+              "0.8 N",
+              "500 N",
+              "100 N",
+              "1000 N"
+            ],
+            "answer": "500 N",
+            "explanation": "F\u2082 = F\u2081 \u00d7 A\u2082/A\u2081 = 20 \u00d7 50/2 = 500 N."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A soap bubble of radius r has excess pressure \u0394P inside it. If the radius doubles to 2r, what is the new excess pressure?",
+            "options": [
+              "2\u0394P",
+              "4\u0394P",
+              "\u0394P/2",
+              "\u0394P/4"
+            ],
+            "answer": "\u0394P/2",
+            "explanation": "\u0394P = 4\u03b3/r. If r doubles: \u0394P_new = 4\u03b3/(2r) = \u0394P/2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Water rises 3 cm in a capillary tube of radius 0.5 mm. What would be the rise in a tube of radius 0.25 mm? (all other conditions identical)",
+            "options": [
+              "1.5 cm",
+              "6 cm",
+              "12 cm",
+              "0.75 cm"
+            ],
+            "answer": "6 cm",
+            "explanation": "h = 2\u03b3cos\u03b8/(\u03c1gr) \u221d 1/r. If r halves, h doubles. h\u2082 = 2 \u00d7 3 = 6 cm."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "An object weighs 60 N in air and 45 N when fully submerged in a liquid of density 800 kg/m\u00b3. What is the volume of the object? (g = 10 m/s\u00b2)",
+            "options": [
+              "1.5 \u00d7 10\u207b\u00b3 m\u00b3",
+              "1.875 \u00d7 10\u207b\u00b3 m\u00b3",
+              "6.0 \u00d7 10\u207b\u00b3 m\u00b3",
+              "7.5 \u00d7 10\u207b\u2074 m\u00b3"
+            ],
+            "answer": "1.875 \u00d7 10\u207b\u00b3 m\u00b3",
+            "explanation": "Upthrust = 60 \u2212 45 = 15 N. U = \u03c1_f g V: 15 = 800 \u00d7 10 \u00d7 V. V = 15/8000 = 1.875 \u00d7 10\u207b\u00b3 m\u00b3."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t7_l2",
+      "title": "Viscosity and its Effect on Motion in Fluids",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you pour honey and water from the same height, honey flows much more slowly. When a ball-bearing falls through engine oil, it falls much more slowly than in water. This resistance to flow \u2014 viscosity \u2014 is a fundamental property of fluids that affects everything from blood flow in arteries to industrial pipeline design."
+        },
+        {
+          "type": "heading",
+          "body": "Viscosity: Definition and Newton's Law of Viscosity"
+        },
+        {
+          "type": "text",
+          "body": "**Viscosity** is the property of a fluid that resists relative motion between adjacent layers. It arises from intermolecular forces between fluid layers moving at different speeds.\n\nConsider two parallel plates separated by fluid, with the lower plate stationary and the upper plate moving at velocity v. The fluid velocity varies linearly from 0 (at the lower plate) to v (at the upper plate) \u2014 this is called **laminar flow**.\n\n**Newton's Law of Viscosity:**\nThe shear stress (force per unit area) required to maintain this velocity gradient is:\n\n**\u03c4 = \u03b7 \u00d7 (dv/dx)**\n\nWhere:\n- \u03c4 = shear stress (Pa or N/m\u00b2)\n- \u03b7 = dynamic (absolute) viscosity (Pa\u00b7s or N\u00b7s/m\u00b2)\n- dv/dx = velocity gradient (s\u207b\u00b9)\n\nSo: **F = \u03b7 \u00d7 A \u00d7 (dv/dx)**\n\n**Dimensions of viscosity:** [\u03b7] = ML\u207b\u00b9T\u207b\u00b9\n**Units:** Pa\u00b7s = kg m\u207b\u00b9 s\u207b\u00b9 (also called Poiseuille, Pl)\n\nTypical values at 20\u00b0C:\n| Fluid | \u03b7 (Pa\u00b7s) |\n|---|---|\n| Air | 1.8 \u00d7 10\u207b\u2075 |\n| Water | 1.0 \u00d7 10\u207b\u00b3 |\n| Blood | 3\u20134 \u00d7 10\u207b\u00b3 |\n| Honey | ~10 |\n| Engine oil (SAE 30) | 0.1\u20130.3 |\n\n**Effect of temperature on viscosity:**\n- Liquids: viscosity DECREASES with increasing temperature (molecules have more energy to overcome intermolecular bonds)\n- Gases: viscosity INCREASES with temperature (more molecular collisions between layers)\n\n**Kinematic viscosity \u03bd = \u03b7/\u03c1** (unit: m\u00b2/s)"
+        },
+        {
+          "type": "heading",
+          "body": "Stokes' Law and Terminal Velocity"
+        },
+        {
+          "type": "text",
+          "body": "When a sphere of radius r moves at velocity v through a viscous fluid of viscosity \u03b7, the viscous drag force (Stokes' drag) is:\n\n**F_drag = 6\u03c0\u03b7rv** (Stokes' Law)\n\nThis applies when the flow is laminar (smooth, not turbulent) \u2014 satisfied when the Reynolds number Re = \u03c1vd/\u03b7 < ~1.\n\n**Terminal velocity:**\nAs a sphere falls through a viscous fluid, three forces act:\n1. Weight W = (4/3)\u03c0r\u00b3 \u03c1_s g (downward)\n2. Upthrust (Archimedes) U = (4/3)\u03c0r\u00b3 \u03c1_f g (upward)\n3. Stokes' drag F = 6\u03c0\u03b7rv (upward, opposing motion)\n\nAt terminal velocity v_T, acceleration = 0:\nW = U + F\n(4/3)\u03c0r\u00b3 \u03c1_s g = (4/3)\u03c0r\u00b3 \u03c1_f g + 6\u03c0\u03b7r v_T\n\nSolving for v_T:\n**v_T = 2r\u00b2(\u03c1_s \u2212 \u03c1_f)g / (9\u03b7)**\n\n**Worked Example 1:** A steel ball bearing (r = 1 mm = 0.001 m, \u03c1_s = 7800 kg/m\u00b3) falls through glycerol (\u03b7 = 1.5 Pa\u00b7s, \u03c1_f = 1260 kg/m\u00b3). Find the terminal velocity. (g = 10 m/s\u00b2)\n\nv_T = 2 \u00d7 (0.001)\u00b2 \u00d7 (7800 \u2212 1260) \u00d7 10 / (9 \u00d7 1.5)\n= 2 \u00d7 10\u207b\u2076 \u00d7 6540 \u00d7 10 / 13.5\n= 2 \u00d7 10\u207b\u2076 \u00d7 65400 / 13.5\n= 0.1308/13.5\n= 9.69 \u00d7 10\u207b\u00b3 m/s \u2248 9.7 mm/s\n\n**Worked Example 2:** A raindrop of radius 2 mm falls through air (\u03b7 = 1.8 \u00d7 10\u207b\u2075 Pa\u00b7s, \u03c1_air \u2248 1.2 kg/m\u00b3). \u03c1_water = 1000 kg/m\u00b3. Find the terminal velocity. (g = 10 m/s\u00b2)\n\nv_T = 2 \u00d7 (0.002)\u00b2 \u00d7 (1000 \u2212 1.2) \u00d7 10 / (9 \u00d7 1.8 \u00d7 10\u207b\u2075)\n= 2 \u00d7 4\u00d710\u207b\u2076 \u00d7 998.8 \u00d7 10 / (1.62\u00d710\u207b\u2074)\n= 7.99\u00d710\u207b\u00b2 / 1.62\u00d710\u207b\u2074\n\u2248 493 m/s\n\nThis is far too high for Stokes' Law to be valid for a 2 mm raindrop (turbulent flow). Real terminal velocity of raindrops \u2248 6\u20139 m/s. Stokes' Law applies only for very small droplets (fog droplets, dust particles).\n\n**Measuring viscosity using Stokes' Law:**\n1. Measure the terminal velocity of a sphere falling in the fluid (using stopwatch and measured distance)\n2. \u03b7 = 2r\u00b2(\u03c1_s \u2212 \u03c1_f)g / (9v_T)"
+        },
+        {
+          "type": "heading",
+          "body": "Poiseuille's Formula for Flow Through Pipes"
+        },
+        {
+          "type": "text",
+          "body": "**Poiseuille's formula** gives the volume flow rate Q of a viscous fluid through a cylindrical pipe:\n\n**Q = \u03c0r\u2074\u0394P / (8\u03b7L)**\n\nWhere:\n- r = radius of pipe (m)\n- \u0394P = pressure difference between the ends (Pa)\n- \u03b7 = dynamic viscosity (Pa\u00b7s)\n- L = length of pipe (m)\n- Q = volume flow rate (m\u00b3/s)\n\n**Key feature:** Q \u221d r\u2074 \u2014 flow rate is extremely sensitive to pipe radius!\n\nHalving the radius reduces flow to (\u00bd)\u2074 = 1/16 of the original.\n\n**Applications in medicine (blood flow):**\nIn arteries, Poiseuille's formula applies (approximately). Arterial narrowing (atherosclerosis) \u2014 even a small reduction in radius drastically reduces blood flow:\n- If radius reduces by 10% (r \u2192 0.9r): Q \u2192 (0.9)\u2074 Q = 0.656Q (35% reduction in flow!)\n- If radius reduces by 50% (r \u2192 0.5r): Q \u2192 (0.5)\u2074 Q = 0.0625Q (94% reduction!)\n\nThis explains why partial blockage of coronary arteries (heart attack risk) is so dangerous.\n\n**Worked Example 3:** Blood flows through an artery of radius 2 mm and length 0.1 m. The pressure drop is 100 Pa. \u03b7_blood = 3 \u00d7 10\u207b\u00b3 Pa\u00b7s. Find the volume flow rate.\n\nQ = \u03c0 \u00d7 (0.002)\u2074 \u00d7 100 / (8 \u00d7 3\u00d710\u207b\u00b3 \u00d7 0.1)\n= \u03c0 \u00d7 1.6\u00d710\u207b\u00b9\u00b9 \u00d7 100 / (2.4\u00d710\u207b\u00b3)\n= \u03c0 \u00d7 1.6\u00d710\u207b\u2079 / 2.4\u00d710\u207b\u00b3\n= \u03c0 \u00d7 6.67\u00d710\u207b\u2077\n= 2.09\u00d710\u207b\u2076 m\u00b3/s = 2.09 mL/s\n\n**Worked Example 4:** A water pipe of radius 1 cm and length 10 m carries water at 2\u00d710\u207b\u2075 m\u00b3/s. \u03b7 = 10\u207b\u00b3 Pa\u00b7s. Find the pressure drop.\n\n\u0394P = 8\u03b7LQ/(\u03c0r\u2074) = 8\u00d710\u207b\u00b3\u00d710\u00d72\u00d710\u207b\u2075/(\u03c0\u00d7(0.01)\u2074)\n= 1.6\u00d710\u207b\u2076/(\u03c0\u00d710\u207b\u2078)\n= 1.6\u00d710\u207b\u2076/(3.14\u00d710\u207b\u2078)\n= 51 Pa"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Viscosity \u03b7 measures fluid resistance to flow; F = \u03b7A(dv/dx). Stokes' drag on sphere: F = 6\u03c0\u03b7rv. Terminal velocity v_T = 2r\u00b2(\u03c1_s\u2212\u03c1_f)g/(9\u03b7). Poiseuille's law: Q = \u03c0r\u2074\u0394P/(8\u03b7L); Q \u221d r\u2074 \u2014 small radius changes have huge effects. Liquid viscosity decreases with temperature; gas viscosity increases."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Viscosity (\u03b7): Resistance of a fluid to flow; \u03b7 = shear stress / velocity gradient; unit: Pa\u00b7s\n\u2022 Stokes' Law: Drag force on a sphere: F = 6\u03c0\u03b7rv; applies to laminar flow around small spheres\n\u2022 Terminal velocity: Constant speed reached when weight = upthrust + drag: v_T = 2r\u00b2(\u03c1_s\u2212\u03c1_f)g/(9\u03b7)\n\u2022 Poiseuille's formula: Flow rate through a pipe: Q = \u03c0r\u2074\u0394P/(8\u03b7L); extremely sensitive to pipe radius"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "In a horizontal pipe, where the fluid velocity is highest, the pressure is:",
+            "options": [
+              "Highest",
+              "Lowest",
+              "Unchanged",
+              "Equal to atmospheric"
+            ],
+            "answer": "Lowest",
+            "explanation": "Bernoulli's equation (horizontal pipe): P + \u00bd\u03c1v\u00b2 = constant. Higher v \u2192 lower P. This is Bernoulli's principle."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A steel ball reaches terminal velocity v_T when falling through oil. If the radius is doubled (and all other quantities remain the same), what is the new terminal velocity?",
+            "options": [
+              "v_T/4",
+              "v_T/2",
+              "2v_T",
+              "4v_T"
+            ],
+            "answer": "4v_T",
+            "explanation": "v_T = 2r\u00b2(\u03c1_s\u2212\u03c1_f)g/(9\u03b7) \u221d r\u00b2. If r doubles, v_T increases by 2\u00b2 = 4. New v_T = 4v_T."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A diver is 20 m below the surface of Lake Victoria (\u03c1_water = 1000 kg/m\u00b3, atmospheric pressure = 1.0 \u00d7 10\u2075 Pa, g = 10 m/s\u00b2). What is the total pressure on the diver?",
+            "options": [
+              "2.0 \u00d7 10\u2075 Pa",
+              "3.0 \u00d7 10\u2075 Pa",
+              "2.0 \u00d7 10\u2074 Pa",
+              "1.0 \u00d7 10\u2075 Pa"
+            ],
+            "answer": "3.0 \u00d7 10\u2075 Pa",
+            "explanation": "P = P\u2080 + \u03c1gh = 1.0\u00d710\u2075 + 1000\u00d710\u00d720 = 1.0\u00d710\u2075 + 2.0\u00d710\u2075 = 3.0\u00d710\u2075 Pa."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The surface tension of water is 0.073 N/m. What is the excess pressure inside a water droplet of radius 0.5 mm?",
+            "options": [
+              "73 Pa",
+              "292 Pa",
+              "146 Pa",
+              "365 Pa"
+            ],
+            "answer": "292 Pa",
+            "explanation": "For a droplet (one surface): \u0394P = 2\u03b3/r = 2\u00d70.073/0.0005 = 0.146/0.0005 = 292 Pa."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Water flows through a horizontal pipe that contracts from radius 4 cm to radius 2 cm. The pressure in the wide section is 5000 Pa and the speed is 1 m/s. What is the pressure in the narrow section? (\u03c1 = 1000 kg/m\u00b3)",
+            "options": [
+              "5000 Pa",
+              "\u22122500 Pa",
+              "\u22122000 Pa",
+              "2500 Pa"
+            ],
+            "answer": "\u22122500 Pa",
+            "explanation": "Continuity: v\u2082 = v\u2081(A\u2081/A\u2082) = 1\u00d7(4\u00b2/2\u00b2) = 4 m/s. Bernoulli: P\u2082 = P\u2081 + \u00bd\u03c1(v\u2081\u00b2\u2212v\u2082\u00b2) = 5000 + \u00bd\u00d71000\u00d7(1\u221216) = 5000\u22127500 = \u22122500 Pa. (Negative pressure means suction \u2014 below absolute zero is physically impossible, so cavitation would occur.)"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A wooden cube of side 10 cm floats in water with 60% of its volume submerged. What is the density of the wood? (\u03c1_water = 1000 kg/m\u00b3)",
+            "options": [
+              "400 kg/m\u00b3",
+              "600 kg/m\u00b3",
+              "1000 kg/m\u00b3",
+              "1667 kg/m\u00b3"
+            ],
+            "answer": "600 kg/m\u00b3",
+            "explanation": "Fraction submerged = \u03c1_wood/\u03c1_water. 0.60 = \u03c1_wood/1000. \u03c1_wood = 600 kg/m\u00b3."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why does a surface molecule of a liquid have higher potential energy than a bulk molecule?",
+            "options": [
+              "Surface molecules move faster than bulk molecules",
+              "Surface molecules have neighbours only below/beside \u2014 net inward force means work needed to bring them to surface",
+              "Surface molecules are heated more by the sun",
+              "The surface has less pressure so molecules expand"
+            ],
+            "answer": "Surface molecules have neighbours only below/beside \u2014 net inward force means work needed to bring them to surface",
+            "explanation": "A bulk molecule has balanced attractions from all sides (zero net force, low PE). A surface molecule lacks neighbours above \u2014 net inward force means energy was needed to bring it there \u2014 higher PE. Surface tension arises from minimising this extra energy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t7_l3",
+      "title": "Pressure in Fluids: Pascal's Principle and Archimedes' Principle",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "The pressure of a fluid \u2014 whether it is the water in a dam, blood in arteries, or air in a tyre \u2014 follows precise laws that allow us to design hydraulic systems, understand weather, and explain why ships float. In this lesson we derive and apply the fundamental laws of fluid pressure, including Pascal's principle (the basis of all hydraulic machines) and Archimedes' principle (the basis of floatation)."
+        },
+        {
+          "type": "heading",
+          "body": "Pressure in a Static Fluid"
+        },
+        {
+          "type": "text",
+          "body": "**Pressure** P = Force / Area = F/A; unit: pascal (Pa) = N/m\u00b2\n\n**Pressure at depth h in a fluid of density \u03c1:**\n\nConsider a column of fluid of cross-section area A and height h:\nWeight of fluid column = \u03c1 \u00d7 Ah \u00d7 g\nPressure at the base = Weight/Area = \u03c1gh\n\nIf the fluid surface is exposed to atmospheric pressure P\u2080:\n**P = P\u2080 + \u03c1gh**\n\n**Key properties of fluid pressure:**\n1. Pressure increases with depth\n2. Pressure is transmitted equally in all directions at a point (Pascal's principle)\n3. Pressure is independent of the shape of the container (only depth matters)\n4. Pressure at the same depth in connected fluid is equal\n\n**Worked Example 1:** A diver is 15 m below the surface of Lake Victoria (\u03c1 = 1000 kg/m\u00b3). P\u2080 = 1.01 \u00d7 10\u2075 Pa. Find the total pressure. (g = 10 m/s\u00b2)\n\nP = P\u2080 + \u03c1gh = 101,000 + 1000 \u00d7 10 \u00d7 15 = 101,000 + 150,000 = 251,000 Pa = 2.51 \u00d7 10\u2075 Pa\n\n(About 2.5 atmospheres \u2014 the diver's body must withstand this pressure.)"
+        },
+        {
+          "type": "heading",
+          "body": "Pascal's Principle and Hydraulic Systems"
+        },
+        {
+          "type": "text",
+          "body": "**Pascal's Principle:** When pressure is applied to an enclosed fluid, the pressure is transmitted equally to all parts of the fluid and to the walls of the container.\n\n**Mathematical statement:**\n\u0394P is the same throughout the fluid.\n\n**The hydraulic press:**\nA small force F\u2081 on a small piston of area A\u2081 creates pressure P = F\u2081/A\u2081.\nThis pressure is transmitted to a large piston of area A\u2082:\nForce on large piston: F\u2082 = P \u00d7 A\u2082 = F\u2081 \u00d7 A\u2082/A\u2081\n\n**Mechanical advantage = F\u2082/F\u2081 = A\u2082/A\u2081**\n\nHowever, by conservation of energy (no gain without work):\nWork input = Work output (for ideal system)\nF\u2081 \u00d7 d\u2081 = F\u2082 \u00d7 d\u2082\nd\u2082/d\u2081 = F\u2081/F\u2082 = A\u2081/A\u2082 (large piston moves less distance)\n\n**Worked Example 2:** A hydraulic car jack has a small piston of radius 1 cm and a large piston of radius 8 cm. A force of 50 N is applied to the small piston. Find:\n(a) The force lifting the car\n(b) The mechanical advantage\n\n(a) A\u2081 = \u03c0 \u00d7 (0.01)\u00b2 = 3.14 \u00d7 10\u207b\u2074 m\u00b2\nA\u2082 = \u03c0 \u00d7 (0.08)\u00b2 = 2.01 \u00d7 10\u207b\u00b2 m\u00b2\nF\u2082 = F\u2081 \u00d7 A\u2082/A\u2081 = 50 \u00d7 (2.01\u00d710\u207b\u00b2)/(3.14\u00d710\u207b\u2074) = 50 \u00d7 64 = 3200 N\n\n(b) MA = F\u2082/F\u2081 = 3200/50 = 64\n\n**Applications of Pascal's Principle:**\n- Hydraulic car brakes\n- Hydraulic car lifts (garage workshops)\n- Hydraulic excavators and construction equipment\n- Hydraulic presses in sugar factories\n- Dentist's chair\n- Aircraft hydraulic systems"
+        },
+        {
+          "type": "heading",
+          "body": "Archimedes' Principle and Floatation"
+        },
+        {
+          "type": "text",
+          "body": "**Archimedes' Principle:** When a body is wholly or partially immersed in a fluid, it experiences an upthrust (buoyancy force) equal to the weight of the fluid displaced.\n\n**U = \u03c1_f \u00d7 V_submerged \u00d7 g**\n\nWhere:\n- \u03c1_f = density of fluid\n- V_submerged = volume of fluid displaced\n- g = gravitational acceleration\n\n**Derivation:**\nConsider a rectangular block of height h, cross-section A, submerged in fluid of density \u03c1_f.\nPressure at bottom of block: P_bottom = P\u2080 + \u03c1_f g(d + h)\nPressure at top of block: P_top = P\u2080 + \u03c1_f gd\n\nNet upward force (Upthrust):\nU = (P_bottom \u2212 P_top) \u00d7 A = \u03c1_f g h \u00d7 A = \u03c1_f g \u00d7 (Ah) = \u03c1_f g \u00d7 V \u2713\n\n**Law of Floatation:**\nA floating body displaces its own weight of fluid:\nWeight of body = Weight of fluid displaced\nW = U \u2192 m_body \u00d7 g = \u03c1_f \u00d7 V_submerged \u00d7 g\n\n**Worked Example 3:** A wooden block of mass 2 kg and volume 3 \u00d7 10\u207b\u00b3 m\u00b3 is placed in water (\u03c1 = 1000 kg/m\u00b3). (g = 10 m/s\u00b2)\n(a) Find the upthrust if fully submerged\n(b) Does it float or sink?\n(c) If it floats, what fraction is submerged?\n\n(a) U_full = \u03c1_f g V = 1000 \u00d7 10 \u00d7 3\u00d710\u207b\u00b3 = 30 N\n(b) Weight = mg = 2 \u00d7 10 = 20 N. Since U_full (30 N) > Weight (20 N), the block FLOATS.\n(c) At equilibrium: \u03c1_f \u00d7 V_sub \u00d7 g = mg\nV_sub = mg/(\u03c1_f g) = 2/1000 = 0.002 m\u00b3\nFraction submerged = V_sub/V_total = 0.002/0.003 = 2/3 \u2248 67%\n\n**Worked Example 4:** A metal object weighs 45 N in air and 30 N when fully submerged in water (\u03c1 = 1000 kg/m\u00b3). Find:\n(a) The upthrust (b) The volume of the object (c) The density of the metal\n\n(a) Upthrust = Weight in air \u2212 Weight in water = 45 \u2212 30 = 15 N\n(b) U = \u03c1_f g V: 15 = 1000 \u00d7 10 \u00d7 V \u2192 V = 1.5 \u00d7 10\u207b\u00b3 m\u00b3\n(c) Mass = W/g = 45/10 = 4.5 kg\nDensity = m/V = 4.5/(1.5\u00d710\u207b\u00b3) = 3000 kg/m\u00b3"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Fluid pressure: P = P\u2080 + \u03c1gh. Pascal's principle: pressure transmitted equally throughout enclosed fluid. Hydraulic machines: MA = A\u2082/A\u2081. Archimedes' principle: U = \u03c1_f \u00d7 V \u00d7 g. Floatation: weight = upthrust; fraction submerged = \u03c1_object/\u03c1_fluid."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Pascal's principle: Pressure applied to enclosed fluid is transmitted equally throughout the fluid\n\u2022 Archimedes' principle: Upthrust = weight of fluid displaced: U = \u03c1_f V g\n\u2022 Law of floatation: A floating body displaces its own weight of fluid\n\u2022 Mechanical advantage (hydraulic): MA = A\u2082/A\u2081 = ratio of output force to input force in a hydraulic machine"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A metal block (mass 500 g, volume 80 cm\u00b3) is submerged in water (\u03c1=1000 kg/m\u00b3). What is the tension in the supporting wire? (g=10)",
+            "options": [
+              "4.2 N",
+              "5.0 N",
+              "0.8 N",
+              "3.4 N"
+            ],
+            "answer": "4.2 N",
+            "explanation": "U=\u03c1_f g V=1000\u00d710\u00d780\u00d710\u207b\u2076=0.8 N. W=0.5\u00d710=5 N. T=W\u2212U=5\u22120.8=4.2 N."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The capillary rise formula h=2\u03b3cos\u03b8/(\u03c1gr). Which step is key in its derivation?",
+            "options": [
+              "Upward force = \u03b3\u00d72\u03c0r\u00d7cos\u03b8 = weight of column = \u03c1g\u03c0r\u00b2h \u2192 h=2\u03b3cos\u03b8/(\u03c1gr) \u2713",
+              "h = \u03b3/\u03c1g (no radius or angle)",
+              "h = 2\u03b3/(\u03c1gr) (ignoring contact angle)",
+              "h = \u03b3cos\u03b8/(\u03c1g) (missing factor of 2)"
+            ],
+            "answer": "Upward force = \u03b3\u00d72\u03c0r\u00d7cos\u03b8 = weight of column = \u03c1g\u03c0r\u00b2h \u2192 h=2\u03b3cos\u03b8/(\u03c1gr) \u2713",
+            "explanation": "Surface tension force upward: F=\u03b3\u00d72\u03c0r\u00d7cos\u03b8. Weight of liquid column: W=\u03c1g\u03c0r\u00b2h. At equilibrium F=W: h=2\u03b3cos\u03b8/(\u03c1gr)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Why does a large steel ship float even though steel is denser than water?",
+            "options": [
+              "Steel is lighter than water when shaped into a ship",
+              "The ship displaces a volume of water whose weight equals the ship's total weight \u2014 ship's average density including hollow interior < water density",
+              "The ship's engine creates lift",
+              "Seawater is denser than fresh water making it easier to float"
+            ],
+            "answer": "The ship displaces a volume of water whose weight equals the ship's total weight \u2014 ship's average density including hollow interior < water density",
+            "explanation": "The hollow hull displaces a large volume of water. If weight of displaced water = total ship weight, the ship floats (Law of Floatation). The ship's average density (including air-filled hull) < 1000 kg/m\u00b3."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The Bernoulli equation P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant is derived from:",
+            "options": [
+              "Newton's 3rd Law applied to fluid layers",
+              "Work-energy theorem: work by pressure forces = change in KE + change in PE of fluid element",
+              "Conservation of mass only",
+              "Archimedes' principle applied to moving fluid"
+            ],
+            "answer": "Work-energy theorem: work by pressure forces = change in KE + change in PE of fluid element",
+            "explanation": "For a fluid element: W_pressure = \u0394KE + \u0394PE. (P\u2081\u2212P\u2082)\u0394V = \u00bd\u03c1\u0394V(v\u2082\u00b2\u2212v\u2081\u00b2) + \u03c1\u0394Vg(h\u2082\u2212h\u2081). Dividing by \u0394V and rearranging: P\u2081+\u00bd\u03c1v\u2081\u00b2+\u03c1gh\u2081 = P\u2082+\u00bd\u03c1v\u2082\u00b2+\u03c1gh\u2082. \u2713"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A steel ball (r=1.5mm, \u03c1_s=7800 kg/m\u00b3) falls 8mm in 0.5s at terminal velocity in glycerol (\u03c1_f=1260 kg/m\u00b3). What is \u03b7? (g=10)",
+            "options": [
+              "0.82 Pa\u00b7s",
+              "2.04 Pa\u00b7s",
+              "0.41 Pa\u00b7s",
+              "4.08 Pa\u00b7s"
+            ],
+            "answer": "2.04 Pa\u00b7s",
+            "explanation": "v_T=0.008/0.5=0.016 m/s. \u03b7=2r\u00b2(\u03c1_s\u2212\u03c1_f)g/(9v_T)=2\u00d7(1.5\u00d710\u207b\u00b3)\u00b2\u00d76540\u00d710/(9\u00d70.016)=2\u00d72.25\u00d710\u207b\u2076\u00d765400/0.144=2.04 Pa\u00b7s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Water (\u03c1=1000 kg/m\u00b3) flows horizontally at 0.5 m/s and pressure 4\u00d710\u2074 Pa in a 2cm-radius pipe. The pipe rises 3m and narrows to 1cm. What is the new pressure?",
+            "options": [
+              "8125 Pa",
+              "12500 Pa",
+              "4000 Pa",
+              "38000 Pa"
+            ],
+            "answer": "8125 Pa",
+            "explanation": "Continuity: v\u2082=0.5\u00d7(2/1)\u00b2=2 m/s. Bernoulli: P\u2082=40000+\u00bd\u00d71000\u00d7(0.25\u22124)+1000\u00d710\u00d7(0\u22123)=40000\u22121875\u221230000=8125 Pa."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Why does water rise in a glass capillary tube but mercury falls (is depressed)?",
+            "options": [
+              "Water is less dense than mercury",
+              "Water wets glass (\u03b8 < 90\u00b0) while mercury does not (\u03b8 > 90\u00b0)",
+              "Mercury is a liquid metal",
+              "Water has lower surface tension than mercury"
+            ],
+            "answer": "Water wets glass (\u03b8 < 90\u00b0) while mercury does not (\u03b8 > 90\u00b0)",
+            "explanation": "For water-glass: adhesive forces (water-glass) > cohesive forces (water-water), so \u03b8 < 90\u00b0 and the meniscus curves up \u2192 water rises. For mercury-glass: cohesive forces (mercury-mercury) > adhesive forces (mercury-glass), so \u03b8 > 90\u00b0 \u2192 mercury falls."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t7_l4",
+      "title": "Fluid Flow: Continuity Equation and Bernoulli's Principle",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "How does a pipe manage to carry the same volume of water per second whether it is wide or narrow? Why does a fast-moving river exert less pressure on its banks than a slow-moving one? Why do aircraft wings generate lift? All these questions are answered by two fundamental principles of fluid dynamics: the equation of continuity and Bernoulli's principle."
+        },
+        {
+          "type": "heading",
+          "body": "Types of Fluid Flow"
+        },
+        {
+          "type": "text",
+          "body": "**Streamline (laminar) flow:** Fluid flows in smooth, parallel layers (streamlines). Adjacent layers do not mix. Velocity is constant at any given point. Occurs at low speeds.\n\n**Turbulent flow:** Flow becomes chaotic above a critical speed. Eddies and vortices form. Much higher energy dissipation. Occurs at high speeds or around sharp obstacles.\n\n**Reynolds number:** Dimensionless parameter that predicts when turbulence occurs:\nRe = \u03c1vd/\u03b7\n\nWhere \u03c1 = fluid density, v = flow speed, d = diameter of pipe, \u03b7 = viscosity.\n- Re < 2000: laminar flow\n- Re > 4000: turbulent flow\n- 2000 < Re < 4000: transitional\n\n**Streamlines:** Lines showing the direction of fluid flow at each point. In streamline flow, fluid particles move along streamlines. Streamlines cannot cross each other."
+        },
+        {
+          "type": "heading",
+          "body": "Equation of Continuity"
+        },
+        {
+          "type": "text",
+          "body": "For an incompressible fluid (constant density) in steady flow through a pipe:\n\n**The mass flow rate is constant:**\n\u03c1 \u00d7 A\u2081 \u00d7 v\u2081 = \u03c1 \u00d7 A\u2082 \u00d7 v\u2082\n\nSince \u03c1 is constant for incompressible fluids:\n\n**A\u2081v\u2081 = A\u2082v\u2082**\n\nThis is the **equation of continuity** \u2014 the volume flow rate Q = Av is constant throughout the pipe.\n\n**Physical interpretation:** Where the pipe is narrow (small A), the fluid moves faster (large v). Where the pipe is wide (large A), the fluid moves slower (small v). Think of a river: a wide section flows slowly; it narrows at rapids and flows fast.\n\n**Worked Example 1:** Water flows at 2 m/s through a pipe of diameter 4 cm. The pipe narrows to diameter 2 cm. Find the speed in the narrow section.\n\nA\u2081 = \u03c0 \u00d7 (0.02)\u00b2 = 1.257 \u00d7 10\u207b\u00b3 m\u00b2\nA\u2082 = \u03c0 \u00d7 (0.01)\u00b2 = 3.14 \u00d7 10\u207b\u2074 m\u00b2\n\nA\u2081v\u2081 = A\u2082v\u2082:\n1.257\u00d710\u207b\u00b3 \u00d7 2 = 3.14\u00d710\u207b\u2074 \u00d7 v\u2082\nv\u2082 = 2.514\u00d710\u207b\u00b3 / 3.14\u00d710\u207b\u2074 = 8 m/s\n\n(Speed increases 4\u00d7 when diameter halves \u2014 area decreases by factor 4.)\n\n**Volume flow rate:** Q = Av = 1.257\u00d710\u207b\u00b3 \u00d7 2 = 2.51\u00d710\u207b\u00b3 m\u00b3/s (same in both sections \u2713)"
+        },
+        {
+          "type": "heading",
+          "body": "Bernoulli's Principle and Equation"
+        },
+        {
+          "type": "text",
+          "body": "**Bernoulli's Principle:** In the steady streamline flow of an ideal (non-viscous, incompressible) fluid, the total mechanical energy per unit volume remains constant along a streamline:\n\n**P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant**\n\nWhere:\n- P = static pressure (Pa)\n- \u00bd\u03c1v\u00b2 = dynamic pressure (kinetic energy per unit volume)\n- \u03c1gh = hydrostatic pressure (potential energy per unit volume)\n\n**Derivation (energy per unit volume):**\nConsider fluid entering a pipe at point 1 (height h\u2081, pressure P\u2081, speed v\u2081, area A\u2081) and leaving at point 2.\n\nWork done by pressure forces = Change in KE + Change in PE\nP\u2081A\u2081\u0394x\u2081 \u2212 P\u2082A\u2082\u0394x\u2082 = \u00bdm(v\u2082\u00b2 \u2212 v\u2081\u00b2) + mg(h\u2082 \u2212 h\u2081)\n\nSince A\u2081\u0394x\u2081 = A\u2082\u0394x\u2082 = \u0394V (constant volume element) and m = \u03c1\u0394V:\n(P\u2081 \u2212 P\u2082)\u0394V = \u00bd\u03c1\u0394V(v\u2082\u00b2 \u2212 v\u2081\u00b2) + \u03c1\u0394Vg(h\u2082 \u2212 h\u2081)\nP\u2081 + \u00bd\u03c1v\u2081\u00b2 + \u03c1gh\u2081 = P\u2082 + \u00bd\u03c1v\u2082\u00b2 + \u03c1gh\u2082 \u2713\n\n**Key consequence:** Where fluid flows FASTER (higher v), the pressure is LOWER.\n\n**Worked Example 2:** Water flows horizontally through a pipe. At a wide section (A\u2081 = 4 cm\u00b2), v\u2081 = 1 m/s and P\u2081 = 3 \u00d7 10\u2074 Pa. At a narrow section (A\u2082 = 1 cm\u00b2), find v\u2082 and P\u2082. (\u03c1 = 1000 kg/m\u00b3)\n\nContinuity: v\u2082 = v\u2081 \u00d7 A\u2081/A\u2082 = 1 \u00d7 4/1 = 4 m/s\n\nBernoulli (same height, h\u2081 = h\u2082):\nP\u2081 + \u00bd\u03c1v\u2081\u00b2 = P\u2082 + \u00bd\u03c1v\u2082\u00b2\n3\u00d710\u2074 + \u00bd\u00d71000\u00d71 = P\u2082 + \u00bd\u00d71000\u00d716\n30,000 + 500 = P\u2082 + 8,000\nP\u2082 = 22,500 Pa = 2.25 \u00d7 10\u2074 Pa\n\n(Pressure drops significantly where the pipe narrows and fluid speeds up.)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Streamline flow: smooth, parallel layers. Turbulent: chaotic, above Re \u2248 4000. Continuity: A\u2081v\u2081 = A\u2082v\u2082 (Q = Av = constant). Bernoulli: P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant. Faster flow \u2192 lower pressure."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Streamline flow: Smooth, ordered fluid flow where particles follow parallel paths; also called laminar flow\n\u2022 Equation of continuity: A\u2081v\u2081 = A\u2082v\u2082; volume flow rate is constant for incompressible fluid in steady flow\n\u2022 Bernoulli's equation: P + \u00bd\u03c1v\u00b2 + \u03c1gh = constant along a streamline in ideal fluid flow\n\u2022 Reynolds number: Re = \u03c1vd/\u03b7; dimensionless number predicting onset of turbulence"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "An aircraft wing generates lift because:",
+            "options": [
+              "Air pushes the wing up from below",
+              "Air flows faster over the top of the wing, creating lower pressure above than below",
+              "The wing is inclined at an angle to deflect air downward",
+              "The engine thrust acts upward on the wing"
+            ],
+            "answer": "Air flows faster over the top of the wing, creating lower pressure above than below",
+            "explanation": "By Bernoulli's principle, faster airflow over the curved upper surface creates lower pressure above the wing. The pressure difference (higher below, lower above) creates a net upward force \u2014 lift."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A submarine (mass 5\u00d710\u2076 kg, volume 5000 m\u00b3) in seawater (\u03c1=1025 kg/m\u00b3). Net force on it? (g=10)",
+            "options": [
+              "1.25\u00d710\u2076 N downward",
+              "1.25\u00d710\u2076 N upward (must flood ballast tanks to dive)",
+              "Zero (perfectly balanced)",
+              "5\u00d710\u2077 N downward"
+            ],
+            "answer": "1.25\u00d710\u2076 N upward (must flood ballast tanks to dive)",
+            "explanation": "U=1025\u00d710\u00d75000=5.125\u00d710\u2077 N. W=5\u00d710\u2076\u00d710=5\u00d710\u2077 N. Net=5.125\u00d710\u2077\u22125\u00d710\u2077=1.25\u00d710\u2076 N upward. Must flood ballast tanks to submerge."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "To find density of an irregular object using a spring balance and water, which formula is used?",
+            "options": [
+              "\u03c1 = \u03c1_water \u00d7 W_air / (W_air \u2212 W_water)",
+              "\u03c1 = W_air / W_water",
+              "\u03c1 = (W_air \u2212 W_water) / W_air",
+              "\u03c1 = \u03c1_water / (W_air + W_water)"
+            ],
+            "answer": "\u03c1 = \u03c1_water \u00d7 W_air / (W_air \u2212 W_water)",
+            "explanation": "Upthrust = W_air \u2212 W_water = \u03c1_water g V. Volume V = (W_air \u2212 W_water)/(\u03c1_water g). Mass = W_air/g. Density = mass/V = \u03c1_water \u00d7 W_air/(W_air \u2212 W_water)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "According to Stokes' Law, the drag force on a sphere moving through a viscous fluid is proportional to:",
+            "options": [
+              "The square of the radius",
+              "The radius only",
+              "The cube of the radius",
+              "The fourth power of the radius"
+            ],
+            "answer": "The radius only",
+            "explanation": "Stokes' Law: F = 6\u03c0\u03b7rv. The drag force is proportional to r (radius to the first power), as well as to viscosity \u03b7 and speed v."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Blood pressure decreases at an arterial narrowing because:",
+            "options": [
+              "The blood becomes thinner at the narrowing",
+              "By continuity, blood speeds up; by Bernoulli, faster flow has lower pressure",
+              "Friction increases pressure loss",
+              "The heart beats more slowly"
+            ],
+            "answer": "By continuity, blood speeds up; by Bernoulli, faster flow has lower pressure",
+            "explanation": "Continuity: smaller A \u2192 higher v. Bernoulli: higher v \u2192 lower P. Low pressure can cause arterial collapse (worsening blockage) and clot formation \u2014 explaining the danger of atherosclerosis."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "What is the excess pressure inside a soap bubble of radius 2 cm? (\u03b3_soap = 0.030 N/m)",
+            "options": [
+              "3 Pa",
+              "6 Pa",
+              "1.5 Pa",
+              "12 Pa"
+            ],
+            "answer": "6 Pa",
+            "explanation": "\u0394P = 4\u03b3/r = 4\u00d70.030/0.02 = 0.12/0.02 = 6 Pa. (Soap bubble has two surfaces, hence 4\u03b3/r not 2\u03b3/r.)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t7_l5",
+      "title": "Applications of Bernoulli's Principle and Viscosity",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Bernoulli's principle and viscous flow underpin some of the most important technologies in the world \u2014 from aircraft wings to medical blood-flow analysis, from the carburettor in a car engine to the spray gun used in Uganda's paint industry. In this lesson we apply these principles to real systems."
+        },
+        {
+          "type": "heading",
+          "body": "Applications of Bernoulli's Principle"
+        },
+        {
+          "type": "text",
+          "body": "**1. Venturimeter (flow rate measurement)**\nA pipe with a constriction (narrowing). By measuring the pressure difference between wide and narrow sections and applying Bernoulli + continuity:\n\nP\u2081 + \u00bd\u03c1v\u2081\u00b2 = P\u2082 + \u00bd\u03c1v\u2082\u00b2\nA\u2081v\u2081 = A\u2082v\u2082 \u2192 v\u2081 = A\u2082v\u2082/A\u2081\n\nSolving: v\u2082 = \u221a(2(P\u2081\u2212P\u2082) / \u03c1(1\u2212A\u2082\u00b2/A\u2081\u00b2))\nFlow rate: Q = A\u2082v\u2082\n\n**Worked Example 1:** A venturimeter has a pipe diameter of 8 cm narrowing to 4 cm. The pressure difference is 1500 Pa. \u03c1 = 1000 kg/m\u00b3. Find the flow rate.\n\nA\u2081 = \u03c0\u00d7(0.04)\u00b2 = 5.03\u00d710\u207b\u00b3 m\u00b2\nA\u2082 = \u03c0\u00d7(0.02)\u00b2 = 1.26\u00d710\u207b\u00b3 m\u00b2\n\n1\u2212A\u2082\u00b2/A\u2081\u00b2 = 1\u2212(1.26/5.03)\u00b2 = 1\u22120.0627 = 0.937\n\nv\u2082 = \u221a(2\u00d71500/(1000\u00d70.937)) = \u221a(3000/937) = \u221a3.202 = 1.79 m/s\n\nQ = A\u2082v\u2082 = 1.26\u00d710\u207b\u00b3 \u00d7 1.79 = 2.25\u00d710\u207b\u00b3 m\u00b3/s\n\n**2. Aerofoil and Lift**\nAn aircraft wing (aerofoil) is shaped so that air flows faster over the curved upper surface than under the flatter lower surface. By Bernoulli: faster air above \u2192 lower pressure above. Net upward force (lift) = (P_below \u2212 P_above) \u00d7 wing area.\n\n**3. Bunsen burner**\nGas flows rapidly through a narrow jet at the bottom of the burner barrel. The high-speed gas creates a low-pressure region that draws in air through the air holes.\n\n**4. Spray gun / insecticide sprayer**\nRapid air flow across the top of a liquid tube creates low pressure, drawing liquid up the tube and dispersing it as a fine spray. Used for pesticide spraying on Uganda's farms and in mosquito control.\n\n**5. Pitot tube (aircraft speed measurement)**\nA tube facing into the airflow with a hole facing forward (stagnation pressure P\u2080 + \u00bd\u03c1v\u00b2) and one facing sideways (static pressure P\u2080). The difference gives speed:\nv = \u221a(2(P_stagnation \u2212 P_static)/\u03c1)\n\n**6. Carburettor**\nIn a petrol engine carburettor, air flows rapidly through a narrow venturi section, creating low pressure. This draws petrol from the fuel jet, mixing it with air in the correct proportion.\n\n**7. Flow over buildings (wind loading)**\nWind blowing over the roof of a building flows faster over the top than at ground level. Lower pressure on top \u2192 net upward force on roof. This is why roofs are blown off in strong storms (common in Uganda during thunderstorms). Roof structure must anchor the roof down, not just up."
+        },
+        {
+          "type": "heading",
+          "body": "Measurement of Viscosity and Terminal Velocity"
+        },
+        {
+          "type": "text",
+          "body": "**Measuring terminal velocity (falling sphere method):**\n\n1. Fill a tall graduated cylinder with the viscous fluid.\n2. Drop a small sphere (steel ball bearing of known radius r and density \u03c1_s) into the fluid.\n3. After the sphere reaches terminal velocity (constant speed), time it over a measured distance d.\n4. v_T = d/t\n5. Calculate \u03b7: \u03b7 = 2r\u00b2(\u03c1_s \u2212 \u03c1_f)g/(9v_T)\n\n**Worked Example 2:** A steel ball (r = 0.5 mm, \u03c1_s = 7800 kg/m\u00b3) takes 25 s to fall 0.3 m in oil (\u03c1_f = 900 kg/m\u00b3). Find \u03b7. (g = 10 m/s\u00b2)\n\nv_T = 0.3/25 = 0.012 m/s\n\u03b7 = 2\u00d7(0.5\u00d710\u207b\u00b3)\u00b2\u00d7(7800\u2212900)\u00d710 / (9\u00d70.012)\n= 2\u00d72.5\u00d710\u207b\u2077\u00d76900\u00d710 / 0.108\n= 3.45\u00d710\u207b\u00b3 / 0.108\n= 0.032 Pa\u00b7s\n\n**Effect of temperature on viscosity (practical implications):**\n- Engine oil thins when hot \u2192 lubricates better but may leak past worn seals\n- Cold weather makes oil thick \u2192 engine difficult to start; use low-viscosity oil (SAE 5W-30) in cold climates\n- Blood viscosity matters: dehydration thickens blood, increasing flow resistance and blood pressure\n- In Uganda's warm climate, most liquid viscosities are lower than in colder countries \u2192 advantage for flow systems"
+        },
+        {
+          "type": "heading",
+          "body": "Stokes' and Poiseuille's Formulas: Derivations and Problem Solving"
+        },
+        {
+          "type": "text",
+          "body": "**Stokes' formula derivation (dimensional analysis approach):**\n\nThe drag force F on a sphere depends on \u03b7, r, v. Assume F = k\u03b7\u1d43r\u1d47v\u1d9c.\n[F] = MLT\u207b\u00b2; [\u03b7] = ML\u207b\u00b9T\u207b\u00b9; [r] = L; [v] = LT\u207b\u00b9\n\nMLT\u207b\u00b2 = (ML\u207b\u00b9T\u207b\u00b9)\u1d43(L)\u1d47(LT\u207b\u00b9)\u1d9c = M\u1d43 L^(-a+b+c) T^(-a-c)\n\nM: 1=a; T: -2=-a-c \u2192 c=1; L: 1=-1+b+1 \u2192 b=1\nF = k\u03b7rv where k = 6\u03c0 (from exact calculation)\n\u2234 **F = 6\u03c0\u03b7rv** \u2713\n\n**Worked Example 3 (Combined Stokes + Archimedes):**\nA glass bead (r = 2 mm, \u03c1_glass = 2500 kg/m\u00b3) falls through water (\u03b7 = 10\u207b\u00b3 Pa\u00b7s, \u03c1_water = 1000 kg/m\u00b3). Find:\n(a) Terminal velocity\n(b) Stokes drag at terminal velocity\n(c) Verify forces balance\n\n(a) v_T = 2r\u00b2(\u03c1_s\u2212\u03c1_f)g/(9\u03b7)\n= 2\u00d7(2\u00d710\u207b\u00b3)\u00b2\u00d7(2500\u22121000)\u00d710/(9\u00d710\u207b\u00b3)\n= 2\u00d74\u00d710\u207b\u2076\u00d71500\u00d710/(9\u00d710\u207b\u00b3)\n= 0.12/9\u00d710\u207b\u00b3 = 0.12/0.009 = 13.3 m/s\n\n(b) F_Stokes = 6\u03c0\u03b7rv_T = 6\u03c0\u00d710\u207b\u00b3\u00d72\u00d710\u207b\u00b3\u00d713.3 = 5.03\u00d710\u207b\u2074 N\n\n(c) Weight = (4/3)\u03c0r\u00b3\u03c1_s g = (4/3)\u03c0\u00d7(2\u00d710\u207b\u00b3)\u00b3\u00d72500\u00d710 = 8.38\u00d710\u207b\u2074 N\nUpthrust = (4/3)\u03c0r\u00b3\u03c1_f g = (4/3)\u03c0\u00d7(2\u00d710\u207b\u00b3)\u00b3\u00d71000\u00d710 = 3.35\u00d710\u207b\u2074 N\nNet downward force = 8.38\u00d710\u207b\u2074 \u2212 3.35\u00d710\u207b\u2074 = 5.03\u00d710\u207b\u2074 N\n\nStokes drag = 5.03\u00d710\u207b\u2074 N \u2713 Forces balance at terminal velocity."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Bernoulli applications: venturimeter, aerofoil lift, spray guns, Bunsen burner, pitot tube, carburettor. Terminal velocity measured by timing sphere fall \u2192 viscosity via Stokes. Poiseuille Q\u221dr\u2074 critical for blood flow and pipe design. All applications use the same core principles."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Venturimeter: Device using Bernoulli + continuity to measure flow rate from a pressure difference across a constriction\n\u2022 Lift force (aerofoil): Upward force on a wing due to higher pressure below than above; caused by faster flow over the curved upper surface\n\u2022 Pitot tube: Device measuring fluid velocity from the difference between stagnation and static pressure\n\u2022 Spray gun: Uses Bernoulli principle: fast air flow creates low pressure above liquid tube, drawing liquid up and atomising it"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A venturimeter: wide diameter 6cm, throat 3cm, pressure difference 2000 Pa, \u03c1=1000 kg/m\u00b3. Approximate flow rate?",
+            "options": [
+              "1.46\u00d710\u207b\u00b3 m\u00b3/s",
+              "2.83\u00d710\u207b\u00b3 m\u00b3/s",
+              "7.07\u00d710\u207b\u2074 m\u00b3/s",
+              "5.03\u00d710\u207b\u00b3 m\u00b3/s"
+            ],
+            "answer": "1.46\u00d710\u207b\u00b3 m\u00b3/s",
+            "explanation": "A\u2081=\u03c0(0.03)\u00b2=2.83\u00d710\u207b\u00b3 m\u00b2. A\u2082=\u03c0(0.015)\u00b2=7.07\u00d710\u207b\u2074 m\u00b2. v\u2082=\u221a(2\u00d72000/(1000\u00d70.9375))=2.065 m/s. Q=A\u2082v\u2082=7.07\u00d710\u207b\u2074\u00d72.065=1.46\u00d710\u207b\u00b3 m\u00b3/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "An artery of radius r carries blood at flow rate Q. If the radius reduces to 0.8r due to arterial plaque (all else equal), what fraction of the original flow rate remains?",
+            "options": [
+              "0.80",
+              "0.64",
+              "0.41",
+              "0.51"
+            ],
+            "answer": "0.41",
+            "explanation": "Poiseuille: Q \u221d r\u2074. New Q/Old Q = (0.8r)\u2074/r\u2074 = 0.8\u2074 = 0.4096 \u2248 0.41. A 20% reduction in radius reduces flow to 41% \u2014 a 59% reduction!"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "An object floats with exactly half its volume above water. What is the relationship between the object's density and water's density?",
+            "options": [
+              "\u03c1_object = \u03c1_water",
+              "\u03c1_object = 2 \u03c1_water",
+              "\u03c1_object = \u03c1_water/2",
+              "\u03c1_object = \u03c1_water/4"
+            ],
+            "answer": "\u03c1_object = \u03c1_water/2",
+            "explanation": "Half submerged means V_sub = V/2. Law of floatation: \u03c1_f \u00d7 V_sub \u00d7 g = \u03c1_object \u00d7 V \u00d7 g. \u03c1_water \u00d7 V/2 = \u03c1_object \u00d7 V. \u03c1_object = \u03c1_water/2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why does a shower curtain get pushed inward when the shower is running?",
+            "options": [
+              "Water from the shower hits the curtain pushing it inward",
+              "Fast-moving air inside the shower (Bernoulli) has lower pressure than still air outside \u2014 curtain pushed in",
+              "The curtain absorbs water and becomes heavy",
+              "Gravity pulls the curtain inward"
+            ],
+            "answer": "Fast-moving air inside the shower (Bernoulli) has lower pressure than still air outside \u2014 curtain pushed in",
+            "explanation": "Falling water creates rapid air movement inside the shower. By Bernoulli, fast air \u2192 low pressure inside. Higher atmospheric pressure outside pushes curtain inward. Classic Bernoulli application."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two soap bubbles of radii 3 cm and 5 cm are connected by a tube. What happens?",
+            "options": [
+              "Air flows from larger to smaller bubble",
+              "Air flows from smaller to larger bubble",
+              "No air flows; pressures are equal",
+              "Both bubbles shrink"
+            ],
+            "answer": "Air flows from smaller to larger bubble",
+            "explanation": "\u0394P = 4\u03b3/r. Smaller bubble (r=3cm): \u0394P\u2081 = 4\u03b3/0.03 = 133\u03b3. Larger bubble (r=5cm): \u0394P\u2082 = 4\u03b3/0.05 = 80\u03b3. P\u2081 > P\u2082 \u2192 air flows from smaller (higher pressure) to larger (lower pressure). Smaller shrinks; larger grows."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Hydraulic brakes: driver applies 150 N to master cylinder (area 2cm\u00b2). Caliper piston area 12cm\u00b2. What force on caliper piston?",
+            "options": [
+              "25 N",
+              "900 N",
+              "150 N",
+              "1800 N"
+            ],
+            "answer": "900 N",
+            "explanation": "P = F/A = 150/(2\u00d710\u207b\u2074) = 7.5\u00d710\u2075 Pa. F\u2082 = P\u00d7A\u2082 = 7.5\u00d710\u2075\u00d712\u00d710\u207b\u2074 = 900 N. (MA = 12/2 = 6)"
+          }
+        ]
+      }
+    }
+  ]
+}

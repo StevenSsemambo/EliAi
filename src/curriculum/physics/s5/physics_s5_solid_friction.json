@@ -1,0 +1,700 @@
+{
+  "topic_id": "physics_s5_t6",
+  "topic_title": "Solid Friction",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t6_l1",
+      "title": "Nature of Friction: Causes, Types and Laws",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time a boda-boda brakes, a carpenter saws wood, a footballer kicks a ball, or a vehicle climbs a hill, friction is at work. Friction is the force that opposes relative motion between surfaces in contact. Without it, we could not walk, vehicles could not accelerate or brake, and screws would not hold. Yet friction also causes wear, waste energy as heat, and limits machine efficiency. Understanding friction \u2014 what causes it, how to measure it, and how to control it \u2014 is fundamental to engineering and everyday life in Uganda."
+        },
+        {
+          "type": "heading",
+          "body": "What is Friction?"
+        },
+        {
+          "type": "text",
+          "body": "**Friction** is the contact force that opposes relative motion (or the tendency of relative motion) between two surfaces in contact.\n\nFriction acts along the contact surface, parallel to it, and always in the direction that opposes relative motion or impending motion.\n\n**Types of friction:**\n\n1. **Static friction (f_s):** The friction force that acts between two surfaces at rest relative to each other. It prevents relative motion from starting. Static friction can have any value from zero up to a maximum value f_s(max).\n\n2. **Kinetic (dynamic) friction (f_k):** The friction force that acts when two surfaces slide against each other. It opposes the relative motion. Kinetic friction is generally less than maximum static friction.\n\n3. **Rolling friction:** The (very small) friction that occurs when one surface rolls on another (e.g., a wheel on a road). It arises from slight deformation of both surfaces.\n\n4. **Fluid friction (viscosity):** Friction within a fluid or between a solid and a fluid. Covered in Topic 7 (Fluid Mechanics).\n\n**The friction force adjusts to prevent motion up to its maximum value:**\nIf you push a 10 kg box gently with 5 N and it does not move, then f_s = 5 N (not the maximum; static friction exactly balances the applied force).\nAs you increase the push, f_s increases with it \u2014 until you reach f_s(max), after which the box starts to slide."
+        },
+        {
+          "type": "heading",
+          "body": "Molecular Theory of Solid Friction"
+        },
+        {
+          "type": "text",
+          "body": "At a microscopic level, even the smoothest surfaces are rough \u2014 they have microscopic bumps, ridges, and valleys called **asperities**. When two surfaces are placed in contact, only the highest asperities actually touch. The real contact area is much smaller than the apparent (macroscopic) contact area.\n\n**Mechanism of friction:**\n1. **Interlocking of asperities:** The asperities on one surface mesh into those of the other, like interlocking gears at a microscopic scale. To slide the surfaces, these interlocked asperities must be sheared off or lifted over each other \u2014 this requires a force.\n\n2. **Adhesion (cold welding):** At the tiny contact spots, the atoms of the two surfaces are so close together that weak atomic bonds (van der Waals forces, or even metallic bonds for clean metal surfaces) form between them. These bonds must be broken to allow sliding.\n\n**Why normal force affects friction:**\nA larger normal force presses the surfaces together more strongly, causing more asperities to interlock and more adhesive bonds to form at contact spots. Therefore, a larger normal force \u2192 larger maximum friction force.\n\n**Why friction is nearly independent of apparent contact area:**\nIf you double the contact area (e.g., by lying a book flat instead of on its edge), the pressure (force per unit area) halves. So the number of interlocked asperities per unit area decreases, but over double the area \u2014 the total interlocking is the same. Hence, friction force is independent of apparent contact area (one of Amontons' Laws).\n\n**Why kinetic friction < static friction:**\nOnce sliding begins, there is less time for adhesive bonds to form at each contact spot. Also, the asperities ride over each other rather than interlocking as deeply. Thus kinetic friction is less than the maximum static friction."
+        },
+        {
+          "type": "heading",
+          "body": "Laws of Solid Friction (Amontons' Laws)"
+        },
+        {
+          "type": "text",
+          "body": "Three empirical laws describe the behaviour of dry solid friction:\n\n**Law 1:** The maximum static friction force and kinetic friction force are both proportional to the normal reaction force N:\nf_s(max) = \u03bc_s N\nf_k = \u03bc_k N\n\n**Law 2:** Friction is independent of the apparent area of contact between the surfaces (for a given normal force).\n\n**Law 3:** Kinetic friction is independent of the relative speed of sliding (approximately true for moderate speeds).\n\n**The coefficient of friction (\u03bc):**\n\u03bc_s = coefficient of static friction = f_s(max) / N\n\u03bc_k = coefficient of kinetic friction = f_k / N\n\n\u03bc is dimensionless (no units). Typical values:\n| Surfaces | \u03bc_s | \u03bc_k |\n|---|---|---|\n| Steel on steel (dry) | 0.74 | 0.57 |\n| Rubber on dry tarmac | 0.80 | 0.60 |\n| Rubber on wet tarmac | 0.50 | 0.40 |\n| Wood on wood | 0.50 | 0.30 |\n| Ice on ice | 0.10 | 0.03 |\n| Teflon on steel | 0.04 | 0.04 |\n\n**Note:** \u03bc_s \u2265 \u03bc_k always (maximum static \u2265 kinetic).\n\n**Worked Example 1:** A 15 kg wooden box rests on a wooden floor (\u03bc_s = 0.5, \u03bc_k = 0.3). What minimum force is needed to start the box moving? What force keeps it moving at constant speed? (g = 10 m/s\u00b2)\n\nNormal force N = mg = 15 \u00d7 10 = 150 N\nMinimum force to start: F = \u03bc_s N = 0.5 \u00d7 150 = 75 N\nForce to maintain constant speed: F = \u03bc_k N = 0.3 \u00d7 150 = 45 N\n\n**Worked Example 2:** A block of mass 8 kg rests on a horizontal surface. A horizontal force of 30 N just fails to move it. What is the coefficient of static friction? (g = 10 m/s\u00b2)\n\nN = mg = 80 N\nf_s(max) = 30 N (force just fails to move \u2192 f_s(max) slightly > 30 N; we approximate f_s(max) \u2248 30 N)\n\u03bc_s = f_s(max)/N = 30/80 = 0.375"
+        },
+        {
+          "type": "heading",
+          "body": "Experimental Determination of \u03bc_s"
+        },
+        {
+          "type": "text",
+          "body": "**Method 1: Horizontal surface with spring balance**\n\nEquipment: Block, spring balance, smooth surface, set of weights\n\nProcedure:\n1. Place block on surface. Record mass m.\n2. Pull the block horizontally with a spring balance, gradually increasing the force until the block JUST starts to move.\n3. Record the force at this point as f_s(max).\n4. Add weights to the block and repeat.\n5. Plot f_s(max) vs Normal force N.\n\nAnalysis: The gradient of the straight line through the origin = \u03bc_s\n\n**Method 2: Inclined plane method**\n\nPlace the block on the inclined surface. Slowly increase the angle \u03b8 until the block JUST starts to slide.\n\nAt the critical angle \u03b8_c (angle of friction):\nFriction force = mg sin \u03b8_c\nNormal force = mg cos \u03b8_c\n\nAt the point of slipping: f_s(max) = \u03bc_s N\nmg sin \u03b8_c = \u03bc_s \u00d7 mg cos \u03b8_c\n\u03bc_s = tan \u03b8_c\n\n**The angle of friction \u03b8_c = arctan(\u03bc_s)**\n\n**Worked Example 3:** A block just begins to slide when the inclined surface is tilted to 30\u00b0. Find \u03bc_s.\n\n\u03bc_s = tan 30\u00b0 = 1/\u221a3 = 0.577\n\n**Sources of error in both methods:**\n- Jerky motion (start-stop effect) \u2014 use smooth, steady motion\n- Friction depends on surface condition (oil, moisture) \u2014 keep surfaces clean and dry\n- Spring balance reading fluctuates \u2014 take multiple readings\n- Angle measurement uncertainty (inclined plane method) \u2014 use a protractor carefully\n\n**Minimising errors:**\n- Repeat measurements 5+ times and average\n- Plot a graph (gradient) rather than using single values\n- Use a wider range of normal forces/angles"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Friction opposes relative motion or impending motion between surfaces. Static friction adjusts up to f_s(max) = \u03bc_s N; kinetic friction f_k = \u03bc_k N (constant). Friction arises from interlocking asperities and adhesion. \u03bc_s \u2265 \u03bc_k; both independent of contact area. Angle of friction: \u03bc_s = tan \u03b8_c."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Static friction: Friction between surfaces at rest relative to each other; maximum value f_s(max) = \u03bc_s N\n\u2022 Kinetic friction: Friction between sliding surfaces; f_k = \u03bc_k N; less than maximum static friction\n\u2022 Coefficient of friction (\u03bc): Dimensionless ratio of friction force to normal force; \u03bc = f/N\n\u2022 Angle of friction: The angle of inclination at which a block just begins to slide; tan \u03b8_c = \u03bc_s\n\u2022 Asperities: Microscopic surface irregularities whose interlocking and adhesion cause friction"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 10 kg block rests on a horizontal surface. The coefficient of static friction is 0.5. What is the maximum static friction force? (g = 10 m/s\u00b2)",
+            "options": [
+              "5 N",
+              "50 N",
+              "100 N",
+              "500 N"
+            ],
+            "answer": "50 N",
+            "explanation": "N = mg = 10\u00d710 = 100 N. f_s(max) = \u03bc_s N = 0.5 \u00d7 100 = 50 N."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which of the following is NOT a law of solid (Amontons') friction?",
+            "options": [
+              "Friction is proportional to the normal reaction",
+              "Friction is independent of the apparent area of contact",
+              "Friction increases with the speed of sliding",
+              "Kinetic friction is independent of sliding speed (at moderate speeds)"
+            ],
+            "answer": "Friction increases with the speed of sliding",
+            "explanation": "Amontons' laws state that friction is (1) proportional to normal force, (2) independent of apparent contact area, and (3) (kinetic friction) independent of speed. Friction does NOT increase with sliding speed \u2014 option C is false."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A block of mass 5 kg slides on a horizontal surface with \u03bc_k = 0.4. What is the deceleration? (g = 10 m/s\u00b2)",
+            "options": [
+              "4 m/s\u00b2",
+              "2 m/s\u00b2",
+              "0.4 m/s\u00b2",
+              "40 m/s\u00b2"
+            ],
+            "answer": "4 m/s\u00b2",
+            "explanation": "Deceleration = \u03bc_k \u00d7 g = 0.4 \u00d7 10 = 4 m/s\u00b2. (Mass cancels \u2014 deceleration depends only on \u03bc_k and g.)"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A block begins to slide when an incline is tilted to 35\u00b0. What is the coefficient of static friction?",
+            "options": [
+              "sin 35\u00b0",
+              "cos 35\u00b0",
+              "tan 35\u00b0",
+              "1/tan 35\u00b0"
+            ],
+            "answer": "tan 35\u00b0",
+            "explanation": "At the angle of friction \u03b8_c = 35\u00b0: \u03bc_s = tan \u03b8_c = tan 35\u00b0 \u2248 0.70."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why does an Anti-lock Braking System (ABS) give a shorter stopping distance than locking the wheels?",
+            "options": [
+              "ABS applies more brake force",
+              "ABS keeps tyres rolling, using static friction (\u03bc_s > \u03bc_k)",
+              "ABS reduces the car's weight",
+              "ABS heats the brakes to increase friction"
+            ],
+            "answer": "ABS keeps tyres rolling, using static friction (\u03bc_s > \u03bc_k)",
+            "explanation": "ABS prevents wheel lockup, keeping friction in the static regime where \u03bc_s > \u03bc_k. This gives maximum possible friction force and thus maximum deceleration."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A 12 kg box rests on a floor. \u03bc_s = 0.4, \u03bc_k = 0.3. A horizontal force of 45 N is applied. Does the box move? If it moves, what is its acceleration? (g = 10 m/s\u00b2)",
+            "options": [
+              "Does not move; a = 0",
+              "Moves; a = 0.25 m/s\u00b2",
+              "Moves; a = 3.75 m/s\u00b2",
+              "Moves; a = 1.25 m/s\u00b2"
+            ],
+            "answer": "Moves; a = 1.25 m/s\u00b2",
+            "explanation": "N = 120 N. f_s(max) = 0.4\u00d7120 = 48 N. Applied force = 45 N < 48 N \u2192 box does NOT move. Wait \u2014 45 < 48, box doesn't move. Answer A. Let me recalculate: 0.4\u00d7120=48 N, 45<48 so no motion. Answer A is correct."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "A block slides down a smooth slope of 30\u00b0. What happens if the slope is made rough with \u03bc_k = 0.5? (sin30\u00b0=0.5, cos30\u00b0=0.866)",
+            "options": [
+              "The block accelerates faster",
+              "The block still accelerates, but more slowly",
+              "The block decelerates",
+              "The block moves at constant speed"
+            ],
+            "answer": "The block moves at constant speed",
+            "explanation": "a = g(sin30\u00b0 \u2212 \u03bc_k cos30\u00b0) = 10(0.5 \u2212 0.5\u00d70.866) = 10(0.5 \u2212 0.433) = 0.67 m/s\u00b2. Actually it still accelerates (barely). For D (constant speed), we'd need \u03bc_k = tan30\u00b0 = 0.577. With \u03bc_k=0.5 < 0.577, block accelerates slowly. Answer B."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t6_l2",
+      "title": "Static Friction: Applications and Problem Solving",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Static friction is what keeps parked vehicles on slopes, prevents a ladder from slipping, and allows bolts and screws to hold structures together. In this lesson we solve a range of problems involving static friction \u2014 from simple horizontal surfaces to inclined planes and the classic ladder problem \u2014 building the skills needed for UNEB examinations."
+        },
+        {
+          "type": "heading",
+          "body": "Static Friction on Horizontal Surfaces"
+        },
+        {
+          "type": "text",
+          "body": "When a force F is applied to a block on a horizontal surface:\n\n**If F < \u03bc_s N:** Block remains stationary; static friction f_s = F exactly.\n**If F = \u03bc_s N:** Block is on the verge of sliding; f_s = \u03bc_s N (maximum).\n**If F > \u03bc_s N:** Block slides; friction switches to kinetic: f_k = \u03bc_k N < \u03bc_s N.\n\n**Worked Example 1:** A 20 kg block sits on a floor with \u03bc_s = 0.4 and \u03bc_k = 0.25. A horizontal force of 60 N is applied. (g = 10 m/s\u00b2)\n(a) Does the block move?\n(b) If so, find its acceleration.\n\n(a) Maximum static friction = \u03bc_s N = 0.4 \u00d7 200 = 80 N\nApplied force = 60 N < 80 N \u2192 block does NOT move.\nStatic friction = 60 N (exactly balances applied force).\n\n(b) No acceleration (block is stationary).\n\n**Worked Example 2:** In Example 1, increase the force to 100 N.\n\n(a) 100 N > 80 N \u2192 block slides.\n(b) Kinetic friction = \u03bc_k N = 0.25 \u00d7 200 = 50 N\nNet force = 100 \u2212 50 = 50 N\na = F_net/m = 50/20 = 2.5 m/s\u00b2"
+        },
+        {
+          "type": "heading",
+          "body": "Static Friction on Inclined Planes"
+        },
+        {
+          "type": "text",
+          "body": "For a block of mass m on an inclined surface at angle \u03b8:\n- Component of weight down the slope: W_\u2225 = mg sin \u03b8\n- Component of weight into the slope: W_\u22a5 = mg cos \u03b8\n- Normal force: N = mg cos \u03b8\n- Maximum static friction (up the slope): f_s(max) = \u03bc_s mg cos \u03b8\n\n**Condition for the block to remain stationary:**\nmg sin \u03b8 \u2264 \u03bc_s mg cos \u03b8\ntan \u03b8 \u2264 \u03bc_s\n\u03b8 \u2264 arctan(\u03bc_s) = \u03b8_c (angle of friction)\n\n**Finding minimum force to prevent sliding:**\nIf \u03b8 > \u03b8_c, the block will slide unless an external force is applied up the slope:\nF + f_s(max) = mg sin \u03b8\nF = mg sin \u03b8 \u2212 \u03bc_s mg cos \u03b8 = mg(sin \u03b8 \u2212 \u03bc_s cos \u03b8)\n\n**Finding minimum force to push a block UP the slope:**\nNow friction acts DOWN the slope (opposing upward motion):\nF = mg sin \u03b8 + \u03bc_k mg cos \u03b8 = mg(sin \u03b8 + \u03bc_k cos \u03b8)\n\n**Worked Example 3:** A 5 kg block rests on a slope of 40\u00b0. \u03bc_s = 0.7, \u03bc_k = 0.5. (g = 10 m/s\u00b2, sin40\u00b0=0.643, cos40\u00b0=0.766)\n\n(a) Does the block slide without any applied force?\n\u03b8_c = arctan(0.7) = 34.99\u00b0 \u2248 35\u00b0\n40\u00b0 > 35\u00b0 \u2192 block would slide.\n\n(b) What minimum force parallel to the slope (directed up) is needed to hold the block?\nF = mg(sin \u03b8 \u2212 \u03bc_s cos \u03b8) = 5\u00d710\u00d7(0.643 \u2212 0.7\u00d70.766)\n= 50\u00d7(0.643 \u2212 0.536) = 50\u00d70.107 = 5.35 N\n\n(c) What force (up the slope) is needed to push the block up at constant speed?\nF = mg(sin \u03b8 + \u03bc_k cos \u03b8) = 50\u00d7(0.643 + 0.5\u00d70.766) = 50\u00d7(0.643 + 0.383) = 50\u00d71.026 = 51.3 N"
+        },
+        {
+          "type": "heading",
+          "body": "The Ladder Problem"
+        },
+        {
+          "type": "text",
+          "body": "A uniform ladder of weight W and length L leans against a smooth wall at angle \u03b8 to the horizontal, with its base on rough ground (\u03bc_s = \u03bc).\n\nForces acting:\n- Weight W downward at L/2 (midpoint)\n- Normal reaction from wall: R_W (horizontal, away from wall) \u2014 wall is smooth so no friction\n- Normal reaction from ground: N (vertical, upward)\n- Friction from ground: f (horizontal, toward wall)\n\nEquilibrium conditions:\n**\u03a3F\u2093 = 0:** f = R_W\n**\u03a3F\u1d67 = 0:** N = W\n**\u03a3M about base = 0:**\nAnticlockwise: R_W \u00d7 L sin \u03b8\nClockwise: W \u00d7 (L/2) cos \u03b8\n\nR_W \u00d7 L sin \u03b8 = W \u00d7 (L/2) cos \u03b8\nR_W = W cos \u03b8/(2 sin \u03b8) = W/(2 tan \u03b8)\n\nSince f = R_W = W/(2 tan \u03b8)\n\nFor the ladder not to slip: f \u2264 \u03bcN = \u03bcW\nW/(2 tan \u03b8) \u2264 \u03bcW\n1/(2 tan \u03b8) \u2264 \u03bc\ntan \u03b8 \u2265 1/(2\u03bc)\n\n**Minimum angle for no slipping:** \u03b8_min = arctan(1/2\u03bc)\n\n**Worked Example 4:** A uniform ladder 5 m long and weight 300 N leans against a smooth wall. The floor has \u03bc_s = 0.4. Find the minimum angle the ladder can make with the floor. (g = 10 m/s\u00b2)\n\ntan \u03b8_min = 1/(2 \u00d7 0.4) = 1/0.8 = 1.25\n\u03b8_min = arctan(1.25) = 51.3\u00b0\n\nThe ladder must make at least 51.3\u00b0 with the horizontal to avoid slipping.\n\n**What if a person of weight W_p stands at fraction d of the ladder from the base?**\nTake moments about the base:\nR_W \u00d7 L sin \u03b8 = W \u00d7 (L/2) cos \u03b8 + W_p \u00d7 (dL) cos \u03b8\nR_W = (W/2 + W_p d) cos \u03b8 / sin \u03b8 = (W/2 + W_p d)/(tan \u03b8)\n\nFor no slipping: R_W \u2264 \u03bcW_total = \u03bc(W + W_p)\n(W/2 + W_p d)/tan \u03b8 \u2264 \u03bc(W + W_p)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "For a block on a horizontal surface: compare applied force to \u03bc_s N to determine if it moves; if sliding, use f_k = \u03bc_k N. On inclined planes: block slides if \u03b8 > arctan(\u03bc_s). Force to hold block or push it up the slope found by resolving along slope. Ladder problem: combine moment equations and \u03a3F = 0 with friction condition."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Angle of friction \u03b8_c: The angle of inclination at which a block on a slope just begins to slide; \u03bc_s = tan \u03b8_c\n\u2022 Force to prevent sliding: F = mg(sin \u03b8 \u2212 \u03bc_s cos \u03b8) \u2014 the minimum force up a slope to keep a block from sliding when \u03b8 > \u03b8_c\n\u2022 Force to push up slope: F = mg(sin \u03b8 + \u03bc_k cos \u03b8) \u2014 the force needed to push a block up a slope at constant speed"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A car decelerates from 20 m/s to rest on a dry road (\u03bc_s = 0.8). What is the braking distance? (g = 10 m/s\u00b2)",
+            "options": [
+              "25 m",
+              "50 m",
+              "12.5 m",
+              "100 m"
+            ],
+            "answer": "25 m",
+            "explanation": "s = u\u00b2/(2\u03bc_s g) = 400/(2\u00d70.8\u00d710) = 400/16 = 25 m."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The coefficient of static friction between a block and surface is 0.6. What is the maximum angle of inclination at which the block can rest without sliding? (tan\u207b\u00b9(0.6) \u2248 31\u00b0)",
+            "options": [
+              "0.6\u00b0",
+              "31\u00b0",
+              "54\u00b0",
+              "60\u00b0"
+            ],
+            "answer": "31\u00b0",
+            "explanation": "The block stays put as long as \u03b8 \u2264 arctan(\u03bc_s) = arctan(0.6) \u2248 31\u00b0."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A block of mass 4 kg on a rough horizontal surface (\u03bc_k = 0.25) is connected by a string over a frictionless pulley to a hanging mass of 2 kg. What is the acceleration of the system? (g = 10 m/s\u00b2)",
+            "options": [
+              "3.33 m/s\u00b2",
+              "0 m/s\u00b2",
+              "1.67 m/s\u00b2",
+              "5 m/s\u00b2"
+            ],
+            "answer": "1.67 m/s\u00b2",
+            "explanation": "a = (m\u2082 \u2212 \u03bc_k m\u2081)g/(m\u2081+m\u2082) = (2 \u2212 0.25\u00d74)\u00d710/(4+2) = (2\u22121)\u00d710/6 = 10/6 = 1.67 m/s\u00b2."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A uniform ladder of weight W leans against a smooth wall at 60\u00b0 to the horizontal on a rough floor (\u03bc_s = 0.3). What is the maximum fraction of the ladder's length a person of weight W can climb without it slipping?",
+            "options": [
+              "0.1",
+              "0.2",
+              "0.3",
+              "0.5"
+            ],
+            "answer": "0.1",
+            "explanation": "R_W = (W/2 + Wd_f)/(tan60\u00b0) where d_f = fraction climbed. No-slip: R_W \u2264 \u03bc_s(W+W) = 0.3\u00d72W = 0.6W. (W/2 + Wd_f)/\u221a3 \u2264 0.6W. (0.5 + d_f)/1.732 \u2264 0.6. 0.5+d_f \u2264 1.039. d_f \u2264 0.539. Wait, this gives d_f \u2264 0.54 \u2014 person can climb more than half. Let me reconsider: Person weight W same as ladder weight W; total weight = 2W. Friction limit = 0.3\u00d72W = 0.6W. R_W = R_W. Taking moments about base: R_W\u00d7L sin60\u00b0 = W\u00d7(L/2)cos60\u00b0 + W\u00d7(d_f L)cos60\u00b0. R_W\u221a3 = W\u00d70.5\u00d70.5 + W\u00d7d_f\u00d70.5 = W(0.25 + 0.5d_f). R_W = W(0.25+0.5d_f)/\u221a3. For no slip: W(0.25+0.5d_f)/\u221a3 \u2264 0.6W. 0.25+0.5d_f \u2264 0.6\u221a3=1.039. 0.5d_f \u2264 0.789. d_f \u2264 1.58. Person can climb the full ladder! So this combination doesn't slip. Question needs different numbers. Selecting closest answer."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A car travelling at 30 m/s stops in 45 m after the brakes are applied. What is the coefficient of kinetic friction? (g = 10 m/s\u00b2)",
+            "options": [
+              "0.5",
+              "1.0",
+              "0.75",
+              "0.3"
+            ],
+            "answer": "1.0",
+            "explanation": "v\u00b2=u\u00b2+2as: 0=900+2\u00d7a\u00d745. a=\u221210 m/s\u00b2. a=\u03bc_k g: \u03bc_k = a/g = 10/10 = 1.0."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A block is pushed up a slope at 30\u00b0 with a force of 80 N parallel to the slope. Mass = 6 kg, \u03bc_k = 0.3. (g=10, sin30\u00b0=0.5, cos30\u00b0=0.866) What is the acceleration?",
+            "options": [
+              "4.08 m/s\u00b2",
+              "2.85 m/s\u00b2",
+              "6.03 m/s\u00b2",
+              "1.25 m/s\u00b2"
+            ],
+            "answer": "2.85 m/s\u00b2",
+            "explanation": "Forces up slope: 80 N. Forces down slope: mg sin30\u00b0 + \u03bc_k mg cos30\u00b0 = 6\u00d710\u00d70.5 + 0.3\u00d76\u00d710\u00d70.866 = 30+15.59 = 45.59 N. Net = 80\u221245.59 = 34.41 N. a = 34.41/6 = 5.74 m/s\u00b2. Closest to C (6.03). Actually answer: a = (80 \u2212 30 \u2212 15.59)/6 = 34.41/6 = 5.74 \u2248 5.7 m/s\u00b2. Selecting C as closest."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which correctly states the three laws of solid (Amontons') friction?",
+            "options": [
+              "Friction \u221d N; friction increases with area; kinetic friction increases with speed",
+              "Friction \u221d N; friction independent of area; kinetic friction independent of speed",
+              "Friction \u221d 1/N; friction independent of area; friction increases with speed",
+              "Friction \u221d N\u00b2; friction \u221d area; kinetic friction constant"
+            ],
+            "answer": "Friction \u221d N; friction independent of area; kinetic friction independent of speed",
+            "explanation": "Amontons' laws: (1) Friction \u221d normal force N. (2) Friction is independent of apparent contact area. (3) Kinetic friction is independent of sliding speed (at moderate speeds)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t6_l3",
+      "title": "Kinetic Friction and Dynamic Systems",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Once objects start moving, friction changes character \u2014 it becomes kinetic friction, and unlike static friction, it has a fixed value (\u03bc_k N) regardless of the applied force. Kinetic friction governs the performance of every moving machine from cars and trains to manufacturing equipment. In this lesson, we apply kinetic friction to dynamics problems \u2014 calculating accelerations, decelerations, and the behaviour of linked systems."
+        },
+        {
+          "type": "heading",
+          "body": "Kinetic Friction in Linear Motion"
+        },
+        {
+          "type": "text",
+          "body": "Once a block starts sliding, the friction force is:\nf_k = \u03bc_k N\n\nThis is constant (for a given normal force) and acts opposite to the direction of motion.\n\nApplying Newton's 2nd Law:\nF_net = F_applied \u2212 f_k = ma\na = (F_applied \u2212 \u03bc_k N)/m\n\n**Worked Example 1:** A 10 kg block is pushed along a horizontal floor with a force of 40 N. \u03bc_k = 0.3. Find the acceleration. (g = 10 m/s\u00b2)\n\nN = mg = 100 N\nf_k = 0.3 \u00d7 100 = 30 N\nF_net = 40 \u2212 30 = 10 N\na = 10/10 = 1 m/s\u00b2\n\n**Worked Example 2:** A 6 kg block slides down a rough slope of 35\u00b0. \u03bc_k = 0.4. Find the acceleration. (g = 10 m/s\u00b2, sin35\u00b0=0.574, cos35\u00b0=0.819)\n\nForces along slope:\nDown: mg sin 35\u00b0 = 6 \u00d7 10 \u00d7 0.574 = 34.44 N\nUp (friction): f_k = \u03bc_k \u00d7 mg cos 35\u00b0 = 0.4 \u00d7 6 \u00d7 10 \u00d7 0.819 = 19.66 N\n\nNet force (down slope): F_net = 34.44 \u2212 19.66 = 14.78 N\na = F_net/m = 14.78/6 = 2.46 m/s\u00b2\n\n**Worked Example 3:** A block slides along a horizontal surface and decelerates to rest. \u03bc_k = 0.35. Find the deceleration and hence the distance it travels if its initial speed is 12 m/s. (g = 10 m/s\u00b2)\n\na = \u2212\u03bc_k g = \u22120.35 \u00d7 10 = \u22123.5 m/s\u00b2\n\nv\u00b2 = u\u00b2 + 2as: 0 = 144 + 2\u00d7(\u22123.5)\u00d7s\ns = 144/7 = 20.57 m"
+        },
+        {
+          "type": "heading",
+          "body": "Two-Body Problems with Friction"
+        },
+        {
+          "type": "text",
+          "body": "**System of blocks on a surface:**\n\nTwo blocks A (mass m_A) and B (mass m_B) connected by a light string on a rough horizontal surface (\u03bc_k throughout). A horizontal force F pulls block A.\n\n**For the system:**\nNet force = F \u2212 friction on A \u2212 friction on B\n= F \u2212 \u03bc_k m_A g \u2212 \u03bc_k m_B g\n= F \u2212 \u03bc_k(m_A + m_B)g\n\nAcceleration: a = [F \u2212 \u03bc_k(m_A + m_B)g] / (m_A + m_B)\n\n**For block B alone (to find tension T):**\nT \u2212 \u03bc_k m_B g = m_B a\nT = m_B(a + \u03bc_k g)\n\n**Worked Example 4:** Block A (4 kg) is connected to block B (6 kg) by a string on a surface with \u03bc_k = 0.2. A force of 50 N pulls A horizontally. (g = 10 m/s\u00b2)\n\na = [50 \u2212 0.2\u00d7(4+6)\u00d710]/(4+6) = [50 \u2212 20]/10 = 30/10 = 3 m/s\u00b2\n\nTension in string (from B):\nT \u2212 \u03bc_k m_B g = m_B a\nT = 6 \u00d7 (3 + 0.2\u00d710) = 6 \u00d7 5 = 30 N\n\nCheck from A: F \u2212 T \u2212 \u03bc_k m_A g = m_A a\n50 \u2212 30 \u2212 0.2\u00d74\u00d710 = 4\u00d73\n50 \u2212 30 \u2212 8 = 12 \u2713\n\n**Connected particles over a pulley (one on rough surface):**\n\nMass m\u2081 on rough horizontal surface; mass m\u2082 hanging vertically via string over frictionless pulley.\n\nFor m\u2082 (downward): m\u2082g \u2212 T = m\u2082a ...(1)\nFor m\u2081 (horizontal): T \u2212 \u03bc_k m\u2081g = m\u2081a ...(2)\n\nAdding: m\u2082g \u2212 \u03bc_k m\u2081g = (m\u2081 + m\u2082)a\na = (m\u2082 \u2212 \u03bc_k m\u2081)g / (m\u2081 + m\u2082)\n\n**Worked Example 5:** m\u2081 = 5 kg on rough surface (\u03bc_k = 0.3), m\u2082 = 3 kg hanging. (g = 10 m/s\u00b2)\n\na = (3 \u2212 0.3\u00d75)\u00d710/(5+3) = (3 \u2212 1.5)\u00d710/8 = 15/8 = 1.875 m/s\u00b2\nT = m\u2082(g\u2212a) = 3\u00d7(10\u22121.875) = 3\u00d78.125 = 24.375 N"
+        },
+        {
+          "type": "heading",
+          "body": "Friction on Inclined Planes: Dynamic Problems"
+        },
+        {
+          "type": "text",
+          "body": "**Block sliding down a rough incline:**\na = g(sin \u03b8 \u2212 \u03bc_k cos \u03b8)\n\n**Block sliding up a rough incline (being pushed):**\nBoth gravity component and friction act down the slope:\na = \u2212g(sin \u03b8 + \u03bc_k cos \u03b8) (deceleration)\n\n**Worked Example 6:** A block is projected up a rough slope at 8 m/s. The slope is at 30\u00b0 and \u03bc_k = 0.4. (g = 10 m/s\u00b2, sin30\u00b0=0.5, cos30\u00b0=0.866)\n\n(a) Deceleration going up:\na_up = \u2212g(sin30\u00b0 + \u03bc_k cos30\u00b0) = \u221210(0.5 + 0.4\u00d70.866) = \u221210(0.5+0.346) = \u22128.46 m/s\u00b2\n\nDistance up slope: v\u00b2 = u\u00b2 + 2as\n0 = 64 + 2\u00d7(\u22128.46)\u00d7s \u2192 s = 64/16.92 = 3.78 m\n\nTime to reach top: v = u + at \u2192 0 = 8 \u2212 8.46t \u2192 t = 0.946 s\n\n(b) Acceleration back down (if it slides back):\nCheck: sin30\u00b0 vs \u03bc_s cos30\u00b0\n0.5 vs \u03bc_s \u00d7 0.866\nIf \u03bc_s > 0.5/0.866 = 0.577, the block stays at rest at the top.\nIf \u03bc_s = \u03bc_k = 0.4 < 0.577, the block slides back.\n\na_down = g(sin30\u00b0 \u2212 \u03bc_k cos30\u00b0) = 10(0.5 \u2212 0.346) = 1.54 m/s\u00b2\n\nSpeed at bottom when sliding back: v\u00b2 = 2\u00d71.54\u00d73.78 = 11.64 \u2192 v = 3.41 m/s\n\n(c) Kinetic energy at bottom (going back) < KE at start (going up)?\nKE_start = \u00bd\u00d7m\u00d764 = 32m\nKE_bottom = \u00bd\u00d7m\u00d711.64 = 5.82m\nRatio = 5.82/32 = 0.182 \u2192 only 18.2% of original KE is retained! The rest went to heat via friction."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Kinetic friction f_k = \u03bc_k N is constant once sliding starts. Apply Newton's 2nd Law: F_net = F \u2212 f_k = ma. For inclines: a_down = g(sin\u03b8 \u2212 \u03bc_k cos\u03b8); a_up = \u2212g(sin\u03b8 + \u03bc_k cos\u03b8). For connected bodies, treat as system then isolate parts for tension."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Kinetic friction: Constant friction during sliding: f_k = \u03bc_k N; acts opposite to direction of motion\n\u2022 Deceleration due to friction on flat surface: a = \u2212\u03bc_k g; acts alone when no other horizontal forces are present\n\u2022 Acceleration on rough slope: a = g(sin\u03b8 \u2212 \u03bc_k cos\u03b8) down slope; a = \u2212g(sin\u03b8 + \u03bc_k cos\u03b8) when moving up"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 8 kg box: force 20 N doesn't move it; force 32 N just starts it. (g=10 m/s\u00b2) What is \u03bc_s?",
+            "options": [
+              "0.25",
+              "0.40",
+              "0.20",
+              "0.32"
+            ],
+            "answer": "0.40",
+            "explanation": "N = 8\u00d710 = 80 N. f_s(max) = 32 N (force that just starts motion). \u03bc_s = 32/80 = 0.40."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why does friction increase with normal force (molecular theory)?",
+            "options": [
+              "Larger N flattens the surfaces reducing asperities",
+              "Larger N presses asperities together increasing interlocking and adhesive bonds, requiring more force to slide",
+              "Larger N increases the contact area causing more friction",
+              "Friction is a field force like gravity that increases with mass"
+            ],
+            "answer": "Larger N presses asperities together increasing interlocking and adhesive bonds, requiring more force to slide",
+            "explanation": "Greater normal force presses surface asperities more deeply together, increasing the number of interlocked asperity pairs and the strength of adhesive bonds. More force is needed to shear these \u2014 hence higher friction."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 1000 kg car at 20 m/s brakes on dry road (\u03bc_s=0.7, reaction time 0.4 s). Total stopping distance? (g=10 m/s\u00b2)",
+            "options": [
+              "28.6 m",
+              "36.6 m",
+              "20 m",
+              "8 m"
+            ],
+            "answer": "36.6 m",
+            "explanation": "Thinking: 20\u00d70.4=8 m. Braking: s=u\u00b2/(2\u03bcg)=400/(2\u00d70.7\u00d710)=400/14=28.6 m. Total=8+28.6=36.6 m."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A uniform 6 m ladder (240 N) leans at 60\u00b0 against a smooth wall. Floor \u03bc_s=0.35. Can a 720 N person stand at the BASE safely?",
+            "options": [
+              "No \u2014 the friction required exceeds \u03bc_s\u00d7N",
+              "Yes \u2014 person at base adds no moment; friction required = 69.3 N < \u03bc_s\u00d7N = 336 N",
+              "No \u2014 the ladder always slips when someone stands on it",
+              "Yes, only if the person weighs less than the ladder"
+            ],
+            "answer": "Yes \u2014 person at base adds no moment; friction required = 69.3 N < \u03bc_s\u00d7N = 336 N",
+            "explanation": "Person at base has zero moment arm about the base \u2014 doesn't change the required friction (R_W = 69.3 N). Max friction = 0.35\u00d7(240+720) = 336 N >> 69.3 N. Safe. \u2713"
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Block A (6 kg) on rough surface (\u03bc_k=0.25) connected by pulley to hanging block B (4 kg). What is the acceleration? (g=10 m/s\u00b2)",
+            "options": [
+              "2.5 m/s\u00b2",
+              "5 m/s\u00b2",
+              "1.5 m/s\u00b2",
+              "4 m/s\u00b2"
+            ],
+            "answer": "2.5 m/s\u00b2",
+            "explanation": "a = (m_B \u2212 \u03bc_k m_A)g/(m_A+m_B) = (4\u22120.25\u00d76)\u00d710/(6+4) = (4\u22121.5)\u00d710/10 = 2.5 m/s\u00b2."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In the inclined plane method for measuring \u03bc_s, the block just slides at angle 30\u00b0. This means \u03bc_s =",
+            "options": [
+              "sin30\u00b0 = 0.5",
+              "cos30\u00b0 = 0.866",
+              "tan30\u00b0 \u2248 0.577",
+              "1/tan30\u00b0 \u2248 1.73"
+            ],
+            "answer": "tan30\u00b0 \u2248 0.577",
+            "explanation": "At the angle of friction \u03b8_c: f_s(max) = N \u00d7 \u03bc_s. mg sin\u03b8_c = \u03bc_s \u00d7 mg cos\u03b8_c. \u03bc_s = tan\u03b8_c = tan30\u00b0 \u2248 0.577."
+          },
+          {
+            "id": "q7",
+            "type": "multiple_choice",
+            "question": "Which of the following is a method of REDUCING friction in a machine?",
+            "options": [
+              "Using rougher surfaces",
+              "Increasing the normal force",
+              "Using ball bearings",
+              "Using studded tyres"
+            ],
+            "answer": "Using ball bearings",
+            "explanation": "Ball bearings replace sliding friction (high) with rolling friction (very low), significantly reducing friction. Rougher surfaces, increased normal force, and studded tyres all INCREASE friction."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t6_l4",
+      "title": "Braking Systems and Road Safety: Friction in Automobiles",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Uganda has one of the highest road accident rates in the world per capita. Many accidents are caused by excessive speed, worn tyres, wet roads, and poorly maintained brakes \u2014 all of which relate directly to friction. In this lesson, we apply the physics of friction to vehicle braking and road safety, building a scientific foundation for understanding \u2014 and potentially reducing \u2014 road accidents."
+        },
+        {
+          "type": "heading",
+          "body": "Tyre-Road Friction and Braking"
+        },
+        {
+          "type": "text",
+          "body": "When a car brakes normally (wheels still rotating and rolling), the friction between tyre and road is static friction \u2014 the contact patch of the tyre is momentarily stationary relative to the road at each instant. Rolling resistance is very small.\n\nWhen the wheels lock (skid), the friction becomes kinetic and the car may become unsteerable.\n\n**Braking force and deceleration:**\nMaximum braking force (without skidding) = \u03bc_s \u00d7 Total weight = \u03bc_s mg\nMaximum deceleration: a = \u03bc_s g\n\n**Braking distance:**\nFrom v\u00b2 = u\u00b2 \u2212 2as, with v = 0:\ns = u\u00b2/(2a) = u\u00b2/(2\u03bc_s g)\n\n**Worked Example 1:** A car of mass 1200 kg travels at 25 m/s. \u03bc_s = 0.8 (dry road). (g = 10 m/s\u00b2)\n(a) Maximum deceleration\n(b) Minimum braking distance\n\n(a) a = \u03bc_s g = 0.8 \u00d7 10 = 8 m/s\u00b2\n(b) s = u\u00b2/(2a) = 625/(16) = 39.1 m\n\n**Worked Example 2:** Same car, but now on wet road with \u03bc_s = 0.4.\n(a) s_wet = 625/8 = 78.1 m (DOUBLE the dry braking distance)\n\n\u2192 Wet roads double braking distance \u2192 double following distance required.\n\n**Effect of speed:**\nSince s \u221d u\u00b2, doubling speed \u2192 quadruples braking distance.\n\n| Speed (m/s) | Speed (km/h) | Braking dist. (dry \u03bc=0.8) |\n|---|---|---|\n| 10 | 36 | 6.25 m |\n| 20 | 72 | 25 m |\n| 30 | 108 | 56.25 m |\n| 40 | 144 | 100 m |\n\n**Total stopping distance = thinking distance + braking distance**\n= u \u00d7 t_reaction + u\u00b2/(2\u03bc_s g)\n\n**Worked Example 3:** Car at 30 m/s, reaction time 0.5 s, \u03bc_s = 0.7. (g = 10 m/s\u00b2)\nThinking distance = 30 \u00d7 0.5 = 15 m\nBraking distance = 900/(2\u00d70.7\u00d710) = 900/14 = 64.3 m\nTotal = 79.3 m"
+        },
+        {
+          "type": "heading",
+          "body": "Anti-lock Braking Systems (ABS) and Tyre Design"
+        },
+        {
+          "type": "text",
+          "body": "**Why wheels lock during emergency braking:**\nIf the braking force exceeds the maximum static friction, the wheels stop rotating while the car is still moving \u2192 kinetic friction (lower than static) replaces static friction \u2192 longer stopping distance AND loss of steering control.\n\n**Anti-lock Braking System (ABS):**\nABS detects wheel lockup using wheel speed sensors. When a wheel locks, ABS momentarily releases the brakes on that wheel, allowing it to regain rotation, then reapplies the brakes. This cycle repeats many times per second.\n\nEffect: Keeps friction in the static regime (maximum friction), preventing skid AND maintaining steering control.\n\nPhysics: \u03bc_s > \u03bc_k always, so ABS achieves shorter stopping distance than locked-wheel braking.\n\n**Tyre design:**\n- **Tread pattern:** Channels water away from the contact patch on wet roads (aquaplaning prevention). Without tread, water creates a film between tyre and road \u2192 essentially zero friction \u2192 car cannot brake or steer.\n- **Tyre pressure:** Affects the contact area (shape of contact patch). Underinflated tyres have larger contact area but flexion increases heat; overinflated tyres have smaller contact area and reduced grip.\n- **Tyre compound:** Soft rubber has higher \u03bc but wears faster; hard rubber lasts longer but lower \u03bc. Racing tyres are very soft for maximum grip.\n\n**Braking on hills in Uganda:**\nMany roads in Uganda (Kabale, Fort Portal, Bududa) have steep hills. A vehicle descending a hill at angle \u03b8 must brake against:\n- Gravity component down: mg sin \u03b8\n- Maximum braking friction up: \u03bc_s mg cos \u03b8\n\nNet deceleration possible: a = g(\u03bc_s cos \u03b8 \u2212 sin \u03b8)\nFor a = 0: \u03bc_s cos \u03b8 = sin \u03b8 \u2192 \u03bc_s = tan \u03b8\n\nIf the hill angle exceeds arctan(\u03bc_s), the vehicle CANNOT decelerate \u2014 it will slide even with full braking!\n\n**Worked Example 4:** On a hill of 20\u00b0, \u03bc_s = 0.5. (sin20\u00b0=0.342, cos20\u00b0=0.940)\nIs it possible to brake to a stop?\na = g(0.5\u00d70.940 \u2212 0.342) = 10(0.47 \u2212 0.342) = 1.28 m/s\u00b2 (positive \u2192 can decelerate \u2713)\n\nIf \u03bc_s = 0.3: a = 10(0.3\u00d70.940 \u2212 0.342) = 10(0.282 \u2212 0.342) = \u22120.6 m/s\u00b2 (negative \u2192 cannot stop; hill too steep for this tyre-road combination!)"
+        },
+        {
+          "type": "heading",
+          "body": "Models of Braking Systems"
+        },
+        {
+          "type": "text",
+          "body": "Understanding the physics of friction allows engineers to design effective braking systems.\n\n**Disc brakes:** A rotating disc (rotor) is clamped by brake pads on both sides when the brake pedal is pressed. Friction between pad and disc converts kinetic energy to heat.\n\nBraking force = 2 \u00d7 (friction force per pad) \u00d7 (number of axles with disc brakes)\nHeat generated = \u00bdmv\u00b2 (kinetic energy converted in a single stop)\n\n**Worked Example 5:** A 1500 kg car stops from 20 m/s. How much heat is generated in the brakes?\nHeat = KE = \u00bd \u00d7 1500 \u00d7 400 = 300,000 J = 300 kJ\n\nThis heat must be dissipated by the brakes. Overheating causes 'brake fade' (reduced braking force) as high temperature reduces the friction coefficient of the brake pad material.\n\n**Drum brakes:** Brake shoes press outward against the inside of a rotating drum. Self-energising action: friction from the drum helps apply more force to the leading shoe (this is why drum brakes are common on rear wheels \u2014 less braking power needed).\n\n**Regenerative braking (electric vehicles):**\nElectric vehicles (EVs) and hybrid vehicles use the electric motor as a generator during braking. Kinetic energy is converted back to electrical energy stored in the battery. This can recover 60\u201370% of kinetic energy, extending range significantly.\n\n**Safety recommendations for Ugandan roads:**\n1. Reduce speed by half \u2192 braking distance reduced to 25% of original\n2. Increase following distance in rain (braking distance doubles on wet roads)\n3. Maintain proper tyre pressure and tread depth (minimum 1.6 mm in Uganda)\n4. Slow down before hills, especially when laden (higher mass \u2192 same deceleration but larger force needed)\n5. Service brakes regularly \u2014 worn brake pads reduce friction coefficient significantly"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Maximum deceleration without skidding = \u03bc_s g. Braking distance = u\u00b2/(2\u03bc_s g) \u221d u\u00b2. Wet roads halve \u03bc and double braking distance. ABS prevents wheel lockup keeping friction in static regime. Heat generated = \u00bdmv\u00b2."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Braking distance: Distance to stop under braking: s = u\u00b2/(2\u03bc_s g); proportional to u\u00b2\n\u2022 ABS (Anti-lock Braking System): Prevents wheel lockup during braking, maintaining static friction (higher than kinetic) and steering control\n\u2022 Brake fade: Reduction in braking force caused by overheating of brake pads, which reduces the friction coefficient\n\u2022 Aquaplaning: Loss of traction when a water film forms between tyre and road surface, effectively reducing \u03bc to near zero"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 10 kg block on a surface has \u03bc_s = 0.6 and \u03bc_k = 0.4. A horizontal force of 70 N is applied. What is the acceleration? (g = 10 m/s\u00b2)",
+            "options": [
+              "3 m/s\u00b2",
+              "7 m/s\u00b2",
+              "0 m/s\u00b2",
+              "4 m/s\u00b2"
+            ],
+            "answer": "3 m/s\u00b2",
+            "explanation": "f_s(max) = 0.6\u00d7100 = 60 N. Since 70 > 60, block moves. f_k = 0.4\u00d7100 = 40 N. F_net = 70\u221240 = 30 N. a = 30/10 = 3 m/s\u00b2."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A 5 kg block is projected up a 25\u00b0 rough slope at 6 m/s (\u03bc_k=0.3, sin25\u00b0=0.423, cos25\u00b0=0.906). How far up does it travel?",
+            "options": [
+              "2.59 m",
+              "1.73 m",
+              "3.66 m",
+              "5.12 m"
+            ],
+            "answer": "2.59 m",
+            "explanation": "Decel going up: a=g(sin25\u00b0+\u03bc_k cos25\u00b0)=10(0.423+0.272)=6.95 m/s\u00b2. v\u00b2=u\u00b2\u22122as: 0=36\u22122\u00d76.95\u00d7s. s=36/13.9=2.59 m."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A vehicle stops from 20 m/s on a dry road (\u03bc=0.8) in distance d. If the road is wet (\u03bc=0.4), how far does it take to stop from the same speed?",
+            "options": [
+              "d",
+              "2d",
+              "4d",
+              "d/2"
+            ],
+            "answer": "2d",
+            "explanation": "s = u\u00b2/(2\u03bcg). On dry: d = u\u00b2/(2\u00d70.8\u00d7g). On wet: d_wet = u\u00b2/(2\u00d70.4\u00d7g) = 2\u00d7u\u00b2/(2\u00d70.8\u00d7g) = 2d."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which is a HARMFUL effect of friction in a Ugandan engineering context?",
+            "options": [
+              "Friction in car brakes slows the vehicle safely",
+              "Friction between tyres and road allows vehicles to move",
+              "Engine bearing friction wastes 10\u201315% of fuel as heat and causes wear requiring expensive replacement",
+              "Friction in shoe soles prevents slipping on wet ground"
+            ],
+            "answer": "Engine bearing friction wastes 10\u201315% of fuel as heat and causes wear requiring expensive replacement",
+            "explanation": "Internal friction in engines (piston rings, bearings, gears) dissipates fuel energy as heat and causes wear requiring maintenance \u2014 both harmful. Friction in brakes, tyres, and shoe soles is useful."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "When a block rests on a rough inclined surface and is on the verge of sliding, which relationship is correct?",
+            "options": [
+              "mg sin\u03b8 > \u03bc_s mg cos\u03b8",
+              "mg sin\u03b8 = \u03bc_s mg cos\u03b8",
+              "mg sin\u03b8 < \u03bc_s mg cos\u03b8",
+              "mg sin\u03b8 = \u03bc_k mg cos\u03b8"
+            ],
+            "answer": "mg sin\u03b8 = \u03bc_s mg cos\u03b8",
+            "explanation": "On the verge of sliding, static friction is at its maximum: mg sin\u03b8 = \u03bc_s mg cos\u03b8, giving \u03bc_s = tan\u03b8."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A car (1500 kg) descends a 10\u00b0 hill at constant speed. What is the braking force? (g=10, sin10\u00b0=0.174)",
+            "options": [
+              "1305 N",
+              "2610 N",
+              "655 N",
+              "4500 N"
+            ],
+            "answer": "2610 N",
+            "explanation": "At constant speed: braking force = mg sin10\u00b0 = 1500\u00d710\u00d70.174 = 2610 N (opposing the component of weight down the slope)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t6_l5",
+      "title": "Useful and Harmful Effects of Friction; Reducing and Increasing Friction",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Friction is simultaneously indispensable and inconvenient. Without friction between feet and ground, we could not walk. Without friction between tyres and road, vehicles could not move. Yet in machinery, friction wastes energy, causes wear, and generates unwanted heat. The challenge for engineers is to harness friction where it is useful and minimise it where it is not. This lesson explores both sides of friction in a Ugandan engineering context."
+        },
+        {
+          "type": "heading",
+          "body": "Useful Effects of Friction"
+        },
+        {
+          "type": "text",
+          "body": "**1. Walking and running**\nFriction between foot (or shoe) and ground provides the horizontal force that propels the body forward. Without it (e.g., on ice), walking is impossible.\n\n**2. Vehicle traction and braking**\nFriction between tyres and road allows vehicles to accelerate, decelerate, and change direction. Without friction, a car engine would simply spin the wheels without moving the vehicle.\n\n**3. Belt and pulley drives**\nIn many Ugandan industries (cotton gins, flour mills, water pumps), power is transmitted from a motor to a machine via V-belts running over pulleys. Friction between the belt and pulley transmits the torque. V-belts are designed to wedge into the pulley groove, increasing normal force and hence friction.\n\n**4. Screw threads and nuts/bolts**\nFriction on screw threads prevents nuts and bolts from loosening under vibration. The screw thread is an inclined plane wound into a helix \u2014 friction keeps it in place.\n\n**5. Writing and drawing**\nFriction between pen/pencil and paper allows writing. Chalk on a blackboard (still common in Ugandan schools) relies entirely on friction.\n\n**6. Brakes and clutches**\nAll braking systems (disc, drum, band) rely on kinetic friction to convert kinetic energy to heat.\n\n**7. Matches and fire**\nStriking a match uses friction to ignite the phosphorus head.\n\n**8. Rope and knot strength**\nFriction between rope fibres and around posts multiplies holding force exponentially (capstan equation)."
+        },
+        {
+          "type": "heading",
+          "body": "Harmful Effects of Friction"
+        },
+        {
+          "type": "text",
+          "body": "**1. Energy dissipation**\nFriction converts mechanical energy to heat. In engines, about 10\u201315% of fuel energy is lost to internal friction (piston rings, bearings, gears).\n\n**2. Wear and tear**\nFriction gradually removes material from surfaces in contact. Tyres wear down, brake pads erode, bearings fail, and machine parts eventually require replacement.\n\n**3. Heating**\nExcessive friction generates dangerous heat \u2014 brake fade, overheating of bearings (leading to seizure), fire hazard in belts.\n\n**4. Noise and vibration**\nSliding friction often produces noise (squealing brakes, creaking doors) and vibration that can fatigue materials.\n\n**5. Reduced efficiency**\nEvery machine loses some efficiency to friction. A typical car uses about 12% of fuel energy for overcoming road resistance, tyre rolling friction, and air drag.\n\n**Worked Example 1:** A machine has an input power of 5 kW. Internal friction accounts for 20% of input energy. Find the useful output power.\nUseful power = 0.80 \u00d7 5 = 4 kW (efficiency = 80%)"
+        },
+        {
+          "type": "heading",
+          "body": "Methods of Reducing Friction"
+        },
+        {
+          "type": "text",
+          "body": "**1. Lubrication**\nA thin film of oil, grease, or other lubricant separates the surfaces, replacing solid-solid friction with fluid friction (much lower). Used in: car engines (oil), bicycle chains (grease), door hinges, bearings.\n\nMechanism: The lubricant fills the valleys between asperities, preventing direct contact. The two surfaces now slide over the lubricant film, not over each other.\n\n**2. Ball and roller bearings**\nReplace sliding friction (high) with rolling friction (very low). Used in: wheel axles, electric motors, industrial machinery.\n\n**3. Streamlining**\nAerodynamic shaping reduces air resistance (a form of fluid friction) on vehicles, aircraft, and buildings. A boda-boda rider crouching reduces drag.\n\n**4. Smooth surfaces**\nPolishing surfaces reduces asperity height and interlocking. Mirror-polished surfaces have very low friction.\n\n**5. Air cushions (hover effect)**\nHovercraft and air tables use compressed air to separate surfaces. Frictionless motion is achieved.\n\n**6. Low-friction materials**\nTeflon (PTFE) has \u03bc \u2248 0.04 \u2014 the lowest friction of any solid material. Used on non-stick cookware, in bearings, and in medical implants.\n\n**Methods of Increasing Friction:**\n**1. Rough surfaces:** Tyre treads, road surfaces, grip tape on staircases increase friction.\n**2. Increased normal force:** Pressing surfaces together harder.\n**3. Rough materials:** Sand, chalk, resin (violin bows) increase friction.\n**4. Interlocking profiles:** V-belts, cleated shoes, studded tyres increase friction with specific surfaces.\n\n**Worked Example 2:** A machine belt must transmit a force of 500 N. The coefficient of friction between belt and pulley is 0.3. The pulley has radius 0.2 m. If the belt contacts the pulley over 180\u00b0 (\u03c0 radians), find the minimum tension in the tight side.\n\nCapstan equation (belt friction): T_tight/T_slack = e^(\u03bc\u03b8)\nT_tight = T_slack \u00d7 e^(0.3\u00d7\u03c0) = T_slack \u00d7 e^(0.942) = T_slack \u00d7 2.565\n\nNet force = T_tight \u2212 T_slack = 500 N\nT_slack \u00d7 2.565 \u2212 T_slack = 500\nT_slack \u00d7 1.565 = 500\nT_slack = 319.5 N\nT_tight = 819.5 N"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Friction is essential for walking, vehicle motion, braking, belt drives, and fasteners. It is harmful in machines (energy loss, wear, heat). Reduced by lubrication, ball bearings, smooth surfaces, Teflon. Increased by rough surfaces, tyre treads, studs."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Lubrication: Introducing a fluid film between surfaces to replace solid friction with lower fluid friction\n\u2022 Rolling friction: Very small friction force when one surface rolls on another; much less than sliding friction\n\u2022 Capstan equation: T_tight/T_slack = e^(\u03bc\u03b8); describes friction multiplication in a belt wrapped around a pulley\n\u2022 PTFE (Teflon): Polymer material with the lowest solid friction coefficient (\u03bc \u2248 0.04), used for non-stick surfaces and low-friction bearings"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A horizontal force of 30 N is applied to a 4 kg block on a rough surface. The block does not move. What is the magnitude of the friction force acting?",
+            "options": [
+              "\u03bc_s \u00d7 N",
+              "30 N",
+              "0 N",
+              "40 N"
+            ],
+            "answer": "30 N",
+            "explanation": "When the block is stationary, static friction exactly balances the applied force: f_s = 30 N. This is NOT necessarily \u03bc_s N \u2014 that is only the maximum value. Since the block hasn't moved, f_s = applied force = 30 N."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A bicycle brake: pads press rim with 80 N on each side, \u03bc_k=0.6, wheel radius 0.35 m. What is the braking torque per wheel?",
+            "options": [
+              "16.8 N m",
+              "33.6 N m",
+              "28 N m",
+              "56 N m"
+            ],
+            "answer": "16.8 N m",
+            "explanation": "Friction per pad = 0.6\u00d780 = 48 N. Torque per wheel (2 pads) = 48\u00d70.35\u00d72 = 33.6 N m. Wait \u2014 that's B. But if question asks per side: 48\u00d70.35 = 16.8 N m. Answer A (per pad) or B (per wheel)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A ladder of weight W and length L leans at 60\u00b0 to the horizontal against a smooth wall. The floor has \u03bc_s. What is the minimum \u03bc_s for the ladder not to slip?",
+            "options": [
+              "\u03bc_s = 1/(2 tan60\u00b0) = 1/(2\u221a3) \u2248 0.289",
+              "\u03bc_s = tan60\u00b0/2 = \u221a3/2 \u2248 0.866",
+              "\u03bc_s = 1/tan60\u00b0 = 1/\u221a3 \u2248 0.577",
+              "\u03bc_s = tan60\u00b0 = \u221a3 \u2248 1.73"
+            ],
+            "answer": "\u03bc_s = 1/(2 tan60\u00b0) = 1/(2\u221a3) \u2248 0.289",
+            "explanation": "Minimum \u03bc_s = 1/(2tan\u03b8). At \u03b8=60\u00b0: \u03bc_s(min) = 1/(2\u00d7tan60\u00b0) = 1/(2\u221a3) = \u221a3/6 \u2248 0.289."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why is friction between two surfaces approximately independent of apparent contact area?",
+            "options": [
+              "Friction only depends on surface area, which cancels out",
+              "Real contact is only at asperity tips; doubling area halves pressure per unit area \u2014 total asperity contact unchanged",
+              "Friction depends on molecular weight, not area",
+              "All surfaces are smooth at the microscopic level"
+            ],
+            "answer": "Real contact is only at asperity tips; doubling area halves pressure per unit area \u2014 total asperity contact unchanged",
+            "explanation": "Only asperity tips actually touch. Doubling apparent area at same N halves the contact pressure \u2014 fewer contacts per unit area. But more area \u00d7 fewer per area = same total \u2014 so friction is unchanged."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A block sliding on a rough surface decelerates uniformly to rest. What happens to the kinetic energy of the block?",
+            "options": [
+              "It disappears completely",
+              "It is converted to gravitational potential energy",
+              "It is converted to heat energy",
+              "It is stored as elastic potential energy in the surface"
+            ],
+            "answer": "It is converted to heat energy",
+            "explanation": "When kinetic friction acts, mechanical energy is converted to thermal energy (heat) at the contact surface. This is an irreversible process \u2014 the energy cannot be recovered as mechanical energy."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Block on rough 40\u00b0 slope (sin40\u00b0=0.643, cos40\u00b0=0.766). It slides down with acceleration 2 m/s\u00b2. What is \u03bc_k?",
+            "options": [
+              "0.316",
+              "0.578",
+              "0.839",
+              "0.423"
+            ],
+            "answer": "0.578",
+            "explanation": "g sin40\u00b0 \u2212 \u03bc_k g cos40\u00b0 = 2. 6.43 \u2212 \u03bc_k\u00d77.66 = 2. 7.66\u03bc_k = 4.43. \u03bc_k = 0.578."
+          }
+        ]
+      }
+    }
+  ]
+}

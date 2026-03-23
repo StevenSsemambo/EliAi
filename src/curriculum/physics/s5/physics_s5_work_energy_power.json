@@ -1,0 +1,743 @@
+{
+  "topic_id": "physics_s5_t5",
+  "topic_title": "Work, Energy and Power",
+  "subject": "physics",
+  "class_level": "S5",
+  "lessons": [
+    {
+      "id": "physics_s5_t5_l1",
+      "title": "Work Done by a Force",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every time a market woman carries a load up a staircase, a tractor pulls a plough across a field, or a pump pushes water up a pipe, work is being done in the physics sense. But when you push against a wall and it does not move, or when you carry a bag horizontally along a flat road, you may be surprised to learn that \u2014 in the physics sense \u2014 zero work is done. Work has a precise mathematical definition that is more restrictive than our everyday usage."
+        },
+        {
+          "type": "heading",
+          "body": "Definition of Work"
+        },
+        {
+          "type": "text",
+          "body": "**Work done (W)** by a constant force F on an object is defined as:\n\n**W = F \u00b7 d = Fd cos \u03b8**\n\nWhere:\n- F = magnitude of the applied force (N)\n- d = magnitude of the displacement of the object (m)\n- \u03b8 = angle between the force vector and the displacement vector\n- W = work done (joules, J)\n\n**The joule:** 1 J = 1 N m = 1 kg m\u00b2 s\u207b\u00b2\n\n**Key conditions for work to be done:**\n1. A force must act on the object\n2. The object must undergo displacement\n3. There must be a component of force in the direction of displacement\n\n**Special cases:**\n- \u03b8 = 0\u00b0 (force and displacement in same direction): W = Fd (maximum positive work)\n- \u03b8 = 90\u00b0 (force perpendicular to displacement): W = 0 (no work done)\n- \u03b8 = 180\u00b0 (force opposite to displacement): W = \u2212Fd (negative work)\n\n**Work is a scalar quantity** \u2014 it has magnitude but no direction. However, it can be positive or negative.\n\n**Positive work:** Force has a component in the direction of motion (energy transferred TO the object)\n**Negative work:** Force has a component opposing motion (energy taken FROM the object)\n\n**Worked Example 1:** A person pushes a box with a force of 80 N at 25\u00b0 below the horizontal, moving it 5 m along a flat floor. How much work is done?\n\nW = Fd cos \u03b8 = 80 \u00d7 5 \u00d7 cos 25\u00b0 = 400 \u00d7 0.906 = 362.4 J\n\nNote: Only the horizontal component (80 cos 25\u00b0) contributes to work, because displacement is horizontal.\n\n**Worked Example 2:** A porter carries a 20 kg sack on his head and walks 100 m along a flat road. (g = 10 m/s\u00b2)\n- Weight = 20 \u00d7 10 = 200 N (downward)\n- Displacement = 100 m (horizontal)\n- \u03b8 = 90\u00b0 (weight is perpendicular to displacement)\n- W_gravity = 200 \u00d7 100 \u00d7 cos 90\u00b0 = 0 J\n\nGravity does zero work when motion is horizontal. The porter still exerts effort, but in physics, the gravitational force does no work.\n\n**Worked Example 3:** A 500 N box is pushed up a smooth ramp of length 4 m inclined at 30\u00b0. The force applied is parallel to the ramp.\n(a) Work done by the applied force\n(b) Work done by gravity\n\n(a) Component of weight down slope = 500 sin 30\u00b0 = 250 N\nFor uniform motion (constant speed), applied force F = 250 N (up slope)\nW_applied = 250 \u00d7 4 = 1000 J\n\n(b) W_gravity = \u2212250 \u00d7 4 = \u22121000 J (gravity opposes upward displacement)\nOr: W_gravity = weight \u00d7 vertical displacement = \u2212500 \u00d7 (4 sin 30\u00b0) = \u2212500 \u00d7 2 = \u22121000 J \u2713"
+        },
+        {
+          "type": "heading",
+          "body": "Work Done by a Variable Force"
+        },
+        {
+          "type": "text",
+          "body": "When force is not constant, we cannot simply use W = Fd cos\u03b8. Instead:\n\nW = \u222bF \u00b7 ds (the area under the force-displacement graph)\n\n**For a spring (Hooke's Law):**\nF = kx (where k is the spring constant, x is extension)\nWork done to extend spring from 0 to x:\nW = \u222b\u2080\u02e3 kx dx = \u00bdkx\u00b2\n\n**Graphically:** The work done equals the area under the F-x graph (a triangle for a spring obeying Hooke's Law).\n\n**Worked Example 4:** A spring with spring constant k = 200 N/m is compressed by 0.15 m. Find the work done.\n\nW = \u00bdkx\u00b2 = \u00bd \u00d7 200 \u00d7 (0.15)\u00b2 = \u00bd \u00d7 200 \u00d7 0.0225 = 2.25 J\n\n**Worked Example 5:** From a force-displacement graph, a variable force acts over 0 to 8 m. The graph is a straight line from (0, 0) to (8, 40). Find the total work done.\n\nArea = \u00bd \u00d7 base \u00d7 height = \u00bd \u00d7 8 \u00d7 40 = 160 J"
+        },
+        {
+          "type": "heading",
+          "body": "Work Done Against Gravity and Friction"
+        },
+        {
+          "type": "text",
+          "body": "**Work done against gravity** when lifting mass m through vertical height h:\nW = mgh\n\nThis is independent of the path taken \u2014 only the vertical height matters.\n\n**Work done against friction** when moving distance d on a surface with friction force f:\nW_friction = f \u00d7 d = \u03bcmg \u00d7 d\n\nThis energy is dissipated as heat.\n\n**Worked Example 6:** A 60 kg person climbs a staircase of vertical height 5 m. (g = 10 m/s\u00b2)\nWork done against gravity = mgh = 60 \u00d7 10 \u00d7 5 = 3000 J\n\n**Worked Example 7:** A 10 kg block is dragged 8 m along a rough floor (\u03bc = 0.4, g = 10 m/s\u00b2).\nFriction force = \u03bcmg = 0.4 \u00d7 10 \u00d7 10 = 40 N\nWork done against friction = 40 \u00d7 8 = 320 J"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Work W = Fd cos\u03b8; zero work when force is perpendicular to displacement. For variable forces, W = area under F-s graph. Work against gravity = mgh (path-independent). Work against friction = \u03bcmgd (energy dissipated as heat). Work is a scalar; can be positive or negative."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Work: W = Fd cos\u03b8; the product of force, displacement and the cosine of the angle between them; unit: joule (J)\n\u2022 Positive work: Work done when force has a component in the direction of displacement; energy transferred to the object\n\u2022 Negative work: Work done when force opposes displacement; energy removed from the object\n\u2022 Joule: The SI unit of work and energy; 1 J = 1 N m = 1 kg m\u00b2 s\u207b\u00b2"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A force of 50 N moves an object 4 m in the direction of the force. What is the work done?",
+            "options": [
+              "12.5 J",
+              "54 J",
+              "200 J",
+              "46 J"
+            ],
+            "answer": "200 J",
+            "explanation": "W = Fd cos\u03b8 = 50 \u00d7 4 \u00d7 cos0\u00b0 = 50 \u00d7 4 \u00d7 1 = 200 J"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A porter carries a 25 kg load horizontally along a flat road for 200 m. How much work does gravity do on the load? (g = 10 m/s\u00b2)",
+            "options": [
+              "50,000 J",
+              "250 J",
+              "0 J",
+              "5,000 J"
+            ],
+            "answer": "0 J",
+            "explanation": "Gravity acts downward; displacement is horizontal. \u03b8 = 90\u00b0 between force and displacement. W = Fd cos90\u00b0 = 0 J."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the kinetic energy of a 2 kg object moving at 6 m/s?",
+            "options": [
+              "12 J",
+              "72 J",
+              "36 J",
+              "24 J"
+            ],
+            "answer": "36 J",
+            "explanation": "KE = \u00bdmv\u00b2 = \u00bd \u00d7 2 \u00d7 36 = 36 J"
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A pump raises 200 kg of water to a height of 10 m in 40 s. What is the power of the pump? (g = 10 m/s\u00b2)",
+            "options": [
+              "500 W",
+              "50 W",
+              "2000 W",
+              "50,000 W"
+            ],
+            "answer": "500 W",
+            "explanation": "Work = mgh = 200\u00d710\u00d710 = 20,000 J. Power = W/t = 20,000/40 = 500 W."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which of the following is a conservative force?",
+            "options": [
+              "Friction",
+              "Air resistance",
+              "Gravitational force",
+              "Viscous drag"
+            ],
+            "answer": "Gravitational force",
+            "explanation": "Gravitational force is conservative \u2014 work done is path-independent and a potential energy (GPE = mgh) can be defined for it. Friction, air resistance, and viscous drag are all non-conservative."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A ball of mass 0.5 kg is dropped from a height of 8 m. Using conservation of energy, what is its speed just before hitting the ground? (g = 10 m/s\u00b2, no air resistance)",
+            "options": [
+              "8 m/s",
+              "12.6 m/s",
+              "16 m/s",
+              "40 m/s"
+            ],
+            "answer": "12.6 m/s",
+            "explanation": "GPE = KE: mgh = \u00bdmv\u00b2. v\u00b2 = 2gh = 2\u00d710\u00d78 = 160. v = \u221a160 = 12.65 m/s \u2248 12.6 m/s."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t5_l2",
+      "title": "Kinetic Energy, Potential Energy and the Work-Energy Theorem",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Energy is the capacity to do work. It comes in many forms \u2014 a moving lorry has kinetic energy, a raised water tank has gravitational potential energy, a compressed spring has elastic potential energy. The work-energy theorem is the fundamental link between force and energy change, and it is one of the most powerful tools in mechanics."
+        },
+        {
+          "type": "heading",
+          "body": "Kinetic Energy"
+        },
+        {
+          "type": "text",
+          "body": "**Kinetic energy (KE)** is the energy possessed by a body due to its motion.\n\n**Derivation of KE = \u00bdmv\u00b2:**\nConsider a force F acting on mass m over displacement s, starting from rest (u = 0):\nWork done = Fs = mas (from F = ma)\nFrom v\u00b2 = u\u00b2 + 2as with u = 0: s = v\u00b2/(2a)\nSo: W = ma \u00d7 v\u00b2/(2a) = \u00bdmv\u00b2\n\nSince this work is stored as kinetic energy:\n**KE = \u00bdmv\u00b2**\n\nUnit: joules (J)\n\n**Worked Example 1:** A 1200 kg car travels at 30 m/s. Find its kinetic energy.\nKE = \u00bd \u00d7 1200 \u00d7 900 = 540,000 J = 540 kJ\n\n**Worked Example 2:** A 0.05 kg bullet travelling at 400 m/s embeds in a fixed block. How much KE does the bullet have?\nKE = \u00bd \u00d7 0.05 \u00d7 160,000 = 4000 J = 4 kJ\n\nThis energy is converted to heat, sound, and deformation on impact \u2014 explaining why bullets are so destructive."
+        },
+        {
+          "type": "heading",
+          "body": "Gravitational Potential Energy"
+        },
+        {
+          "type": "text",
+          "body": "**Gravitational potential energy (GPE)** is the energy possessed by a body due to its height above a reference level.\n\n**Derivation of GPE = mgh:**\nWork done to lift mass m through height h at constant velocity:\nW = F \u00d7 h = mg \u00d7 h (F = mg for constant velocity)\nThis work is stored as gravitational potential energy:\n**GPE = mgh**\n\nUnit: joules (J)\n\n**Note:** GPE depends on the reference level chosen (usually ground level or sea level). Only changes in GPE are physically significant.\n\n**Elastic potential energy** stored in a spring extended by x:\n**EPE = \u00bdkx\u00b2**\n\n**Worked Example 3:** A 70 kg person climbs from the ground to the top of a 15 m building. Find the gain in GPE. (g = 10 m/s\u00b2)\n\u0394GPE = mgh = 70 \u00d7 10 \u00d7 15 = 10,500 J = 10.5 kJ\n\n**Worked Example 4:** Water stored in a dam at height 80 m above a turbine. If 1000 kg of water flows per second, what is the maximum power available? (g = 10 m/s\u00b2)\nGPE lost per second = mgh/t = (1000 \u00d7 10 \u00d7 80)/1 = 800,000 W = 800 kW\n\n(In practice, losses in the turbine and generator reduce this to about 80\u201390% efficiency.)"
+        },
+        {
+          "type": "heading",
+          "body": "The Work-Energy Theorem"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** The net work done on an object equals the change in its kinetic energy.\n\n**W_net = \u0394KE = \u00bdmv\u00b2 \u2212 \u00bdmu\u00b2**\n\n**Derivation:**\nFor constant net force F on mass m:\nW_net = Fs = mas\nv\u00b2 = u\u00b2 + 2as \u2192 as = (v\u00b2\u2212u\u00b2)/2\nW_net = m \u00d7 (v\u00b2\u2212u\u00b2)/2 = \u00bdmv\u00b2 \u2212 \u00bdmu\u00b2 = \u0394KE \u2713\n\n**Important implications:**\n- If net work is positive, KE increases (object speeds up)\n- If net work is negative, KE decreases (object slows down)\n- If net work is zero, KE is unchanged (constant speed)\n\n**Worked Example 5:** A 2 kg ball is initially at rest. A net force of 10 N acts on it over 5 m. Find the final speed.\n\nW_net = Fs = 10 \u00d7 5 = 50 J\n\u00bdmv\u00b2 = 50: v\u00b2 = 50, v = \u221a50 = 7.07 m/s\n\n**Worked Example 6:** A 1500 kg car travelling at 25 m/s brakes to 10 m/s over a distance of 60 m. Find the braking force.\n\nW_net = \u0394KE = \u00bd\u00d71500\u00d7100 \u2212 \u00bd\u00d71500\u00d7625 = 75,000 \u2212 468,750 = \u2212393,750 J\nW_net = \u2212F \u00d7 60 (braking force opposes motion)\n\u2212F \u00d7 60 = \u2212393,750\nF = 6,562.5 N \u2248 6563 N\n\n**Worked Example 7:** Using the work-energy theorem to find acceleration:\nA 500 g ball is hit by a bat with 50 J of work over a distance of 0.1 m (contact distance). Starting from rest, what is the ball's speed after being hit?\n\n\u00bdmv\u00b2 = W: \u00bd \u00d7 0.5 \u00d7 v\u00b2 = 50\nv\u00b2 = 200, v = 14.1 m/s"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "KE = \u00bdmv\u00b2 (derived from W = Fs and equations of motion). GPE = mgh (path-independent). Work-Energy Theorem: net work = \u0394KE. Positive net work \u2192 object speeds up; negative \u2192 slows down. Elastic PE = \u00bdkx\u00b2."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Kinetic energy: KE = \u00bdmv\u00b2; energy due to motion; unit: joule\n\u2022 Gravitational potential energy: GPE = mgh; energy due to height above reference level; unit: joule\n\u2022 Work-energy theorem: The net work done on an object equals the change in its kinetic energy: W_net = \u0394KE\n\u2022 Elastic potential energy: Energy stored in a deformed elastic object: EPE = \u00bdkx\u00b2"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A car engine exerts a driving force of 1500 N at a speed of 20 m/s. What is the engine power?",
+            "options": [
+              "75 W",
+              "30,000 W",
+              "1520 W",
+              "75,000 W"
+            ],
+            "answer": "30,000 W",
+            "explanation": "P = Fv = 1500 \u00d7 20 = 30,000 W = 30 kW."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A machine has a power input of 4 kW and an efficiency of 75%. What is its useful power output?",
+            "options": [
+              "5.33 kW",
+              "3 kW",
+              "1 kW",
+              "4.75 kW"
+            ],
+            "answer": "3 kW",
+            "explanation": "Useful output = efficiency \u00d7 input = 0.75 \u00d7 4 = 3 kW."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 4 kg block slides down a rough incline of height 3 m. At the bottom its speed is 6 m/s. How much energy was lost to friction? (g = 10 m/s\u00b2)",
+            "options": [
+              "120 J",
+              "48 J",
+              "72 J",
+              "168 J"
+            ],
+            "answer": "72 J",
+            "explanation": "GPE lost = mgh = 4\u00d710\u00d73 = 120 J. KE gained = \u00bd\u00d74\u00d736 = 72 J. Energy lost to friction = 120 \u2212 72 = 48 J. Answer B: 48 J."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The solar constant is approximately:",
+            "options": [
+              "136 W/m\u00b2",
+              "1361 W/m\u00b2",
+              "13,610 W/m\u00b2",
+              "1000 W/m\u00b2"
+            ],
+            "answer": "1361 W/m\u00b2",
+            "explanation": "The solar constant is the power per unit area received from the Sun at the top of Earth's atmosphere: approximately 1361 W/m\u00b2. At the surface (after passing through atmosphere) it is about 1000 W/m\u00b2 on a clear day."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A spring of spring constant 500 N/m is compressed by 8 cm. What is the elastic potential energy stored?",
+            "options": [
+              "40 J",
+              "1.6 J",
+              "3.2 J",
+              "0.16 J"
+            ],
+            "answer": "1.6 J",
+            "explanation": "EPE = \u00bdkx\u00b2 = \u00bd \u00d7 500 \u00d7 (0.08)\u00b2 = \u00bd \u00d7 500 \u00d7 0.0064 = 1.6 J."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A car of mass 800 kg travelling at 20 m/s brakes to rest. The braking force is 4000 N. Using the work-energy theorem, find the braking distance.",
+            "options": [
+              "40 m",
+              "80 m",
+              "20 m",
+              "160 m"
+            ],
+            "answer": "40 m",
+            "explanation": "W_net = \u0394KE: \u22124000d = 0 \u2212 \u00bd\u00d7800\u00d7400 = \u2212160,000. 4000d = 160,000. d = 40 m."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t5_l3",
+      "title": "Conservation of Energy and Power",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Energy cannot be created or destroyed \u2014 it can only be transformed from one form to another. This profound principle, the Law of Conservation of Energy, governs everything from the fall of a stone to the operation of a hydroelectric dam. In this lesson, we apply this law and introduce power \u2014 the rate of doing work \u2014 which determines how quickly energy is transferred."
+        },
+        {
+          "type": "heading",
+          "body": "Law of Conservation of Energy"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** Energy cannot be created or destroyed; it can only be transformed from one form to another. The total energy of a closed system remains constant.\n\nIn mechanics, when only conservative forces act (gravity, spring force):\n**KE + GPE = constant**\nor equivalently: **\u0394KE + \u0394GPE = 0**\n\n**Worked Example 1:** A 2 kg ball is dropped from rest at a height of 20 m. Find its speed when it has fallen 15 m. (g = 10 m/s\u00b2)\n\nUsing conservation of energy (no friction):\nKE gained = GPE lost\n\u00bdmv\u00b2 = mg\u00d715\nv\u00b2 = 2 \u00d7 10 \u00d7 15 = 300\nv = \u221a300 = 17.3 m/s\n\n**Worked Example 2:** A pendulum bob of mass 0.5 kg swings from rest at a height 0.4 m above the lowest point. Find its maximum speed at the lowest point. (g = 10 m/s\u00b2)\n\nGPE lost = KE gained:\nmgh = \u00bdmv\u00b2\n0.5 \u00d7 10 \u00d7 0.4 = \u00bd \u00d7 0.5 \u00d7 v\u00b2\n2 = 0.25v\u00b2\nv = 2\u221a2 = 2.83 m/s\n\n**When friction acts:**\nTotal mechanical energy is not conserved. Some is lost as heat:\nKE_initial + GPE_initial = KE_final + GPE_final + Energy dissipated by friction\n\n**Worked Example 3:** A 5 kg block slides down a 4 m rough incline at 30\u00b0. The coefficient of kinetic friction is 0.2. Find the speed at the bottom. (g = 10 m/s\u00b2)\n\nVertical height: h = 4 sin 30\u00b0 = 2 m\nGPE lost = mgh = 5 \u00d7 10 \u00d7 2 = 100 J\nFriction force = \u03bcmg cos 30\u00b0 = 0.2 \u00d7 5 \u00d7 10 \u00d7 0.866 = 8.66 N\nWork done by friction = 8.66 \u00d7 4 = 34.64 J (dissipated as heat)\n\nKE gained = GPE lost \u2212 Energy dissipated\n\u00bdmv\u00b2 = 100 \u2212 34.64 = 65.36 J\nv\u00b2 = 65.36 \u00d7 2/5 = 26.14\nv = 5.11 m/s"
+        },
+        {
+          "type": "heading",
+          "body": "Power"
+        },
+        {
+          "type": "text",
+          "body": "**Power (P)** is the rate of doing work, or the rate of energy transfer.\n\n**P = W/t = \u0394E/\u0394t**\n\nUnit: watt (W) = joule per second (J/s) = kg m\u00b2 s\u207b\u00b3\n\n**Instantaneous power:**\nP = F \u00d7 v (force \u00d7 velocity)\n\nDerivation: P = dW/dt = d(Fs)/dt = F \u00d7 ds/dt = Fv\n\n**Note:** This only applies when force is parallel to velocity. For force at angle \u03b8 to velocity:\nP = Fv cos\u03b8\n\n**Common units:**\n- Watt (W): SI unit\n- Kilowatt (kW): 1 kW = 1000 W\n- Megawatt (MW): 1 MW = 10\u2076 W\n- Horsepower (hp): 1 hp \u2248 746 W\n- Kilowatt-hour (kWh): 1 kWh = 3.6 \u00d7 10\u2076 J (unit of energy used by electricity suppliers)\n\n**Worked Example 4:** A pump raises 500 kg of water per minute to a height of 12 m. Find the power of the pump. (g = 10 m/s\u00b2)\n\nEnergy per minute = mgh = 500 \u00d7 10 \u00d7 12 = 60,000 J\nPower = Energy/time = 60,000/60 = 1000 W = 1 kW\n\n**Worked Example 5:** A car of mass 1200 kg travels at constant speed 30 m/s along a level road. The air resistance and friction forces total 800 N. Find the power output of the engine.\n\nAt constant speed, driving force = resistive force = 800 N\nP = Fv = 800 \u00d7 30 = 24,000 W = 24 kW\n\n**Worked Example 6:** A motorbike engine has maximum power 15 kW. The total resistance is 300 N. What is the maximum speed?\n\nP = Fv \u2192 v = P/F = 15,000/300 = 50 m/s"
+        },
+        {
+          "type": "heading",
+          "body": "Efficiency"
+        },
+        {
+          "type": "text",
+          "body": "**Efficiency (\u03b7)** is the ratio of useful output energy (or power) to total input energy (or power).\n\n**\u03b7 = Useful output energy / Total input energy \u00d7 100%**\nor\n**\u03b7 = Useful output power / Total input power \u00d7 100%**\n\nEfficiency is always less than 100% because some energy is always lost (usually as heat due to friction, air resistance, or electrical resistance).\n\n**Worked Example 7:** A petrol engine takes in 5000 J of energy from fuel and delivers 1500 J of mechanical work. What is its efficiency?\n\n\u03b7 = 1500/5000 \u00d7 100% = 30%\n\n(Typical car engines have efficiencies of 25\u201335%; this is why most fuel energy is wasted as heat.)\n\n**Worked Example 8:** An electric motor with power input 2 kW lifts a 60 kg load at 0.5 m/s. What is the efficiency? (g = 10 m/s\u00b2)\n\nUseful power output = Fv = mgv = 60 \u00d7 10 \u00d7 0.5 = 300 W\nEfficiency = 300/2000 \u00d7 100% = 15%\n\n**Worked Example 9:** Kampala receives electricity from Bujagali (Owen Falls) hydroelectric dam. The dam's water falls through an effective height of 23 m. If 1500 m\u00b3 of water flows per second and the density of water is 1000 kg/m\u00b3, find:\n(a) The maximum theoretical power\n(b) The actual power output if efficiency is 85%\n\n(a) Mass per second = 1500 \u00d7 1000 = 1.5 \u00d7 10\u2076 kg/s\nMaximum power = mgh/t = 1.5\u00d710\u2076 \u00d7 10 \u00d7 23 = 345 MW\n(b) Actual power = 0.85 \u00d7 345 = 293.3 MW"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Conservation of energy: KE + GPE = constant (no friction); with friction, energy dissipated as heat reduces mechanical energy. Power P = W/t = Fv (unit: watt). Efficiency = useful output/total input \u00d7 100%; always < 100% due to energy losses."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Conservation of energy: Energy cannot be created or destroyed, only transformed; total energy of a closed system is constant\n\u2022 Power: P = W/t = Fv; the rate of doing work or energy transfer; unit: watt (W)\n\u2022 Efficiency: Useful output energy / total input energy \u00d7 100%; always less than 100%\n\u2022 Kilowatt-hour (kWh): Unit of energy used in electricity billing; 1 kWh = 3.6 \u00d7 10\u2076 J"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which energy source currently provides the largest share of Uganda's grid electricity?",
+            "options": [
+              "Solar power",
+              "Biomass",
+              "Hydroelectric power",
+              "Diesel generators"
+            ],
+            "answer": "Hydroelectric power",
+            "explanation": "Hydroelectric power (from dams on the River Nile \u2014 Bujagali, Karuma, Isimba) provides approximately 85% of Uganda's grid electricity. Biomass (firewood and charcoal) dominates total primary energy for cooking."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which correctly derives KE = \u00bdmv\u00b2 from W = Fs?",
+            "options": [
+              "W = Fs = mas; from v\u00b2=2as: W = m(v\u00b2/2) = \u00bdmv\u00b2 \u2713",
+              "W = Fs = mvs (wrong \u2014 F\u2260mv)",
+              "KE = mv\u00b2 (missing the \u00bd)",
+              "KE = \u00bdm\u00b2v (wrong units)"
+            ],
+            "answer": "W = Fs = mas; from v\u00b2=2as: W = m(v\u00b2/2) = \u00bdmv\u00b2 \u2713",
+            "explanation": "F=ma; W=Fs=mas. From v\u00b2=u\u00b2+2as (u=0): as=v\u00b2/2. So W=m\u00d7v\u00b2/2=\u00bdmv\u00b2. \u2713"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The work-energy theorem states that:",
+            "options": [
+              "Work = force \u00d7 distance (Hooke's law)",
+              "Net work done on an object = change in kinetic energy: W_net = \u0394KE",
+              "Total energy is always conserved with no losses",
+              "Power = work \u00d7 time"
+            ],
+            "answer": "Net work done on an object = change in kinetic energy: W_net = \u0394KE",
+            "explanation": "Work-Energy Theorem: W_net = \u0394KE = \u00bdmv\u00b2 \u2212 \u00bdmu\u00b2. Application: braking \u2014 work done by friction = loss of KE."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A 1000 kg car accelerates from 10 to 30 m/s over 200 m with 400 N resistance. What is the driving force?",
+            "options": [
+              "2000 N",
+              "2400 N",
+              "1600 N",
+              "4000 N"
+            ],
+            "answer": "2400 N",
+            "explanation": "\u0394KE = \u00bd\u00d71000\u00d7(900\u2212100) = 400,000 J = W_net = (F\u2212400)\u00d7200. F\u2212400=2000. F=2400 N."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which correctly distinguishes conservative from non-conservative forces?",
+            "options": [
+              "Conservative: work depends on path; non-conservative: work is path-independent",
+              "Conservative: work is path-independent (gravity, spring); non-conservative: work depends on path (friction)",
+              "Both are path-independent but conservative ones conserve speed",
+              "Gravity is non-conservative because it always acts downward"
+            ],
+            "answer": "Conservative: work is path-independent (gravity, spring); non-conservative: work depends on path (friction)",
+            "explanation": "Conservative (gravity, spring): work path-independent; PE defined; mechanical energy conserved. Non-conservative (friction, drag): work path-dependent; energy dissipated as heat."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A hydroelectric dam: 2000 kg/s flows through a 40 m head turbine (90% efficiency). What is the electrical output?",
+            "options": [
+              "800 kW",
+              "720 kW",
+              "880 kW",
+              "400 kW"
+            ],
+            "answer": "720 kW",
+            "explanation": "Mechanical power = mgh/t = 2000\u00d710\u00d740 = 800 kW. Electrical = 0.90\u00d7800 = 720 kW."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t5_l4",
+      "title": "Conservative and Non-Conservative Force Fields",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Not all forces behave the same way when it comes to energy. When you lift a book and put it back down, gravity has done no net work and no energy has been permanently lost. But when you slide a box across a rough floor and then push it back, the friction has consumed energy as heat \u2014 it is gone forever. This distinction between conservative and non-conservative forces is fundamental to understanding how energy works in physical systems."
+        },
+        {
+          "type": "heading",
+          "body": "Conservative Force Fields"
+        },
+        {
+          "type": "text",
+          "body": "A **conservative force** is one for which the work done in moving an object from A to B is independent of the path taken. Equivalently, the work done around any closed path is zero.\n\n**Examples of conservative forces:**\n- Gravitational force\n- Elastic spring force (Hooke's Law)\n- Electrostatic force (Coulomb's Law)\n\n**Key properties of conservative forces:**\n1. Work done is path-independent\n2. Work done in a closed loop is zero\n3. A potential energy can be defined for the force\n4. Mechanical energy is conserved when only conservative forces act\n\n**Why gravity is conservative:**\nConsider lifting a mass m from A to B via two different paths (path 1: directly up; path 2: up a ramp).\n- Direct: W = mgh\n- Via ramp (height h, length L): Force along ramp = mg sin\u03b8, distance = L = h/sin\u03b8\n  W = mg sin\u03b8 \u00d7 h/sin\u03b8 = mgh\nSame work regardless of path. \u2713\n\n**Proof that spring force is conservative:**\nWorking done by spring to extend from 0 to x: W = \u00bdkx\u00b2\nWork done to compress from 0 to \u2212x: W = \u00bdk(\u2212x)\u00b2 = \u00bdkx\u00b2\nRound trip: extend then compress back \u2192 net work = \u00bdkx\u00b2 \u2212 \u00bdkx\u00b2 = 0 \u2713"
+        },
+        {
+          "type": "heading",
+          "body": "Non-Conservative Force Fields"
+        },
+        {
+          "type": "text",
+          "body": "A **non-conservative force** is one for which the work done depends on the path taken. Energy is dissipated (permanently converted to heat or other non-mechanical forms) when these forces act.\n\n**Examples of non-conservative forces:**\n- Friction\n- Air resistance / drag\n- Viscous forces in fluids\n- Applied forces (push/pull by a person)\n\n**Why friction is non-conservative:**\nIf you push a box from A to B and back to A:\n- Going: W_friction = \u2212\u03bcmgd (negative work; energy lost as heat)\n- Returning: W_friction = \u2212\u03bcmgd (negative work again; more energy lost as heat)\n- Total: \u22122\u03bcmgd \u2260 0\n\nThe work done around the closed loop is NOT zero. Energy has been permanently lost as heat.\n\n**Consequences for energy analysis:**\nWhen non-conservative forces are present:\nW_nc = \u0394KE + \u0394GPE = \u0394E_mechanical\n\nWhere W_nc is the work done by non-conservative forces (negative for friction).\n\n**Worked Example 1:** A 3 kg block starts from rest at the top of a 5 m rough incline at 37\u00b0. It reaches the bottom with speed 4 m/s. Find the work done by friction. (g=10, sin37\u00b0=0.6)\n\nHeight = 5 \u00d7 0.6 = 3 m\nGPE lost = 3 \u00d7 10 \u00d7 3 = 90 J\nKE gained = \u00bd \u00d7 3 \u00d7 16 = 24 J\nWork done by friction = KE gained \u2212 GPE lost = 24 \u2212 90 = \u221266 J\n(Friction dissipated 66 J as heat)\n\n**Worked Example 2:** A ball is thrown upward at 20 m/s. It reaches a maximum height of 18 m (less than the 20 m it would reach without air resistance). How much energy was lost to air resistance? (mass = 0.2 kg, g = 10 m/s\u00b2)\n\nInitial KE = \u00bd \u00d7 0.2 \u00d7 400 = 40 J\nGPE gained at 18 m = 0.2 \u00d7 10 \u00d7 18 = 36 J\nEnergy lost to air resistance = 40 \u2212 36 = 4 J"
+        },
+        {
+          "type": "heading",
+          "body": "Potential Energy and Force Relationship"
+        },
+        {
+          "type": "text",
+          "body": "For a conservative force, the force is related to the potential energy U by:\n\n**F = \u2212dU/dx** (in one dimension)\n\nThis means force acts in the direction of decreasing potential energy.\n\n**Examples:**\nGravitational: U = mgh \u2192 F = \u2212d(mgh)/dh = \u2212mg (force is downward, negative h direction) \u2713\nSpring: U = \u00bdkx\u00b2 \u2192 F = \u2212d(\u00bdkx\u00b2)/dx = \u2212kx (restoring force opposite to displacement) \u2713\n\n**Equilibrium points:**\n- Stable equilibrium: d\u00b2U/dx\u00b2 > 0 (minimum of U; force pushes back toward equilibrium)\n- Unstable equilibrium: d\u00b2U/dx\u00b2 < 0 (maximum of U; force pushes away from equilibrium)\n- Neutral equilibrium: d\u00b2U/dx\u00b2 = 0 (flat PE; no restoring force)\n\nThis is the mathematical foundation for the stability analysis we studied in Topic 2 (Statics).\n\n**Worked Example 3:** The potential energy of a particle is U = 3x\u00b2 \u2212 12x + 5 joules, where x is in metres. Find:\n(a) The equilibrium position\n(b) Whether the equilibrium is stable or unstable\n(c) The force at x = 1 m\n\n(a) Equilibrium: dU/dx = 0 \u2192 6x \u2212 12 = 0 \u2192 x = 2 m\n(b) d\u00b2U/dx\u00b2 = 6 > 0 \u2192 stable equilibrium \u2713\n(c) F = \u2212dU/dx = \u2212(6\u00d71 \u2212 12) = \u2212(\u22126) = +6 N (positive direction)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Conservative forces (gravity, spring): work is path-independent, potential energy defined, mechanical energy conserved. Non-conservative forces (friction, drag): work depends on path, energy dissipated as heat. For conservative forces: F = \u2212dU/dx. Stable equilibrium at PE minimum."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Conservative force: A force for which work done is path-independent and work in a closed loop is zero; gravitational and spring forces are conservative\n\u2022 Non-conservative force: A force for which work done depends on the path; friction and air resistance are non-conservative\n\u2022 Potential energy: Energy associated with conservative forces; F = \u2212dU/dx"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A pendulum (0.5 kg, string 1.5 m) released at 60\u00b0 to vertical. What is the max speed at the lowest point? (g=10, cos60\u00b0=0.5)",
+            "options": [
+              "2.83 m/s",
+              "3.87 m/s",
+              "5.48 m/s",
+              "1.73 m/s"
+            ],
+            "answer": "3.87 m/s",
+            "explanation": "h = L(1\u2212cos60\u00b0) = 1.5\u00d70.5 = 0.75 m. v\u00b2 = 2gh = 2\u00d710\u00d70.75 = 15. v = \u221a15 = 3.87 m/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "How does nuclear fusion in the Sun ultimately produce energy that reaches Earth?",
+            "options": [
+              "Chemical reactions in the Sun produce heat which conducts through space",
+              "H nuclei fuse to He; mass defect \u2192 energy via E=mc\u00b2; radiated as EM waves to Earth",
+              "The Sun's gravity compresses Earth causing heat",
+              "Radioactive decay of uranium in the Sun releases gamma rays"
+            ],
+            "answer": "H nuclei fuse to He; mass defect \u2192 energy via E=mc\u00b2; radiated as EM waves to Earth",
+            "explanation": "4H\u2192He in proton-proton chain; \u0394m converted via E=\u0394mc\u00b2. Energy radiates as EM waves (light, IR) at 3\u00d710\u2078 m/s. Arrives at Earth's surface at ~1000 W/m\u00b2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Which of the following has the units of power?",
+            "options": [
+              "N m",
+              "J s",
+              "J s\u207b\u00b9",
+              "kg m s\u207b\u00b2"
+            ],
+            "answer": "J s\u207b\u00b9",
+            "explanation": "Power = energy / time = J/s = J s\u207b\u00b9 = watt (W). N m = joule (unit of energy/work). kg m s\u207b\u00b2 = newton (unit of force)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A force F makes an angle of 60\u00b0 with a displacement d. The work done is W. If the angle is changed to 30\u00b0, what is the new work done?",
+            "options": [
+              "W/\u221a3",
+              "W\u221a3",
+              "W/2",
+              "2W"
+            ],
+            "answer": "W\u221a3",
+            "explanation": "W\u2081 = Fd cos60\u00b0 = Fd/2. W\u2082 = Fd cos30\u00b0 = Fd\u00d7(\u221a3/2). W\u2082/W\u2081 = (\u221a3/2)/(1/2) = \u221a3. So W\u2082 = W\u221a3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which is a specific advantage of solar energy for Uganda?",
+            "options": [
+              "Uganda has very cold weather that helps solar panels work better",
+              "Uganda's equatorial location gives 5\u20136 peak sun hours/day; ideal for off-grid rural communities",
+              "Solar panels work better at night in Uganda",
+              "Uganda has the most solar panels in Africa"
+            ],
+            "answer": "Uganda's equatorial location gives 5\u20136 peak sun hours/day; ideal for off-grid rural communities",
+            "explanation": "Uganda's near-equatorial location (0.3\u00b0N) gives 5\u20136 peak sun hours daily. About 70% of Ugandans are off-grid \u2014 solar home systems provide affordable lighting and power."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t5_l5",
+      "title": "The Sun as an Energy Source and Solar Energy",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every source of energy on Earth ultimately traces back to the Sun. The crops that feed Uganda, the rivers that power Bujagali, the wind that drives turbines \u2014 all originate from solar radiation. In this lesson we examine the structure of the Sun, how it produces energy through nuclear fusion, and how Uganda can harness this energy directly through solar technology."
+        },
+        {
+          "type": "heading",
+          "body": "Structure and Composition of the Sun"
+        },
+        {
+          "type": "text",
+          "body": "The Sun is a star \u2014 a massive sphere of hot, glowing gas (plasma) held together by its own gravity. Its basic properties:\n- Mass: 2.0 \u00d7 10\u00b3\u2070 kg (about 333,000 times Earth's mass)\n- Radius: 7.0 \u00d7 10\u2078 m (about 109 times Earth's radius)\n- Surface temperature: ~5800 K\n- Core temperature: ~15,000,000 K (15 million K)\n- Distance from Earth: 1.5 \u00d7 10\u00b9\u00b9 m (1 Astronomical Unit)\n\n**Composition:** About 73% hydrogen, 25% helium, 2% heavier elements (by mass).\n\n**Structure of the Sun (from inside out):**\n1. **Core:** The innermost 20\u201325% of the radius. Temperature ~15 million K. Where nuclear fusion occurs. Density ~150 g/cm\u00b3.\n2. **Radiative zone:** Energy moves outward by radiation (photons are absorbed and re-emitted repeatedly). Takes about 170,000 years for energy to cross this zone!\n3. **Convective zone:** Energy transported by convection currents (hot plasma rises, cool plasma sinks). Extends from ~70% to 100% of the solar radius.\n4. **Photosphere:** The visible 'surface' of the Sun. Temperature ~5800 K. Solar energy radiates from here.\n5. **Chromosphere:** A thin layer above the photosphere, visible during solar eclipses as a reddish ring.\n6. **Corona:** The outer atmosphere of the Sun \u2014 extremely hot (>1,000,000 K) but very thin. The solar wind originates here."
+        },
+        {
+          "type": "heading",
+          "body": "Energy Production: Nuclear Fusion in the Sun"
+        },
+        {
+          "type": "text",
+          "body": "The Sun's energy comes from **nuclear fusion** \u2014 the merging of lighter nuclei to form heavier ones, releasing enormous amounts of energy in the process.\n\n**The proton-proton chain (main reaction in the Sun):**\n\nStep 1: Two protons (hydrogen nuclei) fuse to form deuterium:\n\u00b9H + \u00b9H \u2192 \u00b2H + e\u207a + \u03bd (positron + neutrino)\n\nStep 2: Deuterium and a proton form helium-3:\n\u00b2H + \u00b9H \u2192 \u00b3He + \u03b3 (gamma ray)\n\nStep 3: Two helium-3 nuclei fuse to form helium-4:\n\u00b3He + \u00b3He \u2192 \u2074He + 2\u00b9H\n\n**Net reaction:** 4\u00b9H \u2192 \u2074He + energy\n\n**Energy from mass defect (Einstein's E = mc\u00b2):**\nMass of 4 protons: 4 \u00d7 1.6726 \u00d7 10\u207b\u00b2\u2077 = 6.6904 \u00d7 10\u207b\u00b2\u2077 kg\nMass of \u2074He nucleus: 6.6447 \u00d7 10\u207b\u00b2\u2077 kg\nMass defect: \u0394m = 6.6904 \u2212 6.6447 = 4.57 \u00d7 10\u207b\u00b2\u2079 kg\n\nEnergy released: E = \u0394mc\u00b2 = 4.57 \u00d7 10\u207b\u00b2\u2079 \u00d7 (3\u00d710\u2078)\u00b2 = 4.11 \u00d7 10\u207b\u00b9\u00b2 J per reaction\n\nThe Sun converts about 4 million tonnes of mass to energy every second!\n\n**Solar luminosity:** The Sun radiates 3.8 \u00d7 10\u00b2\u2076 W of power into space.\n\n**Solar constant:** The power per unit area received at the top of Earth's atmosphere:\nS = 1361 W/m\u00b2 (1.36 kW/m\u00b2)\n\nAfter passing through the atmosphere, the solar intensity at Earth's surface is about 1000 W/m\u00b2 on a clear day \u2014 this is what solar panels collect.\n\n**Implications for life on Earth:**\n1. Photosynthesis: Plants capture solar energy to convert CO\u2082 and water into glucose\n2. Water cycle: Solar energy evaporates water \u2192 clouds \u2192 rainfall \u2192 rivers \u2192 hydroelectric power\n3. Wind: Uneven solar heating of Earth's surface drives wind patterns\n4. Fossil fuels: Ancient solar energy stored by prehistoric organisms\n5. Climate: Solar energy controls Earth's temperature and weather patterns\n\n**Merits of solar energy:**\n- Renewable and inexhaustible\n- No carbon emissions\n- Silent operation\n- Available across Uganda (near equator; high solar radiation)\n- No fuel costs\n\n**Demerits:**\n- Intermittent (no power at night or during heavy clouds)\n- High upfront cost for panels and storage\n- Requires large area for large-scale generation\n- Energy storage (batteries) adds cost and efficiency losses"
+        },
+        {
+          "type": "heading",
+          "body": "Harnessing Solar Energy in Uganda"
+        },
+        {
+          "type": "text",
+          "body": "Uganda lies near the equator (between 4\u00b0S and 4\u00b0N) and receives about 5\u20136 hours of peak sunshine per day, making it one of the best locations in the world for solar energy.\n\n**Solar thermal systems:**\nSolar thermal collectors absorb sunlight and convert it to heat.\n- Solar water heaters: blackened tubes collect heat to warm water (no electricity needed)\n- Solar cookers: parabolic reflectors concentrate sunlight to cook food\n- Solar dryers: solar heated air dries crops (coffee, maize, cassava)\n\n**Solar photovoltaic (PV) systems:**\nPV cells convert sunlight directly into electricity using the photoelectric effect.\n- A solar cell is a p-n junction semiconductor device\n- When photons with sufficient energy hit the cell, they release electrons, creating a voltage\n- Individual cells produce ~0.5V; panels connect cells in series/parallel\n\n**Thermal storage:**\nSolar energy can be stored as heat in insulated water tanks, molten salt, or rocks for use after sunset.\n\n**Solar intensity and panel output:**\nPower output of a panel = Panel area \u00d7 Solar intensity \u00d7 Efficiency\nExample: 2 m\u00b2 panel, 1000 W/m\u00b2 solar intensity, 20% efficiency:\nOutput = 2 \u00d7 1000 \u00d7 0.20 = 400 W\n\n**Shadow effect:** Partial shading of one cell in a series string reduces the output of ALL connected cells. Solutions include bypass diodes and microinverters.\n\n**Climate effects:** Cloud cover reduces solar intensity. Seasonal variation in day length affects total daily energy.\n\n**Electrical load matching:** Panels must be sized to match the load. An oversized system wastes money; an undersized system leaves loads unmet."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "The Sun produces energy through nuclear fusion of hydrogen to helium (proton-proton chain); E = mc\u00b2 accounts for the mass defect. Solar constant \u2248 1361 W/m\u00b2. Uganda's near-equatorial position makes it ideal for solar energy. Solar thermal and PV systems convert sunlight to heat and electricity respectively."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Nuclear fusion: The combining of light nuclei to form heavier nuclei, releasing energy from the mass defect: E = \u0394mc\u00b2\n\u2022 Solar constant: Power per unit area received from the Sun at the top of Earth's atmosphere: \u2248 1361 W/m\u00b2\n\u2022 Photovoltaic (PV) cell: A semiconductor device that converts sunlight directly into electrical energy\n\u2022 Solar thermal: Technology that converts sunlight into heat energy for water heating, cooking, or drying"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 1200 kg car travels at constant 25 m/s up a 5\u00b0 hill with rolling friction \u03bc=0.02. What power does the engine produce? (g=10, sin5\u00b0=0.087, cos5\u00b0=0.996)",
+            "options": [
+              "26.1 kW",
+              "32.1 kW",
+              "17.9 kW",
+              "42.5 kW"
+            ],
+            "answer": "32.1 kW",
+            "explanation": "Weight component along slope = 1200\u00d710\u00d70.087 = 1044 N. Friction = 0.02\u00d71200\u00d710\u00d70.996 = 239 N. F_total = 1283 N. P = Fv = 1283\u00d725 = 32,075 W \u2248 32.1 kW."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Which of the following energy sources is most dominant for cooking in Ugandan households?",
+            "options": [
+              "Electricity from the national grid",
+              "Solar energy",
+              "Firewood and charcoal (biomass)",
+              "Natural gas"
+            ],
+            "answer": "Firewood and charcoal (biomass)",
+            "explanation": "Approximately 90% of Uganda's primary energy for cooking comes from biomass (firewood and charcoal). This contributes to deforestation and indoor air pollution. Uganda's grid electricity reaches only about 40% of the population."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A spring (k=800 N/m) compressed 5 cm is released, propelling a 0.1 kg ball. What is the ball's speed?",
+            "options": [
+              "2 m/s",
+              "4.47 m/s",
+              "6 m/s",
+              "10 m/s"
+            ],
+            "answer": "4.47 m/s",
+            "explanation": "EPE = \u00bdkx\u00b2 = \u00bd\u00d7800\u00d7(0.05)\u00b2 = 1 J. \u00bdmv\u00b2 = 1. v\u00b2 = 20. v = \u221a20 = 4.47 m/s."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A ball is released from rest at height H on a smooth circular loop of radius R. What is the minimum height H to ensure the ball completes the loop? (Minimum condition: v\u00b2 = gR at top of loop)",
+            "options": [
+              "H = R",
+              "H = 2R",
+              "H = 2.5R",
+              "H = 5R"
+            ],
+            "answer": "H = 2.5R",
+            "explanation": "At top of loop (height 2R), minimum speed: v\u00b2 = gR. Energy conservation from H: mgH = mg(2R) + \u00bdmv\u00b2. mgH = 2mgR + \u00bdm(gR) = 2mgR + mgR/2 = 5mgR/2. H = 5R/2 = 2.5R."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A household uses: 100W bulb (5h/day), 1000W iron (2h/day), 200W TV (4h/day). Total daily energy in kWh?",
+            "options": [
+              "2.5 kWh",
+              "3.3 kWh",
+              "4.1 kWh",
+              "1.3 kWh"
+            ],
+            "answer": "3.3 kWh",
+            "explanation": "Bulb: 0.1\u00d75=0.5 kWh. Iron: 1.0\u00d72=2.0 kWh. TV: 0.2\u00d74=0.8 kWh. Total=3.3 kWh."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s5_t5_l6",
+      "title": "Renewable and Non-Renewable Energy Sources",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Uganda faces a critical energy challenge: a large population with growing energy needs, but limited access to electricity (only about 40% of the population has grid connection as of 2024). Understanding the range of energy sources \u2014 their advantages, limitations, and environmental impacts \u2014 is essential for making informed decisions about Uganda's energy future. This lesson surveys all major energy sources through the lens of physics."
+        },
+        {
+          "type": "heading",
+          "body": "Non-Renewable Energy Sources"
+        },
+        {
+          "type": "text",
+          "body": "**Non-renewable sources** are those that cannot be replenished on a human timescale once used.\n\n**1. Fossil Fuels (coal, oil, natural gas)**\nOrigin: Ancient organisms (plants and animals) that captured solar energy via photosynthesis, buried and compressed over millions of years.\nEnergy release: Combustion (rapid oxidation): C\u2099H\u2082\u2099\u208a\u2082 + O\u2082 \u2192 CO\u2082 + H\u2082O + energy\nUse in Uganda: Petrol, diesel for transport; diesel generators for electricity; cooking gas (LPG)\n\nMerits: High energy density; easy to transport and store; reliable\nDemerits: Non-renewable; produce CO\u2082 (greenhouse gas), NO\u2093, SO\u2082; air pollution; price volatility\n\n**2. Nuclear energy (fission)**\nU-235 or Pu-239 absorbs a neutron and splits, releasing enormous energy:\n\u00b2\u00b3\u2075U + n \u2192 fission fragments + 2\u20133 neutrons + energy (~200 MeV per fission)\nEnergy from mass defect: E = \u0394mc\u00b2\n\nMerits: Very high energy density; no CO\u2082 emissions; reliable baseload\nDemerits: Radioactive waste disposal; risk of accidents (Chernobyl, Fukushima); high construction cost; proliferation risk\n\nUganda has no nuclear plants but the government has explored the possibility given depleting oil reserves."
+        },
+        {
+          "type": "heading",
+          "body": "Renewable Energy Sources"
+        },
+        {
+          "type": "text",
+          "body": "**Renewable sources** are replenished naturally and continuously.\n\n**1. Hydroelectric power (Hydro)**\nUganda's primary electricity source (Bujagali, Karuma, Isimba dams on River Nile).\nPrinciple: GPE of water \u2192 KE of turbines \u2192 electrical energy\nPower = \u03c1Qgh \u00d7 \u03b7 (where \u03c1 = water density, Q = flow rate, h = head, \u03b7 = efficiency)\n\nMerits: No fuel cost; no emissions during operation; reliable if rainfall is steady; long lifespan\nDemerits: Dependent on rainfall (Uganda's dams struggle during droughts); expensive construction; habitat disruption; displacement of communities\n\n**2. Wind energy**\nKinetic energy of wind \u2192 rotation of turbine blades \u2192 electrical energy\nPower available \u221d v\u00b3 (wind speed cubed)\nP = \u00bd\u03c1Av\u00b3 (\u03c1 = air density, A = swept area of turbine)\n\nMerits: No emissions; free fuel; suitable for remote areas\nDemerits: Intermittent; wind not strong enough in much of Uganda; visual and noise pollution; bird hazard\n\n**3. Biomass energy**\nBurning organic material (wood, crop residues, animal waste) or converting it to biogas.\nReaction: organic matter \u2192 CO\u2082 + H\u2082O + energy\nBiogas: Anaerobic digestion of animal/human waste \u2192 methane (CH\u2084) + CO\u2082\n\nIn Uganda: About 90% of energy for cooking comes from firewood and charcoal \u2014 making this the dominant energy source by far.\n\nMerits: Widely available; carbon-neutral in principle (CO\u2082 absorbed when plants grow is re-released when burned); provides cooking and heat\nDemerits: Deforestation; indoor air pollution (major health problem in Uganda); inefficient combustion\n\n**4. Geothermal energy**\nHeat from Earth's interior used to generate steam for turbines.\nSuitable where volcanic activity brings heat close to surface (e.g. western Uganda along East African Rift Valley)\n\nMerits: Constant 24/7 output; no fuel cost; low emissions\nDemerits: Limited to geologically active areas; drilling costs; mineral-laden steam can damage equipment\n\n**5. Tidal energy**\nKinetic and potential energy of ocean tides \u2192 electricity.\nNot applicable in Uganda (landlocked country) but relevant for coastal East Africa (Kenya, Tanzania).\n\n**6. Wave energy**\nOscillating ocean waves drive generators.\nSimilarly not applicable to landlocked Uganda."
+        },
+        {
+          "type": "heading",
+          "body": "Solar Thermal Technologies and Energy Conservation"
+        },
+        {
+          "type": "text",
+          "body": "**Solar thermal technologies** (recap and extend from Lesson 5):\n\n1. **Solar water heater:** Flat-plate collector with blackened copper tubes in insulated frame under glass. Absorbs radiation; heats water for domestic use. Cost saving: replaces electric water heater (~3 kW).\n\n2. **Solar photovoltaic systems:**\n   - Grid-tied systems: sell excess power back to grid (possible with Umeme in Uganda)\n   - Off-grid systems: battery storage for areas without grid\n   - Solar street lights in Kampala, Jinja, other towns\n\n3. **Solar cookers:** Parabolic reflector focuses sunlight to 200\u2013300\u00b0C focal point. Zero fuel cost; saves trees; usable during daytime.\n\n4. **Solar dryers:** Drying coffee, maize, cassava using solar-heated air in an enclosed space. Better than open sun drying; less contamination; faster drying.\n\n**Energy conservation principles:**\nRather than generating more energy, using existing energy more efficiently reduces waste and pollution.\n\nKey strategies:\n- LED lighting instead of incandescent bulbs (uses 10\u00d7 less power)\n- Insulating buildings to reduce heating/cooling needs\n- Fuel-efficient cookstoves (reduce firewood consumption by 50\u201370%)\n- Energy-efficient appliances (A++ rated refrigerators, motors)\n- Public transport (boda-boda pooling, taxis) reduces per-person fuel use\n\n**Uganda's energy mix (approximate 2024):**\n- Hydroelectric: ~85% of grid electricity\n- Thermal (fuel oil): ~10%\n- Solar/wind: ~5% (growing rapidly)\n- Off-grid (biomass for cooking): ~90% of total primary energy\n\n**The energy trilemma:**\nUganda's energy policy must balance:\n1. Energy security (reliable supply)\n2. Energy equity (affordable and accessible to all)\n3. Environmental sustainability (low carbon, minimal deforestation)\n\nNo single source solves all three \u2014 a mix of sources is the optimal strategy."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Non-renewable: fossil fuels (ancient solar energy) and nuclear fission \u2014 high energy density but finite and/or polluting. Renewable: hydro, solar, wind, biomass, geothermal, tidal \u2014 sustainable but often intermittent or location-specific. Uganda relies heavily on hydro and biomass. Energy conservation is as important as energy generation."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "\u2022 Renewable energy: Energy from sources that are naturally replenished (solar, wind, hydro, biomass, geothermal, tidal)\n\u2022 Non-renewable energy: Energy from sources that cannot be replenished on human timescales (fossil fuels, nuclear fission)\n\u2022 Biomass: Organic material (wood, crop residues, animal waste) used as fuel; dominant cooking energy in Uganda\n\u2022 Hydroelectric power: Electricity generated by converting gravitational potential energy of water into kinetic energy of turbines"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 0.5 kg ball is fired horizontally from 20 m high at 10 m/s. What fraction of the final KE comes from GPE?",
+            "options": [
+              "80%",
+              "50%",
+              "20%",
+              "100%"
+            ],
+            "answer": "80%",
+            "explanation": "Initial KE=\u00bd\u00d70.5\u00d7100=25 J. GPE=0.5\u00d710\u00d720=100 J. Final KE=125 J. Fraction from GPE=100/125=80%."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The main nuclear process by which the Sun produces energy is:",
+            "options": [
+              "Nuclear fission of uranium",
+              "Nuclear fusion of hydrogen to helium",
+              "Radioactive decay of heavy elements",
+              "Chemical combustion of hydrogen"
+            ],
+            "answer": "Nuclear fusion of hydrogen to helium",
+            "explanation": "The Sun produces energy by nuclear fusion \u2014 specifically the proton-proton chain in which hydrogen nuclei fuse to form helium, releasing energy from the mass defect (E = \u0394mc\u00b2). Nuclear fission (splitting heavy nuclei) is used in nuclear power plants on Earth."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A variable force acts from 0 to 6m (linearly 0\u219260N) then stays at 60N from 6m to 10m. What is the total work done?",
+            "options": [
+              "180 J",
+              "420 J",
+              "240 J",
+              "600 J"
+            ],
+            "answer": "420 J",
+            "explanation": "Triangle (0\u20136m): \u00bd\u00d76\u00d760=180J. Rectangle (6\u201310m): 60\u00d74=240J. Total=180+240=420J."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A ball of mass m falls through air resistance from height H. It reaches the ground with speed v, where v < \u221a(2gH). The energy lost to air resistance is:",
+            "options": [
+              "mgH",
+              "\u00bdmv\u00b2",
+              "mgH \u2212 \u00bdmv\u00b2",
+              "mgH + \u00bdmv\u00b2"
+            ],
+            "answer": "mgH \u2212 \u00bdmv\u00b2",
+            "explanation": "Energy conservation with air resistance: Initial GPE = Final KE + Energy lost to air resistance. mgH = \u00bdmv\u00b2 + E_lost. E_lost = mgH \u2212 \u00bdmv\u00b2."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A solar panel (area 2.5m\u00b2, efficiency 18%, irradiance 900W/m\u00b2) must charge a 12V, 100Ah battery. How long does it take?",
+            "options": [
+              "1.5 hours",
+              "2.0 hours",
+              "3.0 hours",
+              "6.0 hours"
+            ],
+            "answer": "3.0 hours",
+            "explanation": "Power output=2.5\u00d7900\u00d70.18=405W. Battery energy=12\u00d7100=1200Wh. Time=1200/405=2.96h\u22483.0 hours."
+          }
+        ]
+      }
+    }
+  ]
+}
