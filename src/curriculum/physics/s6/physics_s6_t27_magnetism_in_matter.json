@@ -1,0 +1,685 @@
+{
+  "topic_id": "physics_s6_t27",
+  "topic_title": "Magnetism in Matter",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t27_l1",
+      "title": "Magnetic Properties of Materials: Diamagnetism, Paramagnetism and Ferromagnetism",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A compass needle in Kampala points toward magnetic north — why? An MRI scanner at Aga Khan Hospital uses a powerful superconducting magnet. A loudspeaker in a boda-boda's music system converts electrical signals to sound using a permanent magnet. Iron nails stick to a fridge magnet, but a glass marble does not. Certain rocks near Kabale are themselves magnetic. All of these phenomena are governed by the way different materials respond to magnetic fields — and the answer lies deep in the atomic and quantum nature of matter. In this topic, we explore how the magnetic properties of materials arise from the spin and orbital motion of electrons, and how this leads to three fundamentally different classes of magnetic behaviour."
+        },
+        {
+          "type": "heading",
+          "body": "The Origin of Magnetism in Matter"
+        },
+        {
+          "type": "text",
+          "body": "Every atom is a tiny magnet. The magnetic properties of a material arise from two sources at the atomic level:\n\n**1. Orbital magnetic moment:**\nElectrons orbiting the atomic nucleus constitute a current loop — a tiny circular current. By the right-hand rule, this moving charge produces a magnetic dipole moment:\nμ_orbital = evr/2 (where e = electron charge, v = orbital speed, r = orbital radius)\n\n**2. Spin magnetic moment:**\nEach electron has an intrinsic angular momentum called 'spin' (not a classical rotation, but a quantum property). This spin creates a magnetic dipole moment:\nμ_spin = ±μ_B (where μ_B = Bohr magneton = 9.274 × 10⁻²⁴ J/T = the quantum unit of magnetic moment)\nElectrons can have spin 'up' (+½) or spin 'down' (−½).\n\n**Pauli Exclusion Principle and electron pairing:**\nIn an atom, electrons occupy orbitals in pairs — one spin up, one spin down. When paired, their spin magnetic moments cancel: net spin moment = 0. The magnetic properties of an atom are determined largely by its unpaired electrons.\n\n**Complete shells:** Atoms with completely filled electron shells have all electrons paired → net magnetic moment ≈ 0 (e.g., noble gases, most paired atoms)\n\n**Transition metals (Fe, Co, Ni, Mn):** Have partially filled 3d subshell with several unpaired electrons → large net magnetic moment per atom. This is why iron, cobalt, and nickel are strongly magnetic.\n\n**The three classes of magnetic behaviour:**\nBased on their response to an external magnetic field B, materials fall into three main categories:\n1. **Diamagnetic** — weakly repelled by B\n2. **Paramagnetic** — weakly attracted to B\n3. **Ferromagnetic** — strongly attracted to B (and can become permanent magnets)"
+        },
+        {
+          "type": "heading",
+          "body": "Diamagnetism"
+        },
+        {
+          "type": "text",
+          "body": "**Diamagnetic materials** are weakly repelled by an external magnetic field.\n\n**Origin:**\nAll materials have some diamagnetic response. When an external field B is applied, it induces changes in the orbital motion of electrons — by Lenz's Law, the induced orbital currents oppose the applied field (like electromagnetic induction). This creates a small magnetic moment opposed to B.\n\nIn materials where ALL electrons are paired (net atomic magnetic moment = 0), this diamagnetic effect is the only magnetic response — it has no permanent magnetism to mask it.\n\n**Properties of diamagnetic materials:**\n- **Slightly repelled** by magnetic fields (μᵣ slightly less than 1)\n- **Relative permeability** μᵣ ≈ 0.99999 (slightly less than 1)\n- **Magnetic susceptibility** χ_m = μᵣ − 1 ≈ −10⁻⁵ to −10⁻⁶ (small, negative)\n- No permanent magnetism\n- Effect exists only while external field is applied\n- Effect is very weak — not normally noticeable\n\n**Examples of diamagnetic materials:**\n- Bismuth (strongest common diamagnet)\n- Copper, gold, silver (all metals with filled d-shells)\n- Water (H₂O)\n- Organic materials: wood, plastic, glass\n- Most non-metallic solids\n- Human tissue (mostly water → diamagnetic)\n- Superconductors are perfect diamagnets (Meissner effect — χ_m = −1, μᵣ = 0): they completely expel magnetic fields → spectacular magnetic levitation\n\n**Demonstration:** A diamagnetic frog (mostly water) can be levitated in a 16 T magnetic field — famously demonstrated at Radboud University, Netherlands. The frog is fine — water is diamagnetic!\n\n**Practical relevance:** Diamagnetic levitation is being researched for frictionless bearings in high-speed machinery."
+        },
+        {
+          "type": "heading",
+          "body": "Paramagnetism"
+        },
+        {
+          "type": "text",
+          "body": "**Paramagnetic materials** are weakly attracted to an external magnetic field.\n\n**Origin:**\nAtoms/ions in paramagnetic materials have a net permanent magnetic moment (due to unpaired electrons). However, these atomic moments are randomly oriented due to thermal agitation — they point in random directions and cancel on average.\n\nWhen an external field B is applied:\n- The field exerts a torque on each atomic magnetic dipole\n- Dipoles tend to align with B (like compass needles aligning with Earth's field)\n- This creates a small net magnetisation in the direction of B\n- The stronger the field, the more alignment\n- Higher temperature → more thermal agitation → less alignment (CURIE'S LAW)\n\n**Curie's Law:**\n**M = C × B/T** (magnetisation ∝ applied field / absolute temperature)\n\nWhere:\n- M = magnetisation of the material\n- C = Curie constant (material-specific)\n- B = applied magnetic flux density (T)\n- T = absolute temperature (K)\n\n**Properties of paramagnetic materials:**\n- Weakly attracted to magnetic fields\n- μᵣ slightly greater than 1 (≈ 1.00001 to 1.01)\n- Susceptibility χ_m = μᵣ − 1 ≈ 10⁻³ to 10⁻⁶ (small, positive)\n- No permanent magnetism (random alignment returns when field is removed)\n- Magnetism decreases with increasing temperature (Curie's Law)\n\n**Examples of paramagnetic materials:**\n- Aluminium, platinum, palladium\n- Oxygen gas (O₂ has 2 unpaired electrons → paramagnetic — a surprising fact!)\n- Manganese, chromium, molybdenum\n- Many transition metal compounds\n- Liquid oxygen can be attracted to a strong magnet — a striking demonstration\n\n**Worked Example 1:** A paramagnetic material at 300 K has magnetisation M₁. At what temperature would the magnetisation be halved (in the same field)?\n\nFrom Curie's Law: M ∝ 1/T → M₂/M₁ = T₁/T₂\n0.5 = 300/T₂ → T₂ = 300/0.5 = **600 K = 327°C**\nDoubling temperature halves the magnetisation."
+        },
+        {
+          "type": "heading",
+          "body": "Ferromagnetism"
+        },
+        {
+          "type": "text",
+          "body": "**Ferromagnetic materials** are strongly attracted to magnetic fields and can become permanent magnets. This is the magnetism of everyday experience.\n\n**Origin — exchange interaction and magnetic domains:**\nIn ferromagnetic materials (Fe, Co, Ni, and certain alloys), a quantum mechanical effect called the **exchange interaction** causes adjacent atoms to align their magnetic moments PARALLEL to each other — even without an external field.\n\nThis parallel alignment cannot extend throughout the whole material because that would store too much magnetostatic energy. Instead, the material divides into microscopic regions called **magnetic domains** (typically 10⁻⁶ to 10⁻³ m in size). Within each domain, all atomic moments are perfectly aligned. But different domains point in different directions → in an unmagnetised ferromagnet, the domains are randomly oriented and cancel out → no net magnetisation.\n\n**What happens when an external field is applied:**\n1. **Domain wall motion:** Domains aligned with B grow at the expense of domains opposed to B (domain walls move)\n2. **Domain rotation:** As B increases, entire domains rotate to align with B\n3. **Saturation:** When all domains are aligned with B, magnetisation reaches its maximum value (saturation magnetisation M_s)\n\n**Properties of ferromagnetic materials:**\n- Very strongly attracted to fields\n- μᵣ ≫ 1 (can be 1000–100,000 or more)\n- Can retain magnetisation after field is removed (permanent magnets)\n- Saturation occurs at strong fields\n- Lose ferromagnetism above the **Curie temperature** (T_C):\n  - Iron: T_C = 770°C (above this, becomes paramagnetic)\n  - Cobalt: T_C = 1115°C\n  - Nickel: T_C = 358°C\n\n**Examples:**\n- Iron, cobalt, nickel (elemental ferromagnets)\n- Steel, alnico, neodymium-iron-boron (NdFeB) — permanent magnets\n- Ferrites (iron oxide compounds) — used in loudspeakers, MRI contrast agents\n- Lodestone (magnetite, Fe₃O₄) — the natural magnet known since antiquity\n\n**Comparison table:**\n| Property | Diamagnetic | Paramagnetic | Ferromagnetic |\n|---|---|---|---|\n| Net atomic moment | 0 | Yes (unpaired e⁻) | Yes + exchange coupling |\n| χ_m | Small, negative | Small, positive | Large, positive |\n| μᵣ | Slightly < 1 | Slightly > 1 | ≫ 1 (10³–10⁵) |\n| Field effect | Weakly repelled | Weakly attracted | Strongly attracted |\n| Permanent magnet | No | No | Yes (below T_C) |\n| Temperature effect | Nearly none | Decreases (Curie's Law) | Loses at Curie T_C |\n| Examples | Cu, H₂O, Bi | Al, O₂, Mn | Fe, Co, Ni |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Magnetism in matter arises from electron orbital motion and spin. Paired electrons cancel; unpaired electrons give net atomic moment. Three classes: diamagnetic (all electrons paired; weakly repelled; χ < 0; e.g. Cu, H₂O), paramagnetic (unpaired electrons, random orientation; weakly attracted; Curie's Law M ∝ B/T; e.g. Al, O₂), ferromagnetic (unpaired electrons + exchange interaction → domains; strongly attracted; μᵣ ≫ 1; permanent magnets; loses at Curie temperature; e.g. Fe, Co, Ni). Superconductors are perfect diamagnets (χ = −1)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Magnetic dipole moment (μ): Product of atomic current loop and area; quantum unit = Bohr magneton μ_B = 9.274 × 10⁻²⁴ J/T\n• Diamagnetic: Weakly repelled; χ_m < 0; induced opposition to applied field; all electrons paired\n• Paramagnetic: Weakly attracted; χ_m > 0; permanent atomic moments align with field; Curie's Law M ∝ B/T\n• Ferromagnetic: Strongly attracted; permanent magnetism; exchange interaction → domain structure\n• Magnetic domain: Region of uniform magnetisation within a ferromagnet; typically 10⁻⁶–10⁻³ m\n• Curie temperature (T_C): Temperature above which ferromagnet becomes paramagnetic; Fe: 770°C"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which type of magnetic material has a relative permeability μᵣ slightly LESS than 1?",
+            "options": [
+              "Ferromagnetic",
+              "Paramagnetic",
+              "Diamagnetic",
+              "Non-magnetic (μᵣ = 1 exactly)"
+            ],
+            "answer": "Diamagnetic",
+            "explanation": "Diamagnetic materials create an induced magnetisation opposing the applied field, reducing the total field inside the material. This gives μᵣ slightly less than 1 (e.g. 0.99999 for copper). Paramagnetic materials have μᵣ slightly greater than 1; ferromagnetic materials have μᵣ ≫ 1 (thousands to hundreds of thousands)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A paramagnetic material obeys Curie's Law. At temperature T₁ its magnetisation is M. At temperature 3T₁ (same applied field), its magnetisation is:",
+            "options": [
+              "3M",
+              "9M",
+              "M/3",
+              "M/9"
+            ],
+            "answer": "M/3",
+            "explanation": "Curie's Law: M ∝ B/T → M₂/M₁ = T₁/T₂ = T₁/(3T₁) = 1/3. So M₂ = M/3. As temperature triples, thermal agitation is three times greater, disrupting the alignment of magnetic dipoles and reducing magnetisation to one-third. This is why paramagnetic materials are less magnetic at higher temperatures."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the origin of ferromagnetism that distinguishes it from simple paramagnetism?",
+            "options": [
+              "Ferromagnetic atoms have more electrons than paramagnetic atoms",
+              "The exchange interaction between adjacent atoms causes their magnetic moments to align parallel even without an external field, forming magnetic domains",
+              "Ferromagnetic materials have no unpaired electrons — their magnetism comes purely from orbital motion",
+              "Ferromagnetic materials have a negative susceptibility like diamagnets but much larger"
+            ],
+            "answer": "The exchange interaction between adjacent atoms causes their magnetic moments to align parallel even without an external field, forming magnetic domains",
+            "explanation": "Both ferromagnetic and paramagnetic materials have unpaired electrons with net atomic moments. The crucial difference is the quantum mechanical exchange interaction in ferromagnets: it forces neighbouring atomic moments into parallel alignment spontaneously. This creates domains — macroscopic regions of uniform magnetisation — even without any external field. Paramagnetism has no such coupling; moments are randomly oriented until a field is applied."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An iron magnet is heated to 800°C. What happens to its magnetism?",
+            "options": [
+              "It becomes more strongly magnetic because thermal energy helps align domains",
+              "It loses its ferromagnetism and becomes paramagnetic (above the Curie temperature of 770°C)",
+              "It becomes diamagnetic above 800°C",
+              "Nothing changes — temperature has no effect on ferromagnetism"
+            ],
+            "answer": "It loses its ferromagnetism and becomes paramagnetic (above the Curie temperature of 770°C)",
+            "explanation": "Iron's Curie temperature is 770°C. Above this temperature, thermal energy is sufficient to disrupt the exchange interaction that maintains domain structure. The iron becomes paramagnetic — it can still be weakly magnetised by an applied field, but retains no permanent magnetism and is only weakly attracted to magnets. This is why dropping a magnet or heating it can destroy its magnetism."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which of the following materials is PARAMAGNETIC?",
+            "options": [
+              "Copper",
+              "Iron",
+              "Aluminium",
+              "Glass"
+            ],
+            "answer": "Aluminium",
+            "explanation": "Aluminium is paramagnetic (has unpaired electrons in the 3p subshell; χ_m ≈ +2.2 × 10⁻⁵). Copper is diamagnetic (all 3d electrons paired; χ_m ≈ −9.6 × 10⁻⁶). Iron is ferromagnetic. Glass is diamagnetic. The paramagnetism of aluminium is so weak that it appears non-magnetic in everyday situations."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In an unmagnetised ferromagnet, why is there no net external magnetic field despite all atoms having large magnetic moments?",
+            "options": [
+              "The atomic moments cancel because each atom has equal positive and negative contributions",
+              "The material is divided into magnetic domains, each uniformly magnetised, but pointing in random directions — the domain fields cancel each other",
+              "Thermal agitation randomises the atomic moments, just as in a paramagnet",
+              "The exchange interaction cancels the magnetic moments rather than aligning them"
+            ],
+            "answer": "The material is divided into magnetic domains, each uniformly magnetised, but pointing in random directions — the domain fields cancel each other",
+            "explanation": "Within each domain, all atoms are perfectly aligned (exchange interaction). But domains form in different orientations to minimise magnetostatic energy, so their fields cancel overall. The material appears unmagnetised macroscopically. Applying a field causes domain walls to move (aligned domains grow) and eventually all domains align with the applied field — the material becomes magnetised."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t27_l2",
+      "title": "Magnetic Field Quantities: B, H and M — Magnetisation and Permeability",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "To describe the magnetic behaviour of materials precisely, we need three related but distinct field quantities: the magnetic flux density B, the magnetic field strength H, and the magnetisation M. These three quantities are linked by the magnetic permeability of the material. Understanding their relationships allows engineers to design electromagnets, transformers, electric motors, and magnetic storage devices — all central to Uganda's electrical infrastructure."
+        },
+        {
+          "type": "heading",
+          "body": "The Three Magnetic Field Quantities"
+        },
+        {
+          "type": "text",
+          "body": "**1. Magnetic flux density B (also called the B-field or magnetic induction):**\nThe force per unit current per unit length on a straight wire carrying current I:\nF = BIL sinθ (force on current-carrying conductor)\n\nB is what we typically call 'the magnetic field strength' in everyday usage (though technically this name belongs to H). B includes the effect of both the applied field and the material's response.\n\n**Unit:** Tesla (T) = Wb m⁻² = kg A⁻¹ s⁻²\n\n**2. Magnetic field strength H (also called the H-field or magnetising force):**\nH represents the magnetic field produced by free currents (electric currents) alone — it does NOT include the contribution from the magnetic material itself.\n\nFor a solenoid with n turns per metre carrying current I in free space:\nB₀ = μ₀nI → H = nI (the H-field)\n\nRelationship: **B = μ₀H** (in free space/vacuum; μ₀ = 4π × 10⁻⁷ T m A⁻¹)\n\n**Unit:** A m⁻¹ (amperes per metre)\n\n**3. Magnetisation M:**\nThe magnetic dipole moment per unit volume of the material:\nM = (total magnetic moment) / volume\n\n**Unit:** A m⁻¹ (same as H)\n\n**The fundamental relationship linking B, H and M:**\n\n**B = μ₀(H + M)**\n\nThis equation says: the total B-field inside a material is the sum of the contribution from the free currents (μ₀H) and the contribution from the material's own magnetisation (μ₀M).\n\n**Magnetic susceptibility χ_m:**\nFor linear magnetic materials:\n**M = χ_m H**\n\nWhere χ_m is the magnetic susceptibility (dimensionless).\n\nSubstituting: B = μ₀(H + χ_m H) = μ₀H(1 + χ_m) = μ₀μᵣH\n\n**Relative permeability:** μᵣ = 1 + χ_m\n\n**Summary of relationships:**\n**B = μ₀μᵣH = μH**\n\nWhere μ = μ₀μᵣ is the absolute permeability of the material.\n\n| Quantity | Symbol | Unit | Meaning |\n|---|---|---|---|\n| Magnetic flux density | B | Tesla (T) | Total field; causes forces on moving charges |\n| Magnetic field strength | H | A/m | Field from free currents only |\n| Magnetisation | M | A/m | Dipole moment per unit volume |\n| Relative permeability | μᵣ | Dimensionless | Ratio B/B₀ = μ/μ₀ |\n| Susceptibility | χ_m | Dimensionless | M/H; negative for dia, positive for para and ferro |"
+        },
+        {
+          "type": "heading",
+          "body": "Permeability and Its Practical Significance"
+        },
+        {
+          "type": "text",
+          "body": "**Permeability of free space (vacuum permeability):**\nμ₀ = 4π × 10⁻⁷ T m A⁻¹ = 1.257 × 10⁻⁶ H m⁻¹\n\nThis is a fundamental constant — it relates the B-field to the current that produces it in free space.\n\n**Absolute permeability of a material:** μ = μ₀μᵣ\n\n**Relative permeability μᵣ values:**\n| Material | μᵣ | Type |\n|---|---|---|\n| Vacuum/air | 1.0000 | (reference) |\n| Water | 0.999991 | Diamagnetic |\n| Copper | 0.999994 | Diamagnetic |\n| Aluminium | 1.000022 | Paramagnetic |\n| Iron (pure, annealed) | ~5000 | Ferromagnetic |\n| Iron-silicon alloy | ~7000 | Ferromagnetic |\n| Mu-metal (Ni-Fe alloy) | ~100,000 | Ferromagnetic |\n| Superconductor | 0 (perfect diamagnet) | Special |\n\n**Worked Example 1:** A solenoid with n = 1000 turns/m carries I = 2.0 A. Find:\n(a) H inside the solenoid\n(b) B in air/vacuum\n(c) B if the core is pure iron (μᵣ = 5000)\n(d) B if the core is mu-metal (μᵣ = 100,000)\n\n(a) H = nI = 1000 × 2.0 = **2000 A/m** (same regardless of core material)\n\n(b) B₀ = μ₀H = 4π × 10⁻⁷ × 2000 = **2.51 × 10⁻³ T = 2.51 mT** (in vacuum)\n\n(c) B_iron = μ₀μᵣH = 2.51 × 10⁻³ × 5000 = **12.6 T** (enormously enhanced!)\n\n(d) B_mu = μ₀μᵣH = 2.51 × 10⁻³ × 100,000 = **251 T** (theoretical; in practice, saturation limits this)\n\n**Why the iron core so dramatically increases B:**\nThe iron's own magnetic domains align with the applied field, adding their enormous magnetisation M to the total B. The factor of 5000 increase in B means an iron-core electromagnet can produce a field 5000 times stronger than an equivalent air-core electromagnet for the same current — essential for electric motors, generators, and transformers.\n\n**Worked Example 2:** A toroidal iron core (μᵣ = 4000) has a mean circumference of 0.40 m and is wound with 500 turns carrying 0.50 A. Find B inside the core.\n\nH = NI/l = (500 × 0.50)/0.40 = 250/0.40 = **625 A/m**\nB = μ₀μᵣH = 4π × 10⁻⁷ × 4000 × 625 = 4π × 10⁻⁷ × 2.5 × 10⁶\n= 4π × 10⁻¹ = 4π/10 = **1.257 T ≈ 1.26 T**"
+        },
+        {
+          "type": "heading",
+          "body": "Magnetic Flux and Flux Density"
+        },
+        {
+          "type": "text",
+          "body": "**Magnetic flux (Φ):**\nThe magnetic flux through a surface is the total 'amount' of magnetic field passing through it:\n\n**Φ = B × A × cosθ**\n\nWhere:\n- B = magnetic flux density (T)\n- A = area of the surface (m²)\n- θ = angle between B and the normal to the surface\n- Φ = magnetic flux (Wb — Weber)\n\n**Unit:** Weber (Wb) = T m²\n\n**1 Weber = 1 Tesla × 1 square metre**\n\n**Special cases:**\n- B perpendicular to surface (θ = 0°): Φ = BA (maximum flux)\n- B parallel to surface (θ = 90°): Φ = 0 (no flux through surface)\n\n**This is why B is called 'magnetic flux density'** — it measures the flux per unit area: B = Φ/A.\n\n**Worked Example 3:** A flat rectangular coil (area 20 cm × 15 cm) is placed in a uniform field of B = 0.30 T. Find the flux through the coil when:\n(a) The coil is perpendicular to B (normal parallel to B; θ = 0°)\n(b) The coil is at 30° to B (normal at 60° to B; θ = 60°)\n(c) The coil is parallel to B (normal perpendicular to B; θ = 90°)\n\nA = 0.20 × 0.15 = 0.030 m²\n\n(a) Φ = BA cos0° = 0.30 × 0.030 × 1 = **9.0 × 10⁻³ Wb = 9.0 mWb**\n\n(b) θ = 60° (angle between B and the normal, NOT the angle between B and the coil plane)\nΦ = BA cos60° = 0.030 × 0.30 × 0.5 = **4.5 × 10⁻³ Wb**\n\n(c) Φ = BA cos90° = 0 × 0.030 × 0.30 = **0 Wb**\n\n**The relationship between Φ, B, and A:**\nFor a solenoid with N turns, length l, cross-sectional area A, and permeability μ₀μᵣ:\n- H = NI/l (magnetic field strength)\n- B = μ₀μᵣ × NI/l (flux density)\n- Φ = BA = μ₀μᵣ × NIA/l (flux per turn)\n- Total flux linkage NΦ = μ₀μᵣ × N²IA/l = LI (where L is the inductance — covered in Topic 30)"
+        },
+        {
+          "type": "heading",
+          "body": "Magnetic Intensity and Susceptibility: Worked Examples"
+        },
+        {
+          "type": "text",
+          "body": "**Summary of susceptibility values and material classification:**\n\n| Material | χ_m | μᵣ = 1 + χ_m | Classification |\n|---|---|---|---|\n| Bismuth | −1.66 × 10⁻⁴ | 0.999834 | Diamagnetic |\n| Silver | −2.6 × 10⁻⁵ | 0.999974 | Diamagnetic |\n| Water | −9.0 × 10⁻⁶ | 0.999991 | Diamagnetic |\n| Aluminium | +2.2 × 10⁻⁵ | 1.000022 | Paramagnetic |\n| Platinum | +2.6 × 10⁻⁴ | 1.000260 | Paramagnetic |\n| Iron (soft) | ~5000 | ~5001 | Ferromagnetic |\n\n**Worked Example 4:** A material has susceptibility χ_m = +3.0 × 10⁻³. Classify it and find μᵣ, then find B inside the material when H = 10,000 A/m.\n\nχ_m = +3.0 × 10⁻³ > 0 but small → **Paramagnetic**\nμᵣ = 1 + χ_m = 1 + 0.003 = **1.003**\nB = μ₀μᵣH = 4π × 10⁻⁷ × 1.003 × 10,000 = 4π × 10⁻³ × 1.003 = **1.262 × 10⁻² T ≈ 12.6 mT**\n(Compare: in vacuum, B₀ = μ₀H = 4π × 10⁻⁷ × 10,000 = 12.57 mT — only 0.3% more in the paramagnetic material)\n\n**Worked Example 5:** A ferromagnetic ring core (μᵣ = 2000, mean length 50 cm, cross-section area 4 cm²) is wound with 400 turns. Find the current needed to produce Φ = 2.0 mWb.\n\nRequired B: B = Φ/A = 2.0 × 10⁻³/(4 × 10⁻⁴) = **5.0 T**\nRequired H: B = μ₀μᵣH → H = B/(μ₀μᵣ) = 5.0/(4π × 10⁻⁷ × 2000) = 5.0/(2.513 × 10⁻³) = **1989 A/m**\nRequired current: H = NI/l → I = Hl/N = 1989 × 0.50/400 = **2.49 A ≈ 2.5 A**"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Three field quantities: B (Tesla, total field including material contribution), H (A/m, field from free currents only), M (A/m, magnetisation = dipole moment per unit volume). Key equation: B = μ₀(H + M) = μ₀μᵣH. Susceptibility: M = χ_m H; μᵣ = 1 + χ_m. Diamagnetic: χ_m < 0, μᵣ slightly < 1. Paramagnetic: χ_m > 0, μᵣ slightly > 1. Ferromagnetic: χ_m ≫ 1, μᵣ ≫ 1. Flux: Φ = BA cosθ; unit Weber (Wb); B = Φ/A. Iron core multiplies B by μᵣ (thousands-fold) — essential for electromagnets, transformers, motors."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Magnetic flux density (B): Total field in a material; B = μ₀μᵣH; unit Tesla (T)\n• Magnetic field strength (H): Field from free currents; H = nI for solenoid; unit A/m\n• Magnetisation (M): Magnetic dipole moment per unit volume; M = χ_m H; unit A/m\n• Magnetic susceptibility (χ_m): M/H; negative for diamagnets; positive (large) for ferromagnets\n• Relative permeability (μᵣ): μᵣ = 1 + χ_m = B/(μ₀H); ≫1 for ferromagnets; slightly ≠ 1 for others\n• Magnetic flux (Φ): Φ = BA cosθ; unit Weber (Wb = T m²)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A solenoid has n = 2000 turns/m and carries I = 3.0 A. What is the magnetic field strength H inside?",
+            "options": [
+              "2000 A/m",
+              "6000 A/m",
+              "1.5 × 10⁻³ A/m",
+              "6.0 × 10⁻³ T"
+            ],
+            "answer": "6000 A/m",
+            "explanation": "H = nI = 2000 × 3.0 = 6000 A/m. H depends only on the solenoid geometry (n) and current (I) — NOT on the core material. It represents the field due to the free currents alone. To find B in a specific material, multiply by μ₀μᵣ: B_air = μ₀ × 6000 = 7.54 mT; in iron (μᵣ = 5000): B = 37.7 T."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A flat coil (area 0.025 m²) is placed in a 0.40 T field with the plane of the coil at 60° to the field lines. What is the magnetic flux through the coil?",
+            "options": [
+              "0.010 Wb",
+              "0.0087 Wb",
+              "0.0050 Wb",
+              "0.0087 Wb"
+            ],
+            "answer": "0.0087 Wb",
+            "explanation": "The coil plane is at 60° to B, so the normal to the coil makes 90° − 60° = 30° with B. Φ = BA cosθ = 0.40 × 0.025 × cos30° = 0.010 × 0.866 = 8.66 × 10⁻³ Wb ≈ 0.0087 Wb. Careful with the angle: θ in Φ = BA cosθ is the angle between B and the NORMAL to the coil — not between B and the coil plane."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A material has relative permeability μᵣ = 3500. What is its magnetic susceptibility χ_m?",
+            "options": [
+              "3500",
+              "3501",
+              "3499",
+              "−3499"
+            ],
+            "answer": "3499",
+            "explanation": "χ_m = μᵣ − 1 = 3500 − 1 = 3499. This large positive susceptibility confirms the material is ferromagnetic. The positive sign (χ_m > 0) means the material adds to the applied field rather than opposing it (unlike diamagnets where χ_m < 0)."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "An iron-core toroid (μᵣ = 4500, length 60 cm, 600 turns) carries 1.0 A. What is B inside?",
+            "options": [
+              "1.88 mT",
+              "5.65 T",
+              "5.65 mT",
+              "1.88 T"
+            ],
+            "answer": "5.65 T",
+            "explanation": "H = NI/l = (600 × 1.0)/0.60 = 1000 A/m. B = μ₀μᵣH = 4π × 10⁻⁷ × 4500 × 1000 = 4π × 10⁻⁷ × 4.5 × 10⁶ = 4π × 10⁻¹ × 4.5 = 1.8π T... Let me recalculate: 4π × 10⁻⁷ × 4500 × 1000 = 4π × 4.5 × 10⁻⁴ × 10³ = 4π × 4.5 × 10⁻¹ × (1/10⁰)... 4π × 10⁻⁷ × 4.5×10⁶ = 4π × 4.5 × 10⁻¹ = 18π × 10⁻¹ = 1.8π = 5.655 T ≈ 5.65 T."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The unit of magnetic flux is:",
+            "options": [
+              "Tesla (T)",
+              "Ampere per metre (A/m)",
+              "Weber (Wb)",
+              "Henry (H)"
+            ],
+            "answer": "Weber (Wb)",
+            "explanation": "Magnetic flux Φ = BA has unit T × m² = Weber (Wb). The Tesla is the unit of flux density B (flux per unit area: B = Φ/A). 1 Wb = 1 V·s (a Weber is also the flux that, when reduced to zero in one second, induces one volt — connecting flux to electromagnetic induction)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is a ferromagnetic material used as the core of a transformer rather than air?",
+            "options": [
+              "To reduce the electrical resistance of the circuit",
+              "Air core transformers are damaged by high voltages",
+              "The ferromagnetic core has μᵣ ≫ 1, concentrating the magnetic flux and allowing much greater flux linkage with the secondary coil for the same primary current",
+              "Ferromagnetic cores slow down the magnetic field, reducing the frequency and improving efficiency"
+            ],
+            "answer": "The ferromagnetic core has μᵣ ≫ 1, concentrating the magnetic flux and allowing much greater flux linkage with the secondary coil for the same primary current",
+            "explanation": "B = μ₀μᵣH. With μᵣ ≈ 5000 for iron, the flux density in the core is 5000 times greater than air for the same H. More flux through the core means more flux linking the secondary coil, inducing a larger EMF. A practical transformer with an iron core is thousands of times more efficient at transferring energy than an air-core transformer."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t27_l3",
+      "title": "The Hysteresis Loop and Magnetic Materials in Practice",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "When you magnetise a piece of iron and then remove the field, the iron retains some magnetism — it does not spring back to its original unmagnetised state. This memory effect in magnetic materials is called magnetic hysteresis — from the Greek 'hysterein' meaning 'to lag behind'. The hysteresis loop captures this behaviour in a graph of B versus H, and its shape determines whether a material is suitable for making permanent magnets or for use as a transformer core. Understanding hysteresis is essential for the design of every electromagnetic device — from the motors in Kampala's water pumps to the data storage in every computer."
+        },
+        {
+          "type": "heading",
+          "body": "The B-H Curve and Hysteresis Loop"
+        },
+        {
+          "type": "text",
+          "body": "**The initial magnetisation curve (virgin curve):**\nStarting with an unmagnetised ferromagnetic sample, apply increasing H (by increasing current in a coil). The B-H graph starts at origin (0,0) and increases through several stages:\n\n**Stage 1 — Initial linear region (H small):** Domain walls move slightly, reversibly. B increases linearly with H. This is the region of the 'initial permeability' μᵢ.\n\n**Stage 2 — Rapid rise region:** Domain walls move irreversibly — large domains aligned with H grow rapidly at the expense of other domains. B rises steeply.\n\n**Stage 3 — Saturation region:** Most domains are aligned with H. Further increase in H produces little increase in B. The material approaches saturation flux density B_s.\n\n**The hysteresis loop — cycling H:**\nNow decrease H from the saturation value back to zero, then reverse H to negative saturation, and return — completing one full cycle. The resulting B-H loop has several critical points:\n\n**Key parameters of the hysteresis loop:**\n\n**1. Saturation flux density (B_s):** Maximum B achieved at high H (when all domains are aligned). Typical: Fe: 2.1 T; Co: 1.6 T; Ni: 0.6 T.\n\n**2. Remanence (B_r) — the residual flux density:**\nThe value of B remaining when H is reduced to zero (field removed). A high B_r means the material retains its magnetism well → good for permanent magnets.\n\n**3. Coercive field (H_c) — the coercivity:**\nThe value of H (applied in the reverse direction) needed to reduce B back to zero. A high H_c means the material resists demagnetisation → good for permanent magnets; hard to demagnetise.\n\n**4. Energy loss per cycle:**\nThe area enclosed by the B-H hysteresis loop equals the energy dissipated as heat per unit volume per cycle of magnetisation. Large loop area → high energy loss per cycle → bad for transformer cores (wasted as heat); but good for permanent magnets (energy stored).\n\n**The two types of ferromagnetic materials:**\n\n**Hard magnetic materials (permanent magnet materials):**\n- Wide hysteresis loop (large area)\n- High coercivity H_c (difficult to demagnetise)\n- High remanence B_r (retains strong magnetisation)\n- High energy product B_r × H_c (measure of permanent magnet strength)\n- Examples: alnico alloy, samarium-cobalt, neodymium-iron-boron (NdFeB), chromium steel\n- Applications: permanent magnets in motors, loudspeakers, MRI machines, hard drives, earphones, fridge magnets\n\n**Soft magnetic materials (electromagnet/transformer materials):**\n- Narrow hysteresis loop (small area)\n- Low coercivity H_c (easily magnetised and demagnetised)\n- High permeability μᵣ (strong response to applied H)\n- Low energy loss per cycle (minimal heating in AC operation)\n- Examples: pure iron (annealed), silicon steel (transformer steel), mu-metal, soft ferrites, permalloy\n- Applications: transformer cores, motor stator/rotor cores, magnetic recording heads, inductors, electromagnet cores"
+        },
+        {
+          "type": "heading",
+          "body": "Worked Examples — Hysteresis Loop Analysis"
+        },
+        {
+          "type": "text",
+          "body": "**Worked Example 1:** A transformer core is made from silicon steel. It operates at 50 Hz and has volume 0.50 × 10⁻³ m³. The energy loss per unit volume per cycle is 80 J/m³ (= area of B-H loop). Find:\n(a) The total energy loss per cycle in the core\n(b) The power loss in the core due to hysteresis\n\n(a) W_cycle = energy per unit volume per cycle × volume = 80 × 0.50 × 10⁻³ = **0.040 J per cycle**\n\n(b) At 50 Hz, there are 50 cycles per second:\nP_hysteresis = W_cycle × f = 0.040 × 50 = **2.0 W**\n\nThis 2.0 W is wasted as heat in the transformer core — a significant source of inefficiency in power transformers. Reducing the loop area (using better soft magnetic materials) reduces this loss.\n\n**Worked Example 2:** Compare two ferromagnetic samples:\n- Sample A: B_r = 1.2 T, H_c = 8.0 × 10⁴ A/m\n- Sample B: B_r = 0.5 T, H_c = 1.5 × 10³ A/m\n\nWhich is more suitable for (a) a permanent magnet? (b) a transformer core?\n\n(a) **Permanent magnet → Sample A:** High B_r (strong residual magnetism) and high H_c (hard to demagnetise). The energy product B_r × H_c = 1.2 × 8 × 10⁴ = 9.6 × 10⁴ J/m³ (high — characteristic of a good permanent magnet material).\n\n(b) **Transformer core → Sample B:** Low H_c (easily magnetised and demagnetised each cycle) means smaller loop area and less energy lost as heat per cycle. This 'soft' material is ideal for AC transformer cores.\n\n**Worked Example 3:** A magnetising current is applied to an iron toroid. As H is increased from 0 to H_max = 2000 A/m, then back to 0, then to −H_max, and finally back to 0 and H_max completing the loop, the B readings are:\n\n| H (A/m) | B (T) | Stage |\n|---|---|---|\n| 0 (virgin) | 0 | Start |\n| 2000 | 1.5 | Saturation |\n| 0 (after saturation) | 0.9 | Remanence |\n| −800 | 0 | Coercive field |\n\nFrom this data: **B_r = 0.9 T** (remanence), **H_c = 800 A/m** (coercivity)\n\nCharacterisation: B_r = 0.9 T is reasonably high; H_c = 800 A/m is moderate. This is neither a high-performance permanent magnet nor the softest transformer material — perhaps transformer steel or a medium-grade steel."
+        },
+        {
+          "type": "heading",
+          "body": "Eddy Currents and How to Reduce Them"
+        },
+        {
+          "type": "text",
+          "body": "In addition to hysteresis losses, a second source of energy loss in transformer and motor cores is **eddy currents**.\n\n**What are eddy currents?**\nWhen a changing magnetic flux passes through a conducting material, it induces EMFs in the material (Faraday's Law). These EMFs drive circulating currents (eddy currents) within the bulk of the conductor. By Ohm's Law, these currents dissipate power as heat: P = I²R.\n\n**The problem:** In a transformer core (large solid iron block), the induced eddy currents can be very large — wasting significant power and overheating the core.\n\n**Solutions to reduce eddy current losses:**\n\n**1. Lamination (most common):**\nThe iron core is made from many thin sheets (laminations) of silicon steel, each insulated from the next by a thin layer of varnish or oxide.\n- Each lamination is thin (typically 0.3–0.5 mm)\n- Eddy currents are confined to individual laminations (cannot circulate across the full cross-section)\n- Thin laminations have high resistance → eddy currents much smaller\n- Power loss P ∝ (lamination thickness)² → halving thickness reduces eddy current loss by ×4\n\n**2. High-resistivity core material:**\nSilicon steel (iron + 3–4% silicon) has about 4× the electrical resistivity of pure iron → eddy currents proportionally smaller.\n\n**3. Ferrite cores (for high-frequency applications):**\nFerrites (ceramic iron oxide compounds) are electrical insulators (resistivity ~10⁸ Ω m) but magnetic conductors. No eddy currents flow at all! Used in:\n- High-frequency transformer cores (switch-mode power supplies in phone chargers)\n- RF inductors and chokes\n- Microwave components\n- Computer memory (historically)\n\n**4. Amorphous metal cores:**\nMetallic glass alloys with random atomic structure have higher resistivity and very low hysteresis — used in ultra-efficient transformers.\n\n**Worked Example 4:** A transformer core is laminated. The lamination thickness is halved (from 0.5 mm to 0.25 mm), and the number of laminations is doubled to keep the same total core cross-section. By what factor does the eddy current power loss change?\n\nP_eddy ∝ (thickness)² per lamination × number of laminations\nNew P = 2 × (0.25)²/(original: 1 × 0.5²) = 2 × 0.0625/0.25 = **halved to 0.5**\n\nHalving the lamination thickness reduces eddy current loss by a factor of 4 per lamination, but double the laminations means a net factor of 4/2 = **2 reduction** in total eddy current loss. This analysis shows why transformer designers use the thinnest practical laminations."
+        },
+        {
+          "type": "heading",
+          "body": "Ferrites and Soft Magnetic Materials in Technology"
+        },
+        {
+          "type": "text",
+          "body": "**Soft ferrites (spinel ferrites: MFe₂O₄ where M = Mn, Zn, Ni, Co):**\nHigh electrical resistivity (eliminates eddy currents) + ferrimagnetic (net magnetic moment due to unequal antiparallel alignment). Used at frequencies up to GHz.\n\n**Key applications in Uganda's technology landscape:**\n\n**1. Switch-mode power supplies (SMPS):**\nEvery phone charger, laptop charger, and LED driver uses SMPS technology. The core operates at 50 kHz–1 MHz. Ferrite cores are essential — laminated steel would lose far too much energy at these frequencies.\n\n**2. Mobile phone antennas and RF circuits:**\nFerrite beads on data cables suppress high-frequency noise. Small ferrite inductors tune radio circuits.\n\n**3. Transformers in Uganda's power grid:**\nDistribution transformers (like the green boxes seen on poles in Kampala) use laminated silicon steel cores to efficiently step down 11 kV to 415 V/240 V for homes and businesses.\n\n**4. Hard disk drives (HDDs):**\nThe read/write head of a hard disk drive uses a tiny soft ferrite core to magnetise spots on the magnetic disk coating (a hard magnetic material). The head must magnetise and demagnetise extremely rapidly (~GHz), requiring very low coercivity and near-zero hysteresis loss.\n\n**5. Magnetic shields:**\nMu-metal (Ni-Fe alloy, μᵣ ≈ 100,000) is used to shield sensitive electronic equipment from external magnetic fields — used in CRTs, MRI equipment, and some scientific instruments at Makerere University's physics department."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Hysteresis loop parameters: saturation B_s, remanence B_r (residual magnetism after field removed), coercivity H_c (reverse field needed to reduce B to zero). Area of loop = energy loss per cycle per unit volume. Hard materials (high B_r, high H_c, wide loop): permanent magnets. Soft materials (low H_c, narrow loop, high μᵣ): transformer/motor cores. Eddy current losses reduced by: laminations (P ∝ thickness²), high-resistivity silicon steel, ferrite cores (insulating). Ferrites used at high frequency (phone chargers, RF circuits). Laminated silicon steel used in power transformers."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Hysteresis loop (B-H loop): Graph of B vs H for a complete magnetisation cycle; area = energy loss per cycle per unit volume\n• Remanence (B_r): B remaining when H returns to zero after saturation; high in permanent magnet materials\n• Coercivity (H_c): Reverse H needed to reduce B to zero; high in hard magnets; low in soft magnets\n• Hard magnetic material: High B_r, high H_c, wide loop; permanent magnets (NdFeB, alnico)\n• Soft magnetic material: Low H_c, narrow loop; transformer/motor cores (silicon steel, ferrites, mu-metal)\n• Eddy currents: Induced currents in conducting core material; cause heating; reduced by lamination or ferrite cores\n• Lamination: Thin insulated iron sheets making up a transformer core; reduces eddy current losses ∝ thickness²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What does the remanence (B_r) of a magnetic material represent?",
+            "options": [
+              "The maximum B achievable at high H (saturation)",
+              "The reverse field H needed to reduce B to zero",
+              "The flux density remaining when H is reduced to zero after saturation",
+              "The energy stored per cycle in the hysteresis loop"
+            ],
+            "answer": "The flux density remaining when H is reduced to zero after saturation",
+            "explanation": "Remanence B_r is the y-intercept of the hysteresis loop — the value of B when H = 0, after the material has been taken to saturation. A high remanence means the material retains a strong magnetic field after the magnetising current is switched off — essential for permanent magnets. The coercivity H_c (x-intercept) is the field needed to push B back to zero."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A transformer core operates at 60 Hz. The area of its B-H hysteresis loop is 120 J/m³ and the core volume is 0.002 m³. What is the hysteresis power loss?",
+            "options": [
+              "0.24 W",
+              "14.4 W",
+              "240 W",
+              "7200 W"
+            ],
+            "answer": "14.4 W",
+            "explanation": "Energy per cycle = loop area × volume = 120 × 0.002 = 0.24 J per cycle. Power = energy per cycle × frequency = 0.24 × 60 = 14.4 W. This 14.4 W is continuously wasted as heat in the core — a key reason transformer designers use materials with the smallest possible hysteresis loop area."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Material X has B_r = 1.5 T and H_c = 1.2 × 10⁵ A/m. Material Y has B_r = 0.8 T and H_c = 200 A/m. Which material is better for a PERMANENT MAGNET?",
+            "options": [
+              "Material Y — it has lower coercivity so it magnetises more easily",
+              "Material X — it has high remanence AND high coercivity, making it a hard magnetic material",
+              "Material Y — lower H_c means it reaches saturation faster",
+              "Both are equally suitable since both have remanence"
+            ],
+            "answer": "Material X — it has high remanence AND high coercivity, making it a hard magnetic material",
+            "explanation": "A good permanent magnet needs: (1) HIGH B_r — to remain strongly magnetised with no applied field, and (2) HIGH H_c — to resist demagnetisation by stray fields or mechanical shock. Material X has both (B_r = 1.5 T, H_c = 1.2 × 10⁵ A/m — typical of alnico or NdFeB). Material Y's low H_c means it would be easily demagnetised — suitable for a transformer core, not a permanent magnet."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why are power transformer cores made from laminated silicon steel rather than a solid iron block?",
+            "options": [
+              "Laminations increase the magnetic permeability of the core",
+              "Silicon adds to the magnetic strength of the iron",
+              "Laminations reduce eddy current losses (P ∝ t²) and silicon increases resistivity, both minimising core heating",
+              "Solid iron is too brittle to form into the correct shape"
+            ],
+            "answer": "Laminations reduce eddy current losses (P ∝ t²) and silicon increases resistivity, both minimising core heating",
+            "explanation": "Eddy current power loss P ∝ t² (lamination thickness squared) — thin laminations dramatically reduce eddy currents. Silicon addition (3–4%) increases resistivity about 4-fold compared to pure iron, further reducing eddy currents. Together, these reduce core losses by orders of magnitude compared to a solid iron block, allowing efficient transformer operation at 50/60 Hz."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why are ferrite cores used in switch-mode power supply transformers (operating at 50 kHz–1 MHz) but NOT in 50 Hz grid transformers?",
+            "options": [
+              "Ferrites have much higher saturation flux density than silicon steel",
+              "Ferrites are electrically insulating — eliminating eddy currents completely — essential at high frequency where eddy current losses would be enormous; but ferrites have lower B_s than silicon steel, making them unsuitable for high-power 50 Hz transformers",
+              "Ferrites are cheaper and easier to manufacture",
+              "Grid transformers operate at too low frequency for ferrites to work"
+            ],
+            "answer": "Ferrites are electrically insulating — eliminating eddy currents completely — essential at high frequency where eddy current losses would be enormous; but ferrites have lower B_s than silicon steel, making them unsuitable for high-power 50 Hz transformers",
+            "explanation": "Eddy current losses increase with frequency (P_eddy ∝ f²). At 50 kHz, silicon steel would lose catastrophic amounts of energy as eddy currents. Ferrites are ceramic (insulating) → zero eddy currents at any frequency. However, ferrites have lower saturation flux density (~0.3–0.5 T vs ~2 T for silicon steel) → they cannot handle the high flux needed in large grid transformers. The right material for each frequency range!"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "The area enclosed by a hysteresis loop for a given material is found to be 500 J/m³. What does this represent?",
+            "options": [
+              "The magnetic energy permanently stored per unit volume in the material",
+              "The work done per unit volume against the coercive field",
+              "The energy dissipated as heat per unit volume per complete magnetisation cycle",
+              "The remanence × coercivity product (energy product)"
+            ],
+            "answer": "The energy dissipated as heat per unit volume per complete magnetisation cycle",
+            "explanation": "The area of the B-H hysteresis loop equals ∮H·dB per unit volume, which equals the energy dissipated as heat per unit volume per cycle. For a transformer at 50 Hz: P = loop area × volume × frequency. This is called the Steinmetz hysteresis loss. The loop area is the reason engineers use the narrowest-loop (softest) material possible for AC applications."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t27_l4",
+      "title": "The Electromagnet: Design, Force and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "An electromagnet is a magnet that can be switched on and off by controlling an electric current. From the massive electromagnets that lift scrap metal at Uganda's Namanve industrial area to the tiny electromagnets in the earbuds of a mobile phone, from the relay switches in vehicle electronics to the magnetic resonance imaging (MRI) machines transforming medical diagnosis in East Africa — electromagnets are among the most versatile and important devices ever invented. In this lesson we examine how electromagnets are designed, calculate the forces they produce, and explore their broad applications in Uganda's technological landscape."
+        },
+        {
+          "type": "heading",
+          "body": "Design Principles of Electromagnets"
+        },
+        {
+          "type": "text",
+          "body": "**An electromagnet** consists of a coil of wire (solenoid) wound around a ferromagnetic core. When current flows, the core is magnetised — greatly amplifying the field produced by the coil alone.\n\n**The key design equation for a toroid or solenoid with a core:**\nB = μ₀μᵣ × NI/l\n\nWhere:\n- N = total number of turns\n- I = current (A)\n- l = length of magnetic path (m)\n- μᵣ = relative permeability of core\n\n**For a solenoid with n turns per unit length:**\nB = μ₀μᵣ nI\n\n**Design factors to maximise B:**\n1. **High μᵣ core material** — use soft iron or specialised alloys (μᵣ up to 100,000)\n2. **Many turns N** — more turns → larger NI (magnetomotive force)\n3. **Large current I** — limited by wire resistance and heating\n4. **Short magnetic path l** — shorter path → stronger field\n5. **Keep the air gap small** — air gaps dramatically increase the effective magnetic reluctance\n\n**The C-shaped (horseshoe) electromagnet:**\nA horseshoe-shaped iron core with the coil wound around the yoke. When energised:\n- The two poles (N and S at the ends of the horseshoe) face each other across a small air gap\n- The strong field between the poles exerts a large attractive force on ferromagnetic objects placed in the gap\n- Used in relays, magnetic separators, and lifting magnets\n\n**The effect of an air gap:**\nIn a magnetic circuit with total iron path length l_iron and air gap length l_air:\nThe total magnetomotive force NI must overcome reluctance of both iron and air:\nNI = H_iron × l_iron + H_air × l_air\n\nSince μ_air ≪ μ_iron (about 5000 times less), even a small air gap contributes much more to the required NI than the same length of iron.\n\nPractical consequence: A 1 mm air gap in a transformer core can require as much magnetomotive force as several metres of the iron core! This is why transformer cores are designed with no air gaps (joints are carefully butted together or lapped).\n\n**Worked Example 1:** A C-core electromagnet has iron path length 20 cm (μᵣ = 4000) and a 2 mm air gap. Both have cross-sectional area 4 cm². The coil has 500 turns. Find the current needed to produce B = 1.0 T in the gap.\n\nRequired H in air gap: B = μ₀H_air → H_air = B/μ₀ = 1.0/(4π × 10⁻⁷) = **795,775 A/m ≈ 7.96 × 10⁵ A/m**\nRequired H in iron: B = μ₀μᵣH_iron → H_iron = B/(μ₀μᵣ) = 1.0/(4π × 10⁻⁷ × 4000) = 1.0/(5.026 × 10⁻³) = **198.9 A/m**\n\nTotal NI = H_iron × l_iron + H_air × l_air\n= 198.9 × 0.20 + 795,775 × 0.002\n= 39.8 + 1591.6 = **1631.4 A-turns**\n\nRequired current: I = NI/N = 1631.4/500 = **3.26 A**\n\nNote: The 2 mm air gap requires 1592 A-turns; the 200 mm iron path requires only 40 A-turns! The air gap dominates even though it is 100 times shorter — because μᵣ_iron/μᵣ_air = 4000."
+        },
+        {
+          "type": "heading",
+          "body": "Force on a Magnetic Pole and Magnetic Pull"
+        },
+        {
+          "type": "text",
+          "body": "**Force on a magnetic pole:**\nA magnetic pole of strength m (A·m) in a field H experiences a force:\nF = μ₀mH\n\n**For practical electromagnet design, the pull force on a flat iron surface (Maxwell's equation for magnetic pull):**\n\n**F = B²A/(2μ₀)**\n\nWhere:\n- F = force of attraction (N)\n- B = flux density in the air gap (T)\n- A = area of one pole face (m²)\n- μ₀ = 4π × 10⁻⁷ T m A⁻¹\n\n**This formula applies when the iron plate completely closes the air gap** (both surfaces flat and touching — no gap).\n\n**Derivation concept:**\nThe force equals the magnetic pressure (B²/2μ₀) times the area of the pole face. This is analogous to how pressure × area = force in fluid mechanics.\n\n**Worked Example 2:** A horseshoe electromagnet has two pole faces each of area 20 cm² = 20 × 10⁻⁴ m². When energised, the flux density in the gap is B = 1.5 T. Find the total lifting force.\n\nF (per pole face) = B²A/(2μ₀) = (1.5)² × 20 × 10⁻⁴ / (2 × 4π × 10⁻⁷)\n= 2.25 × 20 × 10⁻⁴ / (8π × 10⁻⁷)\n= 4.5 × 10⁻³ / 2.513 × 10⁻⁶\n= **1790 N per pole face**\n\nBut a horseshoe magnet has TWO pole faces:\nTotal F = 2 × 1790 = **3580 N ≈ 3.6 kN**\n\nThis is equivalent to the weight of a 366 kg mass — a powerful lifting magnet! Industrial lifting electromagnets used in scrap yards routinely achieve forces of 50–100 kN or more.\n\n**Worked Example 3:** What flux density is needed to lift a steel plate of mass 200 kg? Each pole face area = 30 cm².\n\nWeight of plate: F = mg = 200 × 9.81 = 1962 N\nFor two pole faces: F = 2 × B²A/(2μ₀) = B²A/μ₀\n1962 = B² × 30 × 10⁻⁴ / (4π × 10⁻⁷)\nB² = 1962 × 4π × 10⁻⁷ / (30 × 10⁻⁴)\n= 1962 × 4π × 10⁻⁷ / 3 × 10⁻³\n= 1962 × 1.3333 × 10⁻⁴ × π\n= 1962 × 4.189 × 10⁻⁴\n= 0.822 T²\n**B = 0.906 T ≈ 0.91 T**"
+        },
+        {
+          "type": "heading",
+          "body": "Applications of Electromagnets"
+        },
+        {
+          "type": "text",
+          "body": "**1. Electric relay:**\nA relay uses a small current in a control circuit to switch a much larger current in a main circuit.\nOperation:\n- Small current in coil → electromagnet attracts iron armature\n- Armature moves → closes (or opens) contacts of main circuit\n- Main circuit can carry large current (e.g., car starter motor: 100–400 A)\n- Control circuit uses small current (mA level) → transistor can switch the relay\n\nRelays are found in vehicle electronics, alarm systems, industrial control panels, and domestic heating/cooling systems throughout Uganda.\n\n**2. Electric bell and buzzer:**\n- Current flows through coil → electromagnet attracts iron striker\n- Striker hits bell → striker movement opens the circuit (via make-and-break contact)\n- Current stops → spring pulls striker back → circuit closes again → repeat\n- This creates a rapid vibration producing a continuous ringing sound\n\n**3. Magnetic separation:**\nElectromagnets separate magnetic materials from non-magnetic waste:\n- Scrap metal recycling: separates iron and steel from aluminium, copper, plastic\n- Food processing: removes steel splinters from grain and food products\n- Mining: separates magnetic iron ore (magnetite) from non-magnetic rock\nCrucial in Uganda's Sukulu phosphate mining project (western Uganda) and food processing plants.\n\n**4. Magnetic levitation (Maglev):**\nSuperconducting electromagnets or permanent magnets repel ferromagnetic track sections, levitating a train (Maglev, Germany, Japan, China). By eliminating friction, speeds exceeding 600 km/h are possible. Not yet in Uganda, but relevant to future East African high-speed rail ambitions.\n\n**5. Solenoid valves:**\nA solenoid (electromagnet) controls the opening/closing of a valve in a pipe:\n- Water systems: irrigation control valves in Uganda's commercial farms\n- Automotive: fuel injection valves in modern petrol engines\n- Industrial: control of compressed air and hydraulic systems\n\n**6. Magnetic Resonance Imaging (MRI):**\nMRI machines use a superconducting electromagnet (carrying ~300 A with zero resistance → zero power consumption) to produce extremely uniform fields of 1.5–3 T over a large volume. Hydrogen atoms in the body are excited by RF pulses at their Larmor resonance frequency. The pattern of relaxation signals creates detailed tissue images without ionising radiation.\n\nMRI is transforming East African medicine: Aga Khan Hospital Nairobi has 3T MRI; Aga Khan Hospital Kampala has MRI capabilities — making high-quality neurological, musculoskeletal, and oncological diagnosis available in Uganda."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Electromagnet: solenoid + ferromagnetic core. B = μ₀μᵣNI/l; increases with N, I, μᵣ, and decreasing l. Air gaps have low permeability and dominate reluctance even when tiny — keep air gaps minimal. Magnetic pull force F = B²A/(2μ₀) per pole face. Applications: relays (small current controls large current), electric bells, magnetic separation (scrap/food processing), solenoid valves (irrigation, fuel injection), MRI (superconducting; 1.5–3 T; no ionising radiation)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Magnetomotive force (NI): Product of turns and current; analogous to EMF in electrical circuits; unit ampere-turns (A)\n• Reluctance: Opposition to magnetic flux; analogous to resistance; high in air gaps\n• Magnetic pull force: F = B²A/(2μ₀); force attracting iron plate to an electromagnet pole face\n• Relay: Electromagnetically operated switch; small control current switches large load current\n• Solenoid valve: Electromagnet-operated fluid flow valve; used in irrigation, fuel injection\n• MRI: Magnetic Resonance Imaging; uses superconducting electromagnet at 1.5–3 T; non-ionising"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "An electromagnet has a pole face area of 10 cm² and produces B = 2.0 T at the face. What is the pull force? (μ₀ = 4π × 10⁻⁷ T m A⁻¹)",
+            "options": [
+              "159 N",
+              "3183 N",
+              "1592 N",
+              "318 N"
+            ],
+            "answer": "1592 N",
+            "explanation": "F = B²A/(2μ₀) = (2.0)² × 10 × 10⁻⁴ / (2 × 4π × 10⁻⁷) = 4 × 10⁻³ / (8π × 10⁻⁷) = 4 × 10⁻³ / (2.513 × 10⁻⁶) = 1591.5 N ≈ 1592 N. This is the weight equivalent of about 162 kg — from a 10 cm² face!"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why does even a tiny air gap in an electromagnet core dramatically increase the required NI to achieve the same B?",
+            "options": [
+              "Air has high electrical resistance which wastes current",
+              "Air is paramagnetic and opposes the field",
+              "Air has very low permeability (μᵣ ≈ 1) compared to iron (μᵣ ≈ 5000), so the same H requires 5000× more field strength in air — the air gap dominates the total NI requirement",
+              "Air gaps cause eddy current losses that reduce the field"
+            ],
+            "answer": "Air has very low permeability (μᵣ ≈ 1) compared to iron (μᵣ ≈ 5000), so the same H requires 5000× more field strength in air — the air gap dominates the total NI requirement",
+            "explanation": "For the same B: H_air = B/μ₀ (large); H_iron = B/(μ₀μᵣ) (5000× smaller). A 1 mm air gap requires the same NI as 5000 mm = 5 m of iron path. This is why transformer cores use carefully fitted butt joints or step-lapped laminations to minimise effective air gap length, and why any loosening of transformer laminations causes buzzing and efficiency loss."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "An electric relay is used so that a transistor can control a 240 V motor. The transistor output is 5 V, 20 mA. Why use a relay rather than direct connection?",
+            "options": [
+              "Relays amplify the voltage from 5 V to 240 V automatically",
+              "A transistor cannot directly switch 240 V mains — the relay uses the transistor's small 5V/20mA output to energise an electromagnet that mechanically closes the high-voltage contacts",
+              "Relays convert DC to AC for the motor",
+              "The transistor would overheat if connected directly to the motor"
+            ],
+            "answer": "A transistor cannot directly switch 240 V mains — the relay uses the transistor's small 5V/20mA output to energise an electromagnet that mechanically closes the high-voltage contacts",
+            "explanation": "The transistor operates at low voltage (5V) and low current (20 mA). The relay electromagnet coil is designed for exactly this — a small coil current magnetises the core, physically closing the relay contacts which can safely switch 240V/high current. The electrical isolation between coil circuit and contact circuit also provides important protection — a fault in the 240V circuit cannot damage the transistor circuit."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A toroid electromagnet has 800 turns carrying 2.5 A, iron path 40 cm, μᵣ = 3000. What is B in the core?",
+            "options": [
+              "1.88 mT",
+              "5.65 T",
+              "1.88 T",
+              "5.65 mT"
+            ],
+            "answer": "1.88 T",
+            "explanation": "H = NI/l = (800 × 2.5)/0.40 = 2000/0.40 = 5000 A/m. B = μ₀μᵣH = 4π × 10⁻⁷ × 3000 × 5000 = 4π × 10⁻⁷ × 1.5 × 10⁷ = 4π × 10⁰ × 1.5 = 6π = 18.85... Let me recalculate: 4π × 10⁻⁷ × 3000 × 5000 = 4π × 1.5 × 10³ × 10⁻⁷ × 10³ = 4π × 1.5 × 10⁻¹ = 6π × 10⁻¹ = 1.885 T ≈ 1.88 T."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "MRI machines use superconducting electromagnets rather than normal copper-wound electromagnets. The key advantage is:",
+            "options": [
+              "Superconductors produce much higher magnetic fields than copper coils",
+              "Superconducting coils have zero resistance — they carry large currents (hundreds of amps) with NO power consumption and NO resistive heating, maintaining the field indefinitely",
+              "Superconductors are diamagnetic which helps focus the magnetic field",
+              "Superconductors work at room temperature in modern MRI machines"
+            ],
+            "answer": "Superconducting coils have zero resistance — they carry large currents (hundreds of amps) with NO power consumption and NO resistive heating, maintaining the field indefinitely",
+            "explanation": "A 3 T MRI magnet requires ~300 A current in the coils. With copper (R ≈ few ohms): P = I²R = 300² × R = tens of kilowatts — prohibitive power consumption and massive heating. Superconductors (cooled to ~4 K with liquid helium) have R = 0 exactly: P = 0 W. Once the field is established, no power is needed to maintain it. The field is also extremely stable and uniform — essential for high-quality MRI images."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "In an electric bell, what causes the striker to vibrate continuously rather than just making one strike?",
+            "options": [
+              "The spring provides continuous oscillating energy to maintain vibration",
+              "When the striker moves toward the bell, it breaks the circuit — the electromagnet deenergises, the spring pulls the striker back, the circuit closes, the electromagnet re-attracts — this make-and-break cycle repeats rapidly",
+              "The bell surface reflects electromagnetic waves that re-energise the coil",
+              "Alternating current causes the electromagnet to push and pull alternately"
+            ],
+            "answer": "When the striker moves toward the bell, it breaks the circuit — the electromagnet deenergises, the spring pulls the striker back, the circuit closes, the electromagnet re-attracts — this make-and-break cycle repeats rapidly",
+            "explanation": "The make-and-break mechanism is self-interrupting: (1) Current flows → electromagnet attracts striker → striker moves toward bell → striker arm lifts away from contact → circuit breaks. (2) No current → electromagnet off → spring pulls striker back → contact remakes → circuit closes → repeat from (1). This cycle repeats at ~50–100 Hz, producing a continuous ring. The same principle operates in DC buzzers and some vibrators."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t27_l5",
+      "title": "Permanent Magnets, Demagnetisation and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "The permanent magnet is perhaps the most familiar magnetic device — fridge magnets hold children's artwork, compass needles point north, magnetic clasps hold handbags shut, and neodymium magnets in electric motors and generators are driving the global transition to renewable energy. Yet understanding how permanent magnets work, why they stay magnetised, and how to make and destroy them requires the full toolkit of magnetism in matter that we have studied in this topic. In this final lesson we examine permanent magnets in depth — their materials, properties, demagnetisation methods, and the remarkable range of applications that make them central to 21st-century technology."
+        },
+        {
+          "type": "heading",
+          "body": "How Permanent Magnets are Made"
+        },
+        {
+          "type": "text",
+          "body": "**Making a permanent magnet:**\nTo magnetise a ferromagnetic material permanently:\n\n**Method 1: Stroking with a known magnet:**\nRepeatedly stroke the material with one pole of a strong permanent magnet, always in the same direction and lifting the magnet away at the end of each stroke.\n- Each stroke aligns some magnetic domains with the applied field\n- The high coercivity of the hard magnetic material prevents them from randomising again\n- After many strokes, the material has significant net magnetisation\n- This method is simple but produces a relatively weak magnet\n\n**Method 2: Placing in a strong magnetic field (impulse magnetisation):**\nPlace the material inside a powerful electromagnet or a pulsed magnetic field. The strong field aligns all domains, and the high coercivity retains this alignment after the field is removed. This gives much stronger magnets and is the industrial method.\n\n**Method 3: Heating and cooling in a field (thermomagnetic treatment):**\nSome materials (particularly alnico alloys) are heated above the Curie temperature, placed in a strong field, and cooled while the field is applied. The domains freeze into alignment as the material passes through the Curie temperature.\n\n**Materials used for permanent magnets (in order of energy product):**\n\n| Material | B_r (T) | H_c (kA/m) | BH_max (kJ/m³) | Applications |\n|---|---|---|---|---|\n| Steel (carbon/chrome) | 0.9 | 5 | ~1 | Old horseshoe magnets |\n| Alnico (Al-Ni-Co) | 1.3 | 50–130 | 40–80 | Sensors, guitar pickups, loudspeakers |\n| Strontium ferrite | 0.39 | 250 | 30–40 | Fridge magnets, motor magnets |\n| Samarium-cobalt (SmCo) | 1.0 | 700–1200 | 200–240 | High-temperature motors |\n| Neodymium (NdFeB) | 1.3 | 880–2000 | 200–450 | EV motors, wind turbines, earphones |\n\n**Neodymium magnets (NdFeB):** The strongest permanent magnets available. Discovered in 1984. A 1 cm³ NdFeB magnet can support a load hundreds of times its own weight. However, NdFeB loses its magnetism above ~80°C (lower Curie temperature than iron) and is brittle. Vital for electric vehicle (EV) motors — Uganda's growing EV adoption (electric bodabodas) relies on these."
+        },
+        {
+          "type": "heading",
+          "body": "Demagnetisation Methods"
+        },
+        {
+          "type": "text",
+          "body": "Just as permanent magnets can be made, they can also lose their magnetism (be demagnetised). Understanding this is important both for preventing accidental demagnetisation and for intentionally erasing magnetic information.\n\n**Method 1: Heating above the Curie temperature:**\nHeating an iron magnet above 770°C destroys the exchange interaction, randomising the domains completely. When cooled without a field, it remains demagnetised. This is irreversible — the atomic structure is altered.\n\n**Practical consequences:**\n- Hammering a nail into very hot metal in a blacksmith's forge results in an unmagnetised nail\n- This also explains why the Earth's core, despite containing iron, is liquid at extreme temperature and pressure — the geomagnetic field is generated by dynamo action of molten iron, not a permanent magnet\n\n**Method 2: Mechanical shock (hammering or vibration):**\nSharp mechanical shocks provide enough energy to jolt domain walls past pinning sites, allowing some domains to randomise. Repeated hammering or violent vibration will progressively demagnetise a magnet. Dropping a horseshoe magnet can measurably reduce its strength.\n\n**Method 3: Applying a reverse field (AC demagnetisation — 'degaussing'):**\nPlacing a magnet inside a solenoid carrying alternating current (and slowly withdrawing it) cycles the B-H hysteresis loop with progressively decreasing amplitude. Each smaller cycle centres more closely on zero — the material is 'walked' along ever-smaller hysteresis loops toward the origin. When fully withdrawn, B = 0.\n\nThis is the standard industrial and laboratory method:\n- Erasing cassette tapes and recording heads\n- Degaussing ships' hulls (to prevent triggering naval mines)\n- Degaussing CRT monitors (built-in degaussing coil)\n- Erasing magnetic stripe cards\n- Demagnetising watchmaker's tools\n\n**Method 4: Keeping in the presence of a strong opposing field:**\nIf a magnet is stored with a strong reverse field applied for a long time, domains gradually align with the reverse field, reducing net magnetisation.\n\n**Preventing demagnetisation:**\n- Store horseshoe magnets with a 'keeper' (soft iron bar across the poles) — the keeper completes the magnetic circuit, reducing the demagnetising field\n- Avoid dropping magnets on hard surfaces\n- Keep magnets away from strong external fields\n- Avoid heating above Curie temperature\n- NdFeB magnets: keep below 80°C for best performance"
+        },
+        {
+          "type": "heading",
+          "body": "Permanent Magnets in Technology: Key Applications"
+        },
+        {
+          "type": "text",
+          "body": "**1. Loudspeakers and earphones:**\nA permanent magnet (alnico or ferrite) provides a static radial magnetic field in the annular gap. The voice coil (attached to the paper cone) sits in this gap. Audio current in the coil interacts with B → force F = BIL → cone moves → sound waves. The quality of the magnet determines speaker efficiency and bandwidth.\n\nLoudspeakers are everywhere in Uganda: from church PA systems to the music systems on buses and boda-bodas.\n\n**2. Electric motors and generators:**\nDC motors use permanent magnets (or electromagnets) as the field and an armature winding as the rotor. AC generators at Bujagali use powerful permanent magnets (in smaller turbines) or electromagnets (in large generators).\n\nElectric bodaboda motors use NdFeB permanent magnets in brushless DC motors — silent, highly efficient, requiring minimal maintenance. This is a growing sector in Kampala, where several electric motorcycle companies now operate.\n\n**3. Magnetic compass:**\nA compass needle is a lightweight permanent magnet (usually a magnetised steel needle) that aligns with Earth's magnetic field. The Earth's field (about 25–65 μT) exerts a torque on the needle, aligning it with the horizontal component of the geomagnetic field.\n\nUganda lies near the magnetic equator where the field is relatively weak (about 30–35 μT) and nearly horizontal — compasses work well but the dip angle is near zero.\n\n**4. Hard disk drives (HDDs) and magnetic recording:**\nThe magnetic coating on a hard disk consists of tiny ferromagnetic regions (bits) magnetised in one of two directions — representing 0 or 1. A read/write head uses a tiny electromagnet to set and detect these magnetisation directions. HDDs store terabytes of data on a few aluminium platters — exploiting magnetic hysteresis for digital memory.\n\n**5. Magnetic sensors:**\nHall effect sensors: a permanent magnet with a Hall probe detects the rotation of a gear wheel or shaft by the changing field — used in ABS brake systems, crankshaft position sensors, and speedometers.\n\n**6. Magnetic resonance imaging (MRI):**\nLow-field MRI machines use permanent magnets (ferrite or NdFeB) to achieve fields of 0.1–0.5 T. These are cheaper and require no cryogenic cooling, making them more suitable for resource-limited settings. Several 'permanent magnet MRI' units are being deployed in Africa for this reason.\n\n**7. Magnetic refrigeration:**\nCutting-edge refrigeration technology uses the magnetocaloric effect in gadolinium and related alloys: applying/removing a magnetic field causes the material to heat/cool. More efficient and environmentally friendly than gas-compression refrigeration — potentially important for cold chain storage of vaccines and medicines in Uganda's rural health centres.\n\n**The geomagnetic field — Earth as a giant magnet:**\nEarth's magnetic field resembles that of a giant bar magnet tilted ~11° from the rotation axis. Its strength varies from ~25 μT near the magnetic equator to ~65 μT near the poles. The field is generated by convection currents in the liquid outer iron core (geodynamo).\n\nThe geomagnetic field shields Earth from the solar wind (charged particles from the Sun) — without it, these particles would strip away the atmosphere. Uganda's position near the equatorial electrojet (an ionospheric current system) gives it unique magnetic field characteristics studied by researchers at Makerere University's Department of Physics."
+        },
+        {
+          "type": "heading",
+          "body": "Summary Formula Sheet for Magnetism in Matter"
+        },
+        {
+          "type": "text",
+          "body": "**Complete reference for Magnetism in Matter:**\n\n**Magnetic field quantities:**\nB = μ₀μᵣH = μ₀(H + M)\nM = χ_m H; μᵣ = 1 + χ_m; χ_m = μᵣ − 1\nH = nI (solenoid, n = turns per metre)\nH = NI/l (solenoid, N turns, length l)\nΦ = BA cosθ (flux; Wb = T m²; B = Φ/A)\n\n**Magnetic material classification:**\n- Diamagnetic: χ_m < 0, μᵣ slightly < 1, no permanent magnetism\n- Paramagnetic: χ_m > 0 (small), M = CB/T (Curie's Law)\n- Ferromagnetic: χ_m ≫ 1, μᵣ ≫ 1, domains, permanent magnetism, hysteresis\n\n**Hysteresis:**\nLoop area = energy loss per unit volume per cycle (J/m³)\nHysteresis power loss: P = loop area × volume × frequency\nHard: high B_r, high H_c (permanent magnets)\nSoft: low H_c, high μᵣ (transformers, motors)\n\n**Electromagnet force:**\nF = B²A/(2μ₀) per pole face\n\n**Curie temperature for common materials:**\nFe: 770°C; Co: 1115°C; Ni: 358°C; NdFeB: ~80°C"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Magnetising methods: stroking, strong field impulse, thermomagnetic. Permanent magnet materials: alnico (moderate), NdFeB (strongest, BH_max up to 450 kJ/m³), SmCo (high temperature). Demagnetisation: heating above Curie T, mechanical shock, AC degaussing (standard method). Store horseshoe magnets with keepers. Applications: loudspeakers (F = BIL on voice coil), electric motors (boda-bodas), HDD recording, compass, Hall sensors, MRI (permanent magnet low-field systems). Earth's field: geodynamo in liquid iron core; ~30–65 μT; shields from solar wind."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Impulse magnetisation: Industrial method — material placed in strong pulsed field to align all domains\n• Degaussing: AC demagnetisation — progressively smaller B-H cycles bring material to B = 0; used for data erasure and ship degaussing\n• Neodymium magnet (NdFeB): Strongest available permanent magnet; BH_max up to 450 kJ/m³; used in EV motors, earphones\n• Keeper: Soft iron bar stored across horseshoe magnet poles to complete the magnetic circuit and prevent self-demagnetisation\n• Magnetocaloric effect: Temperature change in a magnetic material when its field changes; basis of magnetic refrigeration\n• Geomagnetic field: Earth's magnetic field; generated by geodynamo; ~30–65 μT; shields from solar wind; used by compass"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A NdFeB permanent magnet is accidentally heated to 150°C. What is the most likely consequence?",
+            "options": [
+              "Nothing — NdFeB is stable at all temperatures below the Curie temperature of iron (770°C)",
+              "The magnet becomes stronger — heat increases domain alignment",
+              "The magnet loses most or all of its magnetism — NdFeB has a low Curie temperature (~80°C) and irreversibly demagnetises above this",
+              "The magnet becomes paramagnetic permanently"
+            ],
+            "answer": "The magnet loses most or all of its magnetism — NdFeB has a low Curie temperature (~80°C) and irreversibly demagnetises above this",
+            "explanation": "NdFeB magnets have a Curie temperature of only about 80°C (compared to iron's 770°C). At 150°C, the exchange interaction collapses, domains randomise, and the magnet is demagnetised. This is a key limitation of NdFeB magnets — they cannot be used near heat sources. For high-temperature applications (e.g., inside combustion engines), SmCo (Curie T ≈ 750°C) or alnico are preferred."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The standard industrial method for demagnetising a precision steel tool is:",
+            "options": [
+              "Heating the tool to 1000°C in a furnace",
+              "Hammering the tool repeatedly on a hard surface",
+              "Passing alternating current through a coil around the tool, then slowly withdrawing it (AC degaussing)",
+              "Immersing the tool in liquid nitrogen"
+            ],
+            "answer": "Passing alternating current through a coil around the tool, then slowly withdrawing it (AC degaussing)",
+            "explanation": "AC degaussing (demagnetisation) cycles the material through progressively smaller B-H hysteresis loops. As the tool is slowly withdrawn from the AC coil, the field amplitude decreases — the material is walked down ever-smaller hysteresis loops toward B = 0 at the origin. This method is non-destructive (no heating, no mechanical shock) and precisely brings the magnetisation to zero."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A loudspeaker uses a 0.80 T permanent magnet with the voice coil (50 mm long, carrying 0.20 A) in the gap. What force acts on the voice coil?",
+            "options": [
+              "0.008 N",
+              "0.080 N",
+              "0.800 N",
+              "8.0 N"
+            ],
+            "answer": "0.008 N",
+            "explanation": "F = BIL = 0.80 × 0.20 × 0.050 = 0.008 N. This tiny force (8 mN) moves the lightweight paper cone. For a typical power level, peak currents can be much larger, giving larger forces. The key is that this force is proportional to the audio current signal — faithfully reproducing the original sound waveform as mechanical vibration of the cone."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why is a 'keeper' placed across the poles of a horseshoe magnet when storing it?",
+            "options": [
+              "To prevent accidental electrical contact between the poles",
+              "To protect the pole faces from corrosion",
+              "To complete the magnetic circuit, reducing the self-demagnetising field and preserving the magnetisation",
+              "To maintain the correct pole gap for the next use"
+            ],
+            "answer": "To complete the magnetic circuit, reducing the self-demagnetising field and preserving the magnetisation",
+            "explanation": "Without a keeper, the magnetic field lines must cross the air gap between the poles — this requires work against the demagnetising field, which gradually reduces the magnetisation over time. The soft iron keeper provides a low-reluctance path for the flux, completing the magnetic circuit and eliminating the demagnetising field. With a keeper, the magnet can be stored for years with negligible loss of strength."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which type of permanent magnet material would be most suitable for use in an electric bodaboda motor that may experience temperatures up to 120°C during heavy use?",
+            "options": [
+              "NdFeB (Curie T ~80°C)",
+              "Strontium ferrite (Curie T ~460°C)",
+              "Alnico (Curie T ~860°C)",
+              "Carbon steel (Curie T ~770°C)"
+            ],
+            "answer": "Strontium ferrite (Curie T ~460°C)",
+            "explanation": "NdFeB would demagnetise above 80°C — disqualified. Alnico has a very high Curie temperature (860°C) but low coercivity (easily demagnetised by the motor's own field). Strontium ferrite has a Curie temperature of ~460°C (well above 120°C), reasonable coercivity, low cost, and is widely used in motor applications. SmCo would also work but is expensive. For performance/cost in bodaboda motors, strontium ferrite (or specially grade NdFeB with higher Curie T) is common."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Earth's magnetic field is generated by the geodynamo. What is the approximate field strength at Uganda's latitude (near the magnetic equator)?",
+            "options": [
+              "~0.01 μT",
+              "~30–35 μT",
+              "~0.50 T",
+              "~50 mT"
+            ],
+            "answer": "~30–35 μT",
+            "explanation": "Earth's magnetic field ranges from about 25 μT near the magnetic equator to about 65 μT near the magnetic poles. Uganda lies close to the magnetic equator, where the field is weakest and nearly horizontal (dip angle ≈ 0°). The field of about 30–35 μT is easily detectable by a compass needle — but is millions of times weaker than typical laboratory electromagnets or MRI machines."
+          }
+        ]
+      }
+    }
+  ]
+}

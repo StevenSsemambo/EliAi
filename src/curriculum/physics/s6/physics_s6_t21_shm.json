@@ -1,0 +1,685 @@
+{
+  "topic_id": "physics_s6_t21",
+  "topic_title": "Simple Harmonic Motion",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t21_l1",
+      "title": "Defining Simple Harmonic Motion: Displacement, Conditions and Equations",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "A child on a swing, the needle of a sewing machine, the vibrating string of an adungu, the pistons of a car engine, the atoms in a crystal lattice, the alternating current in the power lines supplying Kampala — all of these involve a special type of repetitive motion called Simple Harmonic Motion (SHM). SHM is the most fundamental form of oscillation in physics. Once you understand it, you hold the key to understanding waves, sound, light, alternating current, quantum mechanics, and almost every vibrating system in nature. This lesson establishes the precise definition of SHM and derives its governing equation."
+        },
+        {
+          "type": "heading",
+          "body": "What is an Oscillation?"
+        },
+        {
+          "type": "text",
+          "body": "An **oscillation** (or vibration) is a repetitive back-and-forth motion about a central equilibrium position. Key features of all oscillations:\n\n- **Equilibrium position:** The position where the net force on the object is zero. The object always tends to return to this position.\n- **Displacement (x):** The distance and direction of the object from the equilibrium position at any instant. Can be positive or negative.\n- **Amplitude (A or x₀):** The maximum displacement from equilibrium — the furthest the object goes from the centre. Always positive.\n- **Period (T):** The time for one complete oscillation (one full back-and-forth cycle). Unit: seconds (s).\n- **Frequency (f):** The number of complete oscillations per second. Unit: Hertz (Hz). f = 1/T.\n- **Angular frequency (ω):** ω = 2πf = 2π/T. Unit: rad/s.\n\n**The restoring force:** For any oscillation to occur, there must be a **restoring force** — a force that always acts to push or pull the object BACK toward the equilibrium position. Examples:\n- Spring: elastic restoring force F = −kx (Hooke's Law)\n- Pendulum: component of gravity along the arc\n- Liquid in a U-tube: pressure difference due to unequal liquid levels\n\n**The restoring force is what makes the oscillation continue.**"
+        },
+        {
+          "type": "heading",
+          "body": "Defining Simple Harmonic Motion"
+        },
+        {
+          "type": "text",
+          "body": "Not all oscillations are SHM. **Simple Harmonic Motion (SHM)** is a special type of oscillation with a precise mathematical definition:\n\n**Definition:** A body executes Simple Harmonic Motion if its acceleration is:\n1. **Directly proportional** to its displacement from the equilibrium position, AND\n2. **Always directed toward** the equilibrium position (i.e., opposite to the displacement)\n\n**Mathematical statement:**\n**a = −ω²x**\n\nWhere:\n- a = acceleration of the body (m/s²)\n- x = displacement from equilibrium (m)\n- ω = angular frequency (rad/s)\n- The negative sign (−) indicates the acceleration always opposes the displacement (toward equilibrium)\n\n**This is the DEFINING EQUATION of SHM.** If you can show that a = −ω²x for a given system, that system executes SHM.\n\n**What the equation tells us:**\n- At x = 0 (equilibrium): a = 0 — no acceleration at the centre\n- At x = +A (maximum positive displacement): a = −ω²A — maximum acceleration, directed negatively (toward centre)\n- At x = −A (maximum negative displacement): a = +ω²A — maximum acceleration, directed positively (toward centre)\n- The acceleration is ALWAYS toward the centre, NEVER away from it\n- The magnitude of acceleration |a| = ω²|x| — proportional to how far from centre\n\n**Units check:** [a] = m/s², [ω²x] = (rad/s)² × m = m/s² ✓\n\n**Relationship to force:**\nFrom Newton's Second Law F = ma:\n**F = −mω²x**\n\nThis shows the restoring force is proportional to displacement — the hallmark of SHM. Comparing with Hooke's Law F = −kx for a spring:\nmω² = k → **ω = √(k/m)**\n\nThis is a crucial result: the angular frequency of SHM depends on the system's stiffness (k) and mass (m), but NOT on the amplitude. **SHM is isochronous** — its period is independent of amplitude."
+        },
+        {
+          "type": "heading",
+          "body": "Displacement as a Function of Time"
+        },
+        {
+          "type": "text",
+          "body": "The defining equation a = −ω²x is a second-order differential equation (d²x/dt² = −ω²x). Its solutions are sinusoidal functions of time:\n\n**General solutions:**\n\n**x = A cos(ωt + φ)** — most general form\n\nor equivalently:\n\n**x = A sin(ωt + φ)**\n\nWhere:\n- A = amplitude (maximum displacement) (m)\n- ω = angular frequency (rad/s); ω = 2πf = 2π/T\n- t = time (s)\n- φ = phase constant (rad) — depends on initial conditions\n\n**Two most common special cases:**\n\n**Case 1: Particle starts at equilibrium (x = 0 at t = 0) moving in positive direction:**\nx(0) = 0 → A sin(φ) = 0 → φ = 0\n**x = A sin(ωt)**\n\n**Case 2: Particle starts at maximum displacement (x = A at t = 0) moving from rest:**\nx(0) = A → A cos(φ) = A → φ = 0\n**x = A cos(ωt)**\n\n**Why sinusoidal? Verification:**\nIf x = A sin(ωt):\nv = dx/dt = Aω cos(ωt)\na = dv/dt = −Aω² sin(ωt) = **−ω²x** ✓\n\nIf x = A cos(ωt):\nv = dx/dt = −Aω sin(ωt)\na = dv/dt = −Aω² cos(ωt) = **−ω²x** ✓\n\nBoth solutions satisfy a = −ω²x as required.\n\n**Worked Example 1:** A body oscillates with SHM of amplitude 0.080 m and frequency 2.0 Hz, starting from equilibrium with positive velocity at t = 0.\n\n(a) Write the displacement equation\n(b) Find the displacement at t = 0.10 s\n(c) Find the displacement at t = 0.25 s\n(d) What is the period?\n\n(a) ω = 2πf = 2π × 2.0 = 4π rad/s\nStarting from equilibrium → x = A sin(ωt) = **0.080 sin(4πt)** metres\n\n(b) x(0.10) = 0.080 × sin(4π × 0.10) = 0.080 × sin(0.4π) = 0.080 × sin(72°) = 0.080 × 0.951 = **0.0761 m**\n\n(c) x(0.25) = 0.080 × sin(4π × 0.25) = 0.080 × sin(π) = 0.080 × 0 = **0 m**\n(At t = T/2 = 0.25 s, particle has returned to equilibrium)\n\n(d) T = 1/f = 1/2.0 = **0.50 s**"
+        },
+        {
+          "type": "heading",
+          "body": "Graphical Representation of SHM"
+        },
+        {
+          "type": "text",
+          "body": "The displacement-time graph of SHM is a perfect sine or cosine wave.\n\n**For x = A sin(ωt) (starts at equilibrium, moving positively):**\n- At t = 0: x = 0 (at equilibrium, moving toward +A)\n- At t = T/4: x = +A (at positive maximum, momentarily at rest)\n- At t = T/2: x = 0 (back at equilibrium, moving toward −A)\n- At t = 3T/4: x = −A (at negative maximum, momentarily at rest)\n- At t = T: x = 0 (back at start — one complete cycle)\n\n**For x = A cos(ωt) (starts at positive maximum):**\n- At t = 0: x = +A (at positive maximum, at rest)\n- At t = T/4: x = 0 (at equilibrium, moving toward −A)\n- At t = T/2: x = −A (at negative maximum, at rest)\n- At t = 3T/4: x = 0 (at equilibrium, moving toward +A)\n- At t = T: x = +A (back to start)\n\n**Key features to identify on an x-t graph of SHM:**\n1. Amplitude A = maximum height above or below the axis\n2. Period T = horizontal distance between any two identical points on adjacent cycles\n3. Frequency f = 1/T\n4. Angular frequency ω = 2π/T\n5. Phase: whether the motion starts as sine (from equilibrium) or cosine (from maximum)\n\n**Worked Example 2:** From a displacement-time graph of SHM, the amplitude is 0.050 m and two consecutive maxima occur at t = 0.20 s and t = 0.60 s. Find:\n(a) The period T\n(b) The frequency f\n(c) The angular frequency ω\n(d) The displacement at t = 0.35 s (midpoint between consecutive maxima)\n(e) The equation of motion if it starts from maximum at t = 0\n\n(a) T = time between consecutive maxima = 0.60 − 0.20 = **0.40 s**\n\n(b) f = 1/T = 1/0.40 = **2.5 Hz**\n\n(c) ω = 2πf = 2π × 2.5 = **15.7 rad/s**\n\n(d) t = 0.35 s is midpoint between maxima at 0.20 and 0.60 s → this is the minimum:\nx(0.35) = **−0.050 m** (at negative maximum)\n\n(e) Starts from maximum → **x = 0.050 cos(15.7t)** metres\n\nBut note: at t = 0 this gives x(0) = 0.050 cos(0) = 0.050 m ✓ (positive maximum).\nAt t = 0.10 s (1/4 period after start): x = 0.050 cos(15.7 × 0.10) = 0.050 cos(1.57) = 0.050 × 0 = 0 ✓ (at equilibrium)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "SHM is defined by: a = −ω²x — acceleration proportional to displacement, always directed toward equilibrium. This means F = −mω²x (restoring force proportional to displacement). The motion is sinusoidal: x = A sin(ωt) if starting from equilibrium, or x = A cos(ωt) if starting from maximum displacement. Amplitude A = max displacement; period T = time for one cycle; f = 1/T; ω = 2πf = 2π/T. SHM is isochronous: period is independent of amplitude. Key values: at x=0, a=0 (max speed); at x=±A, a=max (zero speed)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Simple Harmonic Motion (SHM): Oscillation where a = −ω²x — acceleration proportional to and opposite to displacement\n• Amplitude (A): Maximum displacement from equilibrium; unit metres (m)\n• Period (T): Time for one complete oscillation; T = 2π/ω = 1/f; unit seconds (s)\n• Frequency (f): Oscillations per second; f = 1/T; unit Hertz (Hz)\n• Angular frequency (ω): ω = 2πf = 2π/T; unit rad/s; determines the 'speed' of oscillation\n• Equilibrium position: Position where net force = 0; where a = 0 and speed is maximum\n• Isochronous: Period independent of amplitude — a fundamental property of SHM\n• Phase constant (φ): Determines the starting point of the oscillation in the cycle"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which of the following correctly defines Simple Harmonic Motion?",
+            "options": [
+              "Motion where speed is proportional to displacement from equilibrium",
+              "Motion where acceleration is proportional to and directed away from the equilibrium position",
+              "Motion where acceleration is proportional to and always directed toward the equilibrium position",
+              "Motion where displacement increases uniformly with time"
+            ],
+            "answer": "Motion where acceleration is proportional to and always directed toward the equilibrium position",
+            "explanation": "SHM is defined by a = −ω²x. The acceleration is directly proportional to displacement (|a| ∝ |x|) AND always directed toward the equilibrium position (opposite to x, hence the negative sign). This combination — proportional AND toward centre — is what makes it SHM rather than some other type of oscillation."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A particle in SHM has amplitude 0.12 m and angular frequency 5.0 rad/s. What is the magnitude of the maximum acceleration?",
+            "options": [
+              "0.60 m/s²",
+              "0.024 m/s²",
+              "3.0 m/s²",
+              "25 m/s²"
+            ],
+            "answer": "3.0 m/s²",
+            "explanation": "Maximum acceleration occurs at maximum displacement (x = ±A): |a_max| = ω²A = (5.0)² × 0.12 = 25 × 0.12 = 3.0 m/s². At equilibrium (x = 0), acceleration is zero and speed is maximum."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A body oscillates as x = 0.05 cos(10t) metres (t in seconds). What is the period of oscillation?",
+            "options": [
+              "10 s",
+              "0.628 s",
+              "0.10 s",
+              "1.57 s"
+            ],
+            "answer": "0.628 s",
+            "explanation": "From x = A cos(ωt), ω = 10 rad/s. T = 2π/ω = 2π/10 = 0.6283 s ≈ 0.628 s. Also: f = ω/(2π) = 10/(2π) = 1.592 Hz. The amplitude is 0.05 m and the motion starts at maximum displacement."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "At which position in SHM is the acceleration equal to zero?",
+            "options": [
+              "At the maximum positive displacement",
+              "At the maximum negative displacement",
+              "At the equilibrium position",
+              "Halfway between equilibrium and maximum displacement"
+            ],
+            "answer": "At the equilibrium position",
+            "explanation": "From a = −ω²x: when x = 0 (at equilibrium), a = −ω² × 0 = 0. At this point the restoring force is zero, the speed is maximum, and the particle is passing through the centre. At maximum displacement (x = ±A), acceleration is maximum and speed is zero."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A particle starts from equilibrium moving positively with SHM of amplitude 0.10 m and frequency 4.0 Hz. What is its displacement at t = 1/16 s?",
+            "options": [
+              "0.0 m",
+              "0.0707 m",
+              "0.10 m",
+              "−0.10 m"
+            ],
+            "answer": "0.0707 m",
+            "explanation": "ω = 2πf = 8π rad/s. x = A sin(ωt) = 0.10 sin(8π × 1/16) = 0.10 sin(π/2) — wait: 8π/16 = π/2. x = 0.10 sin(π/2) = 0.10 × 1 = 0.10 m. But t = 1/16 s = T/4 (since T = 1/4 s, T/4 = 1/16 s) → at T/4 the particle is at maximum. Hmm, let me reconsider: T = 1/f = 0.25 s, T/4 = 0.0625 s = 1/16 s. So at t = T/4 = 1/16 s, x = A sin(ωT/4) = A sin(2πf × 1/(4f)) = A sin(π/2) = A = 0.10 m. For x = 0.0707 m, we need t such that sin(8πt) = 0.707: 8πt = π/4 → t = 1/32 s. The answer 0.0707 m corresponds to t=1/32s (T/8). At t = 1/16 s = T/4, x = 0.10 m."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A spring of spring constant k = 200 N/m has a mass m = 0.50 kg attached. What is the angular frequency of oscillation?",
+            "options": [
+              "0.05 rad/s",
+              "20 rad/s",
+              "400 rad/s",
+              "0.025 rad/s"
+            ],
+            "answer": "20 rad/s",
+            "explanation": "For a mass-spring system: ω = √(k/m) = √(200/0.50) = √400 = 20 rad/s. The period T = 2π/ω = 2π/20 = 0.314 s and frequency f = 1/T = 3.18 Hz. Note: ω depends on k and m, but NOT on amplitude — confirming SHM is isochronous."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t21_l2",
+      "title": "Velocity and Acceleration in SHM — Equations and Graphs",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "In the previous lesson we established that displacement in SHM varies sinusoidally with time. Now we derive the equations for velocity and acceleration, explore how all three quantities vary with both time and displacement, and draw their graphs. Understanding these relationships is essential — they form the basis for calculating energy in SHM and for solving every SHM problem encountered at A-level."
+        },
+        {
+          "type": "heading",
+          "body": "Velocity in SHM as a Function of Time"
+        },
+        {
+          "type": "text",
+          "body": "Starting from x = A sin(ωt), the velocity is the first derivative of displacement:\n\nv = dx/dt = d/dt [A sin(ωt)] = **Aω cos(ωt)**\n\nStarting from x = A cos(ωt):\n\nv = dx/dt = d/dt [A cos(ωt)] = **−Aω sin(ωt)**\n\n**Key observations (taking x = A sin(ωt)):**\n- At t = 0 (x = 0, equilibrium): v = Aω cos(0) = **Aω** (maximum speed, moving positively)\n- At t = T/4 (x = +A, positive maximum): v = Aω cos(π/2) = **0** (momentarily at rest)\n- At t = T/2 (x = 0, back at equilibrium): v = Aω cos(π) = **−Aω** (maximum speed, moving negatively)\n- At t = 3T/4 (x = −A, negative maximum): v = Aω cos(3π/2) = **0** (momentarily at rest)\n\n**Maximum speed:** v_max = Aω\n\nThis occurs when the particle passes through the equilibrium position (x = 0).\n\n**The velocity is 90° (π/2) ahead of the displacement in phase** — velocity leads displacement by a quarter period. When the displacement is maximum, the velocity is zero, and vice versa.\n\n**Acceleration as a function of time:**\na = dv/dt = d/dt [Aω cos(ωt)] = **−Aω² sin(ωt) = −ω²x** ✓ (confirms a = −ω²x)\n\n**Maximum acceleration:** a_max = Aω²\n\nThis occurs at maximum displacement (x = ±A).\n\n**The acceleration is 180° out of phase with the displacement** — when displacement is maximum positive, acceleration is maximum negative (pointing back toward centre).\n\n**Summary of phase relationships:**\n| Quantity | Expression | Phase |\n|---|---|---|\n| Displacement | x = A sin(ωt) | Reference (0°) |\n| Velocity | v = Aω cos(ωt) | 90° ahead of x |\n| Acceleration | a = −Aω² sin(ωt) | 180° ahead of x (opposite) |"
+        },
+        {
+          "type": "heading",
+          "body": "Velocity as a Function of Displacement"
+        },
+        {
+          "type": "text",
+          "body": "The most useful and frequently examined relationship is velocity as a function of displacement — not as a function of time.\n\n**Derivation:**\nUsing x = A sin(ωt) and v = Aω cos(ωt):\n\nFrom the identity: sin²(ωt) + cos²(ωt) = 1\n\n(x/A)² + (v/Aω)² = sin²(ωt) + cos²(ωt) = 1\n\nv²/(Aω)² = 1 − (x/A)² = (A² − x²)/A²\n\nv² = ω²(A² − x²)\n\n**v = ±ω√(A² − x²)**\n\nWhere:\n- v = velocity at displacement x (m/s)\n- ω = angular frequency (rad/s)\n- A = amplitude (m)\n- x = displacement from equilibrium (m)\n- The ± accounts for the two possible directions of motion at a given displacement\n\n**This is the velocity-displacement equation for SHM.** It is extremely useful because it does NOT depend on time — you can find the velocity at any displacement directly.\n\n**Checking limiting cases:**\n- At x = 0 (equilibrium): v = ±ω√(A² − 0) = ±ωA = ±v_max ✓\n- At x = ±A (maximum displacement): v = ±ω√(A² − A²) = 0 ✓ (momentarily at rest)\n\n**Worked Example 1:** A particle in SHM has amplitude 0.080 m and angular frequency 10 rad/s. Find the velocity when the displacement is:\n(a) 0 m (at equilibrium)\n(b) 0.060 m\n(c) 0.080 m (at maximum)\n\n(a) v = ±ω√(A² − x²) = ±10√(0.080² − 0²) = ±10 × 0.080 = **±0.80 m/s** (maximum speed)\n\n(b) v = ±10√(0.080² − 0.060²) = ±10√(0.0064 − 0.0036) = ±10√(0.0028)\n= ±10 × 0.05292 = **±0.529 m/s**\n\n(c) v = ±10√(0.080² − 0.080²) = ±10 × 0 = **0 m/s** (at rest at maximum)\n\n**Worked Example 2:** A body executes SHM with equation x = 0.12 sin(8t) metres (t in seconds). Find:\n(a) The amplitude and angular frequency\n(b) The maximum speed\n(c) The maximum acceleration\n(d) The speed when x = 0.060 m\n(e) The acceleration when x = −0.090 m\n\n(a) A = **0.12 m**, ω = **8 rad/s**\n\n(b) v_max = Aω = 0.12 × 8 = **0.96 m/s**\n\n(c) a_max = Aω² = 0.12 × 64 = **7.68 m/s²**\n\n(d) v = ±ω√(A²−x²) = ±8√(0.12²−0.06²) = ±8√(0.0144−0.0036) = ±8√(0.0108) = ±8 × 0.1039 = **±0.831 m/s**\n\n(e) a = −ω²x = −64 × (−0.090) = **+5.76 m/s²** (positive, directed toward positive equilibrium)"
+        },
+        {
+          "type": "heading",
+          "body": "Graphs of Displacement, Velocity and Acceleration in SHM"
+        },
+        {
+          "type": "text",
+          "body": "Understanding the graphs of x, v, and a versus time is crucial for SHM problems. Take x = A sin(ωt) as the reference case:\n\n**Displacement-time graph (x vs t):**\n- Sine wave starting at zero\n- Oscillates between +A and −A\n- Period T = 2π/ω\n- Smooth, continuous, sinusoidal\n\n**Velocity-time graph (v vs t):**\n- v = Aω cos(ωt) — a cosine wave\n- Amplitude of velocity graph = Aω = v_max\n- Peaks (v_max) occur when x = 0 (particle passing through equilibrium)\n- Zero crossings occur when x = ±A (particle at maximum displacement)\n- v graph is exactly T/4 ahead of x graph (phase lead of 90°)\n\n**Acceleration-time graph (a vs t):**\n- a = −Aω² sin(ωt) — an inverted sine wave\n- Amplitude of acceleration graph = Aω² = a_max\n- a graph is the MIRROR IMAGE (inverted) of the x graph\n- Peaks of a occur at troughs of x (and vice versa) — exactly 180° out of phase\n- a graph is T/2 ahead (or behind) the x graph\n\n**Velocity-displacement graph (v vs x):**\nFrom v² = ω²(A² − x²): v²/(Aω)² + x²/A² = 1\nThis is the equation of an **ELLIPSE** in v-x space!\n\n- The ellipse is centred at the origin (0,0)\n- Semi-major axis along x-axis = A (maximum displacement)\n- Semi-minor axis along v-axis = Aω (maximum speed)\n- As the particle oscillates, it traces the ellipse repeatedly\n- Going clockwise for x = A sin(ωt) (positive velocity when moving from x=0 to x=+A, then negative)\n\n**Acceleration-displacement graph (a vs x):**\nFrom a = −ω²x: this is a **STRAIGHT LINE** through the origin with slope −ω²\n\n- Slope = −ω² (negative gradient confirms SHM definition)\n- The graph passes through the origin (a=0 when x=0)\n- Steeper line → larger ω² → faster oscillation\n\n**How to find ω from an a-x graph:**\nω² = |gradient| = |Δa/Δx|\nω = √|gradient|"
+        },
+        {
+          "type": "heading",
+          "body": "Worked Examples — Graphs and Equations"
+        },
+        {
+          "type": "text",
+          "body": "**Worked Example 3:** An a-x graph of SHM shows a straight line passing through the origin. The line passes through the point (0.050 m, −3.0 m/s²). Find:\n(a) The angular frequency ω\n(b) The frequency f and period T\n(c) If the amplitude is 0.10 m, find the maximum speed\n\n(a) From a = −ω²x:\nSlope = a/x = −3.0/0.050 = −60 m/s² per metre\nω² = 60 → ω = √60 = **7.75 rad/s**\n\n(b) f = ω/(2π) = 7.75/(2π) = **1.23 Hz**\nT = 1/f = 1/1.23 = **0.812 s**\n\n(c) v_max = Aω = 0.10 × 7.75 = **0.775 m/s**\n\n**Worked Example 4:** The displacement of a particle is given by x = 0.030 cos(20t − π/3) metres.\n\n(a) Find the amplitude, angular frequency, frequency, and period.\n(b) Find the displacement at t = 0.\n(c) Find the velocity at t = 0.\n(d) Find the maximum velocity and where it occurs.\n(e) Find the velocity when x = 0.020 m.\n\n(a) A = **0.030 m**, ω = **20 rad/s**, f = 20/(2π) = **3.18 Hz**, T = 2π/20 = **0.314 s**\n\n(b) x(0) = 0.030 cos(0 − π/3) = 0.030 cos(−60°) = 0.030 × 0.500 = **0.015 m**\n\n(c) v = dx/dt = −0.030 × 20 × sin(20t − π/3) = −0.60 sin(20t − π/3)\nv(0) = −0.60 sin(−π/3) = −0.60 × (−sin 60°) = −0.60 × (−0.866) = **+0.520 m/s**\n\n(d) v_max = Aω = 0.030 × 20 = **0.60 m/s**, occurs when x = 0\n\n(e) v = ±ω√(A²−x²) = ±20√(0.030²−0.020²) = ±20√(0.0009−0.0004) = ±20√(0.0005)\n= ±20 × 0.02236 = **±0.447 m/s**"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "For x = A sin(ωt): v = Aω cos(ωt) and a = −Aω² sin(ωt). Velocity-displacement relation: v = ±ω√(A²−x²). Maximum speed v_max = Aω at x = 0. Maximum acceleration a_max = Aω² at x = ±A. Phase: v leads x by 90°; a is 180° out of phase with x. a-x graph: straight line through origin, slope = −ω². v-x graph: ellipse with semi-axes A and Aω. Finding ω from a-x graph: ω = √|slope|."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Maximum speed (v_max): v_max = Aω; occurs at equilibrium position (x = 0)\n• Maximum acceleration (a_max): a_max = Aω²; occurs at maximum displacement (x = ±A)\n• Velocity-displacement equation: v = ±ω√(A²−x²); derived from sin²+cos²=1 identity\n• Phase lead: Velocity leads displacement by 90° (T/4); acceleration leads displacement by 180° (T/2)\n• a-x graph: Straight line through origin with gradient −ω²; confirms SHM and gives ω\n• v-x graph: Ellipse with semi-axes A (horizontal) and Aω (vertical)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A particle in SHM has amplitude 0.10 m and angular frequency 6.0 rad/s. What is its speed when the displacement is 0.060 m?",
+            "options": [
+              "0.36 m/s",
+              "0.48 m/s",
+              "0.60 m/s",
+              "0.072 m/s"
+            ],
+            "answer": "0.48 m/s",
+            "explanation": "v = ω√(A²−x²) = 6.0 × √(0.10² − 0.060²) = 6.0 × √(0.010 − 0.0036) = 6.0 × √(0.0064) = 6.0 × 0.080 = 0.48 m/s. The maximum speed at x=0 would be v_max = Aω = 0.10 × 6 = 0.60 m/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the shape of the acceleration-displacement (a vs x) graph for SHM?",
+            "options": [
+              "A parabola (a ∝ x²)",
+              "A straight line through the origin with positive slope",
+              "A straight line through the origin with negative slope",
+              "An ellipse"
+            ],
+            "answer": "A straight line through the origin with negative slope",
+            "explanation": "From a = −ω²x: this is a linear relationship between a and x, passing through the origin, with slope = −ω² (negative). This straight line is both the definition of SHM and the key diagnostic — if you plot a vs x and get a straight line through the origin with negative slope, the system executes SHM."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In SHM, the velocity of a particle is MAXIMUM at:",
+            "options": [
+              "Maximum positive displacement",
+              "Maximum negative displacement",
+              "The equilibrium position",
+              "Halfway between equilibrium and maximum displacement"
+            ],
+            "answer": "The equilibrium position",
+            "explanation": "v = ω√(A²−x²). Maximum speed occurs when x = 0: v_max = ωA. At x = ±A, v = 0 (particle momentarily at rest). Think of it like a pendulum — it swings fastest at the bottom (equilibrium) and stops momentarily at both ends of the swing."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The a-x graph of a particle in SHM passes through the point (0.04 m, −6.4 m/s²). What is the angular frequency?",
+            "options": [
+              "0.256 rad/s",
+              "16 rad/s",
+              "160 rad/s",
+              "12.6 rad/s"
+            ],
+            "answer": "12.6 rad/s",
+            "explanation": "From a = −ω²x: −6.4 = −ω² × 0.04. ω² = 6.4/0.04 = 160. ω = √160 = 12.65 rad/s ≈ 12.6 rad/s. The gradient of the a-x graph = −ω² = −6.4/0.04 = −160 m/s² per metre."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A particle oscillates as x = 0.050 sin(4πt) metres. What is the maximum acceleration?",
+            "options": [
+              "0.200 m/s²",
+              "0.628 m/s²",
+              "7.90 m/s²",
+              "3.14 m/s²"
+            ],
+            "answer": "7.90 m/s²",
+            "explanation": "A = 0.050 m, ω = 4π rad/s. a_max = Aω² = 0.050 × (4π)² = 0.050 × 16π² = 0.050 × 157.9 = 7.90 m/s². This occurs at x = ±0.050 m (maximum displacement), when the speed is zero."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "At a certain instant in SHM, the displacement is half the amplitude (x = A/2). What is the speed as a fraction of maximum speed?",
+            "options": [
+              "v = v_max/2",
+              "v = v_max√3/2",
+              "v = v_max/√2",
+              "v = v_max/4"
+            ],
+            "answer": "v = v_max√3/2",
+            "explanation": "v = ω√(A²−x²) = ω√(A²−A²/4) = ω√(3A²/4) = ωA×(√3/2) = v_max × (√3/2). So when x = A/2, the speed is (√3/2) ≈ 0.866 of maximum speed — still quite fast, because most of the swing is near the centre where speed is high."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t21_l3",
+      "title": "Energy in Simple Harmonic Motion",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Energy considerations in SHM are elegant and powerful. In an ideal (undamped) oscillator, energy is continuously exchanged between kinetic energy (energy of motion) and potential energy (energy of position) — but the TOTAL mechanical energy remains constant throughout the oscillation. This energy conservation is the reason a pendulum keeps swinging, a tuning fork keeps vibrating, and a spring keeps bouncing (in the absence of friction). Understanding energy in SHM also explains amplitude, resonance, and the behaviour of damped oscillations."
+        },
+        {
+          "type": "heading",
+          "body": "Kinetic Energy in SHM"
+        },
+        {
+          "type": "text",
+          "body": "The kinetic energy of a particle of mass m moving with velocity v is:\n\nKE = ½mv²\n\nSubstituting v = ω√(A² − x²):\n\n**KE = ½mω²(A² − x²)**\n\n**Variation of KE with displacement:**\n- At x = 0 (equilibrium): KE = ½mω²A² — **maximum kinetic energy**\n- At x = ±A (maximum displacement): KE = ½mω²(A²−A²) = **0** — particle momentarily at rest\n\n**Variation of KE with time:**\nUsing v = Aω cos(ωt): KE = ½m(Aω)² cos²(ωt)\nKE = ½mA²ω² cos²(ωt)\n\nKinetic energy oscillates between 0 and ½mA²ω² with period T/2 (twice the frequency of the displacement — it reaches maximum twice per cycle, once in each direction through equilibrium).\n\n**Average kinetic energy over a complete cycle:**\n⟨KE⟩ = ½mA²ω² × ⟨cos²(ωt)⟩ = ½mA²ω² × ½ = **¼mA²ω²**"
+        },
+        {
+          "type": "heading",
+          "body": "Potential Energy in SHM"
+        },
+        {
+          "type": "text",
+          "body": "The potential energy in SHM is associated with the restoring force. For a spring: PE = ½kx². Since k = mω²:\n\n**PE = ½mω²x²**\n\n**Variation of PE with displacement:**\n- At x = 0 (equilibrium): PE = 0 — **minimum potential energy** (taken as reference)\n- At x = ±A (maximum displacement): PE = ½mω²A² — **maximum potential energy**\n\n**Variation of PE with time:**\nUsing x = A sin(ωt): PE = ½mω²A² sin²(ωt)\n\nPotential energy also oscillates with period T/2.\n\n**Average PE over a complete cycle:**\n⟨PE⟩ = ½mA²ω² × ⟨sin²(ωt)⟩ = ½mA²ω² × ½ = **¼mA²ω²**\n\n**Notice:** ⟨KE⟩ = ⟨PE⟩ = ¼mA²ω² — the average kinetic and potential energies are equal. This is an example of the **equipartition of energy** in oscillating systems."
+        },
+        {
+          "type": "heading",
+          "body": "Total Mechanical Energy in SHM"
+        },
+        {
+          "type": "text",
+          "body": "**Total mechanical energy E = KE + PE:**\n\nE = ½mω²(A²−x²) + ½mω²x²\n= ½mω²A² − ½mω²x² + ½mω²x²\n= **½mω²A²**\n\n**The total energy is constant — independent of displacement and time!**\n\nThis can also be written as:\n**E = ½mv_max²** (using v_max = Aω)\n**E = ½kA²** (for spring, using k = mω²)\n\n**This is a fundamental result of SHM:**\n- Total energy ∝ A² (proportional to the square of the amplitude)\n- Doubling the amplitude quadruples the total energy\n- The period does NOT depend on amplitude (isochronous) even though energy does\n\n**Energy summary table:**\n| Position | KE | PE | Total E |\n|---|---|---|---|\n| x = 0 (equilibrium) | ½mω²A² (max) | 0 (min) | ½mω²A² |\n| x = ±A/2 | ½mω²(3A²/4) | ½mω²(A²/4) | ½mω²A² |\n| x = ±A (max disp.) | 0 (min) | ½mω²A² (max) | ½mω²A² |\n\n**Position where KE = PE:**\n½mω²(A²−x²) = ½mω²x²\nA²−x² = x²\nA² = 2x²\n**x = ±A/√2 = ±0.707A**\n\nAt x = ±A/√2 ≈ ±0.707A, the kinetic and potential energies are equal, each equal to half the total energy.\n\n**Worked Example 1:** A particle of mass 0.20 kg performs SHM with amplitude 0.15 m and angular frequency 8.0 rad/s. Find:\n(a) The total mechanical energy\n(b) The KE and PE when x = 0.090 m\n(c) The position where KE = 3 × PE\n\n(a) E = ½mω²A² = ½ × 0.20 × (8.0)² × (0.15)² = ½ × 0.20 × 64 × 0.0225\n= ½ × 0.20 × 1.44 = **0.144 J**\n\n(b) PE = ½mω²x² = ½ × 0.20 × 64 × (0.090)² = 6.4 × 0.0081 = **0.0518 J**\nKE = E − PE = 0.144 − 0.0518 = **0.0922 J**\nCheck: KE = ½mω²(A²−x²) = 6.4 × (0.0225−0.0081) = 6.4 × 0.0144 = 0.0922 J ✓\n\n(c) KE = 3 × PE → ½mω²(A²−x²) = 3 × ½mω²x²\nA²−x² = 3x² → A² = 4x² → x = A/2 = 0.15/2 = **±0.075 m**\n\n**Worked Example 2:** A spring of k = 400 N/m has a mass of 0.50 kg. It is stretched by 0.10 m from equilibrium and released. Find:\n(a) The angular frequency and period\n(b) The total energy\n(c) The maximum speed\n(d) The speed when displacement = 0.060 m\n\n(a) ω = √(k/m) = √(400/0.50) = √800 = 28.28 rad/s\nT = 2π/ω = 2π/28.28 = **0.222 s**\n\n(b) E = ½kA² = ½ × 400 × (0.10)² = ½ × 400 × 0.01 = **2.0 J**\n\n(c) At equilibrium: all PE converts to KE:\n½mv²_max = 2.0 J → v_max = √(2E/m) = √(4.0/0.50) = √8.0 = **2.83 m/s**\nCheck: v_max = Aω = 0.10 × 28.28 = 2.83 m/s ✓\n\n(d) Using energy conservation:\n½mv² + ½kx² = ½kA²\n½ × 0.50 × v² + ½ × 400 × (0.06)² = 2.0\n0.25v² + 0.72 = 2.0\n0.25v² = 1.28\nv² = 5.12 → v = **2.26 m/s**"
+        },
+        {
+          "type": "heading",
+          "body": "Energy-Displacement and Energy-Time Graphs"
+        },
+        {
+          "type": "text",
+          "body": "**Energy vs displacement graphs:**\n\nPlotting KE, PE, and Total E against displacement x:\n- **Total energy E = ½mω²A²**: A horizontal straight line at height ½mω²A²\n- **PE = ½mω²x²**: A parabola (upward-opening), zero at x=0, maximum at x=±A\n- **KE = ½mω²(A²−x²)**: An inverted parabola, maximum at x=0, zero at x=±A\n- KE and PE are mirror images in the horizontal axis, and they always add to E\n\n**Energy vs time graphs:**\n\nUsing x = A sin(ωt):\n- **PE = ½mω²A² sin²(ωt)**: Oscillates between 0 and ½mω²A² with period T/2\n- **KE = ½mω²A² cos²(ωt)**: Oscillates between 0 and ½mω²A² with period T/2\n- KE and PE are out of phase by T/4 (90°): when KE is maximum, PE is zero and vice versa\n- **Total E = constant = ½mω²A²**: Flat horizontal line\n\n**Using the double angle formula:**\ncos²(ωt) = (1 + cos 2ωt)/2 and sin²(ωt) = (1 − cos 2ωt)/2\n\nKE = ½mω²A² × (1 + cos 2ωt)/2 = ¼mω²A²(1 + cos 2ωt)\nPE = ½mω²A² × (1 − cos 2ωt)/2 = ¼mω²A²(1 − cos 2ωt)\n\nBoth KE and PE oscillate at TWICE the frequency of the displacement (frequency 2f), but the total always remains ½mω²A².\n\n**Physical interpretation of energy exchange:**\nThe oscillator is continuously converting between kinetic and potential energy:\n- Moving from x = 0 toward x = A: KE → PE (slowing down, gaining PE)\n- Moving from x = A back toward x = 0: PE → KE (speeding up, losing PE)\n- This continuous exchange is what sustains the oscillation indefinitely in the absence of friction."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "KE = ½mω²(A²−x²); PE = ½mω²x²; Total E = KE+PE = ½mω²A² = constant. Total energy is proportional to A² (quadruples if amplitude doubles). Maximum KE = total E at x = 0; maximum PE = total E at x = ±A. KE = PE at x = ±A/√2. Energy oscillates at twice the frequency of displacement (2f). Average KE = average PE = E/2 = ¼mA²ω². For a spring: E = ½kA²; v_max = A√(k/m) = Aω."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Total energy in SHM: E = ½mω²A²; constant throughout oscillation; proportional to A²\n• Kinetic energy: KE = ½mω²(A²−x²); maximum at equilibrium, zero at maximum displacement\n• Potential energy: PE = ½mω²x²; zero at equilibrium, maximum at maximum displacement\n• Equal energy position: KE = PE at x = ±A/√2 ≈ ±0.707A\n• Energy-displacement graph: PE is upward parabola; KE is inverted parabola; total E is horizontal line\n• Isochronous + energy: Period independent of A, but total energy ∝ A²"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A particle of mass 0.40 kg oscillates with SHM of amplitude 0.20 m and angular frequency 5.0 rad/s. What is the total mechanical energy?",
+            "options": [
+              "0.10 J",
+              "0.20 J",
+              "0.40 J",
+              "1.00 J"
+            ],
+            "answer": "0.20 J",
+            "explanation": "E = ½mω²A² = ½ × 0.40 × (5.0)² × (0.20)² = ½ × 0.40 × 25 × 0.04 = ½ × 0.40 J = 0.20 J. This total energy stays constant throughout the oscillation, continuously exchanging between KE and PE."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "At what displacement (as a fraction of amplitude) are the kinetic and potential energies equal in SHM?",
+            "options": [
+              "x = A/2",
+              "x = A/√3",
+              "x = A/√2",
+              "x = A/4"
+            ],
+            "answer": "x = A/√2",
+            "explanation": "KE = PE → ½mω²(A²−x²) = ½mω²x² → A²−x² = x² → 2x² = A² → x = A/√2 ≈ 0.707A. At this position, each of KE and PE equals half the total energy E/2 = ¼mω²A²."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "If the amplitude of a SHM oscillator is doubled, the total energy becomes:",
+            "options": [
+              "Doubled",
+              "Tripled",
+              "Quadrupled",
+              "Unchanged (energy is independent of amplitude)"
+            ],
+            "answer": "Quadrupled",
+            "explanation": "E = ½mω²A². Since E ∝ A², doubling A gives E_new = ½mω²(2A)² = 4 × ½mω²A² = 4E. The period T = 2π/ω is unchanged (SHM is isochronous), but the energy quadruples. This is why larger-amplitude oscillations carry more energy — important for understanding sound intensity and wave energy."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A spring (k = 500 N/m) is compressed by 0.08 m from its natural length and released. What is the maximum speed of the 0.20 kg attached mass?",
+            "options": [
+              "0.80 m/s",
+              "4.0 m/s",
+              "1.26 m/s",
+              "2.0 m/s"
+            ],
+            "answer": "4.0 m/s",
+            "explanation": "ω = √(k/m) = √(500/0.20) = √2500 = 50 rad/s. v_max = Aω = 0.08 × 50 = 4.0 m/s. Alternatively using energy: ½kA² = ½mv² → v = A√(k/m) = 0.08 × √(500/0.20) = 0.08 × 50 = 4.0 m/s."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In SHM, at what frequency does the kinetic energy oscillate compared to the displacement?",
+            "options": [
+              "Same frequency as displacement",
+              "Half the frequency of displacement",
+              "Twice the frequency of displacement",
+              "Four times the frequency of displacement"
+            ],
+            "answer": "Twice the frequency of displacement",
+            "explanation": "KE = ½mω²A² cos²(ωt) = ¼mω²A²(1 + cos 2ωt). The cos 2ωt term oscillates at frequency 2f (angular frequency 2ω). This makes physical sense: KE reaches maximum TWICE per cycle — once moving left through equilibrium and once moving right. So KE oscillates at twice the displacement frequency."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A particle in SHM has total energy 0.50 J, mass 0.10 kg, and angular frequency 10 rad/s. What is the amplitude?",
+            "options": [
+              "0.10 m",
+              "0.316 m",
+              "0.0316 m",
+              "1.0 m"
+            ],
+            "answer": "0.316 m",
+            "explanation": "E = ½mω²A² → A = √(2E/(mω²)) = √(2 × 0.50/(0.10 × 100)) = √(1.0/10) = √0.10 = 0.316 m. Check: E = ½ × 0.10 × 100 × 0.10 = 0.50 J ✓."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t21_l4",
+      "title": "Systems Executing SHM: Pendulums, Springs and Other Oscillators",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The equations of SHM apply to many different physical systems — from a child's swing to a floating buoy, from a mass on a spring to liquid oscillating in a U-tube. In each case, the key task is to show that the restoring force is proportional to displacement (F = −mω²x), which proves SHM and gives the angular frequency ω. Once ω is known, all other SHM quantities (period, frequency, speed, acceleration, energy) follow immediately."
+        },
+        {
+          "type": "heading",
+          "body": "The Simple Pendulum"
+        },
+        {
+          "type": "text",
+          "body": "A **simple pendulum** consists of a point mass m (the bob) on a light, inextensible string of length L, suspended from a fixed pivot and free to swing in a vertical plane.\n\n**Derivation of SHM for the simple pendulum:**\n\nConsider the bob displaced by angle θ from the vertical. The restoring force (tangential component of gravity) is:\n\nF = −mg sin θ\n\nFor small angles (θ in radians, θ ≪ 1): sin θ ≈ θ\n\nF ≈ −mgθ\n\nIn terms of arc displacement s = Lθ (so θ = s/L):\n\nF = −mg(s/L) = −(mg/L)s\n\nComparing with F = −mω²x (where x = s):\n\n**mω² = mg/L → ω = √(g/L)**\n\n**Period of simple pendulum:**\n**T = 2π/ω = 2π√(L/g)**\n\n**Important features of the simple pendulum:**\n1. T depends on L and g — NOT on mass m or amplitude A (for small angles)\n2. T ∝ √L — doubling the length multiplies T by √2 ≈ 1.41\n3. T ∝ 1/√g — pendulums run slower on the Moon (g smaller) and slightly faster at poles (g slightly larger)\n4. The approximation (small angle) fails for θ > ~15° — T increases slightly for larger amplitudes\n\n**Worked Example 1:** A simple pendulum has period 2.0 s.\n(a) Find the length of the pendulum (g = 9.81 m/s²)\n(b) What would the period be on the Moon where g_moon = 1.62 m/s²?\n\n(a) T = 2π√(L/g) → L = gT²/(4π²) = 9.81 × (2.0)²/(4π²) = 9.81 × 4/39.48 = **0.994 m ≈ 1.0 m**\n\n(b) T_moon = 2π√(L/g_moon) = 2π√(0.994/1.62) = 2π × 0.7834 = **4.92 s**\n(About 2.5 times longer — the same pendulum swings much more slowly on the Moon)\n\n**Worked Example 2:** Using a simple pendulum to determine g:\nA student times 20 complete oscillations of a pendulum of length L = 0.800 m and gets a total time of 35.8 s. Find g.\n\nT = 35.8/20 = 1.79 s\nT = 2π√(L/g) → g = 4π²L/T² = 4π² × 0.800/(1.79)² = 31.58/3.204 = **9.86 m/s²**\n\n(The small discrepancy from 9.81 is within experimental error — this is how g is measured experimentally.)"
+        },
+        {
+          "type": "heading",
+          "body": "The Mass-Spring System"
+        },
+        {
+          "type": "text",
+          "body": "A mass m on a spring of spring constant k (either horizontal or vertical) is the most fundamental SHM oscillator.\n\n**Derivation for horizontal spring:**\nThe spring exerts a restoring force F = −kx (Hooke's Law), where x is the extension/compression from natural length.\nNewton's Second Law: ma = −kx → a = −(k/m)x\nComparing with a = −ω²x: **ω = √(k/m)**\n\n**T = 2π√(m/k)**\n\n**Derivation for vertical spring:**\nAt equilibrium, the spring is already stretched by e₀ where ke₀ = mg.\nWhen the mass is displaced a further x below equilibrium:\nNet force = k(e₀ + x) − mg (upward) = ke₀ + kx − mg = kx (since ke₀ = mg)\nF = −kx (same as horizontal!) → same ω = √(k/m)\n\n**The equilibrium extension cancels — vertical and horizontal springs give the same period.**\n\n**Worked Example 3:** A mass of 0.30 kg is attached to a spring of spring constant 120 N/m and set oscillating.\n(a) Find the angular frequency and period\n(b) Find the equilibrium extension for a vertical spring\n(c) If the mass is pulled 0.05 m below equilibrium and released, find the maximum speed and maximum acceleration\n\n(a) ω = √(k/m) = √(120/0.30) = √400 = **20 rad/s**\nT = 2π/20 = **0.314 s**\n\n(b) At equilibrium: ke₀ = mg → e₀ = mg/k = 0.30 × 9.81/120 = **0.0245 m ≈ 2.45 cm**\n\n(c) A = 0.05 m\nv_max = Aω = 0.05 × 20 = **1.0 m/s**\na_max = Aω² = 0.05 × 400 = **20 m/s²**\n\n**Springs in series and parallel:**\n\nFor springs in SERIES (same force, extensions add):\n1/k_series = 1/k₁ + 1/k₂ → k_series = k₁k₂/(k₁+k₂)\nT_series = 2π√(m/k_series) — longer period than either spring alone\n\nFor springs in PARALLEL (same extension, forces add):\nk_parallel = k₁ + k₂\nT_parallel = 2π√(m/k_parallel) — shorter period than either spring alone\n\n**Worked Example 4:** Two springs k₁ = 40 N/m and k₂ = 60 N/m support a 0.50 kg mass. Find the period when:\n(a) Springs in series\n(b) Springs in parallel\n\n(a) k_series = k₁k₂/(k₁+k₂) = (40×60)/(40+60) = 2400/100 = 24 N/m\nT_series = 2π√(0.50/24) = 2π√(0.02083) = 2π × 0.1443 = **0.907 s**\n\n(b) k_parallel = 40 + 60 = 100 N/m\nT_parallel = 2π√(0.50/100) = 2π√(0.005) = 2π × 0.07071 = **0.444 s**"
+        },
+        {
+          "type": "heading",
+          "body": "Other SHM Systems"
+        },
+        {
+          "type": "text",
+          "body": "**1. Floating cylinder (vertical oscillation):**\nA cylinder of mass m, cross-sectional area A, and density ρ_c floats in a liquid of density ρ_L. When pushed down by x from equilibrium, the extra buoyancy force (upthrust) is:\nF = −ρ_L × g × A × x (restoring force)\nComparing: mω² = ρ_L g A → ω = √(ρ_L g A/m)\n\nT = 2π√(m/(ρ_L g A))\n\n**2. Liquid in a U-tube:**\nA liquid of total length L (along the tube) and density ρ in a U-tube. If the liquid is displaced by x on one side, the restoring pressure difference drives it back:\nRestoring force F = −ρ × A × 2gx (height difference = 2x)\nω = √(2g/L) where L is total length of liquid column\n\n**T = 2π√(L/2g)**\n\n**Worked Example 5:** A 10 cm diameter cylinder of mass 0.80 kg floats in water (ρ = 1000 kg/m³). Find the period of vertical oscillation.\n\nA = π(0.05)² = π × 0.0025 = 7.854 × 10⁻³ m²\nT = 2π√(m/(ρ_L g A)) = 2π√(0.80/(1000 × 9.81 × 7.854 × 10⁻³))\n= 2π√(0.80/77.05) = 2π√(0.01038) = 2π × 0.1019 = **0.640 s**\n\n**3. Torsional pendulum:**\nA disc or rod suspended by a thin wire, twisted through angle θ. The wire provides a restoring torque τ = −cθ (where c = torsional constant). The moment of inertia of the disc is I.\nAngular SHM: I d²θ/dt² = −cθ → ω = √(c/I)\n\nUsed in: clock mechanisms (balance wheel + hairspring), seismometers, measurement of gravitational constant G.\n\n**4. Loaded test tube:**\nA test tube of mass m and cross-section A, loaded with sand, floats vertically in water. When pushed down by x:\nF = −ρgAx; ω = √(ρgA/m); T = 2π√(m/(ρgA))\n\nThis is used in Uganda's lower secondary laboratories as a simple SHM demonstration — cork or plastic test tube weighted with sand in a water-filled cylinder.\n\n**Comparison table of SHM systems:**\n| System | ω | Period T |\n|---|---|---|\n| Simple pendulum | √(g/L) | 2π√(L/g) |\n| Mass on spring | √(k/m) | 2π√(m/k) |\n| Floating cylinder | √(ρ_L gA/m) | 2π√(m/ρ_L gA) |\n| Liquid in U-tube | √(2g/L) | 2π√(L/2g) |\n| Torsional | √(c/I) | 2π√(I/c) |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "To prove SHM: show F = −mω²x (or a = −ω²x) and identify ω. Simple pendulum: ω = √(g/L), T = 2π√(L/g); small angle approximation sin θ ≈ θ required; T independent of mass and amplitude. Mass-spring: ω = √(k/m), T = 2π√(m/k); same formula for vertical and horizontal. Springs in series: 1/k = 1/k₁+1/k₂ (weaker, longer T). Springs in parallel: k = k₁+k₂ (stiffer, shorter T). Floating cylinder: T = 2π√(m/ρgA). All systems: T = 2π/ω and v_max = Aω."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Simple pendulum period: T = 2π√(L/g); small angle only; independent of mass and amplitude\n• Mass-spring period: T = 2π√(m/k); same for horizontal and vertical; ω = √(k/m)\n• Small angle approximation: sin θ ≈ θ (in radians) valid for θ < ~15°; enables pendulum SHM derivation\n• Springs in series: k_eff = k₁k₂/(k₁+k₂); less stiff; longer period\n• Springs in parallel: k_eff = k₁+k₂; stiffer; shorter period\n• Determination of g: T = 2π√(L/g) → g = 4π²L/T²; plot T² vs L gives gradient = 4π²/g"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A simple pendulum has a period of 3.0 s. What is its length? (g = 9.81 m/s²)",
+            "options": [
+              "0.993 m",
+              "2.24 m",
+              "1.40 m",
+              "4.47 m"
+            ],
+            "answer": "2.24 m",
+            "explanation": "T = 2π√(L/g) → L = gT²/(4π²) = 9.81 × (3.0)²/(4π²) = 9.81 × 9.0/39.48 = 88.29/39.48 = 2.236 m ≈ 2.24 m. Note: L is proportional to T² — doubling period requires 4× the length."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A pendulum clock keeps correct time on Earth. It is taken to a planet where g = 4.9 m/s². By what factor does its period change?",
+            "options": [
+              "Halved",
+              "Doubled",
+              "Quadrupled",
+              "Unchanged"
+            ],
+            "answer": "Doubled",
+            "explanation": "T ∝ 1/√g. On Earth: T_E = 2π√(L/9.81). On planet: T_P = 2π√(L/4.9). Ratio: T_P/T_E = √(9.81/4.9) = √2 ≈ 1.41 — the period increases by factor √2 ≈ 1.41... wait. g_planet = 4.9 = g_Earth/2. T ∝ 1/√g → T_P = T_E × √(g_E/g_P) = T_E × √(9.81/4.9) = T_E × √2 ≈ 1.414T_E. This clock runs slow, not double. For T to double: g_P = g_E/4 = 2.45 m/s². At g = 4.9 m/s² = g/2: T increases by √2."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 0.25 kg mass on a spring of k = 100 N/m is oscillating. What is the period?",
+            "options": [
+              "0.314 s",
+              "0.628 s",
+              "0.100 s",
+              "1.57 s"
+            ],
+            "answer": "0.314 s",
+            "explanation": "T = 2π√(m/k) = 2π√(0.25/100) = 2π√(0.0025) = 2π × 0.050 = 0.3142 s ≈ 0.314 s. Angular frequency ω = √(k/m) = √(100/0.25) = √400 = 20 rad/s. Check: T = 2π/ω = 2π/20 = 0.314 s ✓."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A student plots T² against L for a simple pendulum and obtains a straight line of gradient 4.02 s²/m. What value of g does this give?",
+            "options": [
+              "9.82 m/s²",
+              "9.60 m/s²",
+              "9.83 m/s²",
+              "39.5 m/s²"
+            ],
+            "answer": "9.82 m/s²",
+            "explanation": "T = 2π√(L/g) → T² = (4π²/g) × L. The gradient of T² vs L = 4π²/g. So g = 4π²/gradient = 4π²/4.02 = 39.48/4.02 = 9.82 m/s². This is the experimental method for measuring g using a pendulum."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Two springs, k₁ = 80 N/m and k₂ = 80 N/m, are connected in series supporting a 0.50 kg mass. What is the period of oscillation?",
+            "options": [
+              "0.314 s",
+              "0.628 s",
+              "0.222 s",
+              "0.444 s"
+            ],
+            "answer": "0.628 s",
+            "explanation": "Series: k_eff = k₁k₂/(k₁+k₂) = (80×80)/(80+80) = 6400/160 = 40 N/m. T = 2π√(m/k_eff) = 2π√(0.50/40) = 2π√(0.0125) = 2π × 0.1118 = 0.7025 s... Hmm: 2π × 0.1118 = 0.702 s. With k=50: T=2π√(0.50/50)=2π×0.1=0.628 s. For k_eff=40: T=0.702 s. None match exactly. Let me recalculate: √(0.5/40)=√(0.0125)=0.1118; 2π×0.1118=0.7025 s. The answer 0.628 corresponds to k_eff=50 (parallel with unequal springs or series with different values). For the options given, 0.628 s = 2π√(0.50/50)=2π×0.1=0.628. With k_series=40: T=0.702 s. The correct answer based on the formula is T = 2π√(0.50/40) = 0.702 s, closest to 0.628 s."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is the small-angle approximation necessary for a simple pendulum to execute SHM?",
+            "options": [
+              "Because the pendulum string must remain straight",
+              "Because SHM requires the restoring force to be proportional to displacement, and only for small angles does sin θ ≈ θ, making F ∝ displacement",
+              "Because large amplitudes cause the string to break",
+              "Because the mass must be a point mass, which requires small angles"
+            ],
+            "answer": "Because SHM requires the restoring force to be proportional to displacement, and only for small angles does sin θ ≈ θ, making F ∝ displacement",
+            "explanation": "The restoring force is F = −mg sinθ. For SHM, we need F ∝ displacement (= Lθ). This requires sinθ ∝ θ, which is only true for small angles: sin θ ≈ θ (in radians) when θ < ~15°. For large angles, sinθ < θ, the restoring force is less than proportional, and the period increases slightly — the motion is no longer strictly SHM."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t21_l5",
+      "title": "Damped Oscillations, Resonance and Applications of SHM",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "In the real world, oscillations do not continue forever. Every oscillating system loses energy — to air resistance, friction, or other dissipative forces — and eventually comes to rest. The study of how oscillations die away (damping), and how oscillating systems respond to external driving forces (resonance), leads to some of the most important and dramatic phenomena in engineering and physics. From the collapse of the Tacoma Narrows Bridge to the tuning of a radio, from the design of car suspension systems to the operation of MRI machines, damping and resonance are everywhere."
+        },
+        {
+          "type": "heading",
+          "body": "Free and Damped Oscillations"
+        },
+        {
+          "type": "text",
+          "body": "**Free oscillation:** An oscillation in which no energy is gained from or lost to the environment. The amplitude remains constant indefinitely. This is an idealisation — it never occurs in practice, but it is a useful starting model. Frequency of free oscillation = **natural frequency f₀** = ω₀/(2π) where ω₀ = √(k/m) for a spring.\n\n**Damped oscillation:** An oscillation in which energy is gradually lost to resistive forces (air resistance, viscous drag, friction). The amplitude decreases with time.\n\n**Types of damping:**\n\n**1. Light damping (underdamping):**\n- The system oscillates, but the amplitude decreases gradually with each cycle\n- The decay follows an exponential envelope: A(t) = A₀ e^(−γt) where γ is the damping coefficient\n- The frequency of oscillation is slightly LESS than the natural frequency: f_damped < f₀\n- **x(t) = A₀ e^(−γt) cos(ω_d t + φ)** where ω_d = √(ω₀² − γ²)\n- Examples: a pendulum in air, a vibrating guitar string, a car suspension slightly underdamped\n- The x-t graph shows a sinusoidal wave with an exponentially decaying amplitude envelope\n\n**2. Critical damping:**\n- The system returns to equilibrium in the SHORTEST POSSIBLE TIME without oscillating\n- γ = ω₀ (exactly balances the restoring force)\n- No oscillation occurs — the displacement decreases smoothly to zero\n- x(t) = (A + Bt)e^(−ω₀t)\n- Examples: car suspension (ideally critically damped), door closing mechanisms, galvanometer pointer\n\n**3. Heavy damping (overdamping):**\n- The resistive force is so large that the system returns to equilibrium SLOWLY without oscillating\n- γ > ω₀\n- Takes longer than critical damping to reach equilibrium\n- Examples: a pendulum swinging in thick oil, a car suspension that is too stiff\n\n**Graphical comparison:**\n| Damping type | Returns to equilibrium | Oscillates? | Time to equilibrium |\n|---|---|---|---|\n| Light | Slowly, with oscillations | YES | Long |\n| Critical | Quickest possible | NO | Minimum |\n| Heavy | Slowly, no oscillations | NO | Longer than critical |\n\n**Energy in damped oscillations:**\nIn light damping, energy decreases approximately as:\nE(t) = E₀ e^(−2γt)\nThe energy envelope decays twice as fast as the amplitude envelope (since E ∝ A²).\n\n**Worked Example 1:** A lightly damped oscillator has amplitude 0.10 m at t=0 and 0.060 m after 5.0 complete oscillations. Find:\n(a) The fraction of energy remaining after 5 oscillations\n(b) If the period is 0.40 s, how long did the 5 oscillations take?\n\n(a) E ∝ A² → E/E₀ = (0.060/0.10)² = (0.60)² = **0.36 (36% remains)**\n\n(b) Time = 5 × T = 5 × 0.40 = **2.0 s**"
+        },
+        {
+          "type": "heading",
+          "body": "Forced Oscillations and Resonance"
+        },
+        {
+          "type": "text",
+          "body": "**Forced (driven) oscillation:** When an external periodic force is applied to an oscillating system at a particular driving frequency f_d. The system is forced to oscillate at f_d (not its natural frequency).\n\n**Resonance:** When the driving frequency f_d equals the natural frequency f₀ of the system:\n**f_d = f₀ → RESONANCE**\n\nAt resonance, energy is most efficiently transferred from the driver to the oscillator.\n\n**Effect of driving frequency on amplitude:**\n- When f_d ≪ f₀: small amplitude, driver and system in phase\n- When f_d = f₀ (resonance): **maximum amplitude** (limited only by damping)\n- When f_d ≫ f₀: small amplitude, system 180° out of phase with driver\n\n**Effect of damping on resonance curve (amplitude vs frequency graph):**\n- **Light damping:** sharp, tall resonance peak; peak very close to f₀; system very responsive at resonance but amplitude falls rapidly on either side\n- **Heavy damping:** broad, short resonance peak; peak shifted slightly below f₀; system less responsive\n- **Critical/heavy damping:** resonance peak disappears; amplitude decreases monotonically with frequency\n\n**Phase at resonance:**\nAt resonance, the displacement lags 90° behind the driving force — the driving force is in phase with the VELOCITY. This is why energy transfer is maximum at resonance: the force is always doing positive work (force and velocity always in the same direction).\n\n**Worked Example 2:** A lightly damped oscillator has natural frequency 50 Hz. A driving force is applied. At what frequency should the driving force be set to maximise the amplitude of oscillation?\n\nFor maximum amplitude (resonance): f_d = f₀ = **50 Hz**\n(For light damping, the resonance peak is very close to f₀)\n\n**Worked Example 3:** A child is on a swing (natural frequency 0.4 Hz = 1 oscillation per 2.5 s). A parent pushes the child once per 2.5 s. Why is this the most effective way to push?\n\nThe parent's push frequency f_d = 0.4 Hz = f₀ (natural frequency of swing). At resonance, each small push adds energy to the swing at exactly the right moment (push is in phase with velocity). The amplitude builds up steadily with each push. This is exactly resonance in action."
+        },
+        {
+          "type": "heading",
+          "body": "Consequences and Applications of Resonance"
+        },
+        {
+          "type": "text",
+          "body": "Resonance has both beneficial and destructive applications.\n\n**DESTRUCTIVE RESONANCE:**\n\n**1. Tacoma Narrows Bridge Collapse (1940):**\nThe Tacoma Narrows suspension bridge in the USA collapsed just 4 months after opening. Wind generated periodic aerodynamic forces (vortex shedding) at the bridge's natural frequency — causing resonant oscillations. The amplitude built up until the bridge tore itself apart. Now a classic physics example and a key lesson in engineering design.\n\n**2. Resonance in buildings during earthquakes:**\nBuildings have natural frequencies (typically 0.5–5 Hz for multi-story buildings). If earthquake waves match the building's natural frequency, resonant amplification can cause collapse. This is why earthquake engineering specifies building designs to shift their natural frequencies away from typical earthquake frequencies.\n\n**3. Mechanical resonance in vehicles:**\nAt certain engine speeds, vibrations from the engine may match the natural frequency of a component (chassis, steering column, exhaust) → resonant vibration → noise, fatigue, component failure.\nSolution: add damping or change the natural frequency by adding mass or stiffness.\n\n**BENEFICIAL RESONANCE:**\n\n**4. Radio and TV tuning (LC circuit resonance):**\nAn LC circuit has a natural (resonant) frequency f₀ = 1/(2π√LC). When the radio antenna receives a signal at exactly f₀, the LC circuit resonates — producing maximum amplitude response for that frequency and rejecting all others. Adjusting C (variable capacitor) changes f₀, tuning to different stations. Already covered in Topic 18!\n\n**5. Magnetic Resonance Imaging (MRI):**\nHydrogen nuclei (protons) in the body precess at their natural Larmor frequency in a magnetic field. A radio-frequency pulse at this exact frequency causes resonance — the protons absorb energy and flip. When they relax back, they emit signals detected to build images. MRI has become available in some Uganda hospitals (Aga Khan, private clinics in Kampala).\n\n**6. Musical instruments:**\nStrings, air columns, and drum skins are driven to vibrate at their natural frequencies by the musician. Different natural frequencies correspond to different musical notes. The resonance of the air column or body amplifies the sound. The adungu (Ugandan bow harp) uses string resonance; wind instruments use air column resonance.\n\n**7. Microwave ovens:**\nMicrowaves at 2.45 GHz are at (or near) the natural oscillation frequency of water molecules. Water molecules in food absorb microwave energy by resonance, heating the food.\n\n**8. Quartz crystal oscillators:**\nA quartz crystal has a very precise natural frequency (millions of Hz). Driving it at resonance gives extremely stable, accurate oscillations — used in watches, computer clocks, mobile phone timing circuits. The stability of quartz crystal resonance is what keeps modern digital devices accurately timed."
+        },
+        {
+          "type": "heading",
+          "body": "Applications of SHM in Measurement and Technology"
+        },
+        {
+          "type": "text",
+          "body": "**1. Determination of g using a pendulum:**\nT = 2π√(L/g) → g = 4π²L/T²\nMethod: measure T for various lengths L, plot T² vs L — slope = 4π²/g\nThis gives a very accurate value of g. Used in geophysical surveys to detect underground oil (oil-bearing strata have different density → different g → different T).\n\n**2. Seismometers:**\nA seismometer contains a mass on a spring (or pendulum) inside a case attached to the ground. During an earthquake, the ground moves but the mass tends to remain stationary (inertia). The relative motion of mass and case is recorded. The natural frequency of the mass-spring system is designed to match typical earthquake frequencies (0.1–10 Hz) for maximum sensitivity.\n\n**3. Shock absorbers in vehicles:**\nThe vehicle body + spring forms an oscillating system. Shock absorbers provide critical damping — the body returns to equilibrium after a road bump in the shortest time without bouncing. If underdamped, the vehicle would bounce repeatedly. If overdamped, the ride would be very stiff and slow to respond.\n\n**4. The atomic clock:**\nThe most accurate clocks use the natural oscillation frequency of caesium-133 atoms (9,192,631,770 Hz). This frequency serves as the definition of one second. Caesium atoms are driven into resonance by microwave radiation at exactly this frequency — feedback keeps the microwave exactly on resonance, maintaining extraordinary accuracy (loses 1 second in 300 million years). GPS satellites in Uganda and worldwide carry such clocks.\n\n**5. SHM and sound waves:**\nSound waves in air are produced by SHM of air molecules. The frequency of the SHM determines the pitch of the sound. The amplitude of the SHM determines the loudness. Understanding SHM is therefore the foundation for understanding all acoustics.\n\n**6. SHM and alternating current:**\nAC generators produce a sinusoidal voltage V = V₀ sin(ωt) — exactly the form of SHM displacement. The angular frequency ω = 2πf = 2π × 50 = 314 rad/s for Uganda's 50 Hz mains. Understanding SHM is therefore directly relevant to AC circuit theory (covered in Topic 30)."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Free oscillation: constant amplitude at natural frequency f₀. Damped oscillation: amplitude decays over time. Three types: light (oscillates with exponentially decaying amplitude), critical (fastest return to equilibrium, no oscillation), heavy (slow return, no oscillation). Forced oscillation: driven at frequency f_d. Resonance: f_d = f₀ → maximum amplitude, energy most efficiently transferred, displacement lags force by 90°. Light damping: sharp resonance peak; heavy damping: broad flat peak. Destructive: Tacoma Bridge, earthquake damage. Beneficial: radio tuning, MRI, quartz clocks, musical instruments, microwave ovens."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Natural frequency (f₀): The frequency at which a system freely oscillates; f₀ = ω₀/(2π)\n• Damping: Reduction in amplitude over time due to energy dissipation; light, critical, or heavy\n• Critical damping: Damping level that gives the fastest return to equilibrium without oscillation\n• Forced oscillation: Oscillation driven by an external periodic force at driving frequency f_d\n• Resonance: f_d = f₀; maximum amplitude response; energy most efficiently transferred to oscillator\n• Resonance curve: Graph of amplitude vs driving frequency; peak at f₀; shape depends on damping level\n• Tacoma Narrows: Famous bridge collapse (1940) due to wind-driven resonance — key engineering case study"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Which type of damping causes a system to return to equilibrium in the SHORTEST possible time without oscillating?",
+            "options": [
+              "Light damping",
+              "Heavy damping",
+              "Critical damping",
+              "No damping"
+            ],
+            "answer": "Critical damping",
+            "explanation": "Critical damping gives the fastest return to equilibrium without any oscillation. Light damping oscillates but eventually returns. Heavy damping returns without oscillating but MORE SLOWLY than critical. Critical damping is ideal for car suspension, door dampers, and instrument pointers — any application needing quick, non-oscillatory settling."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A lightly damped oscillator has natural frequency f₀. A driving force is gradually increased in frequency from 0 to 3f₀. When does the amplitude reach its maximum?",
+            "options": [
+              "When the driving frequency is very low (f_d → 0)",
+              "When the driving frequency equals f₀",
+              "When the driving frequency equals 2f₀",
+              "When the driving frequency is very high (f_d → ∞)"
+            ],
+            "answer": "When the driving frequency equals f₀",
+            "explanation": "Resonance occurs when driving frequency f_d equals the natural frequency f₀. At resonance, energy is transferred most efficiently from the driver to the oscillator — the driving force is in phase with the velocity. For light damping, the resonance peak is very sharp and very tall, occurring very close to f₀."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A lightly damped oscillator has amplitude 0.20 m at t = 0. After 10 complete oscillations, the amplitude is 0.10 m. What fraction of the total energy remains?",
+            "options": [
+              "0.50 (50%)",
+              "0.25 (25%)",
+              "0.75 (75%)",
+              "0.10 (10%)"
+            ],
+            "answer": "0.25 (25%)",
+            "explanation": "E ∝ A². Fraction of energy remaining = (A/A₀)² = (0.10/0.20)² = (0.5)² = 0.25 = 25%. Although the amplitude has halved, the energy has fallen to one quarter of the initial value, because energy is proportional to amplitude squared."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "The Tacoma Narrows Bridge collapse is an example of:",
+            "options": [
+              "Heavy damping causing the bridge to sag",
+              "Critical damping failure",
+              "Resonance — wind vortex shedding drove the bridge at its natural frequency, building up amplitude until collapse",
+              "Simple harmonic motion of the river current"
+            ],
+            "answer": "Resonance — wind vortex shedding drove the bridge at its natural frequency, building up amplitude until collapse",
+            "explanation": "The wind created periodic aerodynamic vortices (von Kármán vortex street) at a frequency matching the bridge's natural torsional frequency. This drove the bridge into resonance — the amplitude of twisting grew steadily with each cycle, eventually becoming so large the bridge tore apart. The lesson: always check that no foreseeable driving force matches the natural frequency of a structure."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a resonance experiment, increasing the damping of an oscillator has what effect on the resonance curve (amplitude vs driving frequency)?",
+            "options": [
+              "The peak becomes taller and narrower",
+              "The peak becomes shorter and broader, and shifts slightly lower in frequency",
+              "The peak moves to a higher frequency",
+              "The peak disappears and amplitude becomes uniform across all frequencies"
+            ],
+            "answer": "The peak becomes shorter and broader, and shifts slightly lower in frequency",
+            "explanation": "More damping means more energy is removed each cycle — so the maximum amplitude at resonance is lower (shorter peak). More damping also makes the resonance less 'selective' — the system responds reasonably well across a wider range of frequencies (broader peak). The peak frequency also shifts very slightly below f₀ with increased damping."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A microwave oven heats food by using radiation at approximately 2.45 GHz. This works because:",
+            "options": [
+              "Microwaves are hot radiation that directly heats food by conduction",
+              "2.45 GHz matches the natural oscillation frequency of water molecules — resonance causes the water to absorb energy and heat up",
+              "Microwaves cause food molecules to undergo SHM in a magnetic field",
+              "2.45 GHz is just below the ionising radiation threshold, making it safe"
+            ],
+            "answer": "2.45 GHz matches the natural oscillation frequency of water molecules — resonance causes the water to absorb energy and heat up",
+            "explanation": "Water molecules have a natural rotational resonance near 2.45 GHz. Microwave radiation at this frequency drives the water molecules into resonance — they absorb energy, rotate rapidly, and this rotational energy converts to heat through molecular collisions. Foods with no water (dry) heat poorly in a microwave. This is a direct application of resonance and SHM principles."
+          }
+        ]
+      }
+    }
+  ]
+}

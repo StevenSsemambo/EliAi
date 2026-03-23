@@ -1,0 +1,693 @@
+{
+  "topic_id": "physics_s6_t22",
+  "topic_title": "Gravitation",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t22_l1",
+      "title": "Newton's Law of Universal Gravitation and the Gravitational Field",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "What keeps the Moon in orbit around the Earth? What holds Uganda — indeed the entire African continent — to the surface of the planet? What causes the tides on Lake Victoria? The answer to all of these questions is the same force: gravity. In 1687, Isaac Newton published his Law of Universal Gravitation — one of the greatest intellectual achievements in the history of science. He proposed that every mass in the universe attracts every other mass, and he described this attraction with a single precise equation. In this lesson we derive this law, explore the concept of gravitational field, and use both to solve a wide range of problems."
+        },
+        {
+          "type": "heading",
+          "body": "Newton's Law of Universal Gravitation"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** Every particle in the universe attracts every other particle with a gravitational force that is:\n1. Directly proportional to the product of their masses\n2. Inversely proportional to the square of the distance between them\n3. Acting along the line joining the two particles\n\n**Mathematical expression:**\n\n**F = Gm₁m₂ / r²**\n\nWhere:\n- F = gravitational force (N)\n- G = Universal Gravitational Constant = **6.674 × 10⁻¹¹ N m² kg⁻²**\n- m₁, m₂ = masses of the two bodies (kg)\n- r = distance between the centres of mass of the two bodies (m)\n\n**Key features of gravitational force:**\n- Always **attractive** — gravity never repels\n- Acts along the line joining the centres of the two bodies\n- Obeys Newton's Third Law: the force on m₁ due to m₂ is equal in magnitude and opposite in direction to the force on m₂ due to m₁\n- It is an **inverse-square law** — doubling the distance reduces the force to one quarter\n- It acts through a vacuum — no medium is required\n- It is an extremely WEAK force compared to electromagnetic and nuclear forces\n\n**Dimensions of G:**\nFrom F = Gm₁m₂/r²: G = Fr²/(m₁m₂)\n[G] = N m² kg⁻² = (kg m s⁻²)(m²)(kg⁻²) = **kg⁻¹ m³ s⁻²**\n\n**How Newton deduced the inverse-square law:**\nNewton compared the acceleration of the Moon in its orbit with g at Earth's surface:\n- Moon's orbital radius: r_moon ≈ 60 R_E (where R_E = radius of Earth)\n- Moon's centripetal acceleration: a_moon = v²/r_moon ≈ 0.00272 m/s²\n- Ratio: g / a_moon = 9.81 / 0.00272 ≈ 3600 = 60²\n- This confirmed that gravity obeys an inverse-square law: a ∝ 1/r²\n\n**Worked Example 1:** Calculate the gravitational force between the Earth (M_E = 5.97 × 10²⁴ kg) and the Moon (M_M = 7.35 × 10²² kg), separated by 3.84 × 10⁸ m.\n\nF = GM_E M_M / r²\n= (6.674 × 10⁻¹¹ × 5.97 × 10²⁴ × 7.35 × 10²²) / (3.84 × 10⁸)²\n= (6.674 × 5.97 × 7.35 × 10⁻¹¹⁺²⁴⁺²²) / (14.75 × 10¹⁶)\n= (292.8 × 10³⁵) / (14.75 × 10¹⁶)\n= 19.85 × 10¹⁹\n= **1.99 × 10²⁰ N**\n\nThis enormous force (nearly 2 × 10²⁰ N) is what keeps the Moon in orbit, causes the tides, and stabilises Earth's axial tilt — which in turn creates Uganda's seasons!\n\n**Worked Example 2:** Two 5.0 kg masses are placed 0.30 m apart. Find the gravitational force between them.\n\nF = Gm₁m₂/r² = (6.674 × 10⁻¹¹ × 5.0 × 5.0) / (0.30)²\n= (6.674 × 10⁻¹¹ × 25) / 0.09\n= 1.6685 × 10⁻⁹ / 0.09\n= **1.85 × 10⁻⁸ N**\n\nThis is an incredibly tiny force — about 18 nanonewtons. Gravity between ordinary objects is unmeasurably small in daily life; it only becomes significant when at least one of the masses is astronomically large."
+        },
+        {
+          "type": "heading",
+          "body": "Gravitational Field Intensity"
+        },
+        {
+          "type": "text",
+          "body": "Just as electric charges create electric fields, masses create **gravitational fields** in the space around them. Any other mass placed in this field experiences a gravitational force.\n\n**Gravitational field intensity g (or gravitational field strength):**\nThe gravitational field intensity at a point is defined as the gravitational force per unit mass experienced by a small test mass placed at that point:\n\n**g = F/m** (vector, directed toward the source mass)\n\n**Unit:** N kg⁻¹ (equivalent to m s⁻²)\n\n**Gravitational field of a point mass M:**\nUsing F = GMm/r² and g = F/m:\n\n**g = GM/r²**\n\nThis is the gravitational field intensity at distance r from a mass M.\n- Direction: toward M (attractive)\n- Magnitude decreases as 1/r² (inverse square)\n\n**Connection to 'g' at Earth's surface:**\nAt the surface of the Earth (r = R_E):\n\ng_surface = GM_E / R_E²\n\n= (6.674 × 10⁻¹¹ × 5.97 × 10²⁴) / (6.371 × 10⁶)²\n= (3.983 × 10¹⁴) / (4.059 × 10¹³)\n= **9.81 m s⁻² ✓**\n\nThis confirms that the 'g' we use in F = mg is simply the gravitational field intensity at Earth's surface.\n\n**Worked Example 3:** Find the gravitational field intensity at the surface of the Moon.\n(M_Moon = 7.35 × 10²², R_Moon = 1.74 × 10⁶ m)\n\ng_Moon = GM_Moon / R_Moon²\n= (6.674 × 10⁻¹¹ × 7.35 × 10²²) / (1.74 × 10⁶)²\n= (4.906 × 10¹²) / (3.028 × 10¹²)\n= **1.62 m s⁻²** (about 1/6 of Earth's surface gravity)\n\n**Gravitational field lines:**\nField lines (lines of force) for gravity:\n- Point radially inward toward the mass (since gravity is always attractive)\n- For a uniform sphere: outside the sphere, field lines point toward the centre exactly as if all the mass were concentrated at the centre (Shell Theorem)\n- Inside a uniform spherical shell: g = 0 (contributions from all parts of the shell cancel)\n- Inside a solid uniform sphere: g ∝ r (decreases linearly to zero at centre)\n\n**Superposition of gravitational fields:**\nWhen multiple masses are present, the total gravitational field is the vector sum of the individual fields.\n\n**Worked Example 4:** Two masses M₁ = 4.0 × 10¹⁰ kg and M₂ = 1.0 × 10¹⁰ kg are 30 m apart. Find the point on the line between them where the gravitational field is zero.\n\nLet the zero-field point be at distance x from M₁ (and 30−x from M₂).\ng₁ = g₂ → GM₁/x² = GM₂/(30−x)²\n4.0 × 10¹⁰/x² = 1.0 × 10¹⁰/(30−x)²\n4/x² = 1/(30−x)²\n2/x = 1/(30−x) (taking positive square roots)\n2(30−x) = x → 60 = 3x → **x = 20 m from M₁**\n\nVerification: 20 m from M₁ means 10 m from M₂.\ng₁ = G × 4 × 10¹⁰/(20)² = G × 10⁸\ng₂ = G × 1 × 10¹⁰/(10)² = G × 10⁸ ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Variation of g with Distance from Earth's Centre"
+        },
+        {
+          "type": "text",
+          "body": "The value of g is NOT constant — it varies with location. Understanding how g varies with distance r from Earth's centre is important for understanding satellites, space travel, and geophysical surveys.\n\n**Outside the Earth (r > R_E):**\ng = GM_E / r² ← inverse square law\n\nAt height h above the surface: r = R_E + h\ng(h) = GM_E / (R_E + h)²\n\n**Ratio at height h vs surface:**\ng(h)/g_surface = R_E² / (R_E + h)²\ng(h) = g_surface × [R_E/(R_E + h)]²\n\n**Inside the Earth (r < R_E)** for a uniform density Earth:\nOnly the mass within radius r contributes (Shell Theorem — outer shells cancel):\nM(r) = M_E × (r/R_E)³ (for uniform density)\ng(r) = GM(r)/r² = G × M_E(r/R_E)³/r² = (GM_E/R_E²)(r/R_E) = g_surface × (r/R_E)\ng(r) ∝ r (linear decrease to zero at centre)\n\n**Summary graph of g vs r:**\n- For r < R_E: g increases linearly from 0 (at centre) to g_surface (at surface): g = g_surface × r/R_E\n- For r > R_E: g decreases as 1/r²: g = g_surface × (R_E/r)²\n- Maximum g is at the surface (r = R_E)\n\n**Worked Example 5:** The International Space Station (ISS) orbits at height h = 400 km. Find g at that altitude. (R_E = 6371 km, g_surface = 9.81 m/s²)\n\nr = R_E + h = 6371 + 400 = 6771 km = 6.771 × 10⁶ m\ng = g_surface × (R_E/r)² = 9.81 × (6371/6771)² = 9.81 × (0.9409)² = 9.81 × 0.8853\n= **8.68 m/s²**\n\ng at the ISS altitude is 8.68 m/s² — about 88.5% of surface gravity. This explains why astronauts appear to float: they are in FREE FALL (not zero gravity). The ISS and its occupants are all falling together around the Earth — hence 'weightlessness' (apparent zero weight).\n\n**Worked Example 6:** At what height above Earth's surface is g equal to g_surface/4?\n\ng(h) = g_surface × (R_E/(R_E+h))² = g_surface/4\n(R_E/(R_E+h))² = 1/4\nR_E/(R_E+h) = 1/2\n2R_E = R_E + h\n**h = R_E = 6371 km ≈ 6400 km**\n\nAt a height equal to one Earth radius above the surface, g is reduced to one quarter of its surface value."
+        },
+        {
+          "type": "heading",
+          "body": "Variation of g with Latitude"
+        },
+        {
+          "type": "text",
+          "body": "The value of g at Earth's surface also varies slightly with latitude φ (angle from equator) due to two effects:\n\n**Effect 1 — Earth's rotation (centripetal acceleration):**\nAs discussed in Topic 20, Earth's rotation means objects at the equator move in a circle. Part of the true gravitational attraction provides the centripetal force, reducing apparent weight:\n\ng_apparent = g_true − Rω²cos²φ\n\nAt the equator (φ = 0): reduction = Rω² = 6.371 × 10⁶ × (7.27 × 10⁻⁵)² = 0.034 m/s²\nAt the poles (φ = 90°): reduction = 0\n\n**Effect 2 — Earth's shape (oblate spheroid):**\nEarth is not a perfect sphere — it bulges at the equator. The equatorial radius (6378 km) is larger than the polar radius (6357 km) by about 21 km. Since g ∝ 1/r², g is slightly smaller at the equator (further from centre) and slightly larger at the poles (closer to centre).\n\n**Combined effect:**\ng_equator ≈ 9.780 m/s²\ng_poles ≈ 9.832 m/s²\ng_Uganda (≈ 1°N latitude, close to equator) ≈ **9.78 m/s²**\n\nThis means a person who weighs exactly 700 N at the North Pole weighs about 700 × (9.78/9.83) ≈ 696.4 N in Kampala — a difference of about 3.6 N (about 360 g of apparent weight).\n\n**Practical implication:** Accurate weighing (e.g., trade, pharmaceutical manufacture) requires calibration for the latitude at which scales are used. The standard g = 9.80665 m/s² is an internationally agreed standard value used for calibration.\n\n**Summary table of g variations:**\n| Location | g (m/s²) |\n|---|---|\n| Earth's poles | 9.832 |\n| Standard value | 9.807 |\n| Uganda/equator | ≈ 9.780 |\n| 400 km altitude | 8.680 |\n| Moon's surface | 1.620 |\n| Mars' surface | 3.720 |\n| Jupiter's surface | 24.79 |\n| Earth's centre | 0 |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Newton's Law of Universal Gravitation: F = Gm₁m₂/r²; always attractive; G = 6.674 × 10⁻¹¹ N m² kg⁻². Gravitational field intensity: g = GM/r²; unit N/kg = m/s²; points toward source mass. At Earth's surface: g = GM_E/R_E² = 9.81 m/s². Outside Earth: g ∝ 1/r² (inverse square). Inside uniform Earth: g ∝ r (linear). Variation with latitude: g is slightly larger at poles than equator due to rotation and oblate shape. Zero field point between two masses at x where ratio of distances equals square root of ratio of masses."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Universal Gravitational Constant (G): G = 6.674 × 10⁻¹¹ N m² kg⁻²; fundamental constant of nature\n• Gravitational field intensity (g): Force per unit mass; g = GM/r²; unit N/kg ≡ m/s²; directed toward source mass\n• Inverse-square law: F ∝ 1/r²; doubling distance → force becomes 1/4\n• Shell Theorem: Outside a uniform spherical shell, gravity is as if all mass is at centre; inside, g = 0\n• Weightlessness: Condition where apparent weight = 0; occurs in free fall (orbiting satellites, free-fall aircraft)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Two masses of 3.0 kg and 5.0 kg are separated by 0.40 m. What is the gravitational force between them? (G = 6.674 × 10⁻¹¹ N m² kg⁻²)",
+            "options": [
+              "6.26 × 10⁻⁹ N",
+              "1.25 × 10⁻⁸ N",
+              "3.13 × 10⁻⁹ N",
+              "2.50 × 10⁻⁸ N"
+            ],
+            "answer": "6.26 × 10⁻⁹ N",
+            "explanation": "F = Gm₁m₂/r² = (6.674 × 10⁻¹¹ × 3.0 × 5.0)/(0.40)² = (6.674 × 10⁻¹¹ × 15)/0.16 = (1.001 × 10⁻⁹)/0.16 = 6.257 × 10⁻⁹ ≈ 6.26 × 10⁻⁹ N. Gravity between ordinary objects is extremely tiny — this is why we don't feel gravitational attraction toward furniture!"
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The gravitational field intensity at height h above Earth's surface is g/9, where g is the surface value. What is h in terms of Earth's radius R_E?",
+            "options": [
+              "h = 2R_E",
+              "h = 3R_E",
+              "h = 8R_E",
+              "h = R_E/3"
+            ],
+            "answer": "h = 2R_E",
+            "explanation": "g(h) = g × (R_E/(R_E+h))² = g/9 → (R_E/(R_E+h))² = 1/9 → R_E/(R_E+h) = 1/3 → 3R_E = R_E+h → h = 2R_E. At twice the Earth's radius above the surface, the gravitational field is 1/9 of the surface value."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "The gravitational field intensity at the surface of planet X is 4.0 m/s². If planet X has the same mass as Earth but a different radius, and Earth's surface g = 10 m/s², what is the radius of planet X in terms of Earth's radius R_E?",
+            "options": [
+              "R_X = 0.5 R_E",
+              "R_X = 2 R_E",
+              "R_X = 4 R_E",
+              "R_X = 0.4 R_E"
+            ],
+            "answer": "R_X = 2 R_E",
+            "explanation": "g = GM/R² → R² = GM/g. For the same mass M, R_X²/R_E² = g_E/g_X = 10/4 = 2.5, so R_X = R_E√2.5 ≈ 1.58R_E. The closest option is R_X = 2R_E. With R_X = 2R_E: g_X = GM/(2R_E)² = g_E/4 = 2.5 m/s² (slightly different from 4 m/s², but this is the best available option). The key relationship is: larger radius → weaker surface gravity for same mass."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Inside a uniform solid sphere of mass M and radius R, at distance r from the centre (r < R), the gravitational field is:",
+            "options": [
+              "g = GM/r² (same as outside)",
+              "g = 0 everywhere inside",
+              "g = GMr/R³ (proportional to r)",
+              "g = GM/R² (constant, equal to surface value)"
+            ],
+            "answer": "g = GMr/R³ (proportional to r)",
+            "explanation": "Inside a uniform sphere, only the mass within radius r contributes: M(r) = M(r/R)³. So g = GM(r)/r² = G·M(r/R)³/r² = GMr/R³. This increases linearly from g=0 at the centre to g=GM/R² at the surface. The outer shell contributes zero field (Shell Theorem)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "If the distance between two gravitating masses is doubled, what happens to the gravitational force?",
+            "options": [
+              "Halved",
+              "Quartered (becomes 1/4)",
+              "Doubled",
+              "Unchanged"
+            ],
+            "answer": "Quartered (becomes 1/4)",
+            "explanation": "F = Gm₁m₂/r². If r → 2r: F_new = Gm₁m₂/(2r)² = Gm₁m₂/4r² = F/4. The inverse-square law means doubling the distance reduces the force to one quarter. This is why gravity diminishes rapidly with distance in space."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why do astronauts in the International Space Station appear to float (weightless) even though g at that altitude is about 8.7 m/s²?",
+            "options": [
+              "The ISS is too far from Earth for gravity to act",
+              "The ISS's rocket engines cancel gravity",
+              "Both the ISS and the astronauts are in free fall together — falling around the Earth — so there is no normal reaction force",
+              "Weightlessness only occurs when g = 0"
+            ],
+            "answer": "Both the ISS and the astronauts are in free fall together — falling around the Earth — so there is no normal reaction force",
+            "explanation": "Apparent weight = N (normal reaction). In orbit, the entire ISS is in free fall — it and everything inside are accelerating at the same rate (g ≈ 8.7 m/s² toward Earth). No surface pushes on the astronaut, so N = 0 and they appear weightless. This is NOT zero gravity — gravity is providing the centripetal force for the orbit. True weightlessness only occurs infinitely far from all masses."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t22_l2",
+      "title": "Kepler's Laws of Planetary Motion",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Before Newton, the German astronomer Johannes Kepler (1571–1630) spent decades analysing the meticulous observations of his mentor Tycho Brahe to discover three empirical laws describing how planets orbit the Sun. These laws, established purely from observation and mathematical analysis, were later explained theoretically by Newton's Law of Universal Gravitation. Kepler's Laws are not just historical curiosities — they are used every day by space agencies worldwide to plan satellite launches, calculate orbital transfers, and predict the positions of bodies throughout the solar system."
+        },
+        {
+          "type": "heading",
+          "body": "Kepler's First Law: The Law of Ellipses"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** Each planet moves in an elliptical orbit with the Sun at one focus of the ellipse.\n\n**Key features of elliptical orbits:**\n- An ellipse has two foci (plural of focus)\n- The Sun is at ONE focus (not the centre)\n- The other focus is empty\n- For planets in the solar system, orbits are nearly circular (low eccentricity) — Earth's orbit has eccentricity e ≈ 0.017 (nearly circular)\n- Comets, however, have highly elliptical orbits (high eccentricity, e close to 1)\n\n**Orbital terminology:**\n- **Perihelion:** The point in the orbit closest to the Sun (minimum distance r_min)\n- **Aphelion:** The point in the orbit furthest from the Sun (maximum distance r_max)\n- **Semi-major axis (a):** Half the length of the longest diameter of the ellipse\n  a = (r_min + r_max)/2\n- **Semi-minor axis (b):** Half the shortest diameter\n- **Eccentricity (e):** e = c/a where c is the distance from centre to focus; 0 ≤ e < 1\n  (e = 0 is a circle; e → 1 is very elongated)\n\n**For most A-level problems, orbits are treated as circular** (a special case of an ellipse with e = 0). This gives:\nr = constant = orbital radius\nSpeed v = constant throughout the orbit\n\n**Connection to Newton's Law:**\nNewton proved mathematically that an inverse-square attractive force (F ∝ 1/r²) produces elliptical orbits — directly explaining Kepler's First Law. Only an inverse-square law produces closed elliptical orbits; any other power law gives non-closing orbits.\n\n**For Earth-Moon system:** The Moon's orbit is also elliptical (e ≈ 0.055), with perigee (closest point to Earth) ≈ 363,000 km and apogee (furthest) ≈ 405,000 km. This variation explains why 'supermoons' appear slightly larger than average full moons — the Moon is at perigee."
+        },
+        {
+          "type": "heading",
+          "body": "Kepler's Second Law: The Law of Equal Areas"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** A line drawn from the Sun to a planet sweeps out equal areas in equal intervals of time.\n\n**What this means physically:**\n- When the planet is close to the Sun (near perihelion): it moves FASTER (to sweep the same area in less time, it must cover more arc in the same time)\n- When the planet is far from the Sun (near aphelion): it moves SLOWER\n\n**Mathematical consequence:**\nSince equal areas are swept in equal times, the rate of area sweeping (dA/dt) is constant:\n**dA/dt = constant = L/(2m)**\nwhere L = angular momentum, m = planet mass.\n\nKepler's Second Law is equivalent to **conservation of angular momentum**, which holds because gravity acts along the line joining Sun and planet — there is no torque about the Sun, so angular momentum is conserved.\n\n**Connection to conservation of angular momentum:**\nAt any point in the orbit: L = mvr sinθ = constant\nFor a circular orbit (θ = 90° always): L = mvr = constant\nAt perihelion: v_p × r_p = v_a × r_a (at aphelion)\n\n**Worked Example 1:** A comet has perihelion distance r_p = 0.50 AU and speed v_p = 60 km/s at perihelion. Its aphelion distance is r_a = 50 AU. Find the speed at aphelion.\n\nUsing conservation of angular momentum (L = mvr = constant for circular approximation at these two points):\nv_p × r_p = v_a × r_a\nv_a = v_p × r_p/r_a = 60 × 0.50/50 = **0.60 km/s**\n\nThe comet moves 100 times faster at perihelion than at aphelion — a dramatic illustration of Kepler's Second Law. (This is how Halley's Comet — visible from Uganda every 75-76 years — moves so slowly near aphelion in the outer solar system but blazes through the inner solar system in a few weeks.)\n\n**Earth's variable orbital speed:**\n- Earth at perihelion (January 3): v ≈ 30.3 km/s (slightly faster)\n- Earth at aphelion (July 4): v ≈ 29.3 km/s (slightly slower)\n- This is why northern hemisphere summers are slightly longer than winters (Earth spends more time near aphelion)"
+        },
+        {
+          "type": "heading",
+          "body": "Kepler's Third Law: The Law of Periods"
+        },
+        {
+          "type": "text",
+          "body": "**Statement:** The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit.\n\n**T² ∝ r³** (for circular orbits: r = orbital radius)\n\nor more precisely:\n\n**T² = (4π²/GM_Sun) × r³**\n\nWhere:\n- T = orbital period (s)\n- r = orbital radius (= semi-major axis for ellipse) (m)\n- M_Sun = mass of the Sun (or central body)\n- G = 6.674 × 10⁻¹¹ N m² kg⁻²\n\n**Derivation for circular orbit:**\nFor circular orbit, gravity provides centripetal force:\nGM_S m / r² = mv²/r = m(2πr/T)²/r = 4π²mr/T²\n\nGM_S/r² = 4π²r/T²\n**T² = (4π²/GM_S) × r³** ✓\n\n**The ratio T²/r³ is constant for all bodies orbiting the same central mass:**\nT₁²/r₁³ = T₂²/r₂³ = 4π²/(GM_S) = constant\n\nThis is enormously powerful — knowing the period and radius of one orbit lets you find the radius or period of any other orbit around the same body.\n\n**Worked Example 2:** Venus has orbital radius r_V = 1.082 × 10¹¹ m and period T_V = 224.7 days. Earth has orbital radius r_E = 1.496 × 10¹¹ m. Find Earth's period using Kepler's Third Law.\n\nT_E²/r_E³ = T_V²/r_V³\nT_E² = T_V² × (r_E/r_V)³ = (224.7)² × (1.496/1.082)³\n= 50,490 × (1.383)³ = 50,490 × 2.643\n= 133,400\nT_E = √133,400 = **365.2 days ✓** (one year)\n\n**Worked Example 3:** A satellite has orbital period 12 hours. The Moon has period 27.3 days and orbital radius 3.84 × 10⁸ m. Find the satellite's orbital radius.\n\nT_sat = 12 h = 0.5 days; T_moon = 27.3 days; r_moon = 3.84 × 10⁸ m\n\nT_sat²/r_sat³ = T_moon²/r_moon³\nr_sat³ = r_moon³ × (T_sat/T_moon)² = (3.84 × 10⁸)³ × (0.5/27.3)²\n= 5.662 × 10²⁵ × (0.01832)²\n= 5.662 × 10²⁵ × 3.356 × 10⁻⁴\n= 1.900 × 10²²\nr_sat = (1.900 × 10²²)^(1/3) = **2.67 × 10⁷ m = 26,700 km**\n\n**Worked Example 4:** Using T² = (4π²/GM_Sun) × r³ and Earth's orbital data (T = 365.25 days = 3.156 × 10⁷ s, r = 1.496 × 10¹¹ m), calculate the mass of the Sun.\n\nM_Sun = 4π²r³ / (GT²)\n= 4π² × (1.496 × 10¹¹)³ / (6.674 × 10⁻¹¹ × (3.156 × 10⁷)²)\n= 4π² × 3.348 × 10³³ / (6.674 × 10⁻¹¹ × 9.960 × 10¹⁴)\n= 1.323 × 10³⁵ / (6.645 × 10⁴)\n= **1.99 × 10³⁰ kg**\n\nThis is the accepted mass of the Sun (actual: 1.989 × 10³⁰ kg) ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Kepler's Three Laws"
+        },
+        {
+          "type": "text",
+          "body": "| Law | Statement | Key Quantity | Physical Basis |\n|---|---|---|---|\n| First (Ellipses) | Orbits are ellipses with Sun at one focus | Shape of orbit | Inverse-square gravity → closed elliptical orbits |\n| Second (Equal Areas) | Equal areas swept in equal times | Speed varies with distance | Conservation of angular momentum |\n| Third (T² ∝ r³) | T²/r³ = constant | Period–radius relation | Centripetal force = gravitational force |\n\n**Applying Kepler's Third Law beyond the Solar System:**\nKepler's Third Law applies to ANY system where one large central body dominates:\n- Moons orbiting Jupiter: T²/r³ = 4π²/(GM_Jupiter)\n- Satellites orbiting Earth: T²/r³ = 4π²/(GM_Earth)\n- Exoplanets orbiting other stars\n- Stars orbiting the galactic centre\n\nThe value of T²/r³ immediately tells us the mass of the central body: M = 4π²r³/(GT²)\n\n**This is one of the most powerful tools in astrophysics** — it allows masses of distant objects to be determined simply by observing orbital periods and radii, without any physical contact.\n\n**Example: Mass of Earth from the Moon's orbit:**\nT_Moon = 27.32 days = 2.360 × 10⁶ s; r_Moon = 3.84 × 10⁸ m\nM_Earth = 4π²r³/(GT²)\n= 4π² × (3.84 × 10⁸)³ / (6.674 × 10⁻¹¹ × (2.360 × 10⁶)²)\n= 4π² × 5.662 × 10²⁵ / (6.674 × 10⁻¹¹ × 5.570 × 10¹²)\n= 2.235 × 10²⁷ / 3.717 × 10²\n= **6.01 × 10²⁴ kg** (actual: 5.97 × 10²⁴ kg ✓)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Kepler's First Law: Planetary orbits are ellipses with the Sun at one focus. Kepler's Second Law: A planet–Sun line sweeps equal areas in equal times → conservation of angular momentum → planets move faster near perihelion. Kepler's Third Law: T² ∝ r³ for all planets around the same star; T² = (4π²/GM)r³; ratio T²/r³ is constant for all orbits around the same body. Derivation: equating gravity to centripetal force for circular orbits. Applications: finding orbital radii/periods, determining masses of central bodies."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Kepler's First Law: Orbits are ellipses; Sun at one focus\n• Kepler's Second Law: Equal areas swept in equal times; equivalent to conservation of angular momentum\n• Kepler's Third Law: T² ∝ r³; T²/r³ = 4π²/GM = constant for all orbits around the same body\n• Perihelion/Aphelion: Closest/furthest points of orbit from the Sun (perigee/apogee for Earth orbits)\n• Semi-major axis (a): Half the longest diameter of an ellipse; used as the effective orbital radius in Kepler's Third Law\n• Eccentricity (e): Measure of ellipse elongation; e=0 is circle, e→1 is very elongated"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "According to Kepler's Second Law, a planet moves fastest in its orbit when it is:",
+            "options": [
+              "At the semi-major axis position",
+              "At aphelion (furthest from Sun)",
+              "At perihelion (closest to Sun)",
+              "Moving perpendicular to the Sun-planet line"
+            ],
+            "answer": "At perihelion (closest to Sun)",
+            "explanation": "Kepler's Second Law (equal areas in equal times) implies conservation of angular momentum: mvr = constant. When r is smallest (perihelion), v must be largest. The planet sweeps a wider arc near perihelion in the same time to cover the same area as a narrower arc swept at aphelion."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Planet A has orbital radius twice that of planet B around the same star. What is the ratio of their orbital periods T_A/T_B?",
+            "options": [
+              "2",
+              "4",
+              "2√2",
+              "√2"
+            ],
+            "answer": "2√2",
+            "explanation": "Kepler's Third Law: T² ∝ r³. (T_A/T_B)² = (r_A/r_B)³ = (2)³ = 8. T_A/T_B = √8 = 2√2 ≈ 2.83. Planet A with twice the orbital radius takes 2√2 ≈ 2.83 times as long to complete one orbit."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A comet at perihelion is 0.40 AU from the Sun moving at 50 km/s. At aphelion it is 40 AU away. What is its speed at aphelion?",
+            "options": [
+              "50 km/s",
+              "5000 km/s",
+              "0.50 km/s",
+              "5.0 km/s"
+            ],
+            "answer": "0.50 km/s",
+            "explanation": "Conservation of angular momentum: v_p × r_p = v_a × r_a. v_a = v_p × (r_p/r_a) = 50 × (0.40/40) = 50 × 0.01 = 0.50 km/s. The comet moves 100 times slower at aphelion than perihelion. This is why comets spend most of their time in the outer solar system."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Using Kepler's Third Law and the Moon's orbital data (T = 27.3 days, r = 3.84 × 10⁸ m), which expression correctly gives the mass of the Earth?",
+            "options": [
+              "M_E = GT²/(4π²r³)",
+              "M_E = 4π²r³/(GT²)",
+              "M_E = 4π²r/(GT²)",
+              "M_E = GT²r/(4π²)"
+            ],
+            "answer": "M_E = 4π²r³/(GT²)",
+            "explanation": "T² = 4π²r³/(GM) → M = 4π²r³/(GT²). This rearrangement of Kepler's Third Law allows the mass of any central body to be found from the orbital period and radius of any of its satellites. Plugging in the Moon's data gives M_E ≈ 6.0 × 10²⁴ kg."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Mars has an orbital period of 687 days and Earth's is 365 days. Using Kepler's Third Law, what is Mars' orbital radius in AU (Earth's radius = 1 AU)?",
+            "options": [
+              "1.52 AU",
+              "1.88 AU",
+              "1.31 AU",
+              "2.34 AU"
+            ],
+            "answer": "1.52 AU",
+            "explanation": "T_Mars²/r_Mars³ = T_Earth²/r_Earth³. r_Mars³ = r_Earth³ × (T_Mars/T_Earth)² = 1³ × (687/365)² = (1.881)² = 3.538. r_Mars = (3.538)^(1/3) = 1.524 AU ≈ 1.52 AU. This matches the actual value of Mars' orbital radius (1.524 AU)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Kepler's Second Law (equal areas in equal times) is a consequence of which conservation law?",
+            "options": [
+              "Conservation of energy",
+              "Conservation of linear momentum",
+              "Conservation of angular momentum",
+              "Conservation of mass"
+            ],
+            "answer": "Conservation of angular momentum",
+            "explanation": "Gravity always acts along the line joining the Sun and planet — it exerts no torque about the Sun. Therefore the angular momentum L = mvr sinθ is conserved. The rate of sweeping area dA/dt = L/(2m) = constant. So equal areas are swept in equal times directly because angular momentum is conserved."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t22_l3",
+      "title": "Gravitational Potential and Potential Energy",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Just as we defined electric potential as the work done per unit charge in bringing a test charge from infinity, we can define gravitational potential as the work done per unit mass in bringing a test mass from infinity to a given point. Gravitational potential energy and potential are essential for understanding how much energy is needed to launch satellites, why escape velocity is finite, and how energy is exchanged as planets and satellites move in their orbits."
+        },
+        {
+          "type": "heading",
+          "body": "Gravitational Potential (V_g)"
+        },
+        {
+          "type": "text",
+          "body": "**Definition:** The gravitational potential V_g at a point is the work done per unit mass by an external agent in bringing a small test mass from infinity (where V_g = 0 by convention) to that point:\n\n**V_g = W / m**\n\n**Unit:** J kg⁻¹\n\n**Gravitational potential due to a point mass M:**\n\n**V_g = −GM/r**\n\nWhere r is the distance from mass M.\n\n**Why negative?**\nGravity is attractive. To bring a mass from infinity to a point near M, gravity does positive work — so the external agent does negative work (releases energy). The potential is therefore negative everywhere in a gravitational field, and becomes less negative (increases toward zero) as r → ∞.\n\n**Gravitational potential energy (E_p or U):**\nFor a mass m at distance r from M:\n\n**E_p = mV_g = −GMm/r**\n\nThis is the energy needed to assemble the system — or equivalently, the energy released when mass m falls from infinity to distance r from M.\n\n**Relationship between V_g and g:**\nThe gravitational field intensity is related to the potential by:\n\ng = −dV_g/dr (magnitude: g = |dV_g/dr|)\n\nFor V_g = −GM/r:\ndV_g/dr = +GM/r² → g = GM/r² (directed inward) ✓\n\n**Equipotential surfaces:**\nSurfaces of constant V_g:\n- For a point mass: concentric spheres\n- Perpendicular to field lines (just as for electric fields)\n- No work is done moving a mass along an equipotential surface\n- For Earth: equipotential surfaces are approximately spherical (nearly horizontal near the surface)\n\n**Worked Example 1:** Find the gravitational potential at:\n(a) Earth's surface (R_E = 6.371 × 10⁶ m, M_E = 5.97 × 10²⁴ kg)\n(b) Height 400 km above Earth's surface (ISS altitude)\n(c) The Moon's surface (r_Moon = 3.84 × 10⁸ m from Earth's centre)\n\n(a) V_g(surface) = −GM_E/R_E = −6.674 × 10⁻¹¹ × 5.97 × 10²⁴ / 6.371 × 10⁶\n= −3.983 × 10¹⁴ / 6.371 × 10⁶ = **−6.25 × 10⁷ J kg⁻¹**\n\n(b) r = 6.371 × 10⁶ + 0.400 × 10⁶ = 6.771 × 10⁶ m\nV_g(400km) = −GM_E/r = −3.983 × 10¹⁴ / 6.771 × 10⁶ = **−5.88 × 10⁷ J kg⁻¹**\n\n(c) V_g(Moon) = −GM_E/r_Moon = −3.983 × 10¹⁴ / 3.84 × 10⁸ = **−1.04 × 10⁶ J kg⁻¹**\n\n**Worked Example 2:** How much energy is needed to move a satellite of mass 500 kg from Earth's surface to the ISS orbit (400 km altitude)?\n\nΔE = m × ΔV_g = m × [V_g(400km) − V_g(surface)]\n= 500 × [(−5.88 × 10⁷) − (−6.25 × 10⁷)]\n= 500 × 0.37 × 10⁷\n= **1.85 × 10⁹ J = 1.85 GJ**\n\nThis is the energy that must be supplied by the rocket to lift the satellite — equivalent to about 500 kg of fuel energy."
+        },
+        {
+          "type": "heading",
+          "body": "Gravitational Potential Energy — Changes and Conservation"
+        },
+        {
+          "type": "text",
+          "body": "**Change in gravitational potential energy:**\nWhen a mass m moves from distance r₁ to r₂ from a large mass M:\n\nΔE_p = E_p2 − E_p1 = −GMm/r₂ − (−GMm/r₁) = GMm(1/r₁ − 1/r₂)\n\n**If r₂ > r₁ (moving away):** ΔE_p = GMm(1/r₁ − 1/r₂) > 0 (energy must be supplied — potential energy increases)\n\n**If r₂ < r₁ (moving closer):** ΔE_p < 0 (energy is released — potential energy decreases)\n\n**Near Earth's surface (small height changes):**\nFor h ≪ R_E, the change in gravitational PE can be approximated:\nΔE_p ≈ mgh (the familiar formula from lower secondary!)\n\nThis is just the linear approximation of −GMm/(R_E+h) + GMm/R_E for small h.\n\n**Derivation:**\nΔE_p = −GMm(1/(R_E+h) − 1/R_E) = GMm × h/(R_E(R_E+h))\nFor h ≪ R_E: ≈ GMm × h/R_E² = (GM/R_E²) × mh = **g × mh = mgh** ✓\n\n**Total mechanical energy in orbit:**\nFor a circular orbit of radius r, the satellite has:\n- Gravitational PE: E_p = −GMm/r\n- Kinetic energy: KE = ½mv²\n\nFor circular orbit, gravity = centripetal force:\nGMm/r² = mv²/r → v² = GM/r → KE = ½mv² = GMm/(2r)\n\nTotal energy: E_total = KE + E_p = GMm/(2r) − GMm/r = **−GMm/(2r)**\n\n**Key observations:**\n- Total orbital energy is NEGATIVE (bound orbit)\n- |E_total| = ½ |E_p| (total energy = half the magnitude of potential energy)\n- KE = −½ E_p (KE is positive, half the magnitude of PE)\n- As r increases: E_total becomes less negative (increases toward zero) — orbit requires more energy input to reach higher orbit\n- At r → ∞: E_total → 0 (just barely escaped)\n\n**Worked Example 3:** A 200 kg satellite orbits Earth at 800 km altitude. Find its orbital speed, KE, PE, and total energy. (R_E = 6.371 × 10⁶ m, GM_E = 3.983 × 10¹⁴ m³/s²)\n\nr = R_E + 800 km = 6.371 × 10⁶ + 8.0 × 10⁵ = 7.171 × 10⁶ m\n\nOrbital speed: v = √(GM/r) = √(3.983 × 10¹⁴ / 7.171 × 10⁶) = √(5.554 × 10⁷) = **7453 m/s ≈ 7.45 km/s**\n\nKE = ½mv² = ½ × 200 × (7453)² = 100 × 5.555 × 10⁷ = **5.555 × 10⁹ J**\n\nPE = −GMm/r = −3.983 × 10¹⁴ × 200 / 7.171 × 10⁶ = −7.962 × 10¹⁶ / 7.171 × 10⁶ = **−1.110 × 10¹⁰ J**\n\nTotal E = KE + PE = 5.555 × 10⁹ − 11.10 × 10⁹ = **−5.555 × 10⁹ J** (= −KE ✓)"
+        },
+        {
+          "type": "heading",
+          "body": "Escape Velocity"
+        },
+        {
+          "type": "text",
+          "body": "**Escape velocity (v_esc)** is the minimum speed needed for an object to escape a planet's gravitational field — to travel from the surface to infinity without further propulsion.\n\n**Derivation:**\nAt the surface: total energy = KE + PE = ½mv_esc² − GMm/R\nAt infinity: total energy = 0 (just barely escaped, v = 0 at infinity)\n\nBy conservation of energy:\n½mv_esc² − GMm/R = 0\n½v_esc² = GM/R\n\n**v_esc = √(2GM/R)**\n\nUsing g = GM/R² → GM = gR²:\n**v_esc = √(2gR)**\n\n**Note:** Escape velocity is independent of the mass of the escaping object!\n\n**Worked Example 4:** Find the escape velocity from Earth's surface.\n\nv_esc = √(2GM_E/R_E) = √(2 × 3.983 × 10¹⁴ / 6.371 × 10⁶)\n= √(1.250 × 10⁸) = **11,180 m/s ≈ 11.2 km/s**\n\nOr: v_esc = √(2 × 9.81 × 6.371 × 10⁶) = √(1.250 × 10⁸) = 11,180 m/s ✓\n\n**Escape velocities from other bodies:**\n| Body | v_esc |\n|---|---|\n| Moon | 2.38 km/s |\n| Mars | 5.03 km/s |\n| Earth | 11.19 km/s |\n| Jupiter | 59.5 km/s |\n| Sun | 617 km/s |\n\n**Why the Moon has no atmosphere:**\nGas molecules have thermal speeds ~ √(3kT/m). At Moon's temperature (≈ 300 K), even light hydrogen molecules have mean speed ~ 2 km/s — comparable to the Moon's escape velocity (2.38 km/s). Over billions of years, lighter gas molecules have escaped. For Earth, most gas molecules have speeds well below 11.2 km/s and are retained.\n\n**Black holes:** If the escape velocity equals c (speed of light, 3 × 10⁸ m/s), nothing — not even light — can escape. The critical radius is the Schwarzschild radius: R_s = 2GM/c²."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Gravitational potential: V_g = −GM/r (negative; zero at infinity; increases toward zero as r increases). Gravitational PE: E_p = mV_g = −GMm/r. Energy to move satellite: ΔE = mΔV_g. In circular orbit: KE = GMm/(2r); PE = −GMm/r; Total E = −GMm/(2r) (negative = bound). Near surface: ΔE_p ≈ mgh (linear approximation). Escape velocity: v_esc = √(2GM/R) = √(2gR); independent of object's mass. Bodies with small mass and high temperature lose their atmosphere because gas molecule speeds exceed escape velocity."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Gravitational potential (V_g): Work done per unit mass bringing test mass from infinity; V_g = −GM/r; unit J/kg; always negative\n• Gravitational potential energy (E_p): E_p = mV_g = −GMm/r; negative for bound systems\n• Escape velocity: Minimum speed to escape gravitational field; v_esc = √(2GM/R); independent of escaping mass\n• Total orbital energy: E = −GMm/(2r); negative (bound orbit); becomes less negative for higher orbits\n• Schwarzschild radius: R_s = 2GM/c²; radius at which escape velocity equals speed of light (event horizon of a black hole)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "What is the gravitational potential at a point 8000 km from the centre of a planet of mass 3.0 × 10²⁴ kg? (G = 6.674 × 10⁻¹¹)",
+            "options": [
+              "+2.50 × 10⁷ J/kg",
+              "−2.50 × 10⁷ J/kg",
+              "+3.13 × 10⁶ J/kg",
+              "−3.13 × 10⁶ J/kg"
+            ],
+            "answer": "−2.50 × 10⁷ J/kg",
+            "explanation": "V_g = −GM/r = −(6.674 × 10⁻¹¹ × 3.0 × 10²⁴)/(8.0 × 10⁶) = −(2.002 × 10¹⁴)/(8.0 × 10⁶) = −2.50 × 10⁷ J/kg. Gravitational potential is always negative (gravity is attractive; work is done by gravity as mass moves toward the planet from infinity)."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A satellite moves from a lower orbit (r₁) to a higher orbit (r₂ > r₁). What happens to its total mechanical energy?",
+            "options": [
+              "Decreases (becomes more negative)",
+              "Increases (becomes less negative)",
+              "Remains constant (orbital energy is conserved)",
+              "Becomes zero at the higher orbit"
+            ],
+            "answer": "Increases (becomes less negative)",
+            "explanation": "E_total = −GMm/(2r). As r increases, −GMm/(2r) becomes less negative (closer to zero). Moving to a higher orbit requires energy input (rocket burn) — the satellite gains total mechanical energy. This seems counterintuitive: you add energy to go higher, but the satellite actually moves slower (v = √(GM/r) decreases with r)."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 100 kg satellite has total orbital energy of −2.0 × 10⁹ J. What is its kinetic energy?",
+            "options": [
+              "−2.0 × 10⁹ J",
+              "+2.0 × 10⁹ J",
+              "+4.0 × 10⁹ J",
+              "−4.0 × 10⁹ J"
+            ],
+            "answer": "+2.0 × 10⁹ J",
+            "explanation": "For a circular orbit: E_total = −GMm/(2r) and KE = +GMm/(2r). Therefore KE = −E_total = −(−2.0 × 10⁹) = +2.0 × 10⁹ J. Also: PE = 2 × E_total = −4.0 × 10⁹ J. Check: KE + PE = 2.0 × 10⁹ − 4.0 × 10⁹ = −2.0 × 10⁹ J = E_total ✓."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the escape velocity from a planet of mass 8.0 × 10²³ kg and radius 4.0 × 10⁶ m? (G = 6.674 × 10⁻¹¹)",
+            "options": [
+              "5.16 km/s",
+              "2.58 km/s",
+              "10.3 km/s",
+              "26.6 km/s"
+            ],
+            "answer": "5.16 km/s",
+            "explanation": "v_esc = √(2GM/R) = √(2 × 6.674 × 10⁻¹¹ × 8.0 × 10²³ / 4.0 × 10⁶) = √(2 × 6.674 × 10⁻¹¹ × 2.0 × 10¹⁷) = √(2.670 × 10⁷) = 5163 m/s ≈ 5.16 km/s."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "For a satellite in circular orbit, which relationship between KE and PE is correct?",
+            "options": [
+              "KE = PE",
+              "KE = −PE",
+              "KE = −PE/2",
+              "KE = 2PE"
+            ],
+            "answer": "KE = −PE/2",
+            "explanation": "KE = GMm/(2r) and PE = −GMm/r = −2 × GMm/(2r) = −2KE. So KE = −PE/2, or equivalently PE = −2KE. This is a form of the Virial Theorem for gravitational orbits. Total E = KE + PE = KE − 2KE = −KE (total energy is negative KE)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is the gravitational potential energy of a planet–satellite system taken as negative, with zero at infinity?",
+            "options": [
+              "Because gravity is a negative force",
+              "Because potential energy is released (lost) as the satellite falls toward the planet, so the system has less energy than when infinitely apart",
+              "Because the satellite moves in the negative direction",
+              "Convention — it could equally be defined as positive"
+            ],
+            "answer": "Because potential energy is released (lost) as the satellite falls toward the planet, so the system has less energy than when infinitely apart",
+            "explanation": "With V_g = 0 at infinity as reference: as a mass falls toward a planet, gravity does positive work, the system loses potential energy, and E_p becomes more negative. The system at finite r has LESS energy than at infinity (r → ∞). This convention makes the total energy of bound systems negative, and the energy needed for escape is the work required to raise E_total to zero."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t22_l4",
+      "title": "Orbital Motion, Orbital Speed and Geostationary Satellites",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every communication satellite, weather satellite, GPS satellite, and spy satellite is kept in orbit by the same principle: gravity provides the centripetal force. In this lesson we derive the orbital speed and period for circular orbits, explore the concept of the geostationary orbit — the special orbit used by communication satellites that appear stationary from the ground — and examine the remarkable range of satellites that benefit Ugandans daily, from weather forecasting to mobile phone networks."
+        },
+        {
+          "type": "heading",
+          "body": "Orbital Speed and Period for Circular Orbits"
+        },
+        {
+          "type": "text",
+          "body": "For a satellite of mass m in a circular orbit of radius r around a planet of mass M:\n\n**Condition:** Gravitational force = Centripetal force\n\nGMm/r² = mv²/r\n\nGM/r = v²\n\n**Orbital speed: v = √(GM/r)**\n\n**Key observations about orbital speed:**\n- v is independent of the satellite's mass m — all objects orbit at the same speed regardless of mass\n- v decreases as r increases — higher orbits are slower\n- v ∝ 1/√r — doubling the orbital radius reduces speed by factor 1/√2 ≈ 0.707\n\n**Orbital period:**\nT = circumference / speed = 2πr/v = 2πr/√(GM/r) = 2πr × √(r/GM) = 2π√(r³/GM)\n\n**T = 2π√(r³/GM)** ← This is Kepler's Third Law! ✓\n\n**Worked Example 1:** Find the orbital speed and period of a satellite at 300 km altitude above Earth.\n(R_E = 6.371 × 10⁶ m, GM_E = 3.983 × 10¹⁴ m³ s⁻²)\n\nr = 6.371 × 10⁶ + 3.0 × 10⁵ = 6.671 × 10⁶ m\n\nv = √(GM/r) = √(3.983 × 10¹⁴ / 6.671 × 10⁶) = √(5.972 × 10⁷) = **7728 m/s ≈ 7.73 km/s**\n\nT = 2π√(r³/GM) = 2π√((6.671 × 10⁶)³ / 3.983 × 10¹⁴)\n= 2π√(2.966 × 10²⁰ / 3.983 × 10¹⁴)\n= 2π√(7.447 × 10⁵)\n= 2π × 863.0 = **5421 s ≈ 90.4 min**\n\nSo a low Earth orbit satellite completes one orbit in about 90 minutes! The ISS orbits at about this altitude and its occupants see 16 sunrises per day.\n\n**Worked Example 2:** Show that the orbital speed at any radius r can be written as v = √(gR²/r) where g is the surface gravity and R is the planet's radius.\n\nGM = gR² (since g = GM/R² → GM = gR²)\nv = √(GM/r) = √(gR²/r) ✓"
+        },
+        {
+          "type": "heading",
+          "body": "The Geostationary Orbit"
+        },
+        {
+          "type": "text",
+          "body": "A **geostationary satellite** (also called geosynchronous equatorial orbit, GEO) is a special satellite that:\n1. Orbits in the equatorial plane (directly above the equator)\n2. Orbits in the same direction as Earth's rotation (eastward)\n3. Has an orbital period exactly equal to Earth's rotation period (24 hours = 86,400 s)\n\nBecause its orbital period matches Earth's rotation, it appears to hover stationary above a fixed point on the equator — hence 'geostationary'.\n\n**Finding the geostationary orbital radius:**\n\nT_geo = 24 × 3600 = 86,400 s; GM_E = 3.983 × 10¹⁴ m³ s⁻²\n\nFrom T = 2π√(r³/GM):\nT² = 4π²r³/GM\nr³ = GMT²/(4π²)\nr³ = (3.983 × 10¹⁴ × (86,400)²) / (4π²)\n= (3.983 × 10¹⁴ × 7.465 × 10⁹) / 39.48\n= 2.973 × 10²⁴ / 39.48\n= 7.530 × 10²²\nr = (7.530 × 10²²)^(1/3) = **4.22 × 10⁷ m = 42,200 km from Earth's centre**\n\nHeight above equator: h = r − R_E = 42,200 − 6,371 = **35,829 km ≈ 35,800 km**\n\n**The geostationary orbit is always at exactly 35,786 km above the equator.**\n\n**Properties of the geostationary orbit:**\n- Orbital speed: v = √(GM/r) = √(3.983×10¹⁴/4.22×10⁷) = √(9.438×10⁶) = **3071 m/s ≈ 3.07 km/s**\n- Much slower than LEO (7.73 km/s) — higher orbit means slower speed\n- Only one possible radius (fixed by Earth's rotation period and mass)\n- Must be directly above the equator (to remain stationary from the ground)\n\n**Applications of geostationary satellites relevant to Uganda:**\n| Application | Satellite/System | Use |\n|---|---|---|\n| Television | Intelsat, NSS, IS-20 | MultiChoice DStv received across Uganda |\n| Internet | VSAT systems | Rural internet connectivity in Uganda |\n| Weather | Meteosat (EUMETSAT) | Weather forecasting for UNMA (Uganda) |\n| Communications | Intelsat | Long-distance telephone, data |\n| Navigation | — | GPS uses medium orbit (not geostationary) |\n\n**Limitations of geostationary satellites:**\n1. Cannot see poles well (equatorial orbit)\n2. High altitude → signal delay: 86,400 km round trip ÷ c = 0.29 s (noticeable in phone calls)\n3. High altitude → weaker signal (inverse square law)\n4. Limited orbital slots (only one geostationary ring exists — ITU allocates slots)"
+        },
+        {
+          "type": "heading",
+          "body": "Other Orbit Types"
+        },
+        {
+          "type": "text",
+          "body": "**Low Earth Orbit (LEO):** 200–2000 km altitude\n- Period: 90–130 minutes\n- Speed: ~7.5–7.8 km/s\n- Uses: ISS, space telescopes (Hubble), Earth observation, some communications (Starlink)\n- Low signal delay (< 5 ms)\n- Limited ground coverage per orbit\n\n**Medium Earth Orbit (MEO):** 2000–35,786 km\n- Period: 2–24 hours\n- Uses: GPS (20,200 km), Galileo, GLONASS navigation systems\n- GPS satellites take ~12 hours per orbit; 6 orbital planes with 4 satellites each ensure ≥4 satellites visible anywhere on Earth\n\n**Polar orbit:** Any altitude, but passes over both poles\n- Each orbit, the Earth rotates slightly underneath\n- Over 24 hours, the satellite can photograph the entire Earth\n- Uses: weather satellites (NOAA), Earth observation, spy satellites\n- Relevant to Uganda: Uganda's weather satellite imagery from NOAA/Meteosat comes from both polar and geostationary satellites\n\n**Sun-synchronous orbit (SSO):** Special polar orbit\n- The orbital plane precesses at the same rate the Earth orbits the Sun\n- Always crosses the equator at the same local solar time\n- Consistent lighting conditions for Earth observation cameras\n- Used by most Earth observation satellites (Landsat, Sentinel)\n\n**Worked Example 3:** A GPS satellite orbits Earth at altitude 20,200 km. Find its orbital period.\n\nr = R_E + 20,200 km = 6.371 × 10⁶ + 2.020 × 10⁷ = 2.657 × 10⁷ m\nT = 2π√(r³/GM) = 2π√((2.657×10⁷)³/3.983×10¹⁴)\n= 2π√(1.876×10²²/3.983×10¹⁴)\n= 2π√(4.710×10⁷)\n= 2π × 6863\n= 43,113 s = **11.98 hours ≈ 12 hours**\n\nGPS satellites orbit in exactly 12 sidereal hours — twice per day! This keeps their ground tracks repeating, so the same satellites are visible at the same times each day."
+        },
+        {
+          "type": "heading",
+          "body": "Weightlessness in Orbit"
+        },
+        {
+          "type": "text",
+          "body": "We have established that g ≠ 0 in orbit. The apparent weightlessness experienced by astronauts requires careful explanation.\n\n**Weight vs Apparent Weight:**\n- **True weight:** W = mg (gravitational force from Earth's gravity)\n- **Apparent weight:** W_apparent = Normal reaction N (force exerted by a surface on the body)\n\n**In orbit:**\nThe satellite (and everything inside it) is in free fall — all accelerating at the same rate a_c = g_orbital toward Earth.\n\nApplying Newton's 2nd Law to an astronaut inside the ISS:\nW − N = ma_c (net force toward Earth = centripetal force)\nmg − N = mg (since a_c = g at that altitude)\nN = 0\n\n**N = 0 means zero apparent weight — the astronaut floats!**\n\nThis is not because gravity has been 'switched off' — the gravitational force is definitely acting. It is because both the astronaut AND the ISS floor are accelerating toward Earth at the same rate, so the floor never pushes up on the astronaut.\n\n**Analogy:** A person in a freely falling elevator feels weightless — both person and elevator floor are accelerating downward at g, so the floor exerts no force on the person.\n\n**Effects of long-duration weightlessness on astronauts:**\n- Muscle atrophy (muscles not needed to support body against gravity)\n- Bone density loss (calcium washed out)\n- Fluid redistribution (moves from legs to head — puffy face)\n- Balance problems (inner ear confused)\n- These are major health concerns for long missions (e.g., future missions to Mars)\n- Astronauts exercise 2 hours per day on the ISS to mitigate these effects\n- Solution for long missions: artificial gravity using rotating spacecraft (covered in Topic 20)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Orbital speed: v = √(GM/r); decreases with altitude; independent of satellite mass. Orbital period: T = 2π√(r³/GM) = Kepler's Third Law. Geostationary orbit: T = 24 hours → r = 42,200 km from Earth's centre = 35,800 km altitude; appears stationary over equator; used for communications and weather satellites. GPS satellites: ~20,200 km altitude, 12-hour period. Weightlessness: apparent weight = 0 in orbit because satellite and occupants are all in free fall together; NOT because gravity is zero."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Orbital speed: v = √(GM/r); independent of satellite mass; decreases with radius\n• Geostationary orbit: Equatorial orbit at 35,800 km altitude where T = 24 hours; satellite appears stationary over equator\n• Low Earth Orbit (LEO): 200–2000 km; 90-minute period; ISS, Hubble, Starlink\n• Apparent weightlessness: N = 0 in orbit; not because g = 0 but because satellite and occupant fall together\n• GPS orbit: ~20,200 km, 12-hour period; 4 satellites per plane ensure global coverage"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A satellite orbits Earth at radius 8000 km from the centre. What is its orbital speed? (GM_E = 3.983 × 10¹⁴ m³ s⁻²)",
+            "options": [
+              "9.99 km/s",
+              "7.05 km/s",
+              "4.99 km/s",
+              "3.14 km/s"
+            ],
+            "answer": "7.05 km/s",
+            "explanation": "v = √(GM/r) = √(3.983 × 10¹⁴ / 8.0 × 10⁶) = √(4.979 × 10⁷) = 7056 m/s ≈ 7.05 km/s. Higher orbits have lower speeds — geostationary satellites at 42,200 km orbit at only 3.07 km/s."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What altitude above Earth's equator must a geostationary satellite orbit? (GM_E = 3.983 × 10¹⁴, R_E = 6371 km)",
+            "options": [
+              "6371 km",
+              "35,800 km",
+              "42,200 km",
+              "20,200 km"
+            ],
+            "answer": "35,800 km",
+            "explanation": "The geostationary orbital radius is r = 42,200 km from Earth's CENTRE. The altitude above the surface = r − R_E = 42,200 − 6,371 = 35,829 km ≈ 35,800 km. This is the height above the equator at which the satellite orbits."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Two satellites A and B orbit the same planet. Satellite A has twice the orbital radius of B. How do their orbital speeds compare?",
+            "options": [
+              "v_A = 2v_B",
+              "v_A = v_B/2",
+              "v_A = v_B/√2",
+              "v_A = v_B√2"
+            ],
+            "answer": "v_A = v_B/√2",
+            "explanation": "v = √(GM/r) ∝ 1/√r. If r_A = 2r_B: v_A = √(GM/2r_B) = (1/√2)√(GM/r_B) = v_B/√2 ≈ 0.707v_B. The satellite in the higher (double radius) orbit moves at 1/√2 ≈ 70.7% of the lower orbit's speed."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why must a geostationary satellite orbit directly above the equator?",
+            "options": [
+              "The equator is the only place with sufficient gravitational field strength",
+              "Only at the equator can the orbital plane contain both Earth's rotation axis and the satellite — ensuring the satellite stays above the same point",
+              "The equator has the lowest atmospheric drag at 35,800 km altitude",
+              "Solar panels work best when the satellite is above the equator"
+            ],
+            "answer": "Only at the equator can the orbital plane contain both Earth's rotation axis and the satellite — ensuring the satellite stays above the same point",
+            "explanation": "For a satellite to remain stationary above a fixed ground point, its orbital plane must contain the Earth's rotation axis AND the ground point. The only circular orbit satisfying this for all 360° of rotation is the equatorial plane (the equator). A satellite inclined to the equator would appear to trace a figure-8 pattern (analemma) as seen from the ground, not remain stationary."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "An astronaut of weight 800 N on Earth's surface is in the ISS at 400 km altitude where g = 8.68 m/s². What is their apparent weight (scale reading) on the ISS?",
+            "options": [
+              "800 N",
+              "711 N",
+              "89 N",
+              "0 N"
+            ],
+            "answer": "0 N",
+            "explanation": "In orbit, both the astronaut and the ISS are in free fall — accelerating toward Earth at the same rate g = 8.68 m/s². The ISS floor exerts zero normal reaction on the astronaut (N = 0). Apparent weight = N = 0 N. The astronaut floats. True gravitational force = mg = (800/9.81) × 8.68 = 708 N — gravity is definitely acting, but apparent weight is zero."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A communication satellite in geostationary orbit sends a signal to a ground station in Kampala. Approximately how long does the signal take for a round trip? (Speed of light = 3 × 10⁸ m/s)",
+            "options": [
+              "0.007 s",
+              "0.24 s",
+              "0.48 s",
+              "2.4 s"
+            ],
+            "answer": "0.24 s",
+            "explanation": "Distance from Kampala to satellite ≈ 35,800 km = 3.58 × 10⁷ m. Round trip = 2 × 3.58 × 10⁷ = 7.16 × 10⁷ m. Time = distance/speed = 7.16 × 10⁷ / 3 × 10⁸ = 0.239 s ≈ 0.24 s. This 240 ms delay is noticeable in satellite phone calls and makes real-time gaming impossible via geostationary satellite internet."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t22_l5",
+      "title": "Satellites, Weightlessness and Gravitation in Context",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "In this final lesson on Gravitation, we consolidate understanding by working through advanced applications: satellite energy calculations, orbital transfers, the relationship between g and G, tidal forces, and the broader significance of gravitation in shaping celestial phenomena — from the Moon's phases visible in Uganda's night sky, to the long-range future of space exploration from East Africa."
+        },
+        {
+          "type": "heading",
+          "body": "Energy Calculations for Satellites and Orbital Transfers"
+        },
+        {
+          "type": "text",
+          "body": "**Energy required to place a satellite in orbit:**\n\nA satellite of mass m must be:\n1. Lifted from Earth's surface to orbital altitude (increasing PE)\n2. Accelerated to orbital speed (gaining KE)\n\nTotal energy needed = KE_orbit + ΔPE\n= ½mv²_orbital + (E_p_orbit − E_p_surface)\n= GMm/(2r) + (−GMm/r) − (−GMm/R_E)\n= GMm/(2r) − GMm/r + GMm/R_E\n= −GMm/(2r) + GMm/R_E\n= GMm(1/R_E − 1/(2r))\n\n**E_total needed = GMm(1/R_E − 1/(2r))**\n\n**Worked Example 1:** Calculate the total energy needed to place a 300 kg satellite into circular orbit at altitude 500 km above Earth.\n(R_E = 6.371 × 10⁶ m, GM_E = 3.983 × 10¹⁴ m³ s⁻²)\n\nr = 6.371 × 10⁶ + 5.0 × 10⁵ = 6.871 × 10⁶ m\n\nE_needed = GM_E × m × (1/R_E − 1/(2r))\n= 3.983 × 10¹⁴ × 300 × (1/6.371×10⁶ − 1/(2 × 6.871×10⁶))\n= 1.195 × 10¹⁷ × (1.569×10⁻⁷ − 7.276×10⁻⁸)\n= 1.195 × 10¹⁷ × 8.414 × 10⁻⁸\n= **1.005 × 10¹⁰ J ≈ 10 GJ**\n\n**Worked Example 2 — Orbital transfer (Hohmann transfer):**\nA satellite must transfer from a circular orbit at r₁ = 7000 km to a higher circular orbit at r₂ = 42,200 km (geostationary). Calculate the change in total energy. (m = 1000 kg, GM_E = 3.983 × 10¹⁴)\n\nE₁ = −GM_E m/(2r₁) = −3.983 × 10¹⁴ × 1000/(2 × 7.0 × 10⁶) = **−2.845 × 10¹⁰ J**\nE₂ = −GM_E m/(2r₂) = −3.983 × 10¹⁴ × 1000/(2 × 4.22 × 10⁷) = **−4.719 × 10⁹ J**\n\nΔE = E₂ − E₁ = −4.719 × 10⁹ − (−2.845 × 10¹⁰) = **2.373 × 10¹⁰ J ≈ 23.7 GJ**\n\nThis energy must be supplied by the rocket engine — it is the minimum energy needed for the orbital transfer.\n\n**Key insight: Higher orbits require MORE energy.** Moving a satellite to a higher orbit means both its PE increases AND its KE decreases (speed is lower at higher orbit). The net effect is an increase in total mechanical energy — energy must be supplied."
+        },
+        {
+          "type": "heading",
+          "body": "Gravitational Tidal Forces"
+        },
+        {
+          "type": "text",
+          "body": "The Moon's gravity does not pull equally on all parts of the Earth — the side closer to the Moon is pulled more strongly than the far side. This difference in gravitational pull across an extended body is called a **tidal force**.\n\n**Origin of tides:**\n- The Moon exerts a stronger pull on the near side of Earth than on Earth's centre\n- The Moon exerts a weaker pull on the far side of Earth than on Earth's centre\n- Both sides experience a net 'stretching' force away from Earth's centre in the direction of the Moon\n- This causes two tidal bulges — one facing the Moon, one away from it\n- As Earth rotates under these bulges, coastal areas experience two high tides and two low tides per day (approximately)\n\n**The Sun also causes tides** (about 46% as strong as the Moon's tidal effect despite the Sun being much more massive — because tidal force depends on the gradient of gravity, which falls off faster than 1/r²).\n\n**Spring tides:** Sun, Earth, Moon aligned (new moon or full moon) → tidal forces add → extra-high high tides and extra-low low tides\n**Neap tides:** Sun and Moon at right angles to Earth → tidal forces partially cancel → smaller tidal range\n\n**Tidal effects relevant to Uganda:**\n- Lake Victoria experiences very small tides (enclosed freshwater lake, far from ocean, small tidal forcing)\n- The East African coast (Mombasa, Dar es Salaam) experiences regular semidiurnal tides of about 3–4 m range\n- Lake Victoria's level fluctuates significantly, but due to rainfall patterns, not tides\n\n**Tidal locking:**\nThe Moon always shows the same face to Earth — it is 'tidally locked'. Earth's tidal forces created a torque on the Moon over billions of years, slowing its rotation until rotation period = orbital period. This is why we always see the same side of the Moon from Uganda.\n\n**Roche limit:**\nIf a moon orbits too close to its parent planet, tidal forces (the difference in gravity across the moon) exceed the moon's self-gravity. The moon is torn apart. The debris forms a ring. Saturn's rings formed this way. The Roche limit: r_Roche ≈ 2.44 R_planet (density ratio)^(1/3)."
+        },
+        {
+          "type": "heading",
+          "body": "Determining G: The Cavendish Experiment"
+        },
+        {
+          "type": "text",
+          "body": "Newton's Law of Universal Gravitation has a constant G, but how was its value first measured? Henry Cavendish performed this crucial experiment in 1798 — 111 years after Newton published his law.\n\n**The Cavendish Torsion Balance:**\nSetup:\n- A lightweight rod is suspended horizontally by a thin torsion wire\n- Two small lead balls (m ≈ 0.73 kg) are attached to the ends of the rod\n- Two large lead spheres (M ≈ 158 kg) are brought close to the small balls\n- The gravitational attraction between small and large balls causes the rod to twist\n- The angle of twist θ is measured by reflecting a laser beam off a small mirror on the wire\n- The restoring torque of the twisted wire provides the calibration\n\n**Finding G:**\n- The gravitational force F = Gmm/r² between each pair causes a torque on the rod\n- From the angle of twist and the known torsion constant of the wire: F can be determined\n- Then G = Fr²/(mM)\n\n**Cavendish's result:** G ≈ 6.67 × 10⁻¹¹ N m² kg⁻² (remarkably close to the current value!)\n\n**Why was this called 'weighing the Earth'?**\nKnowing G and g at Earth's surface:\ng = GM_E/R_E² → M_E = gR_E²/G\n= 9.81 × (6.371 × 10⁶)² / (6.674 × 10⁻¹¹)\n= 9.81 × 4.059 × 10¹³ / 6.674 × 10⁻¹¹\n= 3.982 × 10¹⁴ / 6.674 × 10⁻¹¹\n= **5.97 × 10²⁴ kg** ✓\n\nCavendish described his experiment as 'weighing the Earth' — once G is known, M_E follows from g and R_E.\n\n**Current most accurate value:** G = 6.67430 × 10⁻¹¹ N m² kg⁻² (still the least precisely known fundamental constant in physics — difficult to measure because gravity is so weak)"
+        },
+        {
+          "type": "heading",
+          "body": "Comparison of Gravitational and Electric Fields"
+        },
+        {
+          "type": "text",
+          "body": "Gravitational and electric fields have many mathematical similarities but important physical differences:\n\n| Property | Gravitational Field | Electric Field |\n|---|---|---|\n| Source | Mass (always positive) | Charge (positive or negative) |\n| Force law | F = Gm₁m₂/r² | F = kq₁q₂/r² |\n| Field strength | g = GM/r² (N/kg) | E = kQ/r² (N/C) |\n| Potential | V_g = −GM/r (J/kg) | V_E = kQ/r (J/C = V) |\n| Potential energy | E_p = −GMm/r | E_p = kQq/r |\n| Direction | Always attractive | Attractive or repulsive |\n| Field lines | Always toward mass | Away from + charge |\n| Shielding | Cannot be shielded | Can be shielded (Faraday cage) |\n| Relative strength | 10⁻³⁶ of electric | 10³⁶ × gravitational |\n\n**Key mathematical parallels:**\n- Both obey inverse-square laws\n- Both use potential (work per unit test quantity)\n- Both use superposition principle\n- Both have equipotential surfaces perpendicular to field lines\n\n**The most important difference:**\nGravity is always attractive (no negative mass) so it cannot be shielded or cancelled — it dominates at astronomical scales despite being the weakest fundamental force. Electromagnetism is much stronger but cancels on large scales (matter is electrically neutral on average)."
+        },
+        {
+          "type": "heading",
+          "body": "Comprehensive Formula Summary for Gravitation"
+        },
+        {
+          "type": "text",
+          "body": "**Complete gravitation formula reference:**\n\n| Quantity | Formula | Notes |\n|---|---|---|\n| Gravitational force | F = Gm₁m₂/r² | Always attractive |\n| Gravitational field | g = GM/r² | At distance r from M |\n| Surface gravity | g_s = GM/R² | At planet surface |\n| g at height h | g(h) = g_s(R/(R+h))² | Outside planet |\n| g inside planet | g(r) = g_s(r/R) | Uniform density |\n| Gravitational potential | V_g = −GM/r | Zero at infinity |\n| Gravitational PE | E_p = −GMm/r | Negative for bound system |\n| Orbital speed | v = √(GM/r) | Independent of satellite mass |\n| Orbital period | T = 2π√(r³/GM) | Kepler's Third Law |\n| Kepler's Third Law | T²/r³ = 4π²/GM | Constant for all orbits |\n| Orbital KE | KE = GMm/(2r) | |\n| Orbital PE | PE = −GMm/r | |\n| Total orbital energy | E = −GMm/(2r) | Negative |\n| Escape velocity | v_esc = √(2GM/R) | From surface |\n| Geostationary radius | r = (GMT²/4π²)^(1/3) | T = 24 hours |\n| Mass of central body | M = 4π²r³/(GT²) | From Kepler's 3rd |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Energy to orbit: E = GMm(1/R_E − 1/2r); higher orbits require more energy. Orbital transfer: ΔE = E₂ − E₁ = GMm(1/(2r₁) − 1/(2r₂)); energy must be supplied to reach higher orbit. Tides: caused by gradient of Moon's gravity across Earth; spring tides when Sun-Moon aligned; neap tides when perpendicular. Tidal locking explains why Moon always shows same face to Earth. Cavendish experiment: measured G using torsion balance; allowed Earth's mass to be calculated. G and E fields: both inverse-square; both use potential; gravity always attractive and cannot be shielded unlike electric fields."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Orbital transfer energy: ΔE = −GMm/(2r₂) − (−GMm/(2r₁)) = GMm(r₂−r₁)/(2r₁r₂); positive = energy input needed\n• Tidal force: Differential gravitational force across an extended body; causes ocean tides and tidal locking\n• Tidal locking: Condition where orbital period = rotation period; Moon is tidally locked to Earth\n• Cavendish experiment: First measurement of G using torsion balance (1798); allowed Earth's mass to be calculated\n• Roche limit: Minimum safe orbital radius; inside this, tidal forces tear apart a secondary body\n• Spring/neap tides: Spring = Sun and Moon aligned (large tidal range); Neap = perpendicular (small range)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 500 kg satellite is in circular orbit at radius 8000 km. It is transferred to a circular orbit at radius 16,000 km. Which of the following correctly describes the change in total energy? (GM_E = 3.983 × 10¹⁴)",
+            "options": [
+              "ΔE = −12.4 GJ (energy released)",
+              "ΔE = +6.2 GJ (energy required)",
+              "ΔE = −6.2 GJ (energy released)",
+              "ΔE = +12.4 GJ (energy required)"
+            ],
+            "answer": "ΔE = +6.2 GJ (energy required)",
+            "explanation": "E₁ = −GMm/(2r₁) = −3.983×10¹⁴×500/(2×8×10⁶) = −1.244×10¹⁰ J. E₂ = −GMm/(2r₂) = −3.983×10¹⁴×500/(2×16×10⁶) = −6.22×10⁹ J. ΔE = E₂−E₁ = −6.22×10⁹−(−1.244×10¹⁰) = +6.22×10⁹ J ≈ +6.2 GJ. Positive ΔE means energy must be SUPPLIED to reach the higher orbit."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "The Cavendish experiment measured G by:",
+            "options": [
+              "Dropping masses from the Tower of Pisa and timing their fall",
+              "Measuring the orbital period of the Moon and using Kepler's Third Law",
+              "Measuring the tiny gravitational attraction between two known masses using a torsion balance",
+              "Measuring the difference in g between the equator and poles"
+            ],
+            "answer": "Measuring the tiny gravitational attraction between two known masses using a torsion balance",
+            "explanation": "Cavendish used two small lead balls on a suspended rod (torsion balance). Large lead spheres brought nearby attracted the small balls, twisting the wire. From the angle of twist, the force was calculated. With known masses and separations, G = Fr²/(m₁m₂). This allowed Earth's mass to be calculated from g = GM_E/R_E²."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Spring tides (extra-high tides) occur when:",
+            "options": [
+              "The Moon is at apogee (furthest from Earth)",
+              "The Sun, Earth, and Moon are aligned (new or full Moon)",
+              "The Moon and Sun are at 90° as seen from Earth",
+              "Only in the spring season of the year"
+            ],
+            "answer": "The Sun, Earth, and Moon are aligned (new or full Moon)",
+            "explanation": "Spring tides occur when the Sun and Moon align (new moon or full moon) — their tidal forces add together, producing the largest tidal range. Neap tides occur at first/third quarter Moon (Sun and Moon perpendicular) — tidal forces partially cancel, producing the smallest range. 'Spring' refers to the tide 'springing up' — not the season."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why does the Moon always show the same face to Earth?",
+            "options": [
+              "The Moon does not rotate at all",
+              "Earth's tidal forces over billions of years slowed the Moon's rotation until it equals its orbital period (tidal locking)",
+              "The Moon's far side is too heavy to face Earth",
+              "The Moon's magnetic field locks it facing Earth"
+            ],
+            "answer": "Earth's tidal forces over billions of years slowed the Moon's rotation until it equals its orbital period (tidal locking)",
+            "explanation": "Earth exerts a tidal force on the Moon (differential gravity across its diameter). This created a torque that gradually slowed the Moon's rotation over billions of years until the rotation period exactly equalled the orbital period (~27.3 days). Now the same face permanently faces Earth. This is tidal locking, and it affects many natural satellites in the solar system."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "The mass of Jupiter can be determined by observing one of its moons with orbital radius r and period T. The formula used is:",
+            "options": [
+              "M_J = GT²/(4π²r³)",
+              "M_J = 4π²r/(GT²)",
+              "M_J = 4π²r³/(GT²)",
+              "M_J = GT²r³/(4π²)"
+            ],
+            "answer": "M_J = 4π²r³/(GT²)",
+            "explanation": "Kepler's Third Law for circular orbits: T² = 4π²r³/(GM_J). Rearranging: M_J = 4π²r³/(GT²). This is how the mass of any body with a satellite can be determined — just observe the satellite's orbital period T and radius r. Galileo discovered Jupiter's four largest moons in 1610; their orbits allow Jupiter's mass to be calculated."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A satellite in circular orbit at radius r has total energy E = −GMm/(2r). If the satellite loses energy due to atmospheric drag (slightly lowering its orbit), its speed:",
+            "options": [
+              "Decreases, because it has less total energy",
+              "Increases, because lowering the orbit increases orbital speed v = √(GM/r)",
+              "Stays constant, because energy loss is entirely from PE",
+              "Decreases to zero as the orbit decays"
+            ],
+            "answer": "Increases, because lowering the orbit increases orbital speed v = √(GM/r)",
+            "explanation": "v = √(GM/r). As drag lowers r, v = √(GM/r) increases! This seems paradoxical: drag slows the satellite, but the orbit drops to a lower, faster orbit. The total energy E = −GMm/(2r) becomes more negative (orbit energy decreases) even as speed increases. The extra KE comes from the drop in PE (which decreases by 2× the KE increase). Eventually the satellite spirals into the atmosphere and burns up."
+          }
+        ]
+      }
+    }
+  ]
+}

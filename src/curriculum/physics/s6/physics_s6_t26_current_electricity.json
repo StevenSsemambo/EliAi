@@ -1,0 +1,693 @@
+{
+  "topic_id": "physics_s6_t26",
+  "topic_title": "Current Electricity",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t26_l1",
+      "title": "Electric Current, Charge, Potential Difference and Resistance",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Uganda's electricity grid delivers power to homes, factories, hospitals, and schools from generators at Nalubaale (Owen Falls), Bujagali, Isimba, and Karuma dams. A nurse at Mulago Hospital checks a patient's heart rhythm on an ECG machine. A student in Gulu charges a mobile phone from the national grid. An engineer at the Namanve industrial park designs a motor control circuit. All of these involve electric current — the controlled flow of electric charge that is the foundation of all electrical and electronic technology. In this lesson we establish the fundamental concepts: what current is, how potential difference drives it, and what resistance opposes it."
+        },
+        {
+          "type": "heading",
+          "body": "Electric Current: Definition and Microscopic Model"
+        },
+        {
+          "type": "text",
+          "body": "**Electric current (I)** is the rate of flow of electric charge past a cross-section of a conductor:\n\n**I = ΔQ/Δt**\n\nWhere:\n- I = current (amperes, A)\n- ΔQ = charge that flows past the section (coulombs, C)\n- Δt = time interval (s)\n\nRearranging: **Q = It** (charge = current × time)\n\n**The coulomb:** 1 coulomb (C) = the charge flowing past a section when a current of 1 ampere flows for 1 second: 1 C = 1 A·s\n\n**The electron charge:** The charge on one electron is e = 1.6 × 10⁻¹⁹ C (negative). The charge on one proton is +1.6 × 10⁻¹⁹ C.\n\n**Number of electrons per second for a 1 A current:**\nN = I/e = 1.0/(1.6 × 10⁻¹⁹) = **6.25 × 10¹⁸ electrons per second** — an enormous number!\n\n**Worked Example 1:** A steady current of 3.0 A flows in a wire for 5.0 minutes. Find:\n(a) The total charge that flows\n(b) The number of electrons that pass a cross-section\n\n(a) Q = It = 3.0 × (5.0 × 60) = 3.0 × 300 = **900 C**\n(b) N = Q/e = 900 / (1.6 × 10⁻¹⁹) = **5.63 × 10²¹ electrons**\n\n**Conventional current vs electron flow:**\nBy historical convention, current flows from positive to negative terminal (conventional current direction). In metallic conductors, the actual charge carriers are electrons, which flow from negative to positive — opposite to conventional current. Both conventions are used and both give correct results; always specify which direction you mean.\n\n**The drift velocity model:**\nIn a metallic conductor with cross-sectional area A, carrier concentration n (free electrons per m³), and charge per carrier q = e:\n\nIn time Δt, electrons moving at drift velocity v_d travel a distance v_d × Δt.\nCharge passing the section: ΔQ = n × (A × v_d × Δt) × e\nCurrent: I = ΔQ/Δt = **nAev_d**\n\nWhere:\n- n = number density of charge carriers (m⁻³)\n- A = cross-sectional area (m²)\n- e = charge per carrier (C)\n- v_d = drift velocity of carriers (m/s)\n\n**Worked Example 2:** A copper wire has diameter 1.5 mm and carries 2.5 A. Copper has n = 8.4 × 10²⁸ electrons/m³. Find the drift velocity.\n\nA = π(d/2)² = π × (0.75 × 10⁻³)² = π × 5.625 × 10⁻⁷ = 1.767 × 10⁻⁶ m²\nv_d = I/(nAe) = 2.5/(8.4 × 10²⁸ × 1.767 × 10⁻⁶ × 1.6 × 10⁻¹⁹)\n= 2.5/(8.4 × 1.767 × 1.6 × 10³)\n= 2.5/(23,752) = **1.05 × 10⁻⁴ m/s ≈ 0.10 mm/s**\n\nThe drift velocity is astonishingly slow — less than 1 mm per second! Yet when you flick a light switch, the light comes on almost instantly. This is because the electric field propagates through the wire at nearly the speed of light — all electrons throughout the circuit start drifting simultaneously."
+        },
+        {
+          "type": "heading",
+          "body": "Potential Difference (Voltage) and Electromotive Force (EMF)"
+        },
+        {
+          "type": "text",
+          "body": "**Potential difference (V or p.d.):**\nThe potential difference between two points is the work done per unit charge in moving a positive test charge from one point to the other:\n\n**V = W/Q**\n\nWhere:\n- V = potential difference (volts, V)\n- W = work done (joules, J)\n- Q = charge moved (coulombs, C)\n\nSo: **1 Volt = 1 Joule per Coulomb (1 V = 1 J C⁻¹)**\n\nAlternatively: **W = QV** — the energy transferred when charge Q moves through potential difference V.\n\n**Electromotive force (EMF, ε):**\nThe EMF of a source (battery, generator, solar cell) is the energy supplied per unit charge by the source to the circuit:\n\n**ε = W/Q** (energy provided per unit charge)\n\nEMF and p.d. have the same unit (volts) but different physical meanings:\n- **EMF** is a source of electrical energy (converts other energy to electrical)\n- **p.d.** is the work done by the circuit in transferring electrical energy elsewhere (to heat, light, motion, etc.)\n\n**The electronvolt (eV):**\nA useful unit of energy in atomic and particle physics:\n1 eV = energy gained by one electron moving through a p.d. of 1 V\n1 eV = e × V = 1.6 × 10⁻¹⁹ C × 1 V = **1.6 × 10⁻¹⁹ J**\n\n**Worked Example 3:** A battery moves 50 C of charge around a circuit and does 600 J of work. Find:\n(a) The EMF of the battery\n(b) The energy transferred per electron\n\n(a) ε = W/Q = 600/50 = **12 V**\n(b) Energy per electron = ε × e = 12 × 1.6 × 10⁻¹⁹ = **1.92 × 10⁻¹⁸ J = 12 eV**\n\n**Power in electrical circuits:**\nPower = rate of energy transfer = work done / time:\nP = W/t = (QV)/t = (Q/t) × V = **P = IV**\n\nUsing Ohm's Law (V = IR):\nP = IV = I(IR) = **I²R** (power dissipated in a resistor)\nP = IV = (V/R)V = **V²/R**\n\n**Worked Example 4:** A 60 W light bulb operates at 240 V mains. Find:\n(a) The current drawn\n(b) The resistance of the bulb filament when operating\n\n(a) P = IV → I = P/V = 60/240 = **0.25 A**\n(b) R = V/I = 240/0.25 = **960 Ω** (or R = V²/P = 240²/60 = 57,600/60 = 960 Ω ✓)"
+        },
+        {
+          "type": "heading",
+          "body": "Resistance and Ohm's Law"
+        },
+        {
+          "type": "text",
+          "body": "**Resistance (R)** is the property of a conductor that opposes the flow of electric current. It is defined as the ratio of potential difference to current:\n\n**R = V/I**\n\n**Unit:** Ohm (Ω) — named after Georg Simon Ohm.\n1 Ω = 1 V/A: a resistance of 1 ohm carries 1 ampere when 1 volt is applied.\n\n**Ohm's Law:**\nOhm's Law states that the current through a conductor is directly proportional to the potential difference across it, provided the temperature and other physical conditions remain constant:\n\n**V = IR** (or V ∝ I at constant temperature)\n\n**Ohmic vs non-ohmic conductors:**\n- **Ohmic conductor:** Resistance is constant regardless of the applied voltage → linear V-I graph (straight line through origin). Examples: metal resistors at constant temperature, copper wire\n- **Non-ohmic conductor:** Resistance changes with voltage or current → non-linear V-I graph. Examples: lamp filament (resistance increases with temperature), diode (asymmetric), thermistor, LDR\n\n**I-V characteristic graphs:**\n- **Ohmic resistor:** Straight line through origin → slope = 1/R (the steeper the line, the lower the resistance)\n- **Lamp filament:** Curve that bends away from the I-axis at high V (resistance increases as it heats up)\n- **Diode:** Conducts freely in forward direction (steeply rising I), barely conducts in reverse direction\n- **Thermistor (NTC):** Resistance decreases as temperature increases → I-V curve bends toward I-axis with increasing V (heating effect reduces resistance)\n\n**Worked Example 5:** From a V-I graph, a component has current 0.40 A at 8.0 V and current 0.60 A at 15.0 V.\n(a) Is this component ohmic?\n(b) Find the resistance at each operating point.\n\n(a) R₁ = V₁/I₁ = 8.0/0.40 = 20 Ω; R₂ = V₂/I₂ = 15.0/0.60 = 25 Ω\nR₁ ≠ R₂ → **NOT ohmic** (resistance increases with applied voltage — consistent with a lamp filament)\n\n(b) R at 8.0 V = **20 Ω**; R at 15.0 V = **25 Ω**"
+        },
+        {
+          "type": "heading",
+          "body": "Resistivity and the Effect of Temperature"
+        },
+        {
+          "type": "text",
+          "body": "The resistance of a conductor depends on:\n1. Its length L (longer → more resistance)\n2. Its cross-sectional area A (wider → less resistance)\n3. The material it is made from (via resistivity ρ)\n4. Temperature\n\n**Resistivity (ρ):**\n**R = ρL/A**\n\nWhere:\n- ρ = resistivity of the material (Ω m)\n- L = length of the conductor (m)\n- A = cross-sectional area (m²)\n- R = resistance (Ω)\n\n**Unit of resistivity:** Ω m\n\n**Typical resistivity values at 20°C:**\n| Material | Resistivity ρ (Ω m) |\n|---|---|\n| Silver | 1.59 × 10⁻⁸ |\n| Copper | 1.72 × 10⁻⁸ |\n| Aluminium | 2.82 × 10⁻⁸ |\n| Tungsten | 5.6 × 10⁻⁸ |\n| Iron | 1.0 × 10⁻⁷ |\n| Carbon (graphite) | 3–60 × 10⁻⁵ |\n| Silicon (semiconductor) | ~640 |\n| Glass | 10¹⁰–10¹⁴ |\n| PTFE (Teflon) | 10²³ |\n\n**Why copper is used for wiring in Uganda's buildings:**\nCopper has very low resistivity (1.72 × 10⁻⁸ Ω m) — only silver is lower, but silver is too expensive. Copper is also ductile (can be drawn into wire), oxidation-resistant, and mechanically strong.\n\n**Temperature coefficient of resistance:**\nFor most metals, resistance increases linearly with temperature:\n**R_T = R₀(1 + αΔT)**\n\nWhere:\n- R_T = resistance at temperature T\n- R₀ = resistance at reference temperature (usually 0°C or 20°C)\n- α = temperature coefficient of resistance (K⁻¹ or °C⁻¹)\n- ΔT = temperature change from reference (°C or K)\n\n**Worked Example 6:** A copper wire has resistance 2.5 Ω at 20°C. Find its resistance at 80°C. (α_copper = 3.9 × 10⁻³ °C⁻¹)\n\nR_T = R₀(1 + αΔT) = 2.5 × (1 + 3.9 × 10⁻³ × 60)\n= 2.5 × (1 + 0.234) = 2.5 × 1.234 = **3.09 Ω**\n\n**Worked Example 7:** A tungsten lamp filament has resistance 20 Ω at 20°C and 900 Ω when operating. Find the operating temperature. (α_tungsten = 4.5 × 10⁻³ °C⁻¹)\n\nR_T = R₀(1 + αΔT) → 900 = 20(1 + 4.5 × 10⁻³ × ΔT)\n45 = 1 + 4.5 × 10⁻³ ΔT\n44 = 4.5 × 10⁻³ ΔT\nΔT = 44/(4.5 × 10⁻³) = 9778 °C\nT = 20 + 9778 ≈ **9800 °C**\n\n(The filament of an incandescent bulb operates at about 2500–3000°C in practice — a simpler model gives a higher estimate; the linear model becomes less accurate at very high temperatures.)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Electric current I = ΔQ/Δt (charge flow rate); unit ampere (A). Q = It. Drift velocity model: I = nAev_d (extremely slow, ~0.1 mm/s for copper). Potential difference V = W/Q; unit volt (V = J/C). EMF = energy supplied per unit charge by a source. Power: P = IV = I²R = V²/R. Ohm's Law: V = IR (valid only for ohmic conductors at constant temperature). Resistance R = ρL/A; unit ohm (Ω); ρ = resistivity (Ω m). Temperature effect: R_T = R₀(1 + αΔT); metals increase with temperature; semiconductors/NTC thermistors decrease."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Electric current (I): Rate of charge flow; I = ΔQ/Δt; unit ampere (A)\n• Drift velocity (v_d): Mean velocity of charge carriers; I = nAev_d; very slow (~0.1 mm/s in copper)\n• Potential difference (V): Work done per unit charge; V = W/Q; unit volt (V = J/C)\n• EMF (ε): Energy supplied per unit charge by a source; unit volts\n• Ohm's Law: V = IR; linear V-I relationship; valid for ohmic conductors at constant temperature\n• Resistivity (ρ): R = ρL/A; material property; unit Ω m; low for good conductors\n• Temperature coefficient (α): R_T = R₀(1 + αΔT); positive for metals; negative for semiconductors (NTC)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A current of 0.50 A flows through a wire for 4.0 minutes. How many electrons pass a cross-section? (e = 1.6 × 10⁻¹⁹ C)",
+            "options": [
+              "7.5 × 10²⁰",
+              "1.2 × 10²¹",
+              "1.25 × 10²¹",
+              "5.0 × 10²⁰"
+            ],
+            "answer": "7.5 × 10²⁰",
+            "explanation": "Q = It = 0.50 × (4 × 60) = 0.50 × 240 = 120 C. N = Q/e = 120/(1.6 × 10⁻¹⁹) = 7.5 × 10²⁰ electrons. Even this moderate current for only 4 minutes involves more than 750 billion billion electrons — illustrating the enormous number of charge carriers in a conductor."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A charge of 30 C passes through a component, and 150 J of energy is dissipated. What is the potential difference across the component?",
+            "options": [
+              "0.2 V",
+              "5.0 V",
+              "4500 V",
+              "120 V"
+            ],
+            "answer": "5.0 V",
+            "explanation": "V = W/Q = 150/30 = 5.0 V. The potential difference tells us how much energy is transferred per coulomb of charge. Here, every coulomb of charge releases 5 joules of energy in the component."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 100 W lamp operates on a 240 V supply. What is its resistance when operating?",
+            "options": [
+              "2.4 Ω",
+              "24 Ω",
+              "576 Ω",
+              "0.42 Ω"
+            ],
+            "answer": "576 Ω",
+            "explanation": "R = V²/P = 240²/100 = 57,600/100 = 576 Ω. Alternatively: I = P/V = 100/240 = 0.417 A; R = V/I = 240/0.417 = 576 Ω. Note: the operating resistance of a lamp filament is much higher than its cold resistance — the filament heats to ~2500°C, and tungsten's resistance coefficient is large."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A copper wire of length 2.0 m and diameter 0.50 mm has resistivity 1.72 × 10⁻⁸ Ω m. What is its resistance?",
+            "options": [
+              "0.035 Ω",
+              "0.175 Ω",
+              "0.35 Ω",
+              "0.70 Ω"
+            ],
+            "answer": "0.175 Ω",
+            "explanation": "A = π(d/2)² = π × (0.25 × 10⁻³)² = 1.963 × 10⁻⁷ m². R = ρL/A = (1.72 × 10⁻⁸ × 2.0)/(1.963 × 10⁻⁷) = 3.44 × 10⁻⁸/1.963 × 10⁻⁷ = 0.175 Ω. This small resistance shows why copper is ideal for wiring — even a 2 m length has only 0.175 Ω resistance."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A component has the following V-I data: at 2V → 0.1A; at 4V → 0.15A; at 6V → 0.20A. Is it ohmic?",
+            "options": [
+              "Yes — current increases with voltage",
+              "No — the resistance changes: R₁ = 20Ω, R₂ = 26.7Ω, R₃ = 30Ω",
+              "Yes — the V-I relationship is linear",
+              "Cannot be determined from this data"
+            ],
+            "answer": "No — the resistance changes: R₁ = 20Ω, R₂ = 26.7Ω, R₃ = 30Ω",
+            "explanation": "R₁ = 2/0.1 = 20 Ω; R₂ = 4/0.15 = 26.7 Ω; R₃ = 6/0.20 = 30 Ω. Resistance increases with voltage → NOT ohmic. The relationship is NOT linear (Ohm's Law requires constant R, giving V/I = constant). This behaviour is consistent with a lamp filament whose temperature (and hence resistance) rises with current."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A conductor carries current I = nAev_d. If the diameter of the wire is doubled while all other conditions remain the same, what happens to the drift velocity?",
+            "options": [
+              "Doubles",
+              "Halves",
+              "Quadruples",
+              "Reduces to one quarter"
+            ],
+            "answer": "Reduces to one quarter",
+            "explanation": "v_d = I/(nAe). Doubling the diameter doubles the radius, so A = π r² → A increases by 2² = 4. Since v_d ∝ 1/A, drift velocity reduces to 1/4 of its original value. With a wider wire, the same current can flow with a much smaller drift velocity — each carrier carries less 'urgency' to move because there are more of them available."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t26_l2",
+      "title": "DC Circuits: Kirchhoff's Laws and Series/Parallel Combinations",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every electrical circuit — whether the simple torch used by a night watchman in Kampala, the complex wiring of the Isimba hydroelectric dam's control room, or the intricate printed circuit board inside a mobile phone — operates according to two fundamental laws stated by Gustav Kirchhoff in 1845. These laws are simply statements of conservation of charge and conservation of energy applied to electric circuits. Together with Ohm's Law, they form the complete toolkit for analysing any DC circuit."
+        },
+        {
+          "type": "heading",
+          "body": "Kirchhoff's Current Law (KCL) — Junction Rule"
+        },
+        {
+          "type": "text",
+          "body": "**Kirchhoff's First Law (KCL — Kirchhoff's Current Law):**\nThe algebraic sum of currents at any junction (node) in a circuit is zero.\n\nEquivalently: **The sum of currents entering a junction equals the sum of currents leaving it.**\n\nΣI_in = ΣI_out\n\n**Physical basis:** Conservation of charge — charge cannot accumulate at a junction.\n\n**Example:** At a junction where currents I₁ and I₂ flow in and I₃ and I₄ flow out:\nI₁ + I₂ = I₃ + I₄\n\n**Sign convention for KCL:**\nChoose a reference direction (e.g., 'into the junction = positive'). Then:\nΣI = 0 (with appropriate signs)\n\n**Worked Example 1:** At a junction: 3.0 A flows in from the left, 1.5 A flows in from above, and two currents I₂ and I₃ flow out to the right and downward with I₃ = 0.8 A. Find I₂.\n\nΣI_in = ΣI_out: 3.0 + 1.5 = I₂ + 0.8\n4.5 = I₂ + 0.8\n**I₂ = 3.7 A**"
+        },
+        {
+          "type": "heading",
+          "body": "Kirchhoff's Voltage Law (KVL) — Loop Rule"
+        },
+        {
+          "type": "text",
+          "body": "**Kirchhoff's Second Law (KVL — Kirchhoff's Voltage Law):**\nThe algebraic sum of all potential differences (EMFs and resistive voltage drops) around any closed loop in a circuit is zero.\n\nΣεᵢ = ΣIᵢRᵢ (around any closed loop)\n\nOr equivalently: ΣV = 0 (taking signs into account)\n\n**Physical basis:** Conservation of energy — a charge going around a complete loop returns to its starting potential, gaining no net energy.\n\n**Sign convention for KVL (traversing a loop in a chosen direction):**\n- If you traverse a resistor in the direction of current flow: −IR (voltage drops)\n- If you traverse a resistor against current flow: +IR (voltage rises)\n- If you traverse a battery from − to + terminal: +ε (EMF adds)\n- If you traverse a battery from + to − terminal: −ε (EMF subtracts)\n\n**Worked Example 2:** A simple circuit has a battery ε = 12 V and two resistors R₁ = 4 Ω and R₂ = 8 Ω in series. Using KVL, find the current.\n\nApplying KVL around the loop (traversing in direction of assumed current I):\n+ε − IR₁ − IR₂ = 0\n12 − 4I − 8I = 0\n12 = 12I\n**I = 1.0 A**\n\n**Worked Example 3 (using both laws):** Two batteries ε₁ = 6 V (internal resistance r₁ = 1 Ω) and ε₂ = 9 V (r₂ = 2 Ω) are connected with an external resistance R = 5 Ω. Using Kirchhoff's laws, find the current if the batteries oppose each other.\n\nSingle loop: traversing clockwise:\n+ε₁ − ε₂ − Ir₁ − Ir₂ − IR = 0\n6 − 9 − I(1) − I(2) − I(5) = 0\n−3 − 8I = 0\nI = −3/8 = **−0.375 A**\n\nThe negative sign means the current actually flows anticlockwise — the stronger battery (9 V) wins and drives the current in the opposite direction to our assumption."
+        },
+        {
+          "type": "heading",
+          "body": "Resistors in Series and Parallel"
+        },
+        {
+          "type": "text",
+          "body": "**Resistors in Series:**\n- Same current flows through each resistor: I₁ = I₂ = I₃ = I\n- Total voltage = sum of individual voltages: V = V₁ + V₂ + V₃\n- V = IR₁ + IR₂ + IR₃ = I(R₁ + R₂ + R₃)\n- **R_total = R₁ + R₂ + R₃ + ...** (always larger than any individual resistance)\n\n**Resistors in Parallel:**\n- Same voltage across each resistor: V₁ = V₂ = V₃ = V\n- Total current = sum of individual currents: I = I₁ + I₂ + I₃\n- I = V/R₁ + V/R₂ + V/R₃ = V(1/R₁ + 1/R₂ + 1/R₃)\n- **1/R_total = 1/R₁ + 1/R₂ + 1/R₃ + ...** (always smaller than any individual resistance)\n\n**Special case — two resistors in parallel:**\n**R_parallel = R₁R₂/(R₁ + R₂)** (product over sum)\n\n**Worked Example 4:** Three resistors 6 Ω, 12 Ω, and 4 Ω are connected in parallel across a 12 V supply. Find:\n(a) The equivalent resistance\n(b) The total current from the supply\n(c) The current through each resistor\n\n(a) 1/R = 1/6 + 1/12 + 1/4 = 2/12 + 1/12 + 3/12 = 6/12 = 1/2\n**R = 2 Ω**\n\n(b) I = V/R = 12/2 = **6 A**\n\n(c) I₁ = V/R₁ = 12/6 = **2 A**; I₂ = 12/12 = **1 A**; I₃ = 12/4 = **3 A**\nCheck: I₁ + I₂ + I₃ = 2 + 1 + 3 = 6 A ✓ (KCL)\n\n**Worked Example 5 — Mixed network:** A 3 Ω and 6 Ω are in parallel; this combination is in series with a 4 Ω. A 12 V battery (negligible internal resistance) is connected. Find all currents.\n\nR_parallel = (3 × 6)/(3 + 6) = 18/9 = 2 Ω\nR_total = R_parallel + 4 = 2 + 4 = 6 Ω\nTotal current: I = V/R = 12/6 = **2 A** (through the 4 Ω and the parallel combination)\nVoltage across parallel combination: V_p = I × R_p = 2 × 2 = **4 V**\nI₃ = 4/3 = **1.33 A** (through 3 Ω); I₆ = 4/6 = **0.67 A** (through 6 Ω)\nCheck: 1.33 + 0.67 = 2 A ✓"
+        },
+        {
+          "type": "heading",
+          "body": "The Potential Divider"
+        },
+        {
+          "type": "text",
+          "body": "A **potential divider** (voltage divider) uses two (or more) resistors in series to produce a specific fraction of the supply voltage.\n\n**Potential divider formula:**\nFor two resistors R₁ (top) and R₂ (bottom) connected across supply V_s:\n\n**V_out = V_s × R₂/(R₁ + R₂)**\n\nWhere V_out is the voltage across R₂ (the output).\n\n**Derivation:** The current I = V_s/(R₁ + R₂). The voltage across R₂: V_out = IR₂ = V_s × R₂/(R₁ + R₂) ✓\n\n**Worked Example 6:** A potential divider has R₁ = 8 kΩ and R₂ = 2 kΩ across a 15 V supply. Find V_out.\n\nV_out = 15 × 2000/(8000 + 2000) = 15 × 2/10 = **3.0 V**\n\n**Using a sensor in a potential divider:**\nIf R₂ is replaced with a light-dependent resistor (LDR) or thermistor:\n- In bright light, LDR resistance ↓ → V_out ↓ (less of supply across LDR)\n- In darkness, LDR resistance ↑ → V_out ↑\n\nThis output can trigger a transistor switch (covered in Topic 19) or be read by a microcontroller. Potential dividers with sensors are used in:\n- Automatic streetlights (Kampala's solar-powered streetlights use LDR potential dividers)\n- Temperature-controlled fans (thermistor divider drives a transistor that controls fan motor)\n- Fuel level sensors in vehicles\n- Heart rate monitors in clinical settings\n\n**The potentiometer (variable potential divider):**\nA sliding contact on a resistive track allows V_out to be varied continuously from 0 to V_s. Used in volume controls (audio amplifiers), speed controllers, and position sensors."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "KCL: ΣI_in = ΣI_out at any junction (charge conservation). KVL: ΣV = 0 around any closed loop (energy conservation). Series resistors: R_total = ΣRᵢ (same current). Parallel resistors: 1/R = Σ(1/Rᵢ) (same voltage); two in parallel: R = R₁R₂/(R₁+R₂). Potential divider: V_out = V_s × R₂/(R₁+R₂). With sensor (LDR/thermistor) in divider, V_out varies with physical condition."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Kirchhoff's Current Law (KCL): ΣI_in = ΣI_out at a junction; based on conservation of charge\n• Kirchhoff's Voltage Law (KVL): ΣV = 0 around a closed loop; based on conservation of energy\n• Series combination: R = R₁+R₂+...; same current; voltages add\n• Parallel combination: 1/R = 1/R₁+1/R₂+...; same voltage; currents add\n• Potential divider: V_out = V_s·R₂/(R₁+R₂); used with sensors to produce variable output voltage"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "At a circuit junction, currents of 4.0 A and 2.5 A flow in, and 3.0 A flows out in one direction. What is the current flowing out in the other direction?",
+            "options": [
+              "3.5 A",
+              "9.5 A",
+              "0.5 A",
+              "4.5 A"
+            ],
+            "answer": "3.5 A",
+            "explanation": "KCL: ΣI_in = ΣI_out. 4.0 + 2.5 = 3.0 + I_out. 6.5 = 3.0 + I_out. I_out = 3.5 A. This is Kirchhoff's First Law — charge cannot accumulate at a junction, so all the charge flowing in must flow out."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in series. What is the total resistance?",
+            "options": [
+              "1 Ω",
+              "6 Ω",
+              "11 Ω",
+              "0.91 Ω"
+            ],
+            "answer": "11 Ω",
+            "explanation": "Series: R_total = R₁ + R₂ + R₃ = 2 + 3 + 6 = 11 Ω. In a series connection, resistance always increases — the total is always larger than any individual resistor. The same current flows through all three resistors."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Three resistors of 6 Ω, 12 Ω, and 4 Ω are connected in parallel. What is the equivalent resistance?",
+            "options": [
+              "22 Ω",
+              "0.58 Ω",
+              "2.0 Ω",
+              "4.0 Ω"
+            ],
+            "answer": "2.0 Ω",
+            "explanation": "1/R = 1/6 + 1/12 + 1/4 = 2/12 + 1/12 + 3/12 = 6/12 = 1/2. R = 2 Ω. In a parallel connection, the equivalent resistance is always LESS than the smallest individual resistor (4 Ω here). More parallel paths means less overall resistance."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A potential divider consists of R₁ = 12 kΩ (top) and R₂ = 4 kΩ (bottom) across a 20 V supply. What is V_out across R₂?",
+            "options": [
+              "15 V",
+              "5 V",
+              "4 V",
+              "16 V"
+            ],
+            "answer": "5 V",
+            "explanation": "V_out = V_s × R₂/(R₁ + R₂) = 20 × 4000/(12000 + 4000) = 20 × 4/16 = 20/4 = 5 V. The output is 1/4 of the supply because R₂ is 1/4 of the total resistance. To get a higher output, increase R₂ relative to R₁."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In a circuit loop, a 9 V battery drives current through a 2 Ω and 4 Ω resistor in series. Applying KVL, what is the current?",
+            "options": [
+              "1.0 A",
+              "1.5 A",
+              "4.5 A",
+              "0.67 A"
+            ],
+            "answer": "1.5 A",
+            "explanation": "KVL around the loop: +9 − 2I − 4I = 0 → 9 = 6I → I = 1.5 A. Check using Ohm's Law: R_total = 6 Ω; I = V/R = 9/6 = 1.5 A ✓. KVL always gives the same result as applying Ohm's Law to the total resistance for a simple series circuit."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A 10 Ω and 15 Ω resistor are connected in parallel. What is their combined resistance?",
+            "options": [
+              "25 Ω",
+              "6.0 Ω",
+              "12.5 Ω",
+              "5.0 Ω"
+            ],
+            "answer": "6.0 Ω",
+            "explanation": "R = R₁R₂/(R₁+R₂) = (10 × 15)/(10 + 15) = 150/25 = 6.0 Ω. The product-over-sum formula works only for TWO parallel resistors. The result (6 Ω) is less than the smaller resistor (10 Ω), confirming the parallel combination reduces resistance."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t26_l3",
+      "title": "Internal Resistance, EMF and Battery Circuits",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every battery, solar cell, and generator has an internal resistance — a resistance that is part of the source itself. When a torch battery runs flat, it is not that the EMF disappears — it is that the internal resistance increases until the voltage delivered to the external circuit drops to near zero. When a car battery struggles to start the engine on a cold Kampala morning, it is because the large starting current causes a large voltage drop across the battery's internal resistance. Understanding internal resistance is essential for designing efficient power systems, choosing the right batteries, and understanding why batteries fail."
+        },
+        {
+          "type": "heading",
+          "body": "The Concept of Internal Resistance"
+        },
+        {
+          "type": "text",
+          "body": "**Internal resistance (r):** Every source of EMF has an internal resistance caused by the physical resistance of the electrodes, electrolyte (for cells), windings (for generators), or semiconductor layers (for solar cells).\n\n**The complete battery model:**\nA real battery = ideal EMF source (ε) + internal resistance (r) in series\n\n**The terminal voltage (V_terminal):**\nWhen current I flows:\n- Voltage drop across internal resistance = Ir\n- Terminal voltage = EMF − internal resistance drop:\n\n**V_terminal = ε − Ir**\n\nThis is the voltage measured between the battery terminals when current is flowing.\n\n**When no current flows (open circuit):**\nV_terminal = ε − 0 × r = **ε** (the terminal voltage equals the EMF)\nThis is why you measure EMF with a high-resistance voltmeter — it draws negligible current.\n\n**When current flows (closed circuit):**\nV_terminal = ε − Ir < ε (terminal voltage is always less than EMF)\nThe difference (ε − V_terminal) = Ir is called the **'lost volts'** — energy wasted heating the battery's internal resistance.\n\n**The circuit equation:**\nApplying KVL around the circuit (EMF source + internal resistance + external resistance R):\nε = IR + Ir = I(R + r)\n\n**Current from the circuit: I = ε/(R + r)**\n\n**Terminal voltage: V = IR = ε − Ir = ε × R/(R + r)**\n\n**Worked Example 1:** A battery has EMF 6.0 V and internal resistance 0.5 Ω. It is connected to an external resistance of 11.5 Ω. Find:\n(a) The circuit current\n(b) The terminal voltage\n(c) The 'lost volts'\n(d) Power wasted in internal resistance\n(e) Power delivered to external resistance\n\n(a) I = ε/(R + r) = 6.0/(11.5 + 0.5) = 6.0/12.0 = **0.50 A**\n\n(b) V_terminal = ε − Ir = 6.0 − (0.50 × 0.5) = 6.0 − 0.25 = **5.75 V**\nOr: V = IR = 0.50 × 11.5 = 5.75 V ✓\n\n(c) Lost volts = Ir = 0.50 × 0.5 = **0.25 V**\n\n(d) P_internal = I²r = (0.50)² × 0.5 = **0.125 W**\n\n(e) P_external = I²R = (0.50)² × 11.5 = **2.875 W**\nOr: Total power = εI = 6.0 × 0.50 = 3.0 W; P_external = 3.0 − 0.125 = 2.875 W ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Measuring EMF and Internal Resistance"
+        },
+        {
+          "type": "text",
+          "body": "**Method 1: V-I graph method (standard A-level technique):**\n\nFrom V_terminal = ε − Ir:\nThis is a linear equation of the form y = c − mx where:\n- y = V_terminal (measured voltage)\n- x = I (measured current)\n- intercept c = ε (when I = 0)\n- slope m = −r (negative slope = −internal resistance)\n\n**Experiment:**\n1. Connect battery in series with variable resistor and ammeter\n2. Connect voltmeter across battery terminals\n3. Vary the resistance; record I and V for each setting\n4. Plot V vs I — should give a straight line\n5. Y-intercept = EMF (ε); magnitude of slope = internal resistance (r)\n\n**Worked Example 2:** A battery gives the following V-I readings:\n| I (A) | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |\n| V (V) | 8.0 | 7.5 | 7.0 | 6.5 | 6.0 |\n\nFind the EMF and internal resistance.\n\nY-intercept (at I = 0): V = **8.0 V = ε**\nSlope = ΔV/ΔI = (8.0 − 6.0)/(0.0 − 2.0) = 2.0/(−2.0) = −1.0\nInternal resistance = **r = 1.0 Ω**\nCheck: at I = 1.5 A: V = 8.0 − (1.0)(1.5) = 6.5 V ✓\n\n**Method 2: Two reading method:**\nMeasure terminal voltage V₁ at current I₁ and V₂ at current I₂.\nFrom V = ε − Ir:\nV₁ = ε − I₁r and V₂ = ε − I₂r\nSubtracting: V₁ − V₂ = (I₂ − I₁)r → **r = (V₁ − V₂)/(I₂ − I₁)**\nAnd: ε = V₁ + I₁r\n\n**Short circuit current:**\nWhen R = 0 (short circuit), the maximum possible current flows through r alone:\nI_sc = ε/r\n\nThe short-circuit current can be dangerously large for low-internal-resistance sources (like a lead-acid car battery: ε = 12 V, r ≈ 0.01 Ω → I_sc = 1200 A!). This is why car battery short circuits cause fires and explosions."
+        },
+        {
+          "type": "heading",
+          "body": "Maximum Power Transfer Theorem"
+        },
+        {
+          "type": "text",
+          "body": "**Question:** For a given battery (fixed ε and r), what value of external resistance R delivers maximum power to R?\n\n**Power delivered to R:**\nP_R = I²R = [ε/(R+r)]² × R = ε²R/(R+r)²\n\n**To find maximum:** dP_R/dR = 0\n\nUsing calculus (or by inspection):\ndP_R/dR = ε²[(R+r)² − R × 2(R+r)] / (R+r)⁴\n= ε²(R+r − 2R) / (R+r)³\n= ε²(r − R) / (R+r)³\n\nSetting = 0: r − R = 0 → **R = r** (maximum power when external resistance equals internal resistance)\n\n**Maximum power:**\nP_max = ε²r/(r+r)² = ε²r/4r² = **ε²/(4r)**\n\n**Efficiency at maximum power:**\nη = P_R/P_total = I²R / (εI) = IR/ε = V_terminal/ε = r/(r+r) = **50%**\n\nAt maximum power transfer, efficiency is only 50% — half the total power is wasted in the internal resistance. This trade-off is fundamental in circuit design:\n- For maximum power: set R = r (e.g., audio amplifier matching speakers to amplifier output impedance)\n- For maximum efficiency: set R ≫ r (e.g., power grid transmission — high load resistance minimises internal losses)\n\n**Worked Example 3:** A battery (ε = 12 V, r = 2 Ω) drives different loads. Find the external resistance that maximises power delivered to the load, and the maximum power.\n\nR_max_power = r = **2 Ω**\nI = ε/(R+r) = 12/(2+2) = 3.0 A\nP_max = I²R = (3.0)² × 2 = **18 W**\nOr: P_max = ε²/(4r) = 144/(4×2) = **18 W ✓**\n\nTotal power = εI = 12 × 3 = 36 W; Efficiency = 18/36 = 50% ✓\n\n**Practical context:** When connecting a car sound system's amplifier to speakers, the speaker impedance should match the amplifier's output impedance for maximum power delivery to the speakers. This is why audio equipment specifies '4 Ω', '8 Ω' or '16 Ω' impedance."
+        },
+        {
+          "type": "heading",
+          "body": "Batteries in Series and Parallel"
+        },
+        {
+          "type": "text",
+          "body": "**Cells (batteries) in series:**\nEMFs add: ε_total = ε₁ + ε₂ + ... (if all EMFs in same direction)\nInternal resistances add: r_total = r₁ + r₂ + ...\nBenefit: Higher total EMF (higher voltage for circuit)\nUsed in: Torch batteries (e.g., 3 × 1.5 V = 4.5 V); EV battery packs (cells in series to increase voltage)\n\n**CAUTION:** If one cell has its EMF opposing the others, subtract it:\nε_total = ε₁ − ε₂ (if ε₂ opposes ε₁)\n\n**Cells in parallel (identical cells):**\nEMF unchanged: ε_total = ε (same as each cell)\nInternal resistance reduced: r_total = r/n (n cells in parallel)\nBenefit: Lower internal resistance → more current capacity → longer lifetime\nUsed in: When high current is needed; backup power systems; solar cell arrays\n\n**Worked Example 4:** Three identical cells each have EMF 1.5 V and internal resistance 0.50 Ω. Find the total EMF, total internal resistance, and short-circuit current when connected:\n(a) In series\n(b) In parallel\n\n(a) Series:\nε_total = 3 × 1.5 = **4.5 V**; r_total = 3 × 0.50 = **1.50 Ω**\nI_sc = 4.5/1.50 = **3.0 A**\n\n(b) Parallel:\nε_total = **1.5 V** (unchanged); r_total = 0.50/3 = **0.167 Ω**\nI_sc = 1.5/0.167 = **9.0 A** (much higher current capacity!)"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Internal resistance r: real battery = ideal EMF ε in series with r. Terminal voltage V = ε − Ir (less than EMF when current flows). Lost volts = Ir. I = ε/(R+r). V-I graph: y-intercept = ε; slope = −r. Maximum power transfer: P_max when R = r; P_max = ε²/4r; efficiency = 50%. Series cells: EMFs and resistances add. Parallel identical cells: EMF unchanged; r_total = r/n; more current capacity."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Internal resistance (r): Resistance within the source itself; causes terminal voltage to drop when current flows\n• Terminal voltage: V = ε − Ir; measured voltage at battery terminals under load; always less than EMF\n• Lost volts: Ir; voltage drop across internal resistance; energy wasted as heat in the source\n• Open-circuit voltage: Terminal voltage when I = 0; equals EMF ε\n• Maximum power transfer: Occurs when R = r; P_max = ε²/(4r); efficiency = 50%\n• Short-circuit current: I_sc = ε/r; maximum possible current when R = 0"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A battery has EMF 9.0 V and internal resistance 1.5 Ω. When connected to a 7.5 Ω external resistor, what is the terminal voltage?",
+            "options": [
+              "9.0 V",
+              "1.5 V",
+              "7.5 V",
+              "8.0 V"
+            ],
+            "answer": "7.5 V",
+            "explanation": "I = ε/(R+r) = 9.0/(7.5+1.5) = 9.0/9.0 = 1.0 A. Terminal voltage V = ε − Ir = 9.0 − (1.0 × 1.5) = 9.0 − 1.5 = 7.5 V. Or: V = IR = 1.0 × 7.5 = 7.5 V ✓. The 'lost volts' = 1.5 V are wasted heating the battery's internal resistance."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "From a V-I graph of a battery, the y-intercept is 6.0 V and the gradient is −0.80 V/A. What are the EMF and internal resistance?",
+            "options": [
+              "ε = 6.0 V, r = 0.80 Ω",
+              "ε = 0.80 V, r = 6.0 Ω",
+              "ε = 6.0 V, r = −0.80 Ω",
+              "ε = 7.5 A, r = 0.80 Ω"
+            ],
+            "answer": "ε = 6.0 V, r = 0.80 Ω",
+            "explanation": "From V = ε − Ir: the y-intercept (when I=0) = ε = 6.0 V. The gradient = −r = −0.80 V/A, so r = 0.80 Ω. (The gradient is negative because terminal voltage decreases as current increases — more current means more lost volts across r.)"
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A battery (ε = 12 V, r = 3 Ω) is connected to external resistance R. For maximum power to R, what should R be, and what is P_max?",
+            "options": [
+              "R = 3 Ω; P_max = 12 W",
+              "R = 6 Ω; P_max = 6 W",
+              "R = 0 Ω; P_max = 48 W",
+              "R = 3 Ω; P_max = 6 W"
+            ],
+            "answer": "R = 3 Ω; P_max = 12 W",
+            "explanation": "Maximum power transfer: R = r = 3 Ω. I = 12/(3+3) = 2 A. P_max = I²R = 4 × 3 = 12 W. Or: P_max = ε²/(4r) = 144/12 = 12 W. At this point, 12 W is also being wasted in the internal resistance — total output of the battery is 24 W, with 50% efficiency."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Four identical cells (ε = 1.5 V, r = 0.5 Ω each) are connected in series. They drive a 10 Ω external resistance. Find the current.",
+            "options": [
+              "0.50 A",
+              "0.60 A",
+              "0.15 A",
+              "1.50 A"
+            ],
+            "answer": "0.50 A",
+            "explanation": "Series cells: ε_total = 4 × 1.5 = 6.0 V; r_total = 4 × 0.5 = 2.0 Ω. I = ε_total/(R + r_total) = 6.0/(10 + 2.0) = 6.0/12 = 0.50 A. Series connection gives higher voltage (6 V vs 1.5 V) but also higher internal resistance (2 Ω vs 0.5 Ω)."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A battery's terminal voltage is 11.2 V when delivering 2.0 A, and 10.4 V when delivering 4.0 A. Find the EMF and internal resistance.",
+            "options": [
+              "ε = 12.0 V, r = 0.4 Ω",
+              "ε = 10.4 V, r = 0.8 Ω",
+              "ε = 11.2 V, r = 0.4 Ω",
+              "ε = 12.8 V, r = 0.8 Ω"
+            ],
+            "answer": "ε = 12.0 V, r = 0.4 Ω",
+            "explanation": "r = (V₁−V₂)/(I₂−I₁) = (11.2−10.4)/(4.0−2.0) = 0.8/2.0 = 0.4 Ω. ε = V₁ + I₁r = 11.2 + 2.0×0.4 = 11.2 + 0.8 = 12.0 V. Check: ε = V₂ + I₂r = 10.4 + 4.0×0.4 = 10.4 + 1.6 = 12.0 V ✓. This two-reading method is faster than the full V-I graph approach."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why does a battery's terminal voltage DECREASE when more current is drawn?",
+            "options": [
+              "The EMF decreases as more electrons leave the battery",
+              "The terminal voltage V = ε − Ir; larger current I means larger voltage drop Ir across internal resistance, reducing V",
+              "The external resistance increases with current",
+              "The battery chemistry changes instantly with current"
+            ],
+            "answer": "The terminal voltage V = ε − Ir; larger current I means larger voltage drop Ir across internal resistance, reducing V",
+            "explanation": "V = ε − Ir. The EMF ε is (approximately) constant. As I increases, the lost volts Ir increases, so V = ε − Ir decreases. This is why a phone battery shows lower voltage when gaming (high current) than when in standby (low current), even with the same charge level. As a battery ages, r increases, so terminal voltage drops more under load."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t26_l4",
+      "title": "Electrical Measurements: The Wheatstone Bridge and Galvanometer",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Precise electrical measurement is the foundation of all electrical engineering, from the calibration of electricity meters at UMEME (Uganda's electricity distributor) to quality control in Jinja's manufacturing plants, from monitoring the charge state of solar batteries in rural electrification projects, to biomedical engineering at Uganda's hospitals. The Wheatstone bridge is one of the most elegant and sensitive measurement circuits ever devised — capable of measuring resistance to extraordinary precision. Understanding how it works, and how it relates to broader circuit analysis, deepens understanding of all measurement circuits."
+        },
+        {
+          "type": "heading",
+          "body": "The Galvanometer and Ammeter/Voltmeter Circuits"
+        },
+        {
+          "type": "text",
+          "body": "**The galvanometer:**\nA galvanometer is a sensitive current-measuring device, typically with full-scale deflection at a very small current (e.g., I_g = 100 μA) and a small internal resistance (e.g., G = 50 Ω). It forms the basis of both ammeters and voltmeters.\n\n**Converting a galvanometer to an ammeter:**\nTo measure larger currents, a low-value resistor called a **shunt (S)** is connected in PARALLEL with the galvanometer.\n\nRequirement: when the full-scale current I flows through the ammeter, exactly I_g flows through the galvanometer (the rest, I − I_g, flows through S).\n\nSince the galvanometer and shunt are in parallel: V_G = V_S\nI_g × G = (I − I_g) × S\n\n**S = I_g × G / (I − I_g)**\n\n**Worked Example 1:** A galvanometer has full-scale deflection at I_g = 2 mA and resistance G = 50 Ω. Find the shunt needed to convert it to a 0–5 A ammeter.\n\nS = I_g × G/(I − I_g) = (2×10⁻³ × 50)/(5 − 0.002)\n= 0.1/4.998 = **0.020 Ω = 20 mΩ**\n\nThe shunt resistance is tiny (20 mΩ) — this is correct, as the shunt must divert most of the large current (4.998 A out of 5 A) and must have negligible effect on the circuit being measured.\n\n**Converting a galvanometer to a voltmeter:**\nTo measure voltages, a large series resistor **M (multiplier)** is connected in SERIES with the galvanometer.\n\nRequirement: when the full-scale voltage V is applied across the voltmeter, exactly I_g flows through the galvanometer.\n\nV = I_g(G + M) → **M = V/I_g − G**\n\n**Worked Example 2:** Using the same galvanometer (I_g = 2 mA, G = 50 Ω), find the series resistance needed for a 0–10 V voltmeter.\n\nM = V/I_g − G = 10/(2×10⁻³) − 50 = 5000 − 50 = **4950 Ω**\n\nThe ideal voltmeter has infinite resistance (no current drawn). This one draws I_g = 2 mA at full scale — acceptable for most measurements, but would disturb very high-resistance circuits.\n\n**Loading effect:**\nA real voltmeter (finite resistance) draws current from the circuit, reducing the voltage it is trying to measure. To minimise loading:\n- Use a high-resistance voltmeter (M very large, or use a digital voltmeter with MΩ resistance)\n- Similarly, an ammeter's resistance should be << circuit resistance"
+        },
+        {
+          "type": "heading",
+          "body": "The Wheatstone Bridge"
+        },
+        {
+          "type": "text",
+          "body": "The Wheatstone bridge (developed by Charles Wheatstone in 1843) is a circuit for measuring an unknown resistance very accurately by comparison with known resistances.\n\n**Circuit structure:**\nFour resistors P, Q, R, X are arranged in a diamond (bridge) configuration:\n- Battery (EMF ε) connects between nodes A and C\n- Galvanometer (G) connects between nodes B and D\n- P and Q are in one arm (A→B and A→D); R and X are in the other arm (B→C and D→C)\n\n**Balance condition:**\nWhen no current flows through the galvanometer (I_G = 0), the bridge is said to be **balanced**.\n\nAt balance:\n- V_B = V_D (no potential difference across galvanometer)\n- The voltage ratio in each arm must be equal:\n\nIn arm ABС: V_P/V_Q = P/Q (voltage divider)\nIn arm ADС: V_R/V_X = R/X\n\nAt balance: V_B = V_D means the voltage divider ratios are equal:\nP/Q = R/X\n\n**Wheatstone bridge balance condition:**\n**P/Q = R/X** or equivalently **PX = QR**\n\nSolving for unknown X:\n**X = QR/P**\n\n**Why this is very accurate:**\n- At balance, the galvanometer reads zero — the balance point can be found very precisely (the galvanometer can detect microamperes of imbalance)\n- The measurement depends only on resistance RATIOS, not on the exact EMF or galvanometer calibration\n- It is a null method — no current flows through the component being measured at balance\n\n**Worked Example 3:** In a Wheatstone bridge: P = 100 Ω, Q = 200 Ω, R = 150 Ω. The bridge is balanced. Find X.\n\nX = QR/P = (200 × 150)/100 = 30,000/100 = **300 Ω**\n\n**Worked Example 4:** A bridge has P = 500 Ω, Q = 1000 Ω, R = 250 Ω. The unknown X = 600 Ω. Is the bridge balanced? If not, which way does the galvanometer deflect?\n\nTest: PX vs QR: 500 × 600 = 300,000; 1000 × 250 = 250,000\n300,000 ≠ 250,000 → Bridge is NOT balanced.\n\nCurrent will flow through the galvanometer. The higher ratio is PX > QR, meaning V_B > V_D (B is at a higher potential than D). Conventional current flows from B to D through the galvanometer."
+        },
+        {
+          "type": "heading",
+          "body": "The Metre Bridge (Slide Wire Bridge)"
+        },
+        {
+          "type": "text",
+          "body": "The metre bridge is a practical form of the Wheatstone bridge that is commonly used in school and university laboratories (including Uganda's A-level practical examinations).\n\n**Apparatus:**\n- A uniform resistance wire of length 100 cm (1 metre) stretched along a ruler\n- A known resistance Q in one gap; unknown resistance X in the other gap\n- A galvanometer connected between the junction of Q and X, and a jockey (sliding contact) on the wire\n- A battery connected across the wire ends\n\n**How it works:**\nThe wire itself acts as two resistors P and R (the bridge arms alongside Q and X). The resistance of a uniform wire is proportional to its length:\nP ∝ l (length from one end to jockey)\nR ∝ (100 − l) (remaining length)\n\nAt balance (galvanometer reads zero), the bridge condition P/Q = R/X gives:\nl/(100−l) = P/Q → this isn't quite right. Let me use the correct form:\n\nAt balance: P/Q = R/X (Wheatstone bridge)\nBut here: P corresponds to the wire length to the jockey from the Q-side, and R corresponds to the remaining wire length from the X-side.\n\nCorrectly: **Q/X = l/(100 − l)** (depending on which way the circuit is arranged)\nSolving: **X = Q(100 − l)/l**\n\n(The exact form depends on which resistor is in which gap — always draw the circuit carefully.)\n\n**Worked Example 5:** In a metre bridge, a known resistance Q = 30 Ω is in one gap and unknown X is in the other. Balance is achieved at l = 40 cm from the Q end. Find X.\n\nAt balance: Q/l = X/(100 − l) → X = Q(100 − l)/l = 30 × (100 − 40)/40 = 30 × 60/40 = **45 Ω**\n\n**Worked Example 6:** A metre bridge balances at 65 cm with X in one gap and Q = 20 Ω in the other. Find X. (X is in the (100-l) section)\n\nX = Q × l/(100 − l) = 20 × 65/(100 − 65) = 20 × 65/35 = 1300/35 = **37.1 Ω**\n\n**Precautions for accurate metre bridge measurements:**\n1. Use a uniform resistance wire (check constancy of resistance per unit length)\n2. Keep connections tight (loose connections add resistance errors)\n3. Take the balance point near the middle of the wire (reduces relative error)\n4. Protect the galvanometer with a protective resistor during rough balance, remove for final precise balance\n5. Repeat with Q and X interchanged; average the two X values (eliminates systematic error from wire non-uniformity)"
+        },
+        {
+          "type": "heading",
+          "body": "Applications and Extensions of the Bridge Circuit"
+        },
+        {
+          "type": "text",
+          "body": "**Strain gauges:**\nA strain gauge is a resistor whose resistance changes when mechanically strained. When incorporated into a Wheatstone bridge, tiny changes in resistance (and thus tiny strains) can be measured with high sensitivity. Used in:\n- Load cells (weighing scales at Uganda Revenue Authority customs)\n- Structural health monitoring of bridges\n- Aircraft wings and turbine blades\n- Medical pressure sensors\n\n**Temperature measurement with resistance thermometers:**\nA platinum resistance thermometer (PRT) has resistance that varies accurately with temperature. Connected as the unknown arm of a Wheatstone bridge, temperature can be measured to 0.001°C precision. Used in:\n- Industrial temperature control (boiler rooms at Nalubaale, Bujagali)\n- Precision laboratory measurement\n- Pharmaceutical manufacturing quality control\n\n**LDR/thermistor sensing bridges:**\nA thermistor in one arm of a Wheatstone bridge gives a bridge output voltage proportional to temperature. The bridge output drives an amplifier and ultimately a relay or switch. Used in:\n- Fire alarm systems\n- Thermostat circuits\n- Air conditioning control systems in Kampala's office buildings\n\n**AC Bridges:**\nThe Wheatstone bridge principle extends to alternating current circuits where capacitors and inductors replace some resistors. AC bridges are used to measure capacitance, inductance, and frequency with great precision — essential in electronics manufacturing and telecommunications equipment."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Galvanometer → ammeter: add shunt S = I_g G/(I−I_g) in parallel. Galvanometer → voltmeter: add series multiplier M = V/I_g − G. Wheatstone bridge balance: P/Q = R/X (or PX = QR); null condition (I_G = 0); X = QR/P. Metre bridge: X = Q(100−l)/l; balance near middle of wire for best accuracy. Applications: strain gauges (structural monitoring), resistance thermometers, temperature-sensing bridges. High-quality voltmeter needs very high input impedance to minimise loading effect."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Shunt (S): Low-value resistor in parallel with galvanometer; diverts most current; S = I_g G/(I−I_g)\n• Multiplier (M): High-value resistor in series with galvanometer; limits current; M = V/I_g − G\n• Wheatstone bridge: Four-resistor circuit; balanced when P/Q = R/X; null method for precision resistance measurement\n• Balance condition: I_G = 0; no current through galvanometer; V_B = V_D; gives PX = QR\n• Metre bridge: Practical Wheatstone bridge with uniform wire; X = Q(100−l)/l\n• Loading effect: A voltmeter reduces the voltage it measures by drawing current; minimised with high-resistance meter"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A galvanometer (I_g = 1 mA, G = 100 Ω) is to be converted into a 0–2 A ammeter. What shunt resistance is needed?",
+            "options": [
+              "0.20 Ω",
+              "0.050 Ω",
+              "200 kΩ",
+              "0.10 Ω"
+            ],
+            "answer": "0.050 Ω",
+            "explanation": "S = I_g G/(I − I_g) = (1×10⁻³ × 100)/(2 − 0.001) = 0.1/1.999 = 0.0500 Ω ≈ 0.050 Ω. This very small shunt resistance means 1999 parts out of 2000 of the current go through the shunt — the galvanometer carries only the tiny fraction it needs for full deflection."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A galvanometer (I_g = 500 μA, G = 200 Ω) needs to become a voltmeter reading up to 50 V. What series multiplier is needed?",
+            "options": [
+              "99,800 Ω",
+              "100,000 Ω",
+              "49,800 Ω",
+              "25,000 Ω"
+            ],
+            "answer": "99,800 Ω",
+            "explanation": "M = V/I_g − G = 50/(500×10⁻⁶) − 200 = 100,000 − 200 = 99,800 Ω ≈ 100 kΩ. The total voltmeter resistance = G + M = 200 + 99,800 = 100,000 Ω = 100 kΩ. This high resistance means the voltmeter draws only 500 μA at full scale — minimal loading effect."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In a Wheatstone bridge: P = 200 Ω, Q = 400 Ω, R = 150 Ω. The bridge is balanced. What is the unknown resistance X?",
+            "options": [
+              "75 Ω",
+              "150 Ω",
+              "300 Ω",
+              "600 Ω"
+            ],
+            "answer": "300 Ω",
+            "explanation": "Balance condition: P/Q = R/X → X = QR/P = (400 × 150)/200 = 60,000/200 = 300 Ω. Check: P/Q = 200/400 = 0.5; R/X = 150/300 = 0.5 ✓. At this balance, no current flows through the galvanometer and X can be calculated precisely."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "In a metre bridge, a known resistance Q = 25 Ω is in one gap. Balance is at l = 40 cm from the Q side. What is the unknown resistance X?",
+            "options": [
+              "16.7 Ω",
+              "37.5 Ω",
+              "10 Ω",
+              "62.5 Ω"
+            ],
+            "answer": "37.5 Ω",
+            "explanation": "X = Q(100−l)/l = 25 × (100−40)/40 = 25 × 60/40 = 25 × 1.5 = 37.5 Ω. To check: Q/l = 25/40 = 0.625; X/(100−l) = 37.5/60 = 0.625 ✓. The ratio of the resistance to the wire length must be equal on both sides."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "What is the key advantage of the Wheatstone bridge as a measurement method?",
+            "options": [
+              "It can measure very large resistances up to teraohms",
+              "It is a null method — the balance point is found when no current flows through the galvanometer, giving high precision independent of EMF calibration",
+              "It only requires one resistor to measure the unknown",
+              "It works on alternating current only"
+            ],
+            "answer": "It is a null method — the balance point is found when no current flows through the galvanometer, giving high precision independent of EMF calibration",
+            "explanation": "The null method (zero galvanometer deflection) is very precise because: (1) the galvanometer is extraordinarily sensitive to small current imbalances, (2) at balance, the result depends only on resistance ratios (not on exact EMF value or galvanometer calibration), and (3) no current flows through the unknown resistance at balance, so contact resistance errors are eliminated."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A voltmeter of resistance 1000 Ω is connected across a 10 kΩ resistor in a circuit with a 10 V source and a 10 kΩ series resistor. What voltage does the voltmeter read?",
+            "options": [
+              "5.0 V",
+              "0.91 V",
+              "9.09 V",
+              "4.76 V"
+            ],
+            "answer": "0.91 V",
+            "explanation": "Without voltmeter: V across 10 kΩ = 5.0 V (equal resistors). With voltmeter: the voltmeter (1000 Ω) in parallel with the 10 kΩ gives R_parallel = (1000 × 10000)/(1000 + 10000) = 10,000,000/11,000 = 909 Ω. Voltage across this combination: V = 10 × 909/(10,000 + 909) = 10 × 909/10,909 = 0.833... V. Hmm. Let me recalculate: R_parallel = 1000×10000/11000 = 909 Ω. V = 10 × 909/(10000+909) = 9090/10909 = 0.833 V. The voltmeter reading is 0.83 V — very different from the true 5 V! This extreme loading error shows why high-resistance voltmeters are essential."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t26_l5",
+      "title": "Energy, Power and Practical Electrical Circuits",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Every month, UMEME sends electricity bills to millions of homes and businesses across Uganda. Families carefully budget their electricity consumption. Engineers at Bujagali Dam monitor power output hour by hour. Solar technicians size battery banks for rural electrification projects. All of these real-world activities require applying the principles of electrical energy and power — turning the abstract equations P = IV, W = QV, and E = Pt into tangible calculations about joules, watts, kilowatt-hours, and money. In this final lesson of Current Electricity, we connect the fundamental physics to practical energy calculations and the design of efficient electrical systems."
+        },
+        {
+          "type": "heading",
+          "body": "Electrical Energy and Power: Detailed Analysis"
+        },
+        {
+          "type": "text",
+          "body": "**Electrical energy transferred:**\nW = QV = IVt = I²Rt = V²t/R\n\n**Electrical power:**\nP = W/t = IV = I²R = V²/R\n\n**The joule (J):** Unit of electrical energy. 1 J = 1 W × 1 s = 1 V × 1 A × 1 s.\n\n**The kilowatt-hour (kWh):**\nThe practical unit of energy used for billing:\n1 kWh = 1000 W × 3600 s = **3.6 × 10⁶ J = 3.6 MJ**\n\n**Electricity cost (Uganda context):**\nUganda's domestic electricity tariff is approximately UGX 760–850 per kWh (varying by consumption band, as of 2024). Industrial users pay different rates.\n\n**Worked Example 1:** A household in Ntinda, Kampala has these monthly appliances:\n| Appliance | Power | Daily use |\n|---|---|---|\n| LED lights (5 × 10 W) | 50 W | 6 h/day |\n| TV (LCD, 60 W) | 60 W | 5 h/day |\n| Refrigerator (100 W) | 100 W | 24 h/day (always on) |\n| Iron (1000 W) | 1000 W | 1 h/day |\n| Phone chargers (4 × 5 W) | 20 W | 3 h/day |\n\n(a) Find the total daily energy consumption in kWh\n(b) Find the monthly energy consumption (30 days)\n(c) Estimate the monthly electricity bill at UGX 800/kWh\n\n(a) Daily energy:\nLights: 50 × 6 = 300 Wh\nTV: 60 × 5 = 300 Wh\nFridge: 100 × 24 = 2400 Wh\nIron: 1000 × 1 = 1000 Wh\nPhones: 20 × 3 = 60 Wh\nTotal = 300 + 300 + 2400 + 1000 + 60 = **4060 Wh = 4.06 kWh/day**\n\n(b) Monthly: 4.06 × 30 = **121.8 kWh ≈ 122 kWh**\n\n(c) Cost = 122 × 800 = **UGX 97,600 ≈ UGX 98,000** (about USD 26 at prevailing exchange rates)\n\nNote: The refrigerator uses more than half the total energy — even though its power rating is only 100 W, it runs 24 hours a day.\n\n**Worked Example 2:** A copper transmission line of total resistance 4 Ω carries 100 A to a factory. Find:\n(a) The power wasted in the line\n(b) The voltage drop across the line\n(c) If the factory requires 10 kV, what voltage must the generator supply?\n\n(a) P_loss = I²R = (100)² × 4 = **40,000 W = 40 kW**\n(b) V_drop = IR = 100 × 4 = **400 V**\n(c) V_supply = V_factory + V_drop = 10,000 + 400 = **10,400 V**\n\nThis 40 kW loss is wasted as heat in the cables. At higher transmission voltage (lower current for same power), losses are reduced dramatically — this is why Uganda's national grid uses high voltage (132 kV, 33 kV) for transmission and only steps down at local substations."
+        },
+        {
+          "type": "heading",
+          "body": "Efficiency of Electrical Energy Transfer"
+        },
+        {
+          "type": "text",
+          "body": "**Electrical efficiency:**\n**η = (useful power output / total power input) × 100%**\n\nor in terms of energy:\n**η = (useful energy output / total energy input) × 100%**\n\n**For a motor:**\nElectrical power input: P_input = IV\nMechanical power output: P_output = Fv (force × velocity) or P_output = τω (torque × angular velocity)\nη = P_output/P_input\n\n**For a generator:**\nMechanical power input: P_input\nElectrical power output: P_output = ε × I (where ε is the generated EMF)\nη = P_output/P_input\n\n**For a battery/power supply:**\nη = P_external / P_total = I²R / (εI) = IR/ε = V_terminal/ε\n\nThis confirms: efficiency = terminal voltage / EMF. Maximum efficiency when R ≫ r (external load much larger than internal resistance).\n\n**Worked Example 3:** A 240 V electric motor draws 8.0 A and lifts a 120 kg mass at 1.5 m/s. Find:\n(a) The electrical power input\n(b) The mechanical power output\n(c) The efficiency\n(d) The power wasted as heat\n\n(a) P_input = IV = 8.0 × 240 = **1920 W**\n(b) P_output = Fv = mgv = 120 × 9.81 × 1.5 = **1765.8 W ≈ 1766 W**\n(c) η = 1766/1920 = **0.919 = 91.9%** (very good motor!)\n(d) P_wasted = P_input − P_output = 1920 − 1766 = **154 W** (as heat in windings, friction)\n\n**Transmission efficiency:**\nFor power P transmitted at voltage V through a line of resistance R_line:\nCurrent: I = P/V\nLine loss: P_loss = I²R_line = (P/V)² × R_line = P²R_line/V²\n\n**P_loss ∝ 1/V²** — doubling the transmission voltage reduces transmission losses by a factor of 4!\n\n**This is the fundamental reason for high-voltage power transmission.** Uganda's Karuma Dam (600 MW) transmits power at 132 kV to minimise cable losses over the long distance to Kampala."
+        },
+        {
+          "type": "heading",
+          "body": "Fuses, Circuit Breakers and Electrical Safety"
+        },
+        {
+          "type": "text",
+          "body": "**Electrical safety is a major public health issue in Uganda.** Electrical fires are a significant cause of building fires in Kampala, particularly in markets and poorly wired buildings.\n\n**The Fuse:**\nA fuse is a thin wire of low melting-point material (often tin-lead alloy) placed in series in a circuit. If the current exceeds the rated value, the wire melts (blows), breaking the circuit and preventing fire or equipment damage.\n\nFuse ratings for common appliances:\n- 1 A: signal circuits, small electronics\n- 3 A: phone chargers, small lamps (<720 W at 240 V)\n- 5 A: computers, TVs\n- 13 A: kettles, irons, heaters (maximum for a standard UK/Uganda 13 A socket)\n- 30 A: ring main circuits in buildings\n\n**Choosing the correct fuse:**\nFor an appliance: minimum fuse rating = P/V\nFor a 2 kW electric kettle at 240 V: I = P/V = 2000/240 = 8.3 A → use **13 A fuse** (next standard size above 8.3 A)\nFor a 60 W lamp: I = 60/240 = 0.25 A → use **1 A fuse** or **3 A fuse**\n\n**Circuit breakers (MCBs — Miniature Circuit Breakers):**\nElectromagnetic or thermal devices that trip (open the circuit) when current exceeds the rated value. Unlike fuses, they can be reset after tripping — no replacement needed. Standard in modern Ugandan wiring (replacing older rewirable fuses).\n\n**Residual Current Devices (RCDs) / Earth Leakage Circuit Breakers (ELCBs):**\nMonitor the difference between current in live and neutral wires. If any current flows to earth (through a person touching a live wire), the RCD trips in milliseconds — too fast for the shock to be fatal. Required by Ugandan wiring regulations in bathrooms and outdoor sockets.\n\n**Three-pin wiring (Live, Neutral, Earth):**\n- **Live (brown/red):** Carries current at ~240 V (Uganda standard: 240 V, 50 Hz)\n- **Neutral (blue/black):** Returns current to the transformer; at ~0 V\n- **Earth (green-yellow):** Connected to ground; provides a low-resistance path for fault currents → blows fuse before you can be electrocuted\n\n**Why earthing protects against shock:**\nIf the live wire inside an appliance touches the metal case:\n- Without earth: the case is at 240 V — touching it gives a fatal shock\n- With earth: a large fault current flows through the earth wire → blows the fuse immediately → appliance is dead but safe\n\n**Worked Example 4:** Choose a suitable fuse for each of these 240 V appliances:\n(a) 2.0 kW electric water heater\n(b) 50 W desk lamp\n(c) 3.0 kW tumble dryer\n\n(a) I = 2000/240 = 8.3 A → use **13 A fuse**\n(b) I = 50/240 = 0.21 A → use **1 A fuse** (or 3 A if 1 A not available)\n(c) I = 3000/240 = 12.5 A → use **13 A fuse**"
+        },
+        {
+          "type": "heading",
+          "body": "Complete Formula Reference for Current Electricity"
+        },
+        {
+          "type": "text",
+          "body": "**Fundamental quantities:**\nQ = It; I = ΔQ/Δt; W = QV = IVt; V = W/Q\nI = nAev_d (drift velocity model)\n\n**Resistance and Ohm's Law:**\nR = V/I; V = IR; R = ρL/A; R_T = R₀(1 + αΔT)\n\n**Power:**\nP = IV = I²R = V²/R; W = Pt (energy = power × time)\n\n**Series and parallel circuits:**\nSeries: R = R₁ + R₂ + ...; V = V₁ + V₂ + ...; I same throughout\nParallel: 1/R = 1/R₁ + 1/R₂ + ...; V same throughout; I = I₁ + I₂ + ...\nTwo parallel: R = R₁R₂/(R₁ + R₂)\n\n**Kirchhoff's Laws:**\nKCL: ΣI_in = ΣI_out (junction rule)\nKVL: ΣV = 0 around any closed loop\n\n**Potential divider:** V_out = V_s × R₂/(R₁ + R₂)\n\n**Internal resistance:**\nε = I(R + r); V_terminal = ε − Ir; I = ε/(R + r)\nMax power: R = r; P_max = ε²/(4r); η = 50%\n\n**Instruments:**\nShunt: S = I_g G/(I − I_g)\nMultiplier: M = V/I_g − G\n\n**Wheatstone bridge:**\nBalance: P/Q = R/X → X = QR/P\nMetre bridge: X = Q(100 − l)/l\n\n**Energy:**\n1 kWh = 3.6 × 10⁶ J; P_loss = I²R_line = P²R_line/V² (transmission)\nFuse rating: I_fuse > P_appliance/V"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Energy W = IVt = I²Rt = V²t/R. 1 kWh = 3.6 MJ (billing unit). Transmission loss P_loss = I²R = P²R/V² — reduced by high voltage (Karuma 132 kV). Efficiency η = P_out/P_in; for battery η = V_terminal/ε. Fuse rating: I_fuse > P/V; use next standard size above calculated current. Earth wire provides safe fault current path, blows fuse, and protects against electrocution. RCD/ELCB detects current imbalance and trips within milliseconds. Complete formula reference: 15 key equations covering all aspects of DC circuit analysis."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Kilowatt-hour (kWh): Unit of electrical energy for billing; 1 kWh = 3.6 × 10⁶ J = 3.6 MJ\n• Transmission loss: P_loss = P²R/V²; reduced dramatically by increasing transmission voltage\n• Fuse: Series wire that melts if current exceeds rated value; protects against overload and fire\n• Circuit breaker (MCB): Resettable switch that trips on overcurrent; replaces fuses in modern wiring\n• RCD/ELCB: Detects earth fault current; trips in milliseconds; prevents electrocution\n• Earth wire: Safety conductor connecting metal appliance cases to ground; provides path for fault current → blows fuse"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A 2400 W electric cooker operates for 3 hours. How many kilowatt-hours of energy does it consume, and what does this cost at UGX 800 per kWh?",
+            "options": [
+              "7.2 kWh; UGX 5,760",
+              "7200 kWh; UGX 5,760",
+              "7.2 kWh; UGX 57,600",
+              "0.8 kWh; UGX 640"
+            ],
+            "answer": "7.2 kWh; UGX 5,760",
+            "explanation": "Energy = P × t = 2.4 kW × 3 h = 7.2 kWh. Cost = 7.2 × 800 = UGX 5,760. This is the energy for just 3 hours of cooking — a significant cost for rural households. Energy-efficient cookers (e.g., 1200 W induction) would cut this in half."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Power P is transmitted through a cable of resistance R at voltage V. If the voltage is doubled (same power P), how does the transmission power loss change?",
+            "options": [
+              "Doubles",
+              "Halves",
+              "Quadruples",
+              "Reduces to one quarter"
+            ],
+            "answer": "Reduces to one quarter",
+            "explanation": "P_loss = I²R = (P/V)²R = P²R/V². If V doubles: P_loss_new = P²R/(2V)² = P²R/4V² = P_loss/4. Doubling the voltage reduces transmission losses to one quarter — this is why Uganda's grid transmits at 132 kV rather than 240 V, and why Karuma Dam's 600 MW must be stepped up to high voltage for efficient long-distance transmission."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A 240 V electric motor draws 5.0 A and lifts a load at 200 W of mechanical output. What is the efficiency of the motor?",
+            "options": [
+              "40%",
+              "16.7%",
+              "83.3%",
+              "25.0%"
+            ],
+            "answer": "16.7%",
+            "explanation": "P_input = IV = 5.0 × 240 = 1200 W. η = P_output/P_input = 200/1200 = 0.167 = 16.7%. This is very low efficiency — only 200 W of 1200 W becomes useful mechanical work; 1000 W is wasted as heat. A well-designed industrial motor would achieve 90%+ efficiency."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What fuse should be used for a 1500 W, 240 V electric iron?",
+            "options": [
+              "1 A",
+              "3 A",
+              "5 A",
+              "13 A"
+            ],
+            "answer": "13 A",
+            "explanation": "I = P/V = 1500/240 = 6.25 A. The fuse must carry more than 6.25 A, so the next standard size above 6.25 A is 13 A. A 5 A fuse would blow during normal operation; a 13 A fuse provides protection against wiring faults while allowing the iron to operate normally."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A transmission line has resistance 2 Ω. Power of 50 kW is transmitted at 5000 V. What is the power wasted in the line?",
+            "options": [
+              "200 W",
+              "20 W",
+              "200 kW",
+              "2.0 kW"
+            ],
+            "answer": "200 W",
+            "explanation": "I = P/V = 50,000/5000 = 10 A. P_loss = I²R = 100 × 2 = 200 W. Loss fraction = 200/50,000 = 0.4% — very small! If the same 50 kW were transmitted at 240 V: I = 50,000/240 = 208 A; P_loss = 208² × 2 = 86,528 W = 86.5 kW — more power lost than delivered! This comparison perfectly illustrates the need for high-voltage transmission."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Why is it important that the earth wire in household wiring has very LOW resistance?",
+            "options": [
+              "To prevent current from flowing through the earth wire during normal operation",
+              "To ensure that if a fault makes a metal appliance live, a large fault current flows — enough to blow the fuse quickly before anyone can be electrocuted",
+              "To increase the voltage available to the appliance",
+              "To reduce the power consumption of the appliance"
+            ],
+            "answer": "To ensure that if a fault makes a metal appliance live, a large fault current flows — enough to blow the fuse quickly before anyone can be electrocuted",
+            "explanation": "If the live wire touches the metal case, the fault current = 240 V / (R_earth + r_internal). Low earth resistance → very large fault current → fuse blows within milliseconds. If earth resistance were high, the fault current would be small, the fuse would NOT blow, and the metal case would remain at 240 V — dangerous to touch. A good earth resistance should be < 1 Ω for fast fuse operation."
+          }
+        ]
+      }
+    }
+  ]
+}

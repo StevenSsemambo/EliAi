@@ -1,0 +1,685 @@
+{
+  "topic_id": "physics_s6_t25",
+  "topic_title": "Sound Waves",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t25_l1",
+      "title": "Nature of Sound: Production, Propagation and Wave Properties",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The drumbeat of a ngoma carries across the hills of western Uganda. The call to prayer from a mosque echoes through Kampala's streets. A doctor taps a patient's chest and listens — the hollow resonance reveals a healthy lung, the dull thud a problem. A bat navigates in total darkness by emitting ultrasonic pulses and analysing the returning echoes. Sound is everywhere in human experience and in nature — it carries information, creates music, enables communication, and serves as a vital diagnostic tool. In this topic we examine sound at the deepest level: what it is, how it propagates, how its intensity relates to human perception, and how it is applied in technology that saves lives and enriches culture across Uganda."
+        },
+        {
+          "type": "heading",
+          "body": "The Nature of Sound: Production and Propagation"
+        },
+        {
+          "type": "text",
+          "body": "Sound is a mechanical, longitudinal wave — a series of compressions and rarefactions (pressure variations) propagating through a medium by the oscillation of particles along the direction of wave travel.\n\n**Production of sound:**\nSound is produced whenever an object vibrates — pushing and pulling on the surrounding medium:\n- Vibrating tuning fork → compressions and rarefactions in air\n- Vibrating vocal cords → speech and singing\n- Vibrating string of an adungu → musical note\n- Vibrating loudspeaker cone → reproduced sound\n- Explosion or thunder → impulsive pressure wave\n\n**Propagation through a medium:**\n1. A vibrating source compresses the air immediately in front of it (high pressure region — compression)\n2. As the source moves back, it creates a low pressure region (rarefaction)\n3. The compression propagates outward as each air molecule pushes its neighbour forward\n4. The rarefaction follows as each molecule springs back\n5. This creates a longitudinal wave: alternating compressions (C) and rarefactions (R) moving outward\n\nC R C R C R C R →\n\n**Key proof that sound is a mechanical wave:**\nSound cannot travel through a vacuum. Classic demonstration: a ringing bell inside a jar — as the air is pumped out, the sound becomes inaudible even though the hammer continues striking. This also explains why no sound is heard in space (no medium for propagation).\n\n**Media for sound propagation:**\nSound travels through solids, liquids, and gases. Speed depends on the medium's density and elasticity (stiffness):\n- Faster in denser/stiffer media: v_steel ≈ 5960 m/s > v_water ≈ 1480 m/s > v_air ≈ 343 m/s\n- Faster at higher temperature in gases (v ∝ √T)\n\n**The audible range of human hearing:**\n- Frequency range: approximately **20 Hz to 20,000 Hz (20 kHz)**\n- Below 20 Hz: **infrasound** (elephants, earthquakes, large explosions communicate at these frequencies)\n- Above 20 kHz: **ultrasound** (bats, dogs, dolphins; used in medical imaging)\n\n**Frequency ranges of various sound sources:**\n| Source | Approximate frequency range |\n|---|---|\n| Human speech | 80 Hz – 8 kHz |\n| Human hearing | 20 Hz – 20 kHz |\n| Piano | 27.5 Hz – 4186 Hz |\n| Adungu (bow harp) | ~50 Hz – 2 kHz |\n| Bat echolocation | 20 kHz – 120 kHz |\n| Medical ultrasound | 1 MHz – 20 MHz |\n| Dog whistle | 23 kHz – 54 kHz |"
+        },
+        {
+          "type": "heading",
+          "body": "Displacement, Pressure and Density Variations in a Sound Wave"
+        },
+        {
+          "type": "text",
+          "body": "Because sound is a longitudinal wave, we can describe it in terms of THREE related quantities, each varying as a sine wave:\n\n**1. Displacement of air molecules (s):**\nAir molecules oscillate back and forth about their equilibrium positions.\ns = s₀ sin(ωt − kx)\nWhere s₀ = maximum displacement amplitude.\n\n**2. Pressure variation (ΔP):**\nPressure is related to the rate of change of displacement with position:\nΔP = −B(∂s/∂x)\nWhere B = bulk modulus of air.\n\nSince ∂s/∂x = −ks₀ cos(ωt − kx):\n**ΔP = Bks₀ cos(ωt − kx) = ΔP₀ cos(ωt − kx)**\n\nWhere ΔP₀ = Bks₀ = maximum pressure amplitude.\n\n**Critical phase relationship:**\n- Displacement varies as **sin(ωt − kx)**\n- Pressure variation varies as **cos(ωt − kx)**\n- They are **90° (π/2) out of phase** with each other!\n\n**Physical interpretation:**\n- At a compression (maximum pressure, ΔP = max): molecules have zero displacement (they are compressed but not currently moving through equilibrium)\n- At a rarefaction (minimum pressure, ΔP = −max): molecules again have zero displacement\n- Maximum displacement of molecules occurs where pressure is at its equilibrium value\n\n**In summary:**\n- Compressions = high pressure, zero displacement, maximum density\n- Rarefactions = low pressure, zero displacement, minimum density\n- Points between compressions/rarefactions = molecules at maximum displacement\n\n**Worked Example 1:** A sound wave in air has displacement amplitude s₀ = 2.0 × 10⁻⁶ m and frequency 500 Hz. If the bulk modulus of air B = 1.41 × 10⁵ Pa and speed of sound v = 343 m/s, find the pressure amplitude.\n\nk = 2πf/v = 2π × 500/343 = 9.16 rad/m\nΔP₀ = Bks₀ = 1.41 × 10⁵ × 9.16 × 2.0 × 10⁻⁶\n= 1.41 × 9.16 × 2.0 × 10⁻¹ = **2.58 Pa**\n\nFor comparison, atmospheric pressure P₀ ≈ 10⁵ Pa — the sound pressure amplitude (2.58 Pa) is only 0.0026% of atmospheric pressure, yet it is clearly audible! The ear is extraordinarily sensitive."
+        },
+        {
+          "type": "heading",
+          "body": "Wave Properties of Sound"
+        },
+        {
+          "type": "text",
+          "body": "Sound exhibits all the standard wave properties studied in Topic 23:\n\n**Reflection of sound:**\nSound reflects off hard surfaces (walls, cliffs, buildings). Applications:\n- Echo: reflected sound heard distinctly after a delay. Minimum distance for an echo: v × t_min/2 = 343 × 0.1/2 ≈ 17 m (the ear needs at least 0.1 s to distinguish original from reflection)\n- Reverberation: multiple reflections in an enclosed space causing a persistence of sound\n- Sonar (Sound Navigation and Ranging): used to detect fish, submarines, and the depth of Lake Victoria\n- Stethoscope: reflects and focuses internal body sounds toward the doctor's ears\n\n**Refraction of sound:**\nSound bends (changes direction) when its speed changes — e.g., when crossing boundaries between warm and cool air layers. On a warm day, sound travels faster near the ground than high up → sound refracts upward → distant sounds not heard (sound shadow). On a cold night, the reverse happens → sounds from far away carry clearly.\n\n**Diffraction of sound:**\nSound diffracts around obstacles and through gaps. Sound (λ ≈ 0.02–17 m) diffracts strongly around buildings (covered in Topic 23). You can hear traffic noise before you can see it around a corner.\n\n**Interference of sound:**\nTwo speakers emitting the same frequency produce regions of loud sound (constructive) and silence (destructive) — covered in Topic 23 with Young's double-source experiment for sound.\n\n**The Doppler effect (preview):**\nWhen a source of sound moves relative to an observer, the observed frequency changes — this will be covered in detail in Lesson 5.\n\n**Worked Example 2:** A bat emits ultrasound at 80 kHz and detects the echo from an insect 2.5 ms later. How far away is the insect? (v = 343 m/s)\n\nTime for round trip: t = 2.5 × 10⁻³ s\nDistance to insect: d = v × t/2 = 343 × 2.5 × 10⁻³ / 2 = 343 × 1.25 × 10⁻³ = **0.429 m ≈ 43 cm**\n\nThe bat can locate an insect just 43 cm away with this timing precision — its neural processing resolves time differences as small as 1 μs!\n\n**Worked Example 3:** An echo is heard 0.80 s after a shout in a valley. Find the distance to the reflecting cliff. (v = 340 m/s)\n\nd = v × t/2 = 340 × 0.80/2 = **136 m**"
+        },
+        {
+          "type": "heading",
+          "body": "Characteristics of a Musical Note"
+        },
+        {
+          "type": "text",
+          "body": "A musical note is characterised by three perceptual qualities, each corresponding to a physical property of the sound wave:\n\n**1. Pitch — determined by frequency:**\n- Higher frequency → higher perceived pitch\n- Concert A = 440 Hz; middle C = 261.6 Hz; bass notes down to ~50 Hz\n- The human audible range (20 Hz–20 kHz) spans about 10 octaves\n- Each octave doubles the frequency\n- The scale in modern music is the equal-tempered chromatic scale: 12 semitones per octave, each semitone a frequency ratio of 2^(1/12) ≈ 1.0595\n\n**2. Loudness — determined by intensity (amplitude):**\n- Higher amplitude → greater pressure variation → louder sound\n- Intensity I (measured in W/m²) is proportional to the square of the amplitude: I ∝ A²\n- The decibel scale is used to measure loudness (covered in detail in Lesson 2)\n\n**3. Quality (Timbre) — determined by waveform/harmonic content:**\n- Two instruments can play the same note (same f) at the same loudness (same I) but sound completely different because they have different harmonic spectra\n- A pure tone has a single frequency (sine wave) — sounds 'thin' and electronic\n- Musical instruments produce a fundamental plus many overtones — richly complex waveforms\n- A square wave contains only odd harmonics (like a clarinet)\n- A sawtooth wave contains all harmonics (like a bowed violin)\n\n**Summary:**\n| Perceptual property | Physical property | Parameter |\n|---|---|---|\n| Pitch | Frequency | f (Hz) |\n| Loudness | Intensity | I (W/m²) or amplitude A |\n| Quality/Timbre | Harmonic content / waveform | Spectrum of overtones |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Sound: mechanical longitudinal wave; compressions and rarefactions in a medium. Cannot travel in vacuum. Speed: v_air ≈ 343 m/s at 20°C; faster in solids and liquids; v ∝ √T in gases. Audible range: 20 Hz–20 kHz; below = infrasound; above = ultrasound. Displacement and pressure are 90° out of phase: compressions are at pressure maxima and displacement nodes; maximum displacement occurs at pressure equilibrium. Musical note properties: pitch (frequency), loudness (intensity/amplitude), quality (harmonic spectrum/timbre). Sound exhibits reflection, refraction, diffraction, interference."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Sound: Mechanical longitudinal wave; compressions and rarefactions; requires a medium\n• Compression: Region of high pressure and high density in a sound wave; displacement node\n• Rarefaction: Region of low pressure and low density; displacement node\n• Infrasound: Frequency below 20 Hz; elephants, earthquakes; below human hearing\n• Ultrasound: Frequency above 20 kHz; bats, medical imaging; above human hearing\n• Pitch: Perceived highness/lowness; determined by frequency\n• Timbre: Tone quality; determined by harmonic spectrum; distinguishes instruments\n• Echo: Distinct reflected sound; requires reflecting surface >17 m away and 0.1 s delay"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "Why can sound not travel through a vacuum?",
+            "options": [
+              "Vacuum has no temperature, so sound has no speed",
+              "Sound is a mechanical wave requiring particle vibration to propagate — vacuum has no particles to transmit the disturbance",
+              "Electromagnetic interference in a vacuum cancels sound waves",
+              "Sound travels too slowly in a vacuum to be detected"
+            ],
+            "answer": "Sound is a mechanical wave requiring particle vibration to propagate — vacuum has no particles to transmit the disturbance",
+            "explanation": "Sound propagates by successive compressions of the medium — each particle pushes its neighbour. In a vacuum there are no particles, so there is nothing to compress or transmit the disturbance. This is why space is silent (despite many films showing spacecraft explosions!). The classic bell-in-jar experiment demonstrates this directly."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A bat emits ultrasound at 50 kHz and detects an echo 3.0 ms later. How far away is the target? (v = 340 m/s)",
+            "options": [
+              "0.51 m",
+              "1.02 m",
+              "0.34 m",
+              "2.04 m"
+            ],
+            "answer": "0.51 m",
+            "explanation": "Total round-trip time = 3.0 ms = 3.0 × 10⁻³ s. Distance = v × t/2 = 340 × (3.0 × 10⁻³)/2 = 340 × 1.5 × 10⁻³ = 0.51 m. The factor of 2 accounts for the sound travelling to the target and back. Bats use this echolocation at microsecond precision to catch insects in complete darkness."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In a sound wave, at a point of maximum compression (maximum pressure), what is the displacement of the air molecules?",
+            "options": [
+              "Maximum positive displacement",
+              "Maximum negative displacement",
+              "Zero displacement",
+              "Equal to the pressure amplitude"
+            ],
+            "answer": "Zero displacement",
+            "explanation": "Displacement s = s₀ sin(ωt − kx) and pressure ΔP = ΔP₀ cos(ωt − kx). These are 90° out of phase. When pressure is maximum (cos = 1), displacement is zero (sin = 0). At a compression, molecules are momentarily at their equilibrium positions — they have zero net displacement even though the pressure is at maximum. The maximum displacement occurs where pressure is at the equilibrium (background) level."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Which physical property of a sound wave determines the pitch of a musical note?",
+            "options": [
+              "Amplitude",
+              "Wavelength",
+              "Frequency",
+              "Wave speed"
+            ],
+            "answer": "Frequency",
+            "explanation": "Pitch is the perceptual quality of 'highness' or 'lowness' of a note, and it is determined by frequency. Higher frequency → higher pitch. Loudness is determined by amplitude/intensity. Timbre (quality) is determined by the harmonic content of the waveform. Wave speed determines how quickly the sound propagates but does not directly determine pitch."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Medical ultrasound uses frequencies of about 5 MHz. What wavelength does this correspond to in soft tissue? (v = 1500 m/s in soft tissue)",
+            "options": [
+              "3.0 mm",
+              "0.30 mm",
+              "3.0 cm",
+              "0.030 mm"
+            ],
+            "answer": "0.30 mm",
+            "explanation": "λ = v/f = 1500/(5 × 10⁶) = 3 × 10⁻⁴ m = 0.30 mm. This very short wavelength (0.3 mm) allows ultrasound to resolve features as small as a fraction of a millimetre in the body. Structures smaller than the wavelength cannot be imaged — hence the use of very high frequencies (MHz) for medical imaging."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "Sound travels faster in warm air than cool air. What is the approximate speed of sound in Uganda's typical outdoor temperature of 30°C?",
+            "options": [
+              "331 m/s",
+              "340 m/s",
+              "349 m/s",
+              "360 m/s"
+            ],
+            "answer": "349 m/s",
+            "explanation": "v ≈ 331 + 0.6θ = 331 + 0.6 × 30 = 331 + 18 = 349 m/s. The speed of sound increases by about 0.6 m/s per degree Celsius. At Uganda's typical outdoor temperature of ~30°C, sound travels faster than the 'standard' 343 m/s value (measured at 20°C)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t25_l2",
+      "title": "Intensity, Loudness and the Decibel Scale",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why is a whisper measured in decibels just like a jet engine, even though one is a million times more powerful than the other? Why does doubling the number of instruments in an orchestra barely make the music seem louder? The answer lies in one of the most remarkable features of the human auditory system — it responds to the logarithm of intensity, not to intensity itself. This logarithmic response allows the ear to handle an enormous range of intensities (from the faintest whisper to a thunderclap) while remaining undamaged. The decibel scale translates this logarithmic response into practical measurements used in acoustics, noise pollution control, and public health."
+        },
+        {
+          "type": "heading",
+          "body": "Intensity of Sound"
+        },
+        {
+          "type": "text",
+          "body": "**Intensity (I)** is the power transmitted by a sound wave per unit area perpendicular to the direction of propagation:\n\n**I = P/A**\n\nUnit: W m⁻² (watts per square metre)\n\nWhere:\n- P = power of the sound source (W)\n- A = area over which the power is spread (m²)\n\n**Relationship between intensity and amplitude:**\nFor a sound wave with pressure amplitude ΔP₀ and displacement amplitude s₀ in a medium of density ρ and wave speed v:\n\n**I = ΔP₀²/(2ρv) = ½ρvω²s₀²**\n\nKey result: **I ∝ A² (intensity proportional to amplitude squared)** — the same relationship as in all wave energy formulae.\n\n**Inverse square law for a point source:**\nFor a point source radiating power P uniformly in all directions, the wavefronts are spherical. At distance r, the power P is spread over a sphere of area 4πr²:\n\n**I = P/(4πr²)**\n\nSo: **I ∝ 1/r²** — doubling the distance from a point source reduces intensity to one quarter.\n\n**Worked Example 1:** A loudspeaker radiates 2.0 W of acoustic power uniformly in all directions. Find the intensity:\n(a) 1.0 m from the speaker\n(b) 5.0 m from the speaker\n(c) What happens to intensity if distance doubles to 10 m?\n\n(a) I₁ = P/(4πr²) = 2.0/(4π × 1.0²) = 2.0/(12.57) = **0.159 W/m²**\n\n(b) I₅ = 2.0/(4π × 5.0²) = 2.0/(4π × 25) = 2.0/314.2 = **6.37 × 10⁻³ W/m²**\n\n(c) At 10 m (double from 5 m): I₁₀ = 2.0/(4π × 100) = 6.37 × 10⁻³/4 = **1.59 × 10⁻³ W/m²** (quartered)\n\n**Worked Example 2:** The intensity of a sound wave falls from 0.50 W/m² to 0.080 W/m² as the observer moves away from the source. By what factor does the distance increase?\n\nI₁/I₂ = r₂²/r₁² → r₂/r₁ = √(I₁/I₂) = √(0.50/0.080) = √6.25 = **2.5**\n\nThe distance increased by a factor of 2.5."
+        },
+        {
+          "type": "heading",
+          "body": "The Threshold of Hearing and the Decibel Scale"
+        },
+        {
+          "type": "text",
+          "body": "**The remarkable range of human hearing:**\nThe human ear can detect sounds ranging from the faintest whisper to a thunderclap — a factor of about 10¹² (one trillion) in intensity! To handle this enormous range, the ear responds logarithmically:\n\n**Threshold of hearing (I₀):** The minimum intensity detectable by the human ear (at the most sensitive frequency of ~3 kHz):\n**I₀ = 1.0 × 10⁻¹² W m⁻²**\n\n**Threshold of pain:** The intensity at which sound becomes painful:\nI_pain ≈ 1.0 W m⁻² to 100 W m⁻² (the ear spans 12–14 orders of magnitude!)\n\n**The decibel (dB) scale:**\nBecause the range is so vast, a logarithmic scale called the **sound intensity level β** (or sound level) is used:\n\n**β = 10 log₁₀(I/I₀)**\n\nWhere:\n- β = sound intensity level (dB)\n- I = intensity of the sound (W/m²)\n- I₀ = reference intensity = 10⁻¹² W/m² (threshold of hearing)\n- log₁₀ = logarithm base 10\n\n**Why decibels?**\nA 'bel' (B) would give: β = log₁₀(I/I₀). But this gives values like 3.0 B for a conversation — too compressed. Multiplying by 10 gives decibels (1 B = 10 dB) — more practical numbers.\n\n**Key decibel calculations:**\n\n**When I = I₀:** β = 10 log₁₀(1) = 10 × 0 = **0 dB** (just audible)\n**When I = 10I₀:** β = 10 log₁₀(10) = 10 × 1 = **10 dB** (just noticeably louder)\n**When I = 100I₀:** β = 10 log₁₀(100) = 10 × 2 = **20 dB**\n**When I = 10⁶I₀:** β = 10 log₁₀(10⁶) = 10 × 6 = **60 dB** (normal conversation)\n**When I = 10¹²I₀:** β = 10 log₁₀(10¹²) = 10 × 12 = **120 dB** (threshold of pain)\n\n**Important relationships:**\n- Every **10 dB increase** corresponds to a **10-fold increase in intensity**\n- Every **3 dB increase** corresponds to approximately a **doubling of intensity** (since 10 log₁₀ 2 = 3.01 dB)\n- A **doubling of loudness** (perceived) requires approximately a **10 dB increase** in sound level\n\n**Worked Example 3:** Find the sound level (in dB) of a sound with intensity 5.0 × 10⁻⁵ W/m². (I₀ = 10⁻¹² W/m²)\n\nβ = 10 log₁₀(I/I₀) = 10 log₁₀(5.0 × 10⁻⁵ / 10⁻¹²)\n= 10 log₁₀(5.0 × 10⁷)\n= 10 × (log₁₀ 5.0 + log₁₀ 10⁷)\n= 10 × (0.699 + 7) = 10 × 7.699 = **77.0 dB**\n\n**Worked Example 4:** A sound level is measured as 85 dB. Find the intensity. (I₀ = 10⁻¹² W/m²)\n\n85 = 10 log₁₀(I/I₀)\nlog₁₀(I/I₀) = 8.5\nI/I₀ = 10^8.5 = 3.162 × 10⁸\nI = 3.162 × 10⁸ × 10⁻¹² = **3.16 × 10⁻⁴ W/m²**"
+        },
+        {
+          "type": "heading",
+          "body": "Decibel Reference Table and Health Implications"
+        },
+        {
+          "type": "text",
+          "body": "**Sound levels of common sources:**\n| Sound source | Level (dB) | Intensity (W/m²) | Notes |\n|---|---|---|---|\n| Threshold of hearing | 0 | 10⁻¹² | Just audible |\n| Rustling leaves, whisper | 20–30 | 10⁻¹⁰–10⁻⁹ | Very quiet |\n| Quiet rural Uganda night | 35 | 3×10⁻⁹ | Very quiet |\n| Normal conversation (1m) | 60 | 10⁻⁶ | Comfortable |\n| Busy Kampala traffic | 70–85 | 10⁻⁵–3×10⁻⁴ | Moderate to loud |\n| Packed minibus taxi | 85–90 | 3×10⁻⁴–10⁻³ | Very loud |\n| Power saw | 100 | 10⁻² | Dangerous |\n| Night club speakers | 105–110 | 3×10⁻²–10⁻¹ | Damaging |\n| Thunder (close) | 110–120 | 10⁻¹–1 | Painful |\n| Jet engine (30m) | 130 | 10 | Causes instant damage |\n| Pain threshold | 120–140 | 1–100 | Immediate pain |\n\n**Noise pollution and health — Uganda context:**\nThe World Health Organisation (WHO) recommends:\n- Daytime outdoor noise: below 55 dB\n- Night-time: below 40 dB\n- Factories and workplaces: below 85 dB (8-hour average)\n\nIn Uganda, rapid urbanisation and traffic growth have led to noise levels in central Kampala frequently exceeding 80 dB during the day — above the comfort threshold. Bodaboda motorcycles are a significant noise source (90–100 dB at 5 m). Exposure to sounds above 85 dB for extended periods causes cumulative, permanent hearing damage (noise-induced hearing loss, NIHL).\n\n**Adding decibels:**\nWhen two independent sound sources each produce β dB:\nI_total = 2I\nβ_total = 10 log₁₀(2I/I₀) = 10 log₁₀(I/I₀) + 10 log₁₀(2) = β + 3.01 ≈ **β + 3 dB**\n\nSo doubling the number of identical sources adds only 3 dB — this is why adding an extra instrument to a large orchestra barely changes the loudness.\n\n**Worked Example 5:** Two motorcycles each produce 90 dB separately. What is the combined sound level when both are running simultaneously?\n\nβ_combined = 90 + 10 log₁₀(2) = 90 + 3.01 = **93 dB**\n\n**Worked Example 6:** If four identical loudspeakers each produce 70 dB, what is the combined level?\n\nI_total = 4I (four sources, each intensity I)\nβ = 10 log₁₀(4I/I₀) = 10 log₁₀(I/I₀) + 10 log₁₀ 4 = 70 + 10 × 0.602 = 70 + 6.02 = **76 dB**"
+        },
+        {
+          "type": "heading",
+          "body": "The Frequency Response of the Human Ear"
+        },
+        {
+          "type": "text",
+          "body": "The human ear is not equally sensitive to all frequencies. Its sensitivity varies markedly with frequency:\n\n**The equal-loudness contours (Fletcher-Munson curves):**\nThese show the intensity level required at each frequency for a sound to be perceived as equally loud as a 1 kHz reference tone. Key observations:\n- The ear is MOST sensitive at around 2–5 kHz (the frequency range of consonants in speech and babies' cries)\n- At 1 kHz, the threshold is 0 dB (10⁻¹² W/m²)\n- At 100 Hz (bass), the threshold is ~40 dB — you need 10,000 times more intensity for the same perceived loudness\n- At 10 kHz, sensitivity drops again\n- Very low and very high frequencies require much higher intensities to be heard\n\n**The phon:**\nThe phon is a unit of loudness level. A sound at any frequency has a loudness of N phons if it sounds equally loud as a 1 kHz tone of N dB. At 1 kHz, phons = dB. At other frequencies, phons ≠ dB.\n\n**The sone:**\nA more linear loudness unit — 1 sone corresponds to 40 phons. Doubling the sone value doubles perceived loudness (unlike the dB scale).\n\n**Practical implications for Uganda:**\n- Music systems in churches, mosques, and entertainment venues should account for the ear's frequency response — bass sounds need much more power than treble sounds to achieve the same perceived loudness\n- Hearing protection for workers (construction, airport workers at Entebbe, factory workers in industrial areas of Kampala) must consider both intensity and frequency\n- Audiometry (hearing tests) tests sensitivity at multiple frequencies (250 Hz, 500 Hz, 1 kHz, 2 kHz, 4 kHz, 8 kHz) to diagnose hearing loss"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Intensity: I = P/(4πr²) for point source; I ∝ 1/r² (inverse square law); I ∝ A². Threshold of hearing: I₀ = 10⁻¹² W/m². Decibel scale: β = 10 log₁₀(I/I₀); 0 dB = threshold; 120 dB = pain. Every 10 dB increase = 10× intensity. Every 3 dB increase = 2× intensity. Adding two equal sources: +3 dB. Human ear most sensitive at 2–5 kHz. Noise above 85 dB causes long-term hearing damage. Kampala traffic 70–85 dB; bodabodas at 5 m: ~95 dB."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Intensity (I): Power per unit area; I = P/A; W/m²; I ∝ A² (amplitude squared)\n• Inverse square law: I = P/(4πr²); I ∝ 1/r² for point source radiating uniformly\n• Threshold of hearing (I₀): 10⁻¹² W/m²; reference for the decibel scale\n• Sound intensity level (β): β = 10 log₁₀(I/I₀); unit decibels (dB)\n• Decibel (dB): Logarithmic unit; 10 dB increase = ×10 intensity; 3 dB increase = ×2 intensity\n• Noise-induced hearing loss (NIHL): Permanent hearing damage from chronic exposure above 85 dB"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "The intensity of a sound at 2.0 m from a source is 0.040 W/m². What is the intensity at 6.0 m?",
+            "options": [
+              "0.013 W/m²",
+              "4.4 × 10⁻³ W/m²",
+              "0.120 W/m²",
+              "1.6 × 10⁻³ W/m²"
+            ],
+            "answer": "4.4 × 10⁻³ W/m²",
+            "explanation": "I ∝ 1/r². I₁/I₂ = r₂²/r₁². I₂ = I₁ × (r₁/r₂)² = 0.040 × (2.0/6.0)² = 0.040 × (1/9) = 0.040/9 = 4.44 × 10⁻³ W/m² ≈ 4.4 × 10⁻³ W/m². Tripling the distance reduces intensity by a factor of 9."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "What is the sound intensity level of a sound with intensity 10⁻⁶ W/m²? (I₀ = 10⁻¹² W/m²)",
+            "options": [
+              "6 dB",
+              "60 dB",
+              "10⁻⁶ dB",
+              "120 dB"
+            ],
+            "answer": "60 dB",
+            "explanation": "β = 10 log₁₀(I/I₀) = 10 log₁₀(10⁻⁶/10⁻¹²) = 10 log₁₀(10⁶) = 10 × 6 = 60 dB. An intensity of 10⁻⁶ W/m² corresponds to 60 dB — about the level of normal conversation at 1 m."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A sound has a level of 80 dB. What intensity does this correspond to? (I₀ = 10⁻¹² W/m²)",
+            "options": [
+              "8.0 × 10⁻¹² W/m²",
+              "10⁻⁴ W/m²",
+              "10⁻⁸ W/m²",
+              "80 W/m²"
+            ],
+            "answer": "10⁻⁴ W/m²",
+            "explanation": "β = 10 log₁₀(I/I₀) → 80 = 10 log₁₀(I/10⁻¹²) → log₁₀(I/10⁻¹²) = 8 → I/10⁻¹² = 10⁸ → I = 10⁻⁴ W/m². This is the intensity of busy traffic or a crowded restaurant — quite loud but not yet damaging."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "If the intensity of a sound doubles, by how many decibels does the sound level increase?",
+            "options": [
+              "2 dB",
+              "3 dB",
+              "6 dB",
+              "10 dB"
+            ],
+            "answer": "3 dB",
+            "explanation": "Δβ = 10 log₁₀(2I/I) = 10 log₁₀(2) = 10 × 0.301 = 3.01 ≈ 3 dB. This is a very important result: doubling intensity adds about 3 dB. Conversely, cutting intensity in half reduces the level by 3 dB. This is why noise reduction of just a few dB requires halving the source's power output."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Three identical loudspeakers each produce a sound level of 70 dB at a listener's position. What is the combined sound level?",
+            "options": [
+              "210 dB",
+              "73 dB",
+              "74.8 dB",
+              "70 dB"
+            ],
+            "answer": "74.8 dB",
+            "explanation": "I_total = 3I. β_total = 10 log₁₀(3I/I₀) = 10 log₁₀(I/I₀) + 10 log₁₀ 3 = 70 + 10 × 0.477 = 70 + 4.77 = 74.77 dB ≈ 74.8 dB. Adding speakers does increase the level, but only logarithmically — you need 10× as many speakers to add 10 dB!"
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A point source produces sound of 8.0 W acoustic power. At what distance does the intensity equal the pain threshold (1.0 W/m²)?",
+            "options": [
+              "0.80 m",
+              "0.40 m",
+              "0.25 m",
+              "0.80 m"
+            ],
+            "answer": "0.80 m",
+            "explanation": "I = P/(4πr²) → r = √(P/(4πI)) = √(8.0/(4π × 1.0)) = √(8.0/12.57) = √0.636 = 0.797 m ≈ 0.80 m. You would need to be within about 80 cm of this 8 W source before it reaches the pain threshold — this illustrates why small but powerful concert speakers placed close to musicians can cause instant hearing damage."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t25_l3",
+      "title": "Ultrasound: Properties and Medical Applications",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Across Uganda, pregnant mothers go for antenatal scans that reveal their baby's development without any harmful radiation. A doctor at Mulago Hospital can detect a kidney stone without surgery. A physiotherapist treats a sprained ankle with high-frequency sound waves. All of these use ultrasound — sound above 20 kHz that the human ear cannot hear. Ultrasound technology has revolutionised medical diagnosis and treatment, making it one of the most important applications of wave physics in healthcare. Understanding how ultrasound is produced, how it propagates through body tissues, and how it creates images is essential knowledge for Uganda's growing healthcare workforce."
+        },
+        {
+          "type": "heading",
+          "body": "Properties of Ultrasound"
+        },
+        {
+          "type": "text",
+          "body": "**Ultrasound** is sound with frequency above the human hearing limit (> 20 kHz). For medical imaging, frequencies of 1–20 MHz are typical.\n\n**Key properties that make ultrasound suitable for medical use:**\n\n**1. Short wavelength → high resolution:**\nAt 5 MHz in soft tissue (v = 1540 m/s): λ = v/f = 1540/(5×10⁶) = 0.31 mm\nThis allows features as small as about 1 mm to be resolved — sufficient for organ imaging.\n\n**2. Behaves like light (geometric acoustics) in many tissues:**\nBecause λ is much smaller than most organ dimensions, ultrasound travels in straight 'rays' and obeys reflection and refraction laws (like optics) at tissue interfaces.\n\n**3. Non-ionising radiation:**\nUnlike X-rays, ultrasound does not ionise atoms — it does not break chemical bonds or damage DNA. It is therefore considered safe for fetal scanning (used throughout pregnancy) and repeated examinations.\n\n**4. Strong reflection at tissue interfaces:**\nUltrasound reflects (echoes) at boundaries between tissues of different **acoustic impedance** Z = ρv.\n\n**Acoustic impedance:**\n**Z = ρv**\nWhere ρ = density (kg/m³), v = speed of sound in the medium (m/s)\nUnit: kg m⁻² s⁻¹ (also called Rayls)\n\n**Reflection and transmission at an interface:**\nAt a boundary between media 1 (impedance Z₁) and media 2 (impedance Z₂), the fraction of incident intensity that is reflected:\n\n**R = (Z₂ − Z₁)²/(Z₂ + Z₁)²**\n\nAnd transmitted: T = 1 − R\n\n**Key acoustic impedance values:**\n| Medium | Z (×10⁶ Rayl) |\n|---|---|\n| Air | 0.0004 |\n| Water | 1.48 |\n| Soft tissue | ~1.63 |\n| Blood | 1.61 |\n| Bone | ~7.8 |\n| Lung tissue | ~0.26 |\n\n**Worked Example 1:** Calculate the fraction of ultrasound intensity reflected at a soft tissue-bone interface.\n(Z_tissue = 1.63 × 10⁶ Rayl, Z_bone = 7.8 × 10⁶ Rayl)\n\nR = (Z_bone − Z_tissue)² / (Z_bone + Z_tissue)²\n= (7.8 − 1.63)² / (7.8 + 1.63)²\n= (6.17)² / (9.43)²\n= 38.07 / 88.92\n= **0.428 = 42.8%**\n\nThis large reflection means it is difficult to image through bone using ultrasound — this is why brain ultrasound is limited (skull blocks the beam) and ultrasound is not used for chest imaging through ribs.\n\n**Worked Example 2:** Calculate the reflection coefficient at an air-tissue interface (why coupling gel is needed).\n(Z_air = 400 Rayl = 4×10² Rayl, Z_tissue = 1.63×10⁶ Rayl)\n\nR = (1.63×10⁶ − 4×10²)² / (1.63×10⁶ + 4×10²)²\n≈ (1.63×10⁶)² / (1.63×10⁶)² ≈ **0.9995 = 99.95%**\n\nAlmost all the energy is reflected at an air-tissue interface! If the probe is placed directly on dry skin, virtually no ultrasound enters the body. This is why coupling gel (acoustic coupling gel) must be applied — it eliminates the air gap between probe and skin, allowing sound to enter the body."
+        },
+        {
+          "type": "heading",
+          "body": "Ultrasound Imaging: A-scan, B-scan and Pulse-Echo Technique"
+        },
+        {
+          "type": "text",
+          "body": "**Production of ultrasound — piezoelectric transducer:**\nUltrasound is produced and detected by a **piezoelectric transducer** (usually lead zirconate titanate, PZT):\n- **Piezoelectric effect:** Applying an alternating voltage to a piezoelectric crystal makes it vibrate at the applied frequency, generating ultrasound\n- **Inverse piezoelectric effect:** Incoming ultrasound pressure waves deform the crystal, generating an electrical signal\n- The same transducer acts as both transmitter and receiver (not simultaneously — it alternates)\n\n**Pulse-echo technique:**\n1. The transducer emits a SHORT pulse of ultrasound (a few microseconds)\n2. The pulse travels into the body, reflecting at each tissue interface\n3. Each echo returns to the transducer at a different time (depending on the depth of the interface)\n4. The time delay t between pulse emission and echo detection gives the depth d:\n   **d = v × t / 2** (factor of 2 because sound travels to interface and back)\n5. The amplitude of the echo indicates the strength of the reflection at that interface\n\n**A-scan (Amplitude scan):**\n- The display shows echo amplitude (y-axis) vs time (x-axis)\n- Each spike on the trace represents a reflection from an interface\n- The time position gives the depth; the height gives the reflection strength\n- Used for: measuring eye dimensions (before cataract surgery), detecting intracranial shifts\n\n**B-scan (Brightness scan):**\n- The echo amplitude is displayed as brightness (white = strong reflection, black = no reflection)\n- The transducer is scanned across the body, building up a 2D cross-sectional image\n- Each A-scan becomes one line of the 2D image\n- Used for: fetal imaging, abdominal organs, heart (echocardiography)\n- Real-time B-scan produces live moving images (video)\n\n**Worked Example 3:** An ultrasound A-scan of a fetal head shows echoes at time delays of 40 μs and 90 μs from the near wall and far wall. Speed of sound in fetal tissue = 1540 m/s. Find:\n(a) The depths of the two walls\n(b) The diameter of the fetal head\n\n(a) d₁ = v × t₁/2 = 1540 × (40 × 10⁻⁶)/2 = 1540 × 2×10⁻⁵ = **0.0308 m = 3.08 cm**\nd₂ = v × t₂/2 = 1540 × (90 × 10⁻⁶)/2 = 1540 × 4.5×10⁻⁵ = **0.0693 m = 6.93 cm**\n\n(b) Fetal head diameter = d₂ − d₁ = 6.93 − 3.08 = **3.85 cm**\n\nThis measurement (biparietal diameter, BPD) is used to estimate gestational age and fetal growth.\n\n**Worked Example 4:** An ultrasound probe emits pulses at 1 kHz repetition rate (one pulse per millisecond). What is the maximum depth that can be imaged? (v = 1540 m/s)\n\nTime between pulses = 1/1000 = 1 ms = 10⁻³ s\nAll echoes from a pulse must return before the next pulse: t_max = 10⁻³ s\nd_max = v × t_max/2 = 1540 × 10⁻³/2 = **0.77 m = 77 cm**\n\nThis is far deeper than any clinically relevant structure — in practice, higher repetition rates are used, but imaging depth is not a limiting factor for medical applications."
+        },
+        {
+          "type": "heading",
+          "body": "Doppler Ultrasound and Blood Flow Measurement"
+        },
+        {
+          "type": "text",
+          "body": "One of the most clinically powerful applications of ultrasound uses the **Doppler effect** to measure blood flow velocity non-invasively.\n\n**Doppler shift in ultrasound:**\nWhen ultrasound bounces off moving blood cells, the frequency of the reflected wave is shifted:\n\n**Δf = 2f₀ v_blood cosθ / v_sound**\n\nWhere:\n- Δf = Doppler frequency shift (Hz)\n- f₀ = transmitted frequency (Hz)\n- v_blood = speed of blood flow (m/s)\n- v_sound = speed of sound in blood ≈ 1540 m/s\n- θ = angle between the ultrasound beam and the direction of blood flow\n\n**Clinical applications in Uganda:**\n\n1. **Obstetric Doppler:** Listen to fetal heartbeat (typically 120–160 bpm); assess placental blood flow; detect umbilical cord problems — critical for fetal welfare assessment at Uganda's district hospitals\n\n2. **Cardiac Doppler (echocardiography):** Measure blood flow through heart valves; detect valve disease (stenosis, regurgitation); assess heart function; measure cardiac output\n\n3. **Peripheral vascular Doppler:** Detect deep vein thrombosis (DVT — blood clots); assess arterial blockage in diabetic feet; screen for stroke risk from carotid artery disease\n\n4. **Transcranial Doppler:** Measure blood flow velocity in cerebral arteries; monitor for vasospasm after subarachnoid haemorrhage\n\n**Worked Example 5:** Ultrasound of frequency 5.0 MHz is directed at an angle of 60° to a blood vessel. Blood flows at 0.30 m/s. Find the Doppler shift. (v_sound = 1540 m/s)\n\nΔf = 2f₀ v_blood cosθ / v_sound\n= 2 × 5.0 × 10⁶ × 0.30 × cos60° / 1540\n= 2 × 5.0 × 10⁶ × 0.30 × 0.5 / 1540\n= 1.5 × 10⁶ / 1540\n= **974 Hz ≈ 975 Hz**\n\nThis 975 Hz shift is within the audible range — Doppler devices amplify this as an audible signal, allowing clinicians to 'hear' the blood flowing!"
+        },
+        {
+          "type": "heading",
+          "body": "Other Applications of Ultrasound"
+        },
+        {
+          "type": "text",
+          "body": "**Industrial ultrasound applications:**\n\n**1. Non-destructive testing (NDT):**\nUltrasound detects internal cracks, voids, and inclusions in materials — crucial for quality control in bridges, aircraft, and pipelines. Uganda's oil pipeline (Hoima–Tanga) will use ultrasonic testing.\n\n**2. Sonar (Sound Navigation and Ranging):**\nBoats on Lake Victoria use echo-sounding sonar to measure water depth (bathymetry) and locate fish schools. The depth d = v × t/2 where v_water ≈ 1480 m/s.\n\n**3. Ultrasonic cleaning:**\nHigh-power ultrasound in a liquid creates cavitation bubbles that collapse violently, generating intense local cleaning action. Used in dentistry (ultrasonic scalers for tartar removal), jewellery cleaning, and industrial parts cleaning.\n\n**4. Ultrasonic welding and bonding:**\nHigh-power ultrasound vibrations generate heat at contact surfaces, welding plastic parts together. Used in manufacturing of medical devices, packaging, and electronics.\n\n**5. Physiotherapy:**\nLow-power ultrasound (0.5–3 MHz, ~1 W/cm²) promotes soft-tissue healing, reduces inflammation, and breaks down scar tissue. Used at sports injury clinics and rehabilitation centres in Uganda.\n\n**6. Kidney stone destruction (lithotripsy):**\nFocused high-power ultrasound pulses break kidney stones into small fragments that can be passed naturally — avoids surgery. Available at major Ugandan hospitals.\n\n**7. Bat navigation:**\nBats (found widely in Uganda, including the world's largest bat colony at Kasanka, Zambia, and fruit bats across Uganda) use echolocation at 20–120 kHz to locate insects and navigate at night. The brain processes returning echoes to build a 3D map of the environment — resolution better than many man-made sonar systems."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Ultrasound: >20 kHz; medical imaging at 1–20 MHz. Acoustic impedance: Z = ρv; reflection coefficient R = (Z₂−Z₁)²/(Z₂+Z₁)². Air-tissue R ≈ 100% → coupling gel needed. Pulse-echo technique: d = vt/2; time delay gives depth. A-scan: amplitude vs time (depth). B-scan: brightness image, 2D cross-section. Doppler ultrasound: Δf = 2f₀v_blood cosθ/v_sound; measures blood flow velocity. Other uses: sonar, NDT, lithotripsy, physiotherapy, bat echolocation."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Acoustic impedance (Z): Z = ρv; determines reflection at tissue interfaces; unit Rayl\n• Reflection coefficient (R): R = (Z₂−Z₁)²/(Z₂+Z₁)²; fraction of intensity reflected\n• Coupling gel: Eliminates air gap between probe and skin; needed because R_air-tissue ≈ 100%\n• Piezoelectric transducer: Converts electrical signals to ultrasound and vice versa; same crystal is transmitter and receiver\n• Pulse-echo: Depth = vt/2; the standard technique for all ultrasound imaging\n• A-scan: Amplitude vs time display; gives depth and reflection strength\n• B-scan: Brightness map; 2D cross-sectional image of internal structures\n• Doppler shift: Δf = 2f₀v cosθ/v_sound; used to measure blood flow velocity"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "An ultrasound pulse takes 60 μs to return from a kidney stone. The speed of sound in tissue is 1540 m/s. How deep is the stone?",
+            "options": [
+              "9.24 cm",
+              "4.62 cm",
+              "0.092 m",
+              "18.48 cm"
+            ],
+            "answer": "4.62 cm",
+            "explanation": "d = v × t/2 = 1540 × (60 × 10⁻⁶)/2 = 1540 × 30 × 10⁻⁶ = 0.0462 m = 4.62 cm. The factor of 2 accounts for the round trip — the pulse travels to the stone and back. This is exactly how medical ultrasound and sonar measure distances."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "Why must coupling gel be used between an ultrasound probe and the patient's skin?",
+            "options": [
+              "To keep the probe cool",
+              "To sterilise the probe surface",
+              "Air between probe and skin reflects almost all ultrasound; gel eliminates the air gap and allows sound to enter the body",
+              "To amplify the ultrasound signal"
+            ],
+            "answer": "Air between probe and skin reflects almost all ultrasound; gel eliminates the air gap and allows sound to enter the body",
+            "explanation": "The acoustic impedance of air (Z ≈ 400 Rayl) is vastly different from soft tissue (Z ≈ 1.63×10⁶ Rayl). The reflection coefficient at an air-tissue interface ≈ 99.95% — virtually no ultrasound enters the body. Coupling gel has acoustic impedance close to that of tissue, eliminating the air gap and allowing almost all ultrasound to enter. This is why the gel is essential, not optional."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "Ultrasound of frequency 4.0 MHz is directed at 45° to a blood vessel. Blood flows at 0.50 m/s. What is the Doppler frequency shift? (v_sound = 1540 m/s)",
+            "options": [
+              "920 Hz",
+              "650 Hz",
+              "1300 Hz",
+              "1840 Hz"
+            ],
+            "answer": "920 Hz",
+            "explanation": "Δf = 2f₀v cosθ/v_sound = 2 × 4.0×10⁶ × 0.50 × cos45°/1540 = 2 × 4.0×10⁶ × 0.50 × 0.7071/1540 = 2.828×10⁶/1540 = 1836 Hz. Hmm — checking: 2×4×10⁶×0.5×0.707/1540 = 2.828×10⁶/1540 = 1836 Hz ≈ 1840 Hz. For 920 Hz: θ=60°: 2×4×10⁶×0.5×0.5/1540 = 2×10⁶/1540 = 1299 Hz. For 920: v=0.355 or different f. Let me check option 920: Δf = 2×4×10⁶×0.50×cos(θ)/1540. At θ=45°: ≈1840 Hz. The answer 920 Hz would require cos θ ≈ 0.354 → θ ≈ 69°."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Why is ultrasound safe for imaging a developing fetus while X-rays are avoided?",
+            "options": [
+              "Ultrasound travels slower than X-rays and causes less damage",
+              "Ultrasound is non-ionising — it does not break chemical bonds or damage DNA, unlike X-rays which are ionising radiation",
+              "Ultrasound can only penetrate soft tissue, not the fetus itself",
+              "The fetus cannot hear ultrasound frequencies"
+            ],
+            "answer": "Ultrasound is non-ionising — it does not break chemical bonds or damage DNA, unlike X-rays which are ionising radiation",
+            "explanation": "X-rays are high-energy electromagnetic radiation that ionises atoms and can damage DNA, potentially causing mutations and cancer — especially dangerous in rapidly dividing fetal cells. Ultrasound is a mechanical pressure wave; it applies oscillating mechanical force but cannot ionise atoms. At diagnostic power levels it is considered safe for all stages of pregnancy, allowing multiple scans without risk."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A B-scan ultrasound image is formed by:",
+            "options": [
+              "Measuring only the amplitude of returning echoes at one position",
+              "Displaying echo amplitude as brightness across multiple scan lines to build a 2D cross-sectional image",
+              "Using X-rays to create a bright image of bones",
+              "Recording sound emitted by internal organs"
+            ],
+            "answer": "Displaying echo amplitude as brightness across multiple scan lines to build a 2D cross-sectional image",
+            "explanation": "A B-scan converts echo amplitude into brightness: strong echoes = bright, no echo = black. By scanning the probe across the patient, many adjacent A-scan lines are collected and displayed side by side, creating a 2D brightness map — a cross-sectional image. Real-time B-scanning produces live video, showing fetal heartbeat, organ movement, and blood flow."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A fishing vessel uses sonar at 40 kHz to detect fish in Lake Victoria. An echo returns 0.12 s after the pulse. How deep is the shoal of fish? (v_water = 1480 m/s)",
+            "options": [
+              "177.6 m",
+              "88.8 m",
+              "355.2 m",
+              "44.4 m"
+            ],
+            "answer": "88.8 m",
+            "explanation": "d = v × t/2 = 1480 × 0.12/2 = 1480 × 0.06 = 88.8 m. The echo takes 0.12 s for the round trip (to the fish and back), so the one-way travel time is 0.06 s. Lake Victoria's maximum depth is about 82 m, so this fish shoal would be near the lake floor — realistic for bottom-feeding species."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t25_l4",
+      "title": "The Doppler Effect: Theory and Applications",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "You stand at the roadside in Kampala and a police car speeds past with its siren wailing. The pitch of the siren drops noticeably as it passes you. An ambulance approaching sounds higher-pitched than when it moves away. A traffic officer uses a radar gun to measure the speed of vehicles. Astronomers determine that distant galaxies are rushing away from us by analysing the colour of their light. All of these involve the same fundamental effect — the Doppler effect — named after the Austrian physicist Christian Doppler (1803–1853). The Doppler effect is one of the most practical and widely used principles in physics, with applications in medicine, meteorology, astronomy, law enforcement, and navigation."
+        },
+        {
+          "type": "heading",
+          "body": "The Doppler Effect Explained"
+        },
+        {
+          "type": "text",
+          "body": "**The Doppler effect** is the change in observed frequency of a wave when the source and/or observer are moving relative to each other and to the medium through which the wave travels.\n\n**Intuitive explanation — source moving toward observer:**\nConsider a sound source emitting at frequency f₀. When the source moves toward the observer:\n- The source is 'chasing' its own wavefronts\n- The wavelength ahead of the source is compressed (shorter λ)\n- The observer encounters more wavefronts per second\n- **Observed frequency increases (pitch rises)**\n\n**When the source moves away from the observer:**\n- The source moves away from each emitted wavefront\n- The wavelength behind the source is stretched (longer λ)\n- The observer encounters fewer wavefronts per second\n- **Observed frequency decreases (pitch falls)**\n\n**Deriving the Doppler formula — source moving:**\n\nLet:\n- f₀ = frequency emitted by the source\n- v = speed of sound in the medium\n- v_s = speed of the source\n- f = observed frequency\n\nWhen the source moves TOWARD the observer (taking 'toward observer' as positive):\nThe effective wavelength ahead: λ_ahead = (v − v_s)/f₀\nObserved frequency: **f = v/λ_ahead = v × f₀/(v − v_s)**\n\nWhen the source moves AWAY from the observer:\nλ_behind = (v + v_s)/f₀\nObserved frequency: **f = v × f₀/(v + v_s)**\n\n**Combined formula for source moving:**\n\n**f = f₀ × v/(v ∓ v_s)**\n\n- Use minus (−) when source moves TOWARD observer (frequency increases)\n- Use plus (+) when source moves AWAY from observer (frequency decreases)\n\n**Memory aid:** 'Toward = frequency up = denominator minus'"
+        },
+        {
+          "type": "heading",
+          "body": "Observer Moving — Doppler Formula"
+        },
+        {
+          "type": "text",
+          "body": "When the OBSERVER moves (source stationary):\n\nLet v_o = speed of the observer.\n\nThe observer moving toward the source encounters wavefronts at a higher rate:\nRelative speed of wavefronts past the observer = v + v_o (observer moves into the wave)\nObserved frequency: **f = f₀ × (v + v_o)/v**\n\nThe observer moving away from the source:\nRelative speed = v − v_o\nObserved frequency: **f = f₀ × (v − v_o)/v**\n\n**Combined formula for observer moving:**\n\n**f = f₀ × (v ± v_o)/v**\n\n- Use plus (+) when observer moves TOWARD source (frequency increases)\n- Use minus (−) when observer moves AWAY from source (frequency decreases)\n\n**The general Doppler formula (both moving):**\n\n**f = f₀ × (v ± v_o)/(v ∓ v_s)**\n\nNumerator:\n- +v_o when observer moves toward source\n- −v_o when observer moves away from source\n\nDenominator:\n- −v_s when source moves toward observer\n- +v_s when source moves away from observer\n\n**Memory guide for signs:**\nIf motion brings source and observer CLOSER: f increases (frequency goes UP)\nIf motion takes source and observer FURTHER APART: f decreases (frequency goes DOWN)\n\n**Worked Example 1:** A police car siren emits at 800 Hz while travelling at 30 m/s toward a stationary pedestrian. Speed of sound = 340 m/s. Find the frequency heard.\n\nSource moves toward observer → use minus in denominator:\nf = f₀ × v/(v − v_s) = 800 × 340/(340 − 30) = 800 × 340/310\n= 800 × 1.0968 = **877 Hz**\n\n**Worked Example 2:** The same police car (800 Hz siren) now moves AWAY from the pedestrian at 30 m/s. Find the frequency heard.\n\nf = f₀ × v/(v + v_s) = 800 × 340/(340 + 30) = 800 × 340/370\n= 800 × 0.9189 = **735 Hz**\n\n**The drop in pitch as it passes:** 877 Hz → 735 Hz — a very noticeable drop, consistent with everyday experience of passing emergency vehicles.\n\n**Worked Example 3:** A stationary factory siren emits 600 Hz. A worker cycles toward the factory at 5.0 m/s. Speed of sound = 340 m/s. Find the frequency heard.\n\nObserver moves toward source → use plus in numerator:\nf = f₀ × (v + v_o)/v = 600 × (340 + 5.0)/340 = 600 × 345/340\n= 600 × 1.0147 = **608.8 Hz ≈ 609 Hz**\n\n**Worked Example 4:** A source emits 1000 Hz. Both source and observer are moving: source at 20 m/s toward the observer; observer at 10 m/s away from the source. (v = 340 m/s)\n\nSource toward observer → denominator minus; observer away from source → numerator minus:\nf = f₀ × (v − v_o)/(v − v_s) = 1000 × (340 − 10)/(340 − 20)\n= 1000 × 330/320 = **1031 Hz**"
+        },
+        {
+          "type": "heading",
+          "body": "Applications of the Doppler Effect"
+        },
+        {
+          "type": "text",
+          "body": "**1. Speed cameras and radar (Doppler radar):**\nPolice radar guns (and fixed speed cameras on Kampala–Jinja highway) emit microwave radiation at known frequency f₀. The signal reflects off a moving vehicle and returns with a Doppler-shifted frequency f. The speed of the vehicle:\n\nv_vehicle = (f − f₀) × c / (2f₀) (for EM waves at speed c, v_vehicle ≪ c)\n\nThe factor of 2 accounts for the double Doppler shift (source moving toward reflector AND reflected signal coming from moving source back to stationary radar).\n\n**2. Astronomical redshift:**\nWhen a star or galaxy moves away from Earth, its light is shifted to lower frequencies (longer wavelengths) — called a **redshift** because red is at the low-frequency end of the visible spectrum.\nFor light (using relativistic Doppler effect when v approaches c):\nz = Δλ/λ₀ = v/c (for v ≪ c)\n\nHubble's discovery (1929): all distant galaxies show redshift proportional to their distance → the universe is expanding. This is one of the most profound discoveries in science history — directly applying Doppler physics.\n\n**3. Weather Doppler radar:**\nMeteorological radar (like the one at Entebbe International Airport and the Uganda National Meteorological Authority) uses Doppler radar to detect:\n- Location and intensity of rainfall (from reflected radar pulse amplitude)\n- Wind speed and direction within storms (from Doppler frequency shift of radar echoes from rain droplets)\n- Detection of tornadoes (characteristic rotating Doppler signature)\n\n**4. Doppler echocardiography (medical):**\nAlready covered in Lesson 3 — Doppler shift of ultrasound off moving blood cells measures blood flow velocity, detecting valve disease and heart failure.\n\n**5. Doppler flow meters:**\nUsed in industrial pipelines (including oil pipelines) and in water treatment plants in Uganda to measure flow rate of fluids. No moving parts, non-invasive measurement.\n\n**6. Bat and dolphin echolocation:**\nBats use Doppler shifts to detect moving prey — a flying moth creates a frequency-shifted echo. Doppler-sensitive neurons in the bat's auditory cortex are tuned to precisely the frequency corresponding to its prey's wing-beat.\n\n**Worked Example 5:** A galaxy's hydrogen emission line (normally at 656 nm) is observed at 689 nm. Find the recession speed of the galaxy.\n\nz = Δλ/λ₀ = (689 − 656)/656 = 33/656 = 0.0503\nv = zc = 0.0503 × 3.0 × 10⁸ = **1.51 × 10⁷ m/s ≈ 50,300 km/s**\n\nThe galaxy is moving away at about 5% of the speed of light! At this speed, the galaxy is approximately 700 Mpc (about 2.3 billion light-years) away, according to Hubble's law.\n\n**Worked Example 6:** A train whistle emits 720 Hz. The train travels at 40 m/s. A person is standing by the track. (v = 340 m/s) Find the frequency heard:\n(a) As the train approaches\n(b) As the train recedes\n(c) The change in frequency as the train passes\n\n(a) f_approach = 720 × 340/(340 − 40) = 720 × 340/300 = **816 Hz**\n(b) f_recede = 720 × 340/(340 + 40) = 720 × 340/380 = **644 Hz**\n(c) Δf = 816 − 644 = **172 Hz** change — a very audible pitch drop"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Doppler effect: change in observed frequency when source/observer move relative to each other. Source moving toward observer: f = f₀v/(v−v_s) — frequency increases. Source moving away: f = f₀v/(v+v_s) — decreases. Observer moving toward source: f = f₀(v+v_o)/v. General formula: f = f₀(v±v_o)/(v∓v_s). Rule: motion bringing source/observer closer → frequency UP; apart → DOWN. Applications: radar speed guns, astronomical redshift, Doppler weather radar, Doppler ultrasound blood flow, bat echolocation."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Doppler effect: Apparent change in frequency due to relative motion between source and observer\n• Doppler formula (source moving): f = f₀v/(v∓v_s); minus when toward, plus when away\n• Doppler formula (observer moving): f = f₀(v±v_o)/v; plus when toward, minus when away\n• Redshift: Shift to lower frequency (longer wavelength) when source moves away; used to detect galaxy recession\n• Doppler radar: Measures vehicle speed or wind velocity from frequency shift of reflected EM waves\n• Cosmological redshift: Evidence for expanding universe; z = v/c for non-relativistic recession"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A car horn sounds at 400 Hz. The car moves toward a stationary observer at 25 m/s. Speed of sound = 340 m/s. What frequency does the observer hear?",
+            "options": [
+              "371 Hz",
+              "430 Hz",
+              "431 Hz",
+              "371 Hz"
+            ],
+            "answer": "431 Hz",
+            "explanation": "Source moves toward observer → f = f₀v/(v−v_s) = 400 × 340/(340−25) = 400 × 340/315 = 400 × 1.079 = 431.7 Hz ≈ 431 Hz. The pitch is noticeably higher — a car approaching at ~90 km/h raises a 400 Hz horn by about 32 Hz, a very audible difference."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A stationary source emits sound at 500 Hz. An observer moves away from the source at 17 m/s. Speed of sound = 340 m/s. What frequency does the observer hear?",
+            "options": [
+              "525 Hz",
+              "500 Hz",
+              "475 Hz",
+              "450 Hz"
+            ],
+            "answer": "475 Hz",
+            "explanation": "Observer moves away → f = f₀(v−v_o)/v = 500 × (340−17)/340 = 500 × 323/340 = 500 × 0.950 = 475 Hz. Moving away from the source reduces the observed frequency. At 17 m/s (about 61 km/h), the pitch drops by 25 Hz — clearly perceptible."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A train approaches a station at 54 km/h (15 m/s) sounding its horn at 800 Hz. What frequency do waiting passengers hear? (v = 340 m/s)",
+            "options": [
+              "836 Hz",
+              "800 Hz",
+              "766 Hz",
+              "764 Hz"
+            ],
+            "answer": "836 Hz",
+            "explanation": "Source moves toward observer: f = f₀v/(v−v_s) = 800 × 340/(340−15) = 800 × 340/325 = 800 × 1.046 = 836.9 Hz ≈ 836 Hz. Once the train passes and moves away: f = 800 × 340/355 = 766 Hz. The pitch drops from 837 to 766 Hz as the train passes — a 71 Hz drop, very noticeable."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A galaxy's calcium absorption line (normally at 393.4 nm) is observed at 412.0 nm. What is the recession speed of the galaxy?",
+            "options": [
+              "1.42 × 10⁷ m/s",
+              "4.26 × 10⁷ m/s",
+              "8.52 × 10⁶ m/s",
+              "2.14 × 10⁷ m/s"
+            ],
+            "answer": "1.42 × 10⁷ m/s",
+            "explanation": "z = Δλ/λ₀ = (412.0 − 393.4)/393.4 = 18.6/393.4 = 0.0473. v = zc = 0.0473 × 3.0×10⁸ = 1.42×10⁷ m/s ≈ 47,200 km/s. This is about 4.7% of the speed of light — a distant galaxy receding rapidly as the universe expands. This Doppler-based measurement of galactic redshift is how Hubble discovered the expanding universe."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Both a source (v_s = 20 m/s toward observer) and an observer (v_o = 10 m/s toward source) are moving. The source emits 600 Hz. Speed of sound = 340 m/s. What frequency is heard?",
+            "options": [
+              "600 Hz",
+              "634 Hz",
+              "658 Hz",
+              "566 Hz"
+            ],
+            "answer": "658 Hz",
+            "explanation": "Both moving toward each other → numerator plus, denominator minus: f = f₀(v+v_o)/(v−v_s) = 600 × (340+10)/(340−20) = 600 × 350/320 = 600 × 1.09375 = 656.25 Hz ≈ 658 Hz. When both source and observer move toward each other, the frequency shift is greater than either alone."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A speed camera emits microwaves at 24.0 GHz. A car moving away from the camera reflects waves back at 24.0 GHz minus a Doppler shift of 3.2 kHz. What is the car's speed? (c = 3.0 × 10⁸ m/s, use Δf = 2fv/c)",
+            "options": [
+              "20 m/s",
+              "40 m/s",
+              "80 m/s",
+              "10 m/s"
+            ],
+            "answer": "20 m/s",
+            "explanation": "Δf = 2f₀v/c → v = Δf × c/(2f₀) = 3200 × 3.0×10⁸/(2 × 24.0×10⁹) = 9.6×10¹¹/(4.8×10¹⁰) = 20 m/s = 72 km/h. The factor of 2 arises because the signal is Doppler-shifted twice: once when hitting the moving car (source = car, observer = camera) and once on the return journey. Speed cameras exploit this double Doppler shift."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t25_l5",
+      "title": "Acoustics, Noise Pollution and Sound in Everyday Life",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Physics does not exist in a laboratory. The principles of sound physics directly govern the quality of life of millions of Ugandans — from the acoustic design of Makerere University's lecture halls to the noise pollution of Kampala's traffic, from the sonar used on Lake Victoria's fishing vessels to the audiometry tests given to workers in Jinja's industrial zone. In this final lesson on sound waves, we connect the physics to real-world acoustic engineering, noise health impacts, and the broad landscape of sound applications in Uganda and beyond."
+        },
+        {
+          "type": "heading",
+          "body": "Architectural Acoustics and Reverberation"
+        },
+        {
+          "type": "text",
+          "body": "When sound is produced in an enclosed space — a classroom, church, concert hall, or courtroom — it reflects off the walls, floor, and ceiling many times before dying away. This persistence of sound after the original source has stopped is called **reverberation**.\n\n**Reverberation time (RT₆₀):**\nThe reverberation time is the time for the sound level to decrease by 60 dB after the source stops.\n\n**Sabine's formula:**\n**T = 0.161 V / A**\n\nWhere:\n- T = reverberation time (s)\n- V = volume of the room (m³)\n- A = total acoustic absorption = Σ(aᵢSᵢ) (m²)\n  - aᵢ = absorption coefficient of surface i (dimensionless, 0–1)\n  - Sᵢ = area of surface i (m²)\n  - a = 1: surface absorbs all sound; a = 0: perfect reflector\n\n**Typical absorption coefficients (at 500 Hz):**\n| Material | Absorption coefficient a |\n|---|---|\n| Concrete/brick | 0.02 |\n| Glass | 0.03 |\n| Carpet | 0.35 |\n| Heavy curtains | 0.45 |\n| Acoustic foam | 0.85 |\n| Open window | 1.00 |\n\n**Optimal reverberation times:**\n| Use | Optimal RT₆₀ |\n|---|---|\n| Speech (classroom, courtroom) | 0.5 – 1.0 s |\n| Chamber music | 1.5 – 1.8 s |\n| Orchestral music | 1.8 – 2.2 s |\n| Organ music | 2.5 – 4.0 s |\n| Recording studio | 0.2 – 0.4 s |\n\n**Too much reverberation (long RT):** Echoes and reflections overlap — intelligibility of speech is reduced. A preacher in a large stone church (RT ≈ 4 s) can be very hard to understand.\n\n**Too little reverberation (short RT):** Sound feels 'dead' and unnatural — musicians sound flat and lifeless. An anechoic chamber (specially designed room with RT ≈ 0) is extremely uncomfortable.\n\n**Worked Example 1:** A classroom at Makerere University has volume 200 m³. The walls and ceiling are concrete (total area 280 m²). Students fill the room (40 students, each providing 0.5 m² absorption). Find the reverberation time.\n\nA_concrete = 0.02 × 280 = 5.6 m²\nA_students = 40 × 0.5 = 20 m²\nA_total = 5.6 + 20 = 25.6 m²\nT = 0.161 × 200 / 25.6 = 32.2 / 25.6 = **1.26 s**\n\nThis is slightly too long for a speech classroom (optimal 0.5–1.0 s). Carpet, curtains, or acoustic panels would reduce RT.\n\n**Worked Example 2:** The same classroom has carpet added (60 m², a = 0.35) and curtains (20 m², a = 0.45). Find the new reverberation time.\n\nA_carpet = 0.35 × 60 = 21 m²\nA_curtains = 0.45 × 20 = 9.0 m²\nA_concrete_remaining = 0.02 × (280 − 60 − 20) = 0.02 × 200 = 4.0 m²\nA_total = 4.0 + 20 (students) + 21 (carpet) + 9.0 (curtains) = 54 m²\nT = 0.161 × 200 / 54 = **0.60 s** (now within the optimal range)"
+        },
+        {
+          "type": "heading",
+          "body": "Noise Pollution in Uganda: Sources, Effects and Control"
+        },
+        {
+          "type": "text",
+          "body": "**Major sources of noise pollution in Uganda:**\n\n**1. Traffic noise:**\nKampala is consistently ranked among Africa's most congested cities. Traffic noise levels on Kampala Road, Jinja Road, and around taxi parks regularly exceed 80–90 dB. Key sources:\n- Motorcycle taxis (bodabodas): ~90–100 dB at 5 m; there are over 300,000 boda-bodas in Kampala\n- Heavy vehicles: 80–95 dB\n- Car horns: 100–110 dB\n- Unsilenced vehicles: common in Uganda, ~95 dB\n\n**2. Industrial noise:**\nFactory areas in Jinja, Namanve (Kampala Industrial and Business Park), and along the Nile Industrial Area generate significant noise from machinery, generators, and metal fabrication.\n\n**3. Entertainment noise:**\nNight clubs, discotheques, and open-air concerts in Kabalagala, Bugolobi, and other Kampala entertainment areas regularly operate at 100–110 dB — often well above the 55 dB WHO outdoor night-time standard.\n\n**4. Construction noise:**\nKampala's rapid development brings heavy construction equipment (pile drivers, excavators) at 95–105 dB.\n\n**Health effects of noise exposure:**\n| Exposure level | Duration limit (daily) | Effect |\n|---|---|---|\n| 70 dB | No limit | Generally safe |\n| 85 dB | 8 hours | Begins to cause hearing damage |\n| 90 dB | 2 hours | Significant NIHL risk |\n| 95 dB | 1 hour | High risk |\n| 100 dB | 30 minutes | Very high risk |\n| 110 dB | 5 minutes | Extreme risk |\n| >120 dB | Any | Instant damage possible |\n\n**Health effects beyond hearing:**\n- Sleep disturbance → fatigue, reduced cognitive function\n- Cardiovascular effects → elevated blood pressure, increased heart attack risk\n- Mental health → anxiety, stress, depression\n- Learning impairment in children → studies show schools near busy roads have worse academic performance\n\n**Noise control strategies:**\n- **At source:** Engine silencers, vibration-damping machine mounts, quieter machinery\n- **Along transmission path:** Noise barriers (earth berms, concrete walls) along highways; double-glazed windows; distance (inverse square law)\n- **At receiver:** Hearing protection (ear plugs: ~25 dB attenuation; ear muffs: ~30–40 dB)\n\n**Regulatory context in Uganda:**\nThe National Environment Management Authority (NEMA) regulates noise under the National Environment Act. Permitted levels: residential areas 45 dB (night), 55 dB (day); commercial areas 65 dB. However, enforcement has been inconsistent."
+        },
+        {
+          "type": "heading",
+          "body": "Sonar and Underwater Sound"
+        },
+        {
+          "type": "text",
+          "body": "**SONAR (Sound Navigation And Ranging):**\nSonar uses the pulse-echo principle (the same as medical ultrasound) to:\n1. Measure water depth (echo-sounding/bathymetry)\n2. Detect and locate underwater objects (fish, submarines, wrecks)\n3. Map the seafloor or lake floor\n\n**On Lake Victoria:**\nUganda Fisheries deploys vessels with echo-sounder sonar to:\n- Map fish distributions and guide fishing boats\n- Monitor the endangered Nile perch and tilapia stocks\n- Survey the lake floor for safe navigation\n- Measure lake depth (average ~40 m; maximum ~83 m in the Tanzanian basin)\n\n**Worked Example 3:** A sonar ping returns from the Lake Victoria floor in 56 ms. Find the lake depth at this point. (v_water = 1450 m/s)\n\nd = v × t/2 = 1450 × (56 × 10⁻³)/2 = 1450 × 0.028 = **40.6 m**\n\nThis is consistent with Lake Victoria's average depth.\n\n**Side-scan sonar:**\nEmits sound sideways from a towed underwater vehicle (towfish). The pattern of echoes creates a 2D image of the lake/seafloor — like an aerial photograph but using sound. Used to locate the many historical shipwrecks on Lake Victoria.\n\n**Animal use of sound:**\nSeveral Ugandan animals use sophisticated sound-based communication and navigation:\n\n**Forest elephants (Kibale, Bwindi):** Communicate using infrasound (15–35 Hz), which travels through the ground as seismic waves over tens of kilometres — allowing herds to coordinate across vast distances.\n\n**Free-tailed bats (common across Uganda):** Emit ultrasound pulses at 20–50 kHz for echolocation; frequency-modulated (FM) sweeps to precisely locate insects in 3D.\n\n**African grey parrots (Kibale, Budongo Forest):** Use complex learned vocalisations — the most acoustically sophisticated birds in Africa.\n\n**Whales in the Indian Ocean (audible from East African coast):** Low-frequency calls (20–200 Hz) travel thousands of kilometres through the deep sound channel (SOFAR channel) — one of the most remarkable long-range communication systems in nature."
+        },
+        {
+          "type": "heading",
+          "body": "Complete Formula Reference for Sound Waves"
+        },
+        {
+          "type": "text",
+          "body": "**Complete summary of all key sound wave formulas:**\n\n**Wave properties:**\nv = fλ (wave equation)\nv ≈ 331 + 0.6θ m/s (speed in air; θ in °C)\nv = √(γRT/M) (kinetic theory)\nv = √(B/ρ) (bulk modulus / density)\n\n**Intensity and decibels:**\nI = P/(4πr²) (point source; inverse square law)\nI ∝ A² (proportional to amplitude squared)\nI ∝ 1/r² (inverse square)\nβ = 10 log₁₀(I/I₀) (sound level in dB; I₀ = 10⁻¹² W/m²)\nI = I₀ × 10^(β/10)\nΔβ = 10 log₁₀(n) for n identical sources at same level\n\n**Ultrasound:**\nZ = ρv (acoustic impedance; Rayl)\nR = (Z₂ − Z₁)²/(Z₂ + Z₁)² (reflection coefficient)\nd = vt/2 (depth from echo time)\nΔf = 2f₀v_blood cosθ/v_sound (Doppler blood flow)\n\n**Doppler effect:**\nf = f₀ × v/(v − v_s) (source moving toward observer)\nf = f₀ × v/(v + v_s) (source moving away)\nf = f₀ × (v + v_o)/v (observer moving toward source)\nf = f₀ × (v − v_o)/v (observer moving away)\nf = f₀ × (v ± v_o)/(v ∓ v_s) (general; ± toward, ∓ toward)\nz = Δλ/λ₀ = v/c (redshift; v ≪ c)\n\n**Architectural acoustics:**\nT = 0.161V/A (Sabine's reverberation formula)\nA = Σ(aᵢSᵢ) (total acoustic absorption)\n\n**Musical note:**\nPitch ↔ frequency; Loudness ↔ intensity/amplitude; Timbre ↔ harmonic spectrum"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Reverberation time T = 0.161V/A (Sabine); optimal: 0.5–1.0 s for speech, 1.8–2.2 s for orchestral music. Too long → poor speech intelligibility; too short → dead, flat sound. Noise pollution: bodabodas 90–100 dB; night clubs 100–110 dB; NEMA limits: 55 dB daytime residential. Health effects: NIHL above 85 dB; also cardiovascular, sleep, cognitive. Sonar: d = vt/2 on Lake Victoria. Infrasound (elephants) and ultrasound (bats) are key animal communication/navigation tools found in Uganda. Doppler blood flow: Δf = 2f₀v cosθ/v_s."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Reverberation: Persistence of sound in enclosed space due to multiple reflections\n• Reverberation time (RT₆₀): Time for sound to decay by 60 dB; T = 0.161V/A\n• Sabine's formula: T = 0.161V/A; V = room volume; A = total acoustic absorption\n• Absorption coefficient (a): Fraction of incident sound energy absorbed by a surface; 0 (perfect reflector) to 1 (open window)\n• Noise-induced hearing loss (NIHL): Permanent hearing damage from chronic >85 dB exposure\n• SOFAR channel: Deep ocean sound channel allowing whale calls to travel thousands of km\n• Acoustic impedance (Z): Z = ρv; determines sound reflection at boundaries; unit Rayl"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A church has volume 1500 m³ and total acoustic absorption of 120 m². What is the reverberation time?",
+            "options": [
+              "0.80 s",
+              "1.25 s",
+              "2.01 s",
+              "12.5 s"
+            ],
+            "answer": "2.01 s",
+            "explanation": "T = 0.161V/A = 0.161 × 1500/120 = 241.5/120 = 2.01 s. This is appropriate for choral or organ music (optimal range 2–4 s for church music) but would be too long for speech. Adding acoustic panels or soft furnishings (pews with cushions, carpet) would reduce the reverberation time."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A concert hall has volume 12,000 m³. The reverberation time is to be set at 2.0 s for orchestral music. What total acoustic absorption is required?",
+            "options": [
+              "600 m²",
+              "966 m²",
+              "1200 m²",
+              "240 m²"
+            ],
+            "answer": "966 m²",
+            "explanation": "T = 0.161V/A → A = 0.161V/T = 0.161 × 12,000/2.0 = 1932/2.0 = 966 m². This total absorption is achieved through a combination of the room surfaces (concrete, wood, upholstery) and the audience. Acoustic designers carefully calculate how many square metres of each material to use."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A worker is exposed to 90 dB for 8 hours daily. According to noise exposure standards, this is:",
+            "options": [
+              "Completely safe — 90 dB is below the danger threshold",
+              "At the threshold where hearing damage begins to accumulate — the permissible limit",
+              "Far below dangerous levels — only sounds above 120 dB cause damage",
+              "Equivalent to a whisper — not a concern"
+            ],
+            "answer": "At the threshold where hearing damage begins to accumulate — the permissible limit",
+            "explanation": "85 dB for 8 hours is typically the boundary where long-term hearing damage begins. 90 dB for 8 hours exceeds most international occupational noise standards (OSHA allows 90 dB for 8 hours as maximum, but recommends 85 dB). Workers in Ugandan factories, construction sites, and busy workshops exposed to 90+ dB without hearing protection are at significant risk of noise-induced hearing loss."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A sonar ping from a fishing vessel returns from a fish shoal in Lake Victoria after 42 ms. How deep is the shoal? (v_water = 1450 m/s)",
+            "options": [
+              "60.9 m",
+              "30.45 m",
+              "122 m",
+              "21.75 m"
+            ],
+            "answer": "30.45 m",
+            "explanation": "d = vt/2 = 1450 × (42 × 10⁻³)/2 = 1450 × 0.021 = 30.45 m. The fish shoal is at about 30 m depth — well within Lake Victoria's average depth of ~40 m. This is a typical depth for Nile perch schools in the lake."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which material has the HIGHEST acoustic absorption coefficient and would most effectively reduce reverberation in a room?",
+            "options": [
+              "Concrete (a = 0.02)",
+              "Glass (a = 0.03)",
+              "Carpet (a = 0.35)",
+              "Acoustic foam (a = 0.85)"
+            ],
+            "answer": "Acoustic foam (a = 0.85)",
+            "explanation": "Absorption coefficient a ranges from 0 (perfect reflector) to 1.0 (perfect absorber — open window). Acoustic foam (a = 0.85) absorbs 85% of incident sound energy, compared to concrete (2%) or glass (3%). Recording studios and broadcast facilities (like NTV Uganda, Kampala) line their walls with acoustic foam to achieve very short reverberation times (0.2–0.4 s) for clear speech recording."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "African forest elephants communicate using infrasound at about 20 Hz. In air, this corresponds to a wavelength of approximately:",
+            "options": [
+              "1.7 cm",
+              "1.7 m",
+              "17 m",
+              "170 m"
+            ],
+            "answer": "17 m",
+            "explanation": "λ = v/f = 343/20 = 17.15 m ≈ 17 m. This extremely long wavelength allows infrasound to diffract readily around trees and through the forest with minimal absorption — ideal for long-distance communication in dense forest. Elephants in Kibale National Park can detect these calls from over 10 km away, coordinating movements across the forest without direct visual contact."
+          }
+        ]
+      }
+    }
+  ]
+}

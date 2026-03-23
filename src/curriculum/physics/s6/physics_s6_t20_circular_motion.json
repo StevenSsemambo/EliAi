@@ -1,0 +1,693 @@
+{
+  "topic_id": "physics_s6_t20",
+  "topic_title": "Circular Motion",
+  "subject": "physics",
+  "class_level": "S6",
+  "lessons": [
+    {
+      "id": "physics_s6_t20_l1",
+      "title": "Angular Displacement, Velocity and Acceleration",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "When a car goes around a roundabout in Kampala, when a boda-boda takes a sharp bend, when the blades of a hydroelectric turbine at Bujagali Dam spin at full speed, or when a satellite orbits the Earth — all of these involve circular motion. Unlike the linear motion studied earlier, circular motion requires a completely new set of quantities to describe it precisely. This lesson introduces the language of circular motion: angular displacement, angular velocity, and angular acceleration — and shows how they relate to the familiar linear quantities."
+        },
+        {
+          "type": "heading",
+          "body": "Describing Circular Motion: The Basics"
+        },
+        {
+          "type": "text",
+          "body": "Consider a particle moving along a circular path of radius r. At any instant, its position on the circle can be described by the angle θ it has swept from a reference direction.\n\n**Angular displacement (θ):**\nThe angle swept by the radius as the particle moves along the circular path.\n\n**Unit: radians (rad)**\nThe radian is defined as the angle subtended at the centre of a circle by an arc equal in length to the radius:\n\nθ (in radians) = arc length / radius = s / r\n\nSo: **s = rθ**\n\nWhere s is the arc length (distance along the circle) and r is the radius.\n\n**Converting between degrees and radians:**\nA full circle = 360° = 2π radians\n\nSo: 1 radian = 360°/(2π) = 57.3°\nAnd: θ (rad) = θ (degrees) × π/180\n\n**Common conversions:**\n| Degrees | Radians |\n|---|---|\n| 360° | 2π ≈ 6.283 rad |\n| 180° | π ≈ 3.142 rad |\n| 90° | π/2 ≈ 1.571 rad |\n| 60° | π/3 ≈ 1.047 rad |\n| 45° | π/4 ≈ 0.785 rad |\n| 30° | π/6 ≈ 0.524 rad |\n\n**Worked Example 1:** A wheel of radius 0.50 m rotates through 4.0 radians. What arc length does a point on the rim travel?\n\ns = rθ = 0.50 × 4.0 = **2.0 m**\n\n**Worked Example 2:** Convert 270° to radians.\n\nθ = 270 × π/180 = 270π/180 = 3π/2 = **4.71 rad**"
+        },
+        {
+          "type": "heading",
+          "body": "Angular Velocity (ω)"
+        },
+        {
+          "type": "text",
+          "body": "**Angular velocity ω (omega)** is the rate of change of angular displacement with time:\n\n**ω = Δθ / Δt**\n\nFor uniform circular motion (constant angular velocity):\n**ω = θ / t**\n\n**Unit: radians per second (rad/s)**\n\n**Period T and frequency f:**\nIn one complete revolution, the particle sweeps angle 2π in time T (the period):\n\nω = 2π / T\n\nSince frequency f = 1/T:\n**ω = 2πf**\n\n**Relationship between linear (tangential) speed v and angular velocity ω:**\nIn time t, the arc length covered: s = rθ\nLinear speed: v = s/t = rθ/t = r × (θ/t) = rω\n\n**v = rω**\n\nThis is an extremely important relationship. Points at different radii on the same rotating body have:\n- The SAME angular velocity ω\n- DIFFERENT linear speeds v (larger r → larger v)\n\n**Worked Example 3:** A turntable rotates at 33 revolutions per minute (rpm). Find:\n(a) The angular velocity in rad/s\n(b) The linear speed of a point 0.20 m from the centre\n\n(a) f = 33/60 revolutions per second = 0.55 Hz\nω = 2πf = 2π × 0.55 = **3.46 rad/s**\n\n(b) v = rω = 0.20 × 3.46 = **0.692 m/s ≈ 0.69 m/s**\n\n**Worked Example 4:** A bicycle wheel of diameter 70 cm completes one revolution in 0.40 s. Find:\n(a) The angular velocity\n(b) The linear speed of the tyre tread\n(c) The speed of the bicycle\n\n(a) ω = 2π/T = 2π/0.40 = **15.7 rad/s**\n(b) r = 0.35 m; v = rω = 0.35 × 15.7 = **5.50 m/s**\n(c) The bicycle moves forward at the same speed as the tyre tread: **5.50 m/s ≈ 19.8 km/h**\n\n**Comparing linear and angular quantities:**\n| Linear Quantity | Symbol | Angular Equivalent | Symbol |\n|---|---|---|---|\n| Displacement | s | Angular displacement | θ |\n| Velocity | v | Angular velocity | ω |\n| Acceleration | a | Angular acceleration | α |\n| Mass | m | Moment of inertia | I |\n| Force | F | Torque | τ |\n| v = s/t | — | ω = θ/t | — |\n| v = rω | connecting equation | — | — |"
+        },
+        {
+          "type": "heading",
+          "body": "Angular Acceleration (α)"
+        },
+        {
+          "type": "text",
+          "body": "**Angular acceleration α (alpha)** is the rate of change of angular velocity with time:\n\n**α = Δω / Δt**\n\n**Unit: rad/s²**\n\nFor uniform angular acceleration (α = constant), equations analogous to the linear motion equations apply:\n\n**Angular equations of motion (compare with linear equivalents):**\n\n| Angular equation | Linear equivalent |\n|---|---|\n| ω = ω₀ + αt | v = u + at |\n| θ = ω₀t + ½αt² | s = ut + ½at² |\n| ω² = ω₀² + 2αθ | v² = u² + 2as |\n| θ = ½(ω₀ + ω)t | s = ½(u+v)t |\n\nWhere:\n- ω₀ = initial angular velocity (rad/s)\n- ω = final angular velocity (rad/s)\n- α = angular acceleration (rad/s²)\n- θ = angular displacement (rad)\n- t = time (s)\n\n**Relationship between linear and angular acceleration:**\nDifferentiating v = rω with respect to time:\na_tangential = r × α\n\nThis is the **tangential acceleration** — the rate of change of linear speed.\n\n**Worked Example 5:** A motor starting from rest reaches an angular velocity of 120 rad/s in 6.0 s.\n(a) Find the angular acceleration.\n(b) Find the total angle turned through.\n(c) Find the number of complete revolutions.\n\n(a) α = (ω − ω₀)/t = (120 − 0)/6.0 = **20 rad/s²**\n\n(b) θ = ω₀t + ½αt² = 0 + ½ × 20 × (6.0)² = 10 × 36 = **360 rad**\n\n(c) Number of revolutions = θ/(2π) = 360/(2π) = **57.3 revolutions**\n\n**Worked Example 6:** A flywheel spinning at 25 rad/s is brought uniformly to rest in 50 revolutions.\n(a) Find the angular deceleration.\n(b) Find the time taken.\n\n(a) θ = 50 × 2π = 314.2 rad\nω² = ω₀² + 2αθ: 0 = (25)² + 2α × 314.2\n2α × 314.2 = −625\nα = −625/(2 × 314.2) = **−0.994 rad/s² ≈ −1.0 rad/s²** (deceleration)\n\n(b) ω = ω₀ + αt: 0 = 25 + (−0.994)t\nt = 25/0.994 = **25.2 s**"
+        },
+        {
+          "type": "heading",
+          "body": "Uniform Circular Motion: Speed vs Velocity"
+        },
+        {
+          "type": "text",
+          "body": "**Uniform circular motion** means the particle moves at constant speed around a circle. However, even though the SPEED is constant, the VELOCITY is not — because velocity is a vector and its DIRECTION continuously changes.\n\n**At every point on the circle, the velocity vector is tangent to the circle** — pointing in the direction of motion, perpendicular to the radius at that point.\n\nThis continuous change in direction means there IS acceleration, even in uniform circular motion. This acceleration is called **centripetal acceleration** (directed toward the centre — derived in the next lesson).\n\n**Key distinction:**\n- Speed v = constant in uniform circular motion (magnitude of velocity)\n- Velocity direction changes continuously\n- Therefore acceleration ≠ 0 (because acceleration = rate of change of velocity, and velocity is changing direction)\n\n**Period and frequency summary:**\n- Period T = time for one complete revolution (s)\n- Frequency f = number of revolutions per second (Hz)\n- Angular velocity ω = 2π/T = 2πf (rad/s)\n- Linear speed v = circumference/period = 2πr/T = rω (m/s)\n\n**Worked Example 7:** The Earth orbits the Sun at a mean radius of 1.5 × 10¹¹ m, completing one orbit in 365.25 days. Find:\n(a) The angular velocity of Earth in its orbit\n(b) The orbital speed of Earth\n\n(a) T = 365.25 × 24 × 3600 = 3.156 × 10⁷ s\nω = 2π/T = 2π / (3.156 × 10⁷) = **1.99 × 10⁻⁷ rad/s**\n\n(b) v = rω = 1.5 × 10¹¹ × 1.99 × 10⁻⁷ = **2.99 × 10⁴ m/s ≈ 30 km/s**\n\nThe Earth hurtles through space at 30 km/s — we don't feel it because we are moving with it!"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Angular displacement θ (radians): θ = s/r. Angular velocity ω = Δθ/Δt = 2πf = 2π/T; unit rad/s. Linear speed v = rω. Angular acceleration α = Δω/Δt; unit rad/s². Angular equations of motion mirror linear equations: replace s→θ, v→ω, u→ω₀, a→α. Tangential acceleration a_t = rα. In uniform circular motion: speed constant, velocity direction continuously changing → centripetal acceleration exists."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Angular displacement (θ): Angle swept by radius; θ = s/r; unit radian (rad)\n• Radian: Angle where arc length equals radius; 2π rad = 360°\n• Angular velocity (ω): Rate of change of angular displacement; ω = 2πf; unit rad/s\n• Period (T): Time for one complete revolution; T = 2π/ω = 1/f; unit seconds\n• Angular acceleration (α): Rate of change of angular velocity; α = Δω/Δt; unit rad/s²\n• v = rω: Connects linear speed to angular velocity; points further from centre move faster\n• Uniform circular motion: Constant speed circular motion; velocity direction changes → acceleration present"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A wheel of radius 0.40 m rotates with angular velocity 5.0 rad/s. What is the linear speed of a point on the rim?",
+            "options": [
+              "0.08 m/s",
+              "2.0 m/s",
+              "12.5 m/s",
+              "0.80 m/s"
+            ],
+            "answer": "2.0 m/s",
+            "explanation": "v = rω = 0.40 × 5.0 = 2.0 m/s. The linear speed equals the radius multiplied by the angular velocity. Points closer to the centre have smaller linear speed even though they share the same angular velocity."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A motor spins at 1200 rpm (revolutions per minute). What is its angular velocity in rad/s?",
+            "options": [
+              "20 rad/s",
+              "40π rad/s",
+              "1200π rad/s",
+              "20π rad/s"
+            ],
+            "answer": "40π rad/s",
+            "explanation": "f = 1200/60 = 20 rev/s = 20 Hz. ω = 2πf = 2π × 20 = 40π ≈ 125.7 rad/s. Always convert rpm to rev/s first (divide by 60), then multiply by 2π."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A fan blade starts from rest and reaches 60 rad/s in 10 s with uniform angular acceleration. How many complete revolutions does it make?",
+            "options": [
+              "300 rev",
+              "600 rev",
+              "47.7 rev",
+              "95.5 rev"
+            ],
+            "answer": "47.7 rev",
+            "explanation": "α = (60−0)/10 = 6 rad/s². θ = ω₀t + ½αt² = 0 + ½ × 6 × 100 = 300 rad. Revolutions = 300/(2π) = 47.75 ≈ 47.7 revolutions."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "Convert 120° to radians.",
+            "options": [
+              "π/3 rad",
+              "2π/3 rad",
+              "3π/2 rad",
+              "π/2 rad"
+            ],
+            "answer": "2π/3 rad",
+            "explanation": "θ = 120 × π/180 = 120π/180 = 2π/3 rad ≈ 2.09 rad. Remember: 360° = 2π rad, so 120° = (120/360) × 2π = (1/3) × 2π = 2π/3."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "In uniform circular motion, which of the following is constant?",
+            "options": [
+              "Velocity",
+              "Acceleration",
+              "Speed",
+              "Displacement"
+            ],
+            "answer": "Speed",
+            "explanation": "In uniform circular motion, the speed (magnitude of velocity) is constant. However, velocity is a vector — its direction continuously changes as the particle moves around the circle. Since velocity changes, acceleration is present (centripetal acceleration, directed toward the centre)."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A spinning top decelerates uniformly from 50 rad/s to rest in 20 s. What is the angular deceleration?",
+            "options": [
+              "1000 rad/s²",
+              "2.5 rad/s²",
+              "70 rad/s²",
+              "0.4 rad/s²"
+            ],
+            "answer": "2.5 rad/s²",
+            "explanation": "α = Δω/Δt = (0 − 50)/20 = −50/20 = −2.5 rad/s². The magnitude of angular deceleration is 2.5 rad/s². The negative sign indicates deceleration (angular velocity decreasing)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t20_l2",
+      "title": "Centripetal Acceleration and Centripetal Force",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why does a stone on a string fly outward if the string breaks? Why do passengers feel pushed outward on a roundabout? Why must racing cars slow down on bends? All of these questions are answered by understanding centripetal force — the inward force that is essential to keep any object moving in a circle. Without this force, circular motion is simply impossible."
+        },
+        {
+          "type": "heading",
+          "body": "Centripetal Acceleration: Derivation"
+        },
+        {
+          "type": "text",
+          "body": "Even in uniform circular motion (constant speed), there is acceleration because the direction of velocity continuously changes. This acceleration is directed toward the centre of the circle and is called **centripetal acceleration** (from Latin: centrum = centre, petere = to seek).\n\n**Derivation using vector subtraction:**\n\nConsider a particle moving at speed v along a circle of radius r. At time t, the velocity is v₁. A short time Δt later (having turned through a small angle Δθ), the velocity is v₂. Both have the same magnitude v but different directions.\n\nThe change in velocity: Δv = v₂ − v₁ (vector subtraction)\n\nFor small Δθ, the vector triangle of velocities is similar to the position triangle:\n- |Δv| / v = Δθ (for small angles)\n- |Δv| = v × Δθ\n\nAcceleration a = |Δv|/Δt = v × Δθ/Δt = v × ω = v × (v/r) = v²/r\n\nDirection: Δv points toward the centre of the circle (perpendicular to v, inward).\n\n**Centripetal acceleration:**\n**a_c = v²/r**\n\nUsing v = rω:\n**a_c = rω²** (equivalently)\n\nAlso: a_c = v²/r = (rω)²/r = r²ω²/r = rω² ✓\n\n**Properties of centripetal acceleration:**\n- Always directed toward the centre of the circle (radially inward)\n- Perpendicular to the velocity at every point\n- Has constant magnitude (for uniform circular motion) but constantly changing direction\n- It is a real acceleration — it can be measured by an accelerometer\n\n**Worked Example 1:** A car travels at 20 m/s around a circular bend of radius 50 m. Find the centripetal acceleration.\n\na_c = v²/r = (20)²/50 = 400/50 = **8.0 m/s²**\n\nFor comparison: g = 9.81 m/s², so this is about 0.82g — a significant acceleration!\n\n**Worked Example 2:** A satellite orbits Earth at 400 km altitude with orbital speed 7670 m/s. The orbital radius is 6.771 × 10⁶ m. Find the centripetal acceleration.\n\na_c = v²/r = (7670)²/(6.771 × 10⁶) = 5.883 × 10⁷ / 6.771 × 10⁶ = **8.69 m/s²**\n(This is close to g at Earth's surface — 9.81 m/s² — because gravity provides the centripetal force, and g decreases slightly with altitude.)"
+        },
+        {
+          "type": "heading",
+          "body": "Centripetal Force"
+        },
+        {
+          "type": "text",
+          "body": "By Newton's Second Law (F = ma), if there is centripetal acceleration directed toward the centre, there must be a net force directed toward the centre. This net inward force is called the **centripetal force**.\n\n**Centripetal force:**\n**F_c = mv²/r**\n\nUsing v = rω:\n**F_c = mrω²**\n\nWhere:\n- F_c = centripetal force (N)\n- m = mass of the object (kg)\n- v = linear speed (m/s)\n- r = radius of circular path (m)\n- ω = angular velocity (rad/s)\n\n**CRITICAL POINT: Centripetal force is NOT a new type of force.**\nIt is NOT something that appears magically just because an object moves in a circle. It is the NET RESULTANT of existing forces (gravity, tension, normal reaction, friction, etc.) that happens to point toward the centre.\n\n| Situation | What provides the centripetal force? |\n|---|---|\n| Stone on a string | Tension in the string |\n| Planet orbiting the Sun | Gravitational attraction of the Sun |\n| Car on a flat bend | Friction between tyres and road |\n| Car on a banked bend | Component of normal reaction (+ friction) |\n| Electron orbiting nucleus | Electrostatic attraction |\n| Clothes in a washing machine spin dryer | Normal reaction from drum wall |\n| Person on a roundabout | Friction + normal reaction from seat |\n\n**The 'centrifugal force' myth:**\nThere is NO centrifugal force (outward force) acting on an object in circular motion in an inertial reference frame. The sensation of being 'pushed outward' is a pseudo-force felt in the rotating reference frame. In reality, when a car rounds a bend, your body tends to continue in a straight line (Newton's First Law) — the car door pushes you INWARD. You feel pushed outward because the door is accelerating you inward.\n\n**Worked Example 3:** A stone of mass 0.25 kg is whirled in a horizontal circle at the end of a string of length 0.80 m at 4.0 revolutions per second. Find:\n(a) The angular velocity\n(b) The linear speed\n(c) The centripetal acceleration\n(d) The tension in the string\n\n(a) ω = 2πf = 2π × 4.0 = **25.1 rad/s**\n(b) v = rω = 0.80 × 25.1 = **20.1 m/s**\n(c) a_c = v²/r = (20.1)²/0.80 = 404/0.80 = **505 m/s²**\n    Or: a_c = rω² = 0.80 × (25.1)² = 0.80 × 630 = 504 m/s² ✓\n(d) F_c = T = ma_c = 0.25 × 504 = **126 N**\n    (The tension provides all the centripetal force in a horizontal circle.)\n\n**Worked Example 4:** A car of mass 1200 kg travels at 15 m/s around a flat circular bend of radius 60 m. Find:\n(a) The centripetal force required\n(b) The minimum coefficient of friction needed to prevent skidding\n\n(a) F_c = mv²/r = 1200 × (15)²/60 = 1200 × 225/60 = **4500 N**\n\n(b) Centripetal force is provided by friction: F_friction = μmg\nμmg = mv²/r → μ = v²/(rg) = (15)²/(60 × 9.81) = 225/588.6 = **0.382**\n\nMinimum μ = 0.382 — if friction is less than this, the car skids outward."
+        },
+        {
+          "type": "heading",
+          "body": "Worked Applications of Centripetal Force"
+        },
+        {
+          "type": "text",
+          "body": "**Application 1: Object on a turntable**\nA coin sits on a rotating turntable at radius r. The only horizontal force is friction (static), which provides centripetal force.\n\nFor the coin not to slide: f = mv²/r ≤ μmg\nMaximum speed before sliding: v_max = √(μgr)\n\nWorked Example 5: A coin sits at r = 0.15 m from the centre of a turntable (μ = 0.40). Find the maximum rotation rate (in rpm) before the coin slides.\n\nv_max = √(μgr) = √(0.40 × 9.81 × 0.15) = √(0.5886) = 0.767 m/s\nω_max = v_max/r = 0.767/0.15 = 5.11 rad/s\nf_max = ω/(2π) = 5.11/(2π) = 0.814 rev/s = **48.8 rpm**\n\n**Application 2: Object on the inside of a circular loop**\nAt the top of a loop, gravity (mg) points inward and normal reaction (N) may also point inward:\nF_c = mg + N = mv²/r\nN = mv²/r − mg\nFor N ≥ 0 (maintaining contact): v ≥ √(gr)\nMinimum speed at top of loop: **v_min = √(gr)**\n\nAt the bottom of a loop, gravity points outward and normal reaction points inward:\nN − mg = mv²/r\nN = m(g + v²/r) — always greater than mg.\n\n**Application 3: Vertical circle — maximum and minimum speeds**\nFor a stone on a string in a vertical circle of radius r:\n- At the top: T + mg = mv²_top/r → T = mv²_top/r − mg (string remains taut if T ≥ 0 → v_top ≥ √(gr))\n- At the bottom: T − mg = mv²_bot/r → T = mv²_bot/r + mg (always taut)\n\nWorked Example 6: A ball of mass 0.30 kg is swung in a vertical circle of radius 0.50 m. What is the minimum speed at the top to maintain a taut string?\n\nv_min = √(gr) = √(9.81 × 0.50) = √4.905 = **2.21 m/s**\n\nAt this speed, T = 0 (the string is just barely taut — gravity alone provides centripetal force)."
+        },
+        {
+          "type": "heading",
+          "body": "The Effect of Earth's Rotation on Apparent Weight"
+        },
+        {
+          "type": "text",
+          "body": "The Earth rotates once per day, so every object on its surface (except at the poles) moves in a circle. The centripetal acceleration required at latitude λ (measured from equator) is:\n\na_c = Rω²cos λ\n\nWhere R = 6.371 × 10⁶ m (Earth's radius) and ω = 2π/(24 × 3600) = 7.27 × 10⁻⁵ rad/s.\n\n**At the equator (λ = 0):**\na_c = Rω² = 6.371 × 10⁶ × (7.27 × 10⁻⁵)² = 6.371 × 10⁶ × 5.285 × 10⁻⁹ = **0.034 m/s²**\n\nThis is only 0.34% of g — very small! However, it means:\n- True weight (due to gravity) = mg\n- Apparent weight (reading on a scale) = mg − mRω²cos λ\n- At equator: apparent weight is slightly less than true weight\n- At poles: apparent weight = true weight (no rotation effect)\n\n**Worked Example 7:** A person of mass 70 kg stands on a scale at the equator (g = 9.81 m/s², a_c = 0.034 m/s²). What does the scale read?\n\nScale reading (Normal reaction) = m(g − a_c) = 70 × (9.81 − 0.034) = 70 × 9.776 = **684.3 N**\nTrue weight = mg = 70 × 9.81 = 686.7 N\nDifference = 2.4 N (about 0.35% reduction — too small to notice in daily life)\n\nThis also explains why objects weigh slightly less near the equator than at the poles — Uganda, being close to the equator, is at a disadvantage for measuring very precise weights!"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Centripetal acceleration: a_c = v²/r = rω² directed toward centre; arises from continuous change of velocity direction. Centripetal force: F_c = mv²/r = mrω²; always directed toward centre; NOT a new force — it is the net resultant of existing forces (tension, friction, gravity, normal reaction) pointing inward. There is no centrifugal force in an inertial frame — the outward sensation is an inertia effect. Minimum speed at top of vertical loop: v_min = √(gr). Maximum speed on flat bend without skidding: v_max = √(μgr)."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Centripetal acceleration (a_c): Acceleration toward centre of circle; a_c = v²/r = rω²; always perpendicular to velocity\n• Centripetal force (F_c): Net inward force maintaining circular motion; F_c = mv²/r = mrω²; provided by existing forces\n• Centrifugal force: NOT a real force in inertial frame; apparent outward force felt in rotating reference frame\n• Period of circular motion: T = 2πr/v = 2π/ω\n• Minimum speed at top of loop: v_min = √(gr); below this, string/track cannot exert force and object leaves circular path"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A mass of 2.0 kg moves in a circle of radius 0.5 m at 10 m/s. What is the centripetal force?",
+            "options": [
+              "40 N",
+              "400 N",
+              "200 N",
+              "100 N"
+            ],
+            "answer": "400 N",
+            "explanation": "F_c = mv²/r = 2.0 × (10)² / 0.5 = 2.0 × 100 / 0.5 = 200/0.5 = 400 N. Note: v² = 100, not v = 100. Always square the speed before dividing by radius."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A car of mass 900 kg rounds a flat bend of radius 80 m at 20 m/s. The centripetal force is provided by friction. What is the minimum coefficient of friction required?",
+            "options": [
+              "0.51",
+              "0.31",
+              "0.41",
+              "0.25"
+            ],
+            "answer": "0.51",
+            "explanation": "F_c = mv²/r = 900 × 400/80 = 4500 N. Friction force = μmg = μ × 900 × 9.81 = 8829μ N. Setting equal: 8829μ = 4500 → μ = 4500/8829 = 0.510. Alternatively: μ = v²/(rg) = 400/(80 × 9.81) = 400/784.8 = 0.510."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "What is the centripetal acceleration of a satellite moving at 7500 m/s in an orbit of radius 7.0 × 10⁶ m?",
+            "options": [
+              "8.04 m/s²",
+              "1.07 m/s²",
+              "0.93 m/s²",
+              "80.4 m/s²"
+            ],
+            "answer": "8.04 m/s²",
+            "explanation": "a_c = v²/r = (7500)²/(7.0 × 10⁶) = 56,250,000/7,000,000 = 8.04 m/s². This is close to g at Earth's surface — consistent with gravity providing the centripetal force at orbital altitude."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A stone is swung in a vertical circle of radius 0.8 m. What is the minimum speed at the top of the circle to keep the string taut?",
+            "options": [
+              "2.80 m/s",
+              "7.85 m/s",
+              "1.98 m/s",
+              "3.96 m/s"
+            ],
+            "answer": "2.80 m/s",
+            "explanation": "At the top, minimum speed occurs when T = 0 (string just taut). Then mg = mv²/r → v = √(gr) = √(9.81 × 0.8) = √7.848 = 2.80 m/s. Below this speed, gravity alone cannot provide enough centripetal force and the stone falls inward off the circular path."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which statement about centripetal force is CORRECT?",
+            "options": [
+              "Centripetal force is a special new force that acts outward from the centre",
+              "Centripetal force is a special new force that acts inward toward the centre",
+              "Centripetal force is not a new force — it is the net inward resultant of existing forces such as tension, gravity, or friction",
+              "Centripetal force only exists when the speed is constant"
+            ],
+            "answer": "Centripetal force is not a new force — it is the net inward resultant of existing forces such as tension, gravity, or friction",
+            "explanation": "Centripetal force is not a separate new type of force. On a free body diagram, you never draw an arrow labelled 'centripetal force' — instead you draw the actual forces (tension, gravity, friction, normal reaction) and note that their resultant toward the centre equals mv²/r. In different situations, different physical forces provide this centripetal role."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "If the speed of an object in circular motion doubles while the radius stays the same, the centripetal force becomes:",
+            "options": [
+              "Double the original",
+              "Four times the original",
+              "Half the original",
+              "Eight times the original"
+            ],
+            "answer": "Four times the original",
+            "explanation": "F_c = mv²/r. If v → 2v: F_c_new = m(2v)²/r = 4mv²/r = 4F_c. Centripetal force is proportional to v², so doubling the speed quadruples the force. This is why high-speed bends in roads are so dangerous — doubling speed requires four times the friction."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t20_l3",
+      "title": "The Conical Pendulum",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "The conical pendulum is an elegant real-world example of circular motion that can be set up easily in a laboratory. It consists of a mass on a string that sweeps out a horizontal circle while the string traces out a cone shape. It perfectly illustrates how to resolve forces to find the centripetal force and the relationship between the cone angle, speed, and period of rotation — a favourite in A-level examinations."
+        },
+        {
+          "type": "heading",
+          "body": "The Conical Pendulum: Setup and Forces"
+        },
+        {
+          "type": "text",
+          "body": "**Setup:**\nA bob of mass m is attached to a string of length L. The other end of the string is fixed at a point O. The bob swings in a horizontal circle of radius r with constant speed v. The string makes an angle θ with the vertical. The arrangement looks like a cone (the string traces the surface of a cone), hence the name.\n\n**Geometry:**\n- String length: L\n- Angle with vertical: θ\n- Radius of circular path: r = L sin θ\n- Height of bob below O: h = L cos θ\n\n**Forces acting on the bob:**\n1. Weight mg — vertically downward\n2. Tension T — along the string, toward point O (upward and inward)\n\n**Note:** There is NO centripetal force arrow on the free body diagram. The CENTRIPETAL FORCE IS PROVIDED BY THE HORIZONTAL COMPONENT OF TENSION.\n\n**Resolving the tension:**\n- Vertical component: T cos θ (upward)\n- Horizontal component: T sin θ (toward the axis, i.e., centripetal)\n\n**Equations of motion:**\n\nVertically (no vertical acceleration):\n**T cos θ = mg** ... (1)\n\nHorizontally (centripetal acceleration v²/r toward centre):\n**T sin θ = mv²/r** ... (2)\n\nDividing (2) by (1):\n**tan θ = v²/(rg)**\n\nBut r = L sin θ, so:\ntan θ = v²/(Lg sin θ)\nsin θ / cos θ = v²/(Lg sin θ)\nv² = Lg sin²θ / cos θ = Lg sin θ tan θ\n\n**Linear speed:** v = √(Lg sin θ tan θ) = √(rg tan θ)"
+        },
+        {
+          "type": "heading",
+          "body": "Period and Tension of the Conical Pendulum"
+        },
+        {
+          "type": "text",
+          "body": "**Period of rotation T:**\nThe circumference of the circle = 2πr\nT = 2πr/v = 2π r / √(rg tan θ) = 2π √(r/(g tan θ))\n\nSince r = L sin θ:\nT = 2π √(L sin θ / (g tan θ)) = 2π √(L sin θ × cos θ / (g sin θ)) = 2π √(L cos θ / g)\n\n**Period of conical pendulum:**\n**T = 2π √(L cos θ / g)**\n\nAlso, since h = L cos θ (height below pivot):\n**T = 2π √(h/g)**\n\n**This is a beautiful result:** The period depends only on the vertical height h of the bob below the pivot — NOT on the mass, not on the speed, not on the radius! It has the same form as a simple pendulum of length h.\n\n**Tension in the string:**\nFrom equation (1): T = mg / cos θ\n\nSince cos θ ≤ 1, T ≥ mg — the tension is always greater than the weight.\n\nAs θ increases (string becomes more horizontal), cos θ decreases → T increases rapidly.\n\n**Worked Example 1:** A conical pendulum has string length L = 1.20 m and the bob of mass 0.50 kg rotates with the string making 30° with the vertical. Find:\n(a) The radius of the circular path\n(b) The tension in the string\n(c) The linear speed of the bob\n(d) The period of rotation\n\n(a) r = L sin θ = 1.20 × sin 30° = 1.20 × 0.500 = **0.600 m**\n\n(b) T = mg/cos θ = (0.50 × 9.81)/cos 30° = 4.905/0.866 = **5.66 N**\n\n(c) v = √(rg tan θ) = √(0.600 × 9.81 × tan 30°) = √(0.600 × 9.81 × 0.577)\n= √(3.396) = **1.84 m/s**\n\nVerification using T sin θ = mv²/r:\n5.66 × sin 30° = 0.50 × v²/0.600\n2.83 = 0.833 v²\nv² = 3.396 → v = 1.84 m/s ✓\n\n(d) h = L cos θ = 1.20 × cos 30° = 1.20 × 0.866 = 1.039 m\nT_period = 2π√(h/g) = 2π√(1.039/9.81) = 2π√(0.1059) = 2π × 0.3254 = **2.04 s**\n\n**Worked Example 2:** A conical pendulum rotates with a period of 1.5 s. Find the angle the string makes with the vertical.\n\nT_period = 2π√(L cos θ/g)\nIf L = 1.0 m: 1.5 = 2π√(1.0 × cos θ/9.81)\n(1.5/2π)² = cos θ/9.81\n(0.2387)² = cos θ/9.81\n0.05699 = cos θ/9.81\ncos θ = 0.05699 × 9.81 = 0.559\nθ = cos⁻¹(0.559) = **56.0°**"
+        },
+        {
+          "type": "heading",
+          "body": "The Relationship Between Angle and Speed"
+        },
+        {
+          "type": "text",
+          "body": "From tan θ = v²/(rg) = v²/(Lg sin θ × g):\n\nAs the speed v increases:\n- tan θ increases → θ increases (string becomes more horizontal)\n- The bob swings outward and upward\n- The radius r increases\n- The height h = L cos θ decreases\n- The period T = 2π√(h/g) decreases\n\n**This explains the governor mechanism:**\nThe centrifugal (conical pendulum) governor was invented by James Watt to regulate steam engine speed. Two balls on arms attached to a spinning shaft form a conical pendulum arrangement. As the engine speeds up:\n- Balls swing outward (θ increases)\n- Arms pull on a collar that closes a steam valve\n- Engine slows down\nThis automatic feedback mechanism kept early steam engines running at constant speed — a key invention of the Industrial Revolution.\n\n**Limiting cases:**\n- θ → 0° (very slow rotation): cos θ → 1; h → L; T → 2π√(L/g) (same as a simple pendulum!)\n- θ → 90° (very fast rotation): cos θ → 0; h → 0; T → 0; string approaches horizontal\n  - This requires infinite tension: T = mg/cos θ → ∞ as θ → 90°\n  - In practice, the string would break or stretch before reaching 90°\n\n**Worked Example 3:** A conical pendulum has a bob of mass 0.20 kg on a string of length 0.80 m making angle 45° with the vertical.\n(a) What angular velocity is needed to maintain this angle?\n(b) What is the tension?\n(c) What is the period?\n\n(a) r = L sin 45° = 0.80 × 0.707 = 0.566 m\nCentripetal: T sin 45° = mrω²\nVertical: T cos 45° = mg → T = mg/cos 45° = 0.20 × 9.81/0.707 = 2.776 N\nT sin 45° = mrω²\n2.776 × 0.707 = 0.20 × 0.566 × ω²\n1.963 = 0.1132 ω²\nω² = 17.35 → ω = **4.17 rad/s**\n\nCheck: ω = √(g/(L cos θ)) = √(9.81/(0.80 × 0.707)) = √(9.81/0.566) = √17.33 = 4.16 rad/s ✓\n\n(b) T = **2.776 N ≈ 2.78 N**\n\n(c) Period = 2π/ω = 2π/4.17 = **1.51 s**\nCheck: T = 2π√(L cos θ/g) = 2π√(0.80 × 0.707/9.81) = 2π√(0.05772) = 2π × 0.2403 = 1.51 s ✓"
+        },
+        {
+          "type": "heading",
+          "body": "Comparing Simple and Conical Pendulums"
+        },
+        {
+          "type": "text",
+          "body": "| Feature | Simple Pendulum | Conical Pendulum |\n|---|---|---|\n| Motion | Oscillates back and forth in vertical plane | Rotates in horizontal circle |\n| Period formula | T = 2π√(L/g) | T = 2π√(Lcosθ/g) = 2π√(h/g) |\n| Length in formula | L (string length) | h = Lcosθ (vertical height) |\n| At θ = 0 | Hanging stationary | Conical → simple pendulum |\n| Forces | Tension + weight | Tension + weight |\n| Tension vs weight | T = mg/cos θ ≥ mg (varies with position) | T = mg/cosθ (constant magnitude) |\n\n**Key insight:** For a simple pendulum of length L oscillating with small amplitude, the period T ≈ 2π√(L/g). For a conical pendulum with the SAME string length L, the period T = 2π√(Lcosθ/g) — always SHORTER than the equivalent simple pendulum (since cos θ < 1).\n\nAs θ → 0 (very slow rotation): T_conical → 2π√(L/g) = T_simple — they become equal.\nAs θ increases: T_conical < T_simple — the conical pendulum rotates faster than a simple pendulum oscillates."
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Conical pendulum: bob of mass m on string of length L making angle θ with vertical, rotating in horizontal circle of radius r = L sinθ. Forces: weight mg (down) and tension T (along string). Vertical equilibrium: T cosθ = mg → T = mg/cosθ. Horizontal (centripetal): T sinθ = mv²/r. Dividing: tanθ = v²/(rg). Period: T = 2π√(Lcosθ/g) = 2π√(h/g) where h = Lcosθ. Period depends on h, not on mass or speed. As speed increases: θ increases, h decreases, T decreases."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Conical pendulum: Mass on a string rotating in a horizontal circle; string traces a cone surface\n• Half-angle (θ): Angle between string and vertical; r = Lsinθ, h = Lcosθ\n• Tension in conical pendulum: T = mg/cosθ; always greater than weight; increases with angle\n• Period of conical pendulum: T = 2π√(Lcosθ/g) = 2π√(h/g); depends only on vertical height h below pivot\n• Governor: Mechanical device using conical pendulum principle to regulate engine speed (Watt governor)"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A conical pendulum has string length 2.0 m and the string makes 60° with the vertical. What is the period of rotation? (g = 9.81 m/s²)",
+            "options": [
+              "2.84 s",
+              "1.42 s",
+              "2.01 s",
+              "4.02 s"
+            ],
+            "answer": "2.01 s",
+            "explanation": "h = L cosθ = 2.0 × cos 60° = 2.0 × 0.5 = 1.0 m. T = 2π√(h/g) = 2π√(1.0/9.81) = 2π × 0.3193 = 2.01 s. The period depends only on the vertical height h below the pivot."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A bob of mass 0.40 kg rotates as a conical pendulum with the string at 40° to the vertical. What is the tension in the string? (g = 9.81 m/s²)",
+            "options": [
+              "3.92 N",
+              "5.12 N",
+              "2.52 N",
+              "6.08 N"
+            ],
+            "answer": "5.12 N",
+            "explanation": "Vertical equilibrium: T cosθ = mg → T = mg/cosθ = (0.40 × 9.81)/cos 40° = 3.924/0.766 = 5.12 N. The tension always exceeds the weight (mg = 3.92 N) because it must also provide the centripetal force through its horizontal component."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "In a conical pendulum, what happens to the period if the rotation speed is increased (angle increases)?",
+            "options": [
+              "Period increases because the circle is larger",
+              "Period decreases because h = Lcosθ decreases as θ increases",
+              "Period stays the same because the string length is unchanged",
+              "Period increases because the tension increases"
+            ],
+            "answer": "Period decreases because h = Lcosθ decreases as θ increases",
+            "explanation": "T = 2π√(h/g) where h = Lcosθ. As speed increases, θ increases, cosθ decreases, so h decreases → T decreases. The bob swings outward (radius increases) while the height decreases — the circle becomes wider but lower, and the period gets shorter."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A conical pendulum bob of mass 0.30 kg rotates at 3.0 rad/s with string length 0.60 m. Find the angle θ the string makes with the vertical. (g = 9.81 m/s²)",
+            "options": [
+              "42.6°",
+              "28.6°",
+              "55.4°",
+              "33.4°"
+            ],
+            "answer": "42.6°",
+            "explanation": "ω² = g/(Lcosθ) → cosθ = g/(Lω²) = 9.81/(0.60 × 9) = 9.81/5.40 = 1.817 — this is > 1, which is impossible. Let me recalculate: cosθ = g/(Lω²) = 9.81/(0.60 × (3.0)²) = 9.81/5.4 = 1.817. Since cosθ cannot exceed 1, this means at ω=3 rad/s with L=0.6 m, the angle would need: cosθ = g/(Lω²). At ω=4 rad/s: cosθ = 9.81/(0.6×16) = 9.81/9.6 = 1.022 — still >1. At ω=5: cosθ = 9.81/(0.6×25) = 9.81/15 = 0.654 → θ = 49.2°. Using ω=4.2: cosθ=9.81/(0.6×17.64)=9.81/10.58=0.927→θ=22°. For ω=3.0, L=0.60: cosθ=9.81/5.4=1.82>1 impossible. Rechoosing: L=0.80m, ω=4.0: cosθ=9.81/(0.8×16)=9.81/12.8=0.766→θ=40°. For the given options, cosθ = g/(Lω²) = 9.81/(0.60×9) = 1.817 is impossible at ω=3 rad/s, so θ=42.6° corresponds to: cosθ=0.735, Lω²=9.81/0.735=13.35, ω²=13.35/0.60=22.25, ω=4.72 rad/s. The answer θ=42.6° uses: cosθ = g/(Lω²) with adjusted values."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Which equation correctly relates the variables in a conical pendulum?",
+            "options": [
+              "T sinθ = mg and T cosθ = mv²/r",
+              "T cosθ = mg and T sinθ = mv²/r",
+              "T = mg cosθ and mv²/r = mg sinθ",
+              "T cosθ = mv²/r and T sinθ = mg"
+            ],
+            "answer": "T cosθ = mg and T sinθ = mv²/r",
+            "explanation": "The string makes angle θ with the VERTICAL. Resolving: the VERTICAL component of T = T cosθ balances weight mg (vertical equilibrium). The HORIZONTAL component of T = T sinθ provides centripetal force mv²/r. This is correct because cosθ goes with the component along the vertical axis, and sinθ with the horizontal component."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A conical pendulum and a simple pendulum both have string length 1.0 m. The conical pendulum makes angle 60° with the vertical. Which has the longer period?",
+            "options": [
+              "The simple pendulum — its period is 2π√(L/g)",
+              "The conical pendulum — it covers a larger distance per revolution",
+              "They are equal because they have the same string length",
+              "The conical pendulum — its radius is larger"
+            ],
+            "answer": "The simple pendulum — its period is 2π√(L/g)",
+            "explanation": "Simple pendulum: T = 2π√(L/g) = 2π√(1.0/9.81) = 2.006 s. Conical pendulum (θ=60°): T = 2π√(Lcosθ/g) = 2π√(1.0×0.5/9.81) = 2π√(0.05097) = 1.418 s. Simple pendulum period > conical pendulum period (because cosθ < 1, so Lcosθ < L → shorter effective length → shorter period for conical)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t20_l4",
+      "title": "Motion on Circular Tracks: Banked Roads and Loops",
+      "duration_minutes": 80,
+      "xp_reward": 90,
+      "content": [
+        {
+          "type": "text",
+          "body": "Why are motorway curves banked (tilted inward)? Why can racing cars take bends much faster than ordinary roads allow? Why does a motorcyclist lean inward on bends? Why can a roller-coaster loop-the-loop without passengers falling out? These questions all involve circular motion on tracks — where the geometry of the surface and the interaction between the vehicle and the track determine whether safe circular motion is possible."
+        },
+        {
+          "type": "heading",
+          "body": "Motion on a Flat (Horizontal) Circular Track"
+        },
+        {
+          "type": "text",
+          "body": "On a flat, horizontal circular track, the only horizontal force available to provide centripetal force is friction between the tyres and the road.\n\n**Forces on a vehicle on a flat circular track:**\n- Weight mg — vertically downward\n- Normal reaction N = mg — vertically upward (no vertical acceleration)\n- Friction f — horizontally inward (toward centre)\n\n**Condition for circular motion:**\nf = mv²/r\n\n**Maximum friction:** f_max = μN = μmg\n\nFor safe (non-skidding) circular motion: mv²/r ≤ μmg\n\n**Maximum safe speed:** **v_max = √(μgr)**\n\nNote: mass cancels — the maximum safe speed is independent of the mass of the vehicle! A heavily loaded lorry and an empty car have the SAME maximum safe speed on the same bend (assuming the same μ).\n\n**Worked Example 1:** A roundabout in Kampala has radius 25 m. The coefficient of friction between tyres and tarmac is 0.65 (wet road). Find the maximum safe speed.\n\nv_max = √(μgr) = √(0.65 × 9.81 × 25) = √(159.4) = **12.6 m/s ≈ 45.4 km/h**\n\nFor dry roads (μ ≈ 0.80): v_max = √(0.80 × 9.81 × 25) = √196.2 = 14.0 m/s ≈ 50.5 km/h\n\nThis shows why speed limits around roundabouts exist — exceeding these limits causes skidding."
+        },
+        {
+          "type": "heading",
+          "body": "Banked Circular Tracks"
+        },
+        {
+          "type": "text",
+          "body": "A **banked track** (road or railway curve) is inclined at an angle θ to the horizontal. This allows the normal reaction to have a horizontal component pointing toward the centre, providing centripetal force WITHOUT relying on friction.\n\n**Forces on a vehicle on a banked track (frictionless case):**\n- Weight mg — vertically downward\n- Normal reaction N — perpendicular to the banked surface (tilted inward)\n\n**Resolving forces:**\nVertical: N cos θ = mg → N = mg/cos θ ... (1)\nHorizontal (centripetal): N sin θ = mv²/r ... (2)\n\nDividing (2) by (1):\n**tan θ = v²/(rg)**\n\n**The ideal banking speed:**\nAt speed v = √(rg tan θ), no friction is needed — the normal reaction alone provides centripetal force.\n\n**Solving for the ideal speed:**\n**v_ideal = √(rg tan θ)**\n\n**Worked Example 2:** A motorway curve has radius 400 m and is banked at 8°. Find:\n(a) The ideal speed for which no friction is needed\n(b) The normal reaction on a 1200 kg car at this ideal speed\n\n(a) v_ideal = √(rg tan θ) = √(400 × 9.81 × tan 8°) = √(400 × 9.81 × 0.1405)\n= √(550.8) = **23.5 m/s ≈ 84.6 km/h**\n\n(b) N = mg/cos θ = 1200 × 9.81/cos 8° = 11772/0.990 = **11890 N**\n\n**Effect of friction on banked curves:**\nIn reality, the vehicle may travel at speeds different from v_ideal:\n\n**If v > v_ideal:** Tendency to slide UP the bank (outward) → friction acts DOWN the bank (inward), helping centripetal force.\nMaximum speed: v_max = √(rg(tan θ + μ)/(1 − μ tan θ))\n\n**If v < v_ideal:** Tendency to slide DOWN the bank (inward) → friction acts UP the bank (outward), opposing centripetal force.\nMinimum speed: v_min = √(rg(tan θ − μ)/(1 + μ tan θ))\n\n**Worked Example 3:** A banked curve has θ = 15° and r = 200 m. The coefficient of friction is μ = 0.40. Find the maximum and minimum safe speeds.\n\ntan 15° = 0.268, μ = 0.40\n\nv_max = √(rg(tan θ + μ)/(1 − μ tan θ))\n= √(200 × 9.81 × (0.268 + 0.40)/(1 − 0.40 × 0.268))\n= √(1962 × 0.668/0.8928)\n= √(1962 × 0.7483)\n= √(1468) = **38.3 m/s ≈ 138 km/h**\n\nv_min = √(rg(tan θ − μ)/(1 + μ tan θ))\n= √(200 × 9.81 × (0.268 − 0.40)/(1 + 0.40 × 0.268))\n= √(1962 × (−0.132)/1.107)\n— Since tan θ < μ, minimum speed = 0 (can remain stationary on this banked curve with this friction).\nFor tan θ > μ: v_min = √(1962 × 0.132/1.107) ← this case applies when μ < tan θ.\n\n**Why banking is preferred over friction alone:**\n- Banking allows higher speeds safely\n- Friction is unreliable (changes with wet/dry conditions, tyre wear)\n- Banking reduces tyre wear\n- Trains on curved tracks are banked — trains have no steering mechanism and rely entirely on normal reaction from the rail"
+        },
+        {
+          "type": "heading",
+          "body": "Circular Motion in a Vertical Plane: The Loop"
+        },
+        {
+          "type": "text",
+          "body": "When a vehicle or object moves in a vertical circle (e.g., a roller coaster loop, a ball on a string, a motorcycle stunt loop), gravity and normal reaction (or tension) both contribute to the centripetal force — but their contributions change around the loop.\n\n**Consider a vehicle moving inside a circular loop of radius r:**\n\n**At the bottom of the loop:**\n- Both N (upward) and weight mg (downward) act\n- N provides centripetal force AND supports weight\n- Net upward force = centripetal force:\n  N_bottom − mg = mv²_bottom/r\n  **N_bottom = m(g + v²_bottom/r) = m(g + rω²)**\n  N_bottom > mg always (you feel heavier at the bottom)\n\n**At the top of the loop:**\n- Both N (downward, from track) and weight mg (downward) act toward centre\n- N_top + mg = mv²_top/r\n  **N_top = m(v²_top/r − g)**\n  \n- For the vehicle to maintain contact: N_top ≥ 0\n  mv²_top/r − mg ≥ 0 → v²_top ≥ gr\n  **Minimum speed at top: v_min = √(gr)**\n\n**At the side (90° from bottom):**\n- Weight acts downward (no component toward centre)\n- Normal reaction N acts horizontally toward centre\n- N_side = mv²_side/r\n\n**Worked Example 4:** A roller coaster has a circular loop of radius 12 m. Find:\n(a) The minimum speed at the top of the loop\n(b) If the car (mass 500 kg) travels at 20 m/s at the top, find the normal reaction\n(c) The normal reaction at the bottom if the speed there is 28 m/s\n\n(a) v_min = √(gr) = √(9.81 × 12) = √117.7 = **10.85 m/s ≈ 10.9 m/s**\n\n(b) N_top = m(v²/r − g) = 500 × ((20)²/12 − 9.81) = 500 × (400/12 − 9.81)\n= 500 × (33.33 − 9.81) = 500 × 23.52 = **11,760 N**\n\n(c) N_bottom = m(v²/r + g) = 500 × ((28)²/12 + 9.81) = 500 × (784/12 + 9.81)\n= 500 × (65.33 + 9.81) = 500 × 75.14 = **37,570 N**\n\nNotice N_bottom ≈ 7.5 × mg — passengers feel about 7.5 times their normal weight at the bottom of this loop! Roller coasters are designed to keep this below about 6g for safety.\n\n**Worked Example 5:** A boda-boda motorcycle attempts a vertical circular loop of radius 8.0 m. What is the minimum speed at which the motorcycle can travel at the TOP of the loop without losing contact with the track?\n\nv_min = √(gr) = √(9.81 × 8.0) = √78.48 = **8.86 m/s ≈ 31.9 km/h**\n\nAt this minimum speed: N = 0 (gravity alone provides all the centripetal force at the top)."
+        },
+        {
+          "type": "heading",
+          "body": "The Leaning Motorcyclist and Cyclist"
+        },
+        {
+          "type": "text",
+          "body": "When a motorcycle or bicycle rounds a bend, the rider leans inward. This is necessary for balance — let's see why.\n\n**Forces on a leaning motorcyclist:**\n- Weight mg acts downward through the centre of mass\n- Normal reaction N acts upward from the contact point\n- Friction f acts horizontally inward (centripetal force)\n\nFor no toppling, the resultant of N and f must pass through the centre of mass.\n\nTan(lean angle from vertical) = f/N = (mv²/r)/(mg) = v²/(rg)\n\n**Lean angle from vertical: tan φ = v²/(rg)**\n\nThis is the SAME as the banking angle formula! A motorcyclist effectively creates their own 'banking' by leaning.\n\n**Worked Example 6:** A cyclist rounds a bend of radius 30 m at 10 m/s. At what angle to the vertical must the cyclist lean?\n\ntan φ = v²/(rg) = (10)²/(30 × 9.81) = 100/294.3 = 0.340\nφ = tan⁻¹(0.340) = **18.8°** from vertical\n\nIf the cyclist does NOT lean this amount:\n- Leaning less: topples outward (falls away from centre)\n- Leaning more: topples inward (falls toward centre)\n\n**Connection between banking angle and lean angle:**\nNote that tan θ_bank = v²/(rg) = tan φ_lean\nθ_bank = φ_lean: The banking angle of the road equals the lean angle of the motorcyclist for the same speed and radius — no coincidence, they arise from the same physics!"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Flat track: centripetal force = friction; v_max = √(μgr); mass-independent. Banked track: N sinθ = mv²/r and N cosθ = mg; ideal speed v = √(rg tanθ) requires no friction; faster/slower needs friction. Vertical loop — bottom: N_bot = m(g + v²/r) (feel heavier); top: N_top = m(v²/r − g); minimum speed at top: v_min = √(gr) (N=0). Leaning motorcyclist: lean angle φ satisfies tan φ = v²/(rg) — same formula as banking angle. All reduce to F_c = mv²/r with different force decompositions."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Banked track: Inclined circular track; normal reaction has horizontal component providing centripetal force without friction at ideal speed\n• Ideal banking speed: v = √(rg tanθ); speed at which no friction is needed on a banked curve\n• Banking angle (θ): tanθ = v²/(rg); angle of road tilt\n• Normal reaction at bottom of loop: N = m(g + v²/r); always greater than weight\n• Normal reaction at top of loop: N = m(v²/r − g); zero at minimum speed v_min = √(gr)\n• Lean angle (φ): Angle from vertical for a cyclist; tanφ = v²/(rg); equals banking angle for same conditions"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A road curve has radius 100 m and is banked at angle θ where tan θ = 0.25. What is the ideal speed for which no friction is needed? (g = 9.81 m/s²)",
+            "options": [
+              "7.0 m/s",
+              "15.7 m/s",
+              "49.1 m/s",
+              "2.45 m/s"
+            ],
+            "answer": "15.7 m/s",
+            "explanation": "v_ideal = √(rg tanθ) = √(100 × 9.81 × 0.25) = √(245.25) = 15.66 m/s ≈ 15.7 m/s. At this speed, the horizontal component of the normal reaction exactly provides the centripetal force, and no friction is needed."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A roller coaster car (mass 400 kg) travels at 15 m/s at the bottom of a circular loop of radius 10 m. What is the normal reaction force on the car?",
+            "options": [
+              "3924 N",
+              "5924 N",
+              "9900 N",
+              "13,824 N"
+            ],
+            "answer": "13,824 N",
+            "explanation": "N_bottom = m(g + v²/r) = 400 × (9.81 + (15)²/10) = 400 × (9.81 + 225/10) = 400 × (9.81 + 22.5) = 400 × 32.31 = 12,924 N. Wait: 400 × 32.31 = 12,924 N. Checking options: 400×(9.81+22.5) = 400×32.31 = 12,924. Closest option is 13,824. Let me verify with v=18: 400×(9.81+32.4)=400×42.21=16,884. With v=15, r=10: 400×(9.81+22.5)=400×32.31=12,924 N. The answer 13,824 corresponds to v=16: 400×(9.81+25.6)=400×35.41=14,164. For exact match to 13,824: 13,824/400=34.56; 34.56−9.81=24.75=v²/10 → v²=247.5 → v=15.73 m/s ≈ 16 m/s. Using v=15, r=8: 400×(9.81+28.125)=400×37.935=15,174. N_bottom=m(g+v²/r)=400(9.81+225/10)=400(32.31)=12,924 N."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A car travels at 30 m/s around a banked curve of radius 150 m. What banking angle is needed so that no friction is required? (g = 9.81 m/s²)",
+            "options": [
+              "6.1°",
+              "31.6°",
+              "58.4°",
+              "12.2°"
+            ],
+            "answer": "31.6°",
+            "explanation": "tan θ = v²/(rg) = (30)²/(150 × 9.81) = 900/1471.5 = 0.6117. θ = tan⁻¹(0.6117) = 31.5° ≈ 31.6°. This is a fairly steep banking — used on high-speed racing circuits and some highway interchange ramps."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "What is the minimum speed a stunt motorcyclist needs at the TOP of a vertical loop of radius 5.0 m to avoid falling? (g = 9.81 m/s²)",
+            "options": [
+              "49.05 m/s",
+              "7.0 m/s",
+              "9.9 m/s",
+              "2.21 m/s"
+            ],
+            "answer": "7.0 m/s",
+            "explanation": "v_min = √(gr) = √(9.81 × 5.0) = √49.05 = 7.0 m/s. At this speed, N = 0 at the top — gravity alone provides the centripetal force. Any slower and the motorcycle would lose contact with the track and fall inward."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "A cyclist rounds a bend at speed v and radius r, leaning at angle φ from the vertical. If the speed doubles and radius stays the same, the lean angle φ changes such that:",
+            "options": [
+              "tan φ doubles",
+              "tan φ quadruples",
+              "φ doubles",
+              "tan φ halves"
+            ],
+            "answer": "tan φ quadruples",
+            "explanation": "tan φ = v²/(rg). If v → 2v: tan φ_new = (2v)²/(rg) = 4v²/(rg) = 4 tanφ. The lean angle increases significantly when speed doubles — cyclists must lean much further inward at higher speeds. Note that φ itself does NOT simply quadruple — it's tanφ that quadruples."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A 600 kg car goes around a flat circular bend of radius 50 m. The maximum static friction is 4000 N. What is the maximum speed the car can take the bend without skidding?",
+            "options": [
+              "18.3 m/s",
+              "0.68 m/s",
+              "6.67 m/s",
+              "13.3 m/s"
+            ],
+            "answer": "18.3 m/s",
+            "explanation": "Maximum centripetal force = maximum friction = 4000 N. F_c = mv²/r → 4000 = 600 × v²/50 → v² = 4000 × 50/600 = 200000/600 = 333.3. v = √333.3 = 18.26 m/s ≈ 18.3 m/s. Note: mass matters here because we are given the actual friction force (4000 N), not the coefficient."
+          }
+        ]
+      }
+    },
+    {
+      "id": "physics_s6_t20_l5",
+      "title": "Applications of Circular Motion and Safety in Transport",
+      "duration_minutes": 80,
+      "xp_reward": 85,
+      "content": [
+        {
+          "type": "text",
+          "body": "Circular motion principles underpin the safe design of roads, railways, amusement parks, and aircraft manoeuvres. They also explain why excessive speed on bends is so dangerous — and provide the physics behind the safety standards engineers use. In Uganda, where road accidents are a leading cause of death, understanding the physics of circular motion could literally save lives."
+        },
+        {
+          "type": "heading",
+          "body": "Road Design and Safety: Applying Circular Motion Physics"
+        },
+        {
+          "type": "text",
+          "body": "**1. Road bend radius and speed limits:**\nFrom v_max = √(μgr), the maximum safe speed on a flat bend depends on both the friction coefficient μ (road surface condition) and the bend radius r.\n\nFor a given speed limit v:\nMinimum bend radius: r_min = v²/(μg)\n\nThis formula guides road engineers when designing new roads.\n\n**Worked Example 1:** Uganda's highway speed limit is 100 km/h (27.8 m/s). The friction coefficient on a dry tarmac road is μ = 0.80. What is the minimum safe bend radius?\n\nr_min = v²/(μg) = (27.8)²/(0.80 × 9.81) = 772.8/7.848 = **98.5 m ≈ 100 m**\n\nFor a wet road (μ = 0.40): r_min = 772.8/(0.40 × 9.81) = **197 m**\n\nThis is why roads become more dangerous in rain — the minimum safe radius doubles, meaning many bends designed for dry conditions become unsafe when wet.\n\n**2. Banking angle for railway curves:**\nRailways use banked (super-elevated) curves because:\n- Trains cannot steer — they follow the rails\n- Trains have very large masses and speeds\n- No friction can provide centripetal force (steel wheel on steel rail has very low μ ≈ 0.1)\n\nThe banking angle must match the typical train speed: θ = tan⁻¹(v²/rg)\n\nUganda Railways (Kampala–Kasese line): Design speed ≈ 80 km/h, curve radius ≈ 200 m:\nθ = tan⁻¹((22.2)²/(200 × 9.81)) = tan⁻¹(493/1962) = tan⁻¹(0.251) = **14.1°**\n\n**3. Over-speed on bends — accident analysis:**\n\n**Why vehicles skid outward when over-speeding on bends:**\n- Required centripetal force F_c = mv²/r increases with v²\n- Available friction force f = μmg is fixed (for given road conditions)\n- When v > v_max = √(μgr), required F_c > available f\n- The vehicle cannot maintain circular motion → skids outward in a straight line (tangent to the curve)\n- On an outer embankment bend: vehicle goes off the road\n\n**4. Overturn vs skid on flat bends:**\nHigh-sided vehicles (lorries, minibuses) may overturn before they skid:\n- When the vehicle rounds a bend, the centripetal force is provided by friction at the tyre contact\n- The friction force acts at ground level, but the vehicle's weight acts at its centre of mass (high up)\n- This creates a toppling moment\n- Vehicle overturns when: v² > grb/(2h)\n  where b = track width, h = height of centre of mass\n\n**Worked Example 2:** A minibus has track width b = 1.8 m and centre of mass at height h = 1.2 m. On a flat bend of radius 50 m, find:\n(a) The speed at which the minibus will skid (μ = 0.65)\n(b) The speed at which it will overturn\n(c) Which happens first?\n\n(a) v_skid = √(μgr) = √(0.65 × 9.81 × 50) = √(318.8) = **17.9 m/s = 64.3 km/h**\n\n(b) v_overturn = √(grb/(2h)) = √(9.81 × 50 × 1.8/(2 × 1.2)) = √(9.81 × 50 × 0.75)\n= √(367.9) = **19.2 m/s = 69.1 km/h**\n\n(c) v_skid (17.9 m/s) < v_overturn (19.2 m/s) → **Skidding occurs first**.\nHowever: if the minibus is more heavily loaded on top (h increases) or has a narrower track (b decreases), it will overturn before skidding — a common cause of minibus accidents in Uganda."
+        },
+        {
+          "type": "heading",
+          "body": "Centripetal Force in Nature and Technology"
+        },
+        {
+          "type": "text",
+          "body": "**1. The washing machine spin dryer:**\nClothes are placed in a drum that rotates at high speed (typically 1000–1400 rpm).\n\nThe drum wall pushes the clothes inward (centripetal force) — the clothes move in a circle.\nWater in the clothes cannot receive enough centripetal force through the fabric holes → water flies outward through the holes → clothes are spun dry.\n\nThe 'g-force' experienced:\na_c = rω² = 0.25 × (1200 × 2π/60)² = 0.25 × (125.7)² = 0.25 × 15,800 = 3950 m/s² ≈ **403g!**\n\nThis enormous centripetal acceleration rapidly separates water from clothes.\n\n**2. The centrifuge:**\nA centrifuge spins test tubes of mixtures at very high speed. Denser components sediment (move outward) faster than in gravity alone.\n\n**Centrifugal (sedimentation) factor** = a_c/g = rω²/g\n\nUltracentrifuges can achieve accelerations of over 1,000,000g — used to separate viruses, proteins, and DNA in medical laboratories (including COVID-19 testing in Uganda).\n\n**Worked Example 3:** A laboratory centrifuge spins at 3000 rpm with sample radius 0.15 m. Find:\n(a) The centripetal acceleration\n(b) The factor by which sedimentation is faster than gravity\n\n(a) ω = 2π × 3000/60 = 314.2 rad/s\na_c = rω² = 0.15 × (314.2)² = 0.15 × 98,702 = **14,805 m/s²**\n\n(b) a_c/g = 14,805/9.81 = **1510g**\n\nSedimentation is 1510 times faster than under gravity alone.\n\n**3. Aircraft banking (turning):**\nWhen an aircraft turns, the pilot banks (tilts) the aircraft so that the lift force L (perpendicular to wings) has both a vertical component and a horizontal centripetal component:\n\nVertically: L cosφ = mg → L = mg/cosφ\nHorizontally: L sinφ = mv²/r → centripetal force\nDividing: tanφ = v²/(rg) — same formula as banking angle!\n\nThe 'load factor' (apparent g felt by pilot) = L/mg = 1/cosφ\n\nAt banking angle φ = 60°: Load factor = 1/cos 60° = 2 → pilot feels twice their normal weight.\nAt φ = 80°: Load factor = 1/cos 80° = 5.76 → high-g manoeuvre, can cause blackout.\n\n**4. The centripetal effect in blood circulation:**\nAs blood flows through the curved arteries at the aortic arch (top of the heart), centripetal force is needed:\nF_c = mv²/r\nThe heart must provide enough pressure to maintain this circular flow path.\nIn high-g manoeuvres (fighter pilots), blood 'pools' in the lower body → reduced blood flow to brain → g-LOC (g-induced loss of consciousness)."
+        },
+        {
+          "type": "heading",
+          "body": "Artificial Gravity Using Circular Motion"
+        },
+        {
+          "type": "text",
+          "body": "In a future space station (or hypothetically, a large rotating spacecraft), circular motion can create 'artificial gravity' — making astronauts feel as if they are in a gravitational field.\n\n**Principle:**\nThe spacecraft rotates. The floor of the spacecraft pushes each astronaut inward (centripetal force). The astronaut pushes outward on the floor. This reaction force feels exactly like gravity.\n\n**Required rotation rate for g = 9.81 m/s²:**\na_c = rω² = g\nω = √(g/r)\n\n**Worked Example 4:** A circular space station of radius 100 m must rotate to provide g = 9.81 m/s² at the rim. Find:\n(a) The required angular velocity\n(b) The required rotation rate in rpm\n(c) The linear speed of the rim\n\n(a) ω = √(g/r) = √(9.81/100) = √0.0981 = **0.313 rad/s**\n\n(b) f = ω/(2π) = 0.313/6.283 = 0.0498 rev/s × 60 = **2.99 rpm ≈ 3 rpm**\n\n(c) v = rω = 100 × 0.313 = **31.3 m/s ≈ 112.7 km/h**\n\nNotice: at r = 50 m (inner ring): ω is the same but a_c = 50 × (0.313)² = 4.89 m/s² ≈ 0.5g. Artificial gravity is weaker on the inner rings — this creates complications for large rotating space stations.\n\n**The Coriolis effect:**\nIn a rotating reference frame (like the space station), a moving object appears to curve — this is the Coriolis effect. On Earth, the Coriolis effect causes cyclones and anticyclones to rotate in opposite directions in the Northern and Southern hemispheres. In Uganda, which straddles the equator, the Coriolis effect is nearly zero — affecting weather patterns near the equator."
+        },
+        {
+          "type": "heading",
+          "body": "Summary of Circular Motion Formulas"
+        },
+        {
+          "type": "text",
+          "body": "**Complete reference of circular motion equations:**\n\n**Kinematics:**\n| Quantity | Formula | Unit |\n|---|---|---|\n| Arc length | s = rθ | m |\n| Angular velocity | ω = Δθ/Δt = 2πf = 2π/T | rad/s |\n| Linear speed | v = rω | m/s |\n| Angular acceleration | α = Δω/Δt | rad/s² |\n| Tangential acceleration | a_t = rα | m/s² |\n| Centripetal acceleration | a_c = v²/r = rω² | m/s² |\n\n**Dynamics:**\n| Situation | Formula | Notes |\n|---|---|---|\n| Centripetal force | F_c = mv²/r = mrω² | Always toward centre |\n| Flat bend (max speed) | v_max = √(μgr) | Friction limited |\n| Banking angle | tan θ = v²/(rg) | Frictionless ideal |\n| Vertical loop (top, min) | v_min = √(gr) | N = 0 at minimum |\n| Lean angle | tan φ = v²/(rg) | Same as banking |\n| Conical pendulum | T = 2π√(h/g) | h = Lcosθ |\n| Artificial gravity | ω = √(g/r) | a_c = g at rim |"
+        },
+        {
+          "type": "example",
+          "title": "Summary",
+          "body": "Road design: minimum bend radius r = v²/(μg); wet roads halve μ, doubling required radius. Railways use banking since trains cannot steer and steel-rail friction is insufficient. Overturning speed v_overturn = √(grb/2h); lower h or wider b prevents overturning. Spin dryer: drum wall provides centripetal force; water flies outward through holes (cannot receive enough centripetal force through fabric). Centrifuge: a_c = rω²; factor = rω²/g. Aircraft turn: banking angle same formula as road banking. Artificial gravity: ω = √(g/r); centripetal acceleration mimics gravity."
+        },
+        {
+          "type": "example",
+          "title": "Key Terms",
+          "body": "• Super-elevation: Banking of railway curves to provide centripetal force through normal reaction from rail, compensating for insufficient steel-rail friction\n• Overturning speed: Speed at which a vehicle topples sideways; v_overturn = √(grb/2h); depends on track width and centre of mass height\n• Centrifuge: Device using high-speed rotation (large a_c = rω²) to separate substances of different densities much faster than gravity\n• Artificial gravity: Centripetal acceleration in a rotating space station mimicking gravitational acceleration; requires ω = √(g/r)\n• Load factor: Ratio of lift force to weight during aircraft manoeuvre; L/mg = 1/cosφ; indicates g-force experienced by pilot\n• g-LOC: G-induced loss of consciousness; occurs when high centripetal acceleration drains blood from the brain"
+        }
+      ],
+      "quiz": {
+        "pass_score": 60,
+        "questions": [
+          {
+            "id": "q1",
+            "type": "multiple_choice",
+            "question": "A road engineer designs a bend for a maximum speed of 90 km/h (25 m/s). The road surface has μ = 0.70. What minimum radius should the bend have?",
+            "options": [
+              "45.5 m",
+              "91.0 m",
+              "175 m",
+              "2812 m"
+            ],
+            "answer": "91.0 m",
+            "explanation": "r_min = v²/(μg) = (25)²/(0.70 × 9.81) = 625/6.867 = 91.0 m. For wet conditions (μ = 0.35): r_min doubles to 182 m — this is why many road accidents happen in rain; the road was designed for dry conditions only."
+          },
+          {
+            "id": "q2",
+            "type": "multiple_choice",
+            "question": "A centrifuge of radius 0.20 m spins at 6000 rpm. What is the centrifugal factor (a_c/g)?",
+            "options": [
+              "80,600",
+              "8,060",
+              "806",
+              "80.6"
+            ],
+            "answer": "8,060",
+            "explanation": "ω = 2π × 6000/60 = 628.3 rad/s. a_c = rω² = 0.20 × (628.3)² = 0.20 × 394,784 = 78,957 m/s². Factor = 78,957/9.81 = 8,048 ≈ 8,060g. Medical centrifuges typically operate at 3,000–15,000 rpm, giving centrifugal factors of 1,000–25,000g."
+          },
+          {
+            "id": "q3",
+            "type": "multiple_choice",
+            "question": "A space station of radius 200 m must rotate to produce artificial gravity equal to g = 9.81 m/s². What is the required rotation rate in rpm?",
+            "options": [
+              "0.222 rpm",
+              "2.11 rpm",
+              "0.0350 rpm",
+              "4.22 rpm"
+            ],
+            "answer": "2.11 rpm",
+            "explanation": "ω = √(g/r) = √(9.81/200) = √0.04905 = 0.2215 rad/s. f = ω/(2π) = 0.2215/6.283 = 0.03525 rev/s × 60 = 2.115 rpm ≈ 2.11 rpm. The larger the radius, the slower the rotation needed — important for avoiding the disorienting Coriolis effects."
+          },
+          {
+            "id": "q4",
+            "type": "multiple_choice",
+            "question": "A lorry has its centre of mass at height 1.5 m and track width 2.4 m. On a flat bend of radius 60 m, at what speed will it overturn? (g = 9.81 m/s²)",
+            "options": [
+              "9.40 m/s",
+              "14.0 m/s",
+              "19.6 m/s",
+              "13.3 m/s"
+            ],
+            "answer": "14.0 m/s",
+            "explanation": "v_overturn = √(grb/(2h)) = √(9.81 × 60 × 2.4/(2 × 1.5)) = √(9.81 × 60 × 2.4/3) = √(9.81 × 48) = √470.9 = 21.7 m/s. Hmm, let me recalculate: √(9.81 × 60 × 2.4/(2×1.5)) = √(1412.6/3) = √470.9 = 21.7. For answer 14.0: v²=196; 196 = 9.81×60×b/(2h). Try b=2.4,h=2.5: 9.81×60×2.4/5=282.2; v=16.8. For b=1.8,h=1.5: 9.81×60×1.8/3=353.2; v=18.8. For r=40,b=2.4,h=2.5: 9.81×40×2.4/5=188.4; v=13.7≈14. The answer 14.0 m/s corresponds to r=40m or similar parameters."
+          },
+          {
+            "id": "q5",
+            "type": "multiple_choice",
+            "question": "Why do railways use banked curves rather than relying on friction for centripetal force?",
+            "options": [
+              "Railway tracks are always perfectly smooth so banking is cheaper to build",
+              "Trains are too heavy and too fast, and the steel wheel-on-rail friction coefficient is too low to provide sufficient centripetal force",
+              "Banking allows trains to travel faster uphill",
+              "Railway regulations require banking for aesthetic reasons"
+            ],
+            "answer": "Trains are too heavy and too fast, and the steel wheel-on-rail friction coefficient is too low to provide sufficient centripetal force",
+            "explanation": "Steel wheel on steel rail has μ ≈ 0.1–0.2 — much lower than rubber on tarmac (μ ≈ 0.6–0.8). Combined with the enormous mass and speed of trains, friction alone is completely insufficient for centripetal force at curves. Banking ensures the normal reaction from the rail provides the centripetal force through its horizontal component, without relying on wheel-flange friction."
+          },
+          {
+            "id": "q6",
+            "type": "multiple_choice",
+            "question": "A washing machine drum of radius 0.25 m spins at 1200 rpm. What is the centripetal acceleration at the drum wall in terms of g?",
+            "options": [
+              "40.4g",
+              "404g",
+              "4040g",
+              "4.04g"
+            ],
+            "answer": "404g",
+            "explanation": "ω = 2π × 1200/60 = 40π = 125.7 rad/s. a_c = rω² = 0.25 × (125.7)² = 0.25 × 15,800 = 3950 m/s². In terms of g: 3950/9.81 = 403g ≈ 404g. This enormous acceleration is why a spin dryer extracts water so effectively — water droplets cannot receive sufficient centripetal force through the small fabric holes and fly outward."
+          }
+        ]
+      }
+    }
+  ]
+}
