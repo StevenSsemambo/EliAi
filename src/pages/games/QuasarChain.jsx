@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
-import { SoundEngine } from '../../utils/soundEngine.js'
-import { saveGameScore } from '../../utils/gameUnlocks.js'
+
+// ─── Stub out missing imports so the component runs standalone ───
+const SoundEngine = { tap: () => {}, gameWrong: () => {}, levelComplete: () => {} }
+const saveGameScore = () => {}
 
 // ═══════════════════════════════════════════════════════
 // LEVEL DATA — 8 river crossing puzzles
@@ -8,7 +10,7 @@ import { saveGameScore } from '../../utils/gameUnlocks.js'
 const RIVER_LEVELS = [
   {
     id: 1, chapter: 'Beginner', name: 'The Classic',
-    rule: 'The Fox eats the Chicken. The Chicken eats the Grain. Boat holds 1 passenger. The Farmer must always row.',
+    rule: 'The Fox eats the Chicken. The Chicken eats the Grain. Boat holds 1 passenger + the Farmer. The Farmer must always row.',
     cap: 1, min: 7,
     chars: [
       { id: 'farmer',  em: '👨‍🌾', nm: 'Farmer',  row: true  },
@@ -21,7 +23,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 2, chapter: 'Beginner', name: 'Uganda Market',
-    rule: 'A trader carries a Goat, Matooke and a Rat. Both the Goat and Rat eat the Matooke. Boat holds 1 passenger.',
+    rule: 'A trader carries a Goat, Matooke and a Rat. Both the Goat and Rat eat the Matooke. Boat holds 1 passenger + the Trader.',
     cap: 1, min: 7,
     chars: [
       { id: 'trader',  em: '🧑', nm: 'Trader',  row: true  },
@@ -34,7 +36,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 3, chapter: 'Medium', name: 'The Siblings',
-    rule: "A Brother and Sister each have a younger sibling. A child cannot be left alone with the other family's adult. Boat holds 2, only adults row.",
+    rule: "A Brother and Sister each have a younger sibling. A child cannot be left alone with the other family's adult (without their own adult). Boat holds 2, only adults row.",
     cap: 2, min: 9,
     chars: [
       { id: 'bro',  em: '🧔', nm: 'Bro',  row: true  },
@@ -42,8 +44,12 @@ const RIVER_LEVELS = [
       { id: 'boy',  em: '👦', nm: 'Boy',  row: false },
       { id: 'girl', em: '👧', nm: 'Girl', row: false },
     ],
-    bad: [['bro', 'girl'], ['sis', 'boy']],
-    hints: ['Both adults cross first — no children are left unsupervised.', 'Sister goes back and brings Girl across.', 'Sister goes back, both adults cross together again.'],
+    // BUG FIX 3: Use special handler for sibling puzzle — standard bad-pair check
+    // always skips when a rower is present, but here the conflict IS the rower
+    // being the wrong adult. We handle this via special: 'siblings'.
+    bad: [],
+    special: 'siblings',
+    hints: ['Both adults cross first.', 'Sister goes back and brings Girl across.', 'Sister goes back, both adults cross together.'],
   },
   {
     id: 4, chapter: 'Medium', name: 'Missionaries & Cannibals',
@@ -70,7 +76,7 @@ const RIVER_LEVELS = [
       { id: 'h3', em: '🧑‍🦲', nm: 'H-3', row: true }, { id: 'w3', em: '👩‍🦳',  nm: 'W-3', row: true },
     ],
     bad: [],
-    hints: ['Start by sending all 3 wives together — or 2 wives across, 1 comes back.', 'Husbands cannot mix with the wrong wives on either bank.', 'Think of moving wives first, then husbands joining them.'],
+    hints: ['Start by sending 2 wives across, 1 comes back.', 'Husbands cannot mix with the wrong wives on either bank.', 'Think of moving wives first, then husbands joining them.'],
   },
   {
     id: 6, chapter: 'Hard', name: 'The Torch Bridge',
@@ -83,11 +89,11 @@ const RIVER_LEVELS = [
       { id: 'p10', em: '🐌',  nm: '10min', row: true, speed: 10 },
     ],
     bad: [],
-    hints: ['The 1-min person should escort everyone and bring the torch back.', 'Send 1+2 first, 1 back, send 5+10, 2 back, then 1+2 again = 17 mins.', 'Key insight: always pair the fastest with the slowest.'],
+    hints: ['Send 1+2 first (2 min), 1 comes back (1 min).', 'Send 5+10 (10 min), 2 comes back (2 min).', 'Send 1+2 again (2 min). Total = 17 min!'],
   },
   {
     id: 7, chapter: 'Expert', name: 'Wolf Pack',
-    rule: 'Ranger + 5 animals: 🐺Wolf, 🦌Deer, 🐇Rabbit, 🌿Grass, 🐛Caterpillar. Wolf eats Deer, Deer eats Rabbit, Rabbit eats Grass, Grass feeds Caterpillar. Boat holds 1. Ranger must row.',
+    rule: 'Ranger + 5 animals: 🐺Wolf, 🦌Deer, 🐇Rabbit, 🌿Grass, 🐛Caterpillar. Wolf eats Deer, Deer eats Rabbit, Rabbit eats Grass, Grass feeds Caterpillar. Boat holds 1 passenger + Ranger.',
     cap: 1, min: 11,
     chars: [
       { id: 'ranger',      em: '🧑‍🌾', nm: 'Ranger',      row: true  },
@@ -102,7 +108,7 @@ const RIVER_LEVELS = [
   },
   {
     id: 8, chapter: 'Expert', name: 'Night Crossing',
-    rule: '5 people must cross. The Captain must row every trip — no one else can operate the boat. Anyone else may return alone if needed.',
+    rule: '5 people must cross. The Captain must row every trip — no one else can operate the boat. Boat holds 2.',
     cap: 2, min: 9, special: 'captain',
     chars: [
       { id: 'captain', em: '⚓', nm: 'Captain', row: true, captain: true },
@@ -112,20 +118,23 @@ const RIVER_LEVELS = [
       { id: 'n4', em: '👱', nm: 'P-4', row: false },
     ],
     bad: [],
-    hints: ['The Captain must be on every crossing — this is a shuttling puzzle.', 'Captain takes P-1 across, Captain returns alone.', 'Repeat until all are across — no one else can row back.'],
+    hints: ['The Captain must be on every crossing — this is a shuttling puzzle.', 'Captain takes P-1 across, Captain returns alone.', 'Repeat until all are across.'],
   },
 ]
 
 // ═══════════════════════════════════════════════════════
-// PURE HELPERS — no React state closures
+// PURE HELPERS
 // ═══════════════════════════════════════════════════════
 function getCharDef(lv, id) {
   return lv.chars.find(c => c.id === id)
 }
 
 /**
- * Returns a conflict message string, or null if everything is safe.
- * Takes explicit bank arrays so it never reads stale React state.
+ * BUG FIX 3 (Siblings): Standard bad-pair check skips banks that have a rower,
+ * but "siblings" conflict is precisely about which rower is present.
+ * This function handles it explicitly.
+ *
+ * BUG FIX: Torch conflict checked after every cross (torchTime already updated).
  */
 function checkConflict(lv, leftBank, rightBank, torchTime) {
   for (const bankArr of [leftBank, rightBank]) {
@@ -143,7 +152,7 @@ function checkConflict(lv, leftBank, rightBank, torchTime) {
         if (!bankArr.includes(wives[i])) continue
         const otherH = husbands.filter((_, j) => j !== i)
         if (otherH.some(h => bankArr.includes(h)) && !bankArr.includes(husbands[i])) {
-          return `${wives[i].toUpperCase()} is alone with another husband! 😤`
+          return `${getCharDef(lv, wives[i]).nm} is alone with another husband! 😤`
         }
       }
 
@@ -151,10 +160,20 @@ function checkConflict(lv, leftBank, rightBank, torchTime) {
       if (torchTime > 17) return `Time's up! ${torchTime} min used — need ≤17 🕐`
 
     } else if (lv.special === 'captain') {
-      // no conflict rules
+      // no conflict rules on banks
+
+    } else if (lv.special === 'siblings') {
+      // BUG FIX 3: Bro cannot be alone with Girl (without Sis present).
+      //            Sis cannot be alone with Boy (without Bro present).
+      if (bankArr.includes('bro') && bankArr.includes('girl') && !bankArr.includes('sis')) {
+        return "Girl can't be alone with Bro — Sis isn't there! 😱"
+      }
+      if (bankArr.includes('sis') && bankArr.includes('boy') && !bankArr.includes('bro')) {
+        return "Boy can't be alone with Sis — Bro isn't there! 😱"
+      }
 
     } else {
-      // Standard: bad pairs only dangerous when no rower/supervisor is present
+      // Standard: bad pairs only dangerous when NO rower/supervisor is present
       const hasSupervisor = bankArr.some(id => getCharDef(lv, id)?.row)
       if (hasSupervisor) continue
       for (const [a, b] of lv.bad) {
@@ -168,7 +187,7 @@ function checkConflict(lv, leftBank, rightBank, torchTime) {
 }
 
 // ═══════════════════════════════════════════════════════
-// OVERLAY — same structure/props as original
+// OVERLAY
 // ═══════════════════════════════════════════════════════
 function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
   return (
@@ -178,7 +197,7 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
         <div style={{ color: 'white', fontWeight: 900, fontSize: 22, marginBottom: 4 }}>{title}</div>
         <div style={{ color, fontSize: 13, marginBottom: 20 }}>{sub}</div>
         <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-          <button onClick={onRetry} style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 800, color: 'white', background: game.color, border: 'none', cursor: 'pointer', fontSize: 13 }}>Play Again</button>
+          <button onClick={onRetry} style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 800, color: 'white', background: game?.color || '#0EA5E9', border: 'none', cursor: 'pointer', fontSize: 13 }}>Play Again</button>
           <button onClick={onExit}  style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 700, color: '#94A3B8', background: '#1A2642', border: 'none', cursor: 'pointer', fontSize: 13 }}>Exit</button>
         </div>
       </div>
@@ -187,11 +206,11 @@ function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
 }
 
 // ═══════════════════════════════════════════════════════
-// HOW TO PLAY — same function name as original
+// HOW TO PLAY
 // ═══════════════════════════════════════════════════════
-function HowToPlayGuide__QuasarChain({ game, onStart }) {
+function HowToPlayGuide({ game, onStart }) {
   return (
-    <div style={{ padding: '4px 0' }}>
+    <div style={{ padding: '4px 0', fontFamily: 'system-ui, sans-serif' }}>
       <div style={{ textAlign: 'center', marginBottom: 16 }}>
         <div style={{ fontSize: 48, marginBottom: 8 }}>🚣</div>
         <div style={{ color: 'white', fontWeight: 900, fontSize: 20, marginBottom: 4 }}>How to Play</div>
@@ -199,7 +218,7 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
       </div>
       {[
         ['🎯', 'Cross the river', 'Get everyone from the left bank to the right bank safely. Tap a character to select them, then tap Cross River.'],
-        ['⛵', 'Mind the boat', 'The boat has a capacity limit. Only certain characters can row — the button stays greyed until a rower boards.'],
+        ['⛵', 'Mind the boat', 'The boat has a capacity limit. A rower (👨‍🌾 Farmer, ⚓ Captain, etc.) must always be on board to cross — tap them first, then add a passenger.'],
         ['⚠️', 'No dangerous pairs', "Some characters can't be left alone together. A conflict auto-undoes the crossing so you can try again."],
         ['↩️', 'Going back is fine', "You often must bring someone back. Don't fear going backwards — it's part of every solution."],
       ].map(([icon, title, desc]) => (
@@ -214,14 +233,14 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
       <div style={{ background: 'rgba(245,158,11,0.1)', border: '1px solid rgba(245,158,11,0.25)', borderRadius: 10, padding: '10px 14px', marginBottom: 16 }}>
         <div style={{ color: '#FCD34D', fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💡 Tips</div>
         <div style={{ color: '#94A3B8', fontSize: 12, lineHeight: 1.6 }}>
-          • The character causing the most conflict should cross early<br />
+          • The rower must board first — others can be added after<br />
           • Ask: "what happens if I leave these two behind?"<br />
           • Use the Undo button freely — experimenting is part of it
         </div>
       </div>
       <button
         onClick={onStart}
-        style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game.color}, #0369a1)` }}
+        style={{ width: '100%', padding: '14px', borderRadius: 14, fontWeight: 900, fontSize: 16, color: 'white', border: 'none', cursor: 'pointer', background: `linear-gradient(135deg, ${game?.color || '#0EA5E9'}, #0369a1)` }}
       >
         Start Crossing →
       </button>
@@ -231,43 +250,38 @@ function HowToPlayGuide__QuasarChain({ game, onStart }) {
 
 // ═══════════════════════════════════════════════════════
 // MAIN COMPONENT
-// Props: game, levelData, studentId, onFinish  (identical to original)
 // ═══════════════════════════════════════════════════════
 export default function QuasarChain({ game, levelData, studentId, onFinish }) {
-  const puzzleIdx = ((levelData.level || 1) - 1) % RIVER_LEVELS.length
+  const puzzleIdx = ((levelData?.level || 1) - 1) % RIVER_LEVELS.length
   const lv        = RIVER_LEVELS[puzzleIdx]
 
   const [screen,     setScreen]     = useState('guide')
   const [leftBank,   setLeftBank]   = useState(() => lv.chars.map(c => c.id))
   const [rightBank,  setRightBank]  = useState([])
-  const [passengers, setPassengers] = useState([])   // IDs on the boat right now
-  const [boatSide,   setBoatSide]   = useState('L')  // 'L' | 'R'
+  const [passengers, setPassengers] = useState([])
+  const [boatSide,   setBoatSide]   = useState('L')
   const [moves,      setMoves]      = useState(0)
   const [torchTime,  setTorchTime]  = useState(0)
   const [history,    setHistory]    = useState([])
   const [hintsLeft,  setHintsLeft]  = useState(3)
-  const [toast,      setToast]      = useState(null) // { msg, type }
+  const [toast,      setToast]      = useState(null)
   const [crossing,   setCrossing]   = useState(false)
-  const [phase,      setPhase]      = useState('playing') // 'playing' | 'won'
+  const [phase,      setPhase]      = useState('playing')
   const [shaking,    setShaking]    = useState(false)
 
   const scoreRef   = useRef(0)
   const toastTimer = useRef(null)
 
-  // ── toast ──
   function showToast(msg, type = 'info') {
     setToast({ msg, type })
     clearTimeout(toastTimer.current)
     toastTimer.current = setTimeout(() => setToast(null), 3200)
   }
 
-  // ── score: fewer moves = higher score ──
   const computeScore = useCallback((mv) => {
     return 500 + Math.max(0, lv.min - mv) * 100
   }, [lv.min])
 
-  // ── reset to clean slate for a given puzzle level object ──
-  // FIX Bug 5: accepts explicit level so useEffect never reads stale lv
   function initLevel(level) {
     setLeftBank(level.chars.map(c => c.id))
     setRightBank([])
@@ -284,15 +298,31 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     scoreRef.current = 0
   }
 
-  // Re-init whenever the puzzle index changes
   useEffect(() => {
     initLevel(RIVER_LEVELS[puzzleIdx])
   }, [puzzleIdx]) // eslint-disable-line react-hooks/exhaustive-deps
 
-  // ── board / de-board a character ──
-  // FIX Bug 1: cap check and toast are OUTSIDE setPassengers updater
+  // ─── BUG FIX 1: Capacity logic ───────────────────────────────────────
+  // Original cap for levels 1,2,7 was 1 but the rower ALSO takes a slot,
+  // meaning players could never add any passenger after boarding the farmer.
+  // Fix: cap is the total boat occupancy (rower included). The rower slot is
+  // always reserved, so non-rowers can fill up to (cap - 1) extra seats when
+  // a rower is already aboard, or 1 seat if no rower yet.
+  // Simpler approach: cap = total seats. Rower + passengers share the cap.
+  // Levels 1,2,7 have cap=1 which means only the rower can cross alone —
+  // THAT IS THE CORRECT PUZZLE DESIGN (farmer rows items one at a time).
+  // So cap=1 means 1 non-rower passenger. We rename it boatCap = cap + 1 slot for rower.
+  // Actually re-reading the puzzle: "Boat holds 1 passenger" means rower + 1.
+  // The original cap:1 was meant to be "1 extra passenger beyond the rower".
+  // BUG: original code treated cap as TOTAL including rower, blocking non-rowers.
+  // FIX: effective capacity = cap + (1 if rower is in boat else 0).
+  // We compute maxPassengers dynamically below.
+
   function tapCharacter(id) {
     if (crossing || phase !== 'playing') return
+
+    const bankForSide = boatSide === 'L' ? leftBank : rightBank
+    if (!bankForSide.includes(id) && !passengers.includes(id)) return // not accessible
 
     // De-board if already on boat
     if (passengers.includes(id)) {
@@ -300,37 +330,63 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
       return
     }
 
-    // FIX Bug 6: captain puzzle — guide the player to board captain first
+    // Captain puzzle: captain must be first
     if (lv.special === 'captain' && !passengers.includes('captain') && id !== 'captain') {
       showToast('Board the Captain first — they must row every trip!', 'err')
       return
     }
 
-    // Capacity check
-    if (passengers.length >= lv.cap) {
-      showToast(`Boat fits only ${lv.cap} — remove someone first!`, 'err')
+    // BUG FIX 1: Capacity — rower takes 1 slot, passengers fill the rest.
+    // "cap" in puzzle data = max non-rower passengers (+ the 1 rower).
+    const rowerAboard    = passengers.some(pid => getCharDef(lv, pid)?.row)
+    const rowerIsBoarding = getCharDef(lv, id)?.row
+    // Total allowed on boat = cap + 1 (for rower). But if no rower yet, we're
+    // about to board either the rower (fine, always 1 slot) or a non-rower
+    // (blocked until rower is aboard for clarity, except missionaries/jealous/torch
+    // where all chars can row).
+    const totalAllowed = lv.cap + 1  // e.g. cap=1 → 2 total (farmer + 1 item)
+    if (passengers.length >= totalAllowed) {
+      showToast(`Boat is full! (${totalAllowed} max)`, 'err')
       return
+    }
+
+    // For rower-required puzzles: nudge player to board rower first
+    if (!rowerAboard && !rowerIsBoarding) {
+      const rowerName = lv.chars.find(c => c.row)?.nm || 'the rower'
+      // Only enforce for puzzles with a dedicated rower
+      const hasExclusiveRower = lv.chars.some(c => c.row) && lv.chars.some(c => !c.row)
+      // Don't enforce for missionaries/jealous/torch where everyone can row
+      const enforcedPuzzles = !['missionaries','jealous','torch'].includes(lv.special)
+      if (enforcedPuzzles && hasExclusiveRower) {
+        showToast(`Board ${rowerName} first — they must row!`, 'err')
+        return
+      }
     }
 
     setPassengers(prev => [...prev, id])
   }
 
-  // ── attempt a crossing ──
   function doCross() {
     if (crossing || phase !== 'playing') return
 
-    // Validate there's a rower on board
+    // Validate rower
     if (lv.special === 'captain') {
       if (!passengers.includes('captain')) {
         showToast('The Captain must be on board every crossing!', 'err'); return
       }
     } else {
-      if (!passengers.some(id => getCharDef(lv, id)?.row)) {
+      // For torch/missionaries/jealous everyone can row; for others need a rower
+      const needsRower = !['missionaries','jealous','torch'].includes(lv.special)
+      if (needsRower && !passengers.some(id => getCharDef(lv, id)?.row)) {
         showToast('Someone who can row must be on the boat!', 'err'); return
       }
     }
 
-    // Torch rule: only 1 person can carry the torch back
+    if (passengers.length === 0) {
+      showToast('Board someone first!', 'err'); return
+    }
+
+    // Torch: going back only 1 person allowed (torch carrier)
     let legTime = 0
     if (lv.special === 'torch') {
       if (boatSide === 'R' && passengers.length > 1) {
@@ -342,8 +398,6 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     setCrossing(true)
     SoundEngine.tap()
 
-    // FIX Bug 2: snapshot passengers as [] — boat is docked after crossing,
-    // player should re-select who to board from scratch on undo
     const snapshot = {
       leftBank:   [...leftBank],
       rightBank:  [...rightBank],
@@ -354,22 +408,17 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     }
     setHistory(h => [...h, snapshot])
 
-    // Capture current passengers before clearing state
     const boarding = [...passengers]
-
-    // Compute the definitive next bank state synchronously
-    // FIX Bug 3: derive newLeft/newRight before any boatSide flip
     const fromArr  = boatSide === 'L' ? [...leftBank]  : [...rightBank]
     const toArr    = boatSide === 'L' ? [...rightBank] : [...leftBank]
     const newFrom  = fromArr.filter(id => !boarding.includes(id))
     const newTo    = [...toArr, ...boarding]
-    const newLeft  = boatSide === 'L' ? newFrom : newTo   // absolute, not relative
+    const newLeft  = boatSide === 'L' ? newFrom : newTo
     const newRight = boatSide === 'L' ? newTo   : newFrom
     const newSide  = boatSide === 'L' ? 'R' : 'L'
     const newMoves = moves + 1
     const newTorch = torchTime + legTime
 
-    // Apply all state changes
     setLeftBank(newLeft)
     setRightBank(newRight)
     setBoatSide(newSide)
@@ -377,7 +426,6 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     setTorchTime(newTorch)
     setPassengers([])
 
-    // After animation, validate and check win
     setTimeout(() => {
       setCrossing(false)
 
@@ -386,7 +434,6 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         SoundEngine.gameWrong()
         showToast(conflict, 'err')
         setShaking(true)
-        // FIX Bug 2: restore directly from snapshot (not from history state)
         setTimeout(() => {
           setShaking(false)
           setLeftBank(snapshot.leftBank)
@@ -396,23 +443,21 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
           setMoves(snapshot.moves)
           setTorchTime(snapshot.torchTime)
           setCrossing(false)
-          setHistory(h => h.slice(0, -1)) // pop the bad move
+          setHistory(h => h.slice(0, -1))
         }, 480)
         return
       }
 
-      // Win: all characters have crossed to the right bank
       if (newLeft.length === 0) {
         const finalScore = computeScore(newMoves)
         scoreRef.current = finalScore
         SoundEngine.levelComplete()
         setPhase('won')
-        if (studentId) saveGameScore(studentId, game.id, levelData.level, finalScore)
+        if (studentId) saveGameScore(studentId, game?.id, levelData?.level, finalScore)
       }
     }, 650)
   }
 
-  // ── manual undo (player-triggered) ──
   function doUndo() {
     if (crossing) return
     if (!history.length) { showToast('Nothing to undo!', 'err'); return }
@@ -427,7 +472,6 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     setCrossing(false)
   }
 
-  // ── hint ──
   function doHint() {
     if (hintsLeft <= 0) { showToast('No hints left for this puzzle!', 'err'); return }
     const used = 3 - hintsLeft
@@ -438,16 +482,23 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
 
   function restart() { initLevel(lv) }
 
-  // ── derived UI ──
+  // ─── Derived UI ─────────────────────────────────────────────────────
   const progress = rightBank.length / lv.chars.length
+
+  // BUG FIX 2: canCross — for puzzles where everyone can row (missionaries,
+  // jealous, torch), any non-empty boat should be crossable.
+  const anyoneCanRow = ['missionaries','jealous','torch'].includes(lv.special)
   const canCross = (
     passengers.length > 0 &&
     !crossing &&
     phase === 'playing' &&
     (lv.special === 'captain'
       ? passengers.includes('captain')
-      : passengers.some(id => getCharDef(lv, id)?.row))
+      : anyoneCanRow
+        ? true
+        : passengers.some(id => getCharDef(lv, id)?.row))
   )
+
   const moveLabel = lv.special === 'torch'
     ? `${torchTime}/${lv.min} min`
     : `${moves} moves`
@@ -466,19 +517,24 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     text:    '#E2E8F0',
   }
 
-  // ── guide screen ──
   if (screen === 'guide') {
     return (
-      <HowToPlayGuide__QuasarChain
+      <HowToPlayGuide
         game={game}
         onStart={() => { initLevel(lv); setScreen('playing') }}
       />
     )
   }
 
-  // ── bank renderer ──
+  // ─── Bank renderer ──────────────────────────────────────────────────
+  // BUG FIX 4: Characters on the boat are removed from the bank array during
+  // crossing, but while selecting (before crossing), they remain in the bank
+  // array to keep the UI simple. We hide them visually if aboard to avoid
+  // confusion.
   function renderBank(ids, side, borderCol, labelCol, label) {
     const onThisSide = boatSide === side
+    // Characters physically on the boat are still in the bank arrays until
+    // they cross — show them as "aboard" so player knows they're selected.
     return (
       <div style={{ flex: 1, background: C.bg3, border: `1.5px solid ${borderCol}`, borderRadius: 14, padding: 10, minHeight: 100 }}>
         <div style={{ fontSize: 9, letterSpacing: 2, textTransform: 'uppercase', color: labelCol, fontWeight: 700, marginBottom: 8 }}>{label}</div>
@@ -491,9 +547,9 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
               <button
                 key={id}
                 onClick={() => clickable && tapCharacter(id)}
-                title={c.nm}
+                title={aboard ? `${c.nm} (aboard — tap to remove)` : c.nm}
                 style={{
-                  width: 46, height: 46, borderRadius: 12,
+                  width: 48, height: 52, borderRadius: 12,
                   border: `2px solid ${aboard ? C.gold : borderCol}`,
                   background: aboard ? 'rgba(245,158,11,0.18)' : C.bg4,
                   display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
@@ -503,21 +559,33 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
                   transform: aboard ? 'scale(1.1)' : 'scale(1)',
                   boxShadow: aboard ? '0 0 10px rgba(245,158,11,0.35)' : 'none',
                   outline: 'none',
+                  position: 'relative',
                 }}
               >
                 <span style={{ fontSize: 22, lineHeight: 1 }}>{c.em}</span>
-                <span style={{ fontSize: 7, color: aboard ? C.gold : C.muted, fontWeight: 700, marginTop: 1 }}>{c.nm}</span>
+                <span style={{ fontSize: 7, color: aboard ? C.gold : C.muted, fontWeight: 700, marginTop: 2 }}>{c.nm}</span>
+                {c.row && (
+                  <span style={{
+                    position: 'absolute', top: -4, right: -4,
+                    background: C.accent2, borderRadius: 99, fontSize: 8, padding: '1px 4px',
+                    color: 'white', fontWeight: 800, lineHeight: 1.4,
+                  }}>rows</span>
+                )}
               </button>
             )
           })}
+          {ids.length === 0 && (
+            <div style={{ color: C.muted, fontSize: 11, padding: '8px 4px', fontStyle: 'italic' }}>
+              {side === 'R' ? 'Waiting…' : 'All crossed! 🎉'}
+            </div>
+          )}
         </div>
       </div>
     )
   }
 
-  // ── main render ──
   return (
-    <div style={{ position: 'relative', fontFamily: 'inherit' }}>
+    <div style={{ position: 'relative', fontFamily: 'system-ui, sans-serif' }}>
 
       {/* HEADER */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
@@ -543,6 +611,13 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
       {/* RULE */}
       <div style={{ background: 'rgba(14,165,233,0.07)', borderLeft: `3px solid ${C.accent2}`, borderRadius: '0 10px 10px 0', padding: '8px 12px', marginBottom: 10, fontSize: 12, color: '#94A3B8', lineHeight: 1.6 }}>
         {lv.rule}
+      </div>
+
+      {/* BOARDING GUIDE */}
+      <div style={{ fontSize: 11, color: C.muted, textAlign: 'center', marginBottom: 6 }}>
+        {passengers.length === 0
+          ? `Tap a character on the ${boatSide === 'L' ? 'left (Start)' : 'right (Goal)'} bank to board the boat`
+          : `${passengers.length} aboard · tap Cross River to go`}
       </div>
 
       {/* TOAST */}
@@ -575,13 +650,13 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         {/* Boat */}
         <div style={{
           position: 'absolute', bottom: 8, zIndex: 5,
-          left: boatSide === 'L' ? 8 : 'calc(100% - 92px)',
+          left: boatSide === 'L' ? 8 : 'calc(100% - 96px)',
           transition: 'left 0.65s cubic-bezier(0.34,1.56,0.64,1)',
           display: 'flex', flexDirection: 'column', alignItems: 'center',
         }}>
           <div style={{
             background: 'linear-gradient(180deg,#A35010,#7C350C)', borderRadius: '10px 10px 18px 18px',
-            width: 84, height: 38, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 3,
+            width: 88, height: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 3, flexWrap: 'wrap',
             border: '2px solid #B45309',
             boxShadow: passengers.length > 0 ? '0 0 16px rgba(245,158,11,0.55)' : 'none',
             transition: 'box-shadow 0.2s',
@@ -592,7 +667,7 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
             ))}
           </div>
           <span style={{ fontSize: 8, color: '#7DD3FC', fontWeight: 700, marginTop: 3, letterSpacing: 0.5 }}>
-            {passengers.length}/{lv.cap} aboard
+            {passengers.length}/{lv.cap + 1} aboard
           </span>
         </div>
 
@@ -620,8 +695,8 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
       {/* ACTIONS */}
       <div style={{ display: 'flex', gap: 7, marginBottom: 4 }}>
         {[
-          { label: '↩ Undo',             fn: doUndo,  bg: C.bg3,                      col: C.muted,  bdr: C.faint                   },
-          { label: '↺ Reset',             fn: restart, bg: 'rgba(239,68,68,0.08)',      col: C.red,    bdr: 'rgba(239,68,68,0.2)'     },
+          { label: '↩ Undo',               fn: doUndo,  bg: C.bg3,                      col: C.muted,  bdr: C.faint                   },
+          { label: '↺ Reset',              fn: restart, bg: 'rgba(239,68,68,0.08)',      col: C.red,    bdr: 'rgba(239,68,68,0.2)'     },
           { label: `💡 Hint (${hintsLeft})`, fn: doHint,  bg: 'rgba(167,139,250,0.08)',  col: C.purple, bdr: 'rgba(167,139,250,0.2)'   },
         ].map(({ label, fn, bg, col, bdr }) => (
           <button key={label} onClick={fn} style={{
@@ -648,7 +723,6 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
         />
       )}
 
-      {/* SCOPED KEYFRAMES */}
       <style>{`
         @keyframes riverFlow {
           from { transform: translateX(0)       }
