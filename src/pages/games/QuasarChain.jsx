@@ -189,15 +189,20 @@ function checkConflict(lv, leftBank, rightBank, torchTime) {
 // ═══════════════════════════════════════════════════════
 // OVERLAY
 // ═══════════════════════════════════════════════════════
-function Overlay({ title, sub, icon, color, onRetry, onExit, game }) {
+function Overlay({ title, sub, icon, color, onNext, nextLabel, onRetry, onExit, game }) {
   return (
     <div style={{ position: 'absolute', inset: 0, zIndex: 30, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(5,8,18,0.95)', backdropFilter: 'blur(8px)', borderRadius: 12 }}>
       <div style={{ textAlign: 'center', padding: '0 20px' }}>
         <div style={{ fontSize: 50, marginBottom: 8 }}>{icon}</div>
         <div style={{ color: 'white', fontWeight: 900, fontSize: 22, marginBottom: 4 }}>{title}</div>
         <div style={{ color, fontSize: 13, marginBottom: 20 }}>{sub}</div>
-        <div style={{ display: 'flex', gap: 10, justifyContent: 'center' }}>
-          <button onClick={onRetry} style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 800, color: 'white', background: game?.color || '#0EA5E9', border: 'none', cursor: 'pointer', fontSize: 13 }}>Play Again</button>
+        <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap' }}>
+          {onNext && (
+            <button onClick={onNext} style={{ padding: '10px 22px', borderRadius: 12, fontWeight: 900, color: 'white', background: 'linear-gradient(135deg,#22C55E,#16A34A)', border: 'none', cursor: 'pointer', fontSize: 13 }}>
+              {nextLabel || 'Next →'}
+            </button>
+          )}
+          <button onClick={onRetry} style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 800, color: 'white', background: game?.color || '#0EA5E9', border: 'none', cursor: 'pointer', fontSize: 13 }}>Try Again</button>
           <button onClick={onExit}  style={{ padding: '10px 20px', borderRadius: 12, fontWeight: 700, color: '#94A3B8', background: '#1A2642', border: 'none', cursor: 'pointer', fontSize: 13 }}>Exit</button>
         </div>
       </div>
@@ -252,8 +257,11 @@ function HowToPlayGuide({ game, onStart }) {
 // MAIN COMPONENT
 // ═══════════════════════════════════════════════════════
 export default function QuasarChain({ game, levelData, studentId, onFinish }) {
-  const puzzleIdx = ((levelData?.level || 1) - 1) % RIVER_LEVELS.length
-  const lv        = RIVER_LEVELS[puzzleIdx]
+  // Internal level tracking so the component advances itself puzzle-by-puzzle
+  const startIdx    = ((levelData?.level || 1) - 1) % RIVER_LEVELS.length
+  const [puzzleIdx, setPuzzleIdx] = useState(startIdx)
+  const lv          = RIVER_LEVELS[puzzleIdx]
+  const isLastLevel = puzzleIdx >= RIVER_LEVELS.length - 1
 
   const [screen,     setScreen]     = useState('guide')
   const [leftBank,   setLeftBank]   = useState(() => lv.chars.map(c => c.id))
@@ -298,8 +306,10 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
     scoreRef.current = 0
   }
 
+  // Re-initialise whenever the active puzzle changes
   useEffect(() => {
     initLevel(RIVER_LEVELS[puzzleIdx])
+    setScreen('playing') // skip guide on subsequent levels
   }, [puzzleIdx]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ─── BUG FIX 1: Capacity logic ───────────────────────────────────────
@@ -482,6 +492,14 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
 
   function restart() { initLevel(lv) }
 
+  function goNextLevel() {
+    if (isLastLevel) {
+      onFinish?.()
+    } else {
+      setPuzzleIdx(i => i + 1)
+    }
+  }
+
   // ─── Derived UI ─────────────────────────────────────────────────────
   const progress = rightBank.length / lv.chars.length
 
@@ -591,7 +609,7 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
         <div>
           <div style={{ color: C.muted, fontSize: 10, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 1 }}>
-            {lv.chapter} · Puzzle {lv.id}
+            {lv.chapter} · Puzzle {puzzleIdx + 1}/{RIVER_LEVELS.length}
           </div>
           <div style={{ color: 'white', fontWeight: 900, fontSize: 15 }}>{lv.name}</div>
         </div>
@@ -713,10 +731,12 @@ export default function QuasarChain({ game, levelData, studentId, onFinish }) {
       {/* WIN OVERLAY */}
       {phase === 'won' && (
         <Overlay
-          title="Puzzle Solved! 🎉"
+          title={isLastLevel ? 'All Puzzles Solved! 🏅' : 'Puzzle Solved! 🎉'}
           sub={`${lv.special === 'torch' ? torchTime + ' minutes' : moves + ' moves'} · par ${lv.min} · Score: ${scoreRef.current}`}
-          icon="🏆"
+          icon={isLastLevel ? '🏅' : '🏆'}
           color={C.green}
+          nextLabel={isLastLevel ? 'Finish 🎓' : `Next Puzzle →`}
+          onNext={goNextLevel}
           onRetry={restart}
           onExit={onFinish}
           game={game}
